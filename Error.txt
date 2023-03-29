@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "A:\YandexDisk\python-projects\MSMPstream\main.py", line 450, in play
+    castUrl = r['formats'][castViseon]['url']
+TypeError: 'NoneType' object is not subscriptable
