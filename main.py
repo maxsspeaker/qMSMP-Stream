@@ -2,10 +2,21 @@ import sys, time, os, traceback
 from PyQt5 import QtWidgets, QtCore, QtGui
 from PyQt5.QtWidgets import QMessageBox 
 from PyQt5.QtGui import QIcon,QFont
+from os.path import exists
+from PIL import Image
+import io
+import logging
+
+logging.basicConfig(filename="all.log",
+                            filemode='a',
+                            format='%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s',
+                            datefmt='%H:%M:%S',
+                            level=logging.DEBUG)
 
 import mainUI
 
 import requests
+import urllib
 import json
 import yt_dlp as youtube_dl
 from eyed3 import id3
@@ -455,70 +466,75 @@ class MSMPboxPlayer(GibridPlayer):
                          ydl_opts['cookiefile']=self.cookiesYouTube
                      with youtube_dl.YoutubeDL(ydl_opts) as ydl: #
                         r = ydl.extract_info(self.playlist[Num]["url"], download=False)
-                        castUrl = r['formats'][castViseon]['url']
-                        if(self.FullInfo):print(r['duration'])
-                        self.PlayNowMusicDataBox["titleTrekPlayNow"]=r['title']
-                        self.PlayNowMusicDataBox["artistTrekPlayNow"]=r['uploader'].replace(" - Topic","")
-                        self.PlayNowMusicDataBox["albumTrekPlayNow"]=""
-                        self.PlayNowMusicDataBox["TrekPlayNowID"]=r['id']
-                        self.msmp_streamIconYouTube='https://pybms.tk/Server/DiscordRPC/imgRPC?img=https://i.ytimg.com/vi/'+self.playlist[Num]["url"]+'/maxresdefault.jpg'
-                        
-                        
-                        try: 
-                            if not (playlist[Num]["title"]==None):
-                                self.PlayNowMusicDataBox["titleTrekPlayNow"]=self.playlist[Num]["title"]
-                        except:pass
-                        try:
-                            if not (playlist[Num]["artist"]==None):
-                               self.PlayNowMusicDataBox["artistTrekPlayNow"]=self.playlist[Num]['artist']
-                        except:pass
-                        try:
-                            if not (playlist[Num]["album"]==None):
-                                self.PlayNowMusicDataBox["albumTrekPlayNow"]=self.playlist[Num]['album']
-                        except:pass
-                        
-                        self.PlayNowMusicDataBox["albumImgTrekPlayNowID"]=str(r['id'])+"AlbumImg"
-                        self.durationTreak=r['duration']
-                        try:
-                            #print(r['formats'][castViseon]['url'])
-                            if not(self.Useyt_dlp):
-                                print("[YouTube-dl] "+r"curent viseon\/")
-                                print("[YouTube-dl] "+r['formats'][castViseon]['format_note'])
-                                print("[YouTube-dl] "+r['formats'][castViseon]['format'])
-                                viseon="  ["+r['formats'][castViseon]['format_note']+"]"
-                            i=0
-                            if(self.FullInfo):print(r"===all viseon\/====")
-                            while not(len(r['formats'])==i):
-                                if(self.Useyt_dlp):
-                                    if(self.FullInfo):print(r['formats'][i]["format_id"]+":   "+r['formats'][i]["format"]+"         :"+r['formats'][i]['acodec'])
-                                    if(self.VideoMode):
-                                        if(r['formats'][i]["format_id"]=="22"):
-                                            castUrl = r['formats'][i]['url']
-                                            castViseonNow=i
-                                    else:
-                                        if(r['formats'][i]["format_id"]=="251"):
-                                            castUrl = r['formats'][i]['url']
-                                            castViseonNow=i
-                                    
-                                else:
-                                        print(r['formats'][i]['format_note'])
-                                #print(r['formats'][i]['acodec'])
-                                i=i+1
-                            if(self.FullInfo):print(r"===================")
-                            if(self.Useyt_dlp):
-                                if(self.FullInfo):
+                        castUrl = ""
+                        if r != None:
+                            castUrl = r['formats'][castViseon]['url']
+                            if(self.FullInfo):print(r['duration'])
+                            self.PlayNowMusicDataBox["titleTrekPlayNow"]=r['title']
+                            self.PlayNowMusicDataBox["artistTrekPlayNow"]=r['uploader'].replace(" - Topic","")
+                            self.PlayNowMusicDataBox["albumTrekPlayNow"]=""
+                            self.PlayNowMusicDataBox["TrekPlayNowID"]=r['id']
+                            self.msmp_streamIconYouTube='https://pybms.tk/Server/DiscordRPC/imgRPC?img=https://i.ytimg.com/vi/'+self.playlist[Num]["url"]+'/maxresdefault.jpg'
+                            
+                            
+                            try: 
+                                if not (playlist[Num]["title"]==None):
+                                    self.PlayNowMusicDataBox["titleTrekPlayNow"]=self.playlist[Num]["title"]
+                            except:pass
+                            try:
+                                if not (playlist[Num]["artist"]==None):
+                                    self.PlayNowMusicDataBox["artistTrekPlayNow"]=self.playlist[Num]['artist']
+                            except:pass
+                            try:
+                                if not (playlist[Num]["album"]==None):
+                                    self.PlayNowMusicDataBox["albumTrekPlayNow"]=self.playlist[Num]['album']
+                            except:pass
+                            
+                            self.PlayNowMusicDataBox["albumImgTrekPlayNowID"]=str(r['id'])+"AlbumImg"
+                            self.durationTreak=r['duration']
+                            try:
+                                #print(r['formats'][castViseon]['url'])
+                                if not(self.Useyt_dlp):
                                     print("[YouTube-dl] "+r"curent viseon\/")
-                                    print("[YouTube-dl] "+r['formats'][castViseonNow]['format_note'])
-                                    print("[YouTube-dl] "+r['formats'][castViseonNow]['format'])
-                                viseon="  ["+r['formats'][castViseon]['format_note']+"]"
-                        except:
-                            print("===================\nErorr: Stream detect!")
-                            printError('\n',traceback.format_exc())
-                            #ErrorSound.play()
-                            #ErrorLoadSound="Stream detect!"
-                            OldMusicDataBox["Play"]=0
+                                    print("[YouTube-dl] "+r['formats'][castViseon]['format_note'])
+                                    print("[YouTube-dl] "+r['formats'][castViseon]['format'])
+                                    viseon="  ["+r['formats'][castViseon]['format_note']+"]"
+                                i=0
+                                if(self.FullInfo):print(r"===all viseon\/====")
+                                while not(len(r['formats'])==i):
+                                    if(self.Useyt_dlp):
+                                        if(self.FullInfo):print(r['formats'][i]["format_id"]+":   "+r['formats'][i]["format"]+"         :"+r['formats'][i]['acodec'])
+                                        if(self.VideoMode):
+                                            if(r['formats'][i]["format_id"]=="22"):
+                                                castUrl = r['formats'][i]['url']
+                                                castViseonNow=i
+                                        else:
+                                            if(r['formats'][i]["format_id"]=="251"):
+                                                castUrl = r['formats'][i]['url']
+                                                castViseonNow=i
+                                        
+                                    else:
+                                            print(r['formats'][i]['format_note'])
+                                    #print(r['formats'][i]['acodec'])
+                                    i=i+1
+                                if(self.FullInfo):print(r"===================")
+                                if(self.Useyt_dlp):
+                                    if(self.FullInfo):
+                                        print("[YouTube-dl] "+r"curent viseon\/")
+                                        print("[YouTube-dl] "+r['formats'][castViseonNow]['format_note'])
+                                        print("[YouTube-dl] "+r['formats'][castViseonNow]['format'])
+                                    viseon="  ["+r['formats'][castViseon]['format_note']+"]"
+                            except:
+                                print("===================\nErorr: Stream detect!")
+                                printError('\n',traceback.format_exc())
+                                #ErrorSound.play()
+                                #ErrorLoadSound="Stream detect!"
+                                OldMusicDataBox["Play"]=0
+                                Error=1
+                                ErrorLoadSoundStatus={"ErrorType":"ErrorLoadSoundPlay","ErrorLog":(traceback.format_exc()).split("\n")}
+                        else:
                             Error=1
-                            ErrorLoadSoundStatus={"ErrorType":"ErrorLoadSoundPlay","ErrorLog":(traceback.format_exc()).split("\n")}
+                            ErrorLoadSoundStatus={"ErrorType":"ErrorLoadSoundPlay","ErrorLog":(traceback.format_exc()).split("\n")} 
                     self.Num=Num
                     #LoadImg(r['id'])
                     if(self.Error==0):
@@ -834,13 +850,13 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
     def __init__(self):
         super().__init__()
         InstanceSettings=[]
-        InstanceSettings.append("--audio-visual="+"visual")
-        InstanceSettings.append("--effect-list=spectrum")
-        InstanceSettings.append("--effect-fft-window=none")
+        #InstanceSettings.append("--audio-visual="+"visual")
+        #InstanceSettings.append("--effect-list=spectrum")
+        #InstanceSettings.append("--effect-fft-window=none")
         
         self.MSMPboxPlayer=MSMPboxPlayer(ServerPlaer=True,InstanceSettings=InstanceSettings) 
         #self.initUI()
-        with open(r"A:\downloads\Джем – Инди.plmsmpsbox", 'r') as fr:
+        with open(r"/home/kelk/YouTubePlaylist.plmsmpsbox.plmsmpsbox", 'r') as fr:
                     playlistFile = json.load(fr)
                     self.MSMPboxPlayer.playlist=playlistFile["playlist"]
         #self.MSMPboxPlayer.playlist=[{"ID": "YouTube", "url": "Q52GzsGmRuk", "name": "Hold", "uploader": "Home", "duration": 210, "Publis": False},
@@ -873,9 +889,45 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
         for i, ItemP in enumerate(self.MSMPboxPlayer.playlist):
             it = QtGui.QStandardItem(ItemP["name"]+"\n"+ItemP["uploader"])
             self.PlayListBox.appendRow(it)
+            
+            cov = None
+            
+            self.MSMPboxPlayer.LoadImg(None,ItemP['ID'],ItemP['url'])
+            
+            covurl = self.MSMPboxPlayer.CoverUrlPlayNow
+
+            print(ItemP["name"]+"\n"+ItemP["uploader"])
+            print(i,'/',len(self.MSMPboxPlayer.playlist))
+            
+            imgurl = '.msmpcache/'+ItemP['url']+".jpg"
+
+            if False: #not exists(imgurl):
+                if covurl:
+                    try:
+                        data = urllib.request.urlopen(covurl).read()
+                        im = Image.open(io.BytesIO(data))
+                        im.thumbnail((140,140))
+                        im.save(imgurl)
+                        cov = QtGui.QIcon(imgurl)
+                        #com = im.tobytes()
+                        #pixmap = QtGui.QPixmap()
+                        #pixmap.loadFromData(com)
+                        #cov = QtGui.QIcon(pixmap)
+                        print('loaded')
+                        
+                    except urllib.error.HTTPError:
+                        cov = QtGui.QIcon("img/X9at37tsrY8AlbumImg.png")
+                        print('err, default')
+                else:
+                    cov = QtGui.QIcon("img/X9at37tsrY8AlbumImg.png")
+                    print('nocov, default')
+            else:
+                cov = QtGui.QIcon("img/X9at37tsrY8AlbumImg.png")
+                print('cached, loaded')
+                
 
             #it.setData(QtGui.QIcon(iconroot +'/images/flags'), QtCore.Qt.DecorationRole)
-            it.setData(QtGui.QIcon("img/AlbumImgMini.png"),        # +++
+            it.setData(cov,        # +++
                                    QtCore.Qt.DecorationRole)
             
         self.PlaylistView.setIconSize(QtCore.QSize(25,25));
@@ -954,6 +1006,20 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
         self.TreakName.setText(self.MSMPboxPlayer.PlayNowMusicDataBox["titleTrekPlayNow"])
         self.AuthorName.setText(self.MSMPboxPlayer.PlayNowMusicDataBox["artistTrekPlayNow"])
         self.AlbumName.setText(self.MSMPboxPlayer.PlayNowMusicDataBox["albumTrekPlayNow"])
+        if self.MSMPboxPlayer.CoverUrlPlayNow:
+            try:
+                data = urllib.request.urlopen(self.MSMPboxPlayer.CoverUrlPlayNow).read()
+                print("Update icon")
+                im = Image.open(io.BytesIO(data))
+                im.thumbnail((140,140))
+                com = im.tobytes()
+                pixmap = QtGui.QPixmap()
+                pixmap.loadFromData(com)
+                self.AlbumImg.setPixmap(pixmap)
+            except:
+                self.AlbumImg.setPixmap(QtGui.QPixmap("img/X9at37tsrY8AlbumImg.png"))
+        else:
+            self.AlbumImg.setPixmap(QtGui.QPixmap("img/X9at37tsrY8AlbumImg.png"))
         self.DataPath.setText(self.MSMPboxPlayer.playlist[self.MSMPboxPlayer.Num]["ID"]+"/"+self.MSMPboxPlayer.playlist[self.MSMPboxPlayer.Num]["url"])
         
         #self.ProgressBarTreakSlider.setMaximum(self.MSMPboxPlayer.durationTreak)
@@ -977,13 +1043,14 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
         )
     def closeEvent(self, event):
 
-        reply = gQMessageBox.question(self, 'Message',
+        reply = QMessageBox.question(self, 'Message',
             "Are you sure to quit?", QMessageBox.Yes |
             QMessageBox.No, QMessageBox.No)
 
         if reply == QMessageBox.Yes:
-            #self.MSMPboxPlayer.stop()
+            self.MSMPboxPlayer.stop()
             event.accept()
+            sys.exit()
         else:
             event.ignore()
 
