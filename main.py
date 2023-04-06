@@ -952,7 +952,7 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
         while True:
             #print("fox")
             try:
-              print(self.PlaylistView.indexAt())
+              #print(self.PlaylistView.indexAt())
               if not(self.bufferNewPlaerVLCposition==self.MSMPboxPlayer.NewPlaerVLC.get_position()*1000):
                 self.bufferNewPlaerVLCposition=self.MSMPboxPlayer.NewPlaerVLC.get_position()*1000
                 #print(self.MSMPboxPlayer.NewPlaerVLC.get_position()*100)
