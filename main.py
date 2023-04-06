@@ -850,13 +850,14 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
     def __init__(self):
         super().__init__()
         InstanceSettings=[]
-        #InstanceSettings.append("--audio-visual="+"visual")
-        #InstanceSettings.append("--effect-list=spectrum")
-        #InstanceSettings.append("--effect-fft-window=none")
+        if sys.platform == "win32":
+            InstanceSettings.append("--audio-visual="+"visual")
+            InstanceSettings.append("--effect-list=spectrum")
+            InstanceSettings.append("--effect-fft-window=none")
         
         self.MSMPboxPlayer=MSMPboxPlayer(ServerPlaer=True,InstanceSettings=InstanceSettings) 
         #self.initUI()
-        with open(r"/home/kelk/YouTubePlaylist.plmsmpsbox.plmsmpsbox", 'r') as fr:
+        with open(r"A:\YandexDisk\python-projects\bmCastMusic\myPlaylists\Джем – Sharpest Knives.plmsmpsbox", 'r') as fr:
                     playlistFile = json.load(fr)
                     self.MSMPboxPlayer.playlist=playlistFile["playlist"]
         #self.MSMPboxPlayer.playlist=[{"ID": "YouTube", "url": "Q52GzsGmRuk", "name": "Hold", "uploader": "Home", "duration": 210, "Publis": False},
@@ -889,48 +890,49 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
         for i, ItemP in enumerate(self.MSMPboxPlayer.playlist):
             it = QtGui.QStandardItem(ItemP["name"]+"\n"+ItemP["uploader"])
             self.PlayListBox.appendRow(it)
+            it.setData(QtGui.QIcon("img/AlbumImgMini.png"),QtCore.Qt.DecorationRole)
             
-            cov = None
+            #cov = None
             
-            self.MSMPboxPlayer.LoadImg(None,ItemP['ID'],ItemP['url'])
+            #self.MSMPboxPlayer.LoadImg(None,ItemP['ID'],ItemP['url'])
             
-            covurl = self.MSMPboxPlayer.CoverUrlPlayNow
+            #covurl = self.MSMPboxPlayer.CoverUrlPlayNow
 
-            print(ItemP["name"]+"\n"+ItemP["uploader"])
-            print(i,'/',len(self.MSMPboxPlayer.playlist))
+##            print(ItemP["name"]+"\n"+ItemP["uploader"])
+##            print(i,'/',len(self.MSMPboxPlayer.playlist))
+##            
+##            imgurl = '.msmpcache/'+ItemP['url']+".jpg"
+##
+##            if False: #not exists(imgurl):
+##                if covurl:
+##                    try:
+##                        data = urllib.request.urlopen(covurl).read()
+##                        im = Image.open(io.BytesIO(data))
+##                        im.thumbnail((140,140))
+##                        im.save(imgurl)
+##                        cov = QtGui.QIcon(imgurl)
+##                        #com = im.tobytes()
+##                        #pixmap = QtGui.QPixmap()
+##                        #pixmap.loadFromData(com)
+##                        #cov = QtGui.QIcon(pixmap)
+##                        print('loaded')
+##                        
+##                    except urllib.error.HTTPError:
+##                        cov = QtGui.QIcon("img/X9at37tsrY8AlbumImg.png")
+##                        print('err, default')
+##                else:
+##                    cov = QtGui.QIcon("img/X9at37tsrY8AlbumImg.png")
+##                    print('nocov, default')
+##            else:
+##                cov = QtGui.QIcon("img/X9at37tsrY8AlbumImg.png")
+##                print('cached, loaded')
+##                
+##
+##            #it.setData(QtGui.QIcon(iconroot +'/images/flags'), QtCore.Qt.DecorationRole)
+##            it.setData(cov,        # +++
+##                                   QtCore.Qt.DecorationRole)
             
-            imgurl = '.msmpcache/'+ItemP['url']+".jpg"
-
-            if False: #not exists(imgurl):
-                if covurl:
-                    try:
-                        data = urllib.request.urlopen(covurl).read()
-                        im = Image.open(io.BytesIO(data))
-                        im.thumbnail((140,140))
-                        im.save(imgurl)
-                        cov = QtGui.QIcon(imgurl)
-                        #com = im.tobytes()
-                        #pixmap = QtGui.QPixmap()
-                        #pixmap.loadFromData(com)
-                        #cov = QtGui.QIcon(pixmap)
-                        print('loaded')
-                        
-                    except urllib.error.HTTPError:
-                        cov = QtGui.QIcon("img/X9at37tsrY8AlbumImg.png")
-                        print('err, default')
-                else:
-                    cov = QtGui.QIcon("img/X9at37tsrY8AlbumImg.png")
-                    print('nocov, default')
-            else:
-                cov = QtGui.QIcon("img/X9at37tsrY8AlbumImg.png")
-                print('cached, loaded')
-                
-
-            #it.setData(QtGui.QIcon(iconroot +'/images/flags'), QtCore.Qt.DecorationRole)
-            it.setData(cov,        # +++
-                                   QtCore.Qt.DecorationRole)
-            
-        self.PlaylistView.setIconSize(QtCore.QSize(25,25));
+        self.PlaylistView.setIconSize(QtCore.QSize(25,25))
 
         it.setBackground(QtGui.QColor('red'))
         self.add_functions()
@@ -950,6 +952,7 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
         while True:
             #print("fox")
             try:
+              print(self.PlaylistView.indexAt())
               if not(self.bufferNewPlaerVLCposition==self.MSMPboxPlayer.NewPlaerVLC.get_position()*1000):
                 self.bufferNewPlaerVLCposition=self.MSMPboxPlayer.NewPlaerVLC.get_position()*1000
                 #print(self.MSMPboxPlayer.NewPlaerVLC.get_position()*100)
@@ -1047,7 +1050,7 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
             "Are you sure to quit?", QMessageBox.Yes |
             QMessageBox.No, QMessageBox.No)
 
-        if reply == QMessageBox.Yes:
+        if reply == qQMessageBox.Yes:
             self.MSMPboxPlayer.stop()
             event.accept()
             sys.exit()
