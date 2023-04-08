@@ -4,3 +4,328 @@
 18:19:02,699 eyed3 DEBUG eyeD3 version 0.9.6
 18:19:32,120 eyed3 DEBUG eyeD3 version 0.9.6
 18:38:13,469 eyed3 DEBUG eyeD3 version 0.9.6
+22:52:48,906 eyed3 DEBUG eyeD3 version 0.9.6
+22:53:32,191 eyed3 DEBUG eyeD3 version 0.9.6
+16:14:54,76 eyed3 DEBUG eyeD3 version 0.9.6
+16:15:20,916 eyed3 DEBUG eyeD3 version 0.9.6
+16:16:07,863 eyed3 DEBUG eyeD3 version 0.9.6
+16:16:33,102 eyed3 DEBUG eyeD3 version 0.9.6
+16:16:56,848 eyed3 DEBUG eyeD3 version 0.9.6
+16:17:09,416 eyed3.id3.headers DEBUG Located ID3 v2 tag
+16:17:09,416 eyed3.id3.headers DEBUG TagHeader [major]: 2 
+16:17:09,416 eyed3.id3.headers DEBUG TagHeader [minor]: 3 
+16:17:09,416 eyed3.id3.headers DEBUG TagHeader [rev]: 0 
+16:17:09,416 eyed3.id3.headers DEBUG TagHeader [flags]: unsync(0) extended(0) experimental(0) footer(0)
+16:17:09,416 eyed3.id3.headers DEBUG TagHeader [size string]: 0x000a5355
+16:17:09,416 eyed3.id3.headers DEBUG TagHeader [size]: 174549 (0x2a9d5)
+16:17:09,416 eyed3.id3.frames DEBUG size_left: 174549
+16:17:09,416 eyed3.id3.frames DEBUG +++++++++++++++++++++++++++++++++++++++++++++++++
+16:17:09,416 eyed3.id3.frames DEBUG FrameSet: Reading Frame #1
+16:17:09,416 eyed3.id3.headers DEBUG FrameHeader [start byte]: 10 (0xA)
+16:17:09,416 eyed3.id3.headers DEBUG FrameHeader [id]: b'TALB' (0x54414c42)
+16:17:09,416 eyed3.id3.headers DEBUG FrameHeader [data size]: 45 (0x2D)
+16:17:09,416 eyed3.id3.headers DEBUG FrameHeader [flags]: ta(0) fa(0) ro(0) co(0) en(0) gr(0) un(0) dl(0)
+16:17:09,416 eyed3.id3.frames DEBUG FrameSet: Reading 45 (0x2D) bytes of data from byte pos 20 (0x14)
+16:17:09,416 eyed3.id3.frames DEBUG FrameSet: 45 bytes of data read
+16:17:09,416 eyed3.id3.frames DEBUG createFrame (desc:Album/Movie/Show title) - (2, None, None) - <class 'eyed3.id3.frames.TextFrame'>
+16:17:09,416 eyed3.id3.frames DEBUG createFrame 'b'TALB'' with class '<class 'eyed3.id3.frames.TextFrame'>'
+16:17:09,416 eyed3.id3.frames DEBUG Unicode encoding: utf_16
+16:17:09,416 eyed3.id3.frames DEBUG TextFrame text: STRAY Game Soundtrack
+16:17:09,416 eyed3.id3.frames DEBUG size_left: 174494
+16:17:09,416 eyed3.id3.frames DEBUG +++++++++++++++++++++++++++++++++++++++++++++++++
+16:17:09,416 eyed3.id3.frames DEBUG FrameSet: Reading Frame #2
+16:17:09,416 eyed3.id3.headers DEBUG FrameHeader [start byte]: 65 (0x41)
+16:17:09,416 eyed3.id3.headers DEBUG FrameHeader [id]: b'TIT2' (0x54495432)
+16:17:09,417 eyed3.id3.headers DEBUG FrameHeader [data size]: 27 (0x1B)
+16:17:09,417 eyed3.id3.headers DEBUG FrameHeader [flags]: ta(0) fa(0) ro(0) co(0) en(0) gr(0) un(0) dl(0)
+16:17:09,417 eyed3.id3.frames DEBUG FrameSet: Reading 27 (0x1B) bytes of data from byte pos 75 (0x4B)
+16:17:09,417 eyed3.id3.frames DEBUG FrameSet: 27 bytes of data read
+16:17:09,417 eyed3.id3.frames DEBUG createFrame (desc:Title/songname/content description) - (2, None, None) - <class 'eyed3.id3.frames.TextFrame'>
+16:17:09,417 eyed3.id3.frames DEBUG createFrame 'b'TIT2'' with class '<class 'eyed3.id3.frames.TextFrame'>'
+16:17:09,417 eyed3.id3.frames DEBUG Unicode encoding: utf_16
+16:17:09,417 eyed3.id3.frames DEBUG TextFrame text: Slums Part 1
+16:17:09,417 eyed3.id3.frames DEBUG size_left: 174457
+16:17:09,417 eyed3.id3.frames DEBUG +++++++++++++++++++++++++++++++++++++++++++++++++
+16:17:09,417 eyed3.id3.frames DEBUG FrameSet: Reading Frame #3
+16:17:09,417 eyed3.id3.headers DEBUG FrameHeader [start byte]: 102 (0x66)
+16:17:09,417 eyed3.id3.headers DEBUG FrameHeader [id]: b'TPE1' (0x54504531)
+16:17:09,417 eyed3.id3.headers DEBUG FrameHeader [data size]: 33 (0x21)
+16:17:09,417 eyed3.id3.headers DEBUG FrameHeader [flags]: ta(0) fa(0) ro(0) co(0) en(0) gr(0) un(0) dl(0)
+16:17:09,417 eyed3.id3.frames DEBUG FrameSet: Reading 33 (0x21) bytes of data from byte pos 112 (0x70)
+16:17:09,417 eyed3.id3.frames DEBUG FrameSet: 33 bytes of data read
+16:17:09,417 eyed3.id3.frames DEBUG createFrame (desc:Lead performer(s)/Soloist(s)) - (2, None, None) - <class 'eyed3.id3.frames.TextFrame'>
+16:17:09,418 eyed3.id3.frames DEBUG createFrame 'b'TPE1'' with class '<class 'eyed3.id3.frames.TextFrame'>'
+16:17:09,418 eyed3.id3.frames DEBUG Unicode encoding: utf_16
+16:17:09,418 eyed3.id3.frames DEBUG TextFrame text: Various Artists
+16:17:09,418 eyed3.id3.frames DEBUG size_left: 174414
+16:17:09,418 eyed3.id3.frames DEBUG +++++++++++++++++++++++++++++++++++++++++++++++++
+16:17:09,418 eyed3.id3.frames DEBUG FrameSet: Reading Frame #4
+16:17:09,418 eyed3.id3.headers DEBUG FrameHeader [start byte]: 145 (0x91)
+16:17:09,418 eyed3.id3.headers DEBUG FrameHeader [id]: b'TXXX' (0x54585858)
+16:17:09,418 eyed3.id3.headers DEBUG FrameHeader [data size]: 23 (0x17)
+16:17:09,418 eyed3.id3.headers DEBUG FrameHeader [flags]: ta(0) fa(0) ro(0) co(0) en(0) gr(0) un(0) dl(0)
+16:17:09,418 eyed3.id3.frames DEBUG FrameSet: Reading 23 (0x17) bytes of data from byte pos 155 (0x9B)
+16:17:09,418 eyed3.id3.frames DEBUG FrameSet: 23 bytes of data read
+16:17:09,418 eyed3.id3.frames DEBUG createFrame (desc:User defined text information frame) - (2, None, None) - <class 'eyed3.id3.frames.UserTextFrame'>
+16:17:09,418 eyed3.id3.frames DEBUG createFrame 'b'TXXX'' with class '<class 'eyed3.id3.frames.UserTextFrame'>'
+16:17:09,418 eyed3.id3.frames DEBUG Unicode encoding: latin_1
+16:17:09,418 eyed3.id3.frames DEBUG UserTextFrame description: Software
+16:17:09,418 eyed3.id3.frames DEBUG Unicode encoding: latin_1
+16:17:09,419 eyed3.id3.frames DEBUG UserTextFrame text: Lavf58.76.100
+16:17:09,419 eyed3.id3.frames DEBUG size_left: 174381
+16:17:09,419 eyed3.id3.frames DEBUG +++++++++++++++++++++++++++++++++++++++++++++++++
+16:17:09,419 eyed3.id3.frames DEBUG FrameSet: Reading Frame #5
+16:17:09,419 eyed3.id3.headers DEBUG FrameHeader [start byte]: 178 (0xB2)
+16:17:09,419 eyed3.id3.headers DEBUG FrameHeader [id]: b'APIC' (0x41504943)
+16:17:09,419 eyed3.id3.headers DEBUG FrameHeader [data size]: 174371 (0x2A923)
+16:17:09,419 eyed3.id3.headers DEBUG FrameHeader [flags]: ta(0) fa(0) ro(0) co(0) en(0) gr(0) un(0) dl(0)
+16:17:09,419 eyed3.id3.frames DEBUG FrameSet: Reading 174371 (0x2A923) bytes of data from byte pos 188 (0xBC)
+16:17:09,419 eyed3.id3.frames DEBUG FrameSet: 174371 bytes of data read
+16:17:09,419 eyed3.id3.frames DEBUG createFrame (desc:Attached picture) - (2, None, None) - <class 'eyed3.id3.frames.ImageFrame'>
+16:17:09,419 eyed3.id3.frames DEBUG createFrame 'b'APIC'' with class '<class 'eyed3.id3.frames.ImageFrame'>'
+16:17:09,419 eyed3.id3.frames DEBUG APIC frame data size: 174371
+16:17:09,419 eyed3.id3.frames DEBUG APIC mime type: b'image/jpg'
+16:17:09,419 eyed3.id3.frames DEBUG Initial APIC picture type: 3
+16:17:09,419 eyed3.id3.frames DEBUG APIC picture type: 3
+16:17:09,419 eyed3.id3.frames DEBUG description len: 0
+16:17:09,419 eyed3.id3.frames DEBUG image len: 174358
+16:17:09,419 eyed3.id3.frames DEBUG Unicode encoding: latin_1
+16:17:09,419 eyed3.id3.frames DEBUG APIC description: 
+16:17:09,419 eyed3.id3.frames DEBUG APIC image data: 174358 bytes
+16:17:09,419 eyed3.id3.tag DEBUG Tag contains 0 bytes of padding.
+16:18:10,703 eyed3 DEBUG eyeD3 version 0.9.6
+15:30:09,239 eyed3 DEBUG eyeD3 version 0.9.6
+15:30:37,266 eyed3 DEBUG eyeD3 version 0.9.6
+15:47:24,744 eyed3 DEBUG eyeD3 version 0.9.6
+15:54:29,125 eyed3 DEBUG eyeD3 version 0.9.6
+15:54:51,611 eyed3 DEBUG eyeD3 version 0.9.6
+15:55:50,931 eyed3 DEBUG eyeD3 version 0.9.6
+15:55:55,626 eyed3 DEBUG eyeD3 version 0.9.6
+15:55:59,561 eyed3 DEBUG eyeD3 version 0.9.6
+15:56:49,436 eyed3 DEBUG eyeD3 version 0.9.6
+15:57:41,665 eyed3 DEBUG eyeD3 version 0.9.6
+15:58:02,526 eyed3 DEBUG eyeD3 version 0.9.6
+15:58:28,69 eyed3 DEBUG eyeD3 version 0.9.6
+16:00:23,964 eyed3 DEBUG eyeD3 version 0.9.6
+16:17:44,937 eyed3 DEBUG eyeD3 version 0.9.6
+16:17:50,743 eyed3 DEBUG eyeD3 version 0.9.6
+16:18:09,609 eyed3 DEBUG eyeD3 version 0.9.6
+20:14:34,194 eyed3 DEBUG eyeD3 version 0.9.6
+20:15:08,583 eyed3 DEBUG eyeD3 version 0.9.6
+20:15:30,997 eyed3 DEBUG eyeD3 version 0.9.6
+20:15:52,216 eyed3 DEBUG eyeD3 version 0.9.6
+20:15:55,888 eyed3 DEBUG eyeD3 version 0.9.6
+20:22:40,759 eyed3 DEBUG eyeD3 version 0.9.6
+20:22:47,171 eyed3 DEBUG eyeD3 version 0.9.6
+20:46:22,627 eyed3 DEBUG eyeD3 version 0.9.6
+21:00:36,165 eyed3 DEBUG eyeD3 version 0.9.6
+21:00:45,450 eyed3 DEBUG eyeD3 version 0.9.6
+21:01:09,808 eyed3 DEBUG eyeD3 version 0.9.6
+21:01:28,292 eyed3 DEBUG eyeD3 version 0.9.6
+21:01:52,226 eyed3 DEBUG eyeD3 version 0.9.6
+21:02:08,875 eyed3 DEBUG eyeD3 version 0.9.6
+21:02:12,715 eyed3 DEBUG eyeD3 version 0.9.6
+21:02:25,708 eyed3 DEBUG eyeD3 version 0.9.6
+21:04:17,195 eyed3 DEBUG eyeD3 version 0.9.6
+21:04:50,594 eyed3 DEBUG eyeD3 version 0.9.6
+21:04:57,609 eyed3 DEBUG eyeD3 version 0.9.6
+21:05:51,596 eyed3 DEBUG eyeD3 version 0.9.6
+21:06:23,874 eyed3 DEBUG eyeD3 version 0.9.6
+21:13:27,134 eyed3 DEBUG eyeD3 version 0.9.6
+21:22:39,306 eyed3 DEBUG eyeD3 version 0.9.6
+21:22:43,931 eyed3 DEBUG eyeD3 version 0.9.6
+21:23:44,840 eyed3 DEBUG eyeD3 version 0.9.6
+21:24:17,391 eyed3 DEBUG eyeD3 version 0.9.6
+21:25:24,798 eyed3 DEBUG eyeD3 version 0.9.6
+21:27:04,83 eyed3 DEBUG eyeD3 version 0.9.6
+21:32:24,968 eyed3 DEBUG eyeD3 version 0.9.6
+21:32:37,40 eyed3 DEBUG eyeD3 version 0.9.6
+21:32:42,808 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:32:43,9 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/VNBji8TbVwo/maxresdefault.jpg HTTP/1.1" 200 170650
+21:33:09,707 eyed3 DEBUG eyeD3 version 0.9.6
+21:33:15,842 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:33:15,989 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/G1T6nx9MunE/maxresdefault.jpg HTTP/1.1" 200 53999
+21:33:33,103 eyed3 DEBUG eyeD3 version 0.9.6
+21:33:42,820 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:33:42,966 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/VNBji8TbVwo/maxresdefault.jpg HTTP/1.1" 200 170650
+21:33:44,234 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:33:44,387 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/VNBji8TbVwo/maxresdefault.jpg HTTP/1.1" 200 170650
+21:34:00,963 eyed3 DEBUG eyeD3 version 0.9.6
+21:34:05,76 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:34:05,250 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/FUtW4dDXKDM/maxresdefault.jpg HTTP/1.1" 200 103862
+21:36:00,213 eyed3 DEBUG eyeD3 version 0.9.6
+21:36:06,906 eyed3 DEBUG eyeD3 version 0.9.6
+21:36:11,854 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:36:12,32 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/VNBji8TbVwo/maxresdefault.jpg HTTP/1.1" 200 170650
+21:36:42,782 eyed3 DEBUG eyeD3 version 0.9.6
+21:36:48,816 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:36:48,990 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/tYGWAH8p5a4/maxresdefault.jpg HTTP/1.1" 200 86890
+21:36:53,574 eyed3.id3.headers DEBUG Located ID3 v2 tag
+21:36:53,574 eyed3.id3.headers DEBUG TagHeader [major]: 2 
+21:36:53,574 eyed3.id3.headers DEBUG TagHeader [minor]: 3 
+21:36:53,574 eyed3.id3.headers DEBUG TagHeader [rev]: 0 
+21:36:53,574 eyed3.id3.headers DEBUG TagHeader [flags]: unsync(0) extended(0) experimental(0) footer(0)
+21:36:53,574 eyed3.id3.headers DEBUG TagHeader [size string]: 0x000a5355
+21:36:53,574 eyed3.id3.headers DEBUG TagHeader [size]: 174549 (0x2a9d5)
+21:36:53,574 eyed3.id3.frames DEBUG size_left: 174549
+21:36:53,574 eyed3.id3.frames DEBUG +++++++++++++++++++++++++++++++++++++++++++++++++
+21:36:53,574 eyed3.id3.frames DEBUG FrameSet: Reading Frame #1
+21:36:53,574 eyed3.id3.headers DEBUG FrameHeader [start byte]: 10 (0xA)
+21:36:53,574 eyed3.id3.headers DEBUG FrameHeader [id]: b'TALB' (0x54414c42)
+21:36:53,574 eyed3.id3.headers DEBUG FrameHeader [data size]: 45 (0x2D)
+21:36:53,574 eyed3.id3.headers DEBUG FrameHeader [flags]: ta(0) fa(0) ro(0) co(0) en(0) gr(0) un(0) dl(0)
+21:36:53,574 eyed3.id3.frames DEBUG FrameSet: Reading 45 (0x2D) bytes of data from byte pos 20 (0x14)
+21:36:53,574 eyed3.id3.frames DEBUG FrameSet: 45 bytes of data read
+21:36:53,574 eyed3.id3.frames DEBUG createFrame (desc:Album/Movie/Show title) - (2, None, None) - <class 'eyed3.id3.frames.TextFrame'>
+21:36:53,574 eyed3.id3.frames DEBUG createFrame 'b'TALB'' with class '<class 'eyed3.id3.frames.TextFrame'>'
+21:36:53,574 eyed3.id3.frames DEBUG Unicode encoding: utf_16
+21:36:53,575 eyed3.id3.frames DEBUG TextFrame text: STRAY Game Soundtrack
+21:36:53,575 eyed3.id3.frames DEBUG size_left: 174494
+21:36:53,575 eyed3.id3.frames DEBUG +++++++++++++++++++++++++++++++++++++++++++++++++
+21:36:53,575 eyed3.id3.frames DEBUG FrameSet: Reading Frame #2
+21:36:53,575 eyed3.id3.headers DEBUG FrameHeader [start byte]: 65 (0x41)
+21:36:53,575 eyed3.id3.headers DEBUG FrameHeader [id]: b'TIT2' (0x54495432)
+21:36:53,575 eyed3.id3.headers DEBUG FrameHeader [data size]: 27 (0x1B)
+21:36:53,575 eyed3.id3.headers DEBUG FrameHeader [flags]: ta(0) fa(0) ro(0) co(0) en(0) gr(0) un(0) dl(0)
+21:36:53,575 eyed3.id3.frames DEBUG FrameSet: Reading 27 (0x1B) bytes of data from byte pos 75 (0x4B)
+21:36:53,575 eyed3.id3.frames DEBUG FrameSet: 27 bytes of data read
+21:36:53,575 eyed3.id3.frames DEBUG createFrame (desc:Title/songname/content description) - (2, None, None) - <class 'eyed3.id3.frames.TextFrame'>
+21:36:53,575 eyed3.id3.frames DEBUG createFrame 'b'TIT2'' with class '<class 'eyed3.id3.frames.TextFrame'>'
+21:36:53,575 eyed3.id3.frames DEBUG Unicode encoding: utf_16
+21:36:53,575 eyed3.id3.frames DEBUG TextFrame text: Slums Part 1
+21:36:53,575 eyed3.id3.frames DEBUG size_left: 174457
+21:36:53,575 eyed3.id3.frames DEBUG +++++++++++++++++++++++++++++++++++++++++++++++++
+21:36:53,575 eyed3.id3.frames DEBUG FrameSet: Reading Frame #3
+21:36:53,575 eyed3.id3.headers DEBUG FrameHeader [start byte]: 102 (0x66)
+21:36:53,576 eyed3.id3.headers DEBUG FrameHeader [id]: b'TPE1' (0x54504531)
+21:36:53,576 eyed3.id3.headers DEBUG FrameHeader [data size]: 33 (0x21)
+21:36:53,576 eyed3.id3.headers DEBUG FrameHeader [flags]: ta(0) fa(0) ro(0) co(0) en(0) gr(0) un(0) dl(0)
+21:36:53,576 eyed3.id3.frames DEBUG FrameSet: Reading 33 (0x21) bytes of data from byte pos 112 (0x70)
+21:36:53,576 eyed3.id3.frames DEBUG FrameSet: 33 bytes of data read
+21:36:53,576 eyed3.id3.frames DEBUG createFrame (desc:Lead performer(s)/Soloist(s)) - (2, None, None) - <class 'eyed3.id3.frames.TextFrame'>
+21:36:53,576 eyed3.id3.frames DEBUG createFrame 'b'TPE1'' with class '<class 'eyed3.id3.frames.TextFrame'>'
+21:36:53,576 eyed3.id3.frames DEBUG Unicode encoding: utf_16
+21:36:53,576 eyed3.id3.frames DEBUG TextFrame text: Various Artists
+21:36:53,576 eyed3.id3.frames DEBUG size_left: 174414
+21:36:53,576 eyed3.id3.frames DEBUG +++++++++++++++++++++++++++++++++++++++++++++++++
+21:36:53,576 eyed3.id3.frames DEBUG FrameSet: Reading Frame #4
+21:36:53,576 eyed3.id3.headers DEBUG FrameHeader [start byte]: 145 (0x91)
+21:36:53,576 eyed3.id3.headers DEBUG FrameHeader [id]: b'TXXX' (0x54585858)
+21:36:53,576 eyed3.id3.headers DEBUG FrameHeader [data size]: 23 (0x17)
+21:36:53,576 eyed3.id3.headers DEBUG FrameHeader [flags]: ta(0) fa(0) ro(0) co(0) en(0) gr(0) un(0) dl(0)
+21:36:53,576 eyed3.id3.frames DEBUG FrameSet: Reading 23 (0x17) bytes of data from byte pos 155 (0x9B)
+21:36:53,576 eyed3.id3.frames DEBUG FrameSet: 23 bytes of data read
+21:36:53,576 eyed3.id3.frames DEBUG createFrame (desc:User defined text information frame) - (2, None, None) - <class 'eyed3.id3.frames.UserTextFrame'>
+21:36:53,577 eyed3.id3.frames DEBUG createFrame 'b'TXXX'' with class '<class 'eyed3.id3.frames.UserTextFrame'>'
+21:36:53,577 eyed3.id3.frames DEBUG Unicode encoding: latin_1
+21:36:53,577 eyed3.id3.frames DEBUG UserTextFrame description: Software
+21:36:53,577 eyed3.id3.frames DEBUG Unicode encoding: latin_1
+21:36:53,577 eyed3.id3.frames DEBUG UserTextFrame text: Lavf58.76.100
+21:36:53,577 eyed3.id3.frames DEBUG size_left: 174381
+21:36:53,577 eyed3.id3.frames DEBUG +++++++++++++++++++++++++++++++++++++++++++++++++
+21:36:53,577 eyed3.id3.frames DEBUG FrameSet: Reading Frame #5
+21:36:53,577 eyed3.id3.headers DEBUG FrameHeader [start byte]: 178 (0xB2)
+21:36:53,577 eyed3.id3.headers DEBUG FrameHeader [id]: b'APIC' (0x41504943)
+21:36:53,577 eyed3.id3.headers DEBUG FrameHeader [data size]: 174371 (0x2A923)
+21:36:53,577 eyed3.id3.headers DEBUG FrameHeader [flags]: ta(0) fa(0) ro(0) co(0) en(0) gr(0) un(0) dl(0)
+21:36:53,577 eyed3.id3.frames DEBUG FrameSet: Reading 174371 (0x2A923) bytes of data from byte pos 188 (0xBC)
+21:36:53,577 eyed3.id3.frames DEBUG FrameSet: 174371 bytes of data read
+21:36:53,577 eyed3.id3.frames DEBUG createFrame (desc:Attached picture) - (2, None, None) - <class 'eyed3.id3.frames.ImageFrame'>
+21:36:53,577 eyed3.id3.frames DEBUG createFrame 'b'APIC'' with class '<class 'eyed3.id3.frames.ImageFrame'>'
+21:36:53,577 eyed3.id3.frames DEBUG APIC frame data size: 174371
+21:36:53,577 eyed3.id3.frames DEBUG APIC mime type: b'image/jpg'
+21:36:53,577 eyed3.id3.frames DEBUG Initial APIC picture type: 3
+21:36:53,577 eyed3.id3.frames DEBUG APIC picture type: 3
+21:36:53,577 eyed3.id3.frames DEBUG description len: 0
+21:36:53,577 eyed3.id3.frames DEBUG image len: 174358
+21:36:53,577 eyed3.id3.frames DEBUG Unicode encoding: latin_1
+21:36:53,577 eyed3.id3.frames DEBUG APIC description: 
+21:36:53,577 eyed3.id3.frames DEBUG APIC image data: 174358 bytes
+21:36:53,577 eyed3.id3.tag DEBUG Tag contains 0 bytes of padding.
+21:36:56,824 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:36:56,991 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/aB-W0x_jItw/maxresdefault.jpg HTTP/1.1" 200 43857
+21:37:05,402 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:37:05,551 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/G1T6nx9MunE/maxresdefault.jpg HTTP/1.1" 200 53999
+21:37:08,375 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:37:08,502 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/8i-pqNXtVtc/maxresdefault.jpg HTTP/1.1" 200 25128
+21:37:20,375 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:37:20,531 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/xd4xOkfn0PY/maxresdefault.jpg HTTP/1.1" 200 98919
+21:37:23,211 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:37:23,336 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/fBM-Ld2YyRw/maxresdefault.jpg HTTP/1.1" 200 115429
+21:37:45,716 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:37:45,869 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/fBM-Ld2YyRw/maxresdefault.jpg HTTP/1.1" 200 115429
+21:37:48,981 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:37:49,114 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/I01jIJa9Zbs/maxresdefault.jpg HTTP/1.1" 200 81654
+21:38:37,939 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:38:38,97 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/qn4hQufHVsE/maxresdefault.jpg HTTP/1.1" 200 117644
+21:38:44,806 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:38:44,948 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/gs9kpATIXeo/maxresdefault.jpg HTTP/1.1" 200 99676
+21:39:31,569 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:39:31,751 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/QEG4iEjpFRs/maxresdefault.jpg HTTP/1.1" 200 111940
+21:39:41,505 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:39:41,658 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/8CYy9jNmpXM/maxresdefault.jpg HTTP/1.1" 200 90625
+21:40:32,560 eyed3 DEBUG eyeD3 version 0.9.6
+21:40:38,675 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:40:38,830 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/oG-4Uvhm4lI/maxresdefault.jpg HTTP/1.1" 200 81436
+21:40:42,13 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:40:42,181 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/x7HkWuWSLQQ/maxresdefault.jpg HTTP/1.1" 200 26866
+21:41:09,790 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:41:09,967 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/3gXKwfPEWE8/maxresdefault.jpg HTTP/1.1" 200 25128
+21:41:11,491 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:41:11,660 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/cWH7IPwb3Rs/maxresdefault.jpg HTTP/1.1" 200 25128
+21:44:51,992 eyed3 DEBUG eyeD3 version 0.9.7
+21:45:55,352 eyed3 DEBUG eyeD3 version 0.9.7
+21:46:01,430 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:46:01,567 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/RsVVcsVDt-s/maxresdefault.jpg HTTP/1.1" 200 41398
+21:46:34,841 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:46:35,20 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/wMU03o_VkCw/maxresdefault.jpg HTTP/1.1" 200 43857
+21:46:39,826 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:46:40,4 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/gZXvdWdjY68/maxresdefault.jpg HTTP/1.1" 200 46311
+21:46:51,228 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:46:51,347 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/K1FlAphL2p8/maxresdefault.jpg HTTP/1.1" 200 73186
+21:46:54,687 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:46:54,899 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/TgbQ6nIqNEk/maxresdefault.jpg HTTP/1.1" 200 62812
+21:46:57,757 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:46:57,870 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/8CYy9jNmpXM/maxresdefault.jpg HTTP/1.1" 200 90625
+21:47:05,835 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:47:05,950 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/8CYy9jNmpXM/maxresdefault.jpg HTTP/1.1" 200 90625
+21:47:16,937 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:47:17,120 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/1-eL9YhC7HQ/maxresdefault.jpg HTTP/1.1" 200 27084
+21:47:21,335 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:47:21,485 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/C8LdO3CVRSQ/maxresdefault.jpg HTTP/1.1" 200 37035
+21:47:26,823 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:47:26,946 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/C8LdO3CVRSQ/maxresdefault.jpg HTTP/1.1" 200 37035
+21:47:36,527 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:47:36,678 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/XMcJ0-bLc-M/maxresdefault.jpg HTTP/1.1" 200 71376
+21:47:39,293 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:47:39,471 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/emEwfFvrl7I/maxresdefault.jpg HTTP/1.1" 200 174835
+21:49:44,120 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:49:44,326 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/mAXecPySr_c/maxresdefault.jpg HTTP/1.1" 404 1097
+21:50:21,171 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:50:21,397 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/aB-W0x_jItw/maxresdefault.jpg HTTP/1.1" 200 43857
+21:50:25,556 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:50:25,761 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/ClG7PPfU_I4/maxresdefault.jpg HTTP/1.1" 200 48357
+21:50:28,87 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:50:28,259 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/aB-W0x_jItw/maxresdefault.jpg HTTP/1.1" 200 43857
+21:50:34,10 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:50:34,129 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/wMU03o_VkCw/maxresdefault.jpg HTTP/1.1" 200 43857
+21:50:41,69 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:50:41,182 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/BTizbCVzHq4/maxresdefault.jpg HTTP/1.1" 200 65191
+21:50:42,903 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:50:43,24 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/BTizbCVzHq4/maxresdefault.jpg HTTP/1.1" 200 65191
+21:50:46,50 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:50:46,268 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/xd4xOkfn0PY/maxresdefault.jpg HTTP/1.1" 200 98919
+21:50:50,996 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:50:51,109 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/fBM-Ld2YyRw/maxresdefault.jpg HTTP/1.1" 200 115429
+21:53:09,211 eyed3 DEBUG eyeD3 version 0.9.7
+21:53:13,346 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:53:13,470 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/Fs-p78KJ5I4/maxresdefault.jpg HTTP/1.1" 200 99046
+21:53:33,360 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:53:33,499 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/Fs-p78KJ5I4/maxresdefault.jpg HTTP/1.1" 200 99046
+21:53:33,679 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:53:33,820 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/Fs-p78KJ5I4/maxresdefault.jpg HTTP/1.1" 200 99046
+22:17:56,346 eyed3 DEBUG eyeD3 version 0.9.7
+22:46:40,187 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+22:46:40,334 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/Fs-p78KJ5I4/maxresdefault.jpg HTTP/1.1" 200 99046
+22:47:02,581 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+22:47:02,696 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/Fs-p78KJ5I4/maxresdefault.jpg HTTP/1.1" 200 99046

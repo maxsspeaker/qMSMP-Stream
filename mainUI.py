@@ -82,6 +82,8 @@ class Ui_MainWindow(object):
         self.AlbumImg.setMaximumSize(QtCore.QSize(140, 140))
         self.AlbumImg.setText("")
         self.AlbumImg.setPixmap(QtGui.QPixmap("img/X9at37tsrY8AlbumImg.png"))
+        self.AlbumImg.setScaledContents(True)
+        self.AlbumImg.setAlignment(QtCore.Qt.AlignCenter)
         self.AlbumImg.setObjectName("AlbumImg")
         self.PlayerBoxFirk.addWidget(self.Visualframe)
         self.ContorlPanel = QtWidgets.QGroupBox(self.PlayerBox)
@@ -565,18 +567,20 @@ class Ui_MainWindow(object):
         self.AddTreakPlaylist.setMaximumSize(QtCore.QSize(30, 30))
         self.AddTreakPlaylist.setAutoFillBackground(False)
         self.AddTreakPlaylist.setStyleSheet("QPushButton{\n"
-"  background-color: rgb(18, 18, 18);\n"
+"  background-color: rgba(18, 18, 18);\n"
+"  color: rgba(18, 18, 18,0);\n"
 "  border: none;\n"
 "}\n"
 "QPushButton:hover{\n"
 "  background-color: rgb(100,100, 100);\n"
+"  color: rgb(100,100, 100);\n"
 "  border: none;\n"
 "}\n"
 "\n"
 "QPushButton:pressed{\n"
 "  background-color: rgb(200,200, 200);\n"
+"  color:  rgb(200,200, 200);\n"
 "  border: none;\n"
-"\n"
 "}")
         self.AddTreakPlaylist.setText("")
         icon8 = QtGui.QIcon()
@@ -648,8 +652,8 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MSMP Stream"))
-        self.TreakName.setText(_translate("MainWindow", "Я фырник фырный фыник!"))
-        self.AuthorName.setText(_translate("MainWindow", "Борян"))
-        self.AlbumName.setText(_translate("MainWindow", "Саймоновский"))
+        self.TreakName.setText(_translate("MainWindow", "TestNameTreak"))
+        self.AuthorName.setText(_translate("MainWindow", "NameAuthor"))
+        self.AlbumName.setText(_translate("MainWindow", "NameAlbum"))
         self.DataPath.setText(_translate("MainWindow", "YouTube/zr0kiRdU0M8"))
         self.TimePlayCounter.setText(_translate("MainWindow", "2:52/5:21"))

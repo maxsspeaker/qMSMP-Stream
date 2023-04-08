@@ -1,9 +1,10 @@
 import sys, time, os, traceback
 from PyQt5 import QtWidgets, QtCore, QtGui
 from PyQt5.QtWidgets import QMessageBox 
-from PyQt5.QtGui import QIcon,QFont
+from PyQt5.QtGui import QIcon,QFont 
 from os.path import exists
 from PIL import Image
+from PIL.ImageQt import ImageQt
 import io
 import logging
 
@@ -857,7 +858,7 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
         
         self.MSMPboxPlayer=MSMPboxPlayer(ServerPlaer=True,InstanceSettings=InstanceSettings) 
         #self.initUI()
-        with open(r"A:\YandexDisk\python-projects\bmCastMusic\myPlaylists\Джем – Sharpest Knives.plmsmpsbox", 'r') as fr:
+        with open(r"../../bmCastMusic/myPlaylists/myPlaylist.plmsmpsbox", 'r') as fr:
                     playlistFile = json.load(fr)
                     self.MSMPboxPlayer.playlist=playlistFile["playlist"]
         #self.MSMPboxPlayer.playlist=[{"ID": "YouTube", "url": "Q52GzsGmRuk", "name": "Hold", "uploader": "Home", "duration": 210, "Publis": False},
@@ -868,6 +869,14 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
         #mainUI.QtWidgets.QSpinBox=MySpinBox
         
         self.setupUi(self)
+        self.PlayListAddMenu = QtWidgets.QMenu()
+        self.PlayListAddMenu.triggered.connect(lambda x: print(x.text()))
+
+        self.AddTreakPlaylist.setMenu(self.PlayListAddMenu)
+        self.RemoveTreakPlaylist.setMenu(self.PlayListAddMenu)
+        self.add_menu(["",'add Local File'], self.PlayListAddMenu)
+        self.add_menu([{'add AudioStream': ['YouTube Video', 'soundcloud Treak']},'add Local File'], self.PlayListAddMenu)
+        
         if sys.platform.startswith("linux"):
             pass# for Linux using the X Server
             #self.MSMPboxPlayer.NewPlaerVLC.set_xwindow(self.Visualframe.winId())
@@ -887,11 +896,7 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
 ##        self.PlaylistWidget.insertItem(4, "test4")
 ##        self.PlaylistWidget.insertItem(5, "test5")
 ##        
-        for i, ItemP in enumerate(self.MSMPboxPlayer.playlist):
-            it = QtGui.QStandardItem(ItemP["name"]+"\n"+ItemP["uploader"])
-            self.PlayListBox.appendRow(it)
-            it.setData(QtGui.QIcon("img/AlbumImgMini.png"),QtCore.Qt.DecorationRole)
-            
+        
             #cov = None
             
             #self.MSMPboxPlayer.LoadImg(None,ItemP['ID'],ItemP['url'])
@@ -934,11 +939,21 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
             
         self.PlaylistView.setIconSize(QtCore.QSize(25,25))
 
-        it.setBackground(QtGui.QColor('red'))
+        
         self.add_functions()
 
         self.ProgressUpdate=False
         self.show()
+        for i, ItemP in enumerate(self.MSMPboxPlayer.playlist):
+            uploader=ItemP.get("uploader")
+            if(uploader==None):
+                uploader=" "
+            try:it = QtGui.QStandardItem(ItemP["name"]+"\n"+uploader)
+            except KeyError:it = QtGui.QStandardItem(ItemP["Name"]+"\n"+uploader)
+            self.PlayListBox.appendRow(it)
+            it.setData(QtGui.QIcon("img/AlbumImgMini.png"),QtCore.Qt.DecorationRole)
+        it.setBackground(QtGui.QColor('red'))
+        
         self.isPlayListSelectionChanged=False
         
         self.VolumeSlider.setValue(self.MSMPboxPlayer.NewPlaerVLC.audio_get_volume())
@@ -1011,15 +1026,22 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
         self.AlbumName.setText(self.MSMPboxPlayer.PlayNowMusicDataBox["albumTrekPlayNow"])
         if self.MSMPboxPlayer.CoverUrlPlayNow:
             try:
-                data = urllib.request.urlopen(self.MSMPboxPlayer.CoverUrlPlayNow).read()
+                #data = urllib.request.urlopen(self.MSMPboxPlayer.CoverUrlPlayNow).read()
+                r = requests.get(self.MSMPboxPlayer.CoverUrlPlayNow, stream=True)
+                r.raw.decode_content = True # Content-Encoding
+                ImgAlbum = Image.open(r.raw)
+                ImgAlbum.thumbnail((140,140))
+                ImgAlbum =ImageQt(ImgAlbum)
                 print("Update icon")
-                im = Image.open(io.BytesIO(data))
-                im.thumbnail((140,140))
-                com = im.tobytes()
-                pixmap = QtGui.QPixmap()
-                pixmap.loadFromData(com)
-                self.AlbumImg.setPixmap(pixmap)
+                #im = Image.open(io.BytesIO(data))
+                #im.thumbnail((140,140))
+                
+                #pixmap.loadFromData(com)
+                #self.AlbumImg.setPixmap(pixmap)
+                self.AlbumImg.setPixmap(QtGui.QPixmap.fromImage(ImgAlbum))
+                #print(self.MSMPboxPlayer.CoverUrlPlayNow)
             except:
+                print('\n',traceback.format_exc())
                 self.AlbumImg.setPixmap(QtGui.QPixmap("img/X9at37tsrY8AlbumImg.png"))
         else:
             self.AlbumImg.setPixmap(QtGui.QPixmap("img/X9at37tsrY8AlbumImg.png"))
@@ -1030,6 +1052,8 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
         self.PlayButton.clicked.connect(lambda: self.UpdateInfoTreakPL(self.MSMPboxPlayer.play()))
         self.StopButton.clicked.connect(lambda: self.UpdateInfoTreakPL(self.MSMPboxPlayer.stop()))
         self.PauseButton.clicked.connect(lambda: self.UpdateInfoTreakPL(self.MSMPboxPlayer.pause()))
+
+        #self.AddTreakPlaylist.connect(self.contextMenuPlayList)
         
         self.PreviousTreakButton.clicked.connect(lambda: self.UpdateInfoTreakPL(self.MSMPboxPlayer.previousTreak()))   
         self.NextTreakButton.clicked.connect(lambda: self.UpdateInfoTreakPL(self.MSMPboxPlayer.nextTreak()))
@@ -1044,19 +1068,44 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
         self.PlaylistView.clicked.connect(
             lambda: self.PlayListClickPL()
         )
+    def keyPressEvent(self, event):
+        try:
+         key = event.key()
+         #print(key)
+         if key == QtCore.Qt.Key_MediaPrevious:
+              self.UpdateInfoTreakPL(self.MSMPboxPlayer.previousTreak())
+         elif str(key) == "16777344": # Qt.Key_MediaPause ? Qt.Key_MediaPlay  
+              self.UpdateInfoTreakPL(self.MSMPboxPlayer.pause())
+         elif key == QtCore.Qt.Key_MediaNext:
+              self.UpdateInfoTreakPL(self.MSMPboxPlayer.nextTreak())
+        except:print('\n',traceback.format_exc())
+
     def closeEvent(self, event):
 
         reply = QMessageBox.question(self, 'Message',
             "Are you sure to quit?", QMessageBox.Yes |
             QMessageBox.No, QMessageBox.No)
 
-        if reply == qQMessageBox.Yes:
+        if reply == QMessageBox.Yes:
             self.MSMPboxPlayer.stop()
             event.accept()
-            sys.exit()
+            self.close()
         else:
             event.ignore()
 
+    def add_menu(self, data, menu_obj):
+        if isinstance(data, dict):
+            for k, v in data.items():
+                sub_menu = QtWidgets.QMenu(k, menu_obj)
+                menu_obj.addMenu(sub_menu)
+                self.add_menu(v, sub_menu)
+        elif isinstance(data, list):
+            for element in data:
+                self.add_menu(element, menu_obj)
+        else:
+            action = menu_obj.addAction(data)
+            action.setIconVisibleInMenu(False)
+            
 
 if __name__ == '__main__':
 

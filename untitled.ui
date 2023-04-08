@@ -177,6 +177,12 @@ QMainWindow &gt; QWidget {
           <property name="pixmap">
            <pixmap>img/X9at37tsrY8AlbumImg.png</pixmap>
           </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
          </widget>
         </widget>
        </item>
@@ -259,7 +265,7 @@ color:rgba(255, 0, 0)
 }</string>
                 </property>
                 <property name="text">
-                 <string>Я фырник фырный фыник!</string>
+                 <string>TestNameTreak</string>
                 </property>
                </widget>
               </item>
@@ -286,7 +292,7 @@ color:rgba(255, 0, 0)
 }</string>
                 </property>
                 <property name="text">
-                 <string>Борян</string>
+                 <string>NameAuthor</string>
                 </property>
                </widget>
               </item>
@@ -316,7 +322,7 @@ color:rgba(255, 0, 0)
 }</string>
                 </property>
                 <property name="text">
-                 <string>Саймоновский</string>
+                 <string>NameAlbum</string>
                 </property>
                </widget>
               </item>
@@ -1095,18 +1101,20 @@ QListWidget::item { margin: 0px; }</string>
               </property>
               <property name="styleSheet">
                <string notr="true">QPushButton{
-  background-color: rgb(18, 18, 18);
+  background-color: rgba(18, 18, 18);
+  color: rgba(18, 18, 18,0);
   border: none;
 }
 QPushButton:hover{
   background-color: rgb(100,100, 100);
+  color: rgb(100,100, 100);
   border: none;
 }
 
 QPushButton:pressed{
   background-color: rgb(200,200, 200);
+  color:  rgb(200,200, 200);
   border: none;
-
 }</string>
               </property>
               <property name="text">
