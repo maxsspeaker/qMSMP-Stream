@@ -128,5 +128,6 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-
+# MSMP local files
+img/cache/
 myPlaylists/

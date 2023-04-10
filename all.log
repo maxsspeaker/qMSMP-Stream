@@ -273,59 +273,321 @@
 21:41:09,967 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/3gXKwfPEWE8/maxresdefault.jpg HTTP/1.1" 200 25128
 21:41:11,491 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
 21:41:11,660 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/cWH7IPwb3Rs/maxresdefault.jpg HTTP/1.1" 200 25128
-21:44:51,992 eyed3 DEBUG eyeD3 version 0.9.7
-21:45:55,352 eyed3 DEBUG eyeD3 version 0.9.7
-21:46:01,430 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
-21:46:01,567 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/RsVVcsVDt-s/maxresdefault.jpg HTTP/1.1" 200 41398
-21:46:34,841 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
-21:46:35,20 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/wMU03o_VkCw/maxresdefault.jpg HTTP/1.1" 200 43857
-21:46:39,826 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
-21:46:40,4 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/gZXvdWdjY68/maxresdefault.jpg HTTP/1.1" 200 46311
-21:46:51,228 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
-21:46:51,347 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/K1FlAphL2p8/maxresdefault.jpg HTTP/1.1" 200 73186
-21:46:54,687 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
-21:46:54,899 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/TgbQ6nIqNEk/maxresdefault.jpg HTTP/1.1" 200 62812
-21:46:57,757 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
-21:46:57,870 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/8CYy9jNmpXM/maxresdefault.jpg HTTP/1.1" 200 90625
-21:47:05,835 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
-21:47:05,950 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/8CYy9jNmpXM/maxresdefault.jpg HTTP/1.1" 200 90625
-21:47:16,937 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
-21:47:17,120 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/1-eL9YhC7HQ/maxresdefault.jpg HTTP/1.1" 200 27084
-21:47:21,335 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
-21:47:21,485 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/C8LdO3CVRSQ/maxresdefault.jpg HTTP/1.1" 200 37035
-21:47:26,823 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
-21:47:26,946 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/C8LdO3CVRSQ/maxresdefault.jpg HTTP/1.1" 200 37035
-21:47:36,527 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
-21:47:36,678 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/XMcJ0-bLc-M/maxresdefault.jpg HTTP/1.1" 200 71376
-21:47:39,293 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
-21:47:39,471 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/emEwfFvrl7I/maxresdefault.jpg HTTP/1.1" 200 174835
-21:49:44,120 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
-21:49:44,326 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/mAXecPySr_c/maxresdefault.jpg HTTP/1.1" 404 1097
-21:50:21,171 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
-21:50:21,397 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/aB-W0x_jItw/maxresdefault.jpg HTTP/1.1" 200 43857
-21:50:25,556 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
-21:50:25,761 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/ClG7PPfU_I4/maxresdefault.jpg HTTP/1.1" 200 48357
-21:50:28,87 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
-21:50:28,259 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/aB-W0x_jItw/maxresdefault.jpg HTTP/1.1" 200 43857
-21:50:34,10 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
-21:50:34,129 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/wMU03o_VkCw/maxresdefault.jpg HTTP/1.1" 200 43857
-21:50:41,69 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
-21:50:41,182 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/BTizbCVzHq4/maxresdefault.jpg HTTP/1.1" 200 65191
-21:50:42,903 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
-21:50:43,24 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/BTizbCVzHq4/maxresdefault.jpg HTTP/1.1" 200 65191
-21:50:46,50 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
-21:50:46,268 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/xd4xOkfn0PY/maxresdefault.jpg HTTP/1.1" 200 98919
-21:50:50,996 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
-21:50:51,109 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/fBM-Ld2YyRw/maxresdefault.jpg HTTP/1.1" 200 115429
-21:53:09,211 eyed3 DEBUG eyeD3 version 0.9.7
-21:53:13,346 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
-21:53:13,470 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/Fs-p78KJ5I4/maxresdefault.jpg HTTP/1.1" 200 99046
-21:53:33,360 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
-21:53:33,499 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/Fs-p78KJ5I4/maxresdefault.jpg HTTP/1.1" 200 99046
-21:53:33,679 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
-21:53:33,820 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/Fs-p78KJ5I4/maxresdefault.jpg HTTP/1.1" 200 99046
-22:17:56,346 eyed3 DEBUG eyeD3 version 0.9.7
-22:46:40,187 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
-22:46:40,334 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/Fs-p78KJ5I4/maxresdefault.jpg HTTP/1.1" 200 99046
-22:47:02,581 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
-22:47:02,696 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/Fs-p78KJ5I4/maxresdefault.jpg HTTP/1.1" 200 99046
+13:36:51,913 eyed3 DEBUG eyeD3 version 0.9.6
+14:02:25,117 eyed3 DEBUG eyeD3 version 0.9.6
+11:53:07,655 eyed3 DEBUG eyeD3 version 0.9.6
+11:53:17,300 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+11:53:17,462 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/b8-7782rwaI/maxresdefault.jpg HTTP/1.1" 200 46311
+11:53:35,4 eyed3 DEBUG eyeD3 version 0.9.6
+11:53:40,692 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+11:53:40,877 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/2plMctf_OxM/maxresdefault.jpg HTTP/1.1" 404 1097
+11:53:49,788 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+11:53:49,934 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/G1T6nx9MunE/maxresdefault.jpg HTTP/1.1" 200 53999
+11:57:31,507 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+11:57:31,682 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/xdwWCl_5x2s/maxresdefault.jpg HTTP/1.1" 200 49726
+11:57:38,845 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+11:57:39,13 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/c_FDWJDFq7U/maxresdefault.jpg HTTP/1.1" 200 11942
+11:57:39,876 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+11:57:40,77 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/c_FDWJDFq7U/maxresdefault.jpg HTTP/1.1" 200 11942
+11:58:23,330 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+11:58:23,474 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/MYzB3AbK00g/maxresdefault.jpg HTTP/1.1" 200 75046
+11:58:57,237 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+11:58:57,413 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/jtXBocMpnaM/maxresdefault.jpg HTTP/1.1" 200 130415
+11:59:02,417 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+11:59:02,580 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/rH3SElTHL0Y/maxresdefault.jpg HTTP/1.1" 200 64546
+11:59:13,282 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+11:59:13,461 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/eyn7E2aoER8/maxresdefault.jpg HTTP/1.1" 200 68516
+11:59:18,789 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+11:59:18,973 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/qquO8P8tw5Q/maxresdefault.jpg HTTP/1.1" 200 113363
+11:59:22,773 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+11:59:23,11 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/VNBji8TbVwo/maxresdefault.jpg HTTP/1.1" 200 170650
+12:00:00,460 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:00:00,620 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/WqDdXvnNY9U/maxresdefault.jpg HTTP/1.1" 200 88908
+12:00:07,497 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:00:07,639 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/8TyRcf5ZBv0/maxresdefault.jpg HTTP/1.1" 200 167614
+12:00:10,797 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:00:10,977 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/weDhw3amU5I/maxresdefault.jpg HTTP/1.1" 200 60020
+12:00:46,292 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:00:46,464 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/Io4SX7bX95g/maxresdefault.jpg HTTP/1.1" 200 98919
+12:00:57,303 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:00:57,507 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/0EEo0xBndpk/maxresdefault.jpg HTTP/1.1" 200 46827
+12:01:11,416 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:01:11,589 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/vkALvreDJdM/maxresdefault.jpg HTTP/1.1" 404 1097
+12:01:16,774 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:01:16,940 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/Af1odyCLf9M/maxresdefault.jpg HTTP/1.1" 200 98919
+12:01:49,110 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:01:49,297 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/ywqd35FiWUc/maxresdefault.jpg HTTP/1.1" 200 155629
+12:01:50,738 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:01:50,882 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/ywqd35FiWUc/maxresdefault.jpg HTTP/1.1" 200 155629
+12:01:55,35 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:01:55,218 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/6-0kj2vDAEY/maxresdefault.jpg HTTP/1.1" 200 147130
+12:01:58,383 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:01:58,942 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/eo6yS3fFc5g/maxresdefault.jpg HTTP/1.1" 404 1097
+12:02:01,361 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:02:01,588 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/eo6yS3fFc5g/maxresdefault.jpg HTTP/1.1" 404 1097
+12:02:06,485 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:02:06,635 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/mMfxI3r_LyA/maxresdefault.jpg HTTP/1.1" 404 1097
+12:02:13,668 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:02:13,817 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/iEPsiz2nIz8/maxresdefault.jpg HTTP/1.1" 200 24657
+12:02:21,643 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:02:21,831 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/NlK9u6a69Dg/maxresdefault.jpg HTTP/1.1" 200 72556
+12:02:23,488 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:02:23,630 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/NlK9u6a69Dg/maxresdefault.jpg HTTP/1.1" 200 72556
+12:02:25,889 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:02:26,32 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/Y1_VsyLAGuk/maxresdefault.jpg HTTP/1.1" 200 98789
+12:02:29,632 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:02:29,753 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/K0HSD_i2DvA/maxresdefault.jpg HTTP/1.1" 200 115209
+12:06:34,333 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:06:34,504 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/PAzH-YAlFYc/maxresdefault.jpg HTTP/1.1" 200 65209
+12:07:33,733 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:07:33,877 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/UsWKMa8bGx8/maxresdefault.jpg HTTP/1.1" 200 150496
+12:08:51,264 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:08:51,411 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/baF6NjFZNqc/maxresdefault.jpg HTTP/1.1" 200 171164
+12:08:57,137 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:08:57,275 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/baF6NjFZNqc/maxresdefault.jpg HTTP/1.1" 200 171164
+12:09:01,775 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:09:01,906 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/YJVmu6yttiw/maxresdefault.jpg HTTP/1.1" 404 1097
+12:09:09,659 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:09:09,800 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/YJVmu6yttiw/maxresdefault.jpg HTTP/1.1" 404 1097
+12:12:48,929 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:12:49,97 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/4NRXx6U8ABQ/maxresdefault.jpg HTTP/1.1" 200 59822
+12:13:18,101 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:13:18,276 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/8TyRcf5ZBv0/maxresdefault.jpg HTTP/1.1" 200 167614
+12:16:03,588 eyed3 DEBUG eyeD3 version 0.9.6
+12:16:10,404 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:16:10,584 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/CCHNulFsUhc/maxresdefault.jpg HTTP/1.1" 200 62280
+12:16:15,848 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:16:16,51 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/CCHNulFsUhc/maxresdefault.jpg HTTP/1.1" 200 62280
+12:16:16,668 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:16:16,815 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/CCHNulFsUhc/maxresdefault.jpg HTTP/1.1" 200 62280
+12:16:18,913 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:16:19,33 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/CCHNulFsUhc/maxresdefault.jpg HTTP/1.1" 200 62280
+12:16:19,954 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:16:20,97 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/CCHNulFsUhc/maxresdefault.jpg HTTP/1.1" 200 62280
+12:16:26,871 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:16:27,45 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/HggeMrxOKDI/maxresdefault.jpg HTTP/1.1" 200 62532
+12:16:29,898 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:16:30,52 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/_ovdm2yX4MA/maxresdefault.jpg HTTP/1.1" 200 88536
+12:16:37,284 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:16:37,820 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/RXLzvo6kvVQ/maxresdefault.jpg HTTP/1.1" 404 1097
+12:16:41,164 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:16:41,306 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/I622AaEZ1l4/maxresdefault.jpg HTTP/1.1" 200 31667
+12:17:04,122 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:17:04,356 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/K9RCwFckQ-Y/maxresdefault.jpg HTTP/1.1" 200 89956
+12:17:07,411 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:17:07,577 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/GdphrtnHIKs/maxresdefault.jpg HTTP/1.1" 200 347840
+12:21:29,164 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:21:29,350 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/O4Lsah7bEJY/maxresdefault.jpg HTTP/1.1" 200 276014
+12:22:12,886 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:22:13,28 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/O4Lsah7bEJY/maxresdefault.jpg HTTP/1.1" 200 276014
+12:23:49,502 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:23:49,649 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/O4Lsah7bEJY/maxresdefault.jpg HTTP/1.1" 200 276014
+12:23:53,620 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:23:53,765 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/Hh5jEQraXaw/maxresdefault.jpg HTTP/1.1" 200 174353
+12:23:56,870 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:23:57,54 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/C4Iow9FFZxE/maxresdefault.jpg HTTP/1.1" 200 48357
+12:24:10,878 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:24:11,48 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/TaySTpSqhdA/maxresdefault.jpg HTTP/1.1" 200 189006
+12:24:52,897 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:24:53,80 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/ZEGZQijAS-I/maxresdefault.jpg HTTP/1.1" 200 189006
+12:24:56,513 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:24:56,714 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/PELXdb5xQS8/maxresdefault.jpg HTTP/1.1" 200 83283
+12:26:31,723 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:26:31,844 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/1mrGdGMNsv0/maxresdefault.jpg HTTP/1.1" 200 27476
+12:27:20,150 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:27:20,314 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/ZEGZQijAS-I/maxresdefault.jpg HTTP/1.1" 200 189006
+12:27:23,908 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:27:24,60 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/I622AaEZ1l4/maxresdefault.jpg HTTP/1.1" 200 31667
+12:27:28,993 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:27:30,40 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/5cmlgvekbYY/maxresdefault.jpg HTTP/1.1" 404 1097
+12:31:15,87 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:31:15,278 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/TaySTpSqhdA/maxresdefault.jpg HTTP/1.1" 200 189006
+12:31:55,633 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:31:55,783 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/ZEGZQijAS-I/maxresdefault.jpg HTTP/1.1" 200 189006
+12:32:00,894 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:32:01,66 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/4KHLOjzaryg/maxresdefault.jpg HTTP/1.1" 200 131440
+12:32:12,901 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:32:13,47 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/fBM-Ld2YyRw/maxresdefault.jpg HTTP/1.1" 200 115429
+12:35:07,196 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:35:07,347 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/59fzO8BIwDg/maxresdefault.jpg HTTP/1.1" 200 283458
+12:35:12,418 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:35:12,562 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/ffvl9lGGLvg/maxresdefault.jpg HTTP/1.1" 200 327832
+12:37:50,570 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:37:50,715 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/Jl2qv2HrwX4/maxresdefault.jpg HTTP/1.1" 200 37035
+12:40:00,326 eyed3 DEBUG eyeD3 version 0.9.6
+12:40:00,413 asyncio DEBUG Using proactor: IocpProactor
+12:40:59,581 eyed3 DEBUG eyeD3 version 0.9.6
+12:40:59,622 asyncio DEBUG Using proactor: IocpProactor
+12:42:31,645 eyed3 DEBUG eyeD3 version 0.9.6
+12:42:31,685 asyncio DEBUG Using proactor: IocpProactor
+12:42:44,772 eyed3 DEBUG eyeD3 version 0.9.6
+12:42:44,811 asyncio DEBUG Using proactor: IocpProactor
+12:43:28,981 eyed3 DEBUG eyeD3 version 0.9.6
+12:43:29,23 asyncio DEBUG Using proactor: IocpProactor
+12:43:35,250 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:43:35,406 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/DdXHTVUalRU/maxresdefault.jpg HTTP/1.1" 200 105020
+12:44:40,891 eyed3 DEBUG eyeD3 version 0.9.6
+12:44:40,932 asyncio DEBUG Using proactor: IocpProactor
+12:44:47,269 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:44:47,437 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/1iG3772IF0g/maxresdefault.jpg HTTP/1.1" 200 202120
+12:45:25,323 eyed3 DEBUG eyeD3 version 0.9.6
+12:45:25,363 asyncio DEBUG Using proactor: IocpProactor
+12:45:33,737 eyed3 DEBUG eyeD3 version 0.9.6
+12:45:33,778 asyncio DEBUG Using proactor: IocpProactor
+12:45:40,290 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:45:40,503 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/qwc4bmdsmpQ/maxresdefault.jpg HTTP/1.1" 200 36221
+12:46:24,361 eyed3 DEBUG eyeD3 version 0.9.6
+12:46:24,400 asyncio DEBUG Using proactor: IocpProactor
+12:46:29,644 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:46:29,795 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/DdXHTVUalRU/maxresdefault.jpg HTTP/1.1" 200 105020
+12:47:11,928 eyed3 DEBUG eyeD3 version 0.9.6
+12:47:11,967 asyncio DEBUG Using proactor: IocpProactor
+12:47:19,533 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:47:19,752 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/O1wiCt7_bqo/maxresdefault.jpg HTTP/1.1" 200 121250
+12:47:50,419 eyed3 DEBUG eyeD3 version 0.9.6
+12:47:50,458 asyncio DEBUG Using proactor: IocpProactor
+12:47:55,662 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:47:55,807 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/DdXHTVUalRU/maxresdefault.jpg HTTP/1.1" 200 105020
+12:48:19,114 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:48:19,264 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/PpocxtjYk38/maxresdefault.jpg HTTP/1.1" 200 94962
+12:49:15,723 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:49:15,906 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/d6SQb0WTrlA/maxresdefault.jpg HTTP/1.1" 200 120453
+12:49:49,647 eyed3 DEBUG eyeD3 version 0.9.6
+12:49:49,688 asyncio DEBUG Using proactor: IocpProactor
+12:49:53,647 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:49:53,806 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/d6SQb0WTrlA/maxresdefault.jpg HTTP/1.1" 200 120453
+12:50:48,352 eyed3 DEBUG eyeD3 version 0.9.6
+12:50:48,393 asyncio DEBUG Using proactor: IocpProactor
+12:50:54,232 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:50:54,407 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/PpocxtjYk38/maxresdefault.jpg HTTP/1.1" 200 94962
+12:51:09,566 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:51:09,709 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/Rd5u80bLk7Y/maxresdefault.jpg HTTP/1.1" 200 169111
+12:51:54,73 eyed3 DEBUG eyeD3 version 0.9.6
+12:51:54,114 asyncio DEBUG Using proactor: IocpProactor
+12:52:05,139 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:52:05,310 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/2qAXtXp4ntA/maxresdefault.jpg HTTP/1.1" 200 126676
+12:52:30,640 eyed3 DEBUG eyeD3 version 0.9.6
+12:52:30,681 asyncio DEBUG Using proactor: IocpProactor
+12:52:39,357 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:52:39,500 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/fBM-Ld2YyRw/maxresdefault.jpg HTTP/1.1" 200 115429
+12:55:13,804 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:55:13,956 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/59fzO8BIwDg/maxresdefault.jpg HTTP/1.1" 200 283458
+12:55:19,410 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:55:19,652 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/m4hr-C4QU1A/maxresdefault.jpg HTTP/1.1" 200 63408
+12:55:30,392 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:55:30,605 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/ZeP0dKhSgXE/maxresdefault.jpg HTTP/1.1" 200 63408
+12:55:36,313 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:55:36,442 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/pzXl473KgEo/maxresdefault.jpg HTTP/1.1" 200 67463
+12:55:45,719 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:55:45,856 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/gGBcowFV_pc/maxresdefault.jpg HTTP/1.1" 200 102066
+12:55:55,673 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:55:55,847 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/V_wmcAxQdb0/maxresdefault.jpg HTTP/1.1" 200 164614
+12:56:06,989 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:56:07,137 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/RiC3pI5H-Ak/maxresdefault.jpg HTTP/1.1" 200 17547
+12:59:20,959 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:59:21,200 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/uiEsuh1Jdec/maxresdefault.jpg HTTP/1.1" 200 17547
+12:59:37,71 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:59:37,222 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/f27kZ4Pe9ok/maxresdefault.jpg HTTP/1.1" 200 189006
+13:00:06,980 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+13:00:07,126 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/ns9hFcH-glQ/maxresdefault.jpg HTTP/1.1" 200 75530
+13:01:42,153 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+13:01:42,324 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/K0HSD_i2DvA/maxresdefault.jpg HTTP/1.1" 200 115209
+13:01:48,528 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+13:01:48,659 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/HO6ebtWczX8/maxresdefault.jpg HTTP/1.1" 404 1097
+13:02:08,496 eyed3 DEBUG eyeD3 version 0.9.6
+13:02:08,537 asyncio DEBUG Using proactor: IocpProactor
+13:02:20,299 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+13:02:20,467 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/yp3lAniL9h4/maxresdefault.jpg HTTP/1.1" 200 51020
+13:03:28,245 eyed3 DEBUG eyeD3 version 0.9.6
+13:03:28,285 asyncio DEBUG Using proactor: IocpProactor
+13:03:34,817 eyed3 DEBUG eyeD3 version 0.9.6
+13:03:34,860 asyncio DEBUG Using proactor: IocpProactor
+13:03:41,27 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+13:03:41,180 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/2qAXtXp4ntA/maxresdefault.jpg HTTP/1.1" 200 126676
+13:04:28,335 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+13:04:28,522 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/KRWlw0M-rdw/maxresdefault.jpg HTTP/1.1" 200 87698
+13:05:55,358 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+13:05:55,503 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/Cp97ykO2ulA/maxresdefault.jpg HTTP/1.1" 200 157474
+13:07:40,454 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+13:07:40,629 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/rc1z0yREyUA/maxresdefault.jpg HTTP/1.1" 200 105020
+13:11:44,105 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+13:11:44,276 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/vyf9MlWU-kw/maxresdefault.jpg HTTP/1.1" 200 42251
+13:13:07,464 eyed3 DEBUG eyeD3 version 0.9.6
+13:13:07,505 asyncio DEBUG Using proactor: IocpProactor
+13:16:11,324 eyed3 DEBUG eyeD3 version 0.9.6
+13:16:11,364 asyncio DEBUG Using proactor: IocpProactor
+13:23:34,908 root INFO starting...
+13:23:35,211 eyed3 DEBUG eyeD3 version 0.9.6
+13:23:35,251 asyncio DEBUG Using proactor: IocpProactor
+13:24:12,232 root INFO starting...
+13:24:16,424 root INFO starting...
+13:24:50,618 root INFO starting...
+13:25:37,357 root INFO starting...
+13:25:54,453 root INFO starting...
+13:26:03,419 root INFO starting...
+13:26:15,116 root INFO starting...
+13:26:21,457 root INFO starting...
+13:28:37,944 root INFO starting...
+13:28:38,292 eyed3 DEBUG eyeD3 version 0.9.6
+13:28:38,338 asyncio DEBUG Using proactor: IocpProactor
+13:28:53,331 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+13:28:53,497 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/DdXHTVUalRU/maxresdefault.jpg HTTP/1.1" 200 105020
+13:29:58,259 root INFO starting...
+13:29:58,612 eyed3 DEBUG eyeD3 version 0.9.6
+13:29:58,657 asyncio DEBUG Using proactor: IocpProactor
+13:29:58,935 root INFO Starting Core MSMP
+13:30:00,493 root INFO ========
+13:30:00,507 root INFO Bayside (Radio Edit)
+Obskur - Topic
+13:30:00,512 root INFO ==
+13:30:00,569 root INFO True
+13:30:08,664 root INFO [youtube] Extracting URL: 120qslVb4sA
+13:30:08,668 root INFO [youtube] 120qslVb4sA: Downloading webpage
+13:30:09,233 root INFO [youtube] 120qslVb4sA: Downloading android player API JSON
+13:30:09,694 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+13:30:09,860 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/120qslVb4sA/maxresdefault.jpg HTTP/1.1" 200 127403
+13:30:09,942 root INFO Update icon
+13:30:09,945 root INFO False
+13:30:23,731 root INFO starting...
+13:30:24,78 eyed3 DEBUG eyeD3 version 0.9.6
+13:30:24,122 asyncio DEBUG Using proactor: IocpProactor
+13:30:29,990 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+13:30:30,142 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/wVghU_kYeXU/maxresdefault.jpg HTTP/1.1" 200 130471
+13:31:26,55 root INFO starting...
+13:31:26,397 eyed3 DEBUG eyeD3 version 0.9.6
+13:31:26,442 asyncio DEBUG Using proactor: IocpProactor
+13:31:31,618 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+13:31:31,815 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/2qAXtXp4ntA/maxresdefault.jpg HTTP/1.1" 200 126676
+13:32:07,862 root INFO starting...
+13:32:08,205 eyed3 DEBUG eyeD3 version 0.9.6
+13:32:08,249 asyncio DEBUG Using proactor: IocpProactor
+13:32:10,737 root DEBUG [youtube] Extracting URL: 2qAXtXp4ntA
+13:32:10,755 root DEBUG [youtube] 2qAXtXp4ntA: Downloading webpage
+13:32:11,284 root DEBUG [youtube] 2qAXtXp4ntA: Downloading android player API JSON
+13:32:11,511 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+13:32:11,654 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/2qAXtXp4ntA/maxresdefault.jpg HTTP/1.1" 200 126676
+13:32:15,984 root DEBUG [youtube] Extracting URL: Jp0mdYBkzKU
+13:32:16,28 root DEBUG [youtube] Jp0mdYBkzKU: Downloading webpage
+13:32:16,553 root DEBUG [youtube] Jp0mdYBkzKU: Downloading android player API JSON
+13:32:17,48 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+13:32:17,235 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/Jp0mdYBkzKU/maxresdefault.jpg HTTP/1.1" 200 105020
+13:32:27,150 root DEBUG [youtube] Extracting URL: XeiR1w236yo
+13:32:27,154 root DEBUG [youtube] XeiR1w236yo: Downloading webpage
+13:32:27,637 root DEBUG [youtube] XeiR1w236yo: Downloading android player API JSON
+13:32:28,184 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+13:32:28,384 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/XeiR1w236yo/maxresdefault.jpg HTTP/1.1" 200 86702
+13:32:39,127 root DEBUG [youtube] Extracting URL: Rd5u80bLk7Y
+13:32:39,151 root DEBUG [youtube] Rd5u80bLk7Y: Downloading webpage
+13:32:39,802 root DEBUG [youtube] Rd5u80bLk7Y: Downloading android player API JSON
+13:32:40,60 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+13:32:40,254 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/Rd5u80bLk7Y/maxresdefault.jpg HTTP/1.1" 200 169111
+13:34:08,489 root DEBUG [youtube] Extracting URL: 1iG3772IF0g
+13:34:08,493 root DEBUG [youtube] 1iG3772IF0g: Downloading webpage
+13:34:09,78 root DEBUG [youtube] 1iG3772IF0g: Downloading android player API JSON
+13:34:09,591 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+13:34:09,800 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/1iG3772IF0g/maxresdefault.jpg HTTP/1.1" 200 202120
+13:34:13,513 root DEBUG [youtube] Extracting URL: lMYIQz8VS4s
+13:34:13,554 root DEBUG [youtube] lMYIQz8VS4s: Downloading webpage
+13:34:14,120 root DEBUG [youtube] lMYIQz8VS4s: Downloading android player API JSON
+13:34:14,630 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+13:34:14,808 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/lMYIQz8VS4s/maxresdefault.jpg HTTP/1.1" 200 123265

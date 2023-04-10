@@ -3,3 +3,4 @@ requests
 yt-dlp
 eyed3
 python-vlc
+pypresence
