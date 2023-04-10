@@ -1152,6 +1152,7 @@ QPushButton:pressed{
               <property name="styleSheet">
                <string notr="true">QPushButton{
   background-color: rgb(18, 18, 18);
+  color: rgba(18, 18, 18,0);
   border: none;
 }
 QPushButton:hover{
@@ -1197,6 +1198,7 @@ QPushButton:pressed{
               <property name="styleSheet">
                <string notr="true">QPushButton{
   background-color: rgb(18, 18, 18);
+  color: rgba(18, 18, 18,0);
   border: none;
 }
 QPushButton:hover{

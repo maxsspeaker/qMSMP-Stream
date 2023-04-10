@@ -10,6 +10,7 @@ import logging
 from logging.handlers import QueueHandler
 from pypresence import Presence
 from datetime import date
+import yaml
 
 logging.basicConfig(filename="all.log",
                             filemode='a',
@@ -272,12 +273,12 @@ class MSMPboxPlayer(GibridPlayer):
           if not(self.discord_rpc==None):
            self.discord_rpc.update(
               **{
-                  'details': MSMPboxPlayer.PlayNowMusicDataBox["titleTrekPlayNow"],
-                  'state': MSMPboxPlayer.PlayNowMusicDataBox["artistTrekPlayNow"]+self.lenPlayListStatus,
+                  'details': self.PlayNowMusicDataBox["titleTrekPlayNow"],
+                  'state': self.PlayNowMusicDataBox["artistTrekPlayNow"]+self.lenPlayListStatus,
                   'large_image':self.NowPlayIconRPC,
                   'small_image':"pause",
-                  'large_text':MSMPboxPlayer.PlayNowMusicDataBox["albumTrekPlayNow"],
-                  'small_image':self.version
+                  #'large_text':self.PlayNowMusicDataBox["albumTrekPlayNow"],
+                  #'small_image':self.version
                   }
               )
            
@@ -295,11 +296,11 @@ class MSMPboxPlayer(GibridPlayer):
           #start_time = time.time()
            self.discord_rpc.update(
               **{
-                  'details': MSMPboxPlayer.PlayNowMusicDataBox["titleTrekPlayNow"],
-                  'state': MSMPboxPlayer.PlayNowMusicDataBox["artistTrekPlayNow"]+self.lenPlayListStatus,
+                  'details': self.PlayNowMusicDataBox["titleTrekPlayNow"],
+                  'state': self.PlayNowMusicDataBox["artistTrekPlayNow"]+self.lenPlayListStatus,
                   'large_image':self.NowPlayIconRPC,
                   'small_image':"play",
-                  'large_text':MSMPboxPlayer.PlayNowMusicDataBox["albumTrekPlayNow"],
+                  #'large_text':self.PlayNowMusicDataBox["albumTrekPlayNow"],
                   #'small_image':self.version,
                   'end': time.time()+((self.NewPlaerVLC.get_time()-self.NewPlaerVLC.get_length())/1000)-((self.NewPlaerVLC.get_time()-self.NewPlaerVLC.get_length())/1000)-((self.NewPlaerVLC.get_time()-self.NewPlaerVLC.get_length())/1000)
                 }
@@ -308,8 +309,8 @@ class MSMPboxPlayer(GibridPlayer):
           else:
             self.discord_rpc.update(
               **{
-                  'details': MSMPboxPlayer.PlayNowMusicDataBox["titleTrekPlayNow"],
-                  'state': MSMPboxPlayer.PlayNowMusicDataBox["artistTrekPlayNow"],
+                  'details': self.PlayNowMusicDataBox["titleTrekPlayNow"],
+                  'state': self.PlayNowMusicDataBox["artistTrekPlayNow"],
                   'large_image':self.msmp_streamIcon,
                   'small_image':"play",
                   #'small_image':self.version,
@@ -328,7 +329,7 @@ class MSMPboxPlayer(GibridPlayer):
                 
             else:
                 self.NewPlaerVLC.pause()
-      except:printError('\n',traceback.format_exc())
+      except:printError(traceback.format_exc())
      ######
      def LoadPlaylist(self,PlObj,autoPlay=False,ContinuePlay=False): 
          if not(PlObj.get("playlist")==None):
@@ -437,7 +438,7 @@ class MSMPboxPlayer(GibridPlayer):
           self.PlayLocalFile=False
           if not(self.ServerPlaer):
               try:self.lenPlayListStatus=" ("+str(Num+1)+self.localizationBox["iz"]+str(len(self.playlist))+")"
-              except:printError('\n',traceback.format_exc())
+              except:printError(traceback.format_exc())
           try:
                if("MyFiles"==self.playlist[Num]["ID"]):
                   MyFilePl=self.playlist[Num]
@@ -600,7 +601,7 @@ class MSMPboxPlayer(GibridPlayer):
                                     viseon="  ["+r['formats'][castViseon]['format_note']+"]"
                             except:
                                 print("===================\nErorr: Stream detect!")
-                                printError('\n',traceback.format_exc())
+                                printError(traceback.format_exc())
                                 #ErrorSound.play()
                                 #ErrorLoadSound="Stream detect!"
                                 OldMusicDataBox["Play"]=0
@@ -723,7 +724,7 @@ class MSMPboxPlayer(GibridPlayer):
                                 try:CoverUrlPlayNow=playlist[Num]["cover"]
                                 except:CoverUrlPlayNow=""
 ##                                except:
-##                                    printError('\n',traceback.format_exc())
+##                                    printError(traceback.format_exc())
 ##                                    
 ##                                    #ImgAssets[str(IDSound)+"AlbumImg"] = pygame.transform.scale(MSMP_Img, (140, 140))
 ##                                    
@@ -878,6 +879,15 @@ class MSMPboxPlayer(GibridPlayer):
 
 
 #InstanceSettings=[r' --projectm-preset-path='+sys.argv[0].replace(os.path.basename(sys.argv[0]), '')+r'assets/visualizations',r'--soundfont='+sys.argv[0].replace(os.path.basename(sys.argv[0]), '')+r'assets/soundfonts/8bitsf.SF2']
+
+def crop_center(pil_img, crop_width: int, crop_height: int) -> Image:
+    #Функция для обрезки изображения по центру.
+    img_width, img_height = pil_img.size
+    return pil_img.crop(((img_width - crop_width) // 2,
+                         (img_height - crop_height) // 2,
+                         (img_width + crop_width) // 2,
+                         (img_height + crop_height) // 2))
+
   
 class ProcessRunnable(QtCore.QRunnable):
     def __init__(self, target, args):
@@ -946,12 +956,16 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
         
         self.setupUi(self)
         self.PlayListAddMenu = QtWidgets.QMenu()
-        self.PlayListAddMenu.triggered.connect(lambda x: print(x.text()))
+        self.PlayListAddMenu.triggered.connect(lambda x: print(x.data))
+
+        self.RemoveTreakMenu = QtWidgets.QMenu()
+        self.RemoveTreakMenu.triggered.connect(lambda x: print(x.data))
+        
 
         self.AddTreakPlaylist.setMenu(self.PlayListAddMenu)
-        self.RemoveTreakPlaylist.setMenu(self.PlayListAddMenu)
-        self.add_menu(["",'add Local File'], self.PlayListAddMenu)
-        self.add_menu([{'add AudioStream': ['YouTube Video', 'soundcloud Treak']},'add Local File'], self.PlayListAddMenu)
+        self.RemoveTreakPlaylist.setMenu(self.RemoveTreakMenu)
+        self.add_menu(["Remove Treak"+"#RT","Clear Playlist"+"#CPL"], self.RemoveTreakMenu)
+        self.add_menu(['add Local File'+"#addLF",{'add AudioStream'+"#addAS": ['YouTube Video'+"#addAS-YV", 'soundcloud Treak'+"#addAS-ST"]}], self.PlayListAddMenu)
         
         if sys.platform.startswith("linux"):
             pass# for Linux using the X Server
@@ -964,6 +978,7 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
         self.PlayListBox = QtGui.QStandardItemModel()
         self.PlaylistView.setModel(self.PlayListBox)
         self.PlaylistView.setSpacing(0)
+        
         
 ##        self.PlaylistWidget.insertItem(0, "test")
 ##        self.PlaylistWidget.insertItem(1, "test1")
@@ -1019,6 +1034,7 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
         self.add_functions()
 
         self.ProgressUpdate=False
+        self.LestNum=-1
         self.show()
         for i, ItemP in enumerate(self.MSMPboxPlayer.playlist):
             uploader=ItemP.get("uploader")
@@ -1028,7 +1044,7 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
             except KeyError:it = QtGui.QStandardItem(ItemP["Name"]+"\n"+uploader)
             self.PlayListBox.appendRow(it)
             it.setData(QtGui.QIcon("img/AlbumImgMini.png"),QtCore.Qt.DecorationRole)
-        it.setBackground(QtGui.QColor('red'))
+        #it.setBackground(QtGui.QColor('red'))
         
         self.isPlayListSelectionChanged=False
         
@@ -1096,25 +1112,36 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
         self.MSMPboxPlayer.NewPlaerVLC.audio_set_volume(value)
         
     def UpdateInfoTreakPL(self,fun):
-
+         
         self.TreakName.setText(self.MSMPboxPlayer.PlayNowMusicDataBox["titleTrekPlayNow"])
         self.AuthorName.setText(self.MSMPboxPlayer.PlayNowMusicDataBox["artistTrekPlayNow"])
         self.AlbumName.setText(self.MSMPboxPlayer.PlayNowMusicDataBox["albumTrekPlayNow"])
+        if not(self.LestNum==-1):
+             self.PlayListBox.itemFromIndex(self.PlayListBox.index(self.LestNum,0)).setBackground(QtGui.QColor('#1A1A1A'))
+        self.LestNum=self.MSMPboxPlayer.Num
+        self.PlayListBox.itemFromIndex(self.PlayListBox.index(self.LestNum,0)).setBackground(QtGui.QColor('red'))
+         
         if self.MSMPboxPlayer.CoverUrlPlayNow:
             try:
                 #data = urllib.request.urlopen(self.MSMPboxPlayer.CoverUrlPlayNow).read()
                 r = requests.get(self.MSMPboxPlayer.CoverUrlPlayNow, stream=True)
                 r.raw.decode_content = True # Content-Encoding
                 ImgAlbum = Image.open(r.raw)
+                
+                ImgAlbum=crop_center(ImgAlbum,ImgAlbum.size[1],ImgAlbum.size[1])
                 ImgAlbum.thumbnail((140,140))
                 ImgAlbum =ImageQt(ImgAlbum)
+                
                 print("Update icon")
                 #im = Image.open(io.BytesIO(data))
                 #im.thumbnail((140,140))
                 
                 #pixmap.loadFromData(com)
                 #self.AlbumImg.setPixmap(pixmap)
-                self.AlbumImg.setPixmap(QtGui.QPixmap.fromImage(ImgAlbum))
+                pixmap=QtGui.QPixmap.fromImage(ImgAlbum)
+                self.AlbumImg.setPixmap(pixmap)
+                
+                self.PlayListBox.itemFromIndex(self.PlayListBox.index(self.LestNum,0)).setData(QtGui.QIcon(pixmap),QtCore.Qt.DecorationRole)
                 #print(self.MSMPboxPlayer.CoverUrlPlayNow)
             except:
                 print('\n',traceback.format_exc())
@@ -1127,7 +1154,7 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
     def add_functions(self):
         self.PlayButton.clicked.connect(lambda: self.UpdateInfoTreakPL(self.MSMPboxPlayer.play()))
         self.StopButton.clicked.connect(lambda: self.UpdateInfoTreakPL(self.MSMPboxPlayer.stop()))
-        self.PauseButton.clicked.connect(lambda: self.UpdateInfoTreakPL(self.MSMPboxPlayer.pause()))
+        self.PauseButton.clicked.connect(lambda: self.MSMPboxPlayer.pause())
 
         #self.AddTreakPlaylist.connect(self.contextMenuPlayList)
         
@@ -1179,8 +1206,10 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
             for element in data:
                 self.add_menu(element, menu_obj)
         else:
-            action = menu_obj.addAction(data)
+            
+            action = menu_obj.addAction(data.split("#")[0])
             action.setIconVisibleInMenu(False)
+            action.data=data.split("#")[1]
             
 
 if __name__ == '__main__':

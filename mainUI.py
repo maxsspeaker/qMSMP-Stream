@@ -82,7 +82,7 @@ class Ui_MainWindow(object):
         self.AlbumImg.setMaximumSize(QtCore.QSize(140, 140))
         self.AlbumImg.setText("")
         self.AlbumImg.setPixmap(QtGui.QPixmap("img/X9at37tsrY8AlbumImg.png"))
-        self.AlbumImg.setScaledContents(True)
+        self.AlbumImg.setScaledContents(False)
         self.AlbumImg.setAlignment(QtCore.Qt.AlignCenter)
         self.AlbumImg.setObjectName("AlbumImg")
         self.PlayerBoxFirk.addWidget(self.Visualframe)
@@ -595,6 +595,7 @@ class Ui_MainWindow(object):
         self.RemoveTreakPlaylist.setMaximumSize(QtCore.QSize(30, 30))
         self.RemoveTreakPlaylist.setStyleSheet("QPushButton{\n"
 "  background-color: rgb(18, 18, 18);\n"
+"  color: rgba(18, 18, 18,0);\n"
 "  border: none;\n"
 "}\n"
 "QPushButton:hover{\n"
@@ -619,6 +620,7 @@ class Ui_MainWindow(object):
         self.MenuPlaylist.setMaximumSize(QtCore.QSize(30, 30))
         self.MenuPlaylist.setStyleSheet("QPushButton{\n"
 "  background-color: rgb(18, 18, 18);\n"
+"  color: rgba(18, 18, 18,0);\n"
 "  border: none;\n"
 "}\n"
 "QPushButton:hover{\n"
