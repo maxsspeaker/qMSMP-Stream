@@ -1669,3 +1669,1522 @@ AttributeError: 'MSMPboxPlayer' object has no attribute 'NowPlayIconRPC'
 17:03:03,143 root DEBUG [youtube] CCHNulFsUhc: Downloading android player API JSON
 17:03:03,622 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
 17:03:03,812 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/CCHNulFsUhc/maxresdefault.jpg HTTP/1.1" 200 62280
+17:03:15,292 root DEBUG [youtube] Extracting URL: GdphrtnHIKs
+17:03:15,324 root DEBUG [youtube] GdphrtnHIKs: Downloading webpage
+17:03:15,844 root DEBUG [youtube] GdphrtnHIKs: Downloading android player API JSON
+17:03:16,132 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:03:16,299 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/GdphrtnHIKs/maxresdefault.jpg HTTP/1.1" 200 347840
+17:03:17,661 root DEBUG [youtube] Extracting URL: CCHNulFsUhc
+17:03:17,711 root DEBUG [youtube] CCHNulFsUhc: Downloading webpage
+17:03:18,295 root DEBUG [youtube] CCHNulFsUhc: Downloading android player API JSON
+17:03:18,549 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:03:18,698 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/CCHNulFsUhc/maxresdefault.jpg HTTP/1.1" 200 62280
+17:03:19,382 root DEBUG [youtube] Extracting URL: O4Lsah7bEJY
+17:03:19,408 root DEBUG [youtube] O4Lsah7bEJY: Downloading webpage
+17:03:19,996 root DEBUG [youtube] O4Lsah7bEJY: Downloading android player API JSON
+17:03:20,477 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:03:20,669 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/O4Lsah7bEJY/maxresdefault.jpg HTTP/1.1" 200 276014
+17:03:21,746 root DEBUG [youtube] Extracting URL: K9RCwFckQ-Y
+17:03:21,748 root DEBUG [youtube] K9RCwFckQ-Y: Downloading webpage
+17:03:22,286 root DEBUG [youtube] K9RCwFckQ-Y: Downloading android player API JSON
+17:03:22,781 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:03:22,993 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/K9RCwFckQ-Y/maxresdefault.jpg HTTP/1.1" 200 89956
+17:03:24,672 root DEBUG [youtube] Extracting URL: Dd_44-DvRJE
+17:03:24,674 root DEBUG [youtube] Dd_44-DvRJE: Downloading webpage
+17:03:25,309 root DEBUG [youtube] Dd_44-DvRJE: Downloading android player API JSON
+17:03:25,805 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:03:25,962 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/Dd_44-DvRJE/maxresdefault.jpg HTTP/1.1" 200 75991
+17:03:38,574 root DEBUG [youtube] Extracting URL: pUjE9H8QlA4
+17:03:38,603 root DEBUG [youtube] pUjE9H8QlA4: Downloading webpage
+17:03:39,194 root DEBUG [youtube] pUjE9H8QlA4: Downloading android player API JSON
+17:03:39,657 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:03:39,799 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/pUjE9H8QlA4/maxresdefault.jpg HTTP/1.1" 200 76614
+17:04:26,71 root DEBUG [youtube] Extracting URL: 1weATSoaRbA
+17:04:26,90 root DEBUG [youtube] 1weATSoaRbA: Downloading webpage
+17:04:26,590 root DEBUG [youtube] 1weATSoaRbA: Downloading android player API JSON
+17:04:27,556 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:04:27,772 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/1weATSoaRbA/maxresdefault.jpg HTTP/1.1" 200 97621
+17:06:12,760 root DEBUG [youtube] Extracting URL: 1-eL9YhC7HQ
+17:06:12,805 root DEBUG [youtube] 1-eL9YhC7HQ: Downloading webpage
+17:06:13,326 root DEBUG [youtube] 1-eL9YhC7HQ: Downloading android player API JSON
+17:06:13,583 root ERROR ERROR: [youtube] 1-eL9YhC7HQ: Video unavailable. This video is not available
+17:06:13,643 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:06:13,835 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/1-eL9YhC7HQ/maxresdefault.jpg HTTP/1.1" 200 27084
+17:06:17,715 root DEBUG [youtube] Extracting URL: VjJ25v1dRrU
+17:06:17,717 root DEBUG [youtube] VjJ25v1dRrU: Downloading webpage
+17:06:18,295 root DEBUG [youtube] VjJ25v1dRrU: Downloading android player API JSON
+17:06:19,334 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:06:19,512 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/VjJ25v1dRrU/maxresdefault.jpg HTTP/1.1" 200 45936
+17:06:22,813 root DEBUG [youtube] Extracting URL: 1-eL9YhC7HQ
+17:06:22,815 root DEBUG [youtube] 1-eL9YhC7HQ: Downloading webpage
+17:06:23,283 root DEBUG [youtube] 1-eL9YhC7HQ: Downloading android player API JSON
+17:06:23,469 root ERROR ERROR: [youtube] 1-eL9YhC7HQ: Video unavailable. This video is not available
+17:06:23,477 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:06:23,649 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/1-eL9YhC7HQ/maxresdefault.jpg HTTP/1.1" 200 27084
+17:06:24,734 root DEBUG [youtube] Extracting URL: VjJ25v1dRrU
+17:06:24,737 root DEBUG [youtube] VjJ25v1dRrU: Downloading webpage
+17:06:25,352 root DEBUG [youtube] VjJ25v1dRrU: Downloading android player API JSON
+17:06:26,151 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:06:26,307 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/VjJ25v1dRrU/maxresdefault.jpg HTTP/1.1" 200 45936
+17:06:41,629 root DEBUG [youtube] Extracting URL: 8CYy9jNmpXM
+17:06:41,632 root DEBUG [youtube] 8CYy9jNmpXM: Downloading webpage
+17:06:42,160 root DEBUG [youtube] 8CYy9jNmpXM: Downloading android player API JSON
+17:06:42,644 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:06:42,814 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/8CYy9jNmpXM/maxresdefault.jpg HTTP/1.1" 200 90625
+17:06:44,583 root DEBUG [youtube] Extracting URL: GLdT3w_9fC8
+17:06:44,625 root DEBUG [youtube] GLdT3w_9fC8: Downloading webpage
+17:06:45,83 root DEBUG [youtube] GLdT3w_9fC8: Downloading android player API JSON
+17:06:45,685 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:06:47,270 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/GLdT3w_9fC8/maxresdefault.jpg HTTP/1.1" 404 1097
+17:06:50,502 root DEBUG [youtube] Extracting URL: 9fTHoTMHuPE
+17:06:50,504 root DEBUG [youtube] 9fTHoTMHuPE: Downloading webpage
+17:06:51,54 root DEBUG [youtube] 9fTHoTMHuPE: Downloading android player API JSON
+17:06:51,510 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:06:51,734 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/9fTHoTMHuPE/maxresdefault.jpg HTTP/1.1" 200 105683
+17:06:53,987 root DEBUG [youtube] Extracting URL: ulmD1umCnrM
+17:06:54,18 root DEBUG [youtube] ulmD1umCnrM: Downloading webpage
+17:06:54,544 root DEBUG [youtube] ulmD1umCnrM: Downloading android player API JSON
+17:06:54,991 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:06:55,142 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/ulmD1umCnrM/maxresdefault.jpg HTTP/1.1" 200 140521
+17:06:57,591 root DEBUG [youtube] Extracting URL: 9fTHoTMHuPE
+17:06:57,594 root DEBUG [youtube] 9fTHoTMHuPE: Downloading webpage
+17:06:58,259 root DEBUG [youtube] 9fTHoTMHuPE: Downloading android player API JSON
+17:06:58,525 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:06:58,650 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/9fTHoTMHuPE/maxresdefault.jpg HTTP/1.1" 200 105683
+17:07:03,927 root DEBUG [youtube] Extracting URL: 04nX3DT23QY
+17:07:03,931 root DEBUG [youtube] 04nX3DT23QY: Downloading webpage
+17:07:04,495 root DEBUG [youtube] 04nX3DT23QY: Downloading android player API JSON
+17:07:05,50 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:07:05,181 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/04nX3DT23QY/maxresdefault.jpg HTTP/1.1" 200 140521
+17:07:14,780 root INFO starting...
+17:07:15,103 eyed3 DEBUG eyeD3 version 0.9.6
+17:07:15,147 asyncio DEBUG Using proactor: IocpProactor
+17:07:18,845 root DEBUG [youtube] Extracting URL: Fq6GvDiaiHw
+17:07:18,849 root DEBUG [youtube] Fq6GvDiaiHw: Downloading webpage
+17:07:19,387 root DEBUG [youtube] Fq6GvDiaiHw: Downloading android player API JSON
+17:07:19,892 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:07:20,84 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/Fq6GvDiaiHw/maxresdefault.jpg HTTP/1.1" 200 38577
+17:07:26,895 root DEBUG [youtube] Extracting URL: p8YaAzZDQAg
+17:07:26,914 root DEBUG [youtube] p8YaAzZDQAg: Downloading webpage
+17:07:27,452 root DEBUG [youtube] p8YaAzZDQAg: Downloading android player API JSON
+17:07:27,639 root ERROR ERROR: [youtube] p8YaAzZDQAg: Video unavailable. This video is not available
+17:07:27,662 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:07:27,873 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/p8YaAzZDQAg/maxresdefault.jpg HTTP/1.1" 200 112234
+17:07:29,452 root DEBUG [youtube] Extracting URL: FftIYY44Woc
+17:07:29,484 root DEBUG [youtube] FftIYY44Woc: Downloading webpage
+17:07:30,73 root DEBUG [youtube] FftIYY44Woc: Downloading android player API JSON
+17:07:30,560 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:07:30,764 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/FftIYY44Woc/maxresdefault.jpg HTTP/1.1" 200 60816
+17:07:54,500 root INFO starting...
+17:07:54,818 eyed3 DEBUG eyeD3 version 0.9.6
+17:07:54,862 asyncio DEBUG Using proactor: IocpProactor
+17:07:58,213 root DEBUG [youtube] Extracting URL: BIQvzNLAR9Q
+17:07:58,256 root DEBUG [youtube] BIQvzNLAR9Q: Downloading webpage
+17:07:58,808 root DEBUG [youtube] BIQvzNLAR9Q: Downloading android player API JSON
+17:07:59,278 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:07:59,488 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/BIQvzNLAR9Q/maxresdefault.jpg HTTP/1.1" 200 48357
+17:08:02,325 root DEBUG [youtube] Extracting URL: _ovdm2yX4MA
+17:08:02,377 root DEBUG [youtube] _ovdm2yX4MA: Downloading webpage
+17:08:02,970 root DEBUG [youtube] _ovdm2yX4MA: Downloading android player API JSON
+17:08:03,492 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:08:03,709 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/_ovdm2yX4MA/maxresdefault.jpg HTTP/1.1" 200 88536
+17:08:16,66 root DEBUG [youtube] Extracting URL: xpVfcZ0ZcFM
+17:08:16,69 root DEBUG [youtube] xpVfcZ0ZcFM: Downloading webpage
+17:08:16,790 root DEBUG [youtube] xpVfcZ0ZcFM: Downloading android player API JSON
+17:08:17,283 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:08:17,441 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/xpVfcZ0ZcFM/maxresdefault.jpg HTTP/1.1" 200 131530
+17:08:20,357 root DEBUG [youtube] Extracting URL: _ovdm2yX4MA
+17:08:20,359 root DEBUG [youtube] _ovdm2yX4MA: Downloading webpage
+17:08:21,22 root DEBUG [youtube] _ovdm2yX4MA: Downloading android player API JSON
+17:08:21,315 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:08:21,513 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/_ovdm2yX4MA/maxresdefault.jpg HTTP/1.1" 200 88536
+17:08:23,39 root DEBUG [youtube] Extracting URL: _ovdm2yX4MA
+17:08:23,42 root DEBUG [youtube] _ovdm2yX4MA: Downloading webpage
+17:08:23,687 root DEBUG [youtube] _ovdm2yX4MA: Downloading android player API JSON
+17:08:23,938 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:08:24,65 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/_ovdm2yX4MA/maxresdefault.jpg HTTP/1.1" 200 88536
+17:08:25,180 root DEBUG [youtube] Extracting URL: _ovdm2yX4MA
+17:08:25,183 root DEBUG [youtube] _ovdm2yX4MA: Downloading webpage
+17:08:25,789 root DEBUG [youtube] _ovdm2yX4MA: Downloading android player API JSON
+17:08:26,56 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:08:26,237 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/_ovdm2yX4MA/maxresdefault.jpg HTTP/1.1" 200 88536
+17:08:27,710 root DEBUG [youtube] Extracting URL: _ovdm2yX4MA
+17:08:27,753 root DEBUG [youtube] _ovdm2yX4MA: Downloading webpage
+17:08:28,628 root DEBUG [youtube] _ovdm2yX4MA: Downloading android player API JSON
+17:08:28,931 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:08:29,109 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/_ovdm2yX4MA/maxresdefault.jpg HTTP/1.1" 200 88536
+17:08:29,314 root DEBUG [youtube] Extracting URL: _ovdm2yX4MA
+17:08:29,322 root DEBUG [youtube] _ovdm2yX4MA: Downloading webpage
+17:08:30,62 root DEBUG [youtube] _ovdm2yX4MA: Downloading android player API JSON
+17:08:30,860 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:08:31,7 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/_ovdm2yX4MA/maxresdefault.jpg HTTP/1.1" 200 88536
+17:08:33,395 root DEBUG [youtube] Extracting URL: 8GW6sLrK40k
+17:08:33,398 root DEBUG [youtube] 8GW6sLrK40k: Downloading webpage
+17:08:33,952 root DEBUG [youtube] 8GW6sLrK40k: Downloading android player API JSON
+17:08:34,518 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:08:34,659 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/8GW6sLrK40k/maxresdefault.jpg HTTP/1.1" 200 93050
+17:08:37,95 root DEBUG [youtube] Extracting URL: 8GW6sLrK40k
+17:08:37,132 root DEBUG [youtube] 8GW6sLrK40k: Downloading webpage
+17:08:37,702 root DEBUG [youtube] 8GW6sLrK40k: Downloading android player API JSON
+17:08:37,961 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:08:38,110 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/8GW6sLrK40k/maxresdefault.jpg HTTP/1.1" 200 93050
+17:08:39,896 root DEBUG [youtube] Extracting URL: PTZgxW_3LIQ
+17:08:39,898 root DEBUG [youtube] PTZgxW_3LIQ: Downloading webpage
+17:08:40,425 root DEBUG [youtube] PTZgxW_3LIQ: Downloading android player API JSON
+17:08:40,988 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:08:41,177 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/PTZgxW_3LIQ/maxresdefault.jpg HTTP/1.1" 200 172528
+17:09:22,860 root DEBUG [youtube] Extracting URL: PTZgxW_3LIQ
+17:09:22,895 root DEBUG [youtube] PTZgxW_3LIQ: Downloading webpage
+17:09:23,406 root DEBUG [youtube] PTZgxW_3LIQ: Downloading android player API JSON
+17:09:23,705 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:09:23,827 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/PTZgxW_3LIQ/maxresdefault.jpg HTTP/1.1" 200 172528
+17:09:43,308 root DEBUG [youtube] Extracting URL: 4LoDBdvGDBc
+17:09:43,315 root DEBUG [youtube] 4LoDBdvGDBc: Downloading webpage
+17:09:43,882 root DEBUG [youtube] 4LoDBdvGDBc: Downloading android player API JSON
+17:09:44,345 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:09:44,500 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/4LoDBdvGDBc/maxresdefault.jpg HTTP/1.1" 200 46311
+17:11:47,467 root DEBUG [youtube] Extracting URL: HyjNcXwc3-I
+17:11:47,488 root DEBUG [youtube] HyjNcXwc3-I: Downloading webpage
+17:11:48,125 root DEBUG [youtube] HyjNcXwc3-I: Downloading android player API JSON
+17:11:48,613 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:11:48,827 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/HyjNcXwc3-I/maxresdefault.jpg HTTP/1.1" 200 56748
+17:11:51,953 root DEBUG [youtube] Extracting URL: 8GW6sLrK40k
+17:11:51,973 root DEBUG [youtube] 8GW6sLrK40k: Downloading webpage
+17:11:52,622 root DEBUG [youtube] 8GW6sLrK40k: Downloading android player API JSON
+17:11:52,876 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:11:53,66 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/8GW6sLrK40k/maxresdefault.jpg HTTP/1.1" 200 93050
+17:11:53,933 root DEBUG [youtube] Extracting URL: sb-IIjPIMYg
+17:11:53,976 root DEBUG [youtube] sb-IIjPIMYg: Downloading webpage
+17:11:54,591 root DEBUG [youtube] sb-IIjPIMYg: Downloading android player API JSON
+17:11:55,13 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:11:55,246 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/sb-IIjPIMYg/maxresdefault.jpg HTTP/1.1" 200 118238
+17:11:55,952 root DEBUG [youtube] Extracting URL: qBV5CHUqA6g
+17:11:55,959 root DEBUG [youtube] qBV5CHUqA6g: Downloading webpage
+17:11:56,532 root DEBUG [youtube] qBV5CHUqA6g: Downloading android player API JSON
+17:11:57,3 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:11:57,174 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/qBV5CHUqA6g/maxresdefault.jpg HTTP/1.1" 200 57064
+17:14:53,638 root DEBUG [youtube] Extracting URL: sb-IIjPIMYg
+17:14:53,647 root DEBUG [youtube] sb-IIjPIMYg: Downloading webpage
+17:14:54,194 root DEBUG [youtube] sb-IIjPIMYg: Downloading android player API JSON
+17:14:54,455 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:14:54,670 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/sb-IIjPIMYg/maxresdefault.jpg HTTP/1.1" 200 118238
+17:14:55,759 root DEBUG [youtube] Extracting URL: 8GW6sLrK40k
+17:14:55,762 root DEBUG [youtube] 8GW6sLrK40k: Downloading webpage
+17:14:56,345 root DEBUG [youtube] 8GW6sLrK40k: Downloading android player API JSON
+17:14:56,608 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:14:56,756 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/8GW6sLrK40k/maxresdefault.jpg HTTP/1.1" 200 93050
+17:14:58,538 root DEBUG [youtube] Extracting URL: sb-IIjPIMYg
+17:14:58,567 root DEBUG [youtube] sb-IIjPIMYg: Downloading webpage
+17:14:59,27 root DEBUG [youtube] sb-IIjPIMYg: Downloading android player API JSON
+17:14:59,318 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:14:59,461 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/sb-IIjPIMYg/maxresdefault.jpg HTTP/1.1" 200 118238
+17:15:00,50 root DEBUG [youtube] Extracting URL: qBV5CHUqA6g
+17:15:00,72 root DEBUG [youtube] qBV5CHUqA6g: Downloading webpage
+17:15:00,684 root DEBUG [youtube] qBV5CHUqA6g: Downloading android player API JSON
+17:15:00,909 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:15:01,77 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/qBV5CHUqA6g/maxresdefault.jpg HTTP/1.1" 200 57064
+17:15:01,764 root DEBUG [youtube] Extracting URL: ldXEyEeuQ_g
+17:15:01,766 root DEBUG [youtube] ldXEyEeuQ_g: Downloading webpage
+17:15:02,333 root DEBUG [youtube] ldXEyEeuQ_g: Downloading android player API JSON
+17:15:02,869 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:15:03,50 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/ldXEyEeuQ_g/maxresdefault.jpg HTTP/1.1" 200 168479
+17:15:04,581 root DEBUG [youtube] Extracting URL: sb-IIjPIMYg
+17:15:04,591 root DEBUG [youtube] sb-IIjPIMYg: Downloading webpage
+17:15:05,136 root DEBUG [youtube] sb-IIjPIMYg: Downloading android player API JSON
+17:15:05,365 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:15:05,533 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/sb-IIjPIMYg/maxresdefault.jpg HTTP/1.1" 200 118238
+17:15:07,541 root DEBUG [youtube] Extracting URL: ldXEyEeuQ_g
+17:15:07,584 root DEBUG [youtube] ldXEyEeuQ_g: Downloading webpage
+17:15:08,184 root DEBUG [youtube] ldXEyEeuQ_g: Downloading android player API JSON
+17:15:08,417 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:15:08,569 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/ldXEyEeuQ_g/maxresdefault.jpg HTTP/1.1" 200 168479
+17:15:15,774 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:15:15,944 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/ldXEyEeuQ_g/maxresdefault.jpg HTTP/1.1" 200 168479
+17:16:19,563 root DEBUG [youtube] Extracting URL: bWudx700U8s
+17:16:19,614 root DEBUG [youtube] bWudx700U8s: Downloading webpage
+17:16:20,223 root DEBUG [youtube] bWudx700U8s: Downloading android player API JSON
+17:16:20,687 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:16:20,898 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/bWudx700U8s/maxresdefault.jpg HTTP/1.1" 200 37035
+17:16:25,79 root DEBUG [youtube] Extracting URL: r2gyrPPedhY
+17:16:25,121 root DEBUG [youtube] r2gyrPPedhY: Downloading webpage
+17:16:25,631 root DEBUG [youtube] r2gyrPPedhY: Downloading android player API JSON
+17:16:26,148 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:16:26,317 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/r2gyrPPedhY/maxresdefault.jpg HTTP/1.1" 200 37035
+17:16:29,817 root DEBUG [youtube] Extracting URL: vXc2E3TW7os
+17:16:29,835 root DEBUG [youtube] vXc2E3TW7os: Downloading webpage
+17:16:30,485 root DEBUG [youtube] vXc2E3TW7os: Downloading android player API JSON
+17:16:30,976 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:16:31,144 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/vXc2E3TW7os/maxresdefault.jpg HTTP/1.1" 200 37035
+17:16:59,712 root DEBUG [youtube] Extracting URL: 64nro7nfw28
+17:16:59,717 root DEBUG [youtube] 64nro7nfw28: Downloading webpage
+17:17:00,387 root DEBUG [youtube] 64nro7nfw28: Downloading android player API JSON
+17:17:01,525 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:17:01,689 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/64nro7nfw28/maxresdefault.jpg HTTP/1.1" 200 162584
+17:17:13,930 root DEBUG [youtube] Extracting URL: kPn3fiVtpec
+17:17:13,933 root DEBUG [youtube] kPn3fiVtpec: Downloading webpage
+17:17:14,485 root DEBUG [youtube] kPn3fiVtpec: Downloading android player API JSON
+17:17:14,709 root DEBUG [youtube] kPn3fiVtpec: Downloading MPD manifest
+17:17:15,337 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:17:15,522 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/kPn3fiVtpec/maxresdefault.jpg HTTP/1.1" 200 259652
+17:17:32,89 root DEBUG [youtube] Extracting URL: b8-7782rwaI
+17:17:32,107 root DEBUG [youtube] b8-7782rwaI: Downloading webpage
+17:17:32,604 root DEBUG [youtube] b8-7782rwaI: Downloading android player API JSON
+17:17:33,33 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:17:33,169 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/b8-7782rwaI/maxresdefault.jpg HTTP/1.1" 200 46311
+17:17:35,795 root DEBUG [youtube] Extracting URL: _kOQbAKRXTQ
+17:17:35,829 root DEBUG [youtube] _kOQbAKRXTQ: Downloading webpage
+17:17:36,387 root DEBUG [youtube] _kOQbAKRXTQ: Downloading android player API JSON
+17:17:36,898 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:17:37,114 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/_kOQbAKRXTQ/maxresdefault.jpg HTTP/1.1" 200 92046
+17:17:43,509 root DEBUG [youtube] Extracting URL: abmYJE16JIk
+17:17:43,512 root DEBUG [youtube] abmYJE16JIk: Downloading webpage
+17:17:44,59 root DEBUG [youtube] abmYJE16JIk: Downloading android player API JSON
+17:17:44,530 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:17:44,738 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/abmYJE16JIk/maxresdefault.jpg HTTP/1.1" 200 92046
+17:18:25,594 root INFO starting...
+17:18:25,917 eyed3 DEBUG eyeD3 version 0.9.6
+17:18:25,959 asyncio DEBUG Using proactor: IocpProactor
+17:18:39,187 root DEBUG [youtube] Extracting URL: u5uSlUKBEDc
+17:18:39,189 root DEBUG [youtube] u5uSlUKBEDc: Downloading webpage
+17:18:39,809 root DEBUG [youtube] u5uSlUKBEDc: Downloading android player API JSON
+17:18:40,293 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:18:40,505 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/u5uSlUKBEDc/maxresdefault.jpg HTTP/1.1" 200 157787
+17:18:42,777 root DEBUG [youtube] Extracting URL: O4Lsah7bEJY
+17:18:42,782 root DEBUG [youtube] O4Lsah7bEJY: Downloading webpage
+17:18:43,333 root DEBUG [youtube] O4Lsah7bEJY: Downloading android player API JSON
+17:18:43,603 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:18:43,791 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/O4Lsah7bEJY/maxresdefault.jpg HTTP/1.1" 200 276014
+17:18:49,995 root DEBUG [youtube] Extracting URL: DjPFY3UoI4Q
+17:18:50,36 root DEBUG [youtube] DjPFY3UoI4Q: Downloading webpage
+17:18:50,579 root DEBUG [youtube] DjPFY3UoI4Q: Downloading android player API JSON
+17:18:51,27 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:18:51,202 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/DjPFY3UoI4Q/maxresdefault.jpg HTTP/1.1" 200 65670
+17:18:55,960 root DEBUG [youtube] Extracting URL: xC-4wgyt9qE
+17:18:55,994 root DEBUG [youtube] xC-4wgyt9qE: Downloading webpage
+17:18:56,519 root DEBUG [youtube] xC-4wgyt9qE: Downloading android player API JSON
+17:18:56,940 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:18:57,97 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/xC-4wgyt9qE/maxresdefault.jpg HTTP/1.1" 200 122881
+17:19:00,18 root DEBUG [youtube] Extracting URL: DjPFY3UoI4Q
+17:19:00,20 root DEBUG [youtube] DjPFY3UoI4Q: Downloading webpage
+17:19:00,503 root DEBUG [youtube] DjPFY3UoI4Q: Downloading android player API JSON
+17:19:00,752 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:19:00,906 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/DjPFY3UoI4Q/maxresdefault.jpg HTTP/1.1" 200 65670
+17:20:28,928 root INFO starting...
+17:20:29,252 eyed3 DEBUG eyeD3 version 0.9.6
+17:20:29,295 asyncio DEBUG Using proactor: IocpProactor
+17:20:33,42 root DEBUG [youtube] Extracting URL: baF6NjFZNqc
+17:20:33,45 root DEBUG [youtube] baF6NjFZNqc: Downloading webpage
+17:20:33,579 root DEBUG [youtube] baF6NjFZNqc: Downloading android player API JSON
+17:20:34,90 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:20:34,266 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/baF6NjFZNqc/maxresdefault.jpg HTTP/1.1" 200 171164
+17:20:34,505 root DEBUG [youtube] Extracting URL: baF6NjFZNqc
+17:20:34,508 root DEBUG [youtube] baF6NjFZNqc: Downloading webpage
+17:20:35,101 root DEBUG [youtube] baF6NjFZNqc: Downloading android player API JSON
+17:20:35,360 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:20:35,503 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/baF6NjFZNqc/maxresdefault.jpg HTTP/1.1" 200 171164
+17:20:42,919 root DEBUG [youtube] Extracting URL: HyjNcXwc3-I
+17:20:42,923 root DEBUG [youtube] HyjNcXwc3-I: Downloading webpage
+17:20:43,681 root DEBUG [youtube] HyjNcXwc3-I: Downloading android player API JSON
+17:20:43,954 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:20:44,92 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/HyjNcXwc3-I/maxresdefault.jpg HTTP/1.1" 200 56748
+17:20:58,442 root DEBUG [youtube] Extracting URL: 8GW6sLrK40k
+17:20:58,443 root DEBUG [youtube] 8GW6sLrK40k: Downloading webpage
+17:20:59,151 root DEBUG [youtube] 8GW6sLrK40k: Downloading android player API JSON
+17:20:59,379 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:20:59,529 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/8GW6sLrK40k/maxresdefault.jpg HTTP/1.1" 200 93050
+17:21:22,567 root DEBUG [youtube] Extracting URL: 3pbvmR8n27w
+17:21:22,569 root DEBUG [youtube] 3pbvmR8n27w: Downloading webpage
+17:21:23,183 root DEBUG [youtube] 3pbvmR8n27w: Downloading android player API JSON
+17:21:23,665 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:21:23,839 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/3pbvmR8n27w/maxresdefault.jpg HTTP/1.1" 200 120420
+17:21:29,507 root DEBUG [youtube] Extracting URL: BTthtlT80Rc
+17:21:29,511 root DEBUG [youtube] BTthtlT80Rc: Downloading webpage
+17:21:30,105 root DEBUG [youtube] BTthtlT80Rc: Downloading android player API JSON
+17:21:30,353 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:21:30,507 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/BTthtlT80Rc/maxresdefault.jpg HTTP/1.1" 200 112762
+17:21:56,354 root DEBUG [youtube] Extracting URL: ftNYQOGdxaA
+17:21:56,357 root DEBUG [youtube] ftNYQOGdxaA: Downloading webpage
+17:21:56,895 root DEBUG [youtube] ftNYQOGdxaA: Downloading android player API JSON
+17:21:57,120 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:21:57,278 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/ftNYQOGdxaA/maxresdefault.jpg HTTP/1.1" 200 90084
+17:22:02,357 root DEBUG [youtube] Extracting URL: 18JQUYgpOlw
+17:22:02,380 root DEBUG [youtube] 18JQUYgpOlw: Downloading webpage
+17:22:02,953 root DEBUG [youtube] 18JQUYgpOlw: Downloading android player API JSON
+17:22:03,384 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:22:03,531 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/18JQUYgpOlw/maxresdefault.jpg HTTP/1.1" 200 93265
+17:23:04,856 root INFO starting...
+17:23:05,179 eyed3 DEBUG eyeD3 version 0.9.6
+17:23:05,223 asyncio DEBUG Using proactor: IocpProactor
+17:23:32,378 root INFO starting...
+17:23:32,708 eyed3 DEBUG eyeD3 version 0.9.6
+17:23:35,427 root DEBUG [youtube] Extracting URL: fe-sAEOnFVM
+17:23:35,429 root DEBUG [youtube] fe-sAEOnFVM: Downloading webpage
+17:23:35,986 root DEBUG [youtube] fe-sAEOnFVM: Downloading android player API JSON
+17:23:36,370 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:23:36,554 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/fe-sAEOnFVM/maxresdefault.jpg HTTP/1.1" 200 117789
+17:23:36,772 root DEBUG [youtube] Extracting URL: fe-sAEOnFVM
+17:23:36,786 root DEBUG [youtube] fe-sAEOnFVM: Downloading webpage
+17:23:37,333 root DEBUG [youtube] fe-sAEOnFVM: Downloading android player API JSON
+17:23:37,633 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:23:37,778 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/fe-sAEOnFVM/maxresdefault.jpg HTTP/1.1" 200 117789
+17:23:47,179 root INFO starting...
+17:23:47,513 eyed3 DEBUG eyeD3 version 0.9.6
+17:24:00,901 root DEBUG [youtube] Extracting URL: iRweTyfl3qE
+17:24:00,942 root DEBUG [youtube] iRweTyfl3qE: Downloading webpage
+17:24:01,475 root DEBUG [youtube] iRweTyfl3qE: Downloading android player API JSON
+17:24:01,745 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:24:01,959 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/iRweTyfl3qE/maxresdefault.jpg HTTP/1.1" 200 103087
+17:24:34,814 root DEBUG [youtube] Extracting URL: -dhx7Hnu-wo
+17:24:34,849 root DEBUG [youtube] -dhx7Hnu-wo: Downloading webpage
+17:24:35,348 root DEBUG [youtube] -dhx7Hnu-wo: Downloading android player API JSON
+17:24:35,593 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:24:35,767 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/-dhx7Hnu-wo/maxresdefault.jpg HTTP/1.1" 200 137445
+17:24:40,678 root DEBUG [youtube] Extracting URL: fq14gX3F-K4
+17:24:40,724 root DEBUG [youtube] fq14gX3F-K4: Downloading webpage
+17:24:41,260 root DEBUG [youtube] fq14gX3F-K4: Downloading android player API JSON
+17:24:41,500 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:24:41,693 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/fq14gX3F-K4/maxresdefault.jpg HTTP/1.1" 200 103087
+17:25:41,101 root INFO starting...
+17:25:41,425 eyed3 DEBUG eyeD3 version 0.9.6
+17:25:44,496 root DEBUG [youtube] Extracting URL: 120qslVb4sA
+17:25:44,514 root DEBUG [youtube] 120qslVb4sA: Downloading webpage
+17:25:45,102 root DEBUG [youtube] 120qslVb4sA: Downloading android player API JSON
+17:25:45,365 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:25:45,598 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/120qslVb4sA/maxresdefault.jpg HTTP/1.1" 200 127403
+17:29:04,688 root DEBUG [youtube] Extracting URL: 1iG3772IF0g
+17:29:04,694 root DEBUG [youtube] 1iG3772IF0g: Downloading webpage
+17:29:05,329 root DEBUG [youtube] 1iG3772IF0g: Downloading android player API JSON
+17:29:05,675 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:29:05,921 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/1iG3772IF0g/maxresdefault.jpg HTTP/1.1" 200 202120
+17:29:30,116 root DEBUG [youtube] Extracting URL: 1iG3772IF0g
+17:29:30,121 root DEBUG [youtube] 1iG3772IF0g: Downloading webpage
+17:29:30,701 root DEBUG [youtube] 1iG3772IF0g: Downloading android player API JSON
+17:29:31,549 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:29:31,695 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/1iG3772IF0g/maxresdefault.jpg HTTP/1.1" 200 202120
+17:29:31,966 root DEBUG [youtube] Extracting URL: 1iG3772IF0g
+17:29:32,12 root DEBUG [youtube] 1iG3772IF0g: Downloading webpage
+17:29:32,672 root DEBUG [youtube] 1iG3772IF0g: Downloading android player API JSON
+17:29:33,1 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:29:33,163 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/1iG3772IF0g/maxresdefault.jpg HTTP/1.1" 200 202120
+17:29:33,367 root DEBUG [youtube] Extracting URL: 1iG3772IF0g
+17:29:33,384 root DEBUG [youtube] 1iG3772IF0g: Downloading webpage
+17:29:33,960 root DEBUG [youtube] 1iG3772IF0g: Downloading android player API JSON
+17:29:34,295 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:29:34,447 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/1iG3772IF0g/maxresdefault.jpg HTTP/1.1" 200 202120
+17:29:34,656 root DEBUG [youtube] Extracting URL: 1iG3772IF0g
+17:29:34,669 root DEBUG [youtube] 1iG3772IF0g: Downloading webpage
+17:29:35,245 root DEBUG [youtube] 1iG3772IF0g: Downloading android player API JSON
+17:29:35,543 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:29:35,785 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/1iG3772IF0g/maxresdefault.jpg HTTP/1.1" 200 202120
+17:29:35,999 root DEBUG [youtube] Extracting URL: 1iG3772IF0g
+17:29:36,6 root DEBUG [youtube] 1iG3772IF0g: Downloading webpage
+17:29:36,553 root DEBUG [youtube] 1iG3772IF0g: Downloading android player API JSON
+17:29:36,873 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:29:37,18 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/1iG3772IF0g/maxresdefault.jpg HTTP/1.1" 200 202120
+17:29:39,472 root DEBUG [youtube] Extracting URL: 2qAXtXp4ntA
+17:29:39,474 root DEBUG [youtube] 2qAXtXp4ntA: Downloading webpage
+17:29:40,50 root DEBUG [youtube] 2qAXtXp4ntA: Downloading android player API JSON
+17:29:40,299 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:29:40,455 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/2qAXtXp4ntA/maxresdefault.jpg HTTP/1.1" 200 126676
+17:29:48,517 root DEBUG [youtube] Extracting URL: qFLhGq0060w
+17:29:48,565 root DEBUG [youtube] qFLhGq0060w: Downloading webpage
+17:29:49,201 root DEBUG [youtube] qFLhGq0060w: Downloading android player API JSON
+17:29:49,466 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:29:49,654 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/qFLhGq0060w/maxresdefault.jpg HTTP/1.1" 200 50122
+17:30:00,148 root DEBUG [youtube] Extracting URL: Tw1cEm-C1hY
+17:30:00,176 root DEBUG [youtube] Tw1cEm-C1hY: Downloading webpage
+17:30:00,761 root DEBUG [youtube] Tw1cEm-C1hY: Downloading android player API JSON
+17:30:00,988 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:30:01,214 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/Tw1cEm-C1hY/maxresdefault.jpg HTTP/1.1" 200 146717
+17:31:11,605 root INFO starting...
+17:31:11,929 eyed3 DEBUG eyeD3 version 0.9.6
+17:31:11,971 asyncio DEBUG Using proactor: IocpProactor
+17:32:20,4 root INFO starting...
+17:32:20,324 eyed3 DEBUG eyeD3 version 0.9.6
+17:32:20,366 asyncio DEBUG Using proactor: IocpProactor
+17:32:37,402 root INFO starting...
+17:32:37,720 eyed3 DEBUG eyeD3 version 0.9.6
+17:32:37,767 asyncio DEBUG Using proactor: IocpProactor
+17:32:40,782 root DEBUG [youtube] Extracting URL: 120qslVb4sA
+17:32:40,785 root DEBUG [youtube] 120qslVb4sA: Downloading webpage
+17:32:41,497 root DEBUG [youtube] 120qslVb4sA: Downloading android player API JSON
+17:32:41,752 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:32:41,998 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/120qslVb4sA/maxresdefault.jpg HTTP/1.1" 200 127403
+17:32:44,215 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:32:44,359 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/120qslVb4sA/maxresdefault.jpg HTTP/1.1" 200 127403
+17:32:45,226 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:32:45,417 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/120qslVb4sA/maxresdefault.jpg HTTP/1.1" 200 127403
+17:32:50,108 root DEBUG [youtube] Extracting URL: 120qslVb4sA
+17:32:50,140 root DEBUG [youtube] 120qslVb4sA: Downloading webpage
+17:32:50,694 root DEBUG [youtube] 120qslVb4sA: Downloading android player API JSON
+17:32:51,5 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:32:51,187 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/120qslVb4sA/maxresdefault.jpg HTTP/1.1" 200 127403
+17:33:03,179 root INFO starting...
+17:33:03,509 eyed3 DEBUG eyeD3 version 0.9.6
+17:33:03,553 asyncio DEBUG Using proactor: IocpProactor
+17:33:06,41 root DEBUG [youtube] Extracting URL: 2924-Nu7cn8
+17:33:06,44 root DEBUG [youtube] 2924-Nu7cn8: Downloading webpage
+17:33:06,628 root DEBUG [youtube] 2924-Nu7cn8: Downloading android player API JSON
+17:33:06,905 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:33:07,104 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/2924-Nu7cn8/maxresdefault.jpg HTTP/1.1" 200 139339
+17:33:08,652 root DEBUG [youtube] Extracting URL: 9Va88Kt0NN0
+17:33:08,669 root DEBUG [youtube] 9Va88Kt0NN0: Downloading webpage
+17:33:09,239 root DEBUG [youtube] 9Va88Kt0NN0: Downloading android player API JSON
+17:33:10,43 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:33:10,214 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/9Va88Kt0NN0/maxresdefault.jpg HTTP/1.1" 200 270784
+17:33:10,853 root DEBUG [youtube] Extracting URL: PQhqHWOd1hw
+17:33:10,860 root DEBUG [youtube] PQhqHWOd1hw: Downloading webpage
+17:33:11,446 root DEBUG [youtube] PQhqHWOd1hw: Downloading android player API JSON
+17:33:11,902 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:33:12,56 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/PQhqHWOd1hw/maxresdefault.jpg HTTP/1.1" 200 38502
+17:33:12,595 root DEBUG [youtube] Extracting URL: gmIXdabwvPA
+17:33:12,623 root DEBUG [youtube] gmIXdabwvPA: Downloading webpage
+17:33:13,176 root DEBUG [youtube] gmIXdabwvPA: Downloading android player API JSON
+17:33:13,662 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:33:13,840 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/gmIXdabwvPA/maxresdefault.jpg HTTP/1.1" 200 172700
+17:33:14,592 root DEBUG [youtube] Extracting URL: KLPg6dQOQH8
+17:33:14,643 root DEBUG [youtube] KLPg6dQOQH8: Downloading webpage
+17:33:15,216 root DEBUG [youtube] KLPg6dQOQH8: Downloading android player API JSON
+17:33:15,732 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:33:15,899 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/KLPg6dQOQH8/maxresdefault.jpg HTTP/1.1" 200 114783
+17:33:17,35 root DEBUG [youtube] Extracting URL: l0lZOI1nJfU
+17:33:17,38 root DEBUG [youtube] l0lZOI1nJfU: Downloading webpage
+17:33:17,616 root DEBUG [youtube] l0lZOI1nJfU: Downloading android player API JSON
+17:33:17,878 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:33:18,23 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/l0lZOI1nJfU/maxresdefault.jpg HTTP/1.1" 200 83013
+17:33:18,773 root DEBUG [youtube] Extracting URL: EbZ0_xMXdpU
+17:33:18,776 root DEBUG [youtube] EbZ0_xMXdpU: Downloading webpage
+17:33:19,420 root DEBUG [youtube] EbZ0_xMXdpU: Downloading android player API JSON
+17:33:19,699 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:33:19,876 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/EbZ0_xMXdpU/maxresdefault.jpg HTTP/1.1" 200 49932
+17:33:20,411 root DEBUG [youtube] Extracting URL: l0lZOI1nJfU
+17:33:20,455 root DEBUG [youtube] l0lZOI1nJfU: Downloading webpage
+17:33:21,23 root DEBUG [youtube] l0lZOI1nJfU: Downloading android player API JSON
+17:33:21,328 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:33:21,511 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/l0lZOI1nJfU/maxresdefault.jpg HTTP/1.1" 200 83013
+17:33:26,52 root DEBUG [youtube] Extracting URL: l0lZOI1nJfU
+17:33:26,82 root DEBUG [youtube] l0lZOI1nJfU: Downloading webpage
+17:33:26,580 root DEBUG [youtube] l0lZOI1nJfU: Downloading android player API JSON
+17:33:26,818 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+17:33:26,985 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/l0lZOI1nJfU/maxresdefault.jpg HTTP/1.1" 200 83013
+17:35:21,985 root INFO starting...
+17:35:22,367 eyed3 DEBUG eyeD3 version 0.9.6
+17:35:22,410 asyncio DEBUG Using proactor: IocpProactor
+21:01:53,112 root INFO starting...
+21:01:54,196 eyed3 DEBUG eyeD3 version 0.9.6
+21:01:54,608 asyncio DEBUG Using proactor: IocpProactor
+21:02:07,777 root DEBUG [youtube] Extracting URL: IxXVgJdn-XU
+21:02:07,778 root DEBUG [youtube] IxXVgJdn-XU: Downloading webpage
+21:02:08,432 root DEBUG [youtube] IxXVgJdn-XU: Downloading android player API JSON
+21:02:08,902 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:02:09,71 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/IxXVgJdn-XU/maxresdefault.jpg HTTP/1.1" 200 105020
+21:02:11,423 root DEBUG [youtube] Extracting URL: 1H1ciGA2XZ0
+21:02:11,424 root DEBUG [youtube] 1H1ciGA2XZ0: Downloading webpage
+21:02:12,154 root DEBUG [youtube] 1H1ciGA2XZ0: Downloading android player API JSON
+21:02:12,577 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:02:12,753 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/1H1ciGA2XZ0/maxresdefault.jpg HTTP/1.1" 200 21513
+21:02:39,601 root DEBUG [youtube] Extracting URL: Fs-p78KJ5I4
+21:02:39,603 root DEBUG [youtube] Fs-p78KJ5I4: Downloading webpage
+21:02:40,242 root DEBUG [youtube] Fs-p78KJ5I4: Downloading android player API JSON
+21:02:40,841 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:02:40,983 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/Fs-p78KJ5I4/maxresdefault.jpg HTTP/1.1" 200 99046
+21:03:05,15 root DEBUG [youtube] Extracting URL: E3VLrhpMNIE
+21:03:05,16 root DEBUG [youtube] E3VLrhpMNIE: Downloading webpage
+21:03:05,487 root DEBUG [youtube] E3VLrhpMNIE: Downloading android player API JSON
+21:03:05,891 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:03:06,73 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/E3VLrhpMNIE/maxresdefault.jpg HTTP/1.1" 200 105020
+21:03:08,714 root DEBUG [youtube] Extracting URL: 9xXPYvtWNUM
+21:03:08,716 root DEBUG [youtube] 9xXPYvtWNUM: Downloading webpage
+21:03:10,129 root DEBUG [youtube] 9xXPYvtWNUM: Downloading android player API JSON
+21:03:10,636 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:03:10,746 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/9xXPYvtWNUM/maxresdefault.jpg HTTP/1.1" 200 233922
+21:03:49,340 root DEBUG [youtube] Extracting URL: 120qslVb4sA
+21:03:49,340 root DEBUG [youtube] 120qslVb4sA: Downloading webpage
+21:03:49,943 root DEBUG [youtube] 120qslVb4sA: Downloading android player API JSON
+21:03:50,392 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:03:50,498 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/120qslVb4sA/maxresdefault.jpg HTTP/1.1" 200 127403
+21:03:53,663 root DEBUG [youtube] Extracting URL: 1iG3772IF0g
+21:03:53,664 root DEBUG [youtube] 1iG3772IF0g: Downloading webpage
+21:03:54,254 root DEBUG [youtube] 1iG3772IF0g: Downloading android player API JSON
+21:03:54,812 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:03:54,914 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/1iG3772IF0g/maxresdefault.jpg HTTP/1.1" 200 202120
+21:03:59,702 root DEBUG [youtube] Extracting URL: 2qAXtXp4ntA
+21:03:59,702 root DEBUG [youtube] 2qAXtXp4ntA: Downloading webpage
+21:04:00,182 root DEBUG [youtube] 2qAXtXp4ntA: Downloading android player API JSON
+21:04:00,607 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:04:00,737 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/2qAXtXp4ntA/maxresdefault.jpg HTTP/1.1" 200 126676
+21:06:48,423 root INFO starting...
+21:06:49,439 eyed3 DEBUG eyeD3 version 0.9.6
+21:06:49,578 asyncio DEBUG Using proactor: IocpProactor
+21:07:00,438 root DEBUG [youtube] Extracting URL: IxXVgJdn-XU
+21:07:00,439 root DEBUG [youtube] IxXVgJdn-XU: Downloading webpage
+21:07:00,974 root DEBUG [youtube] IxXVgJdn-XU: Downloading android player API JSON
+21:07:01,354 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:07:01,535 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/IxXVgJdn-XU/maxresdefault.jpg HTTP/1.1" 200 105020
+21:07:02,915 root DEBUG [youtube] Extracting URL: 1H1ciGA2XZ0
+21:07:02,915 root DEBUG [youtube] 1H1ciGA2XZ0: Downloading webpage
+21:07:03,583 root DEBUG [youtube] 1H1ciGA2XZ0: Downloading android player API JSON
+21:07:03,818 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:07:03,950 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/1H1ciGA2XZ0/maxresdefault.jpg HTTP/1.1" 200 21513
+21:07:15,607 root DEBUG [youtube] Extracting URL: Fs-p78KJ5I4
+21:07:15,618 root DEBUG [youtube] Fs-p78KJ5I4: Downloading webpage
+21:07:16,248 root DEBUG [youtube] Fs-p78KJ5I4: Downloading android player API JSON
+21:07:16,557 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:07:16,682 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/Fs-p78KJ5I4/maxresdefault.jpg HTTP/1.1" 200 99046
+21:07:22,424 root DEBUG [youtube] Extracting URL: 1H1ciGA2XZ0
+21:07:22,427 root DEBUG [youtube] 1H1ciGA2XZ0: Downloading webpage
+21:07:22,959 root DEBUG [youtube] 1H1ciGA2XZ0: Downloading android player API JSON
+21:07:23,177 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:07:23,310 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/1H1ciGA2XZ0/maxresdefault.jpg HTTP/1.1" 200 21513
+21:08:38,968 root DEBUG [youtube] Extracting URL: DdXHTVUalRU
+21:08:38,971 root DEBUG [youtube] DdXHTVUalRU: Downloading webpage
+21:08:39,557 root DEBUG [youtube] DdXHTVUalRU: Downloading android player API JSON
+21:08:40,7 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:08:40,173 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/DdXHTVUalRU/maxresdefault.jpg HTTP/1.1" 200 105020
+21:08:45,935 root DEBUG [youtube] Extracting URL: fou72UMdG0k
+21:08:45,938 root DEBUG [youtube] fou72UMdG0k: Downloading webpage
+21:08:46,670 root DEBUG [youtube] fou72UMdG0k: Downloading android player API JSON
+21:08:47,227 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:08:47,377 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/fou72UMdG0k/maxresdefault.jpg HTTP/1.1" 200 40921
+21:09:11,987 root DEBUG [youtube] Extracting URL: fou72UMdG0k
+21:09:11,988 root DEBUG [youtube] fou72UMdG0k: Downloading webpage
+21:09:12,593 root DEBUG [youtube] fou72UMdG0k: Downloading android player API JSON
+21:09:12,885 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:09:13,15 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/fou72UMdG0k/maxresdefault.jpg HTTP/1.1" 200 40921
+21:10:38,656 root DEBUG [youtube] Extracting URL: A4Pa8bRBxt8
+21:10:38,656 root DEBUG [youtube] A4Pa8bRBxt8: Downloading webpage
+21:10:39,325 root DEBUG [youtube] A4Pa8bRBxt8: Downloading android player API JSON
+21:10:39,782 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:10:39,968 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/A4Pa8bRBxt8/maxresdefault.jpg HTTP/1.1" 200 89885
+21:10:42,436 root DEBUG [youtube] Extracting URL: d090BXYrc2Y
+21:10:42,444 root DEBUG [youtube] d090BXYrc2Y: Downloading webpage
+21:10:43,35 root DEBUG [youtube] d090BXYrc2Y: Downloading android player API JSON
+21:10:43,503 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:10:43,689 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/d090BXYrc2Y/maxresdefault.jpg HTTP/1.1" 200 89885
+21:10:46,563 root DEBUG [youtube] Extracting URL: zkI9HDeuYlo
+21:10:46,563 root DEBUG [youtube] zkI9HDeuYlo: Downloading webpage
+21:10:47,177 root DEBUG [youtube] zkI9HDeuYlo: Downloading android player API JSON
+21:10:47,617 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:10:47,797 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/zkI9HDeuYlo/maxresdefault.jpg HTTP/1.1" 200 89885
+21:10:51,826 root DEBUG [youtube] Extracting URL: lIG49pRttr4
+21:10:51,835 root DEBUG [youtube] lIG49pRttr4: Downloading webpage
+21:10:52,387 root DEBUG [youtube] lIG49pRttr4: Downloading android player API JSON
+21:10:52,816 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:10:52,994 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/lIG49pRttr4/maxresdefault.jpg HTTP/1.1" 200 89885
+21:11:55,23 root DEBUG [youtube] Extracting URL: nyjSGPIsmiA
+21:11:55,31 root DEBUG [youtube] nyjSGPIsmiA: Downloading webpage
+21:11:55,641 root DEBUG [youtube] nyjSGPIsmiA: Downloading android player API JSON
+21:11:56,408 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:11:56,630 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/nyjSGPIsmiA/maxresdefault.jpg HTTP/1.1" 200 89885
+21:12:12,196 root DEBUG [youtube] Extracting URL: 7tRexHxaMqA
+21:12:12,203 root DEBUG [youtube] 7tRexHxaMqA: Downloading webpage
+21:12:12,707 root DEBUG [youtube] 7tRexHxaMqA: Downloading android player API JSON
+21:12:13,579 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:12:13,734 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/7tRexHxaMqA/maxresdefault.jpg HTTP/1.1" 200 171119
+21:12:20,969 root DEBUG [youtube] Extracting URL: HJllkdm2wt0
+21:12:20,971 root DEBUG [youtube] HJllkdm2wt0: Downloading webpage
+21:12:21,590 root DEBUG [youtube] HJllkdm2wt0: Downloading android player API JSON
+21:12:22,84 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:12:22,264 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/HJllkdm2wt0/maxresdefault.jpg HTTP/1.1" 200 164627
+21:13:05,469 root DEBUG [youtube] Extracting URL: nMEPIZIWGEA
+21:13:05,469 root DEBUG [youtube] nMEPIZIWGEA: Downloading webpage
+21:13:06,257 root DEBUG [youtube] nMEPIZIWGEA: Downloading android player API JSON
+21:13:06,904 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:13:07,78 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/nMEPIZIWGEA/maxresdefault.jpg HTTP/1.1" 404 1097
+21:13:21,246 root DEBUG [youtube] Extracting URL: lhwp8uoTRDc
+21:13:21,246 root DEBUG [youtube] lhwp8uoTRDc: Downloading webpage
+21:13:21,880 root DEBUG [youtube] lhwp8uoTRDc: Downloading android player API JSON
+21:13:22,392 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:13:22,542 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/lhwp8uoTRDc/maxresdefault.jpg HTTP/1.1" 200 21600
+21:13:25,475 root DEBUG [youtube] Extracting URL: 2924-Nu7cn8
+21:13:25,477 root DEBUG [youtube] 2924-Nu7cn8: Downloading webpage
+21:13:26,33 root DEBUG [youtube] 2924-Nu7cn8: Downloading android player API JSON
+21:13:26,577 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:13:26,745 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/2924-Nu7cn8/maxresdefault.jpg HTTP/1.1" 200 139339
+21:13:28,209 root DEBUG [youtube] Extracting URL: 9Va88Kt0NN0
+21:13:28,227 root DEBUG [youtube] 9Va88Kt0NN0: Downloading webpage
+21:13:29,24 root DEBUG [youtube] 9Va88Kt0NN0: Downloading android player API JSON
+21:13:30,243 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:13:30,417 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/9Va88Kt0NN0/maxresdefault.jpg HTTP/1.1" 200 270784
+21:13:31,688 root DEBUG [youtube] Extracting URL: PQhqHWOd1hw
+21:13:31,694 root DEBUG [youtube] PQhqHWOd1hw: Downloading webpage
+21:13:32,369 root DEBUG [youtube] PQhqHWOd1hw: Downloading android player API JSON
+21:13:32,820 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:13:32,990 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/PQhqHWOd1hw/maxresdefault.jpg HTTP/1.1" 200 38502
+21:13:35,377 root DEBUG [youtube] Extracting URL: gmIXdabwvPA
+21:13:35,377 root DEBUG [youtube] gmIXdabwvPA: Downloading webpage
+21:13:36,0 root DEBUG [youtube] gmIXdabwvPA: Downloading android player API JSON
+21:13:36,436 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:13:36,566 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/gmIXdabwvPA/maxresdefault.jpg HTTP/1.1" 200 172700
+21:13:40,703 root DEBUG [youtube] Extracting URL: PQhqHWOd1hw
+21:13:40,705 root DEBUG [youtube] PQhqHWOd1hw: Downloading webpage
+21:13:41,267 root DEBUG [youtube] PQhqHWOd1hw: Downloading android player API JSON
+21:13:41,510 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:13:41,640 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/PQhqHWOd1hw/maxresdefault.jpg HTTP/1.1" 200 38502
+21:13:42,345 root DEBUG [youtube] Extracting URL: gmIXdabwvPA
+21:13:42,345 root DEBUG [youtube] gmIXdabwvPA: Downloading webpage
+21:13:42,902 root DEBUG [youtube] gmIXdabwvPA: Downloading android player API JSON
+21:13:43,131 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:13:43,262 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/gmIXdabwvPA/maxresdefault.jpg HTTP/1.1" 200 172700
+21:14:37,191 root DEBUG [youtube] Extracting URL: KLPg6dQOQH8
+21:14:37,191 root DEBUG [youtube] KLPg6dQOQH8: Downloading webpage
+21:14:37,751 root DEBUG [youtube] KLPg6dQOQH8: Downloading android player API JSON
+21:14:38,253 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:14:38,398 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/KLPg6dQOQH8/maxresdefault.jpg HTTP/1.1" 200 114783
+21:14:39,523 root DEBUG [youtube] Extracting URL: l0lZOI1nJfU
+21:14:39,523 root DEBUG [youtube] l0lZOI1nJfU: Downloading webpage
+21:14:40,157 root DEBUG [youtube] l0lZOI1nJfU: Downloading android player API JSON
+21:14:40,603 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:14:40,732 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/l0lZOI1nJfU/maxresdefault.jpg HTTP/1.1" 200 83013
+21:15:07,535 root INFO starting...
+21:15:08,121 eyed3 DEBUG eyeD3 version 0.9.6
+21:15:08,214 asyncio DEBUG Using proactor: IocpProactor
+21:15:19,542 root DEBUG [youtube] Extracting URL: BTsB21Xps0Y
+21:15:19,543 root DEBUG [youtube] BTsB21Xps0Y: Downloading webpage
+21:15:20,74 root DEBUG [youtube] BTsB21Xps0Y: Downloading android player API JSON
+21:15:20,515 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:15:20,639 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/BTsB21Xps0Y/maxresdefault.jpg HTTP/1.1" 200 103220
+21:16:23,677 root DEBUG [youtube] Extracting URL: ffvl9lGGLvg
+21:16:23,678 root DEBUG [youtube] ffvl9lGGLvg: Downloading webpage
+21:16:24,290 root DEBUG [youtube] ffvl9lGGLvg: Downloading android player API JSON
+21:16:24,690 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:16:24,887 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/ffvl9lGGLvg/maxresdefault.jpg HTTP/1.1" 200 327832
+21:16:26,100 root DEBUG [youtube] Extracting URL: Jl2qv2HrwX4
+21:16:26,100 root DEBUG [youtube] Jl2qv2HrwX4: Downloading webpage
+21:16:26,618 root DEBUG [youtube] Jl2qv2HrwX4: Downloading android player API JSON
+21:16:27,41 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+21:16:27,189 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/Jl2qv2HrwX4/maxresdefault.jpg HTTP/1.1" 200 37035
+11:54:02,479 root INFO starting...
+11:54:04,902 eyed3 DEBUG eyeD3 version 0.9.6
+11:54:05,132 asyncio DEBUG Using proactor: IocpProactor
+11:54:13,448 root DEBUG [youtube] Extracting URL: IxXVgJdn-XU
+11:54:13,488 root DEBUG [youtube] IxXVgJdn-XU: Downloading webpage
+11:54:14,98 root DEBUG [youtube] IxXVgJdn-XU: Downloading android player API JSON
+11:54:14,665 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+11:54:14,943 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/IxXVgJdn-XU/maxresdefault.jpg HTTP/1.1" 200 105020
+11:54:40,542 root INFO starting...
+11:54:40,876 eyed3 DEBUG eyeD3 version 0.9.6
+11:54:40,926 asyncio DEBUG Using proactor: IocpProactor
+11:54:43,939 root DEBUG [youtube] Extracting URL: Fs-p78KJ5I4
+11:54:43,965 root DEBUG [youtube] Fs-p78KJ5I4: Downloading webpage
+11:54:44,550 root DEBUG [youtube] Fs-p78KJ5I4: Downloading android player API JSON
+11:54:45,50 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+11:54:45,245 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/Fs-p78KJ5I4/maxresdefault.jpg HTTP/1.1" 200 99046
+11:54:59,709 root DEBUG [youtube] Extracting URL: E3VLrhpMNIE
+11:54:59,711 root DEBUG [youtube] E3VLrhpMNIE: Downloading webpage
+11:55:00,222 root DEBUG [youtube] E3VLrhpMNIE: Downloading android player API JSON
+11:55:00,693 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+11:55:00,906 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/E3VLrhpMNIE/maxresdefault.jpg HTTP/1.1" 200 105020
+11:55:03,552 root DEBUG [youtube] Extracting URL: 9xXPYvtWNUM
+11:55:03,594 root DEBUG [youtube] 9xXPYvtWNUM: Downloading webpage
+11:55:04,137 root DEBUG [youtube] 9xXPYvtWNUM: Downloading android player API JSON
+11:55:04,676 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+11:55:04,824 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/9xXPYvtWNUM/maxresdefault.jpg HTTP/1.1" 200 233922
+11:55:09,812 root DEBUG [youtube] Extracting URL: 120qslVb4sA
+11:55:09,864 root DEBUG [youtube] 120qslVb4sA: Downloading webpage
+11:55:10,416 root DEBUG [youtube] 120qslVb4sA: Downloading android player API JSON
+11:55:10,850 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+11:55:11,11 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/120qslVb4sA/maxresdefault.jpg HTTP/1.1" 200 127403
+11:55:17,42 root DEBUG [youtube] Extracting URL: 1iG3772IF0g
+11:55:17,81 root DEBUG [youtube] 1iG3772IF0g: Downloading webpage
+11:55:17,695 root DEBUG [youtube] 1iG3772IF0g: Downloading android player API JSON
+11:55:18,176 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+11:55:18,381 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/1iG3772IF0g/maxresdefault.jpg HTTP/1.1" 200 202120
+11:55:23,65 root DEBUG [youtube] Extracting URL: 2qAXtXp4ntA
+11:55:23,69 root DEBUG [youtube] 2qAXtXp4ntA: Downloading webpage
+11:55:23,575 root DEBUG [youtube] 2qAXtXp4ntA: Downloading android player API JSON
+11:55:24,317 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+11:55:24,450 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/2qAXtXp4ntA/maxresdefault.jpg HTTP/1.1" 200 126676
+11:55:31,519 root DEBUG [youtube] Extracting URL: DdXHTVUalRU
+11:55:31,524 root DEBUG [youtube] DdXHTVUalRU: Downloading webpage
+11:55:32,5 root DEBUG [youtube] DdXHTVUalRU: Downloading android player API JSON
+11:55:32,467 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+11:55:32,626 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/DdXHTVUalRU/maxresdefault.jpg HTTP/1.1" 200 105020
+11:55:43,357 root DEBUG [youtube] Extracting URL: hJresi7z_YM
+11:55:43,371 root DEBUG [youtube] hJresi7z_YM: Downloading webpage
+11:55:43,891 root DEBUG [youtube] hJresi7z_YM: Downloading android player API JSON
+11:55:44,334 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+11:55:44,518 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/hJresi7z_YM/maxresdefault.jpg HTTP/1.1" 200 52643
+11:55:48,714 root DEBUG [youtube] Extracting URL: 8TyRcf5ZBv0
+11:55:48,725 root DEBUG [youtube] 8TyRcf5ZBv0: Downloading webpage
+11:55:49,245 root DEBUG [youtube] 8TyRcf5ZBv0: Downloading android player API JSON
+11:55:49,683 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+11:55:49,807 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/8TyRcf5ZBv0/maxresdefault.jpg HTTP/1.1" 200 167614
+11:55:50,15 root DEBUG [youtube] Extracting URL: 8TyRcf5ZBv0
+11:55:50,29 root DEBUG [youtube] 8TyRcf5ZBv0: Downloading webpage
+11:55:50,541 root DEBUG [youtube] 8TyRcf5ZBv0: Downloading android player API JSON
+11:55:50,787 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+11:55:50,932 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/8TyRcf5ZBv0/maxresdefault.jpg HTTP/1.1" 200 167614
+11:56:21,639 root DEBUG [youtube] Extracting URL: LNwK4ytlstY
+11:56:21,645 root DEBUG [youtube] LNwK4ytlstY: Downloading webpage
+11:56:22,188 root DEBUG [youtube] LNwK4ytlstY: Downloading android player API JSON
+11:56:22,659 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+11:56:22,887 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/LNwK4ytlstY/maxresdefault.jpg HTTP/1.1" 200 89885
+11:57:47,376 root DEBUG [youtube] Extracting URL: weDhw3amU5I
+11:57:47,379 root DEBUG [youtube] weDhw3amU5I: Downloading webpage
+11:57:47,962 root DEBUG [youtube] weDhw3amU5I: Downloading android player API JSON
+11:57:48,165 root DEBUG [youtube] weDhw3amU5I: Downloading MPD manifest
+11:57:48,900 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+11:57:49,164 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/weDhw3amU5I/maxresdefault.jpg HTTP/1.1" 200 60020
+11:58:41,896 root DEBUG [youtube] Extracting URL: Io4SX7bX95g
+11:58:41,915 root DEBUG [youtube] Io4SX7bX95g: Downloading webpage
+11:58:42,450 root DEBUG [youtube] Io4SX7bX95g: Downloading android player API JSON
+11:58:42,883 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+11:58:43,126 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/Io4SX7bX95g/maxresdefault.jpg HTTP/1.1" 200 98919
+11:58:48,666 root DEBUG [youtube] Extracting URL: qVHt5QISZ7E
+11:58:48,674 root DEBUG [youtube] qVHt5QISZ7E: Downloading webpage
+11:58:49,198 root DEBUG [youtube] qVHt5QISZ7E: Downloading android player API JSON
+11:58:49,638 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+11:58:49,917 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/qVHt5QISZ7E/maxresdefault.jpg HTTP/1.1" 200 98919
+12:00:05,49 root DEBUG [youtube] Extracting URL: zv5thjS4vu4
+12:00:05,52 root DEBUG [youtube] zv5thjS4vu4: Downloading webpage
+12:00:05,632 root DEBUG [youtube] zv5thjS4vu4: Downloading android player API JSON
+12:00:06,134 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:00:06,381 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/zv5thjS4vu4/maxresdefault.jpg HTTP/1.1" 200 98919
+12:00:15,643 root DEBUG [youtube] Extracting URL: GJvGf_ifiKw
+12:00:15,646 root DEBUG [youtube] GJvGf_ifiKw: Downloading webpage
+12:00:16,275 root DEBUG [youtube] GJvGf_ifiKw: Downloading android player API JSON
+12:00:16,786 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:00:16,935 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/GJvGf_ifiKw/maxresdefault.jpg HTTP/1.1" 200 122205
+12:00:21,111 root DEBUG [youtube] Extracting URL: 4FQlzQxFEjY
+12:00:21,114 root DEBUG [youtube] 4FQlzQxFEjY: Downloading webpage
+12:00:21,651 root DEBUG [youtube] 4FQlzQxFEjY: Downloading android player API JSON
+12:00:22,133 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:00:22,318 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/4FQlzQxFEjY/maxresdefault.jpg HTTP/1.1" 200 96172
+12:01:51,911 root DEBUG [youtube] Extracting URL: UsWKMa8bGx8
+12:01:51,937 root DEBUG [youtube] UsWKMa8bGx8: Downloading webpage
+12:01:52,511 root DEBUG [youtube] UsWKMa8bGx8: Downloading android player API JSON
+12:01:53,38 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:01:53,208 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/UsWKMa8bGx8/maxresdefault.jpg HTTP/1.1" 200 150496
+12:02:19,901 root DEBUG [youtube] Extracting URL: baF6NjFZNqc
+12:02:19,910 root DEBUG [youtube] baF6NjFZNqc: Downloading webpage
+12:02:20,430 root DEBUG [youtube] baF6NjFZNqc: Downloading android player API JSON
+12:02:20,908 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:02:21,62 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/baF6NjFZNqc/maxresdefault.jpg HTTP/1.1" 200 171164
+12:02:59,112 root DEBUG [youtube] Extracting URL: YJVmu6yttiw
+12:02:59,115 root DEBUG [youtube] YJVmu6yttiw: Downloading webpage
+12:02:59,635 root DEBUG [youtube] YJVmu6yttiw: Downloading android player API JSON
+12:03:00,56 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:03:00,217 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/YJVmu6yttiw/maxresdefault.jpg HTTP/1.1" 404 1097
+12:03:09,233 root DEBUG [youtube] Extracting URL: 4NRXx6U8ABQ
+12:03:09,238 root DEBUG [youtube] 4NRXx6U8ABQ: Downloading webpage
+12:03:09,870 root DEBUG [youtube] 4NRXx6U8ABQ: Downloading android player API JSON
+12:03:10,300 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:03:10,450 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/4NRXx6U8ABQ/maxresdefault.jpg HTTP/1.1" 200 59822
+12:03:13,171 root DEBUG [youtube] Extracting URL: bvC_0foemLY
+12:03:13,176 root DEBUG [youtube] bvC_0foemLY: Downloading webpage
+12:03:13,915 root DEBUG [youtube] bvC_0foemLY: Downloading android player API JSON
+12:03:14,403 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:03:14,549 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/bvC_0foemLY/maxresdefault.jpg HTTP/1.1" 404 1097
+12:03:51,498 root DEBUG [youtube] Extracting URL: KBtk5FUeJbk
+12:03:51,517 root DEBUG [youtube] KBtk5FUeJbk: Downloading webpage
+12:03:52,196 root DEBUG [youtube] KBtk5FUeJbk: Downloading android player API JSON
+12:03:52,740 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:03:52,909 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/KBtk5FUeJbk/maxresdefault.jpg HTTP/1.1" 200 72362
+12:03:55,859 root DEBUG [youtube] Extracting URL: yIpO9giuVjY
+12:03:55,865 root DEBUG [youtube] yIpO9giuVjY: Downloading webpage
+12:03:56,368 root DEBUG [youtube] yIpO9giuVjY: Downloading android player API JSON
+12:03:56,805 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:03:57,58 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/yIpO9giuVjY/maxresdefault.jpg HTTP/1.1" 200 84773
+12:04:02,723 root DEBUG [youtube] Extracting URL: WYZAXMwLjLM
+12:04:02,726 root DEBUG [youtube] WYZAXMwLjLM: Downloading webpage
+12:04:03,272 root DEBUG [youtube] WYZAXMwLjLM: Downloading android player API JSON
+12:04:03,788 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:04:03,937 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/WYZAXMwLjLM/maxresdefault.jpg HTTP/1.1" 200 45529
+12:04:05,480 root DEBUG [youtube] Extracting URL: 5uCtS2i6ZXw
+12:04:05,498 root DEBUG [youtube] 5uCtS2i6ZXw: Downloading webpage
+12:04:06,39 root DEBUG [youtube] 5uCtS2i6ZXw: Downloading android player API JSON
+12:04:06,500 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:04:06,718 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/5uCtS2i6ZXw/maxresdefault.jpg HTTP/1.1" 200 113088
+12:04:06,932 root DEBUG [youtube] Extracting URL: O-bwUkhHPo0
+12:04:06,935 root DEBUG [youtube] O-bwUkhHPo0: Downloading webpage
+12:04:07,425 root DEBUG [youtube] O-bwUkhHPo0: Downloading android player API JSON
+12:04:07,996 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:04:08,165 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/O-bwUkhHPo0/maxresdefault.jpg HTTP/1.1" 200 191674
+12:04:08,400 root DEBUG [youtube] Extracting URL: G1T6nx9MunE
+12:04:08,432 root DEBUG [youtube] G1T6nx9MunE: Downloading webpage
+12:04:09,1 root DEBUG [youtube] G1T6nx9MunE: Downloading android player API JSON
+12:04:10,107 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:04:10,295 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/G1T6nx9MunE/maxresdefault.jpg HTTP/1.1" 200 53999
+12:04:10,477 root DEBUG [youtube] Extracting URL: xdwWCl_5x2s
+12:04:10,509 root DEBUG [youtube] xdwWCl_5x2s: Downloading webpage
+12:04:11,46 root DEBUG [youtube] xdwWCl_5x2s: Downloading android player API JSON
+12:04:12,60 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:04:12,214 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/xdwWCl_5x2s/maxresdefault.jpg HTTP/1.1" 200 49726
+12:04:12,375 root DEBUG [youtube] Extracting URL: b0q5PR1xpA0
+12:04:12,403 root DEBUG [youtube] b0q5PR1xpA0: Downloading webpage
+12:04:12,977 root DEBUG [youtube] b0q5PR1xpA0: Downloading android player API JSON
+12:04:14,2 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:04:14,171 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/b0q5PR1xpA0/maxresdefault.jpg HTTP/1.1" 200 35374
+12:04:14,304 root DEBUG [youtube] Extracting URL: c_FDWJDFq7U
+12:04:14,334 root DEBUG [youtube] c_FDWJDFq7U: Downloading webpage
+12:04:14,847 root DEBUG [youtube] c_FDWJDFq7U: Downloading android player API JSON
+12:04:15,273 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:04:15,449 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/c_FDWJDFq7U/maxresdefault.jpg HTTP/1.1" 200 11942
+12:04:15,568 root DEBUG [youtube] Extracting URL: MYzB3AbK00g
+12:04:15,599 root DEBUG [youtube] MYzB3AbK00g: Downloading webpage
+12:04:16,472 root DEBUG [youtube] MYzB3AbK00g: Downloading android player API JSON
+12:04:16,943 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:04:17,86 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/MYzB3AbK00g/maxresdefault.jpg HTTP/1.1" 200 75046
+12:04:17,276 root DEBUG [youtube] Extracting URL: jtXBocMpnaM
+12:04:17,316 root DEBUG [youtube] jtXBocMpnaM: Downloading webpage
+12:04:18,761 root DEBUG [youtube] jtXBocMpnaM: Downloading android player API JSON
+12:04:19,306 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:04:19,500 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/jtXBocMpnaM/maxresdefault.jpg HTTP/1.1" 200 130415
+12:05:15,212 root INFO starting...
+12:05:15,562 eyed3 DEBUG eyeD3 version 0.9.6
+12:05:20,250 root DEBUG [youtube] Extracting URL: pzXl473KgEo
+12:05:20,255 root DEBUG [youtube] pzXl473KgEo: Downloading webpage
+12:05:20,894 root DEBUG [youtube] pzXl473KgEo: Downloading android player API JSON
+12:05:21,181 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:05:21,416 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/pzXl473KgEo/maxresdefault.jpg HTTP/1.1" 200 67463
+12:05:26,825 root DEBUG [youtube] Extracting URL: gGBcowFV_pc
+12:05:26,849 root DEBUG [youtube] gGBcowFV_pc: Downloading webpage
+12:05:27,426 root DEBUG [youtube] gGBcowFV_pc: Downloading android player API JSON
+12:05:28,221 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:05:28,419 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/gGBcowFV_pc/maxresdefault.jpg HTTP/1.1" 200 102066
+12:05:31,233 root DEBUG [youtube] Extracting URL: vH9SVshLM1g
+12:05:31,239 root DEBUG [youtube] vH9SVshLM1g: Downloading webpage
+12:05:31,791 root DEBUG [youtube] vH9SVshLM1g: Downloading android player API JSON
+12:05:32,44 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:05:32,225 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/vH9SVshLM1g/maxresdefault.jpg HTTP/1.1" 200 49241
+12:05:36,242 root DEBUG [youtube] Extracting URL: _Ci0Kgdpgsw
+12:05:36,245 root DEBUG [youtube] _Ci0Kgdpgsw: Downloading webpage
+12:05:36,834 root DEBUG [youtube] _Ci0Kgdpgsw: Downloading android player API JSON
+12:05:37,141 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:05:37,320 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/_Ci0Kgdpgsw/maxresdefault.jpg HTTP/1.1" 200 167411
+12:05:42,980 root DEBUG [youtube] Extracting URL: 1-xGerv5FOk
+12:05:42,995 root DEBUG [youtube] 1-xGerv5FOk: Downloading webpage
+12:05:43,756 root DEBUG [youtube] 1-xGerv5FOk: Downloading android player API JSON
+12:05:44,88 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:05:44,256 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/1-xGerv5FOk/maxresdefault.jpg HTTP/1.1" 404 1097
+12:05:49,54 root DEBUG [youtube] Extracting URL: lqYQXIt4SpA
+12:05:49,58 root DEBUG [youtube] lqYQXIt4SpA: Downloading webpage
+12:05:49,612 root DEBUG [youtube] lqYQXIt4SpA: Downloading android player API JSON
+12:05:49,853 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:05:49,987 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/lqYQXIt4SpA/maxresdefault.jpg HTTP/1.1" 200 213116
+12:05:53,138 root DEBUG [youtube] Extracting URL: MIuJVYNvC-s
+12:05:53,169 root DEBUG [youtube] MIuJVYNvC-s: Downloading webpage
+12:05:53,725 root DEBUG [youtube] MIuJVYNvC-s: Downloading android player API JSON
+12:05:54,9 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:05:54,161 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/MIuJVYNvC-s/maxresdefault.jpg HTTP/1.1" 200 62465
+12:06:20,278 root INFO starting...
+12:06:20,607 eyed3 DEBUG eyeD3 version 0.9.6
+12:06:23,49 root DEBUG [youtube] Extracting URL: 2qAXtXp4ntA
+12:06:23,52 root DEBUG [youtube] 2qAXtXp4ntA: Downloading webpage
+12:06:23,681 root DEBUG [youtube] 2qAXtXp4ntA: Downloading android player API JSON
+12:06:23,943 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:06:24,139 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/2qAXtXp4ntA/maxresdefault.jpg HTTP/1.1" 200 126676
+12:08:29,115 root DEBUG [youtube] Extracting URL: DdXHTVUalRU
+12:08:29,118 root DEBUG [youtube] DdXHTVUalRU: Downloading webpage
+12:08:29,632 root DEBUG [youtube] DdXHTVUalRU: Downloading android player API JSON
+12:08:29,907 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:08:30,80 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/DdXHTVUalRU/maxresdefault.jpg HTTP/1.1" 200 105020
+12:08:37,358 root DEBUG [youtube] Extracting URL: 4LoDBdvGDBc
+12:08:37,362 root DEBUG [youtube] 4LoDBdvGDBc: Downloading webpage
+12:08:37,975 root DEBUG [youtube] 4LoDBdvGDBc: Downloading android player API JSON
+12:08:38,173 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:08:38,375 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/4LoDBdvGDBc/maxresdefault.jpg HTTP/1.1" 200 46311
+12:09:18,352 root DEBUG [youtube] Extracting URL: HyjNcXwc3-I
+12:09:18,357 root DEBUG [youtube] HyjNcXwc3-I: Downloading webpage
+12:09:18,801 root DEBUG [youtube] HyjNcXwc3-I: Downloading android player API JSON
+12:09:19,19 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:09:19,254 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/HyjNcXwc3-I/maxresdefault.jpg HTTP/1.1" 200 56748
+12:09:36,292 root DEBUG [youtube] Extracting URL: O1mij7072eM
+12:09:36,326 root DEBUG [youtube] O1mij7072eM: Downloading webpage
+12:09:36,883 root DEBUG [youtube] O1mij7072eM: Downloading android player API JSON
+12:09:37,130 root DEBUG [youtube] O1mij7072eM: Downloading MPD manifest
+12:09:37,583 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:09:37,757 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/O1mij7072eM/maxresdefault.jpg HTTP/1.1" 200 87982
+12:09:37,946 root DEBUG [youtube] Extracting URL: O1mij7072eM
+12:09:37,950 root DEBUG [youtube] O1mij7072eM: Downloading webpage
+12:09:38,536 root DEBUG [youtube] O1mij7072eM: Downloading android player API JSON
+12:09:38,760 root DEBUG [youtube] O1mij7072eM: Downloading MPD manifest
+12:09:39,128 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:09:39,333 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/O1mij7072eM/maxresdefault.jpg HTTP/1.1" 200 87982
+12:09:52,760 root DEBUG [youtube] Extracting URL: 3Ahb-BGZPIc
+12:09:52,800 root DEBUG [youtube] 3Ahb-BGZPIc: Downloading webpage
+12:09:53,397 root DEBUG [youtube] 3Ahb-BGZPIc: Downloading android player API JSON
+12:09:53,633 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:09:53,820 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/3Ahb-BGZPIc/maxresdefault.jpg HTTP/1.1" 200 37035
+12:09:56,501 root DEBUG [youtube] Extracting URL: EkXFzpbuTN0
+12:09:56,505 root DEBUG [youtube] EkXFzpbuTN0: Downloading webpage
+12:09:57,0 root DEBUG [youtube] EkXFzpbuTN0: Downloading android player API JSON
+12:09:57,174 root DEBUG [youtube] EkXFzpbuTN0: Downloading MPD manifest
+12:09:57,614 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:09:57,813 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/EkXFzpbuTN0/maxresdefault.jpg HTTP/1.1" 200 51232
+12:12:06,685 root INFO starting...
+12:12:07,29 eyed3 DEBUG eyeD3 version 0.9.6
+12:12:10,208 root DEBUG [youtube] Extracting URL: fq14gX3F-K4
+12:12:10,212 root DEBUG [youtube] fq14gX3F-K4: Downloading webpage
+12:12:10,804 root DEBUG [youtube] fq14gX3F-K4: Downloading android player API JSON
+12:12:38,801 root INFO starting...
+12:12:39,131 eyed3 DEBUG eyeD3 version 0.9.6
+12:12:42,753 root DEBUG [youtube] Extracting URL: DdXHTVUalRU
+12:12:42,757 root DEBUG [youtube] DdXHTVUalRU: Downloading webpage
+12:12:43,275 root DEBUG [youtube] DdXHTVUalRU: Downloading android player API JSON
+12:12:48,856 root DEBUG [youtube] Extracting URL: vH9SVshLM1g
+12:12:48,859 root DEBUG [youtube] vH9SVshLM1g: Downloading webpage
+12:12:49,404 root DEBUG [youtube] vH9SVshLM1g: Downloading android player API JSON
+12:12:52,883 root DEBUG [youtube] Extracting URL: 0TIYkmLGksI
+12:12:52,885 root DEBUG [youtube] 0TIYkmLGksI: Downloading webpage
+12:12:53,606 root DEBUG [youtube] 0TIYkmLGksI: Downloading android player API JSON
+12:13:22,892 root DEBUG [youtube] Extracting URL: O4Lsah7bEJY
+12:13:22,924 root DEBUG [youtube] O4Lsah7bEJY: Downloading webpage
+12:13:23,422 root DEBUG [youtube] O4Lsah7bEJY: Downloading android player API JSON
+12:13:26,422 root DEBUG [youtube] Extracting URL: K9RCwFckQ-Y
+12:13:26,433 root DEBUG [youtube] K9RCwFckQ-Y: Downloading webpage
+12:13:26,942 root DEBUG [youtube] K9RCwFckQ-Y: Downloading android player API JSON
+12:13:31,151 root DEBUG [youtube] Extracting URL: Dd_44-DvRJE
+12:13:31,165 root DEBUG [youtube] Dd_44-DvRJE: Downloading webpage
+12:13:31,710 root DEBUG [youtube] Dd_44-DvRJE: Downloading android player API JSON
+12:14:04,678 root INFO starting...
+12:14:05,86 eyed3 DEBUG eyeD3 version 0.9.6
+12:14:59,783 root INFO starting...
+12:15:00,182 eyed3 DEBUG eyeD3 version 0.9.6
+12:15:14,293 root DEBUG [youtube] Extracting URL: 9Va88Kt0NN0
+12:15:14,323 root DEBUG [youtube] 9Va88Kt0NN0: Downloading webpage
+12:15:14,888 root DEBUG [youtube] 9Va88Kt0NN0: Downloading android player API JSON
+12:15:15,127 root DEBUG [youtube] 9Va88Kt0NN0: Downloading player 248ded94
+12:15:16,467 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:15:16,772 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/9Va88Kt0NN0/maxresdefault.jpg HTTP/1.1" 200 270784
+12:15:56,97 root DEBUG [youtube] Extracting URL: meH_AvOAekk
+12:15:56,107 root DEBUG [youtube] meH_AvOAekk: Downloading webpage
+12:15:56,766 root DEBUG [youtube] meH_AvOAekk: Downloading android player API JSON
+12:15:57,69 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+12:15:57,306 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/meH_AvOAekk/maxresdefault.jpg HTTP/1.1" 200 86404
+12:16:53,999 root INFO starting...
+12:16:54,368 eyed3 DEBUG eyeD3 version 0.9.6
+12:16:57,474 root DEBUG [youtube] Extracting URL: 3moW71cwb34
+12:16:57,499 root DEBUG [youtube] 3moW71cwb34: Downloading webpage
+12:16:58,21 root DEBUG [youtube] 3moW71cwb34: Downloading android player API JSON
+12:17:38,565 root DEBUG [youtube] Extracting URL: dRhY7J1SSXg
+12:17:38,603 root DEBUG [youtube] dRhY7J1SSXg: Downloading webpage
+12:17:39,180 root DEBUG [youtube] dRhY7J1SSXg: Downloading android player API JSON
+12:18:42,951 root DEBUG [youtube] Extracting URL: tYENWjCfV8o
+12:18:42,957 root DEBUG [youtube] tYENWjCfV8o: Downloading webpage
+12:18:43,587 root DEBUG [youtube] tYENWjCfV8o: Downloading android player API JSON
+12:18:52,693 root DEBUG [youtube] Extracting URL: wT8SnjI4oBo
+12:18:52,696 root DEBUG [youtube] wT8SnjI4oBo: Downloading webpage
+12:18:53,198 root DEBUG [youtube] wT8SnjI4oBo: Downloading android player API JSON
+12:19:05,968 root DEBUG [youtube] Extracting URL: SW8bEdo3Vg0
+12:19:06,2 root DEBUG [youtube] SW8bEdo3Vg0: Downloading webpage
+12:19:06,510 root DEBUG [youtube] SW8bEdo3Vg0: Downloading android player API JSON
+12:22:14,750 root DEBUG [youtube] Extracting URL: 9yyzKcotK8w
+12:22:14,755 root DEBUG [youtube] 9yyzKcotK8w: Downloading webpage
+12:22:15,257 root DEBUG [youtube] 9yyzKcotK8w: Downloading android player API JSON
+12:22:20,242 root DEBUG [youtube] Extracting URL: WHfJfL_pwOc
+12:22:20,246 root DEBUG [youtube] WHfJfL_pwOc: Downloading webpage
+12:22:20,733 root DEBUG [youtube] WHfJfL_pwOc: Downloading android player API JSON
+12:23:27,928 root DEBUG [youtube] Extracting URL: JM8d5U6Nbc0
+12:23:27,947 root DEBUG [youtube] JM8d5U6Nbc0: Downloading webpage
+12:23:28,474 root DEBUG [youtube] JM8d5U6Nbc0: Downloading android player API JSON
+12:24:13,690 root DEBUG [youtube] Extracting URL: yp3lAniL9h4
+12:24:13,694 root DEBUG [youtube] yp3lAniL9h4: Downloading webpage
+12:24:14,228 root DEBUG [youtube] yp3lAniL9h4: Downloading android player API JSON
+12:25:28,39 root DEBUG [youtube] Extracting URL: lMYIQz8VS4s
+12:25:28,42 root DEBUG [youtube] lMYIQz8VS4s: Downloading webpage
+12:25:28,570 root DEBUG [youtube] lMYIQz8VS4s: Downloading android player API JSON
+12:27:03,295 root DEBUG [youtube] Extracting URL: IL5AhzUSVR4
+12:27:03,326 root DEBUG [youtube] IL5AhzUSVR4: Downloading webpage
+12:27:03,858 root DEBUG [youtube] IL5AhzUSVR4: Downloading android player API JSON
+12:27:06,202 root DEBUG [youtube] Extracting URL: iRweTyfl3qE
+12:27:06,208 root DEBUG [youtube] iRweTyfl3qE: Downloading webpage
+12:27:06,743 root DEBUG [youtube] iRweTyfl3qE: Downloading android player API JSON
+12:27:10,278 root DEBUG [youtube] Extracting URL: IL5AhzUSVR4
+12:27:10,316 root DEBUG [youtube] IL5AhzUSVR4: Downloading webpage
+12:27:10,812 root DEBUG [youtube] IL5AhzUSVR4: Downloading android player API JSON
+12:27:12,240 root DEBUG [youtube] Extracting URL: iRweTyfl3qE
+12:27:12,243 root DEBUG [youtube] iRweTyfl3qE: Downloading webpage
+12:27:12,792 root DEBUG [youtube] iRweTyfl3qE: Downloading android player API JSON
+12:29:42,484 root DEBUG [youtube] Extracting URL: iRweTyfl3qE
+12:29:42,503 root DEBUG [youtube] iRweTyfl3qE: Downloading webpage
+12:29:42,996 root DEBUG [youtube] iRweTyfl3qE: Downloading android player API JSON
+12:29:43,308 root DEBUG [youtube] Extracting URL: iRweTyfl3qE
+12:29:43,317 root DEBUG [youtube] iRweTyfl3qE: Downloading webpage
+12:29:43,824 root DEBUG [youtube] iRweTyfl3qE: Downloading android player API JSON
+12:29:45,997 root DEBUG [youtube] Extracting URL: -dhx7Hnu-wo
+12:29:46,42 root DEBUG [youtube] -dhx7Hnu-wo: Downloading webpage
+12:29:46,631 root DEBUG [youtube] -dhx7Hnu-wo: Downloading android player API JSON
+12:31:21,248 root DEBUG [youtube] Extracting URL: fq14gX3F-K4
+12:31:21,253 root DEBUG [youtube] fq14gX3F-K4: Downloading webpage
+12:31:21,721 root DEBUG [youtube] fq14gX3F-K4: Downloading android player API JSON
+12:32:24,190 root DEBUG [youtube] Extracting URL: mzD50zVl20E
+12:32:24,194 root DEBUG [youtube] mzD50zVl20E: Downloading webpage
+12:32:24,675 root DEBUG [youtube] mzD50zVl20E: Downloading android player API JSON
+12:57:31,515 root INFO starting...
+12:57:32,98 eyed3 DEBUG eyeD3 version 0.9.6
+12:57:32,166 asyncio DEBUG Using proactor: IocpProactor
+12:57:37,51 root DEBUG [youtube] Extracting URL: IxXVgJdn-XU
+12:57:37,51 root DEBUG [youtube] IxXVgJdn-XU: Downloading webpage
+12:57:37,650 root DEBUG [youtube] IxXVgJdn-XU: Downloading android player API JSON
+12:57:52,276 root DEBUG [youtube] Extracting URL: C4Iow9FFZxE
+12:57:52,277 root DEBUG [youtube] C4Iow9FFZxE: Downloading webpage
+12:57:52,798 root DEBUG [youtube] C4Iow9FFZxE: Downloading android player API JSON
+12:59:49,479 root DEBUG [youtube] Extracting URL: imQoCYh3fOU
+12:59:49,480 root DEBUG [youtube] imQoCYh3fOU: Downloading webpage
+12:59:50,18 root DEBUG [youtube] imQoCYh3fOU: Downloading android player API JSON
+12:59:52,289 root DEBUG [youtube] Extracting URL: Hh5jEQraXaw
+12:59:52,289 root DEBUG [youtube] Hh5jEQraXaw: Downloading webpage
+12:59:52,819 root DEBUG [youtube] Hh5jEQraXaw: Downloading android player API JSON
+12:59:53,914 root DEBUG [youtube] Extracting URL: mzaC7KeItkc
+12:59:53,914 root DEBUG [youtube] mzaC7KeItkc: Downloading webpage
+12:59:54,426 root DEBUG [youtube] mzaC7KeItkc: Downloading android player API JSON
+12:59:55,504 root DEBUG [youtube] Extracting URL: HIrA2SjVnuE
+12:59:55,505 root DEBUG [youtube] HIrA2SjVnuE: Downloading webpage
+12:59:56,45 root DEBUG [youtube] HIrA2SjVnuE: Downloading android player API JSON
+13:00:12,430 root DEBUG [youtube] Extracting URL: Tw1cEm-C1hY
+13:00:12,430 root DEBUG [youtube] Tw1cEm-C1hY: Downloading webpage
+13:00:13,2 root DEBUG [youtube] Tw1cEm-C1hY: Downloading android player API JSON
+13:00:22,388 root DEBUG [youtube] Extracting URL: ns9hFcH-glQ
+13:00:22,390 root DEBUG [youtube] ns9hFcH-glQ: Downloading webpage
+13:00:22,996 root DEBUG [youtube] ns9hFcH-glQ: Downloading android player API JSON
+13:00:27,258 root DEBUG [youtube] Extracting URL: vjbaBBW7oBI
+13:00:27,259 root DEBUG [youtube] vjbaBBW7oBI: Downloading webpage
+13:00:27,724 root DEBUG [youtube] vjbaBBW7oBI: Downloading android player API JSON
+13:01:26,54 root DEBUG [youtube] Extracting URL: ufdmfM7qK-0
+13:01:26,55 root DEBUG [youtube] ufdmfM7qK-0: Downloading webpage
+13:01:26,603 root DEBUG [youtube] ufdmfM7qK-0: Downloading android player API JSON
+13:01:30,71 root DEBUG [youtube] Extracting URL: a-X_9DsaHU8
+13:01:30,71 root DEBUG [youtube] a-X_9DsaHU8: Downloading webpage
+13:01:30,580 root DEBUG [youtube] a-X_9DsaHU8: Downloading android player API JSON
+13:01:34,176 root DEBUG [youtube] Extracting URL: Q52GzsGmRuk
+13:01:34,176 root DEBUG [youtube] Q52GzsGmRuk: Downloading webpage
+13:01:34,733 root DEBUG [youtube] Q52GzsGmRuk: Downloading android player API JSON
+13:02:32,467 root DEBUG [youtube] Extracting URL: Fq6GvDiaiHw
+13:02:32,467 root DEBUG [youtube] Fq6GvDiaiHw: Downloading webpage
+13:02:32,996 root DEBUG [youtube] Fq6GvDiaiHw: Downloading android player API JSON
+13:03:10,396 root DEBUG [youtube] Extracting URL: p8YaAzZDQAg
+13:03:10,396 root DEBUG [youtube] p8YaAzZDQAg: Downloading webpage
+13:03:10,952 root DEBUG [youtube] p8YaAzZDQAg: Downloading android player API JSON
+13:03:11,228 root ERROR [0;31mERROR:[0m [youtube] p8YaAzZDQAg: Video unavailable. This video is not available
+13:03:14,178 root DEBUG [youtube] Extracting URL: FftIYY44Woc
+13:03:14,178 root DEBUG [youtube] FftIYY44Woc: Downloading webpage
+13:03:14,731 root DEBUG [youtube] FftIYY44Woc: Downloading android player API JSON
+13:04:17,480 root DEBUG [youtube] Extracting URL: 7aouQRbx6ts
+13:04:17,480 root DEBUG [youtube] 7aouQRbx6ts: Downloading webpage
+13:04:18,126 root DEBUG [youtube] 7aouQRbx6ts: Downloading android player API JSON
+13:04:21,779 root DEBUG [youtube] Extracting URL: nwENZJ8c0aw
+13:04:21,779 root DEBUG [youtube] nwENZJ8c0aw: Downloading webpage
+13:04:22,312 root DEBUG [youtube] nwENZJ8c0aw: Downloading android player API JSON
+13:04:25,751 root DEBUG [youtube] Extracting URL: ZqFD45m36gI
+13:04:25,752 root DEBUG [youtube] ZqFD45m36gI: Downloading webpage
+13:04:26,237 root DEBUG [youtube] ZqFD45m36gI: Downloading android player API JSON
+13:04:29,388 root DEBUG [youtube] Extracting URL: hJCAW_4NMD4
+13:04:29,389 root DEBUG [youtube] hJCAW_4NMD4: Downloading webpage
+13:04:29,921 root DEBUG [youtube] hJCAW_4NMD4: Downloading android player API JSON
+13:04:36,42 root DEBUG [youtube] Extracting URL: Z_lzERHyWFI
+13:04:36,42 root DEBUG [youtube] Z_lzERHyWFI: Downloading webpage
+13:04:36,635 root DEBUG [youtube] Z_lzERHyWFI: Downloading android player API JSON
+13:04:36,832 root DEBUG [youtube] Z_lzERHyWFI: Downloading MPD manifest
+13:04:41,878 root DEBUG [youtube] Extracting URL: _Ci0Kgdpgsw
+13:04:41,878 root DEBUG [youtube] _Ci0Kgdpgsw: Downloading webpage
+13:04:42,476 root DEBUG [youtube] _Ci0Kgdpgsw: Downloading android player API JSON
+13:04:46,118 root DEBUG [youtube] Extracting URL: qWWSM3wCiKY
+13:04:46,118 root DEBUG [youtube] qWWSM3wCiKY: Downloading webpage
+13:04:46,711 root DEBUG [youtube] qWWSM3wCiKY: Downloading android player API JSON
+13:07:17,462 root DEBUG [youtube] Extracting URL: 1-xGerv5FOk
+13:07:17,462 root DEBUG [youtube] 1-xGerv5FOk: Downloading webpage
+13:07:18,30 root DEBUG [youtube] 1-xGerv5FOk: Downloading android player API JSON
+13:07:23,316 root DEBUG [youtube] Extracting URL: lqYQXIt4SpA
+13:07:23,318 root DEBUG [youtube] lqYQXIt4SpA: Downloading webpage
+13:07:23,895 root DEBUG [youtube] lqYQXIt4SpA: Downloading android player API JSON
+13:07:27,468 root DEBUG [youtube] Extracting URL: RXLzvo6kvVQ
+13:07:27,468 root DEBUG [youtube] RXLzvo6kvVQ: Downloading webpage
+13:07:28,36 root DEBUG [youtube] RXLzvo6kvVQ: Downloading android player API JSON
+13:07:31,483 root DEBUG [youtube] Extracting URL: iP6XpLQM2Cs
+13:07:31,484 root DEBUG [youtube] iP6XpLQM2Cs: Downloading webpage
+13:07:32,87 root DEBUG [youtube] iP6XpLQM2Cs: Downloading android player API JSON
+13:07:44,534 root DEBUG [youtube] Extracting URL: mHgAST5HTYI
+13:07:44,537 root DEBUG [youtube] mHgAST5HTYI: Downloading webpage
+13:07:45,111 root DEBUG [youtube] mHgAST5HTYI: Downloading android player API JSON
+13:09:34,666 root DEBUG [youtube] Extracting URL: 34Na4j8AVgA
+13:09:34,666 root DEBUG [youtube] 34Na4j8AVgA: Downloading webpage
+13:09:35,363 root DEBUG [youtube] 34Na4j8AVgA: Downloading android player API JSON
+13:09:54,67 root DEBUG [youtube] Extracting URL: Tq3T1D6_BVA
+13:09:54,68 root DEBUG [youtube] Tq3T1D6_BVA: Downloading webpage
+13:09:54,695 root DEBUG [youtube] Tq3T1D6_BVA: Downloading android player API JSON
+13:09:59,303 root DEBUG [youtube] Extracting URL: wrg4CuK9p8E
+13:09:59,304 root DEBUG [youtube] wrg4CuK9p8E: Downloading webpage
+13:09:59,939 root DEBUG [youtube] wrg4CuK9p8E: Downloading android player API JSON
+13:11:28,326 root DEBUG [youtube] Extracting URL: IkRk3q9CwYQ
+13:11:28,326 root DEBUG [youtube] IkRk3q9CwYQ: Downloading webpage
+13:11:28,844 root DEBUG [youtube] IkRk3q9CwYQ: Downloading android player API JSON
+13:13:58,299 root DEBUG [youtube] Extracting URL: m1a_GqJf02M
+13:13:58,299 root DEBUG [youtube] m1a_GqJf02M: Downloading webpage
+13:13:59,142 root DEBUG [youtube] m1a_GqJf02M: Downloading android player API JSON
+13:15:56,706 root DEBUG [youtube] Extracting URL: Pp0WIrbNw5Y
+13:15:56,706 root DEBUG [youtube] Pp0WIrbNw5Y: Downloading webpage
+13:15:57,301 root DEBUG [youtube] Pp0WIrbNw5Y: Downloading android player API JSON
+13:19:06,720 root DEBUG [youtube] Extracting URL: k7JDC34WolI
+13:19:06,720 root DEBUG [youtube] k7JDC34WolI: Downloading webpage
+13:19:07,254 root DEBUG [youtube] k7JDC34WolI: Downloading android player API JSON
+13:19:07,444 root ERROR [0;31mERROR:[0m [youtube] k7JDC34WolI: Video unavailable. This video is not available
+13:19:09,389 root DEBUG [youtube] Extracting URL: BMzD7Y0p2wA
+13:19:09,389 root DEBUG [youtube] BMzD7Y0p2wA: Downloading webpage
+13:19:09,965 root DEBUG [youtube] BMzD7Y0p2wA: Downloading android player API JSON
+13:21:24,243 root DEBUG [youtube] Extracting URL: GsDeG4WVDEc
+13:21:24,244 root DEBUG [youtube] GsDeG4WVDEc: Downloading webpage
+13:21:24,769 root DEBUG [youtube] GsDeG4WVDEc: Downloading android player API JSON
+13:22:54,3 root DEBUG [youtube] Extracting URL: qxd2D2AFaRU
+13:22:54,3 root DEBUG [youtube] qxd2D2AFaRU: Downloading webpage
+13:22:54,537 root DEBUG [youtube] qxd2D2AFaRU: Downloading android player API JSON
+13:24:44,585 root DEBUG [youtube] Extracting URL: IrY32eEge_w
+13:24:44,586 root DEBUG [youtube] IrY32eEge_w: Downloading webpage
+13:24:45,192 root DEBUG [youtube] IrY32eEge_w: Downloading android player API JSON
+13:29:13,150 root DEBUG [youtube] Extracting URL: jtjZjOGtBjs
+13:29:13,151 root DEBUG [youtube] jtjZjOGtBjs: Downloading webpage
+13:29:13,711 root DEBUG [youtube] jtjZjOGtBjs: Downloading android player API JSON
+13:32:51,365 root DEBUG [youtube] Extracting URL: -0MsFRGEZDk
+13:32:51,366 root DEBUG [youtube] -0MsFRGEZDk: Downloading webpage
+13:32:51,956 root DEBUG [youtube] -0MsFRGEZDk: Downloading android player API JSON
+13:35:58,314 root DEBUG [youtube] Extracting URL: mkaAQATUjgs
+13:35:58,314 root DEBUG [youtube] mkaAQATUjgs: Downloading webpage
+13:35:58,843 root DEBUG [youtube] mkaAQATUjgs: Downloading android player API JSON
+13:40:05,317 root DEBUG [youtube] Extracting URL: jvFeCZgTjrs
+13:40:05,317 root DEBUG [youtube] jvFeCZgTjrs: Downloading webpage
+13:40:05,918 root DEBUG [youtube] jvFeCZgTjrs: Downloading android player API JSON
+13:44:35,431 root DEBUG [youtube] Extracting URL: J9RzOrp9Rww
+13:44:35,431 root DEBUG [youtube] J9RzOrp9Rww: Downloading webpage
+13:44:35,940 root DEBUG [youtube] J9RzOrp9Rww: Downloading android player API JSON
+13:44:38,805 root DEBUG [youtube] Extracting URL: JzMhXTOcVNk
+13:44:38,805 root DEBUG [youtube] JzMhXTOcVNk: Downloading webpage
+13:44:39,330 root DEBUG [youtube] JzMhXTOcVNk: Downloading android player API JSON
+13:44:46,338 root DEBUG [youtube] Extracting URL: MQmN8CsIhHk
+13:44:46,339 root DEBUG [youtube] MQmN8CsIhHk: Downloading webpage
+13:44:46,834 root DEBUG [youtube] MQmN8CsIhHk: Downloading android player API JSON
+13:49:20,374 root DEBUG [youtube] Extracting URL: gR3naU1QxU8
+13:49:20,374 root DEBUG [youtube] gR3naU1QxU8: Downloading webpage
+13:49:20,871 root DEBUG [youtube] gR3naU1QxU8: Downloading android player API JSON
+13:50:53,764 root INFO starting...
+13:50:54,130 eyed3 DEBUG eyeD3 version 0.9.6
+13:50:54,177 asyncio DEBUG Using proactor: IocpProactor
+13:51:43,141 root INFO starting...
+13:51:43,515 eyed3 DEBUG eyeD3 version 0.9.6
+13:51:43,568 asyncio DEBUG Using proactor: IocpProactor
+13:52:13,668 root INFO starting...
+13:52:14,35 eyed3 DEBUG eyeD3 version 0.9.6
+13:52:14,86 asyncio DEBUG Using proactor: IocpProactor
+13:52:17,163 root DEBUG [youtube] Extracting URL: 9xXPYvtWNUM
+13:52:17,167 root DEBUG [youtube] 9xXPYvtWNUM: Downloading webpage
+13:52:17,782 root DEBUG [youtube] 9xXPYvtWNUM: Downloading android player API JSON
+13:52:44,253 root INFO starting...
+13:52:44,647 eyed3 DEBUG eyeD3 version 0.9.6
+13:52:44,695 asyncio DEBUG Using proactor: IocpProactor
+13:52:55,353 root DEBUG [youtube] Extracting URL: Fs-p78KJ5I4
+13:52:55,370 root DEBUG [youtube] Fs-p78KJ5I4: Downloading webpage
+13:52:55,987 root DEBUG [youtube] Fs-p78KJ5I4: Downloading android player API JSON
+13:53:36,839 root INFO starting...
+13:53:37,204 eyed3 DEBUG eyeD3 version 0.9.6
+13:53:37,254 asyncio DEBUG Using proactor: IocpProactor
+13:53:42,550 root DEBUG [youtube] Extracting URL: 120qslVb4sA
+13:53:42,554 root DEBUG [youtube] 120qslVb4sA: Downloading webpage
+13:53:43,108 root DEBUG [youtube] 120qslVb4sA: Downloading android player API JSON
+13:54:11,521 root INFO starting...
+13:54:11,884 eyed3 DEBUG eyeD3 version 0.9.6
+13:54:11,932 asyncio DEBUG Using proactor: IocpProactor
+13:54:15,9 root DEBUG [youtube] Extracting URL: 2qAXtXp4ntA
+13:54:15,20 root DEBUG [youtube] 2qAXtXp4ntA: Downloading webpage
+13:54:15,586 root DEBUG [youtube] 2qAXtXp4ntA: Downloading android player API JSON
+13:54:46,576 root INFO starting...
+13:54:46,941 eyed3 DEBUG eyeD3 version 0.9.6
+13:54:46,990 asyncio DEBUG Using proactor: IocpProactor
+13:54:49,601 root DEBUG [youtube] Extracting URL: XmN4pI0oD88
+13:54:49,648 root DEBUG [youtube] XmN4pI0oD88: Downloading webpage
+13:54:50,153 root DEBUG [youtube] XmN4pI0oD88: Downloading android player API JSON
+13:55:10,401 root INFO starting...
+13:55:10,768 eyed3 DEBUG eyeD3 version 0.9.6
+13:55:10,817 asyncio DEBUG Using proactor: IocpProactor
+13:55:13,244 root DEBUG [youtube] Extracting URL: PpocxtjYk38
+13:55:13,249 root DEBUG [youtube] PpocxtjYk38: Downloading webpage
+13:55:13,880 root DEBUG [youtube] PpocxtjYk38: Downloading android player API JSON
+13:55:35,15 root INFO starting...
+13:55:35,387 eyed3 DEBUG eyeD3 version 0.9.6
+13:55:35,439 asyncio DEBUG Using proactor: IocpProactor
+13:55:40,248 root DEBUG [youtube] Extracting URL: Fs-p78KJ5I4
+13:55:40,255 root DEBUG [youtube] Fs-p78KJ5I4: Downloading webpage
+13:55:40,931 root DEBUG [youtube] Fs-p78KJ5I4: Downloading android player API JSON
+13:55:54,785 root DEBUG [youtube] Extracting URL: E3VLrhpMNIE
+13:55:54,788 root DEBUG [youtube] E3VLrhpMNIE: Downloading webpage
+13:55:55,341 root DEBUG [youtube] E3VLrhpMNIE: Downloading android player API JSON
+13:55:59,359 root DEBUG [youtube] Extracting URL: 9xXPYvtWNUM
+13:55:59,362 root DEBUG [youtube] 9xXPYvtWNUM: Downloading webpage
+13:55:59,897 root DEBUG [youtube] 9xXPYvtWNUM: Downloading android player API JSON
+13:56:37,866 root ERROR Traceback (most recent call last):
+  File "A:\YandexDisk\python-projects\MSMPstream\MSMPstreamGit\main.py", line 168, in updatePlayerPause
+    self.updatePlayerNow(self,
+  File "A:\YandexDisk\python-projects\MSMPstream\MSMPstreamGit\main.py", line 204, in updatePlayerNow
+    'details': PlayNowMusicDataBox["titleTrekPlayNow"],
+TypeError: 'Discord_RPC' object is not subscriptable
+
+13:56:41,255 root DEBUG [youtube] Extracting URL: 120qslVb4sA
+13:56:41,286 root DEBUG [youtube] 120qslVb4sA: Downloading webpage
+13:56:41,822 root DEBUG [youtube] 120qslVb4sA: Downloading android player API JSON
+13:56:44,138 root DEBUG [youtube] Extracting URL: 1iG3772IF0g
+13:56:44,146 root DEBUG [youtube] 1iG3772IF0g: Downloading webpage
+13:56:44,712 root DEBUG [youtube] 1iG3772IF0g: Downloading android player API JSON
+13:56:47,242 root INFO starting...
+13:56:47,609 eyed3 DEBUG eyeD3 version 0.9.6
+13:56:47,658 asyncio DEBUG Using proactor: IocpProactor
+13:56:50,625 root DEBUG [youtube] Extracting URL: 2qAXtXp4ntA
+13:56:50,629 root DEBUG [youtube] 2qAXtXp4ntA: Downloading webpage
+13:56:51,210 root DEBUG [youtube] 2qAXtXp4ntA: Downloading android player API JSON
+13:56:56,902 root DEBUG [youtube] Extracting URL: DdXHTVUalRU
+13:56:56,935 root DEBUG [youtube] DdXHTVUalRU: Downloading webpage
+13:56:57,475 root DEBUG [youtube] DdXHTVUalRU: Downloading android player API JSON
+13:57:02,848 root ERROR Traceback (most recent call last):
+  File "A:\YandexDisk\python-projects\MSMPstream\MSMPstreamGit\main.py", line 168, in updatePlayerPause
+    self.updatePlayerNow(self,
+  File "A:\YandexDisk\python-projects\MSMPstream\MSMPstreamGit\main.py", line 204, in updatePlayerNow
+    'details': PlayNowMusicDataBox["titleTrekPlayNow"],
+TypeError: 'Discord_RPC' object is not subscriptable
+
+13:57:04,465 root ERROR Traceback (most recent call last):
+  File "A:\YandexDisk\python-projects\MSMPstream\MSMPstreamGit\main.py", line 168, in updatePlayerPause
+    self.updatePlayerNow(self,
+  File "A:\YandexDisk\python-projects\MSMPstream\MSMPstreamGit\main.py", line 204, in updatePlayerNow
+    'details': PlayNowMusicDataBox["titleTrekPlayNow"],
+TypeError: 'Discord_RPC' object is not subscriptable
+
+13:57:05,195 root ERROR Traceback (most recent call last):
+  File "A:\YandexDisk\python-projects\MSMPstream\MSMPstreamGit\main.py", line 168, in updatePlayerPause
+    self.updatePlayerNow(self,
+  File "A:\YandexDisk\python-projects\MSMPstream\MSMPstreamGit\main.py", line 204, in updatePlayerNow
+    'details': PlayNowMusicDataBox["titleTrekPlayNow"],
+TypeError: 'Discord_RPC' object is not subscriptable
+
+13:57:06,31 root ERROR Traceback (most recent call last):
+  File "A:\YandexDisk\python-projects\MSMPstream\MSMPstreamGit\main.py", line 168, in updatePlayerPause
+    self.updatePlayerNow(self,
+  File "A:\YandexDisk\python-projects\MSMPstream\MSMPstreamGit\main.py", line 204, in updatePlayerNow
+    'details': PlayNowMusicDataBox["titleTrekPlayNow"],
+TypeError: 'Discord_RPC' object is not subscriptable
+
+13:57:06,603 root ERROR Traceback (most recent call last):
+  File "A:\YandexDisk\python-projects\MSMPstream\MSMPstreamGit\main.py", line 168, in updatePlayerPause
+    self.updatePlayerNow(self,
+  File "A:\YandexDisk\python-projects\MSMPstream\MSMPstreamGit\main.py", line 204, in updatePlayerNow
+    'details': PlayNowMusicDataBox["titleTrekPlayNow"],
+TypeError: 'Discord_RPC' object is not subscriptable
+
+13:57:07,173 root ERROR Traceback (most recent call last):
+  File "A:\YandexDisk\python-projects\MSMPstream\MSMPstreamGit\main.py", line 168, in updatePlayerPause
+    self.updatePlayerNow(self,
+  File "A:\YandexDisk\python-projects\MSMPstream\MSMPstreamGit\main.py", line 204, in updatePlayerNow
+    'details': PlayNowMusicDataBox["titleTrekPlayNow"],
+TypeError: 'Discord_RPC' object is not subscriptable
+
+13:57:07,771 root ERROR Traceback (most recent call last):
+  File "A:\YandexDisk\python-projects\MSMPstream\MSMPstreamGit\main.py", line 168, in updatePlayerPause
+    self.updatePlayerNow(self,
+  File "A:\YandexDisk\python-projects\MSMPstream\MSMPstreamGit\main.py", line 204, in updatePlayerNow
+    'details': PlayNowMusicDataBox["titleTrekPlayNow"],
+TypeError: 'Discord_RPC' object is not subscriptable
+
+13:57:08,365 root ERROR Traceback (most recent call last):
+  File "A:\YandexDisk\python-projects\MSMPstream\MSMPstreamGit\main.py", line 168, in updatePlayerPause
+    self.updatePlayerNow(self,
+  File "A:\YandexDisk\python-projects\MSMPstream\MSMPstreamGit\main.py", line 204, in updatePlayerNow
+    'details': PlayNowMusicDataBox["titleTrekPlayNow"],
+TypeError: 'Discord_RPC' object is not subscriptable
+
+13:57:08,946 root ERROR Traceback (most recent call last):
+  File "A:\YandexDisk\python-projects\MSMPstream\MSMPstreamGit\main.py", line 168, in updatePlayerPause
+    self.updatePlayerNow(self,
+  File "A:\YandexDisk\python-projects\MSMPstream\MSMPstreamGit\main.py", line 204, in updatePlayerNow
+    'details': PlayNowMusicDataBox["titleTrekPlayNow"],
+TypeError: 'Discord_RPC' object is not subscriptable
+
+13:57:09,525 root ERROR Traceback (most recent call last):
+  File "A:\YandexDisk\python-projects\MSMPstream\MSMPstreamGit\main.py", line 168, in updatePlayerPause
+    self.updatePlayerNow(self,
+  File "A:\YandexDisk\python-projects\MSMPstream\MSMPstreamGit\main.py", line 204, in updatePlayerNow
+    'details': PlayNowMusicDataBox["titleTrekPlayNow"],
+TypeError: 'Discord_RPC' object is not subscriptable
+
+13:57:09,962 root ERROR Traceback (most recent call last):
+  File "A:\YandexDisk\python-projects\MSMPstream\MSMPstreamGit\main.py", line 168, in updatePlayerPause
+    self.updatePlayerNow(self,
+  File "A:\YandexDisk\python-projects\MSMPstream\MSMPstreamGit\main.py", line 204, in updatePlayerNow
+    'details': PlayNowMusicDataBox["titleTrekPlayNow"],
+TypeError: 'Discord_RPC' object is not subscriptable
+
+13:57:47,248 root INFO starting...
+13:57:47,612 eyed3 DEBUG eyeD3 version 0.9.6
+13:57:47,661 asyncio DEBUG Using proactor: IocpProactor
+13:57:50,639 root DEBUG [youtube] Extracting URL: 1iG3772IF0g
+13:57:50,677 root DEBUG [youtube] 1iG3772IF0g: Downloading webpage
+13:57:51,221 root DEBUG [youtube] 1iG3772IF0g: Downloading android player API JSON
+13:58:15,861 root DEBUG [youtube] Extracting URL: 2qAXtXp4ntA
+13:58:15,864 root DEBUG [youtube] 2qAXtXp4ntA: Downloading webpage
+13:58:16,428 root DEBUG [youtube] 2qAXtXp4ntA: Downloading android player API JSON
+13:58:25,874 root DEBUG [youtube] Extracting URL: DdXHTVUalRU
+13:58:25,921 root DEBUG [youtube] DdXHTVUalRU: Downloading webpage
+13:58:26,536 root DEBUG [youtube] DdXHTVUalRU: Downloading android player API JSON
+13:58:31,705 root DEBUG [youtube] Extracting URL: DdXHTVUalRU
+13:58:31,731 root DEBUG [youtube] DdXHTVUalRU: Downloading webpage
+13:58:32,243 root DEBUG [youtube] DdXHTVUalRU: Downloading android player API JSON
+13:58:37,381 root DEBUG [youtube] Extracting URL: nyjSGPIsmiA
+13:58:37,425 root DEBUG [youtube] nyjSGPIsmiA: Downloading webpage
+13:58:37,956 root DEBUG [youtube] nyjSGPIsmiA: Downloading android player API JSON
+13:58:47,668 root DEBUG [youtube] Extracting URL: lMYIQz8VS4s
+13:58:47,683 root DEBUG [youtube] lMYIQz8VS4s: Downloading webpage
+13:58:48,213 root DEBUG [youtube] lMYIQz8VS4s: Downloading android player API JSON
+14:00:32,689 root INFO starting...
+14:00:33,5 eyed3 DEBUG eyeD3 version 0.9.6
+14:00:33,54 asyncio DEBUG Using proactor: IocpProactor
+14:00:36,383 root DEBUG [youtube] Extracting URL: XJr5pbTEDRE
+14:00:36,386 root DEBUG [youtube] XJr5pbTEDRE: Downloading webpage
+14:00:36,941 root DEBUG [youtube] XJr5pbTEDRE: Downloading android player API JSON
+14:00:40,201 root ERROR Traceback (most recent call last):
+  File "A:\YandexDisk\python-projects\MSMPstream\MSMPstreamGit\main.py", line 168, in updatePlayerPause
+    self.updatePlayerNow(PlayNowMusicDataBox,
+  File "A:\YandexDisk\python-projects\MSMPstream\MSMPstreamGit\main.py", line 190, in updatePlayerNow
+    self.lenPlayListStatus=" ("+str(Num+1)+" of "+str(len(PlLen))+")"
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'int'
+
+14:00:41,512 root ERROR Traceback (most recent call last):
+  File "A:\YandexDisk\python-projects\MSMPstream\MSMPstreamGit\main.py", line 168, in updatePlayerPause
+    self.updatePlayerNow(PlayNowMusicDataBox,
+  File "A:\YandexDisk\python-projects\MSMPstream\MSMPstreamGit\main.py", line 190, in updatePlayerNow
+    self.lenPlayListStatus=" ("+str(Num+1)+" of "+str(len(PlLen))+")"
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'int'
+
+14:01:10,500 root INFO starting...
+14:01:10,869 eyed3 DEBUG eyeD3 version 0.9.6
+14:01:10,918 asyncio DEBUG Using proactor: IocpProactor
+14:01:13,333 root DEBUG [youtube] Extracting URL: DdXHTVUalRU
+14:01:13,336 root DEBUG [youtube] DdXHTVUalRU: Downloading webpage
+14:01:13,823 root DEBUG [youtube] DdXHTVUalRU: Downloading android player API JSON
+14:01:28,965 root INFO starting...
+14:01:29,338 eyed3 DEBUG eyeD3 version 0.9.6
+14:01:29,388 asyncio DEBUG Using proactor: IocpProactor
+14:01:31,959 root DEBUG [youtube] Extracting URL: PpocxtjYk38
+14:01:31,967 root DEBUG [youtube] PpocxtjYk38: Downloading webpage
+14:01:32,551 root DEBUG [youtube] PpocxtjYk38: Downloading android player API JSON
+14:01:37,271 root DEBUG [youtube] Extracting URL: d6SQb0WTrlA
+14:01:37,312 root DEBUG [youtube] d6SQb0WTrlA: Downloading webpage
+14:01:37,817 root DEBUG [youtube] d6SQb0WTrlA: Downloading android player API JSON
+14:01:50,269 root DEBUG [youtube] Extracting URL: XmN4pI0oD88
+14:01:50,273 root DEBUG [youtube] XmN4pI0oD88: Downloading webpage
+14:01:50,937 root DEBUG [youtube] XmN4pI0oD88: Downloading android player API JSON
+14:02:02,340 root INFO starting...
+14:02:02,712 eyed3 DEBUG eyeD3 version 0.9.6
+14:02:02,763 asyncio DEBUG Using proactor: IocpProactor
+14:02:05,924 root DEBUG [youtube] Extracting URL: PpocxtjYk38
+14:02:05,927 root DEBUG [youtube] PpocxtjYk38: Downloading webpage
+14:02:06,523 root DEBUG [youtube] PpocxtjYk38: Downloading android player API JSON
+14:02:18,805 root INFO starting...
+14:02:19,166 eyed3 DEBUG eyeD3 version 0.9.6
+14:02:19,213 asyncio DEBUG Using proactor: IocpProactor
+14:02:25,400 root DEBUG [youtube] Extracting URL: DdXHTVUalRU
+14:02:25,410 root DEBUG [youtube] DdXHTVUalRU: Downloading webpage
+14:02:25,961 root DEBUG [youtube] DdXHTVUalRU: Downloading android player API JSON
+14:03:01,182 root INFO starting...
+14:03:01,549 eyed3 DEBUG eyeD3 version 0.9.6
+14:03:01,601 asyncio DEBUG Using proactor: IocpProactor
+14:03:04,621 root DEBUG [youtube] Extracting URL: 9xXPYvtWNUM
+14:03:04,640 root DEBUG [youtube] 9xXPYvtWNUM: Downloading webpage
+14:03:05,409 root DEBUG [youtube] 9xXPYvtWNUM: Downloading android player API JSON
+14:03:38,800 root INFO starting...
+14:03:39,163 eyed3 DEBUG eyeD3 version 0.9.6
+14:03:39,211 asyncio DEBUG Using proactor: IocpProactor
+14:03:41,569 root DEBUG [youtube] Extracting URL: DdXHTVUalRU
+14:03:41,576 root DEBUG [youtube] DdXHTVUalRU: Downloading webpage
+14:03:42,104 root DEBUG [youtube] DdXHTVUalRU: Downloading android player API JSON
+14:03:59,971 root DEBUG [youtube] Extracting URL: qwc4bmdsmpQ
+14:04:00,4 root DEBUG [youtube] qwc4bmdsmpQ: Downloading webpage
+14:04:00,526 root DEBUG [youtube] qwc4bmdsmpQ: Downloading android player API JSON
+14:04:00,800 root DEBUG [youtube] qwc4bmdsmpQ: Downloading MPD manifest
+14:04:04,935 root DEBUG [youtube] Extracting URL: -fY8POhoQOw
+14:04:04,979 root DEBUG [youtube] -fY8POhoQOw: Downloading webpage
+14:04:05,606 root DEBUG [youtube] -fY8POhoQOw: Downloading android player API JSON
+14:04:55,26 root DEBUG [youtube] Extracting URL: GJ0RyY_oetE
+14:04:55,30 root DEBUG [youtube] GJ0RyY_oetE: Downloading webpage
+14:04:55,642 root DEBUG [youtube] GJ0RyY_oetE: Downloading android player API JSON
+14:06:05,562 root INFO starting...
+14:06:05,929 eyed3 DEBUG eyeD3 version 0.9.6
+14:06:05,975 asyncio DEBUG Using proactor: IocpProactor
+14:06:08,522 root DEBUG [youtube] Extracting URL: 2qAXtXp4ntA
+14:06:08,525 root DEBUG [youtube] 2qAXtXp4ntA: Downloading webpage
+14:06:09,77 root DEBUG [youtube] 2qAXtXp4ntA: Downloading android player API JSON
+14:06:09,340 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+14:06:09,563 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/2qAXtXp4ntA/maxresdefault.jpg HTTP/1.1" 200 126676
+14:06:13,589 root DEBUG [youtube] Extracting URL: DdXHTVUalRU
+14:06:13,594 root DEBUG [youtube] DdXHTVUalRU: Downloading webpage
+14:06:14,128 root DEBUG [youtube] DdXHTVUalRU: Downloading android player API JSON
+14:06:14,385 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+14:06:14,584 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/DdXHTVUalRU/maxresdefault.jpg HTTP/1.1" 200 105020
+14:06:17,67 root DEBUG [youtube] Extracting URL: PpocxtjYk38
+14:06:17,70 root DEBUG [youtube] PpocxtjYk38: Downloading webpage
+14:06:17,733 root DEBUG [youtube] PpocxtjYk38: Downloading android player API JSON
+14:06:18,703 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+14:06:18,886 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/PpocxtjYk38/maxresdefault.jpg HTTP/1.1" 200 94962
+14:06:22,559 root DEBUG [youtube] Extracting URL: XmN4pI0oD88
+14:06:22,593 root DEBUG [youtube] XmN4pI0oD88: Downloading webpage
+14:06:23,150 root DEBUG [youtube] XmN4pI0oD88: Downloading android player API JSON
+14:06:23,457 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+14:06:23,680 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/XmN4pI0oD88/maxresdefault.jpg HTTP/1.1" 200 50028
+14:06:26,343 root DEBUG [youtube] Extracting URL: MoYmZ6dq2rg
+14:06:26,346 root DEBUG [youtube] MoYmZ6dq2rg: Downloading webpage
+14:06:26,894 root DEBUG [youtube] MoYmZ6dq2rg: Downloading android player API JSON
+14:06:27,384 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+14:06:27,549 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/MoYmZ6dq2rg/maxresdefault.jpg HTTP/1.1" 200 33405
+14:07:20,264 root INFO starting...
+14:07:20,639 eyed3 DEBUG eyeD3 version 0.9.6
+14:07:20,695 asyncio DEBUG Using proactor: IocpProactor
+14:07:24,981 root INFO starting...
+14:07:25,345 eyed3 DEBUG eyeD3 version 0.9.6
+14:07:25,399 asyncio DEBUG Using proactor: IocpProactor
+14:07:27,677 root DEBUG [youtube] Extracting URL: DdXHTVUalRU
+14:07:27,684 root DEBUG [youtube] DdXHTVUalRU: Downloading webpage
+14:07:28,216 root DEBUG [youtube] DdXHTVUalRU: Downloading android player API JSON
+14:07:28,474 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+14:07:28,651 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/DdXHTVUalRU/maxresdefault.jpg HTTP/1.1" 200 105020
+14:07:36,219 root DEBUG [youtube] Extracting URL: PpocxtjYk38
+14:07:36,225 root DEBUG [youtube] PpocxtjYk38: Downloading webpage
+14:07:36,865 root DEBUG [youtube] PpocxtjYk38: Downloading android player API JSON
+14:07:37,743 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+14:07:37,896 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/PpocxtjYk38/maxresdefault.jpg HTTP/1.1" 200 94962
+14:07:40,697 root DEBUG [youtube] Extracting URL: fBM-Ld2YyRw
+14:07:40,703 root DEBUG [youtube] fBM-Ld2YyRw: Downloading webpage
+14:07:41,193 root DEBUG [youtube] fBM-Ld2YyRw: Downloading android player API JSON
+14:07:41,651 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+14:07:41,808 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/fBM-Ld2YyRw/maxresdefault.jpg HTTP/1.1" 200 115429
+14:08:24,854 root DEBUG [youtube] Extracting URL: 59fzO8BIwDg
+14:08:24,858 root DEBUG [youtube] 59fzO8BIwDg: Downloading webpage
+14:08:25,425 root DEBUG [youtube] 59fzO8BIwDg: Downloading android player API JSON
+14:08:26,524 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+14:08:26,698 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/59fzO8BIwDg/maxresdefault.jpg HTTP/1.1" 200 283458
+14:08:33,601 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+14:08:33,755 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/59fzO8BIwDg/maxresdefault.jpg HTTP/1.1" 200 283458
+14:08:36,657 root DEBUG [youtube] Extracting URL: 59fzO8BIwDg
+14:08:36,677 root DEBUG [youtube] 59fzO8BIwDg: Downloading webpage
+14:08:37,250 root DEBUG [youtube] 59fzO8BIwDg: Downloading android player API JSON
+14:08:38,85 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+14:08:38,261 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/59fzO8BIwDg/maxresdefault.jpg HTTP/1.1" 200 283458
+14:08:40,964 root DEBUG [youtube] Extracting URL: m4hr-C4QU1A
+14:08:41,7 root DEBUG [youtube] m4hr-C4QU1A: Downloading webpage
+14:08:41,502 root DEBUG [youtube] m4hr-C4QU1A: Downloading android player API JSON
+14:08:41,950 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+14:08:42,132 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/m4hr-C4QU1A/maxresdefault.jpg HTTP/1.1" 200 63408
+14:08:42,299 root DEBUG [youtube] Extracting URL: m4hr-C4QU1A
+14:08:42,313 root DEBUG [youtube] m4hr-C4QU1A: Downloading webpage
+14:08:42,876 root DEBUG [youtube] m4hr-C4QU1A: Downloading android player API JSON
+14:08:43,152 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+14:08:43,308 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/m4hr-C4QU1A/maxresdefault.jpg HTTP/1.1" 200 63408
+14:08:43,559 root DEBUG [youtube] Extracting URL: m4hr-C4QU1A
+14:08:43,565 root DEBUG [youtube] m4hr-C4QU1A: Downloading webpage
+14:08:44,61 root DEBUG [youtube] m4hr-C4QU1A: Downloading android player API JSON
+14:08:44,349 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+14:08:44,528 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/m4hr-C4QU1A/maxresdefault.jpg HTTP/1.1" 200 63408
+14:10:49,860 root DEBUG [youtube] Extracting URL: ZeP0dKhSgXE
+14:10:49,906 root DEBUG [youtube] ZeP0dKhSgXE: Downloading webpage
+14:10:50,452 root DEBUG [youtube] ZeP0dKhSgXE: Downloading android player API JSON
+14:10:51,8 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+14:10:51,229 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/ZeP0dKhSgXE/maxresdefault.jpg HTTP/1.1" 200 63408
+14:10:59,82 root DEBUG [youtube] Extracting URL: pzXl473KgEo
+14:10:59,85 root DEBUG [youtube] pzXl473KgEo: Downloading webpage
+14:10:59,684 root DEBUG [youtube] pzXl473KgEo: Downloading android player API JSON
+14:11:00,132 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): i.ytimg.com:443
+14:11:00,306 urllib3.connectionpool DEBUG https://i.ytimg.com:443 "GET /vi/pzXl473KgEo/maxresdefault.jpg HTTP/1.1" 200 67463

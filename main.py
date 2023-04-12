@@ -46,7 +46,7 @@ import json
 import yt_dlp as youtube_dl
 from eyed3 import id3
 from eyed3 import load
-from threading import Thread
+#from threading import Thread
 import vlc
 from appdirs import user_config_dir
 
@@ -85,7 +85,7 @@ def loadConfig():
           print("firk")
           with open(configFile,"w") as f:
                yaml.dump(config,f)
-          return config,UserPath
+          return config#,UserPath
 
 class MyYTLogger:
     def __init__(self,FullInfo,logger):
@@ -116,9 +116,110 @@ class Discord_RPC():
      def __init__(self,RPC,msmp_streamIconYouTube=None,
                   msmp_streamIconMain=None,
                   msmp_streamIconSoundCloud=None,
+                  msmp_streamIcon="qmsmpstream",
+                  version="None",
                   logger=None):
-          self
-     
+          self.RPC=RPC
+          self.RPC.connect()
+          self.msmp_streamIcon=msmp_streamIcon
+          if(msmp_streamIconMain==None):
+              self.msmp_streamIconMain=self.msmp_streamIcon
+          else:self.msmp_streamIconMain=msmp_streamIconMain
+          
+          if(msmp_streamIconSoundCloud==None):
+              self.msmp_streamIconSoundCloud=self.msmp_streamIcon
+          else:self.msmp_streamIconSoundCloud=msmp_streamIconSoundCloud
+          
+          if(msmp_streamIconYouTube==None):
+              self.msmp_streamIconYouTube=self.msmp_streamIcon
+          else:self.msmp_streamIconYouTube=msmp_streamIconYouTube
+
+          self.lenPlayListStatus=""
+
+          self.version=version
+          
+     def updatePlayerPause(self,Audiolength,AudioTime,PlayNowMusicDataBox,PlayerState,ImgUrl=""):
+      try:
+        if not(ImgUrl==""):
+               msmp_streamIcon=ImgUrl
+               self.IconImgUrl=ImgUrl
+        elif not(self.IconImgUrl==None):
+               msmp_streamIcon=self.IconImgUrl
+        else:
+               msmp_streamIcon=self.msmp_streamIcon
+        print(PlayerState)       
+        if not(PlayerState=="State.Playing"): 
+           self.RPC.update(
+              **{
+                  'details': PlayNowMusicDataBox["titleTrekPlayNow"],
+                  'state': PlayNowMusicDataBox["artistTrekPlayNow"]+self.lenPlayListStatus,
+                  'large_image':msmp_streamIcon,
+                  'small_image':"pause",
+                  #'large_text':self.PlayNowMusicDataBox["albumTrekPlayNow"],
+                  'small_text':self.version
+                  }
+              )  
+##           updatePlayerNow(self,
+##                           PlayNowMusicDataBox,
+##                           Audiolength,
+##                           AudioTime):
+        else:
+          if not(int(Audiolength)==0):
+           self.updatePlayerNow(PlayNowMusicDataBox=PlayNowMusicDataBox,
+                           durationTreak=self.durationTreak)     
+           
+          else:
+            self.RPC.update(
+              **{
+                  'details': PlayNowMusicDataBox["titleTrekPlayNow"],
+                  'state': PlayNowMusicDataBox["artistTrekPlayNow"],
+                  'large_image':msmp_streamIcon,
+                  'small_image':"play",
+                  'small_text':self.version,
+                }
+              )
+      except:printError(traceback.format_exc())
+      
+     def updatePlayerNow(self,PlayNowMusicDataBox,durationTreak,PlLen=None,Num=None,NowPlayIconRPC=None,ImgUrl=""):
+          
+          self.durationTreak=durationTreak
+          
+          if not(NowPlayIconRPC==None): #,Audiolength,AudioTime
+               self.NowPlayIconRPC=NowPlayIconRPC
+          if not(PlLen==None):
+               self.lenPlayListStatus=" ("+str(Num+1)+" of "+str(PlLen)+")"
+               
+          if not(ImgUrl==""):
+               msmp_streamIcon=ImgUrl
+               self.IconImgUrl=ImgUrl
+          elif not(self.IconImgUrl==None):
+               msmp_streamIcon=self.IconImgUrl
+          else:
+               msmp_streamIcon=self.msmp_streamIcon
+               
+          self.RPC.update(
+                   **{
+                      'details': PlayNowMusicDataBox["titleTrekPlayNow"],
+                      'state': PlayNowMusicDataBox["artistTrekPlayNow"]+self.lenPlayListStatus,
+                      'large_image':msmp_streamIcon,
+                      'small_image':"play",
+                      #'large_text':self.PlayNowMusicDataBox["albumTrekPlayNow"],
+                      'small_text':self.version,
+                      'end': time.time()+self.durationTreak#((AudioTime-Audiolength)/1000)-((AudioTime-Audiolength)/1000)-((AudioTime-Audiolength)/1000)
+                    }
+                   )
+          
+     def updatePlayerStop(self,LoadingMusicMeta):
+          if(LoadingMusicMeta): #self.PlayNowMusicDataBox["LoadingMusicMeta"]
+                 self.RPC.update(
+                     **{
+                         'large_image':"missing_texture",
+                    })
+          else:
+                 self.RPC.update(
+                     **{
+                         'large_image':self.msmp_streamIcon,
+                    })
 
 class GibridPlayer():
     def __init__(self,InstanceSettings):
@@ -141,17 +242,6 @@ class GibridPlayer():
         #if str(NewPlaerVLC.get_state())=="State.Playing":
          self.NewPlaerVLC.stop()
          if not(self.discord_rpc==None):
-             if(self.PlayNowMusicDataBox["LoadingMusicMeta"]):
-                 self.discord_rpc.update(
-                     **{
-                         'large_image':"missing_texture",
-                    })
-             else:
-                 self.discord_rpc.update(
-                     **{
-                         'large_image':msmp_streamIcon,
-                    })
-             
              #OldMusicDataBox["Play"]=0
              self.Error=0
         
@@ -164,13 +254,10 @@ class MSMPboxPlayer(GibridPlayer):
                   downloadMusicFolder="",
                   localizationBox=None,
                   ImgAssets=None,
-                  discord_rpc=None,
+                  MSMP_RPC=None,
                   HostNamePybms="",
                   versionCs=None,
                   FullInfo=False,
-                  msmp_streamIconYouTube=None,
-                  msmp_streamIconMain=None,
-                  msmp_streamIconSoundCloud=None,
                   VideoMode=False,
                   logger=None,PlayInThread=False):
           global version
@@ -204,16 +291,8 @@ class MSMPboxPlayer(GibridPlayer):
           self.lenPlayListStatus=""
           self.msmp_streamIconDf="qmsmpstream"
           self.msmp_streamIcon=self.msmp_streamIconDf
-          if not(discord_rpc==None):
-           if(msmp_streamIconMain==None):
-              self.msmp_streamIconMain=self.msmp_streamIcon
-           else:self.msmp_streamIconMain=msmp_streamIconMain
-           if(msmp_streamIconSoundCloud==None):
-              self.msmp_streamIconSoundCloud=self.msmp_streamIcon
-           else:self.msmp_streamIconSoundCloud=msmp_streamIconSoundCloud 
-           if(msmp_streamIconYouTube==None):
-              self.msmp_streamIconYouTube=self.msmp_streamIcon
-           else:self.msmp_streamIconYouTube=msmp_streamIconYouTube
+          self.discord_rpc=MSMP_RPC
+               
           self.ImgAssets=ImgAssets
           self.castViseonSoundCloud=-1
           self.Useyt_dlp=True
@@ -222,7 +301,6 @@ class MSMPboxPlayer(GibridPlayer):
           self.tagid3 = id3.Tag()
           self.ErrorLoadSound=[]
           self.ServerPlaer=ServerPlaer
-          self.discord_rpc=discord_rpc
           self.HostNamePybms=HostNamePybms
           self.VersionContinuePlay="v0.1.2-beta"
           self.PlayLocalFile=False
@@ -269,66 +347,12 @@ class MSMPboxPlayer(GibridPlayer):
              # 
      def pause(self):
       try:
-        if str(self.get_state())=="State.Playing": 
-          if not(self.discord_rpc==None):
-           self.discord_rpc.update(
-              **{
-                  'details': self.PlayNowMusicDataBox["titleTrekPlayNow"],
-                  'state': self.PlayNowMusicDataBox["artistTrekPlayNow"]+self.lenPlayListStatus,
-                  'large_image':self.NowPlayIconRPC,
-                  'small_image':"pause",
-                  #'large_text':self.PlayNowMusicDataBox["albumTrekPlayNow"],
-                  #'small_image':self.version
-                  }
-              )
-           
-          #StepPause=cur_time
-          super().pause()  
-          #start_time = time.time()
-          #cur_time = time.time() - start_time + cur_timeSet
-          #cur_time = cur_timeSet
-        else:
-         super().pause()
-         if not(self.discord_rpc==None):
-          if not(int(self.NewPlaerVLC.get_length())==0):
-          #print(NewPlaerVLC.get_time()/1000)
-          #print(cur_timeSet)
-          #start_time = time.time()
-           self.discord_rpc.update(
-              **{
-                  'details': self.PlayNowMusicDataBox["titleTrekPlayNow"],
-                  'state': self.PlayNowMusicDataBox["artistTrekPlayNow"]+self.lenPlayListStatus,
-                  'large_image':self.NowPlayIconRPC,
-                  'small_image':"play",
-                  #'large_text':self.PlayNowMusicDataBox["albumTrekPlayNow"],
-                  #'small_image':self.version,
-                  'end': time.time()+((self.NewPlaerVLC.get_time()-self.NewPlaerVLC.get_length())/1000)-((self.NewPlaerVLC.get_time()-self.NewPlaerVLC.get_length())/1000)-((self.NewPlaerVLC.get_time()-self.NewPlaerVLC.get_length())/1000)
-                }
-              )
-           
-          else:
-            self.discord_rpc.update(
-              **{
-                  'details': self.PlayNowMusicDataBox["titleTrekPlayNow"],
-                  'state': self.PlayNowMusicDataBox["artistTrekPlayNow"],
-                  'large_image':self.msmp_streamIcon,
-                  'small_image':"play",
-                  #'small_image':self.version,
-                }
-              )
-            
-  
-  
-  
-  
-           
-            if str(self.get_state())=="State.Playing":
-                self.NewPlaerVLC.pause()
-                if not(self.discord==None):
-                     pass
-                
-            else:
-                self.NewPlaerVLC.pause()
+          super().pause()
+          time.sleep(0.2)
+          self.discord_rpc.updatePlayerPause(self.NewPlaerVLC.get_length(),
+                                           self.NewPlaerVLC.get_time(),
+                                           PlayNowMusicDataBox=self.PlayNowMusicDataBox,
+                                           PlayerState=str(self.get_state()))
       except:printError(traceback.format_exc())
      ######
      def LoadPlaylist(self,PlObj,autoPlay=False,ContinuePlay=False): 
@@ -617,25 +641,20 @@ class MSMPboxPlayer(GibridPlayer):
                             #    pass
                             self.LoadImg(IDasset=self.playlist[Num]["url"]+"AlbumImg",IDtype=self.playlist[Num]["ID"],rID=self.playlist[Num]["url"])
                             super().play(castUrl)
-                            if not(self.discord_rpc==None):self.msmp_streamIcon=self.msmp_streamIconYouTube
+                            
                             if(self.PlayNowMusicDataBox["artistTrekPlayNow"]==None):
                                   self.PlayNowMusicDataBox["artistTrekPlayNow"]=""
                             if not(self.discord_rpc==None):
                              if(os.path.isfile(self.downloadMusicFolder+(str(self.playlist[Num]["url"])+"YouTubeAudio.m4a"))):
                                  time.sleep(0.1)
                                  self.durationTreak=((self.NewPlaerVLC.get_time()-self.NewPlaerVLC.get_length())/1000)-((self.NewPlaerVLC.get_time()-self.NewPlaerVLC.get_length())/1000)-((self.NewPlaerVLC.get_time()-self.NewPlaerVLC.get_length())/1000)
-                             self.NowPlayIconRPC=self.msmp_streamIconYouTube
-                             self.discord_rpc.update(
-                             **{
-                                'details': self.PlayNowMusicDataBox["titleTrekPlayNow"],
-                                'state':self.PlayNowMusicDataBox["artistTrekPlayNow"]+self.lenPlayListStatus,
-                                'large_image':self.msmp_streamIconYouTube,
-                                'small_image':"play",
-                                #'large_text':self.PlayNowMusicDataBox["albumTrekPlayNow"],
-                                #'small_image':self.version,
-                                'end': time.time()+self.durationTreak
-                             }
-                             )
+
+                             self.discord_rpc.updatePlayerNow(PlayNowMusicDataBox=self.PlayNowMusicDataBox,
+                                             durationTreak=self.durationTreak,
+                                             PlLen=len(self.playlist),
+                                             Num=self.Num,
+                                             NowPlayIconRPC="YouTube",
+                                             ImgUrl='https://pybms.tk/Server/DiscordRPC/imgRPC?img=https://i.ytimg.com/vi/'+self.playlist[Num]["url"]+'/maxresdefault.jpg')
                              
                elif("soundcloud"==self.playlist[Num]["ID"]): 
                         self.Error=0
@@ -742,18 +761,13 @@ class MSMPboxPlayer(GibridPlayer):
                              if(os.path.isfile(self.downloadMusicFolder+(str(self.playlist[Num]["IDSoundcloud"])+"SoundCloudAudio.mp3"))):
                                  time.sleep(0.1)
                                  self.durationTreak=((self.NewPlaerVLC.get_time()-self.NewPlaerVLC.get_length())/1000)-((self.NewPlaerVLC.get_time()-self.NewPlaerVLC.get_length())/1000)-((self.NewPlaerVLC.get_time()-self.NewPlaerVLC.get_length())/1000)
-                             self.NowPlayIconRPC=self.msmp_streamIconSoundCloud
-                             self.discord_rpc.update(
-                             **{
-                                'details': self.PlayNowMusicDataBox["titleTrekPlayNow"],
-                                'state':self.PlayNowMusicDataBox["artistTrekPlayNow"]+self.lenPlayListStatus,
-                                'large_image':self.msmp_streamIconSoundCloud,
-                                'small_image':"play",
-                                #'large_text':self.PlayNowMusicDataBox["albumTrekPlayNow"],
-                                #'small_image':self.version,
-                                'end': time.time()+self.durationTreak
-                             }
-                             )
+                             self.NowPlayIconRPC="SoundCloud"
+                             self.discord_rpc.updatePlayerNow(PlayNowMusicDataBox=self.PlayNowMusicDataBox,
+                                             durationTreak=self.durationTreak,
+                                             PlLen=len(self.playlist),
+                                             Num=self.Num,
+                                             NowPlayIconRPC="SoundCloud",
+                                             ImgUrl='https://pybms.tk/Server/DiscordRPC/imgRPC?img='+img)
                              
                elif("GlobalServerUpload"==self.playlist[Num]["ID"]):
                  if(os.path.isfile(self.downloadMusicFolder+(str(self.playlist[Num]["IDSound"])+"GlobalServerUpload.mp3"))):
@@ -850,8 +864,8 @@ class MSMPboxPlayer(GibridPlayer):
                    self.Error=1
                else:
                    #ErrorSound.play()
-                   self.ErrorLoadSound = ["Не верный тип Аудио","Возможно у вас усторевшая версия MSMP Stream"]
-                   self.ErrorLoadSoundStatus={"ErrorType":"UnknownAudioTypeFormat","ErrorLog":["Не верный тип Аудио","Возможно у вас усторевшая версия MSMP Stream","Либо открыт усторевший плейлист, или не устоновлен плагин?..."]}
+                   self.ErrorLoadSound = ["Не верный тип Аудио","Возможно у вас усторевшая версия ядра MSMP Stream"]
+                   self.ErrorLoadSoundStatus={"ErrorType":"UnknownAudioTypeFormat","ErrorLog":["Не верный тип Аудио","Возможно у вас усторевшая версия ядра MSMP Stream","Либо открыт усторевший плейлист, или не устоновлен плагин?..."]}
                    self.Error=1                     
                         
           except:
@@ -934,13 +948,13 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
     def __init__(self):
         super().__init__()
         InstanceSettings=[]
-        if sys.platform == "win32":
-            InstanceSettings.append("--audio-visual="+"visual")
-            InstanceSettings.append("--effect-list=spectrum")
-            InstanceSettings.append("--effect-fft-window=none")
-        RPC = Presence("811577404279619634")
-        RPC.connect()
-        self.MSMPboxPlayer=MSMPboxPlayer(ServerPlaer=True,InstanceSettings=InstanceSettings,discord_rpc=RPC,logger=logger)
+        #if sys.platform == "win32":
+        #    InstanceSettings.append("--audio-visual="+"visual")
+        #    InstanceSettings.append("--effect-list=spectrum")
+        #    InstanceSettings.append("--effect-fft-window=none")
+        
+        self.RPC=Discord_RPC(RPC=Presence("811577404279619634"))
+        self.MSMPboxPlayer=MSMPboxPlayer(ServerPlaer=True,InstanceSettings=InstanceSettings,MSMP_RPC=self.RPC,logger=logger)
         self.config=loadConfig()
         
         #self.initUI()
@@ -971,7 +985,8 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
             pass# for Linux using the X Server
             #self.MSMPboxPlayer.NewPlaerVLC.set_xwindow(self.Visualframe.winId())
         elif sys.platform == "win32":  # for Windows
-            self.MSMPboxPlayer.NewPlaerVLC.set_hwnd(self.Visualframe.winId())
+             pass
+            #self.MSMPboxPlayer.NewPlaerVLC.set_hwnd(self.Visualframe.winId())
         #elif sys.platform == "darwin":  # for MacOS
         #    self.MSMPboxPlayer.NewPlaerVLC.set_nsobject(self.Visualframe.winId())
 
@@ -1048,7 +1063,8 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
         
         self.isPlayListSelectionChanged=False
         
-        self.VolumeSlider.setValue(self.MSMPboxPlayer.NewPlaerVLC.audio_get_volume())
+        #self.VolumeSlider.setValue(self.MSMPboxPlayer.NewPlaerVLC.audio_get_volume())
+        self.MSMPboxPlayer.NewPlaerVLC.audio_set_volume(100)
         
         self.bufferNewPlaerVLCposition=0
         self.p = ProcessRunnable(target=self.updateBgGui, args=())
@@ -1126,13 +1142,14 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
                 #data = urllib.request.urlopen(self.MSMPboxPlayer.CoverUrlPlayNow).read()
                 r = requests.get(self.MSMPboxPlayer.CoverUrlPlayNow, stream=True)
                 r.raw.decode_content = True # Content-Encoding
-                ImgAlbum = Image.open(r.raw)
+                ImgAlbum = Image.open(r.raw).convert("RGBA")
                 
                 ImgAlbum=crop_center(ImgAlbum,ImgAlbum.size[1],ImgAlbum.size[1])
                 ImgAlbum.thumbnail((140,140))
                 ImgAlbum =ImageQt(ImgAlbum)
                 
                 print("Update icon")
+                self.AlbumImg.setPixmap(QtGui.QPixmap("img/Missing_Texture.png"))
                 #im = Image.open(io.BytesIO(data))
                 #im.thumbnail((140,140))
                 
@@ -1145,7 +1162,7 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
                 #print(self.MSMPboxPlayer.CoverUrlPlayNow)
             except:
                 print('\n',traceback.format_exc())
-                self.AlbumImg.setPixmap(QtGui.QPixmap("img/X9at37tsrY8AlbumImg.png"))
+                self.AlbumImg.setPixmap(QtGui.QPixmap("img/Missing_Texture.png"))
         else:
             self.AlbumImg.setPixmap(QtGui.QPixmap("img/X9at37tsrY8AlbumImg.png"))
         self.DataPath.setText(self.MSMPboxPlayer.playlist[self.MSMPboxPlayer.Num]["ID"]+"/"+self.MSMPboxPlayer.playlist[self.MSMPboxPlayer.Num]["url"])
@@ -1184,7 +1201,7 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
         except:print('\n',traceback.format_exc())
 
     def closeEvent(self, event):
-
+       try:
         reply = QMessageBox.question(self, 'Message',
             "Are you sure to quit?", QMessageBox.Yes |
             QMessageBox.No, QMessageBox.No)
@@ -1192,14 +1209,18 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
         if reply == QMessageBox.Yes:
             self.MSMPboxPlayer.stop()
             event.accept()
+            self.RPC.RPC.close()
             self.close()
+            
         else:
             event.ignore()
+       except:
+                print('\n',traceback.format_exc())
 
     def add_menu(self, data, menu_obj):
         if isinstance(data, dict):
             for k, v in data.items():
-                sub_menu = QtWidgets.QMenu(k, menu_obj)
+                sub_menu = QtWidgets.QMenu(k.split("#")[0], menu_obj)
                 menu_obj.addMenu(sub_menu)
                 self.add_menu(v, sub_menu)
         elif isinstance(data, list):

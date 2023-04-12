@@ -1,10 +1,6 @@
 Traceback (most recent call last):
-  File "A:\YandexDisk\python-projects\MSMPstream\MSMPstreamGit\main.py", line 593, in play
-    self.discord_rpc.update(
-  File "C:\Program Files\Python39\lib\site-packages\pypresence\presence.py", line 36, in update
-    return self.loop.run_until_complete(self.read_output())
-  File "C:\Program Files\Python39\lib\asyncio\base_events.py", line 642, in run_until_complete
-    return future.result()
-  File "C:\Program Files\Python39\lib\site-packages\pypresence\baseclient.py", line 88, in read_output
-    raise ServerError(payload["data"]["message"])
-pypresence.exceptions.ServerError: Child "activity" fails because child "assets" fails because child "small_image" fails because "small_image" must be a string
+  File "A:\YandexDisk\python-projects\MSMPstream\MSMPstreamGit\main.py", line 651, in play
+    self.discord_rpc.updatePlayerNow(PlayNowMusicDataBox=self.PlayNowMusicDataBox,
+  File "A:\YandexDisk\python-projects\MSMPstream\MSMPstreamGit\main.py", line 190, in updatePlayerNow
+    self.lenPlayListStatus=" ("+str(Num+1)+" of "+str(len(PlLen))+")"
+TypeError: object of type 'int' has no len()

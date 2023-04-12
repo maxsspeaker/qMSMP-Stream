@@ -131,3 +131,4 @@ dmypy.json
 # MSMP local files
 img/cache/
 myPlaylists/
+all.log
