@@ -464,7 +464,7 @@ QSlider{
                 background: rgba(0,0,0,0);
             }
             QSlider::handle:horizontal {
-                background: #fff;
+                background: #b00;
                 width: 8px;
                 border-radius: 0px;
             }
@@ -784,7 +784,7 @@ QSlider{
                 background: rgba(0,0,0,0);
             }
             QSlider::handle:horizontal {
-                background: #fff;
+                background: #b00;
                 width: 8px;
                 border-radius: 0px;
             }
@@ -961,8 +961,44 @@ QPushButton:pressed{
          <property name="acceptDrops">
           <bool>false</bool>
          </property>
+         <property name="styleSheet">
+          <string notr="true">QTreeView{
+color:rgb(255, 255, 255);
+
+}
+
+QTreeView::branch:has-siblings:!adjoins-item {
+    border-image: url(img/stylesheet-vline.png) 0;
+}
+
+QTreeView::branch:has-siblings:adjoins-item {
+    border-image: url(img/stylesheet-branch-more.png) 0;
+}
+
+QTreeView::branch:!has-children:!has-siblings:adjoins-item {
+    border-image: url(img/stylesheet-branch-end.png) 0;
+}
+
+QTreeView::branch:has-children:!has-siblings:closed,
+QTreeView::branch:closed:has-children:has-siblings {
+        border-image: none;
+        image: url(img/stylesheet-branch-closed.png);
+}
+
+QTreeView::branch:open:has-children:!has-siblings,
+QTreeView::branch:open:has-children:has-siblings  {
+        border-image: none;
+        image: url(img/stylesheet-branch-open.png);
+}</string>
+         </property>
          <property name="verticalScrollBarPolicy">
           <enum>Qt::ScrollBarAlwaysOn</enum>
+         </property>
+         <property name="animated">
+          <bool>true</bool>
+         </property>
+         <property name="headerHidden">
+          <bool>true</bool>
          </property>
         </widget>
        </item>
@@ -1257,6 +1293,16 @@ QPushButton:pressed{
      </widget>
     </item>
    </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
   </widget>
  </widget>
  <resources/>
