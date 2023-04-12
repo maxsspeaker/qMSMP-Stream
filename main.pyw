@@ -956,9 +956,9 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
 ##            InstanceSettings.append("--effect-list=spectrum")
 ##            InstanceSettings.append("--effect-fft-window=none")
         self.CloseApp=False
-        try:self.RPC=Discord_RPC(RPC=Presence("811577404279619634"))
-        except pypresence.exceptions.DiscordNotFound:
-             self.RPC=None
+        #try:self.RPC=Discord_RPC(RPC=Presence("811577404279619634"))
+        #except pypresence.exceptions.DiscordNotFound:
+        self.RPC=None
         self.MSMPboxPlayer=MSMPboxPlayer(ServerPlaer=True,InstanceSettings=InstanceSettings,MSMP_RPC=self.RPC,logger=logger)
         self.config=loadConfig()
         
