@@ -1101,7 +1101,7 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
         
         self.isPlayListSelectionChanged=False
         
-        #self.VolumeSlider.setValue(self.MSMPboxPlayer.NewPlaerVLC.audio_get_volume())
+        self.VolumeSlider.setValue(self.MSMPboxPlayer.NewPlaerVLC.audio_get_volume())
         self.MSMPboxPlayer.NewPlaerVLC.audio_set_volume(100)
         
         self.bufferNewPlaerVLCposition=0

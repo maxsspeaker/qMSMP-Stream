@@ -7395,3 +7395,177 @@ ConnectionResetError: [WinError 10054] Удаленный хост принуд�
 14:45:03,515 root DEBUG [youtube] 3rJXdnUsMeU: Downloading MPD manifest
 14:45:04,149 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
 14:45:04,153 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+14:45:56,95 root DEBUG [youtube] Extracting URL: k42e0jmGfPg
+14:45:56,106 root DEBUG [youtube] k42e0jmGfPg: Downloading webpage
+14:45:56,701 root DEBUG [youtube] k42e0jmGfPg: Downloading android player API JSON
+14:45:57,411 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:45:57,420 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 24051
+14:45:59,462 root DEBUG [youtube] Extracting URL: BRaAMlFcYrY
+14:45:59,466 root DEBUG [youtube] BRaAMlFcYrY: Downloading webpage
+14:46:00,103 root DEBUG [youtube] BRaAMlFcYrY: Downloading android player API JSON
+14:46:01,193 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): img.youtube.com:443
+14:46:01,432 urllib3.connectionpool DEBUG https://img.youtube.com:443 "GET /vi/BRaAMlFcYrY/hqdefault.jpg HTTP/1.1" 200 10690
+14:46:06,346 root DEBUG [youtube] Extracting URL: zzchwTPPTCQ
+14:46:06,362 root DEBUG [youtube] zzchwTPPTCQ: Downloading webpage
+14:46:06,966 root DEBUG [youtube] zzchwTPPTCQ: Downloading android player API JSON
+14:46:07,886 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): img.youtube.com:443
+14:46:08,20 urllib3.connectionpool DEBUG https://img.youtube.com:443 "GET /vi/zzchwTPPTCQ/hqdefault.jpg HTTP/1.1" 200 9002
+14:46:41,433 root DEBUG [youtube] Extracting URL: F3k11SKrqV8
+14:46:41,483 root DEBUG [youtube] F3k11SKrqV8: Downloading webpage
+14:46:42,98 root DEBUG [youtube] F3k11SKrqV8: Downloading android player API JSON
+14:46:43,52 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): img.youtube.com:443
+14:46:43,253 urllib3.connectionpool DEBUG https://img.youtube.com:443 "GET /vi/F3k11SKrqV8/hqdefault.jpg HTTP/1.1" 200 8173
+14:46:46,816 root DEBUG [youtube] Extracting URL: hgXZQfHySDw
+14:46:46,837 root DEBUG [youtube] hgXZQfHySDw: Downloading webpage
+14:46:47,574 root DEBUG [youtube] hgXZQfHySDw: Downloading android player API JSON
+14:46:48,505 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:46:48,510 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 7075
+14:46:53,484 root DEBUG [youtube] Extracting URL: rZRorVtY2FI
+14:46:53,536 root DEBUG [youtube] rZRorVtY2FI: Downloading webpage
+14:46:54,150 root DEBUG [youtube] rZRorVtY2FI: Downloading android player API JSON
+14:46:55,78 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:46:55,84 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 6825
+14:46:59,253 root DEBUG [youtube] Extracting URL: hgXZQfHySDw
+14:46:59,259 root DEBUG [youtube] hgXZQfHySDw: Downloading webpage
+14:47:00,30 root DEBUG [youtube] hgXZQfHySDw: Downloading android player API JSON
+14:47:00,963 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:47:00,977 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 7075
+14:47:26,408 root DEBUG [youtube] Extracting URL: Rb2y360U54E
+14:47:26,413 root DEBUG [youtube] Rb2y360U54E: Downloading webpage
+14:47:27,74 root DEBUG [youtube] Rb2y360U54E: Downloading android player API JSON
+14:47:27,365 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:47:27,368 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 30635
+14:47:32,256 root DEBUG [youtube] Extracting URL: An4kjnz6d3Q
+14:47:32,302 root DEBUG [youtube] An4kjnz6d3Q: Downloading webpage
+14:47:33,4 root DEBUG [youtube] An4kjnz6d3Q: Downloading android player API JSON
+14:47:33,521 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:47:33,524 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 13504
+14:48:04,378 root INFO starting...
+14:48:04,943 eyed3 DEBUG eyeD3 version 0.9.6
+14:48:04,999 asyncio DEBUG Using proactor: IocpProactor
+14:48:07,858 root DEBUG [youtube] Extracting URL: k42e0jmGfPg
+14:48:07,864 root DEBUG [youtube] k42e0jmGfPg: Downloading webpage
+14:48:08,458 root DEBUG [youtube] k42e0jmGfPg: Downloading android player API JSON
+14:48:09,240 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:48:09,278 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 24051
+14:48:11,137 root DEBUG [youtube] Extracting URL: ZFxQvQn4_Wg
+14:48:11,140 root DEBUG [youtube] ZFxQvQn4_Wg: Downloading webpage
+14:48:11,755 root DEBUG [youtube] ZFxQvQn4_Wg: Downloading android player API JSON
+14:48:12,559 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:48:12,565 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 24530
+14:48:15,995 root DEBUG [youtube] Extracting URL: FAGQwPmglAM
+14:48:16,11 root DEBUG [youtube] FAGQwPmglAM: Downloading webpage
+14:48:16,747 root DEBUG [youtube] FAGQwPmglAM: Downloading android player API JSON
+14:48:17,901 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:48:17,952 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+14:48:25,315 root DEBUG [youtube] Extracting URL: -prZOxDtCHg
+14:48:25,319 root DEBUG [youtube] -prZOxDtCHg: Downloading webpage
+14:48:25,976 root DEBUG [youtube] -prZOxDtCHg: Downloading android player API JSON
+14:48:26,484 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:48:26,535 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+14:48:29,531 root DEBUG [youtube] Extracting URL: 7GS88tpuiP8
+14:48:29,559 root DEBUG [youtube] 7GS88tpuiP8: Downloading webpage
+14:48:30,190 root DEBUG [youtube] 7GS88tpuiP8: Downloading android player API JSON
+14:48:30,617 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:48:30,620 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+14:48:37,442 root DEBUG [youtube] Extracting URL: 6MT0dGnHva8
+14:48:37,464 root DEBUG [youtube] 6MT0dGnHva8: Downloading webpage
+14:48:38,171 root DEBUG [youtube] 6MT0dGnHva8: Downloading android player API JSON
+14:48:38,614 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:48:38,617 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 36385
+14:48:41,903 root DEBUG [youtube] Extracting URL: WSeNSzJ2-Jw
+14:48:41,949 root DEBUG [youtube] WSeNSzJ2-Jw: Downloading webpage
+14:48:42,598 root DEBUG [youtube] WSeNSzJ2-Jw: Downloading android player API JSON
+14:48:43,84 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:48:43,106 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 3651
+14:49:22,873 root DEBUG [youtube] Extracting URL: WSeNSzJ2-Jw
+14:49:22,877 root DEBUG [youtube] WSeNSzJ2-Jw: Downloading webpage
+14:49:23,616 root DEBUG [youtube] WSeNSzJ2-Jw: Downloading android player API JSON
+14:49:23,870 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): img.youtube.com:443
+14:49:24,92 urllib3.connectionpool DEBUG https://img.youtube.com:443 "GET /vi/WSeNSzJ2-Jw/hqdefault.jpg HTTP/1.1" 200 14974
+14:49:53,883 root DEBUG [youtube] Extracting URL: qW7OiyPpVEU
+14:49:53,934 root DEBUG [youtube] qW7OiyPpVEU: Downloading webpage
+14:49:54,596 root DEBUG [youtube] qW7OiyPpVEU: Downloading android player API JSON
+14:49:55,106 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:49:55,151 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 4162
+14:50:09,277 root DEBUG [youtube] Extracting URL: ihmN2gYHh9Y
+14:50:09,302 root DEBUG [youtube] ihmN2gYHh9Y: Downloading webpage
+14:50:09,983 root DEBUG [youtube] ihmN2gYHh9Y: Downloading android player API JSON
+14:50:10,477 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:50:10,518 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 27453
+14:50:16,317 root DEBUG [youtube] Extracting URL: 5nsyrRAPR3k
+14:50:16,385 root DEBUG [youtube] 5nsyrRAPR3k: Downloading webpage
+14:50:16,923 root DEBUG [youtube] 5nsyrRAPR3k: Downloading android player API JSON
+14:50:17,586 root DEBUG [youtube] 5nsyrRAPR3k: Downloading MPD manifest
+14:50:18,266 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:50:18,285 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 16725
+14:50:21,851 root DEBUG [youtube] Extracting URL: NbrEKkQd-eE
+14:50:21,855 root DEBUG [youtube] NbrEKkQd-eE: Downloading webpage
+14:50:22,448 root DEBUG [youtube] NbrEKkQd-eE: Downloading android player API JSON
+14:50:22,665 root DEBUG [youtube] NbrEKkQd-eE: Downloading MPD manifest
+14:50:22,953 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:50:22,975 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 37893
+14:50:26,22 root DEBUG [youtube] Extracting URL: _MwyQA2DiWc
+14:50:26,25 root DEBUG [youtube] _MwyQA2DiWc: Downloading webpage
+14:50:26,559 root DEBUG [youtube] _MwyQA2DiWc: Downloading android player API JSON
+14:50:26,774 root DEBUG [youtube] _MwyQA2DiWc: Downloading MPD manifest
+14:50:27,372 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:50:27,383 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+14:50:46,814 root DEBUG [youtube] Extracting URL: DoUW5ZkblTs
+14:50:46,817 root DEBUG [youtube] DoUW5ZkblTs: Downloading webpage
+14:50:47,489 root DEBUG [youtube] DoUW5ZkblTs: Downloading android player API JSON
+14:50:47,977 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:50:48,31 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 39168
+14:51:38,702 root DEBUG [youtube] Extracting URL: Rfz5n3MCm-c
+14:51:38,744 root DEBUG [youtube] Rfz5n3MCm-c: Downloading webpage
+14:51:39,316 root DEBUG [youtube] Rfz5n3MCm-c: Downloading android player API JSON
+14:51:39,789 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:51:39,792 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+14:51:42,662 root DEBUG [youtube] Extracting URL: LDU_Txk06tM
+14:51:42,669 root DEBUG [youtube] LDU_Txk06tM: Downloading webpage
+14:51:43,327 root DEBUG [youtube] LDU_Txk06tM: Downloading android player API JSON
+14:51:43,850 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): img.youtube.com:443
+14:51:44,108 urllib3.connectionpool DEBUG https://img.youtube.com:443 "GET /vi/LDU_Txk06tM/hqdefault.jpg HTTP/1.1" 200 34449
+14:51:46,323 root DEBUG [youtube] Extracting URL: V_wmcAxQdb0
+14:51:46,327 root DEBUG [youtube] V_wmcAxQdb0: Downloading webpage
+14:51:46,987 root DEBUG [youtube] V_wmcAxQdb0: Downloading android player API JSON
+14:51:47,484 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:51:47,488 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+14:51:52,282 root DEBUG [youtube] Extracting URL: GJ0RyY_oetE
+14:51:52,286 root DEBUG [youtube] GJ0RyY_oetE: Downloading webpage
+14:51:52,966 root DEBUG [youtube] GJ0RyY_oetE: Downloading android player API JSON
+14:51:53,466 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:51:53,499 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+14:52:15,571 root DEBUG [youtube] Extracting URL: 4ftPXcEDC0U
+14:52:15,580 root DEBUG [youtube] 4ftPXcEDC0U: Downloading webpage
+14:52:16,227 root DEBUG [youtube] 4ftPXcEDC0U: Downloading android player API JSON
+14:52:16,678 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:52:16,681 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+14:53:02,922 root DEBUG [youtube] Extracting URL: xj0Gt2SYgEQ
+14:53:02,927 root DEBUG [youtube] xj0Gt2SYgEQ: Downloading webpage
+14:53:03,618 root DEBUG [youtube] xj0Gt2SYgEQ: Downloading android player API JSON
+14:53:04,59 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:53:04,63 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+14:53:08,829 root DEBUG [youtube] Extracting URL: u1MlATcmvzE
+14:53:08,833 root DEBUG [youtube] u1MlATcmvzE: Downloading webpage
+14:53:09,557 root DEBUG [youtube] u1MlATcmvzE: Downloading android player API JSON
+14:53:10,53 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): img.youtube.com:443
+14:53:10,186 urllib3.connectionpool DEBUG https://img.youtube.com:443 "GET /vi/u1MlATcmvzE/hqdefault.jpg HTTP/1.1" 200 46976
+14:53:12,950 root DEBUG [youtube] Extracting URL: 1dCWAD0IgMI
+14:53:12,957 root DEBUG [youtube] 1dCWAD0IgMI: Downloading webpage
+14:53:13,656 root DEBUG [youtube] 1dCWAD0IgMI: Downloading android player API JSON
+14:53:14,115 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:53:14,118 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 5829
+14:53:18,559 root DEBUG [youtube] Extracting URL: rhT-IxmW1U4
+14:53:18,565 root DEBUG [youtube] rhT-IxmW1U4: Downloading webpage
+14:53:19,256 root DEBUG [youtube] rhT-IxmW1U4: Downloading android player API JSON
+14:53:19,723 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:53:19,727 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+14:53:23,330 root DEBUG [youtube] Extracting URL: E-dBKxWD6Gc
+14:53:23,357 root DEBUG [youtube] E-dBKxWD6Gc: Downloading webpage
+14:53:23,988 root DEBUG [youtube] E-dBKxWD6Gc: Downloading android player API JSON
+14:53:24,462 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:53:24,501 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+17:24:22,482 root INFO starting...
+17:24:25,128 eyed3 DEBUG eyeD3 version 0.9.6
+17:24:25,377 asyncio DEBUG Using proactor: IocpProactor
