@@ -8,7 +8,7 @@ from PIL.ImageQt import ImageQt
 import io
 import logging
 from logging.handlers import QueueHandler
-from pypresence import Presence
+import pypresence
 from datetime import date
 import yaml
 
@@ -52,25 +52,31 @@ from appdirs import user_config_dir
 
 def loadConfig():
      configFileName = "config.yml"
+     MyPlaylists = "MyPlaylists"
 
      configDir = user_config_dir(appname="MSMP-Stream",appauthor="Maxsspeaker",version="5.0",roaming=True)
-     print(configDir)
+     #print(configDir)
 
      configFile = os.path.join(configDir,configFileName)
-     print(configFile)
-     UserPath=configDir
+     MyPlaylistsPath = os.path.join(configDir,MyPlaylists)
+     #print(configFile)
+     
      if(os.path.isfile(configFile)):
           with open(configFile,"r") as f:
                config = yaml.safe_load(f)
-          return config
+          return config,configDir,MyPlaylistsPath
      else:
+          cacheFolder = "cache"
+          download_MusicFolder = "download_Music"
+          cacheFolderPath = os.path.join(configDir,cacheFolder)
+          download_MusicFolderPath = os.path.join(configDir,download_MusicFolder)
           config={
                'MSMP Stream': 
                     {'Discord_rpc':True,
                      'audioVisual': 'visual',
                      'cache': True,
-                     'cacheimgpachfolder': 'assets/cache/',
-                     'downloadMusicFolder': 'download_Music/',
+                     'cacheimgpachfolder': cacheFolderPath+"/",
+                     'downloadMusicFolder': download_MusicFolderPath+"/",
                      'localizationBox': 'assets/localizationBoxes/ru.localizationBox',
                      'NowPlayningPlayBoxActive': False,
                      'VideoMode': False,
@@ -82,10 +88,14 @@ def loadConfig():
                      }
                }
           os.makedirs(os.path.dirname(configFile), exist_ok=True)
+          os.makedirs(MyPlaylistsPath, exist_ok=True)
+          os.makedirs(download_MusicFolderPath, exist_ok=True)
+          os.makedirs(cacheFolderPath, exist_ok=True)
+          
           print("firk")
           with open(configFile,"w") as f:
                yaml.dump(config,f)
-          return config,UserPath
+          return config,configDir,MyPlaylistsPath
 
 class MyYTLogger:
     def __init__(self,FullInfo,logger):
@@ -311,10 +321,11 @@ class MSMPboxPlayer(GibridPlayer):
          if not(self.ImgAssets==None):
              if(IDtype=="YouTube"):
                  try: 
-                    self.CoverUrlPlayNow='https://i.ytimg.com/vi/'+rID+'/maxresdefault.jpg'
+                   # self.CoverUrlPlayNow='https://i.ytimg.com/vi/'+rID+'/maxresdefault.jpg'
+                    self.CoverUrlPlayNow='https://img.youtube.com/vi/'+rID+'/hqdefault.jpg'
                     self.ImgAssets[str(rID)+"AlbumImg"]
                  except:
-                    self.CoverUrlPlayNow='https://i.ytimg.com/vi/'+rID+'/maxresdefault.jpg'
+                    self.CoverUrlPlayNow='https://img.youtube.com/vi/'+rID+'/hqdefault.jpg'
                     self.ImgAssets[str(self.playlist[self.Num]["ID"])+"AlbumImg"] = pygame.transform.scale(MSMP_Img, (140, 140))
                     try:self.CoverUrlPlayNow=playlist[self.Num]["cover"]
                     except:pass 
@@ -334,7 +345,7 @@ class MSMPboxPlayer(GibridPlayer):
                     time.sleep(0.2)
          else:
              if(IDtype=="YouTube"):
-                 self.CoverUrlPlayNow='https://i.ytimg.com/vi/'+rID+'/maxresdefault.jpg'
+                 self.CoverUrlPlayNow='https://img.youtube.com/vi/'+rID+'/hqdefault.jpg'
              elif(IDtype=="soundcloud"):
                  self.CoverUrlPlayNow=CoverUrlPlayNow
 ##          except:
@@ -491,6 +502,8 @@ class MSMPboxPlayer(GibridPlayer):
                       #pass
                   time.sleep(0.1)
                   msmp_streamIcon=msmp_streamIconMain
+                  self.durationTreak=((self.NewPlaerVLC.get_time()-self.NewPlaerVLC.get_length())/1000)-((self.NewPlaerVLC.get_time()-self.NewPlaerVLC.get_length())/1000)-((self.NewPlaerVLC.get_time()-self.NewPlaerVLC.get_length())/1000)
+
                   if(self.PlayNowMusicDataBox["artistTrekPlayNow"]==None):
                       self.PlayNowMusicDataBox["artistTrekPlayNow"]=""
 ##                  if not(self.discord_rpc==None):
@@ -574,8 +587,8 @@ class MSMPboxPlayer(GibridPlayer):
                             self.PlayNowMusicDataBox["artistTrekPlayNow"]=r['uploader'].replace(" - Topic","")
                             self.PlayNowMusicDataBox["albumTrekPlayNow"]=""
                             self.PlayNowMusicDataBox["TrekPlayNowID"]=r['id']
-                            self.msmp_streamIconYouTube='https://pybms.tk/Server/DiscordRPC/imgRPC?img=https://i.ytimg.com/vi/'+self.playlist[Num]["url"]+'/maxresdefault.jpg'
-                            
+                            self.msmp_streamIconYouTube='https://pybms.tk/Server/DiscordRPC/imgRPC?img=https://img.youtube.com/vi/'+self.playlist[Num]["url"]+'/hqdefault.jpg'#https://i.ytimg.com/vi/'+self.playlist[Num]["url"]+'/maxresdefault.jpg'
+                            #https://img.youtube.com/vi/N-V3zqvtbCM/hqdefault.jpg
                             
                             try: 
                                 if not (playlist[Num]["title"]==None):
@@ -714,6 +727,7 @@ class MSMPboxPlayer(GibridPlayer):
                                         self.PlayNowMusicDataBox["albumTrekPlayNow"]=self.playlist[Num]['album']
                                 except:pass
                                 self.durationTreak=r['duration']
+                                
                                 try:
                                     img=r['thumbnails'][-2]['url']
                                 except:
@@ -726,7 +740,9 @@ class MSMPboxPlayer(GibridPlayer):
                                             img=HostNamePybms+"static/assets/MSMP.png"
 
 
+
                                 self.msmp_streamIconSoundCloud='https://pybms.tk/Server/DiscordRPC/imgRPC?img='+img
+                                
                                 if(self.FullInfo):
                                     print(img)
                                     print("[SoundCloud] "+r"curent viseon\/")
@@ -741,9 +757,9 @@ class MSMPboxPlayer(GibridPlayer):
                                     i=i+1
                                 if(self.FullInfo):print(r"===================")
                                 self.PlayNowMusicDataBox["albumImgTrekPlayNowID"]=str(r['id'])+"SoundCloudAlbumImg"
-                                CoverUrlPlayNow=img
-                                try:CoverUrlPlayNow=playlist[Num]["cover"]
-                                except:CoverUrlPlayNow=""
+                                self.CoverUrlPlayNow=img
+                                try:self.CoverUrlPlayNow=playlist[Num]["cover"]
+                                except:self.CoverUrlPlayNow=img
 ##                                except:
 ##                                    printError(traceback.format_exc())
 ##                                    
@@ -755,7 +771,7 @@ class MSMPboxPlayer(GibridPlayer):
                         self.Num=Num
                         #LoadImg(r['id'])
                         if(self.Error==0):
-                            self.LoadImg(IDasset=self.playlist[Num]["IDSoundcloud"]+"SoundCloudAlbumImg",IDtype=self.playlist[Num]["ID"],rID=self.playlist[Num]["IDSoundcloud"],CoverUrlPlayNow=CoverUrlPlayNow)
+                            self.LoadImg(IDasset=self.playlist[Num]["IDSoundcloud"]+"SoundCloudAlbumImg",IDtype=self.playlist[Num]["ID"],rID=self.playlist[Num]["IDSoundcloud"],CoverUrlPlayNow=self.CoverUrlPlayNow)
                             super().play(castUrl)
                             if(self.PlayNowMusicDataBox["artistTrekPlayNow"]==None):
                                   self.PlayNowMusicDataBox["artistTrekPlayNow"]=""
@@ -771,6 +787,7 @@ class MSMPboxPlayer(GibridPlayer):
                                              Num=self.Num,
                                              NowPlayIconRPC="SoundCloud",
                                              ImgUrl='https://pybms.tk/Server/DiscordRPC/imgRPC?img='+img)
+                                  
                              
                elif("GlobalServerUpload"==self.playlist[Num]["ID"]):
                  if(os.path.isfile(self.downloadMusicFolder+(str(self.playlist[Num]["IDSound"])+"GlobalServerUpload.mp3"))):
@@ -956,16 +973,14 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
 ##            InstanceSettings.append("--effect-list=spectrum")
 ##            InstanceSettings.append("--effect-fft-window=none")
         self.CloseApp=False
-        #try:self.RPC=Discord_RPC(RPC=Presence("811577404279619634"))
-        #except pypresence.exceptions.DiscordNotFound:
-        self.RPC=None
+        self.config,self.ConfigDir,self.PlaylistsFolder=loadConfig()
+        print(self.ConfigDir)
+        try:self.RPC=Discord_RPC(RPC=pypresence.Presence("811577404279619634"))
+        except pypresence.exceptions.DiscordNotFound:
+             self.RPC=None
         self.MSMPboxPlayer=MSMPboxPlayer(ServerPlaer=True,InstanceSettings=InstanceSettings,MSMP_RPC=self.RPC,logger=logger)
-        self.config=loadConfig()
         
         #self.initUI()
-        with open(r"../Понравившиеся.plmsmpsbox", 'r') as fr:
-                    playlistFile = json.load(fr)
-                    self.MSMPboxPlayer.playlist=playlistFile["playlist"]
         #self.MSMPboxPlayer.playlist=[{"ID": "YouTube", "url": "Q52GzsGmRuk", "name": "Hold", "uploader": "Home", "duration": 210, "Publis": False},
         #                             {"ID": "YouTube", "url": "5py6E6yo7wk", "name": "Siberian (BGM)", "uploader": "LEMMiNO", "duration": 210, "Publis": False},
         #                             {"ID": "YouTube", "url": "XeiR1w236yo", "name": "Sunshower", "uploader": "Home", "duration": 210, "Publis": False},
@@ -975,7 +990,7 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
         
         self.setupUi(self)
 
-        self.PlaylistsFolder="myPlaylists"#r"A:\YandexDisk\python-projects\bmCastMusic\myPlaylists"
+        #self.PlaylistsFolder=r"../../bmCastMusic/myPlaylists"
         
         self.model = self.get_file_tree_model(self.PlaylistsFolder)
 
@@ -1007,9 +1022,6 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
         #elif sys.platform == "darwin":  # for MacOS
         #    self.MSMPboxPlayer.NewPlaerVLC.set_nsobject(self.Visualframe.winId())
 
-        self.PlayListBox = QtGui.QStandardItemModel()
-        self.PlaylistView.setModel(self.PlayListBox)
-        self.PlaylistView.setSpacing(0)
         
         
 ##        self.PlaylistWidget.insertItem(0, "test")
@@ -1059,6 +1071,12 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
 ##            #it.setData(QtGui.QIcon(iconroot +'/images/flags'), QtCore.Qt.DecorationRole)
 ##            it.setData(cov,        # +++
 ##                                   QtCore.Qt.DecorationRole)
+        
+        self.PathImgsCache=self.config['MSMP Stream']['cacheimgpachfolder']
+
+        self.PlayListBox = QtGui.QStandardItemModel()
+        self.PlaylistView.setModel(self.PlayListBox)
+        self.PlaylistView.setSpacing(0)
             
         self.PlaylistView.setIconSize(QtCore.QSize(25,25))
 
@@ -1067,20 +1085,15 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
 
         self.ProgressUpdate=False
         self.LestNum=-1
+        #self.OpenPLmsmp("../Понравившиеся.plmsmpsbox",AutoPlay=False)
+        self.PlayButton.setEnabled(False)
+        self.NextTreakButton.setEnabled(False)
+        self.PauseButton.setEnabled(False)
+        self.StopButton.setEnabled(False)
+        self.PreviousTreakButton.setEnabled(False) 
         self.show()
-        self.PathImgsCache=r"C:\Users\maxko\Pictures\MSMPstreamImgs\\"
-        for i, ItemP in enumerate(self.MSMPboxPlayer.playlist):
-            uploader=ItemP.get("uploader")
-            if(uploader==None):
-                uploader=" "
-            try:it = QtGui.QStandardItem(ItemP["name"]+"\n"+uploader)
-            except KeyError:it = QtGui.QStandardItem(ItemP["Name"]+"\n"+uploader)
-            self.PlayListBox.appendRow(it)
-            
-            if not(os.path.isfile(self.PathImgsCache+ItemP["url"]+"AlbumImg.png")):
-                 it.setData(QtGui.QIcon("img/AlbumImgMini.png"),QtCore.Qt.DecorationRole)
-            else:
-                 it.setData(QtGui.QIcon(self.PathImgsCache+ItemP["url"]+"AlbumImg.png"),QtCore.Qt.DecorationRole)
+        
+        
         #it.setBackground(QtGui.QColor('red'))
         
         self.isPlayListSelectionChanged=False
@@ -1108,7 +1121,43 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
             if self.model.rowCount(index) > 0:
                 self.tree.setExpanded(index, True)
         else:
-            print(path)
+            self.OpenPLmsmp(path)
+    def OpenPLmsmp(self,path,AutoPlay=True):
+      try:
+        with open(path, 'r') as fr:
+                    playlistFile = json.load(fr)
+                    self.MSMPboxPlayer.playlist=playlistFile["playlist"]
+
+        self.LestNum=-1            
+        self.PlayListBox = QtGui.QStandardItemModel()
+        self.PlaylistView.setModel(self.PlayListBox)
+        self.PlaylistView.setSpacing(0)
+        
+        
+        for i, ItemP in enumerate(self.MSMPboxPlayer.playlist):
+            uploader=ItemP.get("uploader")
+            if(uploader==None):
+                uploader=" "
+            try:it = QtGui.QStandardItem(ItemP["name"]+"\n"+uploader)
+            except KeyError:it = QtGui.QStandardItem(ItemP["Name"]+"\n"+uploader)
+            self.PlayListBox.appendRow(it)
+
+            if("soundcloud"==ItemP["ID"]):
+                     urlSoundID=ItemP["IDSoundcloud"]+"SoundCloudAlbumImg.png"
+            else:
+                     urlSoundID=ItemP["url"]+"AlbumImg.png"
+            
+            if not(os.path.isfile(self.PathImgsCache+urlSoundID)):
+                 it.setData(QtGui.QIcon("img/AlbumImgMini.png"),QtCore.Qt.DecorationRole)
+            else:
+                 it.setData(QtGui.QIcon(self.PathImgsCache+urlSoundID),QtCore.Qt.DecorationRole)
+        self.PlayButton.setEnabled(True)
+        self.NextTreakButton.setEnabled(True)
+        self.PauseButton.setEnabled(True)
+        self.StopButton.setEnabled(True)
+        self.PreviousTreakButton.setEnabled(True)          
+        if(AutoPlay):self.UpdateInfoTreakPL(self.MSMPboxPlayer.play(0))
+      except:print(traceback.format_exc())
 
     def expand_all(self):
         self.tree.expandAll()
@@ -1193,19 +1242,28 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
         if self.MSMPboxPlayer.CoverUrlPlayNow:
             try:
                 #data = urllib.request.urlopen(self.MSMPboxPlayer.CoverUrlPlayNow).read()
+                if("soundcloud"==self.MSMPboxPlayer.playlist[self.MSMPboxPlayer.Num]["ID"]):
+                     urlSoundID=self.MSMPboxPlayer.playlist[self.MSMPboxPlayer.Num]["IDSoundcloud"]+"SoundCloudAlbumImg.png"
+                else:
+                     urlSoundID=urlSoundID=self.MSMPboxPlayer.playlist[self.MSMPboxPlayer.Num]["url"]+"AlbumImg.png"
                 
-                if not(os.path.isfile(self.PathImgsCache+self.MSMPboxPlayer.playlist[self.MSMPboxPlayer.Num]["url"]+"AlbumImg.png")):
+                if not(os.path.isfile(self.PathImgsCache+urlSoundID)):
                      r = requests.get(self.MSMPboxPlayer.CoverUrlPlayNow, stream=True)
                      r.raw.decode_content = True # Content-Encoding
                      ImgAlbum = Image.open(r.raw).convert("RGBA")
-                     ImgAlbum=crop_center(ImgAlbum,ImgAlbum.size[1],ImgAlbum.size[1])
-                     ImgAlbum.thumbnail((140,140))
+                     ImgAlbum=crop_center(ImgAlbum,270,270)
+                     if(self.MSMPboxPlayer.playlist[self.MSMPboxPlayer.Num]["ID"]=="YouTube"):
+                          ImgAlbum=crop_center(ImgAlbum,270,270)
+                     else:
+                          ImgAlbum=crop_center(ImgAlbum,ImgAlbum.size[1],ImgAlbum.size[1])
+                     ImgAlbum.thumbnail((140,140)) #SoundCloudAlbumImg.png #270
                 else:
-                     ImgAlbum = Image.open(self.PathImgsCache+self.MSMPboxPlayer.playlist[self.MSMPboxPlayer.Num]["url"]+"AlbumImg.png").convert("RGBA")
+                     ImgAlbum = Image.open(self.PathImgsCache+urlSoundID).convert("RGBA")
                 
                 RGBbg=ImageStat.Stat(ImgAlbum).mean
                 
-                ImgAlbum.save(self.PathImgsCache+self.MSMPboxPlayer.playlist[self.MSMPboxPlayer.Num]["url"]+"AlbumImg.png")
+                try:ImgAlbum.save(self.PathImgsCache+urlSoundID)
+                except:print("ошибка сохронения изоброжения трека")
                 ImgAlbum =ImageQt(ImgAlbum)
                 
                 
@@ -1247,7 +1305,7 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
         self.PlaylistView.selectionModel().selectionChanged.connect(
             self.PlayListSelectionChanged
         )
-        self.PlaylistView.clicked.connect(
+        self.PlaylistView.doubleClicked.connect(
             lambda: self.PlayListClickPL()
         )
     def keyPressEvent(self, event):

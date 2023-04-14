@@ -21,7 +21,7 @@ class Ui_MainWindow(object):
         MainWindow.setWindowIcon(icon)
         MainWindow.setLayoutDirection(QtCore.Qt.LeftToRight)
         MainWindow.setStyleSheet("QMainWindown{\n"
-"  background-color: rgb(0, 0, 0);\n"
+"  background-color: rgb(0, 0, 0,255);\n"
 " color: rgb(0, 0, 0);\n"
 "}\n"
 "")
@@ -495,7 +495,7 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.PlaylistsView.sizePolicy().hasHeightForWidth())
         self.PlaylistsView.setSizePolicy(sizePolicy)
         self.PlaylistsView.setMinimumSize(QtCore.QSize(1, 0))
-        self.PlaylistsView.setMaximumSize(QtCore.QSize(300, 16777215))
+        self.PlaylistsView.setMaximumSize(QtCore.QSize(500, 16777215))
         self.PlaylistsView.setSizeIncrement(QtCore.QSize(0, 0))
         self.PlaylistsView.setMouseTracking(False)
         self.PlaylistsView.setAcceptDrops(False)
