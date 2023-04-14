@@ -41,12 +41,12 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QMainWindow > QWidget {\n"
-"   border-image : url(img/bg11.png);\n"
+"    /* border-image : url(img/bg11.png);*/\n"
 "\n"
-"   /* background-image: url(img/bg11.png) 0 0 0 0 stretch stretch;;*/\n"
+"   /* background-image: url(img/Missing_Texture2.png); 0 0 0 0 stretch stretch;;*/\n"
 "    background-size: 10px auto;\n"
 "    background-attachment: fixed;\n"
-"    background-repeat: no-repeat;\n"
+"    /*background-repeat: no-repeat;*/\n"
 "}\n"
 "")
         self.centralwidget.setObjectName("centralwidget")
@@ -688,7 +688,7 @@ class Ui_MainWindow(object):
         self.verticalLayout.addWidget(self.PlaylistBox)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menuBar = QtWidgets.QMenuBar(MainWindow)
-        self.menuBar.setGeometry(QtCore.QRect(0, 0, 800, 21))
+        self.menuBar.setGeometry(QtCore.QRect(0, 0, 800, 30))
         self.menuBar.setObjectName("menuBar")
         MainWindow.setMenuBar(self.menuBar)
 

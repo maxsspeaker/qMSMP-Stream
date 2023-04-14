@@ -7569,3 +7569,632 @@ ConnectionResetError: [WinError 10054] Удаленный хост принуд�
 17:24:22,482 root INFO starting...
 17:24:25,128 eyed3 DEBUG eyeD3 version 0.9.6
 17:24:25,377 asyncio DEBUG Using proactor: IocpProactor
+21:29:34,196 root INFO starting...
+21:29:37,51 eyed3 DEBUG eyeD3 version 0.9.6
+21:29:37,347 asyncio DEBUG Using proactor: IocpProactor
+21:29:55,311 root DEBUG [youtube] Extracting URL: IS9azbb9hSA
+21:29:55,311 root DEBUG [youtube] IS9azbb9hSA: Downloading webpage
+21:29:56,114 root DEBUG [youtube] IS9azbb9hSA: Downloading android player API JSON
+21:29:57,812 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+21:29:57,812 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+21:29:59,816 root DEBUG [youtube] Extracting URL: hKji26L8Q04
+21:29:59,816 root DEBUG [youtube] hKji26L8Q04: Downloading webpage
+21:30:00,559 root DEBUG [youtube] hKji26L8Q04: Downloading android player API JSON
+21:30:01,683 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+21:30:01,683 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+21:30:20,815 root DEBUG [youtube] Extracting URL: L3CWBI_qRzA
+21:30:20,815 root DEBUG [youtube] L3CWBI_qRzA: Downloading webpage
+21:30:21,504 root DEBUG [youtube] L3CWBI_qRzA: Downloading android player API JSON
+21:30:21,996 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+21:30:21,996 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+21:30:26,721 root DEBUG [youtube] Extracting URL: ZiR19a0DPD0
+21:30:26,722 root DEBUG [youtube] ZiR19a0DPD0: Downloading webpage
+21:30:27,461 root DEBUG [youtube] ZiR19a0DPD0: Downloading android player API JSON
+21:30:27,968 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+21:30:27,968 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+21:30:32,87 root DEBUG [youtube] Extracting URL: VgUR1pna5cY
+21:30:32,87 root DEBUG [youtube] VgUR1pna5cY: Downloading webpage
+21:30:32,694 root DEBUG [youtube] VgUR1pna5cY: Downloading android player API JSON
+21:30:33,161 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+21:30:33,162 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+21:30:34,475 root DEBUG [youtube] Extracting URL: HZTDc-qX5iQ
+21:30:34,475 root DEBUG [youtube] HZTDc-qX5iQ: Downloading webpage
+21:30:35,190 root DEBUG [youtube] HZTDc-qX5iQ: Downloading android player API JSON
+21:30:35,700 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+21:30:35,700 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+21:31:14,106 root DEBUG [youtube] Extracting URL: pzXl473KgEo
+21:31:14,106 root DEBUG [youtube] pzXl473KgEo: Downloading webpage
+21:31:14,896 root DEBUG [youtube] pzXl473KgEo: Downloading android player API JSON
+21:31:15,394 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+21:31:15,394 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 30985
+21:31:19,361 root DEBUG [youtube] Extracting URL: WKB9bIz5T_M
+21:31:19,361 root DEBUG [youtube] WKB9bIz5T_M: Downloading webpage
+21:31:20,25 root DEBUG [youtube] WKB9bIz5T_M: Downloading android player API JSON
+21:31:20,534 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+21:31:20,534 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+21:32:40,382 root DEBUG [youtube] Extracting URL: KYwA5k00p2I
+21:32:40,382 root DEBUG [youtube] KYwA5k00p2I: Downloading webpage
+21:32:41,425 root DEBUG [youtube] KYwA5k00p2I: Downloading android player API JSON
+21:32:41,894 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+21:32:41,894 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+21:32:44,972 root DEBUG [youtube] Extracting URL: 6Nb-prB-4P0
+21:32:44,972 root DEBUG [youtube] 6Nb-prB-4P0: Downloading webpage
+21:32:45,697 root DEBUG [youtube] 6Nb-prB-4P0: Downloading android player API JSON
+21:32:46,172 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+21:32:46,172 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+21:32:49,752 root DEBUG [youtube] Extracting URL: jIgD_xSY0YA
+21:32:49,752 root DEBUG [youtube] jIgD_xSY0YA: Downloading webpage
+21:32:50,486 root DEBUG [youtube] jIgD_xSY0YA: Downloading android player API JSON
+21:32:50,921 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+21:32:50,921 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+21:35:35,8 root DEBUG [youtube] Extracting URL: FTREOQzE4Ck
+21:35:35,9 root DEBUG [youtube] FTREOQzE4Ck: Downloading webpage
+21:35:35,960 root DEBUG [youtube] FTREOQzE4Ck: Downloading android player API JSON
+21:35:36,435 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+21:35:36,435 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+21:35:37,334 root DEBUG [youtube] Extracting URL: DrbsAp55I6k
+21:35:37,334 root DEBUG [youtube] DrbsAp55I6k: Downloading webpage
+21:35:38,663 root DEBUG [youtube] DrbsAp55I6k: Downloading android player API JSON
+21:35:39,104 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+21:35:39,104 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+21:35:41,527 root DEBUG [youtube] Extracting URL: sl63obEt4jI
+21:35:41,528 root DEBUG [youtube] sl63obEt4jI: Downloading webpage
+21:35:42,199 root DEBUG [youtube] sl63obEt4jI: Downloading android player API JSON
+21:35:42,704 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+21:35:42,704 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+21:35:45,854 root DEBUG [youtube] Extracting URL: BV1ZFFV-Ts4
+21:35:45,854 root DEBUG [youtube] BV1ZFFV-Ts4: Downloading webpage
+21:35:46,975 root DEBUG [youtube] BV1ZFFV-Ts4: Downloading android player API JSON
+21:35:47,532 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+21:35:47,532 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+21:35:52,527 root DEBUG [youtube] Extracting URL: 30i0WGNSL5A
+21:35:52,527 root DEBUG [youtube] 30i0WGNSL5A: Downloading webpage
+21:35:53,721 root DEBUG [youtube] 30i0WGNSL5A: Downloading android player API JSON
+21:35:54,238 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): img.youtube.com:443
+21:35:54,469 urllib3.connectionpool DEBUG https://img.youtube.com:443 "GET /vi/30i0WGNSL5A/hqdefault.jpg HTTP/1.1" 200 16925
+21:36:07,664 root DEBUG [youtube] Extracting URL: OxVK-U7g1Z4
+21:36:07,664 root DEBUG [youtube] OxVK-U7g1Z4: Downloading webpage
+21:36:08,290 root DEBUG [youtube] OxVK-U7g1Z4: Downloading android player API JSON
+21:36:08,746 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+21:36:08,746 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+21:36:10,328 root DEBUG [youtube] Extracting URL: JJGF-8Dv2Mg
+21:36:10,329 root DEBUG [youtube] JJGF-8Dv2Mg: Downloading webpage
+21:36:11,269 root DEBUG [youtube] JJGF-8Dv2Mg: Downloading android player API JSON
+21:36:11,723 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+21:36:11,723 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+21:36:13,290 root DEBUG [youtube] Extracting URL: iLdmiurRfdU
+21:36:13,290 root DEBUG [youtube] iLdmiurRfdU: Downloading webpage
+21:36:14,15 root DEBUG [youtube] iLdmiurRfdU: Downloading android player API JSON
+21:36:14,421 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+21:36:14,422 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+21:36:16,594 root DEBUG [youtube] Extracting URL: WKB9bIz5T_M
+21:36:16,594 root DEBUG [youtube] WKB9bIz5T_M: Downloading webpage
+21:36:17,539 root DEBUG [youtube] WKB9bIz5T_M: Downloading android player API JSON
+21:36:17,826 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+21:36:17,826 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 42319
+21:37:19,304 root DEBUG [youtube] Extracting URL: Vw4fkHTPOws
+21:37:19,304 root DEBUG [youtube] Vw4fkHTPOws: Downloading webpage
+21:37:19,883 root DEBUG [youtube] Vw4fkHTPOws: Downloading android player API JSON
+21:37:20,154 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+21:37:20,154 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+21:37:26,434 root DEBUG [youtube] Extracting URL: hL4CGwZdrH0
+21:37:26,434 root DEBUG [youtube] hL4CGwZdrH0: Downloading webpage
+21:37:26,663 root DEBUG [youtube] hL4CGwZdrH0: Downloading android player API JSON
+21:37:26,884 root ERROR ERROR: [youtube] hL4CGwZdrH0: Video unavailable
+21:37:26,887 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+21:37:26,887 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+21:37:29,534 root DEBUG [youtube] Extracting URL: KYwA5k00p2I
+21:37:29,534 root DEBUG [youtube] KYwA5k00p2I: Downloading webpage
+21:37:30,429 root DEBUG [youtube] KYwA5k00p2I: Downloading android player API JSON
+21:37:30,666 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+21:37:30,666 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 40448
+21:37:39,269 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): img.youtube.com:443
+21:37:39,434 urllib3.connectionpool DEBUG https://img.youtube.com:443 "GET /vi/KYwA5k00p2I/hqdefault.jpg HTTP/1.1" 200 22970
+21:37:43,433 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): img.youtube.com:443
+21:37:43,601 urllib3.connectionpool DEBUG https://img.youtube.com:443 "GET /vi/KYwA5k00p2I/hqdefault.jpg HTTP/1.1" 200 22970
+21:37:45,978 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+21:37:45,979 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 39592
+21:37:49,495 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+21:37:49,495 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 39592
+21:38:12,451 root INFO starting...
+21:38:12,779 eyed3 DEBUG eyeD3 version 0.9.6
+21:38:12,827 asyncio DEBUG Using proactor: IocpProactor
+21:38:17,150 root DEBUG [youtube] Extracting URL: zr0kiRdU0M8
+21:38:17,150 root DEBUG [youtube] zr0kiRdU0M8: Downloading webpage
+21:38:17,721 root DEBUG [youtube] zr0kiRdU0M8: Downloading android player API JSON
+21:38:17,954 root DEBUG [youtube] zr0kiRdU0M8: Downloading MPD manifest
+21:38:18,642 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+21:38:18,643 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 24887
+21:38:29,317 root DEBUG [youtube] Extracting URL: RiVZCDq--m4
+21:38:29,317 root DEBUG [youtube] RiVZCDq--m4: Downloading webpage
+21:38:29,962 root DEBUG [youtube] RiVZCDq--m4: Downloading android player API JSON
+21:38:30,420 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+21:38:30,420 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+21:38:35,149 root DEBUG [youtube] Extracting URL: uVkZAftv9NI
+21:38:35,150 root DEBUG [youtube] uVkZAftv9NI: Downloading webpage
+21:38:36,65 root DEBUG [youtube] uVkZAftv9NI: Downloading android player API JSON
+21:38:36,536 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+21:38:36,536 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+21:38:39,934 root DEBUG [youtube] Extracting URL: RM9O1HO4FLE
+21:38:39,934 root DEBUG [youtube] RM9O1HO4FLE: Downloading webpage
+21:38:40,929 root DEBUG [youtube] RM9O1HO4FLE: Downloading android player API JSON
+21:38:41,365 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+21:38:41,365 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+21:41:43,846 root DEBUG [youtube] Extracting URL: iBjZshhpipg
+21:41:43,846 root DEBUG [youtube] iBjZshhpipg: Downloading webpage
+21:41:51,922 root DEBUG [youtube] iBjZshhpipg: Downloading android player API JSON
+21:41:52,578 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+21:41:52,578 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+21:44:06,413 root INFO starting...
+21:44:06,733 eyed3 DEBUG eyeD3 version 0.9.6
+21:44:06,781 asyncio DEBUG Using proactor: IocpProactor
+21:45:05,524 root INFO starting...
+21:45:05,843 eyed3 DEBUG eyeD3 version 0.9.6
+21:45:05,894 asyncio DEBUG Using proactor: IocpProactor
+21:45:29,0 root INFO starting...
+21:45:29,330 eyed3 DEBUG eyeD3 version 0.9.6
+21:45:29,378 asyncio DEBUG Using proactor: IocpProactor
+22:34:30,878 root INFO starting...
+22:34:31,228 eyed3 DEBUG eyeD3 version 0.9.7
+22:34:31,433 asyncio DEBUG Using selector: EpollSelector
+22:35:18,200 root INFO starting...
+22:35:18,402 eyed3 DEBUG eyeD3 version 0.9.7
+22:35:18,591 asyncio DEBUG Using selector: EpollSelector
+22:36:52,577 root INFO starting...
+22:36:52,817 eyed3 DEBUG eyeD3 version 0.9.7
+22:36:53,24 asyncio DEBUG Using selector: EpollSelector
+22:37:21,459 root INFO starting...
+22:37:21,700 eyed3 DEBUG eyeD3 version 0.9.7
+22:37:21,912 asyncio DEBUG Using selector: EpollSelector
+22:37:47,673 root INFO starting...
+22:37:47,930 eyed3 DEBUG eyeD3 version 0.9.7
+22:37:48,135 asyncio DEBUG Using selector: EpollSelector
+22:38:18,355 root INFO starting...
+22:38:18,592 eyed3 DEBUG eyeD3 version 0.9.7
+22:38:18,800 asyncio DEBUG Using selector: EpollSelector
+22:39:02,438 root INFO starting...
+22:39:02,646 eyed3 DEBUG eyeD3 version 0.9.7
+22:39:02,861 asyncio DEBUG Using selector: EpollSelector
+22:41:05,519 root INFO starting...
+22:41:05,718 eyed3 DEBUG eyeD3 version 0.9.7
+22:41:05,872 asyncio DEBUG Using selector: EpollSelector
+22:41:09,435 root DEBUG [youtube] Extracting URL: PpWhV2MtsbA
+22:41:09,457 root DEBUG [youtube] PpWhV2MtsbA: Downloading webpage
+22:41:10,223 root DEBUG [youtube] PpWhV2MtsbA: Downloading android player API JSON
+22:41:10,454 root DEBUG [youtube] PpWhV2MtsbA: Downloading player 36754c51
+22:41:11,650 root WARNING [youtube] Cannot parse localized time text "Jun 15, 2022"
+22:41:12,156 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): img.youtube.com:443
+22:41:12,392 urllib3.connectionpool DEBUG https://img.youtube.com:443 "GET /vi/PpWhV2MtsbA/hqdefault.jpg HTTP/1.1" 200 10876
+22:43:10,918 root INFO starting...
+22:43:11,161 eyed3 DEBUG eyeD3 version 0.9.7
+22:43:11,367 asyncio DEBUG Using selector: EpollSelector
+22:43:23,791 root INFO starting...
+22:43:24,11 eyed3 DEBUG eyeD3 version 0.9.7
+22:43:24,218 asyncio DEBUG Using selector: EpollSelector
+22:43:28,41 root DEBUG [youtube] Extracting URL: zr0kiRdU0M8
+22:43:28,78 root DEBUG [youtube] zr0kiRdU0M8: Downloading webpage
+22:43:28,697 root DEBUG [youtube] zr0kiRdU0M8: Downloading android player API JSON
+22:43:28,897 root DEBUG [youtube] zr0kiRdU0M8: Downloading MPD manifest
+22:43:29,279 root WARNING [youtube] Cannot parse localized time text "Feb 14, 2017"
+22:43:29,556 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+22:43:29,562 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 24887
+22:45:33,910 root DEBUG [youtube] Extracting URL: dvQJIgjlR3I
+22:45:33,914 root DEBUG [youtube] dvQJIgjlR3I: Downloading webpage
+22:45:34,682 root DEBUG [youtube] dvQJIgjlR3I: Downloading android player API JSON
+22:45:34,987 root WARNING [youtube] Cannot parse localized time text "Jul 20, 2022"
+22:45:35,332 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+22:45:35,336 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+22:45:38,942 root DEBUG [youtube] Extracting URL: uI1Y4ZTDEnc
+22:45:38,993 root DEBUG [youtube] uI1Y4ZTDEnc: Downloading webpage
+22:45:39,538 root DEBUG [youtube] uI1Y4ZTDEnc: Downloading android player API JSON
+22:45:39,733 root DEBUG [youtube] uI1Y4ZTDEnc: Downloading MPD manifest
+22:45:40,420 root WARNING [youtube] Cannot parse localized time text "Jan 8, 2021"
+22:45:40,698 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): img.youtube.com:443
+22:45:40,938 urllib3.connectionpool DEBUG https://img.youtube.com:443 "GET /vi/uI1Y4ZTDEnc/hqdefault.jpg HTTP/1.1" 200 7703
+22:46:59,35 root DEBUG [youtube] Extracting URL: pzXl473KgEo
+22:46:59,37 root DEBUG [youtube] pzXl473KgEo: Downloading webpage
+22:46:59,634 root DEBUG [youtube] pzXl473KgEo: Downloading android player API JSON
+22:46:59,832 root WARNING [youtube] Cannot parse localized time text "Nov 12, 2017"
+22:47:00,78 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+22:47:00,82 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 30985
+22:47:18,181 root DEBUG [youtube] Extracting URL: 8GW6sLrK40k
+22:47:18,183 root DEBUG [youtube] 8GW6sLrK40k: Downloading webpage
+22:47:18,889 root DEBUG [youtube] 8GW6sLrK40k: Downloading android player API JSON
+22:47:19,72 root WARNING [youtube] Cannot parse localized time text "Jul 17, 2014"
+22:47:19,355 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+22:47:19,405 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+22:47:23,272 root DEBUG [youtube] Extracting URL: iBv6kB7WxYg
+22:47:23,274 root DEBUG [youtube] iBv6kB7WxYg: Downloading webpage
+22:47:24,15 root DEBUG [youtube] iBv6kB7WxYg: Downloading android player API JSON
+22:47:24,241 root WARNING [youtube] Cannot parse localized time text "Feb 13, 2022"
+22:47:24,477 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+22:47:24,479 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+22:47:30,163 root DEBUG [youtube] Extracting URL: dSPiDFZmAnQ
+22:47:30,165 root DEBUG [youtube] dSPiDFZmAnQ: Downloading webpage
+22:47:30,878 root DEBUG [youtube] dSPiDFZmAnQ: Downloading android player API JSON
+22:47:31,125 root WARNING [youtube] Cannot parse localized time text "Premiered Jul 29, 2021"
+22:47:31,384 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+22:47:31,431 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+22:47:35,420 root DEBUG [youtube] Extracting URL: BV1ZFFV-Ts4
+22:47:35,468 root DEBUG [youtube] BV1ZFFV-Ts4: Downloading webpage
+22:47:36,231 root DEBUG [youtube] BV1ZFFV-Ts4: Downloading android player API JSON
+22:47:36,511 root WARNING [youtube] Cannot parse localized time text "Dec 7, 2018"
+22:47:36,739 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+22:47:36,742 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 43922
+22:47:37,368 root DEBUG [youtube] Extracting URL: sl63obEt4jI
+22:47:37,371 root DEBUG [youtube] sl63obEt4jI: Downloading webpage
+22:47:38,27 root DEBUG [youtube] sl63obEt4jI: Downloading android player API JSON
+22:47:38,277 root WARNING [youtube] Cannot parse localized time text "May 15, 2018"
+22:47:38,514 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+22:47:38,517 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 41695
+22:48:07,875 root DEBUG [youtube] Extracting URL: BV1ZFFV-Ts4
+22:48:07,877 root DEBUG [youtube] BV1ZFFV-Ts4: Downloading webpage
+22:48:08,602 root DEBUG [youtube] BV1ZFFV-Ts4: Downloading android player API JSON
+22:48:08,833 root WARNING [youtube] Cannot parse localized time text "Dec 7, 2018"
+22:48:08,858 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+22:48:08,860 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 43922
+22:50:19,17 root DEBUG [youtube] Extracting URL: XdPs-Fvm45Q
+22:50:19,29 root DEBUG [youtube] XdPs-Fvm45Q: Downloading webpage
+22:50:20,18 root DEBUG [youtube] XdPs-Fvm45Q: Downloading android player API JSON
+22:50:20,619 root WARNING [youtube] Cannot parse localized time text "May 2, 2018"
+22:50:20,944 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+22:50:20,971 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+22:50:34,464 root DEBUG [youtube] Extracting URL: 2OOzgf9uvF0
+22:50:34,466 root DEBUG [youtube] 2OOzgf9uvF0: Downloading webpage
+22:50:35,679 root DEBUG [youtube] 2OOzgf9uvF0: Downloading android player API JSON
+22:50:35,956 root ERROR ERROR: [youtube] 2OOzgf9uvF0: Video unavailable. This video is not available
+22:50:36,191 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+22:50:36,194 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+22:50:37,212 root DEBUG [youtube] Extracting URL: t15Zq6CrNwo
+22:50:37,214 root DEBUG [youtube] t15Zq6CrNwo: Downloading webpage
+22:50:37,969 root DEBUG [youtube] t15Zq6CrNwo: Downloading android player API JSON
+22:50:38,333 root WARNING [youtube] Cannot parse localized time text "Oct 11, 2022"
+22:50:38,574 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+22:50:38,586 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+22:50:42,604 root DEBUG [youtube] Extracting URL: xVf4Zk8CBj0
+22:50:42,646 root DEBUG [youtube] xVf4Zk8CBj0: Downloading webpage
+22:50:43,448 root DEBUG [youtube] xVf4Zk8CBj0: Downloading android player API JSON
+22:50:44,850 root WARNING [youtube] Cannot parse localized time text "Apr 4, 2019"
+22:50:45,121 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+22:50:45,166 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+22:51:11,436 root DEBUG [youtube] Extracting URL: BUbAgrsujn4
+22:51:11,463 root DEBUG [youtube] BUbAgrsujn4: Downloading webpage
+22:51:12,278 root DEBUG [youtube] BUbAgrsujn4: Downloading android player API JSON
+22:51:12,488 root WARNING [youtube] Cannot parse localized time text "Jun 23, 2021"
+22:51:12,746 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): img.youtube.com:443
+22:51:13,786 urllib3.connectionpool DEBUG https://img.youtube.com:443 "GET /vi/BUbAgrsujn4/hqdefault.jpg HTTP/1.1" 200 10856
+22:53:29,87 root INFO starting...
+22:53:29,301 eyed3 DEBUG eyeD3 version 0.9.7
+22:53:29,401 asyncio DEBUG Using selector: EpollSelector
+22:53:34,436 root DEBUG [youtube] Extracting URL: zr0kiRdU0M8
+22:53:34,437 root DEBUG [youtube] zr0kiRdU0M8: Downloading webpage
+22:53:35,19 root DEBUG [youtube] zr0kiRdU0M8: Downloading android player API JSON
+22:53:35,210 root DEBUG [youtube] zr0kiRdU0M8: Downloading MPD manifest
+22:53:35,577 root WARNING [youtube] Cannot parse localized time text "Feb 14, 2017"
+22:53:35,606 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+22:53:35,606 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 24887
+22:56:01,158 root DEBUG [youtube] Extracting URL: 4KHLOjzaryg
+22:56:01,158 root DEBUG [youtube] 4KHLOjzaryg: Downloading webpage
+22:56:01,856 root DEBUG [youtube] 4KHLOjzaryg: Downloading android player API JSON
+22:56:02,647 root WARNING [youtube] Cannot parse localized time text "Dec 12, 2021"
+22:56:02,961 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+22:56:02,961 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+22:56:10,129 root DEBUG [youtube] Extracting URL: r_Q15eu03z8
+22:56:10,130 root DEBUG [youtube] r_Q15eu03z8: Downloading webpage
+22:56:11,841 root DEBUG [youtube] r_Q15eu03z8: Downloading android player API JSON
+22:56:14,231 root WARNING [youtube] Cannot parse localized time text "Jun 5, 2017"
+22:56:14,469 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+22:56:14,469 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+22:57:52,227 root DEBUG [youtube] Extracting URL: YwZDdwLVB2A
+22:57:52,227 root DEBUG [youtube] YwZDdwLVB2A: Downloading webpage
+22:57:53,179 root DEBUG [youtube] YwZDdwLVB2A: Downloading android player API JSON
+22:57:54,721 root DEBUG [youtube] YwZDdwLVB2A: Downloading MPD manifest
+22:57:56,315 root WARNING [youtube] Cannot parse localized time text "Mar 25, 2017"
+22:57:56,531 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+22:57:56,531 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+22:58:09,594 root DEBUG [youtube] Extracting URL: NYe4PJwQcjo
+22:58:09,594 root DEBUG [youtube] NYe4PJwQcjo: Downloading webpage
+22:58:10,544 root DEBUG [youtube] NYe4PJwQcjo: Downloading android player API JSON
+22:58:10,823 root DEBUG [youtube] NYe4PJwQcjo: Downloading MPD manifest
+22:58:11,307 root WARNING [youtube] Cannot parse localized time text "Nov 27, 2020"
+22:58:11,623 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+22:58:11,623 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 52274
+23:00:02,427 root DEBUG [youtube] Extracting URL: nAX_dT-S1EI
+23:00:02,428 root DEBUG [youtube] nAX_dT-S1EI: Downloading webpage
+23:00:03,79 root DEBUG [youtube] nAX_dT-S1EI: Downloading android player API JSON
+23:00:03,635 root WARNING [youtube] Cannot parse localized time text "Oct 17, 2020"
+23:00:04,66 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+23:00:04,66 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 15882
+23:04:14,570 root DEBUG [youtube] Extracting URL: BBqcdJy4-Yw
+23:04:14,607 root DEBUG [youtube] BBqcdJy4-Yw: Downloading webpage
+23:04:15,336 root DEBUG [youtube] BBqcdJy4-Yw: Downloading android player API JSON
+23:04:16,55 root WARNING [youtube] Cannot parse localized time text "Jun 1, 2018"
+23:04:16,374 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+23:04:16,375 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 14790
+23:06:21,690 root DEBUG [youtube] Extracting URL: AZwIgOTYEHQ
+23:06:21,690 root DEBUG [youtube] AZwIgOTYEHQ: Downloading webpage
+23:06:22,485 root DEBUG [youtube] AZwIgOTYEHQ: Downloading android player API JSON
+23:06:22,761 root WARNING [youtube] Cannot parse localized time text "Nov 27, 2020"
+23:06:23,109 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): img.youtube.com:443
+23:06:23,327 urllib3.connectionpool DEBUG https://img.youtube.com:443 "GET /vi/AZwIgOTYEHQ/hqdefault.jpg HTTP/1.1" 200 25643
+23:06:28,645 root DEBUG [youtube] Extracting URL: OlSzsNT_SDE
+23:06:28,645 root DEBUG [youtube] OlSzsNT_SDE: Downloading webpage
+23:06:29,427 root DEBUG [youtube] OlSzsNT_SDE: Downloading android player API JSON
+23:06:29,692 root WARNING [youtube] Cannot parse localized time text "Jun 25, 2018"
+23:06:29,924 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+23:06:29,924 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 14790
+23:08:51,322 root DEBUG [youtube] Extracting URL: M2NxXwVpH2k
+23:08:51,322 root DEBUG [youtube] M2NxXwVpH2k: Downloading webpage
+23:08:52,113 root DEBUG [youtube] M2NxXwVpH2k: Downloading android player API JSON
+23:08:52,395 root WARNING [youtube] Cannot parse localized time text "Oct 15, 2020"
+23:08:52,677 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+23:08:52,678 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 41805
+23:11:40,161 root DEBUG [youtube] Extracting URL: -dhx7Hnu-wo
+23:11:40,162 root DEBUG [youtube] -dhx7Hnu-wo: Downloading webpage
+23:11:40,942 root DEBUG [youtube] -dhx7Hnu-wo: Downloading android player API JSON
+23:11:41,182 root WARNING [youtube] Cannot parse localized time text "Oct 5, 2022"
+23:11:41,460 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+23:11:41,461 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+23:11:49,532 root DEBUG [youtube] Extracting URL: 0ANlqrER4eA
+23:11:49,532 root DEBUG [youtube] 0ANlqrER4eA: Downloading webpage
+23:11:50,118 root DEBUG [youtube] 0ANlqrER4eA: Downloading android player API JSON
+23:11:50,294 root DEBUG [youtube] 0ANlqrER4eA: Downloading MPD manifest
+23:11:50,629 root WARNING [youtube] Cannot parse localized time text "Feb 5, 2020"
+23:11:50,914 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+23:11:50,914 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 37436
+23:13:24,587 root DEBUG [youtube] Extracting URL: P67aHTYdEkQ
+23:13:24,587 root DEBUG [youtube] P67aHTYdEkQ: Downloading webpage
+23:13:25,151 root DEBUG [youtube] P67aHTYdEkQ: Downloading android player API JSON
+23:13:25,299 root DEBUG [youtube] P67aHTYdEkQ: Downloading MPD manifest
+23:13:25,663 root WARNING [youtube] Cannot parse localized time text "Feb 5, 2020"
+23:13:25,923 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+23:13:25,923 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 37436
+23:13:33,744 root INFO starting...
+23:13:34,31 eyed3 DEBUG eyeD3 version 0.9.7
+23:13:34,128 asyncio DEBUG Using selector: EpollSelector
+23:13:42,743 root DEBUG [youtube] Extracting URL: 0ANlqrER4eA
+23:13:42,744 root DEBUG [youtube] 0ANlqrER4eA: Downloading webpage
+23:13:43,303 root DEBUG [youtube] 0ANlqrER4eA: Downloading android player API JSON
+23:13:43,496 root DEBUG [youtube] 0ANlqrER4eA: Downloading MPD manifest
+23:13:43,801 root WARNING [youtube] Cannot parse localized time text "Feb 5, 2020"
+23:13:43,832 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+23:13:43,832 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 37436
+23:13:50,22 root DEBUG [youtube] Extracting URL: P67aHTYdEkQ
+23:13:50,22 root DEBUG [youtube] P67aHTYdEkQ: Downloading webpage
+23:13:50,616 root DEBUG [youtube] P67aHTYdEkQ: Downloading android player API JSON
+23:13:50,816 root DEBUG [youtube] P67aHTYdEkQ: Downloading MPD manifest
+23:13:51,117 root WARNING [youtube] Cannot parse localized time text "Feb 5, 2020"
+23:13:51,149 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+23:13:51,149 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 37436
+23:13:58,387 root DEBUG [youtube] Extracting URL: 0_sorbcQACs
+23:13:58,388 root DEBUG [youtube] 0_sorbcQACs: Downloading webpage
+23:13:59,6 root DEBUG [youtube] 0_sorbcQACs: Downloading android player API JSON
+23:13:59,201 root DEBUG [youtube] 0_sorbcQACs: Downloading MPD manifest
+23:13:59,750 root WARNING [youtube] Cannot parse localized time text "Feb 5, 2020"
+23:14:00,7 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+23:14:00,7 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 37444
+23:14:12,225 root DEBUG [youtube] Extracting URL: MnJ3XnxYpC0
+23:14:12,226 root DEBUG [youtube] MnJ3XnxYpC0: Downloading webpage
+23:14:12,727 root DEBUG [youtube] MnJ3XnxYpC0: Downloading android player API JSON
+23:14:13,444 root WARNING [youtube] Cannot parse localized time text "Feb 5, 2020"
+23:14:13,717 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+23:14:13,718 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 37436
+23:14:24,283 root DEBUG [youtube] Extracting URL: Y5PD_-Gg4P8
+23:14:24,284 root DEBUG [youtube] Y5PD_-Gg4P8: Downloading webpage
+23:14:24,973 root DEBUG [youtube] Y5PD_-Gg4P8: Downloading android player API JSON
+23:14:25,705 root WARNING [youtube] Cannot parse localized time text "Feb 5, 2020"
+23:14:25,935 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+23:14:25,935 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+23:14:29,640 root DEBUG [soundcloud] Extracting URL: https://soundcloud.com/schtiffles/the-cycle
+23:14:29,640 root DEBUG [soundcloud] schtiffles/the-cycle: Downloading info JSON
+23:14:29,958 root DEBUG [soundcloud] 834528376: Downloading JSON metadata
+23:14:30,253 root DEBUG [soundcloud] 834528376: Downloading JSON metadata
+23:14:30,549 root DEBUG [soundcloud] 834528376: Downloading JSON metadata
+23:14:31,186 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+23:14:31,186 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 1555
+23:14:33,61 root DEBUG [soundcloud] Extracting URL: https://soundcloud.com/schtiffles/adventures-of-kiki-the-witch
+23:14:33,61 root DEBUG [soundcloud] schtiffles/adventures-of-kiki-the-witch: Downloading info JSON
+23:14:33,358 root DEBUG [soundcloud] 609516897: Downloading JSON metadata
+23:14:33,657 root DEBUG [soundcloud] 609516897: Downloading JSON metadata
+23:14:33,954 root DEBUG [soundcloud] 609516897: Downloading JSON metadata
+23:14:34,479 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+23:14:34,479 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 1555
+23:14:40,29 root DEBUG [soundcloud] Extracting URL: https://soundcloud.com/schtiffles/the-game-corner
+23:14:40,30 root DEBUG [soundcloud] schtiffles/the-game-corner: Downloading info JSON
+23:14:40,368 root DEBUG [soundcloud] 215207994: Downloading JSON metadata
+23:14:40,649 root DEBUG [soundcloud] 215207994: Downloading JSON metadata
+23:14:41,203 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+23:14:41,203 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 1555
+23:14:44,547 root DEBUG [youtube] Extracting URL: ulmD1umCnrM
+23:14:44,547 root DEBUG [youtube] ulmD1umCnrM: Downloading webpage
+23:14:45,262 root DEBUG [youtube] ulmD1umCnrM: Downloading android player API JSON
+23:14:45,519 root WARNING [youtube] Cannot parse localized time text "Mar 21, 2019"
+23:14:45,801 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+23:14:45,801 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 50058
+23:14:51,601 root DEBUG [youtube] Extracting URL: R3jQUI6td6g
+23:14:51,601 root DEBUG [youtube] R3jQUI6td6g: Downloading webpage
+23:14:52,169 root DEBUG [youtube] R3jQUI6td6g: Downloading android player API JSON
+23:14:52,418 root WARNING [youtube] Cannot parse localized time text "Mar 21, 2019"
+23:14:52,678 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+23:14:52,679 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+23:16:45,573 root DEBUG [youtube] Extracting URL: 9cocBkaQcCE
+23:16:45,573 root DEBUG [youtube] 9cocBkaQcCE: Downloading webpage
+23:16:46,238 root DEBUG [youtube] 9cocBkaQcCE: Downloading android player API JSON
+23:16:46,481 root WARNING [youtube] Cannot parse localized time text "Mar 21, 2019"
+23:16:46,743 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+23:16:46,743 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 50058
+23:17:24,429 root DEBUG [youtube] Extracting URL: dN6ID4j9DOU
+23:17:24,429 root DEBUG [youtube] dN6ID4j9DOU: Downloading webpage
+23:17:25,123 root DEBUG [youtube] dN6ID4j9DOU: Downloading android player API JSON
+23:17:25,323 root WARNING [youtube] Cannot parse localized time text "Mar 21, 2019"
+23:17:25,588 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+23:17:25,588 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+23:18:25,344 root INFO starting...
+23:18:25,549 eyed3 DEBUG eyeD3 version 0.9.7
+23:18:25,653 asyncio DEBUG Using selector: EpollSelector
+23:22:39,932 root INFO starting...
+23:22:40,150 eyed3 DEBUG eyeD3 version 0.9.7
+23:22:40,256 asyncio DEBUG Using selector: EpollSelector
+23:23:17,519 root INFO starting...
+23:23:17,712 eyed3 DEBUG eyeD3 version 0.9.7
+23:23:17,844 asyncio DEBUG Using selector: EpollSelector
+23:23:21,745 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): pybms.tkserver:443
+23:24:13,728 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): pybms.tkserver:443
+23:25:59,686 root INFO starting...
+23:25:59,883 eyed3 DEBUG eyeD3 version 0.9.7
+23:25:59,997 asyncio DEBUG Using selector: EpollSelector
+23:26:11,163 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): pybms.tk:443
+23:26:11,715 urllib3.connectionpool DEBUG https://pybms.tk:443 "POST /Server/bmCastStream/MusicApi/ HTTP/1.1" 200 None
+23:26:12,582 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): pybms.tk:443
+23:26:13,185 urllib3.connectionpool DEBUG https://pybms.tk:443 "POST /Server/bmCastStream/MusicApi/ HTTP/1.1" 200 None
+23:26:15,799 root ERROR Traceback (most recent call last):
+  File "/media/maxsspeaker/HDD игры/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/main.pyw", line 156, in updatePlayerPause
+    elif not(self.IconImgUrl==None):
+AttributeError: 'Discord_RPC' object has no attribute 'IconImgUrl'
+
+23:27:00,110 root ERROR Traceback (most recent call last):
+  File "/media/maxsspeaker/HDD игры/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/main.pyw", line 156, in updatePlayerPause
+    elif not(self.IconImgUrl==None):
+AttributeError: 'Discord_RPC' object has no attribute 'IconImgUrl'
+
+23:27:16,235 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): pybms.tk:443
+23:27:16,825 urllib3.connectionpool DEBUG https://pybms.tk:443 "POST /Server/bmCastStream/MusicApi/ HTTP/1.1" 200 None
+23:27:21,425 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): pybms.tk:443
+23:27:22,91 urllib3.connectionpool DEBUG https://pybms.tk:443 "POST /Server/bmCastStream/MusicApi/ HTTP/1.1" 200 None
+23:27:24,883 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): pybms.tk:443
+23:27:25,426 urllib3.connectionpool DEBUG https://pybms.tk:443 "POST /Server/bmCastStream/MusicApi/ HTTP/1.1" 200 None
+23:27:28,57 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): pybms.tk:443
+23:27:28,603 urllib3.connectionpool DEBUG https://pybms.tk:443 "POST /Server/bmCastStream/MusicApi/ HTTP/1.1" 200 None
+23:29:32,699 root INFO starting...
+23:29:32,888 eyed3 DEBUG eyeD3 version 0.9.7
+23:29:33,18 asyncio DEBUG Using selector: EpollSelector
+23:29:35,366 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): pybms.tk:443
+23:29:35,935 urllib3.connectionpool DEBUG https://pybms.tk:443 "POST /Server/bmCastStream/MusicApi/ HTTP/1.1" 200 None
+23:29:38,307 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): pybms.tk:443
+23:29:38,892 urllib3.connectionpool DEBUG https://pybms.tk:443 "POST /Server/bmCastStream/MusicApi/ HTTP/1.1" 200 None
+23:29:40,930 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): pybms.tk:443
+23:29:41,512 urllib3.connectionpool DEBUG https://pybms.tk:443 "POST /Server/bmCastStream/MusicApi/ HTTP/1.1" 200 None
+23:29:46,704 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): pybms.tk:443
+23:29:47,345 urllib3.connectionpool DEBUG https://pybms.tk:443 "POST /Server/bmCastStream/MusicApi/ HTTP/1.1" 200 None
+23:32:29,98 root INFO starting...
+23:32:29,291 eyed3 DEBUG eyeD3 version 0.9.7
+23:32:29,406 asyncio DEBUG Using selector: EpollSelector
+23:32:33,262 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): pybms.tk:443
+23:32:34,13 urllib3.connectionpool DEBUG https://pybms.tk:443 "POST /Server/bmCastStream/MusicApi/ HTTP/1.1" 200 None
+23:33:00,191 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): pybms.tk:443
+23:33:00,817 urllib3.connectionpool DEBUG https://pybms.tk:443 "POST /Server/bmCastStream/MusicApi/ HTTP/1.1" 200 None
+23:33:04,334 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): pybms.tk:443
+23:33:04,931 urllib3.connectionpool DEBUG https://pybms.tk:443 "POST /Server/bmCastStream/MusicApi/ HTTP/1.1" 200 None
+23:33:44,722 root INFO starting...
+23:33:44,918 eyed3 DEBUG eyeD3 version 0.9.7
+23:33:45,35 asyncio DEBUG Using selector: EpollSelector
+23:33:47,494 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): pybms.tk:443
+23:33:48,111 urllib3.connectionpool DEBUG https://pybms.tk:443 "POST /Server/bmCastStream/MusicApi/ HTTP/1.1" 200 None
+23:34:16,820 root INFO starting...
+23:34:17,16 eyed3 DEBUG eyeD3 version 0.9.7
+23:34:17,130 asyncio DEBUG Using selector: EpollSelector
+23:34:20,224 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): pybms.tk:443
+23:34:21,96 urllib3.connectionpool DEBUG https://pybms.tk:443 "POST /Server/bmCastStream/MusicApi/ HTTP/1.1" 200 None
+23:34:21,489 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+23:34:21,491 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+23:34:33,120 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): pybms.tk:443
+23:34:33,710 urllib3.connectionpool DEBUG https://pybms.tk:443 "POST /Server/bmCastStream/MusicApi/ HTTP/1.1" 200 None
+23:34:34,83 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+23:34:34,90 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+23:34:34,860 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): pybms.tk:443
+23:34:35,448 urllib3.connectionpool DEBUG https://pybms.tk:443 "POST /Server/bmCastStream/MusicApi/ HTTP/1.1" 200 None
+23:34:35,801 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+23:34:35,805 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+23:34:41,344 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): pybms.tk:443
+23:34:41,917 urllib3.connectionpool DEBUG https://pybms.tk:443 "POST /Server/bmCastStream/MusicApi/ HTTP/1.1" 200 None
+23:34:42,285 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+23:34:42,287 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+23:34:43,745 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): pybms.tk:443
+23:34:44,257 urllib3.connectionpool DEBUG https://pybms.tk:443 "POST /Server/bmCastStream/MusicApi/ HTTP/1.1" 200 None
+23:34:44,592 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+23:34:44,594 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+23:38:30,187 root INFO starting...
+23:38:30,413 eyed3 DEBUG eyeD3 version 0.9.7
+23:38:30,529 asyncio DEBUG Using selector: EpollSelector
+23:38:33,302 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): pybms.tk:443
+23:38:34,28 urllib3.connectionpool DEBUG https://pybms.tk:443 "POST /Server/bmCastStream/MusicApi/ HTTP/1.1" 200 None
+23:38:34,384 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+23:38:34,386 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 44325
+23:38:35,717 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): pybms.tk:443
+23:38:36,301 urllib3.connectionpool DEBUG https://pybms.tk:443 "POST /Server/bmCastStream/MusicApi/ HTTP/1.1" 200 None
+23:38:36,649 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+23:38:36,651 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 44325
+23:38:58,676 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): pybms.tk:443
+23:38:59,287 urllib3.connectionpool DEBUG https://pybms.tk:443 "POST /Server/bmCastStream/MusicApi/ HTTP/1.1" 200 None
+23:38:59,614 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+23:38:59,616 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 44325
+23:39:20,688 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): pybms.tk:443
+23:39:21,302 urllib3.connectionpool DEBUG https://pybms.tk:443 "POST /Server/bmCastStream/MusicApi/ HTTP/1.1" 200 None
+23:39:21,629 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+23:39:21,631 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+23:39:22,169 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): pybms.tk:443
+23:39:22,864 urllib3.connectionpool DEBUG https://pybms.tk:443 "POST /Server/bmCastStream/MusicApi/ HTTP/1.1" 200 None
+23:39:23,213 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+23:39:23,215 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 44325
+23:39:50,903 root INFO starting...
+23:39:51,108 eyed3 DEBUG eyeD3 version 0.9.7
+23:39:51,216 asyncio DEBUG Using selector: EpollSelector
+23:39:54,391 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): pybms.tk:443
+23:39:55,117 urllib3.connectionpool DEBUG https://pybms.tk:443 "POST /Server/bmCastStream/MusicApi/ HTTP/1.1" 200 None
+23:39:55,489 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+23:39:55,491 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 44325
+23:39:57,626 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): pybms.tk:443
+23:39:58,244 urllib3.connectionpool DEBUG https://pybms.tk:443 "POST /Server/bmCastStream/MusicApi/ HTTP/1.1" 200 None
+23:39:58,574 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+23:39:58,580 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 44325
+23:40:15,197 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): pybms.tk:443
+23:40:15,784 urllib3.connectionpool DEBUG https://pybms.tk:443 "POST /Server/bmCastStream/MusicApi/ HTTP/1.1" 200 None
+23:40:16,137 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+23:40:16,147 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+23:41:08,551 root INFO starting...
+23:41:08,744 eyed3 DEBUG eyeD3 version 0.9.7
+23:41:08,859 asyncio DEBUG Using selector: EpollSelector
+23:41:14,414 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): pybms.tk:443
+23:41:15,10 urllib3.connectionpool DEBUG https://pybms.tk:443 "POST /Server/bmCastStream/MusicApi/ HTTP/1.1" 200 None
+23:41:15,408 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+23:41:15,418 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+23:43:08,564 root INFO starting...
+23:43:08,764 eyed3 DEBUG eyeD3 version 0.9.7
+23:43:08,884 asyncio DEBUG Using selector: EpollSelector
+23:43:12,671 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): pybms.tk:443
+23:43:13,307 urllib3.connectionpool DEBUG https://pybms.tk:443 "POST /Server/bmCastStream/MusicApi/ HTTP/1.1" 200 None
+23:43:16,59 root DEBUG [soundcloud] Extracting URL: https://soundcloud.com/airglowsounds/electrifyinglandscape
+23:43:16,62 root DEBUG [soundcloud] airglowsounds/electrifyinglandscape: Downloading info JSON
+23:43:16,447 root DEBUG [soundcloud] 165360587: Downloading JSON metadata
+23:43:16,779 root DEBUG [soundcloud] 165360587: Downloading JSON metadata
+23:43:17,89 root DEBUG [soundcloud] 165360587: Downloading JSON metadata
+23:43:17,945 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+23:43:17,952 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+23:43:36,185 root INFO starting...
+23:43:36,386 eyed3 DEBUG eyeD3 version 0.9.7
+23:43:36,497 asyncio DEBUG Using selector: EpollSelector
+23:43:44,872 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): pybms.tk:443
+23:43:45,594 urllib3.connectionpool DEBUG https://pybms.tk:443 "POST /Server/bmCastStream/MusicApi/ HTTP/1.1" 200 None
+23:43:45,942 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+23:43:45,946 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 7918
+23:43:50,291 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): pybms.tk:443
+23:43:51,51 urllib3.connectionpool DEBUG https://pybms.tk:443 "POST /Server/bmCastStream/MusicApi/ HTTP/1.1" 200 None
+23:43:51,369 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+23:43:51,372 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 14041
+23:43:52,802 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): pybms.tk:443
+23:43:53,388 urllib3.connectionpool DEBUG https://pybms.tk:443 "POST /Server/bmCastStream/MusicApi/ HTTP/1.1" 200 None
+23:43:53,739 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+23:43:53,749 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 1679
+23:43:55,704 root DEBUG [soundcloud] Extracting URL: https://soundcloud.com/exyl_sounds/ping-2
+23:43:55,707 root DEBUG [soundcloud] exyl_sounds/ping-2: Downloading info JSON
+23:43:56,67 root DEBUG [soundcloud] 1205876596: Downloading JSON metadata
+23:43:56,434 root DEBUG [soundcloud] 1205876596: Downloading JSON metadata
+23:43:56,719 root DEBUG [soundcloud] 1205876596: Downloading JSON metadata
+23:43:57,330 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+23:43:57,361 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+23:44:00,727 root DEBUG [youtube] Extracting URL: xMV6l2y67rk
+23:44:00,743 root DEBUG [youtube] xMV6l2y67rk: Downloading webpage
+23:44:01,496 root DEBUG [youtube] xMV6l2y67rk: Downloading android player API JSON
+23:44:01,715 root WARNING [youtube] Cannot parse localized time text "Jul 31, 2015"
+23:44:01,998 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+23:44:02,22 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 4022

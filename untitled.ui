@@ -63,12 +63,12 @@
 }
 
 QMainWindow &gt; QWidget {
-   border-image : url(img/bg11.png);
+    /* border-image : url(img/bg11.png);*/
 
-   /* background-image: url(img/bg11.png) 0 0 0 0 stretch stretch;;*/
+   /* background-image: url(img/Missing_Texture2.png); 0 0 0 0 stretch stretch;;*/
     background-size: 10px auto;
     background-attachment: fixed;
-    background-repeat: no-repeat;
+    /*background-repeat: no-repeat;*/
 }
 </string>
    </property>
@@ -1300,7 +1300,7 @@ QPushButton:pressed{
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>21</height>
+     <height>30</height>
     </rect>
    </property>
   </widget>

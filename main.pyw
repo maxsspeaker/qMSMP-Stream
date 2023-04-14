@@ -265,7 +265,7 @@ class MSMPboxPlayer(GibridPlayer):
                   localizationBox=None,
                   ImgAssets=None,
                   MSMP_RPC=None,
-                  HostNamePybms="",
+                  HostNamePybms="https://pybms.tk/",
                   versionCs=None,
                   FullInfo=False,
                   VideoMode=False,
@@ -815,7 +815,7 @@ class MSMPboxPlayer(GibridPlayer):
                    #while ("0.0"==str((NewPlaerVLC.get_time()-NewPlaerVLC.get_length())/1000)):
                        #pass
                    time.sleep(0.1)
-                   if not(self.discord_rpc==None):self.msmp_streamIcon=self.msmp_streamIconMain
+                   #if not(self.discord_rpc==None):self.msmp_streamIcon=self.msmp_streamIconMain
                    if(self.PlayNowMusicDataBox["artistTrekPlayNow"]==None):
                        self.PlayNowMusicDataBox["artistTrekPlayNow"]=""
                    if not(self.discord_rpc==None):
@@ -853,29 +853,32 @@ class MSMPboxPlayer(GibridPlayer):
                            #loaderUrlImg(datajson_server["img"],str(self.playlist[Num]["IDSound"])+"AlbumImg")
                            time.sleep(0.2)
                    self.PlayNowMusicDataBox["albumImgTrekPlayNowID"]=str(self.playlist[Num]["IDSound"])+"AlbumImg"
+                   self.CoverUrlPlayNow=datajson_server['img']
                    super().play(datajson_server["url"])
                    self.PlayNowMusicDataBox["titleTrekPlayNow"]=datajson_server['title'] 
                    self.PlayNowMusicDataBox["artistTrekPlayNow"]=datajson_server['artist']
                    self.PlayNowMusicDataBox["albumTrekPlayNow"]=datajson_server['album']
                    self.Error=0
+                   time.sleep(0.3)
+                   self.durationTreak=((self.NewPlaerVLC.get_time()-self.NewPlaerVLC.get_length())/1000)-((self.NewPlaerVLC.get_time()-self.NewPlaerVLC.get_length())/1000)-((self.NewPlaerVLC.get_time()-self.NewPlaerVLC.get_length())/1000)
                    print("[NowPlayningPlayBox]: "+datajson_server["name"])
-                   if not(self.discord_rpc==None):self.msmp_streamIcon=self.msmp_streamIconMain
+                   #if not(self.discord_rpc==None):self.msmp_streamIcon=self.msmp_streamIconMain
                    if(self.PlayNowMusicDataBox["artistTrekPlayNow"]==None):
                        self.PlayNowMusicDataBox["artistTrekPlayNow"]=""
-                   if not(self.discord_rpc==None):
-                    self.NowPlayIconRPC=self.msmp_streamIcon   
-                    self.discord_rpc.update(
-                    **{
-                       'details': datajson_server['title'],
-                       'state': datajson_server['artist']+self.lenPlayListStatus,
-                       'large_image':self.msmp_streamIcon,
-                       'small_image':"play",
-                       'large_text':datajson_server['album'],
-                       #'small_image':self.version,
-                       'end': time.time()+datajson_server["duration"]
-                     }
-                    )
-                    
+#                   if not(self.discord_rpc==None):
+##                    self.NowPlayIconRPC=self.msmp_streamIcon   
+##                    self.discord_rpc.update(
+##                    **{
+##                       'details': datajson_server['title'],
+##                       'state': datajson_server['artist']+self.lenPlayListStatus,
+##                       'large_image':self.msmp_streamIcon,
+##                       'small_image':"play",
+##                       'large_text':datajson_server['album'],
+##                       #'small_image':self.version,
+##                       'end': time.time()+datajson_server["duration"]
+##                     }
+##                    )
+##                    
                    #print(datajson_server)
                   elif(datajson_server["status"]=="Error"):
                    #ErrorSound.play()
@@ -1140,16 +1143,21 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
         for i, ItemP in enumerate(self.MSMPboxPlayer.playlist):
             uploader=ItemP.get("uploader")
             if(uploader==None):
-                uploader=" "
+                uploader=ItemP.get("artist")
+                if(uploader==None):uploader=" "
             try:it = QtGui.QStandardItem(ItemP["name"]+"\n"+uploader)
             except KeyError:it = QtGui.QStandardItem(ItemP["Name"]+"\n"+uploader)
             self.PlayListBox.appendRow(it)
 
             if("soundcloud"==ItemP["ID"]):
                      urlSoundID=ItemP["IDSoundcloud"]+"SoundCloudAlbumImg.png"
-            else:
+            elif("YouTube"==ItemP["ID"]):
                      urlSoundID=ItemP["url"]+"AlbumImg.png"
-            
+            elif("GlobalServerUpload"==ItemP["ID"]):
+                 urlSoundID=str(ItemP["IDSound"])+"AlbumImg.png"
+            else:
+                 continue
+                 #urlSoundID=str(ItemP["IDSound"])+"AlbumImg.png"
             if not(os.path.isfile(self.PathImgsCache+urlSoundID)):
                  it.setData(QtGui.QIcon("img/AlbumImgMini.png"),QtCore.Qt.DecorationRole)
             else:
@@ -1247,8 +1255,12 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
                 #data = urllib.request.urlopen(self.MSMPboxPlayer.CoverUrlPlayNow).read()
                 if("soundcloud"==self.MSMPboxPlayer.playlist[self.MSMPboxPlayer.Num]["ID"]):
                      urlSoundID=self.MSMPboxPlayer.playlist[self.MSMPboxPlayer.Num]["IDSoundcloud"]+"SoundCloudAlbumImg.png"
+                elif("YouTube"==self.MSMPboxPlayer.playlist[self.MSMPboxPlayer.Num]["ID"]):
+                     urlSoundID=self.MSMPboxPlayer.playlist[self.MSMPboxPlayer.Num]["url"]+"AlbumImg.png"
+                elif("GlobalServerUpload"==self.MSMPboxPlayer.playlist[self.MSMPboxPlayer.Num]["ID"]):
+                     urlSoundID=str(self.MSMPboxPlayer.playlist[self.MSMPboxPlayer.Num]["IDSound"])+"AlbumImg.png"
                 else:
-                     urlSoundID=urlSoundID=self.MSMPboxPlayer.playlist[self.MSMPboxPlayer.Num]["url"]+"AlbumImg.png"
+                     pass
                 
                 if not(os.path.isfile(self.PathImgsCache+urlSoundID)):
                      r = requests.get(self.MSMPboxPlayer.CoverUrlPlayNow, stream=True)
@@ -1288,7 +1300,13 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
                 self.AlbumImg.setPixmap(QtGui.QPixmap("img/Missing_Texture.png"))
         else:
             self.AlbumImg.setPixmap(QtGui.QPixmap("img/X9at37tsrY8AlbumImg.png"))
-        self.DataPath.setText(self.MSMPboxPlayer.playlist[self.MSMPboxPlayer.Num]["ID"]+"/"+self.MSMPboxPlayer.playlist[self.MSMPboxPlayer.Num]["url"])
+            
+        if("soundcloud"==self.MSMPboxPlayer.playlist[self.MSMPboxPlayer.Num]["ID"]):
+                     self.DataPath.setText(r"SoundCloud/"+str(self.MSMPboxPlayer.playlist[self.MSMPboxPlayer.Num]["IDSoundcloud"]))
+        elif("YouTube"==self.MSMPboxPlayer.playlist[self.MSMPboxPlayer.Num]["ID"]):
+                     self.DataPath.setText(r"YouTube/"+str(self.MSMPboxPlayer.playlist[self.MSMPboxPlayer.Num]["url"]))
+        elif("GlobalServerUpload"==self.MSMPboxPlayer.playlist[self.MSMPboxPlayer.Num]["ID"]):
+             self.DataPath.setText("MSMPnet"+"/"+str(self.MSMPboxPlayer.playlist[self.MSMPboxPlayer.Num]["IDSound"]))
         
         #self.ProgressBarTreakSlider.setMaximum(self.MSMPboxPlayer.durationTreak)
     def add_functions(self):
