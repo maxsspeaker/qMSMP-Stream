@@ -975,9 +975,12 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
         self.CloseApp=False
         self.config,self.ConfigDir,self.PlaylistsFolder=loadConfig()
         print(self.ConfigDir)
-        try:self.RPC=Discord_RPC(RPC=pypresence.Presence("811577404279619634"))
-        except pypresence.exceptions.DiscordNotFound:
-             self.RPC=None
+        if(self.config['MSMP Stream']['Discord_rpc']):
+             try:self.RPC=Discord_RPC(RPC=pypresence.Presence("811577404279619634"))
+             except pypresence.exceptions.DiscordNotFound:
+                  self.RPC=None
+        else:
+            self.RPC=None 
         self.MSMPboxPlayer=MSMPboxPlayer(ServerPlaer=True,InstanceSettings=InstanceSettings,MSMP_RPC=self.RPC,logger=logger)
         
         #self.initUI()

@@ -7344,3 +7344,54 @@ ConnectionResetError: [WinError 10054] Удаленный хост принуд�
 14:41:13,215 root DEBUG [youtube] 0ANlqrER4eA: Downloading MPD manifest
 14:41:13,825 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
 14:41:13,857 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 37436
+14:43:46,34 root DEBUG [youtube] Extracting URL: P67aHTYdEkQ
+14:43:46,47 root DEBUG [youtube] P67aHTYdEkQ: Downloading webpage
+14:43:46,679 root DEBUG [youtube] P67aHTYdEkQ: Downloading android player API JSON
+14:43:46,852 root DEBUG [youtube] P67aHTYdEkQ: Downloading MPD manifest
+14:43:47,503 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:43:47,510 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 37436
+14:43:49,729 root DEBUG [youtube] Extracting URL: 0ANlqrER4eA
+14:43:49,743 root DEBUG [youtube] 0ANlqrER4eA: Downloading webpage
+14:43:50,363 root DEBUG [youtube] 0ANlqrER4eA: Downloading android player API JSON
+14:43:50,546 root DEBUG [youtube] 0ANlqrER4eA: Downloading MPD manifest
+14:43:50,930 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:43:50,975 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 37436
+14:43:53,631 root DEBUG [youtube] Extracting URL: MnJ3XnxYpC0
+14:43:53,634 root DEBUG [youtube] MnJ3XnxYpC0: Downloading webpage
+14:43:54,190 root DEBUG [youtube] MnJ3XnxYpC0: Downloading android player API JSON
+14:43:55,107 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:43:55,113 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+14:43:58,238 root DEBUG [youtube] Extracting URL: Gh8bV5eIJc8
+14:43:58,267 root DEBUG [youtube] Gh8bV5eIJc8: Downloading webpage
+14:43:59,41 root DEBUG [youtube] Gh8bV5eIJc8: Downloading android player API JSON
+14:43:59,305 root DEBUG [youtube] Gh8bV5eIJc8: Downloading MPD manifest
+14:44:00,54 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:44:00,57 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+14:44:05,785 root DEBUG [youtube] Extracting URL: F2UjlzNB52c
+14:44:05,797 root DEBUG [youtube] F2UjlzNB52c: Downloading webpage
+14:44:06,376 root DEBUG [youtube] F2UjlzNB52c: Downloading android player API JSON
+14:44:07,403 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): img.youtube.com:443
+14:44:07,612 urllib3.connectionpool DEBUG https://img.youtube.com:443 "GET /vi/F2UjlzNB52c/hqdefault.jpg HTTP/1.1" 200 11193
+14:44:51,655 root DEBUG [youtube] Extracting URL: 0yUk3R-qfIw
+14:44:51,662 root DEBUG [youtube] 0yUk3R-qfIw: Downloading webpage
+14:44:52,250 root DEBUG [youtube] 0yUk3R-qfIw: Downloading android player API JSON
+14:44:53,334 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): img.youtube.com:443
+14:44:53,570 urllib3.connectionpool DEBUG https://img.youtube.com:443 "GET /vi/0yUk3R-qfIw/hqdefault.jpg HTTP/1.1" 200 11193
+14:44:55,634 root DEBUG [youtube] Extracting URL: Gh8bV5eIJc8
+14:44:55,638 root DEBUG [youtube] Gh8bV5eIJc8: Downloading webpage
+14:44:56,231 root DEBUG [youtube] Gh8bV5eIJc8: Downloading android player API JSON
+14:44:56,428 root DEBUG [youtube] Gh8bV5eIJc8: Downloading MPD manifest
+14:44:56,827 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:44:56,853 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 37436
+14:44:59,325 root DEBUG [youtube] Extracting URL: w8v70K6I72Q
+14:44:59,328 root DEBUG [youtube] w8v70K6I72Q: Downloading webpage
+14:44:59,991 root DEBUG [youtube] w8v70K6I72Q: Downloading android player API JSON
+14:45:00,233 root DEBUG [youtube] w8v70K6I72Q: Downloading MPD manifest
+14:45:00,952 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:45:00,958 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+14:45:02,753 root DEBUG [youtube] Extracting URL: 3rJXdnUsMeU
+14:45:02,787 root DEBUG [youtube] 3rJXdnUsMeU: Downloading webpage
+14:45:03,340 root DEBUG [youtube] 3rJXdnUsMeU: Downloading android player API JSON
+14:45:03,515 root DEBUG [youtube] 3rJXdnUsMeU: Downloading MPD manifest
+14:45:04,149 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:45:04,153 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
