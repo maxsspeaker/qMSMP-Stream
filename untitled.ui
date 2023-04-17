@@ -63,7 +63,7 @@
 }
 
 QMainWindow &gt; QWidget {
-    /* border-image : url(img/bg11.png);*/
+    border-image : url(img/bg.png);
 
    /* background-image: url(img/Missing_Texture2.png); 0 0 0 0 stretch stretch;;*/
     background-size: 10px auto;
@@ -732,8 +732,8 @@ QPushButton:pressed{
               </property>
               <property name="sizeHint" stdset="0">
                <size>
-                <width>40</width>
-                <height>20</height>
+                <width>0</width>
+                <height>0</height>
                </size>
               </property>
              </spacer>
@@ -742,7 +742,7 @@ QPushButton:pressed{
              <widget class="QSlider" name="VolumeSlider">
               <property name="minimumSize">
                <size>
-                <width>100</width>
+                <width>50</width>
                 <height>0</height>
                </size>
               </property>
@@ -1014,7 +1014,7 @@ QTreeView::branch:open:has-children:has-siblings  {
           <widget class="QListView" name="PlaylistView">
            <property name="minimumSize">
             <size>
-             <width>585</width>
+             <width>500</width>
              <height>0</height>
             </size>
            </property>

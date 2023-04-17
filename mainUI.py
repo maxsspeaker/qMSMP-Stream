@@ -376,10 +376,10 @@ class Ui_MainWindow(object):
         self.StopButton.setIconSize(QtCore.QSize(30, 30))
         self.StopButton.setObjectName("StopButton")
         self.horizontalLayout_2.addWidget(self.StopButton)
-        spacerItem1 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        spacerItem1 = QtWidgets.QSpacerItem(0, 0, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_2.addItem(spacerItem1)
         self.VolumeSlider = QtWidgets.QSlider(self.ContorlPanel)
-        self.VolumeSlider.setMinimumSize(QtCore.QSize(100, 0))
+        self.VolumeSlider.setMinimumSize(QtCore.QSize(50, 0))
         self.VolumeSlider.setMaximumSize(QtCore.QSize(150, 16777215))
         self.VolumeSlider.setStyleSheet("\n"
 "QSlider{\n"
@@ -537,7 +537,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_5.setSpacing(0)
         self.verticalLayout_5.setObjectName("verticalLayout_5")
         self.PlaylistView = QtWidgets.QListView(self.PlaylistBox)
-        self.PlaylistView.setMinimumSize(QtCore.QSize(585, 0))
+        self.PlaylistView.setMinimumSize(QtCore.QSize(500, 0))
         font = QtGui.QFont()
         font.setFamily("Chicago")
         font.setPointSize(10)

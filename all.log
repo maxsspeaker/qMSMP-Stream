@@ -8198,3 +8198,106 @@ AttributeError: 'Discord_RPC' object has no attribute 'IconImgUrl'
 23:44:01,715 root WARNING [youtube] Cannot parse localized time text "Jul 31, 2015"
 23:44:01,998 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
 23:44:02,22 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 4022
+23:45:19,478 root DEBUG [youtube] Extracting URL: I01jIJa9Zbs
+23:45:19,496 root DEBUG [youtube] I01jIJa9Zbs: Downloading webpage
+23:45:20,255 root DEBUG [youtube] I01jIJa9Zbs: Downloading android player API JSON
+23:45:20,552 root WARNING [youtube] Cannot parse localized time text "Aug 7, 2016"
+23:45:20,860 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+23:45:20,870 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+23:45:45,826 root INFO starting...
+23:45:46,18 eyed3 DEBUG eyeD3 version 0.9.7
+23:45:46,148 asyncio DEBUG Using selector: EpollSelector
+23:45:49,436 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): pybms.tk:443
+23:45:50,33 urllib3.connectionpool DEBUG https://pybms.tk:443 "POST /Server/bmCastStream/MusicApi/ HTTP/1.1" 200 None
+23:45:50,397 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+23:45:50,400 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8985
+23:45:55,851 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): pybms.tk:443
+23:45:56,463 urllib3.connectionpool DEBUG https://pybms.tk:443 "POST /Server/bmCastStream/MusicApi/ HTTP/1.1" 200 None
+23:45:56,774 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+23:45:56,778 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 14041
+23:46:02,934 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): pybms.tk:443
+23:46:03,533 urllib3.connectionpool DEBUG https://pybms.tk:443 "POST /Server/bmCastStream/MusicApi/ HTTP/1.1" 200 None
+23:46:03,865 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+23:46:03,870 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 1915
+23:46:14,618 root DEBUG [youtube] Extracting URL: 6NwbcYgethw
+23:46:14,636 root DEBUG [youtube] 6NwbcYgethw: Downloading webpage
+23:46:15,432 root DEBUG [youtube] 6NwbcYgethw: Downloading android player API JSON
+23:46:15,719 root WARNING [youtube] Cannot parse localized time text "Jun 27, 2019"
+23:46:16,12 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+23:46:16,56 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+23:46:26,741 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): pybms.tk:443
+23:46:27,321 urllib3.connectionpool DEBUG https://pybms.tk:443 "POST /Server/bmCastStream/MusicApi/ HTTP/1.1" 200 None
+23:46:27,674 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+23:46:27,683 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 4628
+23:46:33,996 root DEBUG [youtube] Extracting URL: Fr6ZxbExjZI
+23:46:33,999 root DEBUG [youtube] Fr6ZxbExjZI: Downloading webpage
+23:46:34,563 root DEBUG [youtube] Fr6ZxbExjZI: Downloading android player API JSON
+23:46:34,881 root WARNING [youtube] Cannot parse localized time text "Apr 22, 2021"
+23:46:35,177 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+23:46:35,221 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+23:46:35,788 root DEBUG [youtube] Extracting URL: yqfK5iz_irA
+23:46:35,842 root DEBUG [youtube] yqfK5iz_irA: Downloading webpage
+23:46:36,429 root DEBUG [youtube] yqfK5iz_irA: Downloading android player API JSON
+23:46:36,692 root WARNING [youtube] Cannot parse localized time text "Oct 28, 2014"
+23:46:36,941 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+23:46:36,951 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+23:46:42,174 root DEBUG [youtube] Extracting URL: gR3naU1QxU8
+23:46:42,206 root DEBUG [youtube] gR3naU1QxU8: Downloading webpage
+23:46:42,974 root DEBUG [youtube] gR3naU1QxU8: Downloading android player API JSON
+23:46:43,273 root WARNING [youtube] Cannot parse localized time text "Feb 25, 2017"
+23:46:43,567 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+23:46:43,577 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+23:46:49,759 root DEBUG [youtube] Extracting URL: ClG7PPfU_I4
+23:46:49,762 root DEBUG [youtube] ClG7PPfU_I4: Downloading webpage
+23:46:50,439 root DEBUG [youtube] ClG7PPfU_I4: Downloading android player API JSON
+23:46:50,711 root WARNING [youtube] Cannot parse localized time text "Jan 31, 2019"
+23:46:50,937 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+23:46:50,942 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 24477
+23:46:53,641 root DEBUG [youtube] Extracting URL: Fs-p78KJ5I4
+23:46:53,701 root DEBUG [youtube] Fs-p78KJ5I4: Downloading webpage
+23:46:54,288 root DEBUG [youtube] Fs-p78KJ5I4: Downloading android player API JSON
+23:46:54,554 root WARNING [youtube] Cannot parse localized time text "Sep 15, 2021"
+23:46:54,795 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): img.youtube.com:443
+23:46:55,48 urllib3.connectionpool DEBUG https://img.youtube.com:443 "GET /vi/Fs-p78KJ5I4/hqdefault.jpg HTTP/1.1" 200 17364
+23:47:07,630 root DEBUG [youtube] Extracting URL: emEwfFvrl7I
+23:47:07,633 root DEBUG [youtube] emEwfFvrl7I: Downloading webpage
+23:47:08,403 root DEBUG [youtube] emEwfFvrl7I: Downloading android player API JSON
+23:47:09,265 root WARNING [youtube] Cannot parse localized time text "Mar 9, 2022"
+23:47:09,522 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+23:47:09,573 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+23:47:16,880 root DEBUG [soundcloud] Extracting URL: https://soundcloud.com/airglowsounds/blueshift
+23:47:16,883 root DEBUG [soundcloud] airglowsounds/blueshift: Downloading info JSON
+23:47:17,213 root DEBUG [soundcloud] 157468314: Downloading JSON metadata
+23:47:17,518 root DEBUG [soundcloud] 157468314: Downloading JSON metadata
+23:47:18,889 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+23:47:18,949 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+23:47:25,146 root DEBUG [youtube] Extracting URL: 1-eL9YhC7HQ
+23:47:25,149 root DEBUG [youtube] 1-eL9YhC7HQ: Downloading webpage
+23:47:25,653 root DEBUG [youtube] 1-eL9YhC7HQ: Downloading android player API JSON
+23:47:25,855 root ERROR ERROR: [youtube] 1-eL9YhC7HQ: Video unavailable. This video is not available
+23:47:26,116 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+23:47:26,126 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 5364
+23:47:27,592 root DEBUG [youtube] Extracting URL: C8LdO3CVRSQ
+23:47:27,594 root DEBUG [youtube] C8LdO3CVRSQ: Downloading webpage
+23:47:28,137 root DEBUG [youtube] C8LdO3CVRSQ: Downloading android player API JSON
+23:47:28,347 root WARNING [youtube] Cannot parse localized time text "Apr 22, 2021"
+23:47:28,594 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+23:47:28,604 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+16:20:41,296 root INFO starting...
+16:20:41,677 eyed3 DEBUG eyeD3 version 0.9.7
+16:20:41,887 asyncio DEBUG Using selector: EpollSelector
+16:48:05,8 root INFO starting...
+16:48:05,284 eyed3 DEBUG eyeD3 version 0.9.7
+16:48:05,493 asyncio DEBUG Using selector: EpollSelector
+16:48:39,319 root INFO starting...
+16:48:39,524 eyed3 DEBUG eyeD3 version 0.9.7
+16:48:39,749 asyncio DEBUG Using selector: EpollSelector
+16:49:06,254 root INFO starting...
+16:49:06,460 eyed3 DEBUG eyeD3 version 0.9.7
+16:49:06,687 asyncio DEBUG Using selector: EpollSelector
+16:50:01,731 root INFO starting...
+16:50:01,938 eyed3 DEBUG eyeD3 version 0.9.7
+16:50:02,152 asyncio DEBUG Using selector: EpollSelector
+16:50:38,378 root INFO starting...
+16:50:38,589 eyed3 DEBUG eyeD3 version 0.9.7
+16:50:38,811 asyncio DEBUG Using selector: EpollSelector

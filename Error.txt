@@ -1,4 +1,4 @@
 Traceback (most recent call last):
-  File "/media/maxsspeaker/HDD игры/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/main.pyw", line 865, in play
-    #if not(self.discord_rpc==None):self.msmp_streamIcon=self.msmp_streamIconMain
-AttributeError: 'MSMPboxPlayer' object has no attribute 'msmp_streamIconMain'
+  File "/media/maxsspeaker/HDD игры/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/main.pyw", line 504, in play
+    msmp_streamIcon=msmp_streamIconMain
+NameError: name 'msmp_streamIconMain' is not defined
