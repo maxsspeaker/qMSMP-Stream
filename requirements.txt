@@ -5,3 +5,4 @@ eyed3
 python-vlc
 pypresence
 appdirs
+pylast

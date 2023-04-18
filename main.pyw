@@ -42,6 +42,7 @@ import mainUI
 import requests
 import urllib
 import json
+import pylast
 import yt_dlp as youtube_dl
 from eyed3 import id3
 from eyed3 import load
@@ -80,6 +81,7 @@ def loadConfig():
                      'localizationBox': 'assets/localizationBoxes/ru.localizationBox',
                      'NowPlayningPlayBoxActive': False,
                      'VideoMode': False,
+                     "last-fmAllowed":False,
                      'latest_playlist':""
                      },
                'MSMP Stream Equalizer':
@@ -122,15 +124,20 @@ class MyYTLogger:
 
 
 
-class Discord_RPC():
+class MSMP_RPC():
      def __init__(self,RPC,msmp_streamIconYouTube=None,
                   msmp_streamIconMain=None,
                   msmp_streamIconSoundCloud=None,
                   msmp_streamIcon="qmsmpstream",
-                  version="None",
-                  logger=None):
+                  version="None",LastFm=False,
+                  logger=None,DirConfig=None):
+          
           self.RPC=RPC
-          self.RPC.connect()
+          if(RPC==None):
+               try:self.RPC.connect()
+               except pypresence.exceptions.DiscordNotFound:
+                  self.RPC=None
+
           self.msmp_streamIcon=msmp_streamIcon
           if(msmp_streamIconMain==None):
               self.msmp_streamIconMain=self.msmp_streamIcon
@@ -145,8 +152,48 @@ class Discord_RPC():
           else:self.msmp_streamIconYouTube=msmp_streamIconYouTube
 
           self.lenPlayListStatus=""
-
+          
           self.version=version
+
+          self.DirConfig=DirConfig
+
+          if(LastFm):
+               self.runLastFMapi()
+          else:
+               self.LastFM=None
+     def runLastFMapi(self):
+          APIlastFm_KEY = "4e0f10f934869a276690fcce533e4aa4"  # this is a sample key
+          APIlastFm_SECRET = "10f3da1934b00eb62a9424f79a599350"
+
+          if(self.DirConfig==None):
+               self.DirConfig=os.path.join(os.path.expanduser("~"))
+          
+          SESSION_KEY_FILE = os.path.join(self.DirConfig, ".session_key")
+          self.LastFM = pylast.LastFMNetwork(APIlastFm_KEY, APIlastFm_SECRET)
+          if not os.path.exists(SESSION_KEY_FILE):
+               skg = pylast.SessionKeyGenerator(LastFM)
+               url = skg.get_web_auth_url()
+
+               print(f"Please authorize this script to access your account: {url}\n")
+               import time
+               import webbrowser
+
+               webbrowser.open(url)
+               while True:
+                    try:
+                         session_key = skg.get_web_auth_session_key(url)
+                         with open(SESSION_KEY_FILE, "w") as f:
+                              f.write(session_key)
+                              break
+                    except pylast.WSError:
+                         time.sleep(1)
+          else:
+               session_key = open(SESSION_KEY_FILE).read()
+          self.LastFM.session_key = session_key
+
+          self.LastFMUser=self.LastFM.get_authenticated_user()
+          
+
           
      def updatePlayerPause(self,Audiolength,AudioTime,PlayNowMusicDataBox,PlayerState,ImgUrl=""):
       try:
@@ -158,8 +205,9 @@ class Discord_RPC():
         else:
                msmp_streamIcon=self.msmp_streamIcon
         print(PlayerState)       
-        if not(PlayerState=="State.Playing"): 
-           self.RPC.update(
+        if not(PlayerState=="State.Playing"):
+          
+           if not(self.RPC==None):self.RPC.update(
               **{
                   'details': PlayNowMusicDataBox["titleTrekPlayNow"],
                   'state': PlayNowMusicDataBox["artistTrekPlayNow"]+self.lenPlayListStatus,
@@ -179,7 +227,7 @@ class Discord_RPC():
                            durationTreak=self.durationTreak)     
            
           else:
-            self.RPC.update(
+            if not(self.RPC==None):self.RPC.update(
               **{
                   'details': PlayNowMusicDataBox["titleTrekPlayNow"],
                   'state': PlayNowMusicDataBox["artistTrekPlayNow"],
@@ -190,7 +238,7 @@ class Discord_RPC():
               )
       except:printError(traceback.format_exc())
       
-     def updatePlayerNow(self,PlayNowMusicDataBox,durationTreak,PlLen=None,Num=None,NowPlayIconRPC=None,ImgUrl=""):
+     def updatePlayerNow(self,PlayNowMusicDataBox,durationTreak,PlLen=None,Num=None,NowPlayIconRPC=None,ImgUrl="",firstPlay=False):
           
           self.durationTreak=durationTreak
           
@@ -207,7 +255,7 @@ class Discord_RPC():
           else:
                msmp_streamIcon=self.msmp_streamIcon
                
-          self.RPC.update(
+          if not(self.RPC==None):self.RPC.update(
                    **{
                       'details': PlayNowMusicDataBox["titleTrekPlayNow"],
                       'state': PlayNowMusicDataBox["artistTrekPlayNow"]+self.lenPlayListStatus,
@@ -218,15 +266,20 @@ class Discord_RPC():
                       'end': time.time()+self.durationTreak#((AudioTime-Audiolength)/1000)-((AudioTime-Audiolength)/1000)-((AudioTime-Audiolength)/1000)
                     }
                    )
-          
+          if not(self.LastFM==None) and (firstPlay):
+                    self.LastFM.scrobble(artist=PlayNowMusicDataBox["artistTrekPlayNow"],
+                                         title=PlayNowMusicDataBox["titleTrekPlayNow"],
+                                         timestamp=time.time(),
+                                         album=PlayNowMusicDataBox["albumTrekPlayNow"],
+                                         duration=self.durationTreak)
      def updatePlayerStop(self,LoadingMusicMeta):
           if(LoadingMusicMeta): #self.PlayNowMusicDataBox["LoadingMusicMeta"]
-                 self.RPC.update(
+                 if not(self.RPC==None):self.RPC.update(
                      **{
                          'large_image':"missing_texture",
                     })
           else:
-                 self.RPC.update(
+                 if not(self.RPC==None):self.RPC.update(
                      **{
                          'large_image':self.msmp_streamIcon,
                     })
@@ -669,7 +722,7 @@ class MSMPboxPlayer(GibridPlayer):
                                              PlLen=len(self.playlist),
                                              Num=self.Num,
                                              NowPlayIconRPC="YouTube",
-                                             ImgUrl='https://pybms.tk/Server/DiscordRPC/imgRPC?img=https://i.ytimg.com/vi/'+self.playlist[Num]["url"]+'/maxresdefault.jpg')
+                                             ImgUrl='https://pybms.tk/Server/DiscordRPC/imgRPC?img=https://i.ytimg.com/vi/'+self.playlist[Num]["url"]+'/maxresdefault.jpg',firstPlay=True)
                              
                elif("soundcloud"==self.playlist[Num]["ID"]): 
                         self.Error=0
@@ -786,7 +839,7 @@ class MSMPboxPlayer(GibridPlayer):
                                              PlLen=len(self.playlist),
                                              Num=self.Num,
                                              NowPlayIconRPC="SoundCloud",
-                                             ImgUrl='https://pybms.tk/Server/DiscordRPC/imgRPC?img='+img)
+                                             ImgUrl='https://pybms.tk/Server/DiscordRPC/imgRPC?img='+img,firstPlay=True)
                                   
                              
                elif("GlobalServerUpload"==self.playlist[Num]["ID"]):
@@ -976,12 +1029,29 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
 ##            InstanceSettings.append("--effect-list=spectrum")
 ##            InstanceSettings.append("--effect-fft-window=none")
         self.CloseApp=False
+        
         self.config,self.ConfigDir,self.PlaylistsFolder=loadConfig()
+
         print(self.ConfigDir)
+
+        if(self.config['MSMP Stream'].get("last-fmAllowed")==None):
+             self.config['MSMP Stream']["last-fmAllowed"]=False
+        
+        OtherApiAlow=False
         if(self.config['MSMP Stream']['Discord_rpc']):
-             try:self.RPC=Discord_RPC(RPC=pypresence.Presence("811577404279619634"))
-             except pypresence.exceptions.DiscordNotFound:
-                  self.RPC=None
+             Presence=pypresence.Presence("811577404279619634")
+             OtherApiAlow=True
+        else:
+             Presence=None
+             
+        if(self.config['MSMP Stream']["last-fmAllowed"]):
+             LastFm=True
+             OtherApiAlow=True
+        else:
+             LastFm=False
+             
+        if(OtherApiAlow):
+             self.RPC=MSMP_RPC(RPC=Presence,DirConfig=self.ConfigDir,LastFm=LastFm)
         else:
             self.RPC=None 
         self.MSMPboxPlayer=MSMPboxPlayer(ServerPlaer=True,InstanceSettings=InstanceSettings,MSMP_RPC=self.RPC,logger=logger)
@@ -1010,15 +1080,23 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
         
         self.PlayListAddMenu = QtWidgets.QMenu()
         self.PlayListAddMenu.triggered.connect(lambda x: print(x.data))
+        self.AddTreakPlaylist.setMenu(self.PlayListAddMenu)
 
         self.RemoveTreakMenu = QtWidgets.QMenu()
         self.RemoveTreakMenu.triggered.connect(lambda x: print(x.data))
-        
-
-        self.AddTreakPlaylist.setMenu(self.PlayListAddMenu)
         self.RemoveTreakPlaylist.setMenu(self.RemoveTreakMenu)
+
+        self.MSMPqmenu = QtWidgets.QMenu()
+        self.MSMPqmenu.triggered.connect(lambda x: print(x.data))
+        self.MSMPmenu.setMenu(self.MSMPqmenu)
+
+        
+        
+        self.add_menu(["Свойства"+"#obu","Настройки"+"#Set","Закрыть"+"#Cls"], self.MSMPqmenu)
         self.add_menu(["Remove Treak"+"#RT","Clear Playlist"+"#CPL"], self.RemoveTreakMenu)
         self.add_menu(['add Local File'+"#addLF",{'add AudioStream'+"#addAS": ['YouTube Video'+"#addAS-YV", 'soundcloud Treak'+"#addAS-ST"]}], self.PlayListAddMenu)
+
+        
         
         if sys.platform.startswith("linux"):
             pass# for Linux using the X Server
@@ -1079,6 +1157,8 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
 ##                                   QtCore.Qt.DecorationRole)
         
         self.PathImgsCache=self.config['MSMP Stream']['cacheimgpachfolder']
+        
+        
 
         self.PlayListBox = QtGui.QStandardItemModel()
         self.PlaylistView.setModel(self.PlayListBox)

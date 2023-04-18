@@ -146,10 +146,10 @@ QMainWindow &gt; QWidget {
           </size>
          </property>
          <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
+          <enum>QFrame::NoFrame</enum>
          </property>
          <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
+          <enum>QFrame::Plain</enum>
          </property>
          <widget class="QLabel" name="AlbumImg">
           <property name="geometry">
@@ -176,13 +176,66 @@ QMainWindow &gt; QWidget {
            <string/>
           </property>
           <property name="pixmap">
-           <pixmap>img/X9at37tsrY8AlbumImg.png</pixmap>
+           <pixmap>img/Missing_Texture2.png</pixmap>
           </property>
           <property name="scaledContents">
            <bool>false</bool>
           </property>
           <property name="alignment">
            <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="MSMPmenu">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>30</width>
+            <height>30</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"> 
+QPushButton{
+  background-color: rgba(18, 18, 18,0);
+  color: rgba(18, 18, 18,0);
+  border: none;
+}
+QPushButton:hover{
+  background-color: rgb(100,100, 100);
+  color: rgb(100,100, 100);
+  border: none;
+  border-image : url(icon.png);
+}
+
+QPushButton:pressed{
+  background-color: rgb(200,200, 200);
+  color:  rgb(200,200, 200);
+  border: none;
+  border-image : url(icon.png);
+}
+</string>
+          </property>
+          <property name="text">
+           <string notr="true"/>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>30</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="shortcut">
+           <string notr="true"/>
+          </property>
+          <property name="autoRepeat">
+           <bool>false</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>false</bool>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
           </property>
          </widget>
         </widget>
@@ -1295,16 +1348,11 @@ QPushButton:pressed{
     </item>
    </layout>
   </widget>
-  <widget class="QMenuBar" name="menuBar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>800</width>
-     <height>30</height>
-    </rect>
+  <action name="actionSettings">
+   <property name="text">
+    <string>Settings</string>
    </property>
-  </widget>
+  </action>
  </widget>
  <resources/>
  <connections/>

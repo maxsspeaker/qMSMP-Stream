@@ -74,18 +74,47 @@ class Ui_MainWindow(object):
         self.Visualframe.setEnabled(True)
         self.Visualframe.setMinimumSize(QtCore.QSize(140, 140))
         self.Visualframe.setMaximumSize(QtCore.QSize(140, 140))
-        self.Visualframe.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.Visualframe.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.Visualframe.setFrameShape(QtWidgets.QFrame.NoFrame)
+        self.Visualframe.setFrameShadow(QtWidgets.QFrame.Plain)
         self.Visualframe.setObjectName("Visualframe")
         self.AlbumImg = QtWidgets.QLabel(self.Visualframe)
         self.AlbumImg.setGeometry(QtCore.QRect(0, 0, 140, 140))
         self.AlbumImg.setMinimumSize(QtCore.QSize(140, 140))
         self.AlbumImg.setMaximumSize(QtCore.QSize(140, 140))
         self.AlbumImg.setText("")
-        self.AlbumImg.setPixmap(QtGui.QPixmap("img/X9at37tsrY8AlbumImg.png"))
+        self.AlbumImg.setPixmap(QtGui.QPixmap("img/Missing_Texture2.png"))
         self.AlbumImg.setScaledContents(False)
         self.AlbumImg.setAlignment(QtCore.Qt.AlignCenter)
         self.AlbumImg.setObjectName("AlbumImg")
+        self.MSMPmenu = QtWidgets.QPushButton(self.Visualframe)
+        self.MSMPmenu.setGeometry(QtCore.QRect(0, 0, 30, 30))
+        self.MSMPmenu.setStyleSheet(" \n"
+"QPushButton{\n"
+"  background-color: rgba(18, 18, 18,0);\n"
+"  color: rgba(18, 18, 18,0);\n"
+"  border: none;\n"
+"}\n"
+"QPushButton:hover{\n"
+"  background-color: rgb(100,100, 100);\n"
+"  color: rgb(100,100, 100);\n"
+"  border: none;\n"
+"  border-image : url(icon.png);\n"
+"}\n"
+"\n"
+"QPushButton:pressed{\n"
+"  background-color: rgb(200,200, 200);\n"
+"  color:  rgb(200,200, 200);\n"
+"  border: none;\n"
+"  border-image : url(icon.png);\n"
+"}\n"
+"")
+        self.MSMPmenu.setText("")
+        self.MSMPmenu.setIconSize(QtCore.QSize(30, 30))
+        self.MSMPmenu.setShortcut("")
+        self.MSMPmenu.setAutoRepeat(False)
+        self.MSMPmenu.setAutoExclusive(False)
+        self.MSMPmenu.setFlat(True)
+        self.MSMPmenu.setObjectName("MSMPmenu")
         self.PlayerBoxFirk.addWidget(self.Visualframe)
         self.ContorlPanel = QtWidgets.QGroupBox(self.PlayerBox)
         self.ContorlPanel.setMinimumSize(QtCore.QSize(0, 142))
@@ -688,10 +717,8 @@ class Ui_MainWindow(object):
         self.PlaylistBoxFirk.addLayout(self.verticalLayout_5)
         self.verticalLayout.addWidget(self.PlaylistBox)
         MainWindow.setCentralWidget(self.centralwidget)
-        self.menuBar = QtWidgets.QMenuBar(MainWindow)
-        self.menuBar.setGeometry(QtCore.QRect(0, 0, 800, 30))
-        self.menuBar.setObjectName("menuBar")
-        MainWindow.setMenuBar(self.menuBar)
+        self.actionSettings = QtWidgets.QAction(MainWindow)
+        self.actionSettings.setObjectName("actionSettings")
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
@@ -704,3 +731,4 @@ class Ui_MainWindow(object):
         self.AlbumName.setText(_translate("MainWindow", "NameAlbum"))
         self.DataPath.setText(_translate("MainWindow", "YouTube/zr0kiRdU0M8"))
         self.TimePlayCounter.setText(_translate("MainWindow", "2:52/5:21"))
+        self.actionSettings.setText(_translate("MainWindow", "Settings"))

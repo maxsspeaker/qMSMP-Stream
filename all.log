@@ -8301,3 +8301,1736 @@ AttributeError: 'Discord_RPC' object has no attribute 'IconImgUrl'
 16:50:38,378 root INFO starting...
 16:50:38,589 eyed3 DEBUG eyeD3 version 0.9.7
 16:50:38,811 asyncio DEBUG Using selector: EpollSelector
+17:02:08,711 root INFO starting...
+17:02:08,923 eyed3 DEBUG eyeD3 version 0.9.7
+17:02:09,126 asyncio DEBUG Using selector: EpollSelector
+17:02:17,907 root DEBUG [soundcloud] Extracting URL: https://soundcloud.com/schtiffles/the-cycle
+17:02:17,908 root DEBUG [soundcloud] schtiffles/the-cycle: Downloading info JSON
+17:02:18,251 root DEBUG [soundcloud] 834528376: Downloading JSON metadata
+17:02:18,570 root DEBUG [soundcloud] 834528376: Downloading JSON metadata
+17:02:18,901 root DEBUG [soundcloud] 834528376: Downloading JSON metadata
+17:02:19,703 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:02:19,704 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 1555
+17:03:10,13 root DEBUG [soundcloud] Extracting URL: https://soundcloud.com/k-391/k-391-earth
+17:03:10,13 root DEBUG [soundcloud] k-391/k-391-earth: Downloading info JSON
+17:03:10,315 root DEBUG [soundcloud] 244590361: Downloading JSON metadata
+17:03:10,537 root DEBUG [soundcloud] 244590361: Downloading JSON metadata
+17:03:10,753 root DEBUG [soundcloud] 244590361: Downloading JSON metadata
+17:03:11,283 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:03:11,284 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 34121
+17:05:09,803 root DEBUG [soundcloud] Extracting URL: https://soundcloud.com/officialdeafkev/invincible-out-now-on-nocopyrightsounds
+17:05:09,803 root DEBUG [soundcloud] officialdeafkev/invincible-out-now-on-nocopyrightsounds: Downloading info JSON
+17:05:10,69 root DEBUG [soundcloud] 205462333: Downloading JSON metadata
+17:05:10,291 root DEBUG [soundcloud] 205462333: Downloading JSON metadata
+17:05:10,498 root DEBUG [soundcloud] 205462333: Downloading JSON metadata
+17:05:10,927 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:05:10,928 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+17:05:12,221 root DEBUG [soundcloud] Extracting URL: https://soundcloud.com/officialdeafkev/invincible-out-now-on-nocopyrightsounds
+17:05:12,224 root DEBUG [soundcloud] officialdeafkev/invincible-out-now-on-nocopyrightsounds: Downloading info JSON
+17:05:12,465 root DEBUG [soundcloud] 205462333: Downloading JSON metadata
+17:05:12,678 root DEBUG [soundcloud] 205462333: Downloading JSON metadata
+17:05:12,881 root DEBUG [soundcloud] 205462333: Downloading JSON metadata
+17:05:13,96 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:05:13,98 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 35828
+17:05:13,217 root DEBUG [soundcloud] Extracting URL: https://soundcloud.com/officialdeafkev/invincible-out-now-on-nocopyrightsounds
+17:05:13,220 root DEBUG [soundcloud] officialdeafkev/invincible-out-now-on-nocopyrightsounds: Downloading info JSON
+17:05:13,446 root DEBUG [soundcloud] 205462333: Downloading JSON metadata
+17:05:13,648 root DEBUG [soundcloud] 205462333: Downloading JSON metadata
+17:05:13,856 root DEBUG [soundcloud] 205462333: Downloading JSON metadata
+17:05:14,74 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:05:14,76 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 35828
+13:59:28,732 root INFO starting...
+13:59:29,68 eyed3 DEBUG eyeD3 version 0.9.7
+13:59:29,310 asyncio DEBUG Using selector: EpollSelector
+13:59:33,949 root DEBUG [youtube] Extracting URL: ZiR19a0DPD0
+13:59:33,950 root DEBUG [youtube] ZiR19a0DPD0: Downloading webpage
+13:59:34,479 root DEBUG [youtube] ZiR19a0DPD0: Downloading android player API JSON
+13:59:34,688 root WARNING [youtube] Cannot parse localized time text "Oct 7, 2013"
+13:59:35,171 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+13:59:35,195 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 45158
+13:59:54,493 root DEBUG [youtube] Extracting URL: VgUR1pna5cY
+13:59:54,493 root DEBUG [youtube] VgUR1pna5cY: Downloading webpage
+13:59:55,79 root DEBUG [youtube] VgUR1pna5cY: Downloading android player API JSON
+13:59:55,314 root WARNING [youtube] Cannot parse localized time text "Feb 1, 2018"
+13:59:55,685 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+13:59:55,685 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 36063
+14:00:25,350 root DEBUG [youtube] Extracting URL: DhDXBllX43U
+14:00:25,350 root DEBUG [youtube] DhDXBllX43U: Downloading webpage
+14:00:25,923 root DEBUG [youtube] DhDXBllX43U: Downloading android player API JSON
+14:00:26,146 root WARNING [youtube] Cannot parse localized time text "Jul 18, 2018"
+14:00:26,412 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:00:26,412 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+14:00:30,868 root DEBUG [youtube] Extracting URL: VucZksgrtAM
+14:00:30,869 root DEBUG [youtube] VucZksgrtAM: Downloading webpage
+14:00:31,445 root DEBUG [youtube] VucZksgrtAM: Downloading android player API JSON
+14:00:32,213 root WARNING [youtube] Cannot parse localized time text "May 1, 2018"
+14:00:32,454 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:00:32,454 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+14:00:36,891 root DEBUG [youtube] Extracting URL: dPuCUz2xEj4
+14:00:36,892 root DEBUG [youtube] dPuCUz2xEj4: Downloading webpage
+14:00:37,469 root DEBUG [youtube] dPuCUz2xEj4: Downloading android player API JSON
+14:00:37,671 root WARNING [youtube] Cannot parse localized time text "Oct 19, 2014"
+14:00:37,896 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:00:37,896 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+14:01:07,863 root DEBUG [youtube] Extracting URL: WmUMLUte0dk
+14:01:07,863 root DEBUG [youtube] WmUMLUte0dk: Downloading webpage
+14:01:08,535 root DEBUG [youtube] WmUMLUte0dk: Downloading android player API JSON
+14:01:08,764 root WARNING [youtube] Cannot parse localized time text "Nov 10, 2018"
+14:01:09,25 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:01:09,25 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+14:01:14,447 root DEBUG [youtube] Extracting URL: k42e0jmGfPg
+14:01:14,448 root DEBUG [youtube] k42e0jmGfPg: Downloading webpage
+14:01:15,21 root DEBUG [youtube] k42e0jmGfPg: Downloading android player API JSON
+14:01:15,743 root WARNING [youtube] Cannot parse localized time text "May 2, 2022"
+14:01:16,2 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:01:16,2 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 24051
+14:01:18,535 root DEBUG [youtube] Extracting URL: k42e0jmGfPg
+14:01:18,535 root DEBUG [youtube] k42e0jmGfPg: Downloading webpage
+14:01:19,209 root DEBUG [youtube] k42e0jmGfPg: Downloading android player API JSON
+14:01:19,933 root WARNING [youtube] Cannot parse localized time text "May 2, 2022"
+14:01:19,954 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:01:19,954 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 24051
+14:01:25,131 root DEBUG [youtube] Extracting URL: Blsu1xwTrGg
+14:01:25,131 root DEBUG [youtube] Blsu1xwTrGg: Downloading webpage
+14:01:25,762 root DEBUG [youtube] Blsu1xwTrGg: Downloading android player API JSON
+14:01:26,532 root WARNING [youtube] Cannot parse localized time text "Sep 18, 2021"
+14:01:26,777 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): img.youtube.com:443
+14:01:26,997 urllib3.connectionpool DEBUG https://img.youtube.com:443 "GET /vi/Blsu1xwTrGg/hqdefault.jpg HTTP/1.1" 200 8843
+14:01:33,914 root DEBUG [youtube] Extracting URL: hsKYAdDW1qU
+14:01:33,915 root DEBUG [youtube] hsKYAdDW1qU: Downloading webpage
+14:01:34,519 root DEBUG [youtube] hsKYAdDW1qU: Downloading android player API JSON
+14:01:35,244 root WARNING [youtube] Cannot parse localized time text "Jun 26, 2021"
+14:01:35,522 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): img.youtube.com:443
+14:01:35,723 urllib3.connectionpool DEBUG https://img.youtube.com:443 "GET /vi/hsKYAdDW1qU/hqdefault.jpg HTTP/1.1" 200 8863
+14:01:41,95 root DEBUG [youtube] Extracting URL: RN1C4XcFoow
+14:01:41,95 root DEBUG [youtube] RN1C4XcFoow: Downloading webpage
+14:01:41,611 root DEBUG [youtube] RN1C4XcFoow: Downloading android player API JSON
+14:01:42,287 root WARNING [youtube] Cannot parse localized time text "Apr 12, 2017"
+14:01:43,584 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:01:43,584 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+14:02:25,645 root DEBUG [youtube] Extracting URL: iBaolZZ-ZoI
+14:02:25,645 root DEBUG [youtube] iBaolZZ-ZoI: Downloading webpage
+14:02:26,194 root DEBUG [youtube] iBaolZZ-ZoI: Downloading android player API JSON
+14:02:26,929 root DEBUG [youtube] iBaolZZ-ZoI: Downloading MPD manifest
+14:02:27,366 root WARNING [youtube] Cannot parse localized time text "Mar 6, 2017"
+14:02:27,612 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:02:27,613 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+14:02:36,275 root DEBUG [youtube] Extracting URL: zr0kiRdU0M8
+14:02:36,275 root DEBUG [youtube] zr0kiRdU0M8: Downloading webpage
+14:02:36,817 root DEBUG [youtube] zr0kiRdU0M8: Downloading android player API JSON
+14:02:37,25 root DEBUG [youtube] zr0kiRdU0M8: Downloading MPD manifest
+14:02:37,414 root WARNING [youtube] Cannot parse localized time text "Feb 14, 2017"
+14:02:37,688 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:02:37,688 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 24887
+14:03:24,799 root DEBUG [youtube] Extracting URL: DoUW5ZkblTs
+14:03:24,799 root DEBUG [youtube] DoUW5ZkblTs: Downloading webpage
+14:03:25,523 root DEBUG [youtube] DoUW5ZkblTs: Downloading android player API JSON
+14:03:25,733 root WARNING [youtube] Cannot parse localized time text "Apr 20, 2022"
+14:03:25,990 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:03:25,990 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 39168
+14:03:35,923 root DEBUG [youtube] Extracting URL: ulmD1umCnrM
+14:03:35,923 root DEBUG [youtube] ulmD1umCnrM: Downloading webpage
+14:03:36,500 root DEBUG [youtube] ulmD1umCnrM: Downloading android player API JSON
+14:03:36,736 root WARNING [youtube] Cannot parse localized time text "Mar 21, 2019"
+14:03:37,9 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:03:37,9 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 50058
+14:03:41,730 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): pybms.tk:443
+14:03:42,435 urllib3.connectionpool DEBUG https://pybms.tk:443 "POST /Server/bmCastStream/MusicApi/ HTTP/1.1" 200 None
+14:03:42,742 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:03:42,743 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8985
+14:03:48,660 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): pybms.tk:443
+14:03:49,289 urllib3.connectionpool DEBUG https://pybms.tk:443 "POST /Server/bmCastStream/MusicApi/ HTTP/1.1" 200 None
+14:03:49,595 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:03:49,595 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8985
+14:03:52,466 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): pybms.tk:443
+14:03:53,46 urllib3.connectionpool DEBUG https://pybms.tk:443 "POST /Server/bmCastStream/MusicApi/ HTTP/1.1" 200 None
+14:03:53,351 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:03:53,351 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8985
+14:03:53,728 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): pybms.tk:443
+14:03:54,439 urllib3.connectionpool DEBUG https://pybms.tk:443 "POST /Server/bmCastStream/MusicApi/ HTTP/1.1" 200 None
+14:03:54,746 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:03:54,747 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 14041
+14:03:56,476 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): pybms.tk:443
+14:03:57,120 urllib3.connectionpool DEBUG https://pybms.tk:443 "POST /Server/bmCastStream/MusicApi/ HTTP/1.1" 200 None
+14:03:57,423 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:03:57,423 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8985
+14:03:57,918 root DEBUG [youtube] Extracting URL: Fs-p78KJ5I4
+14:03:57,918 root DEBUG [youtube] Fs-p78KJ5I4: Downloading webpage
+14:03:58,497 root DEBUG [youtube] Fs-p78KJ5I4: Downloading android player API JSON
+14:03:58,737 root WARNING [youtube] Cannot parse localized time text "Sep 15, 2021"
+14:03:58,988 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:03:58,992 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 37260
+14:04:03,63 root DEBUG [youtube] Extracting URL: xMV6l2y67rk
+14:04:03,63 root DEBUG [youtube] xMV6l2y67rk: Downloading webpage
+14:04:03,647 root DEBUG [youtube] xMV6l2y67rk: Downloading android player API JSON
+14:04:03,886 root WARNING [youtube] Cannot parse localized time text "Jul 31, 2015"
+14:04:04,157 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:04:04,158 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 4307
+14:06:13,665 root DEBUG [youtube] Extracting URL: I01jIJa9Zbs
+14:06:13,665 root DEBUG [youtube] I01jIJa9Zbs: Downloading webpage
+14:06:14,433 root DEBUG [youtube] I01jIJa9Zbs: Downloading android player API JSON
+14:06:14,641 root WARNING [youtube] Cannot parse localized time text "Aug 7, 2016"
+14:06:14,911 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:06:14,911 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 17547
+14:09:14,243 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): pybms.tk:443
+14:09:15,96 urllib3.connectionpool DEBUG https://pybms.tk:443 "POST /Server/bmCastStream/MusicApi/ HTTP/1.1" 200 None
+14:09:15,403 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:09:15,403 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+14:09:16,33 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): pybms.tk:443
+14:09:16,614 urllib3.connectionpool DEBUG https://pybms.tk:443 "POST /Server/bmCastStream/MusicApi/ HTTP/1.1" 200 None
+14:09:16,921 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:09:16,922 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+14:11:17,897 root DEBUG [youtube] Extracting URL: mAXecPySr_c
+14:11:17,898 root DEBUG [youtube] mAXecPySr_c: Downloading webpage
+14:11:18,211 root DEBUG [youtube] mAXecPySr_c: Downloading android player API JSON
+14:11:18,402 root ERROR ERROR: [youtube] mAXecPySr_c: Private video. Sign in if you've been granted access to this video
+14:11:18,699 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:11:18,819 PIL.PngImagePlugin DEBUG STREAM b'sRGB' 41 1
+14:11:18,860 PIL.PngImagePlugin DEBUG STREAM b'gAMA' 54 4
+14:11:18,861 PIL.PngImagePlugin DEBUG STREAM b'pHYs' 70 9
+14:11:18,863 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 91 27230
+14:11:21,508 root DEBUG [soundcloud] Extracting URL: https://soundcloud.com/airglowsounds/electrifyinglandscape
+14:11:21,508 root DEBUG [soundcloud] airglowsounds/electrifyinglandscape: Downloading info JSON
+14:11:21,909 root DEBUG [soundcloud] 165360587: Downloading JSON metadata
+14:11:22,215 root DEBUG [soundcloud] 165360587: Downloading JSON metadata
+14:11:22,474 root DEBUG [soundcloud] 165360587: Downloading JSON metadata
+14:11:23,4 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:11:23,5 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 42752
+16:31:02,952 root INFO starting...
+16:31:03,306 eyed3 DEBUG eyeD3 version 0.9.7
+16:31:03,516 asyncio DEBUG Using selector: EpollSelector
+16:31:19,482 root DEBUG [youtube] Extracting URL: PsoJNBWkKWQ
+16:31:19,482 root DEBUG [youtube] PsoJNBWkKWQ: Downloading webpage
+16:31:20,71 root DEBUG [youtube] PsoJNBWkKWQ: Downloading android player API JSON
+16:31:20,333 root WARNING [youtube] Cannot parse localized time text "May 23, 2020"
+16:31:20,856 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+16:31:20,856 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+16:31:23,155 root DEBUG [youtube] Extracting URL: IS9azbb9hSA
+16:31:23,156 root DEBUG [youtube] IS9azbb9hSA: Downloading webpage
+16:31:23,760 root DEBUG [youtube] IS9azbb9hSA: Downloading android player API JSON
+16:31:24,559 root WARNING [youtube] Cannot parse localized time text "Nov 5, 2017"
+16:31:24,848 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+16:31:24,849 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 37945
+16:31:26,540 root DEBUG [youtube] Extracting URL: hgXZQfHySDw
+16:31:26,540 root DEBUG [youtube] hgXZQfHySDw: Downloading webpage
+16:31:27,138 root DEBUG [youtube] hgXZQfHySDw: Downloading android player API JSON
+16:31:27,906 root WARNING [youtube] Cannot parse localized time text "May 3, 2018"
+16:31:28,129 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+16:31:28,129 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 7075
+16:31:37,555 root DEBUG [youtube] Extracting URL: crGakqsAgtI
+16:31:37,555 root DEBUG [youtube] crGakqsAgtI: Downloading webpage
+16:31:38,319 root DEBUG [youtube] crGakqsAgtI: Downloading android player API JSON
+16:31:39,70 root WARNING [youtube] Cannot parse localized time text "Sep 9, 2017"
+16:31:39,929 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+16:31:39,930 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8985
+16:31:43,324 root DEBUG [youtube] Extracting URL: inEhwbiHU0Y
+16:31:43,325 root DEBUG [youtube] inEhwbiHU0Y: Downloading webpage
+16:31:43,860 root DEBUG [youtube] inEhwbiHU0Y: Downloading android player API JSON
+16:31:44,610 root WARNING [youtube] Cannot parse localized time text "Aug 30, 2020"
+16:31:44,846 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+16:31:44,846 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 4330
+16:33:02,588 root DEBUG [youtube] Extracting URL: crGakqsAgtI
+16:33:02,589 root DEBUG [youtube] crGakqsAgtI: Downloading webpage
+16:33:03,115 root DEBUG [youtube] crGakqsAgtI: Downloading android player API JSON
+16:33:03,851 root WARNING [youtube] Cannot parse localized time text "Sep 9, 2017"
+16:33:03,872 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+16:33:03,873 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8985
+16:36:45,652 root DEBUG [youtube] Extracting URL: zoNk-RCculc
+16:36:45,652 root DEBUG [youtube] zoNk-RCculc: Downloading webpage
+16:36:46,190 root DEBUG [youtube] zoNk-RCculc: Downloading android player API JSON
+16:36:46,411 root WARNING [youtube] Cannot parse localized time text "Nov 8, 2018"
+16:36:46,707 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+16:36:46,708 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 40403
+16:36:56,16 root DEBUG [youtube] Extracting URL: yCTHpLFKSFM
+16:36:56,16 root DEBUG [youtube] yCTHpLFKSFM: Downloading webpage
+16:36:56,624 root DEBUG [youtube] yCTHpLFKSFM: Downloading android player API JSON
+16:36:56,830 root WARNING [youtube] Cannot parse localized time text "Aug 2, 2017"
+16:36:57,72 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+16:36:57,72 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+16:37:01,671 root DEBUG [youtube] Extracting URL: nMbx8EurE0g
+16:37:01,671 root DEBUG [youtube] nMbx8EurE0g: Downloading webpage
+16:37:02,229 root DEBUG [youtube] nMbx8EurE0g: Downloading android player API JSON
+16:37:02,928 root WARNING [youtube] Cannot parse localized time text "May 10, 2016"
+16:37:03,155 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+16:37:03,156 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+16:37:05,264 root DEBUG [youtube] Extracting URL: kgCST5We3YE
+16:37:05,264 root DEBUG [youtube] kgCST5We3YE: Downloading webpage
+16:37:05,840 root DEBUG [youtube] kgCST5We3YE: Downloading android player API JSON
+16:37:06,57 root WARNING [youtube] Cannot parse localized time text "Sep 1, 2015"
+16:37:06,275 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+16:37:06,276 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+16:37:08,342 root DEBUG [youtube] Extracting URL: UkUweq5FAcE
+16:37:08,342 root DEBUG [youtube] UkUweq5FAcE: Downloading webpage
+16:37:08,954 root DEBUG [youtube] UkUweq5FAcE: Downloading android player API JSON
+16:37:09,744 root WARNING [youtube] Cannot parse localized time text "Jan 14, 2016"
+16:37:09,972 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+16:37:09,972 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+16:37:14,138 root DEBUG [youtube] Extracting URL: IS9azbb9hSA
+16:37:14,138 root DEBUG [youtube] IS9azbb9hSA: Downloading webpage
+16:37:14,744 root DEBUG [youtube] IS9azbb9hSA: Downloading android player API JSON
+16:37:15,522 root WARNING [youtube] Cannot parse localized time text "Nov 5, 2017"
+16:37:15,547 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+16:37:15,548 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 37945
+16:37:17,172 root DEBUG [youtube] Extracting URL: PsoJNBWkKWQ
+16:37:17,173 root DEBUG [youtube] PsoJNBWkKWQ: Downloading webpage
+16:37:17,896 root DEBUG [youtube] PsoJNBWkKWQ: Downloading android player API JSON
+16:37:18,182 root WARNING [youtube] Cannot parse localized time text "May 23, 2020"
+16:37:18,204 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+16:37:18,204 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 21109
+16:37:20,394 root DEBUG [youtube] Extracting URL: EuVTt-M3IXo
+16:37:20,394 root DEBUG [youtube] EuVTt-M3IXo: Downloading webpage
+16:37:21,58 root DEBUG [youtube] EuVTt-M3IXo: Downloading android player API JSON
+16:37:21,243 root WARNING [youtube] Cannot parse localized time text "Mar 25, 2017"
+16:37:21,524 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+16:37:21,525 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+16:38:30,65 root INFO starting...
+16:38:30,280 eyed3 DEBUG eyeD3 version 0.9.7
+16:38:30,505 asyncio DEBUG Using selector: EpollSelector
+16:38:36,93 root DEBUG [youtube] Extracting URL: An4kjnz6d3Q
+16:38:36,94 root DEBUG [youtube] An4kjnz6d3Q: Downloading webpage
+16:38:36,757 root DEBUG [youtube] An4kjnz6d3Q: Downloading android player API JSON
+16:38:36,983 root WARNING [youtube] Cannot parse localized time text "Aug 6, 2019"
+16:38:37,268 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+16:38:37,269 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 13504
+16:38:46,36 root DEBUG [youtube] Extracting URL: NYe4PJwQcjo
+16:38:46,36 root DEBUG [youtube] NYe4PJwQcjo: Downloading webpage
+16:38:46,608 root DEBUG [youtube] NYe4PJwQcjo: Downloading android player API JSON
+16:38:46,801 root DEBUG [youtube] NYe4PJwQcjo: Downloading MPD manifest
+16:38:47,268 root WARNING [youtube] Cannot parse localized time text "Nov 27, 2020"
+16:38:47,526 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+16:38:47,527 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 52274
+16:39:33,508 root DEBUG [soundcloud] Extracting URL: https://soundcloud.com/bonobo/bonobo-featuring-oflynn-otomo
+16:39:33,508 root DEBUG [soundcloud] bonobo/bonobo-featuring-oflynn-otomo: Downloading info JSON
+16:39:33,957 root DEBUG [soundcloud] 1137274807: Downloading JSON metadata
+16:39:34,326 root DEBUG [soundcloud] 1137274807: Downloading JSON metadata
+16:39:34,985 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+16:39:34,985 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 46787
+16:39:38,791 root DEBUG [youtube] Extracting URL: Rb2y360U54E
+16:39:38,791 root DEBUG [youtube] Rb2y360U54E: Downloading webpage
+16:39:39,340 root DEBUG [youtube] Rb2y360U54E: Downloading android player API JSON
+16:39:39,530 root WARNING [youtube] Cannot parse localized time text "Sep 22, 2016"
+16:39:39,788 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+16:39:39,788 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 30635
+16:40:16,31 root DEBUG [youtube] Extracting URL: OuYA_siR8Hc
+16:40:16,31 root DEBUG [youtube] OuYA_siR8Hc: Downloading webpage
+16:40:16,617 root DEBUG [youtube] OuYA_siR8Hc: Downloading android player API JSON
+16:40:16,846 root WARNING [youtube] Cannot parse localized time text "Oct 21, 2021"
+16:40:17,106 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+16:40:17,107 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 12000
+16:40:40,914 root DEBUG [youtube] Extracting URL: Y5KFnQYCdsk
+16:40:40,914 root DEBUG [youtube] Y5KFnQYCdsk: Downloading webpage
+16:40:41,474 root DEBUG [youtube] Y5KFnQYCdsk: Downloading android player API JSON
+16:40:41,695 root WARNING [youtube] Cannot parse localized time text "Oct 21, 2021"
+16:40:41,937 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+16:40:41,937 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+16:40:45,285 root DEBUG [youtube] Extracting URL: 5nsyrRAPR3k
+16:40:45,286 root DEBUG [youtube] 5nsyrRAPR3k: Downloading webpage
+16:40:45,854 root DEBUG [youtube] 5nsyrRAPR3k: Downloading android player API JSON
+16:40:46,551 root DEBUG [youtube] 5nsyrRAPR3k: Downloading MPD manifest
+16:40:46,912 root WARNING [youtube] Cannot parse localized time text "Jun 30, 2022"
+16:40:47,143 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+16:40:47,143 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 16725
+16:40:53,828 root DEBUG [youtube] Extracting URL: NIEGsnBrDrY
+16:40:53,829 root DEBUG [youtube] NIEGsnBrDrY: Downloading webpage
+16:40:54,359 root DEBUG [youtube] NIEGsnBrDrY: Downloading android player API JSON
+16:40:55,46 root DEBUG [youtube] NIEGsnBrDrY: Downloading MPD manifest
+16:40:55,388 root WARNING [youtube] Cannot parse localized time text "Jun 30, 2022"
+16:40:55,602 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+16:40:55,602 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 16725
+16:40:59,520 root DEBUG [youtube] Extracting URL: cLrbc4u0DA8
+16:40:59,520 root DEBUG [youtube] cLrbc4u0DA8: Downloading webpage
+16:41:00,27 root DEBUG [youtube] cLrbc4u0DA8: Downloading android player API JSON
+16:41:00,734 root DEBUG [youtube] cLrbc4u0DA8: Downloading MPD manifest
+16:41:01,83 root WARNING [youtube] Cannot parse localized time text "Jun 29, 2022"
+16:41:01,307 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+16:41:01,308 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+16:41:07,435 root DEBUG [youtube] Extracting URL: u2t8oodvmeg
+16:41:07,435 root DEBUG [youtube] u2t8oodvmeg: Downloading webpage
+16:41:08,9 root DEBUG [youtube] u2t8oodvmeg: Downloading android player API JSON
+16:41:08,725 root DEBUG [youtube] u2t8oodvmeg: Downloading MPD manifest
+16:41:09,41 root WARNING [youtube] Cannot parse localized time text "Jun 30, 2022"
+16:41:09,280 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+16:41:09,280 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 16725
+16:41:12,825 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): pybms.tk:443
+16:41:13,663 urllib3.connectionpool DEBUG https://pybms.tk:443 "POST /Server/bmCastStream/MusicApi/ HTTP/1.1" 200 None
+16:41:13,968 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+16:41:13,968 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8985
+16:41:16,841 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): pybms.tk:443
+16:41:17,397 urllib3.connectionpool DEBUG https://pybms.tk:443 "POST /Server/bmCastStream/MusicApi/ HTTP/1.1" 200 None
+16:41:17,702 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+16:41:17,702 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+16:42:38,612 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): pybms.tk:443
+16:42:39,225 urllib3.connectionpool DEBUG https://pybms.tk:443 "POST /Server/bmCastStream/MusicApi/ HTTP/1.1" 200 None
+16:42:39,533 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+16:42:39,534 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+16:47:06,975 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): pybms.tk:443
+16:47:07,810 urllib3.connectionpool DEBUG https://pybms.tk:443 "POST /Server/bmCastStream/MusicApi/ HTTP/1.1" 200 None
+16:47:08,115 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+16:47:08,116 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+16:49:35,405 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): pybms.tk:443
+16:49:36,20 urllib3.connectionpool DEBUG https://pybms.tk:443 "POST /Server/bmCastStream/MusicApi/ HTTP/1.1" 200 None
+16:49:36,351 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+16:49:36,352 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+16:49:56,501 root INFO starting...
+16:49:56,705 eyed3 DEBUG eyeD3 version 0.9.7
+16:49:56,922 asyncio DEBUG Using selector: EpollSelector
+16:49:59,534 root DEBUG [youtube] Extracting URL: f2xGxd9xPYA
+16:49:59,534 root DEBUG [youtube] f2xGxd9xPYA: Downloading webpage
+16:50:00,252 root DEBUG [youtube] f2xGxd9xPYA: Downloading android player API JSON
+16:50:01,55 root WARNING [youtube] Cannot parse localized time text "Sep 11, 2016"
+16:50:01,371 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+16:50:01,371 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 19116
+16:50:04,35 root DEBUG [youtube] Extracting URL: Byuhn6hkJbM
+16:50:04,35 root DEBUG [youtube] Byuhn6hkJbM: Downloading webpage
+16:50:04,876 root DEBUG [youtube] Byuhn6hkJbM: Downloading android player API JSON
+16:50:05,125 root WARNING [youtube] Cannot parse localized time text "Apr 6, 2016"
+16:50:05,387 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+16:50:05,388 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+16:50:13,369 root DEBUG [youtube] Extracting URL: EmBs5Qm06cw
+16:50:13,369 root DEBUG [youtube] EmBs5Qm06cw: Downloading webpage
+16:50:13,952 root DEBUG [youtube] EmBs5Qm06cw: Downloading android player API JSON
+16:50:14,678 root WARNING [youtube] Cannot parse localized time text "Oct 4, 2017"
+16:50:14,934 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+16:50:14,935 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+16:50:21,960 root DEBUG [youtube] Extracting URL: M86BLKimroU
+16:50:21,961 root DEBUG [youtube] M86BLKimroU: Downloading webpage
+16:50:22,541 root DEBUG [youtube] M86BLKimroU: Downloading android player API JSON
+16:50:22,758 root WARNING [youtube] Cannot parse localized time text "Premiered Jun 10, 2020"
+16:50:23,5 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+16:50:23,6 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+16:52:54,330 root DEBUG [youtube] Extracting URL: E6ca9cKISwE
+16:52:54,330 root DEBUG [youtube] E6ca9cKISwE: Downloading webpage
+16:52:54,954 root DEBUG [youtube] E6ca9cKISwE: Downloading android player API JSON
+16:52:55,175 root DEBUG [youtube] E6ca9cKISwE: Downloading MPD manifest
+16:52:55,566 root WARNING [youtube] Cannot parse localized time text "Mar 22, 2017"
+16:52:55,862 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+16:52:55,862 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+16:53:14,164 root INFO starting...
+16:53:14,367 eyed3 DEBUG eyeD3 version 0.9.7
+16:53:14,583 asyncio DEBUG Using selector: EpollSelector
+16:53:22,880 root DEBUG [soundcloud] Extracting URL: https://soundcloud.com/schtiffles/the-cycle
+16:53:22,880 root DEBUG [soundcloud] schtiffles/the-cycle: Downloading info JSON
+16:53:23,387 root DEBUG [soundcloud] 834528376: Downloading JSON metadata
+16:53:23,859 root DEBUG [soundcloud] 834528376: Downloading JSON metadata
+16:53:24,290 root DEBUG [soundcloud] 834528376: Downloading JSON metadata
+16:53:25,15 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+16:53:25,15 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 1555
+16:54:24,274 root DEBUG [youtube] Extracting URL: ZiR19a0DPD0
+16:54:24,287 root DEBUG [youtube] ZiR19a0DPD0: Downloading webpage
+16:54:24,839 root DEBUG [youtube] ZiR19a0DPD0: Downloading android player API JSON
+16:54:25,131 root WARNING [youtube] Cannot parse localized time text "Oct 7, 2013"
+16:54:25,424 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+16:54:25,425 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 45158
+16:54:29,654 root DEBUG [youtube] Extracting URL: d1gG7K-NV1o
+16:54:29,655 root DEBUG [youtube] d1gG7K-NV1o: Downloading webpage
+16:54:30,296 root DEBUG [youtube] d1gG7K-NV1o: Downloading android player API JSON
+16:54:30,517 root WARNING [youtube] Cannot parse localized time text "Dec 19, 2017"
+16:54:30,738 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): img.youtube.com:443
+16:54:30,974 urllib3.connectionpool DEBUG https://img.youtube.com:443 "GET /vi/d1gG7K-NV1o/hqdefault.jpg HTTP/1.1" 200 13533
+16:54:32,35 root DEBUG [youtube] Extracting URL: KJBMZP9XrJs
+16:54:32,35 root DEBUG [youtube] KJBMZP9XrJs: Downloading webpage
+16:54:32,751 root DEBUG [youtube] KJBMZP9XrJs: Downloading android player API JSON
+16:54:33,474 root WARNING [youtube] Cannot parse localized time text "Jan 26, 2019"
+16:54:33,750 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): img.youtube.com:443
+16:54:33,959 urllib3.connectionpool DEBUG https://img.youtube.com:443 "GET /vi/KJBMZP9XrJs/hqdefault.jpg HTTP/1.1" 200 8186
+16:54:38,301 root DEBUG [youtube] Extracting URL: BO6EQalupg0
+16:54:38,301 root DEBUG [youtube] BO6EQalupg0: Downloading webpage
+16:54:38,815 root DEBUG [youtube] BO6EQalupg0: Downloading android player API JSON
+16:54:39,47 root WARNING [youtube] Cannot parse localized time text "Dec 31, 2017"
+16:54:39,306 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): img.youtube.com:443
+16:54:39,539 urllib3.connectionpool DEBUG https://img.youtube.com:443 "GET /vi/BO6EQalupg0/hqdefault.jpg HTTP/1.1" 200 28640
+16:54:40,648 root DEBUG [youtube] Extracting URL: 7FR16kQ9gDE
+16:54:40,648 root DEBUG [youtube] 7FR16kQ9gDE: Downloading webpage
+16:54:41,240 root DEBUG [youtube] 7FR16kQ9gDE: Downloading android player API JSON
+16:54:41,448 root DEBUG [youtube] 7FR16kQ9gDE: Downloading MPD manifest
+16:54:41,832 root WARNING [youtube] Cannot parse localized time text "Dec 7, 2018"
+16:54:42,94 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): img.youtube.com:443
+16:54:42,337 urllib3.connectionpool DEBUG https://img.youtube.com:443 "GET /vi/7FR16kQ9gDE/hqdefault.jpg HTTP/1.1" 200 22967
+16:54:45,421 root DEBUG [youtube] Extracting URL: HZTDc-qX5iQ
+16:54:45,421 root DEBUG [youtube] HZTDc-qX5iQ: Downloading webpage
+16:54:45,961 root DEBUG [youtube] HZTDc-qX5iQ: Downloading android player API JSON
+16:54:46,179 root WARNING [youtube] Cannot parse localized time text "Mar 4, 2017"
+16:54:46,392 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+16:54:46,392 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 33837
+16:54:48,523 root DEBUG [youtube] Extracting URL: hWXTBFzcM5Q
+16:54:48,523 root DEBUG [youtube] hWXTBFzcM5Q: Downloading webpage
+16:54:49,207 root DEBUG [youtube] hWXTBFzcM5Q: Downloading android player API JSON
+16:54:49,946 root WARNING [youtube] Cannot parse localized time text "Feb 26, 2018"
+16:54:50,165 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+16:54:50,165 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+16:54:53,810 root DEBUG [youtube] Extracting URL: FKiF2ZA7OA0
+16:54:53,810 root DEBUG [youtube] FKiF2ZA7OA0: Downloading webpage
+16:54:54,463 root DEBUG [youtube] FKiF2ZA7OA0: Downloading android player API JSON
+16:54:54,696 root WARNING [youtube] Cannot parse localized time text "May 16, 2019"
+16:54:54,945 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+16:54:54,945 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+16:55:03,711 root DEBUG [youtube] Extracting URL: dFXw67Sg-nw
+16:55:03,712 root DEBUG [youtube] dFXw67Sg-nw: Downloading webpage
+16:55:04,268 root DEBUG [youtube] dFXw67Sg-nw: Downloading android player API JSON
+16:55:04,455 root WARNING [youtube] Cannot parse localized time text "Jul 26, 2018"
+16:55:04,711 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+16:55:04,711 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+16:57:25,321 root DEBUG [youtube] Extracting URL: FKiF2ZA7OA0
+16:57:25,322 root DEBUG [youtube] FKiF2ZA7OA0: Downloading webpage
+16:57:25,959 root DEBUG [youtube] FKiF2ZA7OA0: Downloading android player API JSON
+16:57:26,181 root WARNING [youtube] Cannot parse localized time text "May 16, 2019"
+16:57:26,201 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+16:57:26,201 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 41423
+16:59:05,782 root INFO starting...
+16:59:05,978 eyed3 DEBUG eyeD3 version 0.9.7
+16:59:06,186 asyncio DEBUG Using selector: EpollSelector
+16:59:48,173 root DEBUG [youtube] Extracting URL: hgXZQfHySDw
+16:59:48,173 root DEBUG [youtube] hgXZQfHySDw: Downloading webpage
+16:59:48,814 root DEBUG [youtube] hgXZQfHySDw: Downloading android player API JSON
+16:59:49,621 root WARNING [youtube] Cannot parse localized time text "May 3, 2018"
+16:59:49,655 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+16:59:49,655 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 7075
+16:59:50,665 root DEBUG [youtube] Extracting URL: NbrEKkQd-eE
+16:59:50,665 root DEBUG [youtube] NbrEKkQd-eE: Downloading webpage
+16:59:51,242 root DEBUG [youtube] NbrEKkQd-eE: Downloading android player API JSON
+16:59:51,443 root DEBUG [youtube] NbrEKkQd-eE: Downloading MPD manifest
+16:59:51,851 root WARNING [youtube] Cannot parse localized time text "Dec 17, 2016"
+16:59:52,82 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+16:59:52,83 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 37893
+16:59:57,154 root DEBUG [youtube] Extracting URL: S0xVpBdlzig
+16:59:57,154 root DEBUG [youtube] S0xVpBdlzig: Downloading webpage
+16:59:57,711 root DEBUG [youtube] S0xVpBdlzig: Downloading android player API JSON
+16:59:57,891 root DEBUG [youtube] S0xVpBdlzig: Downloading MPD manifest
+16:59:58,258 root WARNING [youtube] Cannot parse localized time text "Dec 17, 2016"
+16:59:58,497 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+16:59:58,497 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+17:02:04,221 root DEBUG [youtube] Extracting URL: 9ISCO8lYi7E
+17:02:04,221 root DEBUG [youtube] 9ISCO8lYi7E: Downloading webpage
+17:02:04,778 root DEBUG [youtube] 9ISCO8lYi7E: Downloading android player API JSON
+17:02:04,979 root DEBUG [youtube] 9ISCO8lYi7E: Downloading MPD manifest
+17:02:05,367 root WARNING [youtube] Cannot parse localized time text "Dec 17, 2016"
+17:02:05,648 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:02:05,649 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+17:03:34,498 root INFO starting...
+17:03:34,692 eyed3 DEBUG eyeD3 version 0.9.7
+17:03:34,900 asyncio DEBUG Using selector: EpollSelector
+17:03:37,895 root DEBUG [youtube] Extracting URL: An4kjnz6d3Q
+17:03:37,896 root DEBUG [youtube] An4kjnz6d3Q: Downloading webpage
+17:03:38,529 root DEBUG [youtube] An4kjnz6d3Q: Downloading android player API JSON
+17:03:38,787 root WARNING [youtube] Cannot parse localized time text "Aug 6, 2019"
+17:03:38,813 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:03:38,813 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 13504
+17:03:39,412 root DEBUG [youtube] Extracting URL: NbrEKkQd-eE
+17:03:39,412 root DEBUG [youtube] NbrEKkQd-eE: Downloading webpage
+17:03:39,947 root DEBUG [youtube] NbrEKkQd-eE: Downloading android player API JSON
+17:03:40,129 root DEBUG [youtube] NbrEKkQd-eE: Downloading MPD manifest
+17:03:40,464 root WARNING [youtube] Cannot parse localized time text "Dec 17, 2016"
+17:03:40,496 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:03:40,496 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 37893
+17:03:45,259 root DEBUG [youtube] Extracting URL: S0xVpBdlzig
+17:03:45,259 root DEBUG [youtube] S0xVpBdlzig: Downloading webpage
+17:03:45,749 root DEBUG [youtube] S0xVpBdlzig: Downloading android player API JSON
+17:03:45,933 root DEBUG [youtube] S0xVpBdlzig: Downloading MPD manifest
+17:03:46,246 root WARNING [youtube] Cannot parse localized time text "Dec 17, 2016"
+17:03:46,267 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:03:46,268 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 37893
+17:06:31,214 root DEBUG [youtube] Extracting URL: 9ISCO8lYi7E
+17:06:31,214 root DEBUG [youtube] 9ISCO8lYi7E: Downloading webpage
+17:06:31,679 root DEBUG [youtube] 9ISCO8lYi7E: Downloading android player API JSON
+17:06:31,842 root DEBUG [youtube] 9ISCO8lYi7E: Downloading MPD manifest
+17:06:32,170 root WARNING [youtube] Cannot parse localized time text "Dec 17, 2016"
+17:06:32,189 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:06:32,190 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 37893
+17:08:28,156 root DEBUG [youtube] Extracting URL: zVdHX7Jk5p0
+17:08:28,156 root DEBUG [youtube] zVdHX7Jk5p0: Downloading webpage
+17:08:28,693 root DEBUG [youtube] zVdHX7Jk5p0: Downloading android player API JSON
+17:08:28,874 root DEBUG [youtube] zVdHX7Jk5p0: Downloading MPD manifest
+17:08:29,210 root WARNING [youtube] Cannot parse localized time text "Dec 17, 2016"
+17:08:29,476 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:08:29,476 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 37893
+17:10:36,458 root DEBUG [youtube] Extracting URL: ba0Gd31F0s8
+17:10:36,458 root DEBUG [youtube] ba0Gd31F0s8: Downloading webpage
+17:10:36,945 root DEBUG [youtube] ba0Gd31F0s8: Downloading android player API JSON
+17:10:37,129 root DEBUG [youtube] ba0Gd31F0s8: Downloading MPD manifest
+17:10:37,510 root WARNING [youtube] Cannot parse localized time text "Dec 17, 2016"
+17:10:37,762 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:10:37,762 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 37893
+17:12:54,880 root DEBUG [youtube] Extracting URL: _MwyQA2DiWc
+17:12:54,881 root DEBUG [youtube] _MwyQA2DiWc: Downloading webpage
+17:12:55,388 root DEBUG [youtube] _MwyQA2DiWc: Downloading android player API JSON
+17:12:55,574 root DEBUG [youtube] _MwyQA2DiWc: Downloading MPD manifest
+17:12:56,32 root WARNING [youtube] Cannot parse localized time text "Dec 17, 2016"
+17:12:56,298 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:12:56,299 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 37895
+17:15:19,684 root DEBUG [youtube] Extracting URL: IVKi2AIL3dU
+17:15:19,684 root DEBUG [youtube] IVKi2AIL3dU: Downloading webpage
+17:15:20,145 root DEBUG [youtube] IVKi2AIL3dU: Downloading android player API JSON
+17:15:20,335 root DEBUG [youtube] IVKi2AIL3dU: Downloading MPD manifest
+17:15:20,682 root WARNING [youtube] Cannot parse localized time text "Dec 17, 2016"
+17:15:20,945 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:15:20,946 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+17:15:31,181 root DEBUG [youtube] Extracting URL: scSKx0o0Ulw
+17:15:31,182 root DEBUG [youtube] scSKx0o0Ulw: Downloading webpage
+17:15:31,670 root DEBUG [youtube] scSKx0o0Ulw: Downloading android player API JSON
+17:15:31,860 root DEBUG [youtube] scSKx0o0Ulw: Downloading MPD manifest
+17:15:32,162 root WARNING [youtube] Cannot parse localized time text "Dec 17, 2016"
+17:15:32,420 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:15:32,421 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+17:15:35,442 root DEBUG [youtube] Extracting URL: S0xVpBdlzig
+17:15:35,442 root DEBUG [youtube] S0xVpBdlzig: Downloading webpage
+17:15:35,885 root DEBUG [youtube] S0xVpBdlzig: Downloading android player API JSON
+17:15:36,40 root DEBUG [youtube] S0xVpBdlzig: Downloading MPD manifest
+17:15:36,263 root WARNING [youtube] Cannot parse localized time text "Dec 17, 2016"
+17:15:36,287 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:15:36,288 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 37893
+17:17:56,346 root DEBUG [youtube] Extracting URL: 9ISCO8lYi7E
+17:17:56,347 root DEBUG [youtube] 9ISCO8lYi7E: Downloading webpage
+17:17:57,168 root DEBUG [youtube] 9ISCO8lYi7E: Downloading android player API JSON
+17:17:57,372 root DEBUG [youtube] 9ISCO8lYi7E: Downloading MPD manifest
+17:17:57,635 root WARNING [youtube] Cannot parse localized time text "Dec 17, 2016"
+17:17:57,658 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:17:57,658 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 37893
+17:20:32,32 root DEBUG [youtube] Extracting URL: zVdHX7Jk5p0
+17:20:32,32 root DEBUG [youtube] zVdHX7Jk5p0: Downloading webpage
+17:20:32,572 root DEBUG [youtube] zVdHX7Jk5p0: Downloading android player API JSON
+17:20:32,814 root DEBUG [youtube] zVdHX7Jk5p0: Downloading MPD manifest
+17:20:33,145 root WARNING [youtube] Cannot parse localized time text "Dec 17, 2016"
+17:20:33,169 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:20:33,169 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 37893
+17:20:41,657 root INFO starting...
+17:20:41,853 eyed3 DEBUG eyeD3 version 0.9.7
+17:20:42,61 asyncio DEBUG Using selector: EpollSelector
+17:20:44,972 root DEBUG [youtube] Extracting URL: Nglr2WV8mw0
+17:20:44,973 root DEBUG [youtube] Nglr2WV8mw0: Downloading webpage
+17:20:45,763 root DEBUG [youtube] Nglr2WV8mw0: Downloading android player API JSON
+17:20:46,9 root WARNING [youtube] Cannot parse localized time text "Apr 21, 2020"
+17:20:46,248 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:20:46,248 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 36289
+17:20:48,319 root DEBUG [youtube] Extracting URL: VN0NhkMiFK8
+17:20:48,319 root DEBUG [youtube] VN0NhkMiFK8: Downloading webpage
+17:20:48,862 root DEBUG [youtube] VN0NhkMiFK8: Downloading android player API JSON
+17:20:49,33 root WARNING [youtube] Cannot parse localized time text "Apr 21, 2020"
+17:20:49,286 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:20:49,287 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+17:20:53,709 root DEBUG [youtube] Extracting URL: JcDS50t9zJ0
+17:20:53,709 root DEBUG [youtube] JcDS50t9zJ0: Downloading webpage
+17:20:54,267 root DEBUG [youtube] JcDS50t9zJ0: Downloading android player API JSON
+17:20:54,833 root WARNING [youtube] Cannot parse localized time text "Feb 11, 2021"
+17:20:55,68 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): img.youtube.com:443
+17:20:55,317 urllib3.connectionpool DEBUG https://img.youtube.com:443 "GET /vi/JcDS50t9zJ0/hqdefault.jpg HTTP/1.1" 200 25978
+17:21:02,193 root DEBUG [youtube] Extracting URL: 49fmKxcT9rk
+17:21:02,194 root DEBUG [youtube] 49fmKxcT9rk: Downloading webpage
+17:21:02,717 root DEBUG [youtube] 49fmKxcT9rk: Downloading android player API JSON
+17:21:02,938 root WARNING [youtube] Cannot parse localized time text "Oct 28, 2015"
+17:21:03,179 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): img.youtube.com:443
+17:21:03,397 urllib3.connectionpool DEBUG https://img.youtube.com:443 "GET /vi/49fmKxcT9rk/hqdefault.jpg HTTP/1.1" 200 11680
+17:21:10,140 root DEBUG [youtube] Extracting URL: NYe4PJwQcjo
+17:21:10,140 root DEBUG [youtube] NYe4PJwQcjo: Downloading webpage
+17:21:10,822 root DEBUG [youtube] NYe4PJwQcjo: Downloading android player API JSON
+17:21:11,0 root DEBUG [youtube] NYe4PJwQcjo: Downloading MPD manifest
+17:21:11,411 root WARNING [youtube] Cannot parse localized time text "Nov 27, 2020"
+17:21:11,433 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:21:11,433 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 52274
+17:23:12,777 root DEBUG [youtube] Extracting URL: nAX_dT-S1EI
+17:23:12,777 root DEBUG [youtube] nAX_dT-S1EI: Downloading webpage
+17:23:13,430 root DEBUG [youtube] nAX_dT-S1EI: Downloading android player API JSON
+17:23:13,603 root WARNING [youtube] Cannot parse localized time text "Oct 17, 2020"
+17:23:13,874 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:23:13,875 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 15882
+17:27:20,86 root DEBUG [youtube] Extracting URL: NdjANTGKwxg
+17:27:20,86 root DEBUG [youtube] NdjANTGKwxg: Downloading webpage
+17:27:20,747 root DEBUG [youtube] NdjANTGKwxg: Downloading android player API JSON
+17:27:20,965 root WARNING [youtube] Cannot parse localized time text "Apr 15, 2021"
+17:27:21,579 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:27:21,581 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+17:27:30,423 root DEBUG [youtube] Extracting URL: XWGx6BG-xMI
+17:27:30,423 root DEBUG [youtube] XWGx6BG-xMI: Downloading webpage
+17:27:31,14 root DEBUG [youtube] XWGx6BG-xMI: Downloading android player API JSON
+17:27:31,237 root WARNING [youtube] Cannot parse localized time text "Aug 17, 2021"
+17:27:31,514 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): img.youtube.com:443
+17:27:31,700 urllib3.connectionpool DEBUG https://img.youtube.com:443 "GET /vi/XWGx6BG-xMI/hqdefault.jpg HTTP/1.1" 200 6103
+17:27:47,728 root DEBUG [youtube] Extracting URL: Z_lzERHyWFI
+17:27:47,729 root DEBUG [youtube] Z_lzERHyWFI: Downloading webpage
+17:27:48,356 root DEBUG [youtube] Z_lzERHyWFI: Downloading android player API JSON
+17:27:48,522 root DEBUG [youtube] Z_lzERHyWFI: Downloading MPD manifest
+17:27:48,930 root WARNING [youtube] Cannot parse localized time text "Oct 14, 2020"
+17:27:49,182 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:27:49,183 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 41805
+17:27:52,828 root DEBUG [youtube] Extracting URL: nybwfs5jh1M
+17:27:52,828 root DEBUG [youtube] nybwfs5jh1M: Downloading webpage
+17:27:53,520 root DEBUG [youtube] nybwfs5jh1M: Downloading android player API JSON
+17:27:53,742 root DEBUG [youtube] nybwfs5jh1M: Downloading player 6f20102c
+17:27:54,226 root WARNING [youtube] nybwfs5jh1M: nsig extraction failed: You may experience throttling for some formats
+         Install PhantomJS to workaround the issue. Please download it from https://phantomjs.org/download.html
+         n = zJa8h4V4intQEZ ; player = https://www.youtube.com/s/player/6f20102c/player_ias.vflset/en_US/base.js
+17:27:54,240 root WARNING [youtube] Cannot parse localized time text "Apr 12, 2022"
+17:27:54,447 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): img.youtube.com:443
+17:27:54,659 urllib3.connectionpool DEBUG https://img.youtube.com:443 "GET /vi/nybwfs5jh1M/hqdefault.jpg HTTP/1.1" 200 7348
+17:28:02,150 root DEBUG [youtube] Extracting URL: pIZ0QRWK0zg
+17:28:02,150 root DEBUG [youtube] pIZ0QRWK0zg: Downloading webpage
+17:28:02,772 root DEBUG [youtube] pIZ0QRWK0zg: Downloading android player API JSON
+17:28:03,563 root WARNING [youtube] Cannot parse localized time text "Premiered Dec 30, 2021"
+17:28:03,785 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:28:03,785 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+17:28:21,382 root DEBUG [youtube] Extracting URL: mK5JrLhafMg
+17:28:21,383 root DEBUG [youtube] mK5JrLhafMg: Downloading webpage
+17:28:21,972 root DEBUG [youtube] mK5JrLhafMg: Downloading android player API JSON
+17:28:22,245 root WARNING [youtube] Cannot parse localized time text "Mar 27, 2020"
+17:28:22,460 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:28:22,461 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+17:31:37,110 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:31:37,110 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 35161
+17:31:45,233 root DEBUG [youtube] Extracting URL: mK5JrLhafMg
+17:31:45,233 root DEBUG [youtube] mK5JrLhafMg: Downloading webpage
+17:31:45,914 root DEBUG [youtube] mK5JrLhafMg: Downloading android player API JSON
+17:31:46,164 root WARNING [youtube] Cannot parse localized time text "Mar 27, 2020"
+17:31:46,184 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:31:46,185 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 35161
+17:31:50,842 root DEBUG [youtube] Extracting URL: v2n5JtWGAbY
+17:31:50,843 root DEBUG [youtube] v2n5JtWGAbY: Downloading webpage
+17:31:51,473 root DEBUG [youtube] v2n5JtWGAbY: Downloading android player API JSON
+17:31:51,734 root WARNING [youtube] Cannot parse localized time text "Dec 25, 2021"
+17:31:51,965 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:31:51,965 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+17:34:17,564 root DEBUG [youtube] Extracting URL: gKIbnKGS4sA
+17:34:17,565 root DEBUG [youtube] gKIbnKGS4sA: Downloading webpage
+17:34:18,145 root DEBUG [youtube] gKIbnKGS4sA: Downloading android player API JSON
+17:34:18,358 root WARNING [youtube] Cannot parse localized time text "Apr 9, 2021"
+17:34:18,638 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): img.youtube.com:443
+17:34:18,851 urllib3.connectionpool DEBUG https://img.youtube.com:443 "GET /vi/gKIbnKGS4sA/hqdefault.jpg HTTP/1.1" 200 27975
+17:35:42,342 root INFO starting...
+17:35:42,585 eyed3 DEBUG eyeD3 version 0.9.7
+17:35:42,717 asyncio DEBUG Using selector: EpollSelector
+17:35:45,682 root DEBUG [youtube] Extracting URL: PsoJNBWkKWQ
+17:35:45,691 root DEBUG [youtube] PsoJNBWkKWQ: Downloading webpage
+17:35:46,571 root DEBUG [youtube] PsoJNBWkKWQ: Downloading android player API JSON
+17:35:46,822 root WARNING [youtube] Cannot parse localized time text "May 23, 2020"
+17:35:46,855 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:35:46,858 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 21109
+17:35:57,115 root DEBUG [youtube] Extracting URL: An4kjnz6d3Q
+17:35:57,118 root DEBUG [youtube] An4kjnz6d3Q: Downloading webpage
+17:35:57,720 root DEBUG [youtube] An4kjnz6d3Q: Downloading android player API JSON
+17:35:57,971 root WARNING [youtube] Cannot parse localized time text "Aug 6, 2019"
+17:35:57,991 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:35:57,995 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 13504
+17:36:51,418 root DEBUG [youtube] Extracting URL: y6KiGfcjYO8
+17:36:51,422 root DEBUG [youtube] y6KiGfcjYO8: Downloading webpage
+17:36:52,73 root DEBUG [youtube] y6KiGfcjYO8: Downloading android player API JSON
+17:36:52,347 root WARNING [youtube] Cannot parse localized time text "Aug 7, 2019"
+17:36:52,674 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:36:52,689 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+17:38:05,767 root DEBUG [youtube] Extracting URL: 1dljNncvk5o
+17:38:05,772 root DEBUG [youtube] 1dljNncvk5o: Downloading webpage
+17:38:06,443 root DEBUG [youtube] 1dljNncvk5o: Downloading android player API JSON
+17:38:07,220 root WARNING [youtube] Cannot parse localized time text "Aug 7, 2019"
+17:38:07,524 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:38:07,535 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+17:39:05,332 root DEBUG [youtube] Extracting URL: lGwo1q2SlNY
+17:39:05,334 root DEBUG [youtube] lGwo1q2SlNY: Downloading webpage
+17:39:06,10 root DEBUG [youtube] lGwo1q2SlNY: Downloading android player API JSON
+17:39:06,236 root DEBUG [youtube] lGwo1q2SlNY: Downloading MPD manifest
+17:39:06,717 root WARNING [youtube] Cannot parse localized time text "Aug 7, 2019"
+17:39:07,6 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:39:07,58 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+17:39:10,408 root DEBUG [youtube] Extracting URL: -n3CX-yMVqU
+17:39:10,411 root DEBUG [youtube] -n3CX-yMVqU: Downloading webpage
+17:39:11,70 root DEBUG [youtube] -n3CX-yMVqU: Downloading android player API JSON
+17:39:11,404 root WARNING [youtube] Cannot parse localized time text "Aug 8, 2019"
+17:39:11,669 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:39:11,675 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+17:39:14,436 root DEBUG [youtube] Extracting URL: M-0TB9JMpdE
+17:39:14,439 root DEBUG [youtube] M-0TB9JMpdE: Downloading webpage
+17:39:15,100 root DEBUG [youtube] M-0TB9JMpdE: Downloading android player API JSON
+17:39:15,375 root WARNING [youtube] Cannot parse localized time text "Apr 20, 2020"
+17:39:15,629 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:39:15,681 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 40122
+17:39:19,495 root DEBUG [youtube] Extracting URL: NbrEKkQd-eE
+17:39:19,511 root DEBUG [youtube] NbrEKkQd-eE: Downloading webpage
+17:39:20,61 root DEBUG [youtube] NbrEKkQd-eE: Downloading android player API JSON
+17:39:20,334 root DEBUG [youtube] NbrEKkQd-eE: Downloading MPD manifest
+17:39:20,710 root WARNING [youtube] Cannot parse localized time text "Dec 17, 2016"
+17:39:20,732 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:39:20,735 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 37893
+17:39:30,802 root DEBUG [youtube] Extracting URL: NYe4PJwQcjo
+17:39:30,805 root DEBUG [youtube] NYe4PJwQcjo: Downloading webpage
+17:39:31,451 root DEBUG [youtube] NYe4PJwQcjo: Downloading android player API JSON
+17:39:31,678 root DEBUG [youtube] NYe4PJwQcjo: Downloading MPD manifest
+17:39:31,976 root WARNING [youtube] Cannot parse localized time text "Nov 27, 2020"
+17:39:32,12 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:39:32,15 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 52274
+17:41:44,404 root DEBUG [youtube] Extracting URL: nAX_dT-S1EI
+17:41:44,415 root DEBUG [youtube] nAX_dT-S1EI: Downloading webpage
+17:41:45,50 root DEBUG [youtube] nAX_dT-S1EI: Downloading android player API JSON
+17:41:45,258 root WARNING [youtube] Cannot parse localized time text "Oct 17, 2020"
+17:41:45,285 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:41:45,290 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 15882
+17:42:24,339 root INFO starting...
+17:42:24,574 eyed3 DEBUG eyeD3 version 0.9.7
+17:42:24,799 asyncio DEBUG Using selector: EpollSelector
+17:42:31,908 root INFO starting...
+17:42:32,124 eyed3 DEBUG eyeD3 version 0.9.7
+17:42:32,270 asyncio DEBUG Using selector: EpollSelector
+17:42:51,943 root INFO starting...
+17:42:52,161 eyed3 DEBUG eyeD3 version 0.9.7
+17:42:52,329 asyncio DEBUG Using selector: EpollSelector
+17:42:57,857 root DEBUG [youtube] Extracting URL: OuYA_siR8Hc
+17:42:57,861 root DEBUG [youtube] OuYA_siR8Hc: Downloading webpage
+17:42:58,390 root DEBUG [youtube] OuYA_siR8Hc: Downloading android player API JSON
+17:42:58,639 root WARNING [youtube] Cannot parse localized time text "Oct 21, 2021"
+17:42:58,672 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:42:58,675 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 12000
+17:43:02,985 root DEBUG [youtube] Extracting URL: TzcwvQ0MDCo
+17:43:03,3 root DEBUG [youtube] TzcwvQ0MDCo: Downloading webpage
+17:43:03,548 root DEBUG [youtube] TzcwvQ0MDCo: Downloading android player API JSON
+17:43:03,770 root WARNING [youtube] Cannot parse localized time text "Oct 21, 2021"
+17:43:03,999 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:43:04,4 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+17:43:11,301 root DEBUG [soundcloud] Extracting URL: https://soundcloud.com/itsmeneedle/get-there
+17:43:11,305 root DEBUG [soundcloud] itsmeneedle/get-there: Downloading info JSON
+17:43:11,720 root DEBUG [soundcloud] 660478820: Downloading JSON metadata
+17:43:12,92 root DEBUG [soundcloud] 660478820: Downloading JSON metadata
+17:43:12,512 root DEBUG [soundcloud] 660478820: Downloading JSON metadata
+17:43:13,113 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:43:13,139 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+17:43:15,774 root DEBUG [soundcloud] Extracting URL: https://soundcloud.com/wearestereofox/sebastian-kamae-bless-you-ft-king-khamen
+17:43:15,778 root DEBUG [soundcloud] wearestereofox/sebastian-kamae-bless-you-ft-king-khamen: Downloading info JSON
+17:43:16,169 root DEBUG [soundcloud] 328826007: Downloading JSON metadata
+17:43:16,551 root DEBUG [soundcloud] 328826007: Downloading JSON metadata
+17:43:16,933 root DEBUG [soundcloud] 328826007: Downloading JSON metadata
+17:43:17,489 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:43:17,492 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+17:45:37,763 root DEBUG [soundcloud] Extracting URL: https://soundcloud.com/ivoryrasmus/not-holding-back-2
+17:45:37,765 root DEBUG [soundcloud] ivoryrasmus/not-holding-back-2: Downloading info JSON
+17:45:38,214 root DEBUG [soundcloud] 417158148: Downloading JSON metadata
+17:45:38,574 root DEBUG [soundcloud] 417158148: Downloading JSON metadata
+17:45:38,973 root DEBUG [soundcloud] 417158148: Downloading JSON metadata
+17:45:39,611 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:45:39,613 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+17:46:35,411 root DEBUG [youtube] Extracting URL: FQHi0RI2BdA
+17:46:35,425 root DEBUG [youtube] FQHi0RI2BdA: Downloading webpage
+17:46:36,99 root DEBUG [youtube] FQHi0RI2BdA: Downloading android player API JSON
+17:46:36,375 root WARNING [youtube] Cannot parse localized time text "Jul 1, 2020"
+17:46:36,646 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:46:36,682 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 44012
+17:48:57,291 root INFO starting...
+17:48:57,500 eyed3 DEBUG eyeD3 version 0.9.7
+17:48:57,715 asyncio DEBUG Using selector: EpollSelector
+17:49:33,823 root INFO starting...
+17:49:34,39 eyed3 DEBUG eyeD3 version 0.9.7
+17:49:34,254 asyncio DEBUG Using selector: EpollSelector
+17:49:48,665 root INFO starting...
+17:49:48,883 eyed3 DEBUG eyeD3 version 0.9.7
+17:49:49,97 asyncio DEBUG Using selector: EpollSelector
+17:50:03,347 root INFO starting...
+17:50:03,551 eyed3 DEBUG eyeD3 version 0.9.7
+17:50:03,771 asyncio DEBUG Using selector: EpollSelector
+17:50:07,647 root INFO starting...
+17:50:07,861 eyed3 DEBUG eyeD3 version 0.9.7
+17:50:08,73 asyncio DEBUG Using selector: EpollSelector
+17:50:40,668 root INFO starting...
+17:50:40,888 eyed3 DEBUG eyeD3 version 0.9.7
+17:50:41,53 asyncio DEBUG Using selector: EpollSelector
+17:51:42,566 root INFO starting...
+17:51:42,815 eyed3 DEBUG eyeD3 version 0.9.7
+17:51:43,23 asyncio DEBUG Using selector: EpollSelector
+17:51:53,163 root INFO starting...
+17:51:53,461 eyed3 DEBUG eyeD3 version 0.9.7
+17:51:53,699 asyncio DEBUG Using selector: EpollSelector
+17:52:04,472 pylast INFO auth.getToken
+17:52:04,479 httpx DEBUG load_ssl_context verify=<ssl.SSLContext object at 0x7fa326ff63c0> cert=None trust_env=True http2=False
+17:52:04,494 httpcore DEBUG connection.connect_tcp.started host='ws.audioscrobbler.com' port=443 local_address=None timeout=5.0
+17:52:04,566 httpcore DEBUG connection.connect_tcp.complete return_value=<httpcore.backends.sync.SyncStream object at 0x7fa3263ae590>
+17:52:04,604 httpcore DEBUG connection.start_tls.started ssl_context=<ssl.SSLContext object at 0x7fa326ff63c0> server_hostname='ws.audioscrobbler.com' timeout=5.0
+17:52:04,659 httpcore DEBUG connection.start_tls.complete return_value=<httpcore.backends.sync.SyncStream object at 0x7fa3263ae5c0>
+17:52:04,710 httpcore DEBUG http11.send_request_headers.started request=<Request [b'POST']>
+17:52:04,714 httpcore DEBUG http11.send_request_headers.complete
+17:52:04,717 httpcore DEBUG http11.send_request_body.started request=<Request [b'POST']>
+17:52:04,720 httpcore DEBUG http11.send_request_body.complete
+17:52:04,723 httpcore DEBUG http11.receive_response_headers.started request=<Request [b'POST']>
+17:52:04,924 httpcore DEBUG http11.receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'openresty/1.13.6.2'), (b'Date', b'Tue, 18 Apr 2023 14:52:04 GMT'), (b'Content-Type', b'text/xml; charset=UTF-8'), (b'content-length', b'114'), (b'Access-Control-Allow-Methods', b'POST, GET, OPTIONS'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Max-Age', b'86400'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000')])
+17:52:04,929 httpx INFO HTTP Request: POST https://ws.audioscrobbler.com/2.0/ "HTTP/1.1 200 OK"
+17:52:04,932 httpcore DEBUG http11.receive_response_body.started request=<Request [b'POST']>
+17:52:04,934 httpcore DEBUG http11.receive_response_body.complete
+17:52:04,936 httpcore DEBUG http11.response_closed.started
+17:52:04,939 httpcore DEBUG http11.response_closed.complete
+17:52:04,942 pylast DEBUG <?xml version="1.0" ?>
+<lfm status="ok">
+	
+  
+	<token>7Oq_Nu09lqGDlMG04P_SbwJb9xrzgs4H</token>
+	
+
+</lfm>
+
+17:52:04,946 httpcore DEBUG connection.close.started
+17:52:04,950 httpcore DEBUG connection.close.complete
+17:52:05,127 pylast INFO auth.getSession
+17:52:05,161 httpx DEBUG load_ssl_context verify=<ssl.SSLContext object at 0x7fa326ff63c0> cert=None trust_env=True http2=False
+17:52:05,166 httpcore DEBUG connection.connect_tcp.started host='ws.audioscrobbler.com' port=443 local_address=None timeout=5.0
+17:52:05,190 httpcore DEBUG connection.connect_tcp.complete return_value=<httpcore.backends.sync.SyncStream object at 0x7fa3264015d0>
+17:52:05,194 httpcore DEBUG connection.start_tls.started ssl_context=<ssl.SSLContext object at 0x7fa326ff63c0> server_hostname='ws.audioscrobbler.com' timeout=5.0
+17:52:05,243 httpcore DEBUG connection.start_tls.complete return_value=<httpcore.backends.sync.SyncStream object at 0x7fa3264015a0>
+17:52:05,245 httpcore DEBUG http11.send_request_headers.started request=<Request [b'POST']>
+17:52:05,248 httpcore DEBUG http11.send_request_headers.complete
+17:52:05,251 httpcore DEBUG http11.send_request_body.started request=<Request [b'POST']>
+17:52:05,255 httpcore DEBUG http11.send_request_body.complete
+17:52:05,269 httpcore DEBUG http11.receive_response_headers.started request=<Request [b'POST']>
+17:52:05,479 httpcore DEBUG http11.receive_response_headers.complete return_value=(b'HTTP/1.1', 403, b'Forbidden', [(b'Server', b'openresty/1.13.6.2'), (b'Date', b'Tue, 18 Apr 2023 14:52:05 GMT'), (b'Content-Type', b'text/xml; charset=UTF-8'), (b'content-length', b'151'), (b'Access-Control-Allow-Methods', b'POST, GET, OPTIONS'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Max-Age', b'86400'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000')])
+17:52:05,481 httpx INFO HTTP Request: POST https://ws.audioscrobbler.com/2.0/ "HTTP/1.1 403 Forbidden"
+17:52:05,484 httpcore DEBUG http11.receive_response_body.started request=<Request [b'POST']>
+17:52:05,486 httpcore DEBUG http11.receive_response_body.complete
+17:52:05,489 httpcore DEBUG http11.response_closed.started
+17:52:05,491 httpcore DEBUG http11.response_closed.complete
+17:52:05,494 pylast DEBUG <?xml version="1.0" ?>
+<lfm status="failed">
+	
+  
+	<error code="14">Unauthorized Token - This token has not been authorized</error>
+	
+
+</lfm>
+
+17:52:05,495 httpcore DEBUG connection.close.started
+17:52:05,497 httpcore DEBUG connection.close.complete
+17:52:06,500 pylast INFO auth.getSession
+17:52:06,506 httpx DEBUG load_ssl_context verify=<ssl.SSLContext object at 0x7fa326ff63c0> cert=None trust_env=True http2=False
+17:52:06,509 httpcore DEBUG connection.connect_tcp.started host='ws.audioscrobbler.com' port=443 local_address=None timeout=5.0
+17:52:06,535 httpcore DEBUG connection.connect_tcp.complete return_value=<httpcore.backends.sync.SyncStream object at 0x7fa3264026b0>
+17:52:06,539 httpcore DEBUG connection.start_tls.started ssl_context=<ssl.SSLContext object at 0x7fa326ff63c0> server_hostname='ws.audioscrobbler.com' timeout=5.0
+17:52:06,591 httpcore DEBUG connection.start_tls.complete return_value=<httpcore.backends.sync.SyncStream object at 0x7fa326402680>
+17:52:06,593 httpcore DEBUG http11.send_request_headers.started request=<Request [b'POST']>
+17:52:06,595 httpcore DEBUG http11.send_request_headers.complete
+17:52:06,597 httpcore DEBUG http11.send_request_body.started request=<Request [b'POST']>
+17:52:06,599 httpcore DEBUG http11.send_request_body.complete
+17:52:06,601 httpcore DEBUG http11.receive_response_headers.started request=<Request [b'POST']>
+17:52:06,833 httpcore DEBUG http11.receive_response_headers.complete return_value=(b'HTTP/1.1', 403, b'Forbidden', [(b'Server', b'openresty/1.13.6.2'), (b'Date', b'Tue, 18 Apr 2023 14:52:06 GMT'), (b'Content-Type', b'text/xml; charset=UTF-8'), (b'content-length', b'151'), (b'Access-Control-Allow-Methods', b'POST, GET, OPTIONS'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Max-Age', b'86400'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000')])
+17:52:06,839 httpx INFO HTTP Request: POST https://ws.audioscrobbler.com/2.0/ "HTTP/1.1 403 Forbidden"
+17:52:06,849 httpcore DEBUG http11.receive_response_body.started request=<Request [b'POST']>
+17:52:06,858 httpcore DEBUG http11.receive_response_body.complete
+17:52:06,867 httpcore DEBUG http11.response_closed.started
+17:52:06,884 httpcore DEBUG http11.response_closed.complete
+17:52:06,896 pylast DEBUG <?xml version="1.0" ?>
+<lfm status="failed">
+	
+  
+	<error code="14">Unauthorized Token - This token has not been authorized</error>
+	
+
+</lfm>
+
+17:52:06,902 httpcore DEBUG connection.close.started
+17:52:06,911 httpcore DEBUG connection.close.complete
+17:52:07,917 pylast INFO auth.getSession
+17:52:07,921 httpx DEBUG load_ssl_context verify=<ssl.SSLContext object at 0x7fa326ff63c0> cert=None trust_env=True http2=False
+17:52:07,924 httpcore DEBUG connection.connect_tcp.started host='ws.audioscrobbler.com' port=443 local_address=None timeout=5.0
+17:52:07,949 httpcore DEBUG connection.connect_tcp.complete return_value=<httpcore.backends.sync.SyncStream object at 0x7fa326401750>
+17:52:07,951 httpcore DEBUG connection.start_tls.started ssl_context=<ssl.SSLContext object at 0x7fa326ff63c0> server_hostname='ws.audioscrobbler.com' timeout=5.0
+17:52:08,2 httpcore DEBUG connection.start_tls.complete return_value=<httpcore.backends.sync.SyncStream object at 0x7fa3264017e0>
+17:52:08,4 httpcore DEBUG http11.send_request_headers.started request=<Request [b'POST']>
+17:52:08,6 httpcore DEBUG http11.send_request_headers.complete
+17:52:08,9 httpcore DEBUG http11.send_request_body.started request=<Request [b'POST']>
+17:52:08,11 httpcore DEBUG http11.send_request_body.complete
+17:52:08,13 httpcore DEBUG http11.receive_response_headers.started request=<Request [b'POST']>
+17:52:08,297 httpcore DEBUG http11.receive_response_headers.complete return_value=(b'HTTP/1.1', 403, b'Forbidden', [(b'Server', b'openresty/1.13.6.2'), (b'Date', b'Tue, 18 Apr 2023 14:52:08 GMT'), (b'Content-Type', b'text/xml; charset=UTF-8'), (b'content-length', b'151'), (b'Access-Control-Allow-Methods', b'POST, GET, OPTIONS'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Max-Age', b'86400'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000')])
+17:52:08,320 httpx INFO HTTP Request: POST https://ws.audioscrobbler.com/2.0/ "HTTP/1.1 403 Forbidden"
+17:52:08,323 httpcore DEBUG http11.receive_response_body.started request=<Request [b'POST']>
+17:52:08,327 httpcore DEBUG http11.receive_response_body.complete
+17:52:08,331 httpcore DEBUG http11.response_closed.started
+17:52:08,334 httpcore DEBUG http11.response_closed.complete
+17:52:08,338 pylast DEBUG <?xml version="1.0" ?>
+<lfm status="failed">
+	
+  
+	<error code="14">Unauthorized Token - This token has not been authorized</error>
+	
+
+</lfm>
+
+17:52:08,341 httpcore DEBUG connection.close.started
+17:52:08,344 httpcore DEBUG connection.close.complete
+17:52:09,348 pylast INFO auth.getSession
+17:52:09,353 httpx DEBUG load_ssl_context verify=<ssl.SSLContext object at 0x7fa326ff63c0> cert=None trust_env=True http2=False
+17:52:09,356 httpcore DEBUG connection.connect_tcp.started host='ws.audioscrobbler.com' port=443 local_address=None timeout=5.0
+17:52:09,381 httpcore DEBUG connection.connect_tcp.complete return_value=<httpcore.backends.sync.SyncStream object at 0x7fa326403760>
+17:52:09,384 httpcore DEBUG connection.start_tls.started ssl_context=<ssl.SSLContext object at 0x7fa326ff63c0> server_hostname='ws.audioscrobbler.com' timeout=5.0
+17:52:09,435 httpcore DEBUG connection.start_tls.complete return_value=<httpcore.backends.sync.SyncStream object at 0x7fa326403730>
+17:52:09,452 httpcore DEBUG http11.send_request_headers.started request=<Request [b'POST']>
+17:52:09,455 httpcore DEBUG http11.send_request_headers.complete
+17:52:09,462 httpcore DEBUG http11.send_request_body.started request=<Request [b'POST']>
+17:52:09,464 httpcore DEBUG http11.send_request_body.complete
+17:52:09,467 httpcore DEBUG http11.receive_response_headers.started request=<Request [b'POST']>
+17:52:09,682 httpcore DEBUG http11.receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'openresty/1.13.6.2'), (b'Date', b'Tue, 18 Apr 2023 14:52:09 GMT'), (b'Content-Type', b'text/xml; charset=UTF-8'), (b'content-length', b'197'), (b'Access-Control-Allow-Methods', b'POST, GET, OPTIONS'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Max-Age', b'86400'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000')])
+17:52:09,685 httpx INFO HTTP Request: POST https://ws.audioscrobbler.com/2.0/ "HTTP/1.1 200 OK"
+17:52:09,687 httpcore DEBUG http11.receive_response_body.started request=<Request [b'POST']>
+17:52:09,689 httpcore DEBUG http11.receive_response_body.complete
+17:52:09,693 httpcore DEBUG http11.response_closed.started
+17:52:09,695 httpcore DEBUG http11.response_closed.complete
+17:52:09,697 pylast DEBUG <?xml version="1.0" ?>
+<lfm status="ok">
+	
+  
+	<session>
+		
+    
+		<name>maxsspeaker</name>
+		
+    
+		<key>BKmY6SeU7hC4cJGdhehAthQrO74VA6bY</key>
+		
+    
+		<subscriber>0</subscriber>
+		
+  
+	</session>
+	
+
+</lfm>
+
+17:52:09,701 httpcore DEBUG connection.close.started
+17:52:09,703 httpcore DEBUG connection.close.complete
+17:52:36,331 root INFO starting...
+17:52:36,601 eyed3 DEBUG eyeD3 version 0.9.7
+17:52:36,809 asyncio DEBUG Using selector: EpollSelector
+17:52:39,983 root DEBUG [youtube] Extracting URL: PsoJNBWkKWQ
+17:52:39,986 root DEBUG [youtube] PsoJNBWkKWQ: Downloading webpage
+17:52:40,604 root DEBUG [youtube] PsoJNBWkKWQ: Downloading android player API JSON
+17:52:40,853 root WARNING [youtube] Cannot parse localized time text "May 23, 2020"
+17:52:40,899 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:52:40,902 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 21109
+17:52:43,547 root DEBUG [youtube] Extracting URL: EuVTt-M3IXo
+17:52:43,551 root DEBUG [youtube] EuVTt-M3IXo: Downloading webpage
+17:52:44,333 root DEBUG [youtube] EuVTt-M3IXo: Downloading android player API JSON
+17:52:44,530 root WARNING [youtube] Cannot parse localized time text "Mar 25, 2017"
+17:52:44,585 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:52:44,587 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 44783
+17:55:08,315 root DEBUG [youtube] Extracting URL: 7g1e4p2p9tI
+17:55:08,317 root DEBUG [youtube] 7g1e4p2p9tI: Downloading webpage
+17:55:08,862 root DEBUG [youtube] 7g1e4p2p9tI: Downloading android player API JSON
+17:55:09,88 root WARNING [youtube] Cannot parse localized time text "Aug 9, 2018"
+17:55:09,366 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:55:09,396 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+17:55:16,594 root DEBUG [youtube] Extracting URL: y-3Fm7EMXIM
+17:55:16,642 root DEBUG [youtube] y-3Fm7EMXIM: Downloading webpage
+17:55:17,251 root DEBUG [youtube] y-3Fm7EMXIM: Downloading android player API JSON
+17:55:17,476 root WARNING [youtube] Cannot parse localized time text "Jun 11, 2018"
+17:55:17,719 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:55:17,726 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+17:57:41,713 root DEBUG [soundcloud] Extracting URL: https://soundcloud.com/cocainechrist/cocainejelul-luicidehour
+17:57:41,761 root DEBUG [soundcloud] cocainechrist/cocainejelul-luicidehour: Downloading info JSON
+17:57:42,246 root DEBUG [soundcloud] 168796907: Downloading JSON metadata
+17:57:42,645 root DEBUG [soundcloud] 168796907: Downloading JSON metadata
+17:57:43,50 root DEBUG [soundcloud] 168796907: Downloading JSON metadata
+17:57:43,748 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:57:43,793 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+18:01:12,475 root DEBUG [youtube] Extracting URL: Af1odyCLf9M
+18:01:12,478 root DEBUG [youtube] Af1odyCLf9M: Downloading webpage
+18:01:13,229 root DEBUG [youtube] Af1odyCLf9M: Downloading android player API JSON
+18:01:13,462 root WARNING [youtube] Cannot parse localized time text "Jul 16, 2020"
+18:01:13,772 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+18:01:13,779 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 8192
+18:03:46,607 root INFO starting...
+18:03:46,875 eyed3 DEBUG eyeD3 version 0.9.7
+18:03:47,81 asyncio DEBUG Using selector: EpollSelector
+18:03:50,186 root DEBUG [youtube] Extracting URL: hgXZQfHySDw
+18:03:50,211 root DEBUG [youtube] hgXZQfHySDw: Downloading webpage
+18:03:50,935 root DEBUG [youtube] hgXZQfHySDw: Downloading android player API JSON
+18:03:51,170 root DEBUG [youtube] hgXZQfHySDw: Downloading player 6f20102c
+18:03:51,887 root WARNING [youtube] hgXZQfHySDw: nsig extraction failed: You may experience throttling for some formats
+         Install PhantomJS to workaround the issue. Please download it from https://phantomjs.org/download.html
+         n = NQbRT_5uTc0Ya6 ; player = https://www.youtube.com/s/player/6f20102c/player_ias.vflset/en_US/base.js
+18:03:51,953 root WARNING [youtube] Cannot parse localized time text "May 3, 2018"
+18:03:52,51 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+18:03:52,55 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 7075
+18:04:31,973 root DEBUG [youtube] Extracting URL: 9Va88Kt0NN0
+18:04:31,975 root DEBUG [youtube] 9Va88Kt0NN0: Downloading webpage
+18:04:32,793 root DEBUG [youtube] 9Va88Kt0NN0: Downloading android player API JSON
+18:04:33,555 root WARNING [youtube] Cannot parse localized time text "Apr 23, 2017"
+18:04:33,911 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+18:04:33,913 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 27988
+18:04:45,104 root INFO starting...
+18:04:45,364 eyed3 DEBUG eyeD3 version 0.9.7
+18:04:45,577 asyncio DEBUG Using selector: EpollSelector
+18:04:47,893 root DEBUG [youtube] Extracting URL: PsoJNBWkKWQ
+18:04:47,922 root DEBUG [youtube] PsoJNBWkKWQ: Downloading webpage
+18:04:48,903 root DEBUG [youtube] PsoJNBWkKWQ: Downloading android player API JSON
+18:04:49,163 root WARNING [youtube] Cannot parse localized time text "May 23, 2020"
+18:04:49,223 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+18:04:49,226 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 21109
+18:05:03,612 root INFO starting...
+18:05:03,872 eyed3 DEBUG eyeD3 version 0.9.7
+18:05:04,39 asyncio DEBUG Using selector: EpollSelector
+18:05:14,103 root DEBUG [soundcloud] Extracting URL: https://soundcloud.com/schtiffles/the-cycle
+18:05:14,127 root DEBUG [soundcloud] schtiffles/the-cycle: Downloading info JSON
+18:05:14,584 root DEBUG [soundcloud] 834528376: Downloading JSON metadata
+18:05:15,32 root DEBUG [soundcloud] 834528376: Downloading JSON metadata
+18:05:15,440 root DEBUG [soundcloud] 834528376: Downloading JSON metadata
+18:05:15,883 pylast INFO track.scrobble
+18:05:15,886 httpx DEBUG load_ssl_context verify=<ssl.SSLContext object at 0x7f0cbe5be2c0> cert=None trust_env=True http2=False
+18:05:15,889 httpcore DEBUG connection.connect_tcp.started host='ws.audioscrobbler.com' port=443 local_address=None timeout=5.0
+18:05:15,956 httpcore DEBUG connection.connect_tcp.complete return_value=<httpcore.backends.sync.SyncStream object at 0x7f0c9bccfa00>
+18:05:15,995 httpcore DEBUG connection.start_tls.started ssl_context=<ssl.SSLContext object at 0x7f0cbe5be2c0> server_hostname='ws.audioscrobbler.com' timeout=5.0
+18:05:16,50 httpcore DEBUG connection.start_tls.complete return_value=<httpcore.backends.sync.SyncStream object at 0x7f0c9bccf850>
+18:05:16,105 httpcore DEBUG http11.send_request_headers.started request=<Request [b'POST']>
+18:05:16,109 httpcore DEBUG http11.send_request_headers.complete
+18:05:16,113 httpcore DEBUG http11.send_request_body.started request=<Request [b'POST']>
+18:05:16,118 httpcore DEBUG http11.send_request_body.complete
+18:05:16,122 httpcore DEBUG http11.receive_response_headers.started request=<Request [b'POST']>
+18:05:16,741 httpcore DEBUG http11.receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'openresty/1.13.6.2'), (b'Date', b'Tue, 18 Apr 2023 15:05:16 GMT'), (b'Content-Type', b'text/xml; charset=UTF-8'), (b'content-length', b'414'), (b'Access-Control-Allow-Methods', b'POST, GET, OPTIONS'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Max-Age', b'86400'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000')])
+18:05:16,745 httpx INFO HTTP Request: POST https://ws.audioscrobbler.com/2.0/ "HTTP/1.1 200 OK"
+18:05:16,748 httpcore DEBUG http11.receive_response_body.started request=<Request [b'POST']>
+18:05:16,752 httpcore DEBUG http11.receive_response_body.complete
+18:05:16,757 httpcore DEBUG http11.response_closed.started
+18:05:16,760 httpcore DEBUG http11.response_closed.complete
+18:05:16,765 pylast DEBUG <?xml version="1.0" ?>
+<lfm status="ok">
+	
+  
+	<scrobbles ignored="0" accepted="1">
+		
+    
+		<scrobble>
+			
+      
+			<track corrected="0">The Cycle</track>
+			
+      
+			<artist corrected="0">Schtiffles</artist>
+			
+      
+			<album corrected="0"/>
+			
+      
+			<albumArtist corrected="0"/>
+			
+      
+			<timestamp>1681830315.8836</timestamp>
+			
+      
+			<ignoredMessage code="0"/>
+			
+    
+		</scrobble>
+		
+  
+	</scrobbles>
+	
+
+</lfm>
+
+18:05:16,769 httpcore DEBUG connection.close.started
+18:05:16,773 httpcore DEBUG connection.close.complete
+18:05:16,784 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+18:05:16,787 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 1555
+18:06:02,29 root DEBUG [soundcloud] Extracting URL: https://soundcloud.com/schtiffles/adventures-of-kiki-the-witch
+18:06:02,48 root DEBUG [soundcloud] schtiffles/adventures-of-kiki-the-witch: Downloading info JSON
+18:06:02,515 root DEBUG [soundcloud] 609516897: Downloading JSON metadata
+18:06:02,955 root DEBUG [soundcloud] 609516897: Downloading JSON metadata
+18:06:03,358 root DEBUG [soundcloud] 609516897: Downloading JSON metadata
+18:06:04,6 pylast INFO track.scrobble
+18:06:04,11 httpx DEBUG load_ssl_context verify=<ssl.SSLContext object at 0x7f0cbe5be2c0> cert=None trust_env=True http2=False
+18:06:04,17 httpcore DEBUG connection.connect_tcp.started host='ws.audioscrobbler.com' port=443 local_address=None timeout=5.0
+18:06:04,66 httpcore DEBUG connection.connect_tcp.complete return_value=<httpcore.backends.sync.SyncStream object at 0x7f0c9bcab1c0>
+18:06:04,69 httpcore DEBUG connection.start_tls.started ssl_context=<ssl.SSLContext object at 0x7f0cbe5be2c0> server_hostname='ws.audioscrobbler.com' timeout=5.0
+18:06:04,121 httpcore DEBUG connection.start_tls.complete return_value=<httpcore.backends.sync.SyncStream object at 0x7f0c9bcaace0>
+18:06:04,124 httpcore DEBUG http11.send_request_headers.started request=<Request [b'POST']>
+18:06:04,127 httpcore DEBUG http11.send_request_headers.complete
+18:06:04,131 httpcore DEBUG http11.send_request_body.started request=<Request [b'POST']>
+18:06:04,134 httpcore DEBUG http11.send_request_body.complete
+18:06:04,138 httpcore DEBUG http11.receive_response_headers.started request=<Request [b'POST']>
+18:06:04,366 httpcore DEBUG http11.receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'openresty/1.13.6.2'), (b'Date', b'Tue, 18 Apr 2023 15:06:04 GMT'), (b'Content-Type', b'text/xml; charset=UTF-8'), (b'content-length', b'433'), (b'Access-Control-Allow-Methods', b'POST, GET, OPTIONS'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Max-Age', b'86400'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000')])
+18:06:04,376 httpx INFO HTTP Request: POST https://ws.audioscrobbler.com/2.0/ "HTTP/1.1 200 OK"
+18:06:04,381 httpcore DEBUG http11.receive_response_body.started request=<Request [b'POST']>
+18:06:04,386 httpcore DEBUG http11.receive_response_body.complete
+18:06:04,390 httpcore DEBUG http11.response_closed.started
+18:06:04,393 httpcore DEBUG http11.response_closed.complete
+18:06:04,396 pylast DEBUG <?xml version="1.0" ?>
+<lfm status="ok">
+	
+  
+	<scrobbles ignored="0" accepted="1">
+		
+    
+		<scrobble>
+			
+      
+			<track corrected="0">Adventures of Kiki the Witch</track>
+			
+      
+			<artist corrected="0">Schtiffles</artist>
+			
+      
+			<album corrected="0"/>
+			
+      
+			<albumArtist corrected="0"/>
+			
+      
+			<timestamp>1681830364.0063</timestamp>
+			
+      
+			<ignoredMessage code="0"/>
+			
+    
+		</scrobble>
+		
+  
+	</scrobbles>
+	
+
+</lfm>
+
+18:06:04,400 httpcore DEBUG connection.close.started
+18:06:04,405 httpcore DEBUG connection.close.complete
+18:06:04,408 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+18:06:04,411 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 1555
+18:07:32,576 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): pybms.tk:443
+18:07:33,260 urllib3.connectionpool DEBUG https://pybms.tk:443 "POST /Server/bmCastStream/MusicApi/ HTTP/1.1" 200 None
+18:07:33,588 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+18:07:33,590 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 44325
+18:07:41,609 root DEBUG [soundcloud] Extracting URL: https://soundcloud.com/k-391/k-391-earth
+18:07:41,635 root DEBUG [soundcloud] k-391/k-391-earth: Downloading info JSON
+18:07:42,148 root DEBUG [soundcloud] 244590361: Downloading JSON metadata
+18:07:42,568 root DEBUG [soundcloud] 244590361: Downloading JSON metadata
+18:07:42,998 root DEBUG [soundcloud] 244590361: Downloading JSON metadata
+18:07:43,705 pylast INFO track.scrobble
+18:07:43,709 httpx DEBUG load_ssl_context verify=<ssl.SSLContext object at 0x7f0cbe5be2c0> cert=None trust_env=True http2=False
+18:07:43,711 httpcore DEBUG connection.connect_tcp.started host='ws.audioscrobbler.com' port=443 local_address=None timeout=5.0
+18:07:43,759 httpcore DEBUG connection.connect_tcp.complete return_value=<httpcore.backends.sync.SyncStream object at 0x7f0c9bca9120>
+18:07:43,762 httpcore DEBUG connection.start_tls.started ssl_context=<ssl.SSLContext object at 0x7f0cbe5be2c0> server_hostname='ws.audioscrobbler.com' timeout=5.0
+18:07:43,818 httpcore DEBUG connection.start_tls.complete return_value=<httpcore.backends.sync.SyncStream object at 0x7f0c9bca8fa0>
+18:07:43,870 httpcore DEBUG http11.send_request_headers.started request=<Request [b'POST']>
+18:07:43,875 httpcore DEBUG http11.send_request_headers.complete
+18:07:43,878 httpcore DEBUG http11.send_request_body.started request=<Request [b'POST']>
+18:07:43,883 httpcore DEBUG http11.send_request_body.complete
+18:07:43,888 httpcore DEBUG http11.receive_response_headers.started request=<Request [b'POST']>
+18:07:44,90 httpcore DEBUG http11.receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'openresty/1.13.6.2'), (b'Date', b'Tue, 18 Apr 2023 15:07:44 GMT'), (b'Content-Type', b'text/xml; charset=UTF-8'), (b'content-length', b'405'), (b'Access-Control-Allow-Methods', b'POST, GET, OPTIONS'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Max-Age', b'86400'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000')])
+18:07:44,95 httpx INFO HTTP Request: POST https://ws.audioscrobbler.com/2.0/ "HTTP/1.1 200 OK"
+18:07:44,98 httpcore DEBUG http11.receive_response_body.started request=<Request [b'POST']>
+18:07:44,100 httpcore DEBUG http11.receive_response_body.complete
+18:07:44,103 httpcore DEBUG http11.response_closed.started
+18:07:44,105 httpcore DEBUG http11.response_closed.complete
+18:07:44,108 pylast DEBUG <?xml version="1.0" ?>
+<lfm status="ok">
+	
+  
+	<scrobbles ignored="0" accepted="1">
+		
+    
+		<scrobble>
+			
+      
+			<track corrected="0">Earth</track>
+			
+      
+			<artist corrected="0">K-391</artist>
+			
+      
+			<album corrected="0"/>
+			
+      
+			<albumArtist corrected="0"/>
+			
+      
+			<timestamp>1681830463.7055</timestamp>
+			
+      
+			<ignoredMessage code="0"/>
+			
+    
+		</scrobble>
+		
+  
+	</scrobbles>
+	
+
+</lfm>
+
+18:07:44,113 httpcore DEBUG connection.close.started
+18:07:44,116 httpcore DEBUG connection.close.complete
+18:07:44,119 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+18:07:44,121 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 34121
+18:08:11,391 root DEBUG [soundcloud] Extracting URL: https://soundcloud.com/officialdeafkev/invincible-out-now-on-nocopyrightsounds
+18:08:11,433 root DEBUG [soundcloud] officialdeafkev/invincible-out-now-on-nocopyrightsounds: Downloading info JSON
+18:08:11,895 root DEBUG [soundcloud] 205462333: Downloading JSON metadata
+18:08:12,401 root DEBUG [soundcloud] 205462333: Downloading JSON metadata
+18:08:12,870 root DEBUG [soundcloud] 205462333: Downloading JSON metadata
+18:08:13,534 pylast INFO track.scrobble
+18:08:13,587 httpx DEBUG load_ssl_context verify=<ssl.SSLContext object at 0x7f0cbe5be2c0> cert=None trust_env=True http2=False
+18:08:13,591 httpcore DEBUG connection.connect_tcp.started host='ws.audioscrobbler.com' port=443 local_address=None timeout=5.0
+18:08:13,617 httpcore DEBUG connection.connect_tcp.complete return_value=<httpcore.backends.sync.SyncStream object at 0x7f0c9bca8730>
+18:08:13,622 httpcore DEBUG connection.start_tls.started ssl_context=<ssl.SSLContext object at 0x7f0cbe5be2c0> server_hostname='ws.audioscrobbler.com' timeout=5.0
+18:08:13,680 httpcore DEBUG connection.start_tls.complete return_value=<httpcore.backends.sync.SyncStream object at 0x7f0c9bca8820>
+18:08:13,733 httpcore DEBUG http11.send_request_headers.started request=<Request [b'POST']>
+18:08:13,738 httpcore DEBUG http11.send_request_headers.complete
+18:08:13,743 httpcore DEBUG http11.send_request_body.started request=<Request [b'POST']>
+18:08:13,747 httpcore DEBUG http11.send_request_body.complete
+18:08:13,750 httpcore DEBUG http11.receive_response_headers.started request=<Request [b'POST']>
+18:08:13,959 httpcore DEBUG http11.receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'openresty/1.13.6.2'), (b'Date', b'Tue, 18 Apr 2023 15:08:13 GMT'), (b'Content-Type', b'text/xml; charset=UTF-8'), (b'content-length', b'413'), (b'Access-Control-Allow-Methods', b'POST, GET, OPTIONS'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Max-Age', b'86400'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000')])
+18:08:13,963 httpx INFO HTTP Request: POST https://ws.audioscrobbler.com/2.0/ "HTTP/1.1 200 OK"
+18:08:13,968 httpcore DEBUG http11.receive_response_body.started request=<Request [b'POST']>
+18:08:13,971 httpcore DEBUG http11.receive_response_body.complete
+18:08:13,973 httpcore DEBUG http11.response_closed.started
+18:08:13,975 httpcore DEBUG http11.response_closed.complete
+18:08:13,978 pylast DEBUG <?xml version="1.0" ?>
+<lfm status="ok">
+	
+  
+	<scrobbles ignored="0" accepted="1">
+		
+    
+		<scrobble>
+			
+      
+			<track corrected="0">Invincible</track>
+			
+      
+			<artist corrected="0">DEAF KEV</artist>
+			
+      
+			<album corrected="0"/>
+			
+      
+			<albumArtist corrected="0"/>
+			
+      
+			<timestamp>1681830493.5345</timestamp>
+			
+      
+			<ignoredMessage code="0"/>
+			
+    
+		</scrobble>
+		
+  
+	</scrobbles>
+	
+
+</lfm>
+
+18:08:13,980 httpcore DEBUG connection.close.started
+18:08:13,982 httpcore DEBUG connection.close.complete
+18:08:13,985 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+18:08:13,986 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 35828
+18:08:36,295 root DEBUG [youtube] Extracting URL: 3rnVFo92YK4
+18:08:36,313 root DEBUG [youtube] 3rnVFo92YK4: Downloading webpage
+18:08:36,860 root DEBUG [youtube] 3rnVFo92YK4: Downloading android player API JSON
+18:08:37,106 root WARNING [youtube] Cannot parse localized time text "Jun 11, 2022"
+18:08:37,336 pylast INFO track.scrobble
+18:08:37,342 httpx DEBUG load_ssl_context verify=<ssl.SSLContext object at 0x7f0cbe5be2c0> cert=None trust_env=True http2=False
+18:08:37,349 httpcore DEBUG connection.connect_tcp.started host='ws.audioscrobbler.com' port=443 local_address=None timeout=5.0
+18:08:37,376 httpcore DEBUG connection.connect_tcp.complete return_value=<httpcore.backends.sync.SyncStream object at 0x7f0c9807e200>
+18:08:37,382 httpcore DEBUG connection.start_tls.started ssl_context=<ssl.SSLContext object at 0x7f0cbe5be2c0> server_hostname='ws.audioscrobbler.com' timeout=5.0
+18:08:37,438 httpcore DEBUG connection.start_tls.complete return_value=<httpcore.backends.sync.SyncStream object at 0x7f0c9807fb50>
+18:08:37,493 httpcore DEBUG http11.send_request_headers.started request=<Request [b'POST']>
+18:08:37,501 httpcore DEBUG http11.send_request_headers.complete
+18:08:37,508 httpcore DEBUG http11.send_request_body.started request=<Request [b'POST']>
+18:08:37,515 httpcore DEBUG http11.send_request_body.complete
+18:08:37,521 httpcore DEBUG http11.receive_response_headers.started request=<Request [b'POST']>
+18:08:37,714 httpcore DEBUG http11.receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'openresty/1.13.6.2'), (b'Date', b'Tue, 18 Apr 2023 15:08:37 GMT'), (b'Content-Type', b'text/xml; charset=UTF-8'), (b'content-length', b'465'), (b'Access-Control-Allow-Methods', b'POST, GET, OPTIONS'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Max-Age', b'86400'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000')])
+18:08:37,729 httpx INFO HTTP Request: POST https://ws.audioscrobbler.com/2.0/ "HTTP/1.1 200 OK"
+18:08:37,732 httpcore DEBUG http11.receive_response_body.started request=<Request [b'POST']>
+18:08:37,735 httpcore DEBUG http11.receive_response_body.complete
+18:08:37,737 httpcore DEBUG http11.response_closed.started
+18:08:37,739 httpcore DEBUG http11.response_closed.complete
+18:08:37,742 pylast DEBUG <?xml version="1.0" ?>
+<lfm status="ok">
+	
+  
+	<scrobbles ignored="0" accepted="1">
+		
+    
+		<scrobble>
+			
+      
+			<track corrected="0">Forever Sunset - Deep Space Samurai (Royalty Free Music)</track>
+			
+      
+			<artist corrected="0">Epidemic Arcade</artist>
+			
+      
+			<album corrected="0"/>
+			
+      
+			<albumArtist corrected="0"/>
+			
+      
+			<timestamp>1681830517.336</timestamp>
+			
+      
+			<ignoredMessage code="0"/>
+			
+    
+		</scrobble>
+		
+  
+	</scrobbles>
+	
+
+</lfm>
+
+18:08:37,744 httpcore DEBUG connection.close.started
+18:08:37,746 httpcore DEBUG connection.close.complete
+18:08:37,749 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+18:08:37,751 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 39878
+18:08:57,668 root DEBUG [youtube] Extracting URL: NYe4PJwQcjo
+18:08:57,671 root DEBUG [youtube] NYe4PJwQcjo: Downloading webpage
+18:08:58,231 root DEBUG [youtube] NYe4PJwQcjo: Downloading android player API JSON
+18:08:58,442 root DEBUG [youtube] NYe4PJwQcjo: Downloading MPD manifest
+18:08:58,871 root WARNING [youtube] Cannot parse localized time text "Nov 27, 2020"
+18:08:58,909 pylast INFO track.scrobble
+18:08:58,912 httpx DEBUG load_ssl_context verify=<ssl.SSLContext object at 0x7f0cbe5be2c0> cert=None trust_env=True http2=False
+18:08:58,915 httpcore DEBUG connection.connect_tcp.started host='ws.audioscrobbler.com' port=443 local_address=None timeout=5.0
+18:08:58,939 httpcore DEBUG connection.connect_tcp.complete return_value=<httpcore.backends.sync.SyncStream object at 0x7f0c98082320>
+18:08:58,942 httpcore DEBUG connection.start_tls.started ssl_context=<ssl.SSLContext object at 0x7f0cbe5be2c0> server_hostname='ws.audioscrobbler.com' timeout=5.0
+18:08:58,995 httpcore DEBUG connection.start_tls.complete return_value=<httpcore.backends.sync.SyncStream object at 0x7f0c98082dd0>
+18:08:59,53 httpcore DEBUG http11.send_request_headers.started request=<Request [b'POST']>
+18:08:59,62 httpcore DEBUG http11.send_request_headers.complete
+18:08:59,70 httpcore DEBUG http11.send_request_body.started request=<Request [b'POST']>
+18:08:59,80 httpcore DEBUG http11.send_request_body.complete
+18:08:59,88 httpcore DEBUG http11.receive_response_headers.started request=<Request [b'POST']>
+18:08:59,677 httpcore DEBUG http11.receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'openresty/1.13.6.2'), (b'Date', b'Tue, 18 Apr 2023 15:08:59 GMT'), (b'Content-Type', b'text/xml; charset=UTF-8'), (b'content-length', b'446'), (b'Access-Control-Allow-Methods', b'POST, GET, OPTIONS'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Max-Age', b'86400'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000')])
+18:08:59,704 httpx INFO HTTP Request: POST https://ws.audioscrobbler.com/2.0/ "HTTP/1.1 200 OK"
+18:08:59,708 httpcore DEBUG http11.receive_response_body.started request=<Request [b'POST']>
+18:08:59,714 httpcore DEBUG http11.receive_response_body.complete
+18:08:59,718 httpcore DEBUG http11.response_closed.started
+18:08:59,721 httpcore DEBUG http11.response_closed.complete
+18:08:59,726 pylast DEBUG <?xml version="1.0" ?>
+<lfm status="ok">
+	
+  
+	<scrobbles ignored="0" accepted="1">
+		
+    
+		<scrobble>
+			
+      
+			<track corrected="0">AGST - Slipping (Royalty Free Music)</track>
+			
+      
+			<artist corrected="0">Epidemic Arcade</artist>
+			
+      
+			<album corrected="0"/>
+			
+      
+			<albumArtist corrected="0"/>
+			
+      
+			<timestamp>1681830538.9095</timestamp>
+			
+      
+			<ignoredMessage code="0"/>
+			
+    
+		</scrobble>
+		
+  
+	</scrobbles>
+	
+
+</lfm>
+
+18:08:59,731 httpcore DEBUG connection.close.started
+18:08:59,736 httpcore DEBUG connection.close.complete
+18:08:59,741 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+18:08:59,745 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 52274
+18:09:15,473 root DEBUG [youtube] Extracting URL: M-0TB9JMpdE
+18:09:15,479 root DEBUG [youtube] M-0TB9JMpdE: Downloading webpage
+18:09:16,123 root DEBUG [youtube] M-0TB9JMpdE: Downloading android player API JSON
+18:09:16,337 root WARNING [youtube] Cannot parse localized time text "Apr 20, 2020"
+18:09:16,363 pylast INFO track.scrobble
+18:09:16,366 httpx DEBUG load_ssl_context verify=<ssl.SSLContext object at 0x7f0cbe5be2c0> cert=None trust_env=True http2=False
+18:09:16,368 httpcore DEBUG connection.connect_tcp.started host='ws.audioscrobbler.com' port=443 local_address=None timeout=5.0
+18:09:16,392 httpcore DEBUG connection.connect_tcp.complete return_value=<httpcore.backends.sync.SyncStream object at 0x7f0c9807eef0>
+18:09:16,395 httpcore DEBUG connection.start_tls.started ssl_context=<ssl.SSLContext object at 0x7f0cbe5be2c0> server_hostname='ws.audioscrobbler.com' timeout=5.0
+18:09:16,469 httpcore DEBUG connection.start_tls.complete return_value=<httpcore.backends.sync.SyncStream object at 0x7f0c9807e050>
+18:09:16,503 httpcore DEBUG http11.send_request_headers.started request=<Request [b'POST']>
+18:09:16,508 httpcore DEBUG http11.send_request_headers.complete
+18:09:16,514 httpcore DEBUG http11.send_request_body.started request=<Request [b'POST']>
+18:09:16,519 httpcore DEBUG http11.send_request_body.complete
+18:09:16,522 httpcore DEBUG http11.receive_response_headers.started request=<Request [b'POST']>
+18:09:16,717 httpcore DEBUG http11.receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'openresty/1.13.6.2'), (b'Date', b'Tue, 18 Apr 2023 15:09:16 GMT'), (b'Content-Type', b'text/xml; charset=UTF-8'), (b'content-length', b'425'), (b'Access-Control-Allow-Methods', b'POST, GET, OPTIONS'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Max-Age', b'86400'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000')])
+18:09:16,730 httpx INFO HTTP Request: POST https://ws.audioscrobbler.com/2.0/ "HTTP/1.1 200 OK"
+18:09:16,734 httpcore DEBUG http11.receive_response_body.started request=<Request [b'POST']>
+18:09:16,737 httpcore DEBUG http11.receive_response_body.complete
+18:09:16,741 httpcore DEBUG http11.response_closed.started
+18:09:16,745 httpcore DEBUG http11.response_closed.complete
+18:09:16,751 pylast DEBUG <?xml version="1.0" ?>
+<lfm status="ok">
+	
+  
+	<scrobbles ignored="0" accepted="1">
+		
+    
+		<scrobble>
+			
+      
+			<track corrected="0">We're Finally Landing</track>
+			
+      
+			<artist corrected="0">Home</artist>
+			
+      
+			<album corrected="0"/>
+			
+      
+			<albumArtist corrected="0"/>
+			
+      
+			<timestamp>1681830556.3632</timestamp>
+			
+      
+			<ignoredMessage code="0"/>
+			
+    
+		</scrobble>
+		
+  
+	</scrobbles>
+	
+
+</lfm>
+
+18:09:16,759 httpcore DEBUG connection.close.started
+18:09:16,765 httpcore DEBUG connection.close.complete
+18:09:16,771 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+18:09:16,776 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 40122
+18:09:49,929 root DEBUG [youtube] Extracting URL: FQHi0RI2BdA
+18:09:49,931 root DEBUG [youtube] FQHi0RI2BdA: Downloading webpage
+18:09:50,518 root DEBUG [youtube] FQHi0RI2BdA: Downloading android player API JSON
+18:09:50,761 root WARNING [youtube] Cannot parse localized time text "Jul 1, 2020"
+18:09:50,787 pylast INFO track.scrobble
+18:09:50,790 httpx DEBUG load_ssl_context verify=<ssl.SSLContext object at 0x7f0cbe5be2c0> cert=None trust_env=True http2=False
+18:09:50,792 httpcore DEBUG connection.connect_tcp.started host='ws.audioscrobbler.com' port=443 local_address=None timeout=5.0
+18:09:50,815 httpcore DEBUG connection.connect_tcp.complete return_value=<httpcore.backends.sync.SyncStream object at 0x7f0c9bd07b80>
+18:09:50,820 httpcore DEBUG connection.start_tls.started ssl_context=<ssl.SSLContext object at 0x7f0cbe5be2c0> server_hostname='ws.audioscrobbler.com' timeout=5.0
+18:09:50,877 httpcore DEBUG connection.start_tls.complete return_value=<httpcore.backends.sync.SyncStream object at 0x7f0c9bd07eb0>
+18:09:50,925 httpcore DEBUG http11.send_request_headers.started request=<Request [b'POST']>
+18:09:50,929 httpcore DEBUG http11.send_request_headers.complete
+18:09:50,931 httpcore DEBUG http11.send_request_body.started request=<Request [b'POST']>
+18:09:50,934 httpcore DEBUG http11.send_request_body.complete
+18:09:50,937 httpcore DEBUG http11.receive_response_headers.started request=<Request [b'POST']>
+18:09:51,490 httpcore DEBUG http11.receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'openresty/1.13.6.2'), (b'Date', b'Tue, 18 Apr 2023 15:09:51 GMT'), (b'Content-Type', b'text/xml; charset=UTF-8'), (b'content-length', b'412'), (b'Access-Control-Allow-Methods', b'POST, GET, OPTIONS'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Max-Age', b'86400'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000')])
+18:09:51,496 httpx INFO HTTP Request: POST https://ws.audioscrobbler.com/2.0/ "HTTP/1.1 200 OK"
+18:09:51,501 httpcore DEBUG http11.receive_response_body.started request=<Request [b'POST']>
+18:09:51,506 httpcore DEBUG http11.receive_response_body.complete
+18:09:51,512 httpcore DEBUG http11.response_closed.started
+18:09:51,516 httpcore DEBUG http11.response_closed.complete
+18:09:51,522 pylast DEBUG <?xml version="1.0" ?>
+<lfm status="ok">
+	
+  
+	<scrobbles ignored="0" accepted="1">
+		
+    
+		<scrobble>
+			
+      
+			<track corrected="0">Hackers</track>
+			
+      
+			<artist corrected="0">Karl Casey</artist>
+			
+      
+			<album corrected="0"/>
+			
+      
+			<albumArtist corrected="0"/>
+			
+      
+			<timestamp>1681830590.7872</timestamp>
+			
+      
+			<ignoredMessage code="0"/>
+			
+    
+		</scrobble>
+		
+  
+	</scrobbles>
+	
+
+</lfm>
+
+18:09:51,528 httpcore DEBUG connection.close.started
+18:09:51,534 httpcore DEBUG connection.close.complete
+18:09:51,537 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+18:09:51,540 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 44012
+18:10:38,232 root DEBUG [youtube] Extracting URL: EiDkjb-TRUg
+18:10:38,235 root DEBUG [youtube] EiDkjb-TRUg: Downloading webpage
+18:10:38,910 root DEBUG [youtube] EiDkjb-TRUg: Downloading android player API JSON
+18:10:39,155 root WARNING [youtube] Cannot parse localized time text "Mar 31, 2020"
+18:10:39,419 pylast INFO track.scrobble
+18:10:39,461 httpx DEBUG load_ssl_context verify=<ssl.SSLContext object at 0x7f0cbe5be2c0> cert=None trust_env=True http2=False
+18:10:39,464 httpcore DEBUG connection.connect_tcp.started host='ws.audioscrobbler.com' port=443 local_address=None timeout=5.0
+18:10:39,495 httpcore DEBUG connection.connect_tcp.complete return_value=<httpcore.backends.sync.SyncStream object at 0x7f0c9807f1c0>
+18:10:39,497 httpcore DEBUG connection.start_tls.started ssl_context=<ssl.SSLContext object at 0x7f0cbe5be2c0> server_hostname='ws.audioscrobbler.com' timeout=5.0
+18:10:39,550 httpcore DEBUG connection.start_tls.complete return_value=<httpcore.backends.sync.SyncStream object at 0x7f0c9807dcc0>
+18:10:39,605 httpcore DEBUG http11.send_request_headers.started request=<Request [b'POST']>
+18:10:39,611 httpcore DEBUG http11.send_request_headers.complete
+18:10:39,617 httpcore DEBUG http11.send_request_body.started request=<Request [b'POST']>
+18:10:39,623 httpcore DEBUG http11.send_request_body.complete
+18:10:39,628 httpcore DEBUG http11.receive_response_headers.started request=<Request [b'POST']>
+18:10:39,817 httpcore DEBUG http11.receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'openresty/1.13.6.2'), (b'Date', b'Tue, 18 Apr 2023 15:10:39 GMT'), (b'Content-Type', b'text/xml; charset=UTF-8'), (b'content-length', b'425'), (b'Access-Control-Allow-Methods', b'POST, GET, OPTIONS'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Max-Age', b'86400'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000')])
+18:10:39,841 httpx INFO HTTP Request: POST https://ws.audioscrobbler.com/2.0/ "HTTP/1.1 200 OK"
+18:10:39,846 httpcore DEBUG http11.receive_response_body.started request=<Request [b'POST']>
+18:10:39,850 httpcore DEBUG http11.receive_response_body.complete
+18:10:39,853 httpcore DEBUG http11.response_closed.started
+18:10:39,856 httpcore DEBUG http11.response_closed.complete
+18:10:39,861 pylast DEBUG <?xml version="1.0" ?>
+<lfm status="ok">
+	
+  
+	<scrobbles ignored="0" accepted="1">
+		
+    
+		<scrobble>
+			
+      
+			<track corrected="0">The System Has Failed</track>
+			
+      
+			<artist corrected="0">Karl Casey</artist>
+			
+      
+			<album corrected="0"/>
+			
+      
+			<albumArtist corrected="0"/>
+			
+      
+			<timestamp>1681830639.419</timestamp>
+			
+      
+			<ignoredMessage code="0"/>
+			
+    
+		</scrobble>
+		
+  
+	</scrobbles>
+	
+
+</lfm>
+
+18:10:39,864 httpcore DEBUG connection.close.started
+18:10:39,868 httpcore DEBUG connection.close.complete
+18:10:39,871 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+18:10:39,873 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 46222
+18:10:59,921 root DEBUG [youtube] Extracting URL: rDBbaGCCIhk
+18:10:59,963 root DEBUG [youtube] rDBbaGCCIhk: Downloading webpage
+18:11:00,556 root DEBUG [youtube] rDBbaGCCIhk: Downloading android player API JSON
+18:11:00,781 root WARNING [youtube] Cannot parse localized time text "Feb 1, 2015"
+18:11:01,4 pylast INFO track.scrobble
+18:11:01,9 httpx DEBUG load_ssl_context verify=<ssl.SSLContext object at 0x7f0cbe5be2c0> cert=None trust_env=True http2=False
+18:11:01,13 httpcore DEBUG connection.connect_tcp.started host='ws.audioscrobbler.com' port=443 local_address=None timeout=5.0
+18:11:01,38 httpcore DEBUG connection.connect_tcp.complete return_value=<httpcore.backends.sync.SyncStream object at 0x7f0cbe71f7f0>
+18:11:01,41 httpcore DEBUG connection.start_tls.started ssl_context=<ssl.SSLContext object at 0x7f0cbe5be2c0> server_hostname='ws.audioscrobbler.com' timeout=5.0
+18:11:01,91 httpcore DEBUG connection.start_tls.complete return_value=<httpcore.backends.sync.SyncStream object at 0x7f0cbe71eb90>
+18:11:01,95 httpcore DEBUG http11.send_request_headers.started request=<Request [b'POST']>
+18:11:01,99 httpcore DEBUG http11.send_request_headers.complete
+18:11:01,104 httpcore DEBUG http11.send_request_body.started request=<Request [b'POST']>
+18:11:01,110 httpcore DEBUG http11.send_request_body.complete
+18:11:01,116 httpcore DEBUG http11.receive_response_headers.started request=<Request [b'POST']>
+18:11:01,748 httpcore DEBUG http11.receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'openresty/1.13.6.2'), (b'Date', b'Tue, 18 Apr 2023 15:11:01 GMT'), (b'Content-Type', b'text/xml; charset=UTF-8'), (b'content-length', b'438'), (b'Access-Control-Allow-Methods', b'POST, GET, OPTIONS'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Max-Age', b'86400'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000')])
+18:11:01,752 httpx INFO HTTP Request: POST https://ws.audioscrobbler.com/2.0/ "HTTP/1.1 200 OK"
+18:11:01,756 httpcore DEBUG http11.receive_response_body.started request=<Request [b'POST']>
+18:11:01,759 httpcore DEBUG http11.receive_response_body.complete
+18:11:01,762 httpcore DEBUG http11.response_closed.started
+18:11:01,765 httpcore DEBUG http11.response_closed.complete
+18:11:01,769 pylast DEBUG <?xml version="1.0" ?>
+<lfm status="ok">
+	
+  
+	<scrobbles ignored="0" accepted="1">
+		
+    
+		<scrobble>
+			
+      
+			<track corrected="0">Miami Nights 1984 - Accelerated</track>
+			
+      
+			<artist corrected="0">NewRetroWave</artist>
+			
+      
+			<album corrected="0"/>
+			
+      
+			<albumArtist corrected="0"/>
+			
+      
+			<timestamp>1681830661.0048</timestamp>
+			
+      
+			<ignoredMessage code="0"/>
+			
+    
+		</scrobble>
+		
+  
+	</scrobbles>
+	
+
+</lfm>
+
+18:11:01,772 httpcore DEBUG connection.close.started
+18:11:01,775 httpcore DEBUG connection.close.complete
+18:11:01,780 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): img.youtube.com:443
+18:11:02,20 urllib3.connectionpool DEBUG https://img.youtube.com:443 "GET /vi/rDBbaGCCIhk/hqdefault.jpg HTTP/1.1" 200 25476
+18:11:10,369 root DEBUG [youtube] Extracting URL: bJK1P1OVQ8Y
+18:11:10,372 root DEBUG [youtube] bJK1P1OVQ8Y: Downloading webpage
+18:11:11,55 root DEBUG [youtube] bJK1P1OVQ8Y: Downloading android player API JSON
+18:11:11,846 root WARNING [youtube] Cannot parse localized time text "Mar 26, 2018"
+18:11:12,140 pylast INFO track.scrobble
+18:11:12,186 httpx DEBUG load_ssl_context verify=<ssl.SSLContext object at 0x7f0cbe5be2c0> cert=None trust_env=True http2=False
+18:11:12,189 httpcore DEBUG connection.connect_tcp.started host='ws.audioscrobbler.com' port=443 local_address=None timeout=5.0
+18:11:12,213 httpcore DEBUG connection.connect_tcp.complete return_value=<httpcore.backends.sync.SyncStream object at 0x7f0c980801c0>
+18:11:12,215 httpcore DEBUG connection.start_tls.started ssl_context=<ssl.SSLContext object at 0x7f0cbe5be2c0> server_hostname='ws.audioscrobbler.com' timeout=5.0
+18:11:12,293 httpcore DEBUG connection.start_tls.complete return_value=<httpcore.backends.sync.SyncStream object at 0x7f0c980838b0>
+18:11:12,321 httpcore DEBUG http11.send_request_headers.started request=<Request [b'POST']>
+18:11:12,324 httpcore DEBUG http11.send_request_headers.complete
+18:11:12,327 httpcore DEBUG http11.send_request_body.started request=<Request [b'POST']>
+18:11:12,331 httpcore DEBUG http11.send_request_body.complete
+18:11:12,333 httpcore DEBUG http11.receive_response_headers.started request=<Request [b'POST']>
+18:11:12,609 httpcore DEBUG http11.receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'openresty/1.13.6.2'), (b'Date', b'Tue, 18 Apr 2023 15:11:12 GMT'), (b'Content-Type', b'text/xml; charset=UTF-8'), (b'content-length', b'458'), (b'Access-Control-Allow-Methods', b'POST, GET, OPTIONS'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Max-Age', b'86400'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000')])
+18:11:12,640 httpx INFO HTTP Request: POST https://ws.audioscrobbler.com/2.0/ "HTTP/1.1 200 OK"
+18:11:12,644 httpcore DEBUG http11.receive_response_body.started request=<Request [b'POST']>
+18:11:12,648 httpcore DEBUG http11.receive_response_body.complete
+18:11:12,651 httpcore DEBUG http11.response_closed.started
+18:11:12,655 httpcore DEBUG http11.response_closed.complete
+18:11:12,659 pylast DEBUG <?xml version="1.0" ?>
+<lfm status="ok">
+	
+  
+	<scrobbles ignored="0" accepted="1">
+		
+    
+		<scrobble>
+			
+      
+			<track corrected="0">Protostar - New Horizons [Monstercat Release]</track>
+			
+      
+			<artist corrected="0">Monstercat Uncaged</artist>
+			
+      
+			<album corrected="0"/>
+			
+      
+			<albumArtist corrected="0"/>
+			
+      
+			<timestamp>1681830672.1408</timestamp>
+			
+      
+			<ignoredMessage code="0"/>
+			
+    
+		</scrobble>
+		
+  
+	</scrobbles>
+	
+
+</lfm>
+
+18:11:12,663 httpcore DEBUG connection.close.started
+18:11:12,666 httpcore DEBUG connection.close.complete
+18:11:12,672 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): img.youtube.com:443
+18:11:12,878 urllib3.connectionpool DEBUG https://img.youtube.com:443 "GET /vi/bJK1P1OVQ8Y/hqdefault.jpg HTTP/1.1" 200 43391

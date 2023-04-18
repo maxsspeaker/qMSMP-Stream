@@ -1,4 +1,6 @@
 Traceback (most recent call last):
-  File "/media/maxsspeaker/HDD игры/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/main.pyw", line 504, in play
-    msmp_streamIcon=msmp_streamIconMain
-NameError: name 'msmp_streamIconMain' is not defined
+  File "/media/maxsspeaker/HDD игры/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/main.pyw", line 718, in play
+    self.discord_rpc.updatePlayerNow(PlayNowMusicDataBox=self.PlayNowMusicDataBox,
+  File "/media/maxsspeaker/HDD игры/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/main.pyw", line 271, in updatePlayerNow
+    album=self.PlayNowMusicDataBox["albumTrekPlayNow"],
+AttributeError: 'MSMP_RPC' object has no attribute 'PlayNowMusicDataBox'
