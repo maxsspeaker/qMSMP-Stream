@@ -10034,3 +10034,1928 @@ AttributeError: 'Discord_RPC' object has no attribute 'IconImgUrl'
 18:11:12,666 httpcore DEBUG connection.close.complete
 18:11:12,672 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): img.youtube.com:443
 18:11:12,878 urllib3.connectionpool DEBUG https://img.youtube.com:443 "GET /vi/bJK1P1OVQ8Y/hqdefault.jpg HTTP/1.1" 200 43391
+08:41:14,299 root INFO starting...
+08:42:20,698 root INFO starting...
+08:42:48,752 root INFO starting...
+08:42:51,310 eyed3 DEBUG eyeD3 version 0.9.7
+08:43:01,470 root INFO starting...
+08:43:02,933 eyed3 DEBUG eyeD3 version 0.9.7
+08:43:33,700 root INFO starting...
+08:43:35,557 eyed3 DEBUG eyeD3 version 0.9.7
+09:46:11,119 root INFO starting...
+09:46:13,76 root INFO starting...
+09:46:13,877 eyed3 DEBUG eyeD3 version 0.9.7
+09:46:15,770 eyed3 DEBUG eyeD3 version 0.9.7
+09:47:09,186 root INFO starting...
+09:47:12,159 eyed3 DEBUG eyeD3 version 0.9.7
+10:27:32,135 root INFO starting...
+10:27:35,139 eyed3 DEBUG eyeD3 version 0.9.7
+10:28:18,351 root INFO starting...
+10:28:20,268 eyed3 DEBUG eyeD3 version 0.9.7
+10:30:24,453 root INFO starting...
+10:30:26,124 eyed3 DEBUG eyeD3 version 0.9.7
+10:30:43,306 parso.cache DEBUG pickle loaded: /data/data/com.termux/files/usr/lib/python3.11/os.py
+10:30:43,421 parso.cache DEBUG pickle loaded: /data/data/com.termux/files/usr/lib/python3.11/site-packages/jedi/third_party/typeshed/stdlib/3/os/__init__.pyi
+10:30:58,628 parso.python.diff DEBUG diff parser start
+10:30:58,644 parso.python.diff DEBUG line_lengths old: 1465; new: 1466
+10:30:58,646 parso.python.diff DEBUG -> code[equal] old[1:139] new[1:139]
+10:30:58,649 parso.python.diff DEBUG copy old[1:285] new[1:135]
+10:30:58,655 parso.python.diff DEBUG parse_part from 136 to 142 (to 142 in part parser)
+10:30:58,657 parso.python.diff DEBUG -> code[insert] old[140:139] new[140:140]
+10:30:58,658 parso.python.diff DEBUG -> code[equal] old[140:1465] new[141:1466]
+10:30:58,660 parso.python.diff DEBUG copy old[142:158] new[143:159]
+10:30:58,666 parso.python.diff DEBUG parse_part from 160 to 164 (to 164 in part parser)
+10:30:58,669 parso.python.diff DEBUG copy old[164:274] new[165:275]
+10:30:58,672 parso.python.diff DEBUG parse_part from 276 to 275 (to 275 in part parser)
+10:30:58,680 parso.python.diff DEBUG parse_part from 276 to 287 (to 287 in part parser)
+10:30:58,704 parso.python.diff DEBUG parse_part from 288 to 310 (to 312 in part parser)
+10:30:58,708 parso.python.diff DEBUG copy old[312:1455] new[311:1441]
+10:30:58,711 parso.python.diff DEBUG parse_part from 1442 to 1442 (to 1442 in part parser)
+10:30:58,725 parso.python.diff DEBUG parse_part from 1443 to 1458 (to 1458 in part parser)
+10:30:58,732 parso.python.diff DEBUG parse_part from 1459 to 1466 (to 1465 in part parser)
+10:30:58,805 parso.python.diff DEBUG diff parser end
+10:30:59,235 parso.python.diff DEBUG diff parser start
+10:30:59,268 parso.python.diff DEBUG line_lengths old: 1466; new: 1466
+10:30:59,270 parso.python.diff DEBUG -> code[equal] old[1:139] new[1:139]
+10:30:59,274 parso.python.diff DEBUG copy old[1:286] new[1:135]
+10:30:59,284 parso.python.diff DEBUG parse_part from 136 to 142 (to 142 in part parser)
+10:30:59,286 parso.python.diff DEBUG -> code[replace] old[140:140] new[140:140]
+10:30:59,288 parso.python.diff DEBUG -> code[equal] old[141:1466] new[141:1466]
+10:30:59,290 parso.python.diff DEBUG copy old[143:159] new[143:159]
+10:30:59,297 parso.python.diff DEBUG parse_part from 160 to 164 (to 164 in part parser)
+10:30:59,300 parso.python.diff DEBUG copy old[165:275] new[165:275]
+10:30:59,303 parso.python.diff DEBUG parse_part from 276 to 275 (to 275 in part parser)
+10:30:59,315 parso.python.diff DEBUG parse_part from 276 to 287 (to 287 in part parser)
+10:30:59,338 parso.python.diff DEBUG parse_part from 288 to 310 (to 312 in part parser)
+10:30:59,341 parso.python.diff DEBUG copy old[313:1456] new[311:1441]
+10:30:59,344 parso.python.diff DEBUG parse_part from 1442 to 1442 (to 1442 in part parser)
+10:30:59,360 parso.python.diff DEBUG parse_part from 1443 to 1458 (to 1458 in part parser)
+10:30:59,367 parso.python.diff DEBUG parse_part from 1459 to 1466 (to 1465 in part parser)
+10:30:59,369 parso.python.diff DEBUG diff parser end
+10:31:01,182 parso.python.diff DEBUG diff parser start
+10:31:01,225 parso.python.diff DEBUG line_lengths old: 1466; new: 1466
+10:31:01,228 parso.python.diff DEBUG -> code[equal] old[1:139] new[1:139]
+10:31:01,232 parso.python.diff DEBUG copy old[1:286] new[1:135]
+10:31:01,242 parso.python.diff DEBUG parse_part from 136 to 142 (to 142 in part parser)
+10:31:01,245 parso.python.diff DEBUG -> code[replace] old[140:140] new[140:140]
+10:31:01,247 parso.python.diff DEBUG -> code[equal] old[141:1466] new[141:1466]
+10:31:01,249 parso.python.diff DEBUG copy old[143:159] new[143:159]
+10:31:01,257 parso.python.diff DEBUG parse_part from 160 to 164 (to 164 in part parser)
+10:31:01,261 parso.python.diff DEBUG copy old[165:275] new[165:275]
+10:31:01,265 parso.python.diff DEBUG parse_part from 276 to 275 (to 275 in part parser)
+10:31:01,277 parso.python.diff DEBUG parse_part from 276 to 287 (to 287 in part parser)
+10:31:01,301 parso.python.diff DEBUG parse_part from 288 to 310 (to 312 in part parser)
+10:31:01,304 parso.python.diff DEBUG copy old[313:1456] new[311:1441]
+10:31:01,308 parso.python.diff DEBUG parse_part from 1442 to 1442 (to 1442 in part parser)
+10:31:01,343 parso.python.diff DEBUG parse_part from 1443 to 1458 (to 1458 in part parser)
+10:31:01,350 parso.python.diff DEBUG parse_part from 1459 to 1466 (to 1465 in part parser)
+10:31:01,353 parso.python.diff DEBUG diff parser end
+10:31:01,717 parso.python.diff DEBUG diff parser start
+10:31:01,738 parso.python.diff DEBUG line_lengths old: 1466; new: 1466
+10:31:01,740 parso.python.diff DEBUG -> code[equal] old[1:139] new[1:139]
+10:31:01,744 parso.python.diff DEBUG copy old[1:286] new[1:135]
+10:31:01,752 parso.python.diff DEBUG parse_part from 136 to 142 (to 142 in part parser)
+10:31:01,754 parso.python.diff DEBUG -> code[replace] old[140:140] new[140:140]
+10:31:01,756 parso.python.diff DEBUG -> code[equal] old[141:1466] new[141:1466]
+10:31:01,759 parso.python.diff DEBUG copy old[143:159] new[143:159]
+10:31:01,766 parso.python.diff DEBUG parse_part from 160 to 164 (to 164 in part parser)
+10:31:01,769 parso.python.diff DEBUG copy old[165:275] new[165:275]
+10:31:01,773 parso.python.diff DEBUG parse_part from 276 to 275 (to 275 in part parser)
+10:31:01,784 parso.python.diff DEBUG parse_part from 276 to 287 (to 287 in part parser)
+10:31:01,810 parso.python.diff DEBUG parse_part from 288 to 310 (to 312 in part parser)
+10:31:01,813 parso.python.diff DEBUG copy old[313:1456] new[311:1441]
+10:31:01,816 parso.python.diff DEBUG parse_part from 1442 to 1442 (to 1442 in part parser)
+10:31:01,832 parso.python.diff DEBUG parse_part from 1443 to 1458 (to 1458 in part parser)
+10:31:01,841 parso.python.diff DEBUG parse_part from 1459 to 1466 (to 1465 in part parser)
+10:31:01,844 parso.python.diff DEBUG diff parser end
+10:31:05,61 parso.python.diff DEBUG diff parser start
+10:31:05,78 parso.python.diff DEBUG line_lengths old: 1466; new: 1466
+10:31:05,80 parso.python.diff DEBUG -> code[equal] old[1:139] new[1:139]
+10:31:05,83 parso.python.diff DEBUG copy old[1:286] new[1:135]
+10:31:05,92 parso.python.diff DEBUG parse_part from 136 to 142 (to 142 in part parser)
+10:31:05,94 parso.python.diff DEBUG -> code[replace] old[140:140] new[140:140]
+10:31:05,96 parso.python.diff DEBUG -> code[equal] old[141:1466] new[141:1466]
+10:31:05,97 parso.python.diff DEBUG copy old[143:159] new[143:159]
+10:31:05,103 parso.python.diff DEBUG parse_part from 160 to 164 (to 164 in part parser)
+10:31:05,105 parso.python.diff DEBUG copy old[165:275] new[165:275]
+10:31:05,108 parso.python.diff DEBUG parse_part from 276 to 275 (to 275 in part parser)
+10:31:05,117 parso.python.diff DEBUG parse_part from 276 to 287 (to 287 in part parser)
+10:31:05,149 parso.python.diff DEBUG parse_part from 288 to 310 (to 312 in part parser)
+10:31:05,153 parso.python.diff DEBUG copy old[313:1456] new[311:1441]
+10:31:05,157 parso.python.diff DEBUG parse_part from 1442 to 1442 (to 1442 in part parser)
+10:31:05,176 parso.python.diff DEBUG parse_part from 1443 to 1458 (to 1458 in part parser)
+10:31:05,182 parso.python.diff DEBUG parse_part from 1459 to 1466 (to 1465 in part parser)
+10:31:05,187 parso.python.diff DEBUG diff parser end
+10:31:05,689 parso.python.diff DEBUG diff parser start
+10:31:05,752 parso.python.diff DEBUG line_lengths old: 1466; new: 1466
+10:31:05,771 parso.python.diff DEBUG -> code[equal] old[1:139] new[1:139]
+10:31:05,777 parso.python.diff DEBUG copy old[1:286] new[1:135]
+10:31:05,798 parso.python.diff DEBUG parse_part from 136 to 142 (to 142 in part parser)
+10:31:05,800 parso.python.diff DEBUG -> code[replace] old[140:140] new[140:140]
+10:31:05,802 parso.python.diff DEBUG -> code[equal] old[141:1466] new[141:1466]
+10:31:05,805 parso.python.diff DEBUG copy old[143:159] new[143:159]
+10:31:05,812 parso.python.diff DEBUG parse_part from 160 to 164 (to 164 in part parser)
+10:31:05,815 parso.python.diff DEBUG copy old[165:275] new[165:275]
+10:31:05,819 parso.python.diff DEBUG parse_part from 276 to 275 (to 275 in part parser)
+10:31:05,829 parso.python.diff DEBUG parse_part from 276 to 287 (to 287 in part parser)
+10:31:05,850 parso.python.diff DEBUG parse_part from 288 to 310 (to 312 in part parser)
+10:31:05,853 parso.python.diff DEBUG copy old[313:1456] new[311:1441]
+10:31:05,856 parso.python.diff DEBUG parse_part from 1442 to 1442 (to 1442 in part parser)
+10:31:05,873 parso.python.diff DEBUG parse_part from 1443 to 1458 (to 1458 in part parser)
+10:31:05,880 parso.python.diff DEBUG parse_part from 1459 to 1466 (to 1465 in part parser)
+10:31:05,882 parso.python.diff DEBUG diff parser end
+10:31:09,891 root INFO starting...
+10:31:11,417 eyed3 DEBUG eyeD3 version 0.9.7
+10:31:15,664 parso.cache DEBUG pickle loaded: /data/data/com.termux/files/usr/lib/python3.11/site-packages/jedi/third_party/typeshed/stdlib/3/builtins.pyi
+10:31:15,890 parso.python.diff DEBUG diff parser start
+10:31:15,907 parso.python.diff DEBUG line_lengths old: 1466; new: 1466
+10:31:15,908 parso.python.diff DEBUG -> code[equal] old[1:139] new[1:139]
+10:31:15,913 parso.python.diff DEBUG copy old[1:286] new[1:135]
+10:31:15,920 parso.python.diff DEBUG parse_part from 136 to 142 (to 142 in part parser)
+10:31:15,922 parso.python.diff DEBUG -> code[replace] old[140:140] new[140:140]
+10:31:15,924 parso.python.diff DEBUG -> code[equal] old[141:1466] new[141:1466]
+10:31:15,927 parso.python.diff DEBUG copy old[143:159] new[143:159]
+10:31:16,13 parso.python.diff DEBUG parse_part from 160 to 164 (to 164 in part parser)
+10:31:16,17 parso.python.diff DEBUG copy old[165:275] new[165:275]
+10:31:16,23 parso.python.diff DEBUG parse_part from 276 to 275 (to 275 in part parser)
+10:31:16,34 parso.python.diff DEBUG parse_part from 276 to 287 (to 287 in part parser)
+10:31:16,398 parso.python.diff DEBUG parse_part from 288 to 310 (to 312 in part parser)
+10:31:16,401 parso.python.diff DEBUG copy old[313:1456] new[311:1441]
+10:31:16,404 parso.python.diff DEBUG parse_part from 1442 to 1442 (to 1442 in part parser)
+10:31:16,419 parso.python.diff DEBUG parse_part from 1443 to 1458 (to 1458 in part parser)
+10:31:16,425 parso.python.diff DEBUG parse_part from 1459 to 1466 (to 1465 in part parser)
+10:31:16,427 parso.python.diff DEBUG diff parser end
+10:31:16,577 parso.python.diff DEBUG diff parser start
+10:31:16,595 parso.python.diff DEBUG line_lengths old: 1466; new: 1466
+10:31:16,597 parso.python.diff DEBUG -> code[equal] old[1:139] new[1:139]
+10:31:16,600 parso.python.diff DEBUG copy old[1:286] new[1:135]
+10:31:16,607 parso.python.diff DEBUG parse_part from 136 to 142 (to 142 in part parser)
+10:31:16,610 parso.python.diff DEBUG -> code[replace] old[140:140] new[140:140]
+10:31:16,613 parso.python.diff DEBUG -> code[equal] old[141:1466] new[141:1466]
+10:31:16,615 parso.python.diff DEBUG copy old[143:159] new[143:159]
+10:31:16,622 parso.python.diff DEBUG parse_part from 160 to 164 (to 164 in part parser)
+10:31:16,624 parso.python.diff DEBUG copy old[165:275] new[165:275]
+10:31:16,628 parso.python.diff DEBUG parse_part from 276 to 275 (to 275 in part parser)
+10:31:16,638 parso.python.diff DEBUG parse_part from 276 to 287 (to 287 in part parser)
+10:31:16,657 parso.python.diff DEBUG parse_part from 288 to 310 (to 312 in part parser)
+10:31:16,660 parso.python.diff DEBUG copy old[313:1456] new[311:1441]
+10:31:16,663 parso.python.diff DEBUG parse_part from 1442 to 1442 (to 1442 in part parser)
+10:31:16,678 parso.python.diff DEBUG parse_part from 1443 to 1458 (to 1458 in part parser)
+10:31:16,684 parso.python.diff DEBUG parse_part from 1459 to 1466 (to 1465 in part parser)
+10:31:16,686 parso.python.diff DEBUG diff parser end
+10:31:18,123 parso.python.diff DEBUG diff parser start
+10:31:18,143 parso.python.diff DEBUG line_lengths old: 1466; new: 1466
+10:31:18,145 parso.python.diff DEBUG -> code[equal] old[1:139] new[1:139]
+10:31:18,149 parso.python.diff DEBUG copy old[1:286] new[1:135]
+10:31:18,159 parso.python.diff DEBUG parse_part from 136 to 142 (to 142 in part parser)
+10:31:18,161 parso.python.diff DEBUG -> code[replace] old[140:140] new[140:140]
+10:31:18,163 parso.python.diff DEBUG -> code[equal] old[141:1466] new[141:1466]
+10:31:18,166 parso.python.diff DEBUG copy old[143:159] new[143:159]
+10:31:18,171 parso.python.diff DEBUG parse_part from 160 to 164 (to 164 in part parser)
+10:31:18,174 parso.python.diff DEBUG copy old[165:275] new[165:275]
+10:31:18,177 parso.python.diff DEBUG parse_part from 276 to 275 (to 275 in part parser)
+10:31:18,186 parso.python.diff DEBUG parse_part from 276 to 287 (to 287 in part parser)
+10:31:18,206 parso.python.diff DEBUG parse_part from 288 to 310 (to 312 in part parser)
+10:31:18,210 parso.python.diff DEBUG copy old[313:1456] new[311:1441]
+10:31:18,214 parso.python.diff DEBUG parse_part from 1442 to 1442 (to 1442 in part parser)
+10:31:18,229 parso.python.diff DEBUG parse_part from 1443 to 1458 (to 1458 in part parser)
+10:31:18,235 parso.python.diff DEBUG parse_part from 1459 to 1466 (to 1465 in part parser)
+10:31:18,237 parso.python.diff DEBUG diff parser end
+10:31:29,412 parso.python.diff DEBUG diff parser start
+10:31:29,432 parso.python.diff DEBUG line_lengths old: 1466; new: 1466
+10:31:29,435 parso.python.diff DEBUG -> code[equal] old[1:139] new[1:139]
+10:31:29,457 parso.python.diff DEBUG copy old[1:286] new[1:135]
+10:31:29,471 parso.python.diff DEBUG parse_part from 136 to 142 (to 142 in part parser)
+10:31:29,488 parso.python.diff DEBUG -> code[replace] old[140:140] new[140:140]
+10:31:29,490 parso.python.diff DEBUG -> code[equal] old[141:1466] new[141:1466]
+10:31:29,493 parso.python.diff DEBUG copy old[143:159] new[143:159]
+10:31:29,500 parso.python.diff DEBUG parse_part from 160 to 164 (to 164 in part parser)
+10:31:29,515 parso.python.diff DEBUG copy old[165:275] new[165:275]
+10:31:29,519 parso.python.diff DEBUG parse_part from 276 to 275 (to 275 in part parser)
+10:31:29,530 parso.python.diff DEBUG parse_part from 276 to 287 (to 287 in part parser)
+10:31:29,552 parso.python.diff DEBUG parse_part from 288 to 310 (to 312 in part parser)
+10:31:29,555 parso.python.diff DEBUG copy old[313:1456] new[311:1441]
+10:31:29,559 parso.python.diff DEBUG parse_part from 1442 to 1442 (to 1442 in part parser)
+10:31:29,576 parso.python.diff DEBUG parse_part from 1443 to 1458 (to 1458 in part parser)
+10:31:29,583 parso.python.diff DEBUG parse_part from 1459 to 1466 (to 1465 in part parser)
+10:31:29,585 parso.python.diff DEBUG diff parser end
+10:31:29,986 parso.python.diff DEBUG diff parser start
+10:31:30,28 parso.python.diff DEBUG line_lengths old: 1466; new: 1466
+10:31:30,30 parso.python.diff DEBUG -> code[equal] old[1:139] new[1:139]
+10:31:30,33 parso.python.diff DEBUG copy old[1:286] new[1:135]
+10:31:30,42 parso.python.diff DEBUG parse_part from 136 to 142 (to 142 in part parser)
+10:31:30,44 parso.python.diff DEBUG -> code[replace] old[140:140] new[140:140]
+10:31:30,45 parso.python.diff DEBUG -> code[equal] old[141:1466] new[141:1466]
+10:31:30,49 parso.python.diff DEBUG copy old[143:159] new[143:159]
+10:31:30,55 parso.python.diff DEBUG parse_part from 160 to 164 (to 164 in part parser)
+10:31:30,58 parso.python.diff DEBUG copy old[165:275] new[165:275]
+10:31:30,62 parso.python.diff DEBUG parse_part from 276 to 275 (to 275 in part parser)
+10:31:30,75 parso.python.diff DEBUG parse_part from 276 to 287 (to 287 in part parser)
+10:31:30,96 parso.python.diff DEBUG parse_part from 288 to 310 (to 312 in part parser)
+10:31:30,100 parso.python.diff DEBUG copy old[313:1456] new[311:1441]
+10:31:30,104 parso.python.diff DEBUG parse_part from 1442 to 1442 (to 1442 in part parser)
+10:31:30,121 parso.python.diff DEBUG parse_part from 1443 to 1458 (to 1458 in part parser)
+10:31:30,127 parso.python.diff DEBUG parse_part from 1459 to 1466 (to 1465 in part parser)
+10:31:30,129 parso.python.diff DEBUG diff parser end
+10:31:31,22 parso.python.diff DEBUG diff parser start
+10:31:31,59 parso.python.diff DEBUG line_lengths old: 1466; new: 1466
+10:31:31,61 parso.python.diff DEBUG -> code[equal] old[1:139] new[1:139]
+10:31:31,64 parso.python.diff DEBUG copy old[1:286] new[1:135]
+10:31:31,75 parso.python.diff DEBUG parse_part from 136 to 142 (to 142 in part parser)
+10:31:31,79 parso.python.diff DEBUG -> code[replace] old[140:140] new[140:140]
+10:31:31,82 parso.python.diff DEBUG -> code[equal] old[141:1466] new[141:1466]
+10:31:31,85 parso.python.diff DEBUG copy old[143:159] new[143:159]
+10:31:31,92 parso.python.diff DEBUG parse_part from 160 to 164 (to 164 in part parser)
+10:31:31,95 parso.python.diff DEBUG copy old[165:275] new[165:275]
+10:31:31,99 parso.python.diff DEBUG parse_part from 276 to 275 (to 275 in part parser)
+10:31:31,113 parso.python.diff DEBUG parse_part from 276 to 287 (to 287 in part parser)
+10:31:31,138 parso.python.diff DEBUG parse_part from 288 to 310 (to 312 in part parser)
+10:31:31,143 parso.python.diff DEBUG copy old[313:1456] new[311:1441]
+10:31:31,147 parso.python.diff DEBUG parse_part from 1442 to 1442 (to 1442 in part parser)
+10:31:31,167 parso.python.diff DEBUG parse_part from 1443 to 1458 (to 1458 in part parser)
+10:31:31,175 parso.python.diff DEBUG parse_part from 1459 to 1466 (to 1465 in part parser)
+10:31:31,177 parso.python.diff DEBUG diff parser end
+10:31:31,648 parso.python.diff DEBUG diff parser start
+10:31:31,685 parso.python.diff DEBUG line_lengths old: 1466; new: 1466
+10:31:31,687 parso.python.diff DEBUG -> code[equal] old[1:139] new[1:139]
+10:31:31,691 parso.python.diff DEBUG copy old[1:286] new[1:135]
+10:31:31,701 parso.python.diff DEBUG parse_part from 136 to 142 (to 142 in part parser)
+10:31:31,703 parso.python.diff DEBUG -> code[replace] old[140:140] new[140:140]
+10:31:31,704 parso.python.diff DEBUG -> code[equal] old[141:1466] new[141:1466]
+10:31:31,706 parso.python.diff DEBUG copy old[143:159] new[143:159]
+10:31:31,715 parso.python.diff DEBUG parse_part from 160 to 164 (to 164 in part parser)
+10:31:31,719 parso.python.diff DEBUG copy old[165:275] new[165:275]
+10:31:31,723 parso.python.diff DEBUG parse_part from 276 to 275 (to 275 in part parser)
+10:31:31,735 parso.python.diff DEBUG parse_part from 276 to 287 (to 287 in part parser)
+10:31:31,756 parso.python.diff DEBUG parse_part from 288 to 310 (to 312 in part parser)
+10:31:31,762 parso.python.diff DEBUG copy old[313:1456] new[311:1441]
+10:31:31,765 parso.python.diff DEBUG parse_part from 1442 to 1442 (to 1442 in part parser)
+10:31:31,784 parso.python.diff DEBUG parse_part from 1443 to 1458 (to 1458 in part parser)
+10:31:31,790 parso.python.diff DEBUG parse_part from 1459 to 1466 (to 1465 in part parser)
+10:31:31,793 parso.python.diff DEBUG diff parser end
+10:31:32,732 parso.python.diff DEBUG diff parser start
+10:31:32,765 parso.python.diff DEBUG line_lengths old: 1466; new: 1466
+10:31:32,768 parso.python.diff DEBUG -> code[equal] old[1:139] new[1:139]
+10:31:32,772 parso.python.diff DEBUG copy old[1:286] new[1:135]
+10:31:32,785 parso.python.diff DEBUG parse_part from 136 to 142 (to 142 in part parser)
+10:31:32,787 parso.python.diff DEBUG -> code[replace] old[140:140] new[140:140]
+10:31:32,791 parso.python.diff DEBUG -> code[equal] old[141:1466] new[141:1466]
+10:31:32,794 parso.python.diff DEBUG copy old[143:159] new[143:159]
+10:31:32,799 parso.python.diff DEBUG parse_part from 160 to 164 (to 164 in part parser)
+10:31:32,802 parso.python.diff DEBUG copy old[165:275] new[165:275]
+10:31:32,806 parso.python.diff DEBUG parse_part from 276 to 275 (to 275 in part parser)
+10:31:32,817 parso.python.diff DEBUG parse_part from 276 to 287 (to 287 in part parser)
+10:31:32,838 parso.python.diff DEBUG parse_part from 288 to 310 (to 312 in part parser)
+10:31:32,841 parso.python.diff DEBUG copy old[313:1456] new[311:1441]
+10:31:32,844 parso.python.diff DEBUG parse_part from 1442 to 1442 (to 1442 in part parser)
+10:31:32,858 parso.python.diff DEBUG parse_part from 1443 to 1458 (to 1458 in part parser)
+10:31:32,866 parso.python.diff DEBUG parse_part from 1459 to 1466 (to 1465 in part parser)
+10:31:32,868 parso.python.diff DEBUG diff parser end
+10:31:33,856 parso.python.diff DEBUG diff parser start
+10:31:33,877 parso.python.diff DEBUG line_lengths old: 1466; new: 1466
+10:31:33,879 parso.python.diff DEBUG -> code[equal] old[1:139] new[1:139]
+10:31:33,883 parso.python.diff DEBUG copy old[1:286] new[1:135]
+10:31:33,898 parso.python.diff DEBUG parse_part from 136 to 142 (to 142 in part parser)
+10:31:33,902 parso.python.diff DEBUG -> code[replace] old[140:140] new[140:140]
+10:31:33,905 parso.python.diff DEBUG -> code[equal] old[141:1466] new[141:1466]
+10:31:33,910 parso.python.diff DEBUG copy old[143:159] new[143:159]
+10:31:33,917 parso.python.diff DEBUG parse_part from 160 to 164 (to 164 in part parser)
+10:31:33,923 parso.python.diff DEBUG copy old[165:275] new[165:275]
+10:31:33,927 parso.python.diff DEBUG parse_part from 276 to 275 (to 275 in part parser)
+10:31:33,938 parso.python.diff DEBUG parse_part from 276 to 287 (to 287 in part parser)
+10:31:33,963 parso.python.diff DEBUG parse_part from 288 to 310 (to 312 in part parser)
+10:31:33,967 parso.python.diff DEBUG copy old[313:1456] new[311:1441]
+10:31:33,970 parso.python.diff DEBUG parse_part from 1442 to 1442 (to 1442 in part parser)
+10:31:33,987 parso.python.diff DEBUG parse_part from 1443 to 1458 (to 1458 in part parser)
+10:31:33,998 parso.python.diff DEBUG parse_part from 1459 to 1466 (to 1465 in part parser)
+10:31:34,1 parso.python.diff DEBUG diff parser end
+10:31:34,592 parso.python.diff DEBUG diff parser start
+10:31:34,616 parso.python.diff DEBUG line_lengths old: 1466; new: 1466
+10:31:34,618 parso.python.diff DEBUG -> code[equal] old[1:139] new[1:139]
+10:31:34,623 parso.python.diff DEBUG copy old[1:286] new[1:135]
+10:31:34,635 parso.python.diff DEBUG parse_part from 136 to 142 (to 142 in part parser)
+10:31:34,639 parso.python.diff DEBUG -> code[replace] old[140:140] new[140:140]
+10:31:34,642 parso.python.diff DEBUG -> code[equal] old[141:1466] new[141:1466]
+10:31:34,647 parso.python.diff DEBUG copy old[143:159] new[143:159]
+10:31:34,661 parso.python.diff DEBUG parse_part from 160 to 164 (to 164 in part parser)
+10:31:34,666 parso.python.diff DEBUG copy old[165:275] new[165:275]
+10:31:34,670 parso.python.diff DEBUG parse_part from 276 to 275 (to 275 in part parser)
+10:31:34,682 parso.python.diff DEBUG parse_part from 276 to 287 (to 287 in part parser)
+10:31:34,707 parso.python.diff DEBUG parse_part from 288 to 310 (to 312 in part parser)
+10:31:34,711 parso.python.diff DEBUG copy old[313:1456] new[311:1441]
+10:31:34,714 parso.python.diff DEBUG parse_part from 1442 to 1442 (to 1442 in part parser)
+10:31:34,732 parso.python.diff DEBUG parse_part from 1443 to 1458 (to 1458 in part parser)
+10:31:34,739 parso.python.diff DEBUG parse_part from 1459 to 1466 (to 1465 in part parser)
+10:31:34,741 parso.python.diff DEBUG diff parser end
+10:32:21,113 parso.python.diff DEBUG diff parser start
+10:32:21,141 parso.python.diff DEBUG line_lengths old: 1466; new: 1465
+10:32:21,145 parso.python.diff DEBUG -> code[equal] old[1:1464] new[1:1464]
+10:32:21,149 parso.python.diff DEBUG copy old[1:1456] new[1:1441]
+10:32:21,153 parso.python.diff DEBUG parse_part from 1442 to 1442 (to 1442 in part parser)
+10:32:21,174 parso.python.diff DEBUG parse_part from 1443 to 1458 (to 1458 in part parser)
+10:32:21,182 parso.python.diff DEBUG parse_part from 1459 to 1464 (to 1464 in part parser)
+10:32:21,184 parso.python.diff DEBUG -> code[replace] old[1465:1466] new[1465:1465]
+10:32:21,185 parso.python.diff DEBUG diff parser end
+10:32:23,428 parso.python.diff DEBUG diff parser start
+10:32:23,481 parso.python.diff DEBUG line_lengths old: 1465; new: 1466
+10:32:23,488 parso.python.diff DEBUG -> code[equal] old[1:1464] new[1:1464]
+10:32:23,493 parso.python.diff DEBUG copy old[1:1456] new[1:1441]
+10:32:23,497 parso.python.diff DEBUG parse_part from 1442 to 1442 (to 1442 in part parser)
+10:32:23,520 parso.python.diff DEBUG parse_part from 1443 to 1458 (to 1458 in part parser)
+10:32:23,529 parso.python.diff DEBUG parse_part from 1459 to 1466 (to 1465 in part parser)
+10:32:23,532 parso.python.diff DEBUG -> code[replace] old[1465:1465] new[1465:1466]
+10:32:23,534 parso.python.diff DEBUG diff parser end
+10:32:58,300 parso.python.diff DEBUG diff parser start
+10:32:58,320 parso.python.diff DEBUG line_lengths old: 1466; new: 1465
+10:32:58,322 parso.python.diff DEBUG -> code[equal] old[1:1464] new[1:1464]
+10:32:58,326 parso.python.diff DEBUG copy old[1:1456] new[1:1441]
+10:32:58,330 parso.python.diff DEBUG parse_part from 1442 to 1442 (to 1442 in part parser)
+10:32:58,351 parso.python.diff DEBUG parse_part from 1443 to 1458 (to 1458 in part parser)
+10:32:58,359 parso.python.diff DEBUG parse_part from 1459 to 1464 (to 1464 in part parser)
+10:32:58,362 parso.python.diff DEBUG -> code[replace] old[1465:1466] new[1465:1465]
+10:32:58,364 parso.python.diff DEBUG diff parser end
+10:32:58,819 parso.python.diff DEBUG diff parser start
+10:32:58,834 parso.python.diff DEBUG line_lengths old: 1465; new: 1466
+10:32:58,854 parso.python.diff DEBUG -> code[equal] old[1:1464] new[1:1464]
+10:32:58,857 parso.python.diff DEBUG copy old[1:1456] new[1:1441]
+10:32:58,860 parso.python.diff DEBUG parse_part from 1442 to 1442 (to 1442 in part parser)
+10:32:58,879 parso.python.diff DEBUG parse_part from 1443 to 1458 (to 1458 in part parser)
+10:32:58,886 parso.python.diff DEBUG parse_part from 1459 to 1466 (to 1465 in part parser)
+10:32:58,887 parso.python.diff DEBUG -> code[replace] old[1465:1465] new[1465:1466]
+10:32:58,889 parso.python.diff DEBUG diff parser end
+10:32:58,961 parso.python.diff DEBUG diff parser start
+10:32:58,976 parso.python.diff DEBUG line_lengths old: 1466; new: 1465
+10:32:58,978 parso.python.diff DEBUG -> code[equal] old[1:1464] new[1:1464]
+10:32:58,981 parso.python.diff DEBUG copy old[1:1456] new[1:1441]
+10:32:58,984 parso.python.diff DEBUG parse_part from 1442 to 1442 (to 1442 in part parser)
+10:32:59,1 parso.python.diff DEBUG parse_part from 1443 to 1458 (to 1458 in part parser)
+10:32:59,8 parso.python.diff DEBUG parse_part from 1459 to 1464 (to 1464 in part parser)
+10:32:59,10 parso.python.diff DEBUG -> code[replace] old[1465:1466] new[1465:1465]
+10:32:59,12 parso.python.diff DEBUG diff parser end
+10:33:00,560 parso.python.diff DEBUG diff parser start
+10:33:00,588 parso.python.diff DEBUG line_lengths old: 1465; new: 1466
+10:33:00,589 parso.python.diff DEBUG -> code[equal] old[1:1464] new[1:1464]
+10:33:00,593 parso.python.diff DEBUG copy old[1:1456] new[1:1441]
+10:33:00,597 parso.python.diff DEBUG parse_part from 1442 to 1442 (to 1442 in part parser)
+10:33:00,613 parso.python.diff DEBUG parse_part from 1443 to 1458 (to 1458 in part parser)
+10:33:00,621 parso.python.diff DEBUG parse_part from 1459 to 1466 (to 1465 in part parser)
+10:33:00,623 parso.python.diff DEBUG -> code[replace] old[1465:1465] new[1465:1466]
+10:33:00,625 parso.python.diff DEBUG diff parser end
+10:33:01,570 parso.python.diff DEBUG diff parser start
+10:33:01,592 parso.python.diff DEBUG line_lengths old: 1466; new: 1465
+10:33:01,595 parso.python.diff DEBUG -> code[equal] old[1:1464] new[1:1464]
+10:33:01,601 parso.python.diff DEBUG copy old[1:1456] new[1:1441]
+10:33:01,607 parso.python.diff DEBUG parse_part from 1442 to 1442 (to 1442 in part parser)
+10:33:01,647 parso.python.diff DEBUG parse_part from 1443 to 1458 (to 1458 in part parser)
+10:33:01,657 parso.python.diff DEBUG parse_part from 1459 to 1464 (to 1464 in part parser)
+10:33:01,659 parso.python.diff DEBUG -> code[replace] old[1465:1466] new[1465:1465]
+10:33:01,662 parso.python.diff DEBUG diff parser end
+10:33:03,38 parso.python.diff DEBUG diff parser start
+10:33:03,66 parso.python.diff DEBUG line_lengths old: 1465; new: 1466
+10:33:03,68 parso.python.diff DEBUG -> code[equal] old[1:1464] new[1:1464]
+10:33:03,72 parso.python.diff DEBUG copy old[1:1456] new[1:1441]
+10:33:03,75 parso.python.diff DEBUG parse_part from 1442 to 1442 (to 1442 in part parser)
+10:33:03,92 parso.python.diff DEBUG parse_part from 1443 to 1458 (to 1458 in part parser)
+10:33:03,99 parso.python.diff DEBUG parse_part from 1459 to 1466 (to 1465 in part parser)
+10:33:03,102 parso.python.diff DEBUG -> code[replace] old[1465:1465] new[1465:1466]
+10:33:03,103 parso.python.diff DEBUG diff parser end
+10:33:07,224 parso.python.diff DEBUG diff parser start
+10:33:07,239 parso.python.diff DEBUG line_lengths old: 1466; new: 1466
+10:33:07,241 parso.python.diff DEBUG -> code[equal] old[1:139] new[1:139]
+10:33:07,245 parso.python.diff DEBUG copy old[1:286] new[1:135]
+10:33:07,255 parso.python.diff DEBUG parse_part from 136 to 142 (to 142 in part parser)
+10:33:07,257 parso.python.diff DEBUG -> code[replace] old[140:140] new[140:140]
+10:33:07,259 parso.python.diff DEBUG -> code[equal] old[141:1466] new[141:1466]
+10:33:07,262 parso.python.diff DEBUG copy old[143:159] new[143:159]
+10:33:07,268 parso.python.diff DEBUG parse_part from 160 to 164 (to 164 in part parser)
+10:33:07,270 parso.python.diff DEBUG copy old[165:275] new[165:275]
+10:33:07,273 parso.python.diff DEBUG parse_part from 276 to 275 (to 275 in part parser)
+10:33:07,283 parso.python.diff DEBUG parse_part from 276 to 287 (to 287 in part parser)
+10:33:07,307 parso.python.diff DEBUG parse_part from 288 to 310 (to 312 in part parser)
+10:33:07,310 parso.python.diff DEBUG copy old[313:1456] new[311:1441]
+10:33:07,313 parso.python.diff DEBUG parse_part from 1442 to 1442 (to 1442 in part parser)
+10:33:07,330 parso.python.diff DEBUG parse_part from 1443 to 1458 (to 1458 in part parser)
+10:33:07,337 parso.python.diff DEBUG parse_part from 1459 to 1466 (to 1465 in part parser)
+10:33:07,339 parso.python.diff DEBUG diff parser end
+10:33:09,396 parso.python.diff DEBUG diff parser start
+10:33:09,416 parso.python.diff DEBUG line_lengths old: 1466; new: 1466
+10:33:09,418 parso.python.diff DEBUG -> code[equal] old[1:139] new[1:139]
+10:33:09,420 parso.python.diff DEBUG copy old[1:286] new[1:135]
+10:33:09,430 parso.python.diff DEBUG parse_part from 136 to 142 (to 142 in part parser)
+10:33:09,433 parso.python.diff DEBUG -> code[replace] old[140:140] new[140:140]
+10:33:09,435 parso.python.diff DEBUG -> code[equal] old[141:1466] new[141:1466]
+10:33:09,438 parso.python.diff DEBUG copy old[143:159] new[143:159]
+10:33:09,442 parso.python.diff DEBUG parse_part from 160 to 164 (to 164 in part parser)
+10:33:09,445 parso.python.diff DEBUG copy old[165:275] new[165:275]
+10:33:09,448 parso.python.diff DEBUG parse_part from 276 to 275 (to 275 in part parser)
+10:33:09,457 parso.python.diff DEBUG parse_part from 276 to 287 (to 287 in part parser)
+10:33:09,477 parso.python.diff DEBUG parse_part from 288 to 310 (to 312 in part parser)
+10:33:09,480 parso.python.diff DEBUG copy old[313:1456] new[311:1441]
+10:33:09,483 parso.python.diff DEBUG parse_part from 1442 to 1442 (to 1442 in part parser)
+10:33:09,500 parso.python.diff DEBUG parse_part from 1443 to 1458 (to 1458 in part parser)
+10:33:09,506 parso.python.diff DEBUG parse_part from 1459 to 1466 (to 1465 in part parser)
+10:33:09,508 parso.python.diff DEBUG diff parser end
+10:33:12,685 parso.python.diff DEBUG diff parser start
+10:33:12,706 parso.python.diff DEBUG line_lengths old: 1466; new: 1467
+10:33:12,710 parso.python.diff DEBUG -> code[equal] old[1:140] new[1:140]
+10:33:12,714 parso.python.diff DEBUG copy old[1:286] new[1:135]
+10:33:12,725 parso.python.diff DEBUG parse_part from 136 to 143 (to 143 in part parser)
+10:33:12,728 parso.python.diff DEBUG -> code[insert] old[141:140] new[141:141]
+10:33:12,730 parso.python.diff DEBUG -> code[equal] old[141:1466] new[142:1467]
+10:33:12,733 parso.python.diff DEBUG copy old[143:159] new[144:160]
+10:33:12,748 parso.python.diff DEBUG parse_part from 161 to 165 (to 165 in part parser)
+10:33:12,751 parso.python.diff DEBUG copy old[165:275] new[166:276]
+10:33:12,754 parso.python.diff DEBUG parse_part from 277 to 276 (to 276 in part parser)
+10:33:12,763 parso.python.diff DEBUG parse_part from 277 to 288 (to 288 in part parser)
+10:33:12,782 parso.python.diff DEBUG parse_part from 289 to 311 (to 313 in part parser)
+10:33:12,786 parso.python.diff DEBUG copy old[313:1456] new[312:1442]
+10:33:12,788 parso.python.diff DEBUG parse_part from 1443 to 1443 (to 1443 in part parser)
+10:33:12,803 parso.python.diff DEBUG parse_part from 1444 to 1459 (to 1459 in part parser)
+10:33:12,809 parso.python.diff DEBUG parse_part from 1460 to 1467 (to 1466 in part parser)
+10:33:12,880 parso.python.diff DEBUG diff parser end
+10:33:14,255 parso.python.diff DEBUG diff parser start
+10:33:14,277 parso.python.diff DEBUG line_lengths old: 1467; new: 1467
+10:33:14,279 parso.python.diff DEBUG -> code[equal] old[1:140] new[1:140]
+10:33:14,282 parso.python.diff DEBUG copy old[1:287] new[1:135]
+10:33:14,293 parso.python.diff DEBUG parse_part from 136 to 143 (to 143 in part parser)
+10:33:14,296 parso.python.diff DEBUG -> code[replace] old[141:141] new[141:141]
+10:33:14,298 parso.python.diff DEBUG -> code[equal] old[142:1467] new[142:1467]
+10:33:14,301 parso.python.diff DEBUG copy old[144:160] new[144:160]
+10:33:14,309 parso.python.diff DEBUG parse_part from 161 to 165 (to 165 in part parser)
+10:33:14,313 parso.python.diff DEBUG copy old[166:276] new[166:276]
+10:33:14,317 parso.python.diff DEBUG parse_part from 277 to 276 (to 276 in part parser)
+10:33:14,328 parso.python.diff DEBUG parse_part from 277 to 288 (to 288 in part parser)
+10:33:14,349 parso.python.diff DEBUG parse_part from 289 to 311 (to 313 in part parser)
+10:33:14,352 parso.python.diff DEBUG copy old[314:1457] new[312:1442]
+10:33:14,355 parso.python.diff DEBUG parse_part from 1443 to 1443 (to 1443 in part parser)
+10:33:14,370 parso.python.diff DEBUG parse_part from 1444 to 1459 (to 1459 in part parser)
+10:33:14,375 parso.python.diff DEBUG parse_part from 1460 to 1467 (to 1466 in part parser)
+10:33:14,377 parso.python.diff DEBUG diff parser end
+10:33:14,580 parso.python.diff DEBUG diff parser start
+10:33:14,600 parso.python.diff DEBUG line_lengths old: 1467; new: 1467
+10:33:14,601 parso.python.diff DEBUG -> code[equal] old[1:140] new[1:140]
+10:33:14,605 parso.python.diff DEBUG copy old[1:287] new[1:135]
+10:33:14,616 parso.python.diff DEBUG parse_part from 136 to 143 (to 143 in part parser)
+10:33:14,619 parso.python.diff DEBUG -> code[replace] old[141:141] new[141:141]
+10:33:14,621 parso.python.diff DEBUG -> code[equal] old[142:1467] new[142:1467]
+10:33:14,624 parso.python.diff DEBUG copy old[144:160] new[144:160]
+10:33:14,630 parso.python.diff DEBUG parse_part from 161 to 165 (to 165 in part parser)
+10:33:14,632 parso.python.diff DEBUG copy old[166:276] new[166:276]
+10:33:14,635 parso.python.diff DEBUG parse_part from 277 to 276 (to 276 in part parser)
+10:33:14,647 parso.python.diff DEBUG parse_part from 277 to 288 (to 288 in part parser)
+10:33:14,666 parso.python.diff DEBUG parse_part from 289 to 311 (to 313 in part parser)
+10:33:14,670 parso.python.diff DEBUG copy old[314:1457] new[312:1442]
+10:33:14,672 parso.python.diff DEBUG parse_part from 1443 to 1443 (to 1443 in part parser)
+10:33:14,686 parso.python.diff DEBUG parse_part from 1444 to 1459 (to 1459 in part parser)
+10:33:14,692 parso.python.diff DEBUG parse_part from 1460 to 1467 (to 1466 in part parser)
+10:33:14,693 parso.python.diff DEBUG diff parser end
+10:33:15,98 parso.python.diff DEBUG diff parser start
+10:33:15,122 parso.python.diff DEBUG line_lengths old: 1467; new: 1467
+10:33:15,124 parso.python.diff DEBUG -> code[equal] old[1:140] new[1:140]
+10:33:15,128 parso.python.diff DEBUG copy old[1:287] new[1:135]
+10:33:15,138 parso.python.diff DEBUG parse_part from 136 to 143 (to 143 in part parser)
+10:33:15,140 parso.python.diff DEBUG -> code[replace] old[141:141] new[141:141]
+10:33:15,142 parso.python.diff DEBUG -> code[equal] old[142:1467] new[142:1467]
+10:33:15,145 parso.python.diff DEBUG copy old[144:160] new[144:160]
+10:33:15,151 parso.python.diff DEBUG parse_part from 161 to 165 (to 165 in part parser)
+10:33:15,155 parso.python.diff DEBUG copy old[166:276] new[166:276]
+10:33:15,159 parso.python.diff DEBUG parse_part from 277 to 276 (to 276 in part parser)
+10:33:15,171 parso.python.diff DEBUG parse_part from 277 to 288 (to 288 in part parser)
+10:33:15,192 parso.python.diff DEBUG parse_part from 289 to 311 (to 313 in part parser)
+10:33:15,195 parso.python.diff DEBUG copy old[314:1457] new[312:1442]
+10:33:15,199 parso.python.diff DEBUG parse_part from 1443 to 1443 (to 1443 in part parser)
+10:33:15,225 parso.python.diff DEBUG parse_part from 1444 to 1459 (to 1459 in part parser)
+10:33:15,231 parso.python.diff DEBUG parse_part from 1460 to 1467 (to 1466 in part parser)
+10:33:15,234 parso.python.diff DEBUG diff parser end
+10:33:16,196 parso.python.diff DEBUG diff parser start
+10:33:16,220 parso.python.diff DEBUG line_lengths old: 1467; new: 1467
+10:33:16,221 parso.python.diff DEBUG -> code[equal] old[1:140] new[1:140]
+10:33:16,225 parso.python.diff DEBUG copy old[1:287] new[1:135]
+10:33:16,233 parso.python.diff DEBUG parse_part from 136 to 143 (to 143 in part parser)
+10:33:16,235 parso.python.diff DEBUG -> code[replace] old[141:141] new[141:141]
+10:33:16,237 parso.python.diff DEBUG -> code[equal] old[142:1467] new[142:1467]
+10:33:16,239 parso.python.diff DEBUG copy old[144:160] new[144:160]
+10:33:16,246 parso.python.diff DEBUG parse_part from 161 to 165 (to 165 in part parser)
+10:33:16,248 parso.python.diff DEBUG copy old[166:276] new[166:276]
+10:33:16,252 parso.python.diff DEBUG parse_part from 277 to 276 (to 276 in part parser)
+10:33:16,261 parso.python.diff DEBUG parse_part from 277 to 288 (to 288 in part parser)
+10:33:16,280 parso.python.diff DEBUG parse_part from 289 to 311 (to 313 in part parser)
+10:33:16,283 parso.python.diff DEBUG copy old[314:1457] new[312:1442]
+10:33:16,286 parso.python.diff DEBUG parse_part from 1443 to 1443 (to 1443 in part parser)
+10:33:16,300 parso.python.diff DEBUG parse_part from 1444 to 1459 (to 1459 in part parser)
+10:33:16,306 parso.python.diff DEBUG parse_part from 1460 to 1467 (to 1466 in part parser)
+10:33:16,308 parso.python.diff DEBUG diff parser end
+10:33:17,345 parso.python.diff DEBUG diff parser start
+10:33:17,365 parso.python.diff DEBUG line_lengths old: 1467; new: 1467
+10:33:17,368 parso.python.diff DEBUG -> code[equal] old[1:140] new[1:140]
+10:33:17,372 parso.python.diff DEBUG copy old[1:287] new[1:135]
+10:33:17,385 parso.python.diff DEBUG parse_part from 136 to 143 (to 143 in part parser)
+10:33:17,387 parso.python.diff DEBUG -> code[replace] old[141:141] new[141:141]
+10:33:17,390 parso.python.diff DEBUG -> code[equal] old[142:1467] new[142:1467]
+10:33:17,392 parso.python.diff DEBUG copy old[144:160] new[144:160]
+10:33:17,400 parso.python.diff DEBUG parse_part from 161 to 165 (to 165 in part parser)
+10:33:17,403 parso.python.diff DEBUG copy old[166:276] new[166:276]
+10:33:17,407 parso.python.diff DEBUG parse_part from 277 to 276 (to 276 in part parser)
+10:33:17,419 parso.python.diff DEBUG parse_part from 277 to 288 (to 288 in part parser)
+10:33:17,443 parso.python.diff DEBUG parse_part from 289 to 311 (to 313 in part parser)
+10:33:17,447 parso.python.diff DEBUG copy old[314:1457] new[312:1442]
+10:33:17,450 parso.python.diff DEBUG parse_part from 1443 to 1443 (to 1443 in part parser)
+10:33:17,468 parso.python.diff DEBUG parse_part from 1444 to 1459 (to 1459 in part parser)
+10:33:17,474 parso.python.diff DEBUG parse_part from 1460 to 1467 (to 1466 in part parser)
+10:33:17,476 parso.python.diff DEBUG diff parser end
+10:33:18,147 parso.python.diff DEBUG diff parser start
+10:33:18,207 parso.python.diff DEBUG line_lengths old: 1467; new: 1467
+10:33:18,209 parso.python.diff DEBUG -> code[equal] old[1:140] new[1:140]
+10:33:18,213 parso.python.diff DEBUG copy old[1:287] new[1:135]
+10:33:18,223 parso.python.diff DEBUG parse_part from 136 to 143 (to 143 in part parser)
+10:33:18,225 parso.python.diff DEBUG -> code[replace] old[141:141] new[141:141]
+10:33:18,227 parso.python.diff DEBUG -> code[equal] old[142:1467] new[142:1467]
+10:33:18,230 parso.python.diff DEBUG copy old[144:160] new[144:160]
+10:33:18,236 parso.python.diff DEBUG parse_part from 161 to 165 (to 165 in part parser)
+10:33:18,239 parso.python.diff DEBUG copy old[166:276] new[166:276]
+10:33:18,243 parso.python.diff DEBUG parse_part from 277 to 276 (to 276 in part parser)
+10:33:18,264 parso.python.diff DEBUG parse_part from 277 to 288 (to 288 in part parser)
+10:33:18,284 parso.python.diff DEBUG parse_part from 289 to 311 (to 313 in part parser)
+10:33:18,288 parso.python.diff DEBUG copy old[314:1457] new[312:1442]
+10:33:18,291 parso.python.diff DEBUG parse_part from 1443 to 1443 (to 1443 in part parser)
+10:33:18,307 parso.python.diff DEBUG parse_part from 1444 to 1459 (to 1459 in part parser)
+10:33:18,313 parso.python.diff DEBUG parse_part from 1460 to 1467 (to 1466 in part parser)
+10:33:18,315 parso.python.diff DEBUG diff parser end
+10:33:18,621 parso.cache DEBUG pickle loaded: /data/data/com.termux/files/usr/lib/python3.11/os.py
+10:33:18,710 parso.cache DEBUG pickle loaded: /data/data/com.termux/files/usr/lib/python3.11/site-packages/jedi/third_party/typeshed/stdlib/3/os/__init__.pyi
+10:33:18,830 parso.cache DEBUG pickle loaded: /data/data/com.termux/files/usr/lib/python3.11/posixpath.py
+10:33:18,894 parso.cache DEBUG pickle loaded: /data/data/com.termux/files/usr/lib/python3.11/ntpath.py
+10:33:18,922 parso.cache DEBUG pickle loaded: /data/data/com.termux/files/usr/lib/python3.11/site-packages/jedi/third_party/typeshed/stdlib/3/os/path.pyi
+10:33:18,995 parso.cache DEBUG pickle loaded: /data/data/com.termux/files/usr/lib/python3.11/site-packages/yaml/__init__.py
+10:33:19,114 parso.cache DEBUG pickle loaded: /data/data/com.termux/files/usr/lib/python3.11/site-packages/jedi/third_party/typeshed/third_party/2and3/yaml/__init__.pyi
+10:33:19,615 parso.cache DEBUG pickle loaded: /data/data/com.termux/files/usr/lib/python3.11/site-packages/yaml/dumper.py
+10:33:19,632 parso.cache DEBUG pickle loaded: /data/data/com.termux/files/usr/lib/python3.11/site-packages/jedi/third_party/typeshed/third_party/2and3/yaml/dumper.pyi
+10:33:19,648 parso.cache DEBUG pickle loaded: /data/data/com.termux/files/usr/lib/python3.11/site-packages/yaml/error.py
+10:33:19,656 parso.cache DEBUG pickle loaded: /data/data/com.termux/files/usr/lib/python3.11/site-packages/jedi/third_party/typeshed/third_party/2and3/yaml/error.pyi
+10:33:19,673 parso.cache DEBUG pickle loaded: /data/data/com.termux/files/usr/lib/python3.11/site-packages/yaml/events.py
+10:33:19,686 parso.cache DEBUG pickle loaded: /data/data/com.termux/files/usr/lib/python3.11/site-packages/jedi/third_party/typeshed/third_party/2and3/yaml/events.pyi
+10:33:19,699 parso.cache DEBUG pickle loaded: /data/data/com.termux/files/usr/lib/python3.11/site-packages/yaml/loader.py
+10:33:19,707 parso.cache DEBUG pickle loaded: /data/data/com.termux/files/usr/lib/python3.11/site-packages/jedi/third_party/typeshed/third_party/2and3/yaml/loader.pyi
+10:33:19,718 parso.cache DEBUG pickle loaded: /data/data/com.termux/files/usr/lib/python3.11/site-packages/yaml/nodes.py
+10:33:19,727 parso.cache DEBUG pickle loaded: /data/data/com.termux/files/usr/lib/python3.11/site-packages/jedi/third_party/typeshed/third_party/2and3/yaml/nodes.pyi
+10:33:19,740 parso.cache DEBUG pickle loaded: /data/data/com.termux/files/usr/lib/python3.11/site-packages/yaml/tokens.py
+10:33:19,753 parso.cache DEBUG pickle loaded: /data/data/com.termux/files/usr/lib/python3.11/site-packages/jedi/third_party/typeshed/third_party/2and3/yaml/tokens.pyi
+10:33:19,768 parso.cache DEBUG pickle loaded: /data/data/com.termux/files/usr/lib/python3.11/site-packages/yaml/cyaml.py
+10:33:19,779 parso.cache DEBUG pickle loaded: /data/data/com.termux/files/usr/lib/python3.11/site-packages/jedi/third_party/typeshed/third_party/2and3/yaml/cyaml.pyi
+10:33:20,22 parso.cache DEBUG pickle loaded: /data/data/com.termux/files/usr/lib/python3.11/typing.py
+10:33:20,242 parso.cache DEBUG pickle loaded: /data/data/com.termux/files/usr/lib/python3.11/site-packages/jedi/third_party/typeshed/stdlib/3/typing.pyi
+10:33:20,329 parso.cache DEBUG pickle loaded: /data/data/com.termux/files/usr/lib/python3.11/site-packages/pypresence/__init__.py
+10:33:20,353 parso.cache DEBUG pickle loaded: /data/data/com.termux/files/usr/lib/python3.11/site-packages/pypresence/presence.py
+10:33:20,391 parso.cache DEBUG pickle loaded: /data/data/com.termux/files/usr/lib/python3.11/site-packages/pypresence/baseclient.py
+10:33:20,507 parso.cache DEBUG pickle loaded: /data/data/com.termux/files/usr/lib/python3.11/site-packages/appdirs.py
+10:33:20,579 parso.cache DEBUG pickle loaded: /data/data/com.termux/files/usr/lib/python3.11/site-packages/jedi/third_party/typeshed/stdlib/3/sys.pyi
+10:33:20,727 parso.cache DEBUG pickle loaded: /data/data/com.termux/files/usr/lib/python3.11/platform.py
+10:33:20,741 parso.cache DEBUG pickle loaded: /data/data/com.termux/files/usr/lib/python3.11/site-packages/jedi/third_party/typeshed/stdlib/3/platform.pyi
+10:33:20,865 parso.cache DEBUG pickle loaded: /data/data/com.termux/files/usr/lib/python3.11/site-packages/jedi/third_party/typeshed/stdlib/2and3/_typeshed/__init__.pyi
+10:33:21,120 parso.cache DEBUG pickle loaded: /data/data/com.termux/files/usr/lib/python3.11/site-packages/jedi/third_party/typeshed/stdlib/3/winreg.pyi
+10:33:21,235 parso.cache DEBUG pickle loaded: /data/data/com.termux/files/usr/lib/python3.11/ctypes/__init__.py
+10:33:21,279 parso.cache DEBUG pickle loaded: /data/data/com.termux/files/usr/lib/python3.11/site-packages/jedi/third_party/typeshed/stdlib/2and3/ctypes/__init__.pyi
+10:33:21,488 parso.python.diff DEBUG diff parser start
+10:33:21,507 parso.python.diff DEBUG line_lengths old: 1467; new: 1467
+10:33:21,509 parso.python.diff DEBUG -> code[equal] old[1:140] new[1:140]
+10:33:21,512 parso.python.diff DEBUG copy old[1:287] new[1:135]
+10:33:21,519 parso.python.diff DEBUG parse_part from 136 to 143 (to 143 in part parser)
+10:33:21,521 parso.python.diff DEBUG -> code[replace] old[141:141] new[141:141]
+10:33:21,522 parso.python.diff DEBUG -> code[equal] old[142:1467] new[142:1467]
+10:33:21,524 parso.python.diff DEBUG copy old[144:160] new[144:160]
+10:33:21,530 parso.python.diff DEBUG parse_part from 161 to 165 (to 165 in part parser)
+10:33:21,533 parso.python.diff DEBUG copy old[166:276] new[166:276]
+10:33:21,536 parso.python.diff DEBUG parse_part from 277 to 276 (to 276 in part parser)
+10:33:21,545 parso.python.diff DEBUG parse_part from 277 to 288 (to 288 in part parser)
+10:33:21,564 parso.python.diff DEBUG parse_part from 289 to 311 (to 313 in part parser)
+10:33:21,567 parso.python.diff DEBUG copy old[314:1457] new[312:1442]
+10:33:21,570 parso.python.diff DEBUG parse_part from 1443 to 1443 (to 1443 in part parser)
+10:33:21,587 parso.python.diff DEBUG parse_part from 1444 to 1459 (to 1459 in part parser)
+10:33:21,598 parso.python.diff DEBUG parse_part from 1460 to 1467 (to 1466 in part parser)
+10:33:21,601 parso.python.diff DEBUG diff parser end
+10:33:21,929 parso.python.diff DEBUG diff parser start
+10:33:21,958 parso.python.diff DEBUG line_lengths old: 1467; new: 1467
+10:33:21,962 parso.python.diff DEBUG -> code[equal] old[1:140] new[1:140]
+10:33:21,966 parso.python.diff DEBUG copy old[1:287] new[1:135]
+10:33:21,979 parso.python.diff DEBUG parse_part from 136 to 143 (to 143 in part parser)
+10:33:21,982 parso.python.diff DEBUG -> code[replace] old[141:141] new[141:141]
+10:33:21,986 parso.python.diff DEBUG -> code[equal] old[142:1467] new[142:1467]
+10:33:21,989 parso.python.diff DEBUG copy old[144:160] new[144:160]
+10:33:21,998 parso.python.diff DEBUG parse_part from 161 to 165 (to 165 in part parser)
+10:33:22,2 parso.python.diff DEBUG copy old[166:276] new[166:276]
+10:33:22,7 parso.python.diff DEBUG parse_part from 277 to 276 (to 276 in part parser)
+10:33:22,18 parso.python.diff DEBUG parse_part from 277 to 288 (to 288 in part parser)
+10:33:22,41 parso.python.diff DEBUG parse_part from 289 to 311 (to 313 in part parser)
+10:33:22,45 parso.python.diff DEBUG copy old[314:1457] new[312:1442]
+10:33:22,49 parso.python.diff DEBUG parse_part from 1443 to 1443 (to 1443 in part parser)
+10:33:22,64 parso.python.diff DEBUG parse_part from 1444 to 1459 (to 1459 in part parser)
+10:33:22,70 parso.python.diff DEBUG parse_part from 1460 to 1467 (to 1466 in part parser)
+10:33:22,73 parso.python.diff DEBUG diff parser end
+10:33:23,6 parso.python.diff DEBUG diff parser start
+10:33:23,72 parso.python.diff DEBUG line_lengths old: 1467; new: 1467
+10:33:23,74 parso.python.diff DEBUG -> code[equal] old[1:140] new[1:140]
+10:33:23,76 parso.python.diff DEBUG copy old[1:287] new[1:135]
+10:33:23,85 parso.python.diff DEBUG parse_part from 136 to 143 (to 143 in part parser)
+10:33:23,87 parso.python.diff DEBUG -> code[replace] old[141:141] new[141:141]
+10:33:23,89 parso.python.diff DEBUG -> code[equal] old[142:1467] new[142:1467]
+10:33:23,92 parso.python.diff DEBUG copy old[144:160] new[144:160]
+10:33:23,99 parso.python.diff DEBUG parse_part from 161 to 165 (to 165 in part parser)
+10:33:23,102 parso.python.diff DEBUG copy old[166:276] new[166:276]
+10:33:23,107 parso.python.diff DEBUG parse_part from 277 to 276 (to 276 in part parser)
+10:33:23,119 parso.python.diff DEBUG parse_part from 277 to 288 (to 288 in part parser)
+10:33:23,139 parso.python.diff DEBUG parse_part from 289 to 311 (to 313 in part parser)
+10:33:23,141 parso.python.diff DEBUG copy old[314:1457] new[312:1442]
+10:33:23,144 parso.python.diff DEBUG parse_part from 1443 to 1443 (to 1443 in part parser)
+10:33:23,161 parso.python.diff DEBUG parse_part from 1444 to 1459 (to 1459 in part parser)
+10:33:23,167 parso.python.diff DEBUG parse_part from 1460 to 1467 (to 1466 in part parser)
+10:33:23,168 parso.python.diff DEBUG diff parser end
+10:33:23,334 parso.python.diff DEBUG diff parser start
+10:33:23,355 parso.python.diff DEBUG line_lengths old: 1467; new: 1467
+10:33:23,357 parso.python.diff DEBUG -> code[equal] old[1:140] new[1:140]
+10:33:23,360 parso.python.diff DEBUG copy old[1:287] new[1:135]
+10:33:23,369 parso.python.diff DEBUG parse_part from 136 to 143 (to 143 in part parser)
+10:33:23,372 parso.python.diff DEBUG -> code[replace] old[141:141] new[141:141]
+10:33:23,375 parso.python.diff DEBUG -> code[equal] old[142:1467] new[142:1467]
+10:33:23,377 parso.python.diff DEBUG copy old[144:160] new[144:160]
+10:33:23,383 parso.python.diff DEBUG parse_part from 161 to 165 (to 165 in part parser)
+10:33:23,386 parso.python.diff DEBUG copy old[166:276] new[166:276]
+10:33:23,390 parso.python.diff DEBUG parse_part from 277 to 276 (to 276 in part parser)
+10:33:23,401 parso.python.diff DEBUG parse_part from 277 to 288 (to 288 in part parser)
+10:33:23,420 parso.python.diff DEBUG parse_part from 289 to 311 (to 313 in part parser)
+10:33:23,423 parso.python.diff DEBUG copy old[314:1457] new[312:1442]
+10:33:23,426 parso.python.diff DEBUG parse_part from 1443 to 1443 (to 1443 in part parser)
+10:33:23,442 parso.python.diff DEBUG parse_part from 1444 to 1459 (to 1459 in part parser)
+10:33:23,452 parso.python.diff DEBUG parse_part from 1460 to 1467 (to 1466 in part parser)
+10:33:23,454 parso.python.diff DEBUG diff parser end
+10:33:34,465 root INFO starting...
+10:33:36,219 eyed3 DEBUG eyeD3 version 0.9.7
+10:35:30,910 parso.cache DEBUG pickle loaded: /data/data/com.termux/files/usr/lib/python3.11/site-packages/jedi/third_party/typeshed/stdlib/3/builtins.pyi
+10:35:31,314 parso.python.diff DEBUG diff parser start
+10:35:31,627 parso.python.diff DEBUG line_lengths old: 1467; new: 1468
+10:35:31,629 parso.python.diff DEBUG -> code[equal] old[1:160] new[1:160]
+10:35:31,632 parso.python.diff DEBUG copy old[1:287] new[1:160]
+10:35:31,633 parso.python.diff DEBUG -> code[insert] old[161:160] new[161:161]
+10:35:31,637 parso.python.diff DEBUG parse_part from 161 to 166 (to 166 in part parser)
+10:35:31,638 parso.python.diff DEBUG -> code[equal] old[161:1467] new[162:1468]
+10:35:31,640 parso.python.diff DEBUG copy old[166:276] new[167:277]
+10:35:31,643 parso.python.diff DEBUG parse_part from 278 to 277 (to 277 in part parser)
+10:35:31,653 parso.python.diff DEBUG parse_part from 278 to 289 (to 289 in part parser)
+10:35:31,676 parso.python.diff DEBUG parse_part from 290 to 312 (to 314 in part parser)
+10:35:31,679 parso.python.diff DEBUG copy old[314:1457] new[313:1443]
+10:35:31,682 parso.python.diff DEBUG parse_part from 1444 to 1444 (to 1444 in part parser)
+10:35:31,697 parso.python.diff DEBUG parse_part from 1445 to 1460 (to 1460 in part parser)
+10:35:31,704 parso.python.diff DEBUG parse_part from 1461 to 1468 (to 1467 in part parser)
+10:35:31,777 parso.python.diff DEBUG diff parser end
+10:35:31,853 parso.python.diff DEBUG diff parser start
+10:35:31,868 parso.python.diff DEBUG line_lengths old: 1468; new: 1469
+10:35:31,870 parso.python.diff DEBUG -> code[equal] old[1:160] new[1:160]
+10:35:31,873 parso.python.diff DEBUG copy old[1:288] new[1:160]
+10:35:31,875 parso.python.diff DEBUG -> code[insert] old[161:160] new[161:161]
+10:35:31,882 parso.python.diff DEBUG parse_part from 161 to 167 (to 167 in part parser)
+10:35:31,884 parso.python.diff DEBUG -> code[equal] old[161:1468] new[162:1469]
+10:35:31,887 parso.python.diff DEBUG copy old[167:277] new[168:278]
+10:35:31,890 parso.python.diff DEBUG parse_part from 279 to 278 (to 278 in part parser)
+10:35:31,902 parso.python.diff DEBUG parse_part from 279 to 290 (to 290 in part parser)
+10:35:31,921 parso.python.diff DEBUG parse_part from 291 to 313 (to 315 in part parser)
+10:35:31,924 parso.python.diff DEBUG copy old[315:1458] new[314:1444]
+10:35:31,929 parso.python.diff DEBUG parse_part from 1445 to 1445 (to 1445 in part parser)
+10:35:31,948 parso.python.diff DEBUG parse_part from 1446 to 1461 (to 1461 in part parser)
+10:35:31,955 parso.python.diff DEBUG parse_part from 1462 to 1469 (to 1468 in part parser)
+10:35:32,27 parso.python.diff DEBUG diff parser end
+10:35:33,646 parso.python.diff DEBUG diff parser start
+10:35:33,666 parso.python.diff DEBUG line_lengths old: 1469; new: 1469
+10:35:33,668 parso.python.diff DEBUG -> code[equal] old[1:161] new[1:161]
+10:35:33,672 parso.python.diff DEBUG copy old[1:289] new[1:160]
+10:35:33,675 parso.python.diff DEBUG parse_part from 161 to 162 (to 163 in part parser)
+10:35:33,677 parso.python.diff DEBUG -> code[replace] old[162:162] new[162:162]
+10:35:33,679 parso.python.diff DEBUG -> code[equal] old[163:1469] new[163:1469]
+10:35:33,685 parso.python.diff DEBUG parse_part from 163 to 167 (to 167 in part parser)
+10:35:33,689 parso.python.diff DEBUG copy old[168:278] new[168:278]
+10:35:33,694 parso.python.diff DEBUG parse_part from 279 to 278 (to 278 in part parser)
+10:35:33,706 parso.python.diff DEBUG parse_part from 279 to 290 (to 290 in part parser)
+10:35:33,727 parso.python.diff DEBUG parse_part from 291 to 313 (to 315 in part parser)
+10:35:33,731 parso.python.diff DEBUG copy old[316:1459] new[314:1444]
+10:35:33,733 parso.python.diff DEBUG parse_part from 1445 to 1445 (to 1445 in part parser)
+10:35:33,751 parso.python.diff DEBUG parse_part from 1446 to 1461 (to 1461 in part parser)
+10:35:33,758 parso.python.diff DEBUG parse_part from 1462 to 1469 (to 1468 in part parser)
+10:35:33,760 parso.python.diff DEBUG diff parser end
+10:35:34,345 parso.python.diff DEBUG diff parser start
+10:35:34,364 parso.python.diff DEBUG line_lengths old: 1469; new: 1469
+10:35:34,366 parso.python.diff DEBUG -> code[equal] old[1:161] new[1:161]
+10:35:34,369 parso.python.diff DEBUG copy old[1:289] new[1:160]
+10:35:34,373 parso.python.diff DEBUG parse_part from 161 to 162 (to 163 in part parser)
+10:35:34,374 parso.python.diff DEBUG -> code[replace] old[162:162] new[162:162]
+10:35:34,375 parso.python.diff DEBUG -> code[equal] old[163:1469] new[163:1469]
+10:35:34,381 parso.python.diff DEBUG parse_part from 163 to 167 (to 167 in part parser)
+10:35:34,383 parso.python.diff DEBUG copy old[168:278] new[168:278]
+10:35:34,386 parso.python.diff DEBUG parse_part from 279 to 278 (to 278 in part parser)
+10:35:34,398 parso.python.diff DEBUG parse_part from 279 to 290 (to 290 in part parser)
+10:35:34,423 parso.python.diff DEBUG parse_part from 291 to 313 (to 315 in part parser)
+10:35:34,426 parso.python.diff DEBUG copy old[316:1459] new[314:1444]
+10:35:34,429 parso.python.diff DEBUG parse_part from 1445 to 1445 (to 1445 in part parser)
+10:35:34,455 parso.python.diff DEBUG parse_part from 1446 to 1461 (to 1461 in part parser)
+10:35:34,461 parso.python.diff DEBUG parse_part from 1462 to 1469 (to 1468 in part parser)
+10:35:34,463 parso.python.diff DEBUG diff parser end
+10:35:35,443 parso.python.diff DEBUG diff parser start
+10:35:35,464 parso.python.diff DEBUG line_lengths old: 1469; new: 1469
+10:35:35,466 parso.python.diff DEBUG -> code[equal] old[1:161] new[1:161]
+10:35:35,469 parso.python.diff DEBUG copy old[1:289] new[1:160]
+10:35:35,473 parso.python.diff DEBUG parse_part from 161 to 162 (to 163 in part parser)
+10:35:35,475 parso.python.diff DEBUG -> code[replace] old[162:162] new[162:162]
+10:35:35,477 parso.python.diff DEBUG -> code[equal] old[163:1469] new[163:1469]
+10:35:35,482 parso.python.diff DEBUG parse_part from 163 to 167 (to 167 in part parser)
+10:35:35,485 parso.python.diff DEBUG copy old[168:278] new[168:278]
+10:35:35,488 parso.python.diff DEBUG parse_part from 279 to 278 (to 278 in part parser)
+10:35:35,498 parso.python.diff DEBUG parse_part from 279 to 290 (to 290 in part parser)
+10:35:35,519 parso.python.diff DEBUG parse_part from 291 to 313 (to 315 in part parser)
+10:35:35,522 parso.python.diff DEBUG copy old[316:1459] new[314:1444]
+10:35:35,526 parso.python.diff DEBUG parse_part from 1445 to 1445 (to 1445 in part parser)
+10:35:35,541 parso.python.diff DEBUG parse_part from 1446 to 1461 (to 1461 in part parser)
+10:35:35,548 parso.python.diff DEBUG parse_part from 1462 to 1469 (to 1468 in part parser)
+10:35:35,550 parso.python.diff DEBUG diff parser end
+10:35:37,175 parso.python.diff DEBUG diff parser start
+10:35:37,196 parso.python.diff DEBUG line_lengths old: 1469; new: 1469
+10:35:37,198 parso.python.diff DEBUG -> code[equal] old[1:161] new[1:161]
+10:35:37,202 parso.python.diff DEBUG copy old[1:289] new[1:160]
+10:35:37,206 parso.python.diff DEBUG parse_part from 161 to 162 (to 163 in part parser)
+10:35:37,208 parso.python.diff DEBUG -> code[replace] old[162:162] new[162:162]
+10:35:37,210 parso.python.diff DEBUG -> code[equal] old[163:1469] new[163:1469]
+10:35:37,216 parso.python.diff DEBUG parse_part from 163 to 167 (to 167 in part parser)
+10:35:37,219 parso.python.diff DEBUG copy old[168:278] new[168:278]
+10:35:37,224 parso.python.diff DEBUG parse_part from 279 to 278 (to 278 in part parser)
+10:35:37,237 parso.python.diff DEBUG parse_part from 279 to 290 (to 290 in part parser)
+10:35:37,259 parso.python.diff DEBUG parse_part from 291 to 313 (to 315 in part parser)
+10:35:37,263 parso.python.diff DEBUG copy old[316:1459] new[314:1444]
+10:35:37,267 parso.python.diff DEBUG parse_part from 1445 to 1445 (to 1445 in part parser)
+10:35:37,284 parso.python.diff DEBUG parse_part from 1446 to 1461 (to 1461 in part parser)
+10:35:37,290 parso.python.diff DEBUG parse_part from 1462 to 1469 (to 1468 in part parser)
+10:35:37,293 parso.python.diff DEBUG diff parser end
+10:35:45,37 parso.python.diff DEBUG diff parser start
+10:35:45,56 parso.python.diff DEBUG line_lengths old: 1469; new: 1469
+10:35:45,58 parso.python.diff DEBUG -> code[equal] old[1:161] new[1:161]
+10:35:45,61 parso.python.diff DEBUG copy old[1:289] new[1:160]
+10:35:45,65 parso.python.diff DEBUG parse_part from 161 to 162 (to 163 in part parser)
+10:35:45,67 parso.python.diff DEBUG -> code[replace] old[162:162] new[162:162]
+10:35:45,69 parso.python.diff DEBUG -> code[equal] old[163:1469] new[163:1469]
+10:35:45,75 parso.python.diff DEBUG parse_part from 163 to 167 (to 167 in part parser)
+10:35:45,79 parso.python.diff DEBUG copy old[168:278] new[168:278]
+10:35:45,91 parso.python.diff DEBUG parse_part from 279 to 278 (to 278 in part parser)
+10:35:45,106 parso.python.diff DEBUG parse_part from 279 to 290 (to 290 in part parser)
+10:35:45,129 parso.python.diff DEBUG parse_part from 291 to 313 (to 315 in part parser)
+10:35:45,132 parso.python.diff DEBUG copy old[316:1459] new[314:1444]
+10:35:45,136 parso.python.diff DEBUG parse_part from 1445 to 1445 (to 1445 in part parser)
+10:35:45,152 parso.python.diff DEBUG parse_part from 1446 to 1461 (to 1461 in part parser)
+10:35:45,159 parso.python.diff DEBUG parse_part from 1462 to 1469 (to 1468 in part parser)
+10:35:45,161 parso.python.diff DEBUG diff parser end
+10:35:46,649 parso.python.diff DEBUG diff parser start
+10:35:46,731 parso.python.diff DEBUG line_lengths old: 1469; new: 1469
+10:35:46,735 parso.python.diff DEBUG -> code[equal] old[1:161] new[1:161]
+10:35:46,737 parso.python.diff DEBUG copy old[1:289] new[1:160]
+10:35:46,743 parso.python.diff DEBUG parse_part from 161 to 162 (to 163 in part parser)
+10:35:46,765 parso.python.diff DEBUG -> code[replace] old[162:162] new[162:162]
+10:35:46,774 parso.python.diff DEBUG -> code[equal] old[163:1469] new[163:1469]
+10:35:46,780 parso.python.diff DEBUG parse_part from 163 to 167 (to 167 in part parser)
+10:35:46,783 parso.python.diff DEBUG copy old[168:278] new[168:278]
+10:35:46,803 parso.python.diff DEBUG parse_part from 279 to 278 (to 278 in part parser)
+10:35:46,820 parso.python.diff DEBUG parse_part from 279 to 290 (to 290 in part parser)
+10:35:46,847 parso.python.diff DEBUG parse_part from 291 to 313 (to 315 in part parser)
+10:35:46,851 parso.python.diff DEBUG copy old[316:1459] new[314:1444]
+10:35:46,855 parso.python.diff DEBUG parse_part from 1445 to 1445 (to 1445 in part parser)
+10:35:46,876 parso.python.diff DEBUG parse_part from 1446 to 1461 (to 1461 in part parser)
+10:35:46,885 parso.python.diff DEBUG parse_part from 1462 to 1469 (to 1468 in part parser)
+10:35:46,887 parso.python.diff DEBUG diff parser end
+10:35:59,944 parso.python.diff DEBUG diff parser start
+10:35:59,962 parso.python.diff DEBUG line_lengths old: 1469; new: 1469
+10:35:59,964 parso.python.diff DEBUG -> code[equal] old[1:161] new[1:161]
+10:35:59,967 parso.python.diff DEBUG copy old[1:289] new[1:160]
+10:35:59,972 parso.python.diff DEBUG parse_part from 161 to 162 (to 163 in part parser)
+10:35:59,974 parso.python.diff DEBUG -> code[replace] old[162:162] new[162:162]
+10:35:59,976 parso.python.diff DEBUG -> code[equal] old[163:1469] new[163:1469]
+10:35:59,982 parso.python.diff DEBUG parse_part from 163 to 167 (to 167 in part parser)
+10:35:59,985 parso.python.diff DEBUG copy old[168:278] new[168:278]
+10:35:59,990 parso.python.diff DEBUG parse_part from 279 to 278 (to 278 in part parser)
+10:36:00,2 parso.python.diff DEBUG parse_part from 279 to 290 (to 290 in part parser)
+10:36:00,25 parso.python.diff DEBUG parse_part from 291 to 313 (to 315 in part parser)
+10:36:00,28 parso.python.diff DEBUG copy old[316:1459] new[314:1444]
+10:36:00,32 parso.python.diff DEBUG parse_part from 1445 to 1445 (to 1445 in part parser)
+10:36:00,49 parso.python.diff DEBUG parse_part from 1446 to 1461 (to 1461 in part parser)
+10:36:00,55 parso.python.diff DEBUG parse_part from 1462 to 1469 (to 1468 in part parser)
+10:36:00,58 parso.python.diff DEBUG diff parser end
+10:36:00,691 parso.python.diff DEBUG diff parser start
+10:36:00,729 parso.python.diff DEBUG line_lengths old: 1469; new: 1469
+10:36:00,732 parso.python.diff DEBUG -> code[equal] old[1:161] new[1:161]
+10:36:00,736 parso.python.diff DEBUG copy old[1:289] new[1:160]
+10:36:00,741 parso.python.diff DEBUG parse_part from 161 to 162 (to 163 in part parser)
+10:36:00,743 parso.python.diff DEBUG -> code[replace] old[162:162] new[162:162]
+10:36:00,745 parso.python.diff DEBUG -> code[equal] old[163:1469] new[163:1469]
+10:36:00,751 parso.python.diff DEBUG parse_part from 163 to 167 (to 167 in part parser)
+10:36:00,754 parso.python.diff DEBUG copy old[168:278] new[168:278]
+10:36:00,757 parso.python.diff DEBUG parse_part from 279 to 278 (to 278 in part parser)
+10:36:00,767 parso.python.diff DEBUG parse_part from 279 to 290 (to 290 in part parser)
+10:36:00,788 parso.python.diff DEBUG parse_part from 291 to 313 (to 315 in part parser)
+10:36:00,792 parso.python.diff DEBUG copy old[316:1459] new[314:1444]
+10:36:00,795 parso.python.diff DEBUG parse_part from 1445 to 1445 (to 1445 in part parser)
+10:36:00,823 parso.python.diff DEBUG parse_part from 1446 to 1461 (to 1461 in part parser)
+10:36:00,829 parso.python.diff DEBUG parse_part from 1462 to 1469 (to 1468 in part parser)
+10:36:00,831 parso.python.diff DEBUG diff parser end
+10:36:01,409 parso.python.diff DEBUG diff parser start
+10:36:01,431 parso.python.diff DEBUG line_lengths old: 1469; new: 1469
+10:36:01,432 parso.python.diff DEBUG -> code[equal] old[1:161] new[1:161]
+10:36:01,436 parso.python.diff DEBUG copy old[1:289] new[1:160]
+10:36:01,440 parso.python.diff DEBUG parse_part from 161 to 162 (to 163 in part parser)
+10:36:01,442 parso.python.diff DEBUG -> code[replace] old[162:162] new[162:162]
+10:36:01,444 parso.python.diff DEBUG -> code[equal] old[163:1469] new[163:1469]
+10:36:01,450 parso.python.diff DEBUG parse_part from 163 to 167 (to 167 in part parser)
+10:36:01,453 parso.python.diff DEBUG copy old[168:278] new[168:278]
+10:36:01,459 parso.python.diff DEBUG parse_part from 279 to 278 (to 278 in part parser)
+10:36:01,471 parso.python.diff DEBUG parse_part from 279 to 290 (to 290 in part parser)
+10:36:01,494 parso.python.diff DEBUG parse_part from 291 to 313 (to 315 in part parser)
+10:36:01,498 parso.python.diff DEBUG copy old[316:1459] new[314:1444]
+10:36:01,501 parso.python.diff DEBUG parse_part from 1445 to 1445 (to 1445 in part parser)
+10:36:01,520 parso.python.diff DEBUG parse_part from 1446 to 1461 (to 1461 in part parser)
+10:36:01,527 parso.python.diff DEBUG parse_part from 1462 to 1469 (to 1468 in part parser)
+10:36:01,530 parso.python.diff DEBUG diff parser end
+10:36:03,100 parso.python.diff DEBUG diff parser start
+10:36:03,123 parso.python.diff DEBUG line_lengths old: 1469; new: 1469
+10:36:03,125 parso.python.diff DEBUG -> code[equal] old[1:161] new[1:161]
+10:36:03,129 parso.python.diff DEBUG copy old[1:289] new[1:160]
+10:36:03,134 parso.python.diff DEBUG parse_part from 161 to 162 (to 163 in part parser)
+10:36:03,136 parso.python.diff DEBUG -> code[replace] old[162:162] new[162:162]
+10:36:03,138 parso.python.diff DEBUG -> code[equal] old[163:1469] new[163:1469]
+10:36:03,144 parso.python.diff DEBUG parse_part from 163 to 167 (to 167 in part parser)
+10:36:03,147 parso.python.diff DEBUG copy old[168:278] new[168:278]
+10:36:03,151 parso.python.diff DEBUG parse_part from 279 to 278 (to 278 in part parser)
+10:36:03,163 parso.python.diff DEBUG parse_part from 279 to 290 (to 290 in part parser)
+10:36:03,204 parso.python.diff DEBUG parse_part from 291 to 313 (to 315 in part parser)
+10:36:03,210 parso.python.diff DEBUG copy old[316:1459] new[314:1444]
+10:36:03,214 parso.python.diff DEBUG parse_part from 1445 to 1445 (to 1445 in part parser)
+10:36:03,231 parso.python.diff DEBUG parse_part from 1446 to 1461 (to 1461 in part parser)
+10:36:03,237 parso.python.diff DEBUG parse_part from 1462 to 1469 (to 1468 in part parser)
+10:36:03,239 parso.python.diff DEBUG diff parser end
+10:36:04,156 parso.python.diff DEBUG diff parser start
+10:36:04,169 parso.python.diff DEBUG line_lengths old: 1469; new: 1469
+10:36:04,170 parso.python.diff DEBUG -> code[equal] old[1:161] new[1:161]
+10:36:04,172 parso.python.diff DEBUG copy old[1:289] new[1:160]
+10:36:04,174 parso.python.diff DEBUG parse_part from 161 to 162 (to 163 in part parser)
+10:36:04,175 parso.python.diff DEBUG -> code[replace] old[162:162] new[162:162]
+10:36:04,176 parso.python.diff DEBUG -> code[equal] old[163:1469] new[163:1469]
+10:36:04,180 parso.python.diff DEBUG parse_part from 163 to 167 (to 167 in part parser)
+10:36:04,182 parso.python.diff DEBUG copy old[168:278] new[168:278]
+10:36:04,192 parso.python.diff DEBUG parse_part from 279 to 278 (to 278 in part parser)
+10:36:04,200 parso.python.diff DEBUG parse_part from 279 to 290 (to 290 in part parser)
+10:36:04,219 parso.python.diff DEBUG parse_part from 291 to 313 (to 315 in part parser)
+10:36:04,221 parso.python.diff DEBUG copy old[316:1459] new[314:1444]
+10:36:04,223 parso.python.diff DEBUG parse_part from 1445 to 1445 (to 1445 in part parser)
+10:36:04,237 parso.python.diff DEBUG parse_part from 1446 to 1461 (to 1461 in part parser)
+10:36:04,242 parso.python.diff DEBUG parse_part from 1462 to 1469 (to 1468 in part parser)
+10:36:04,243 parso.python.diff DEBUG diff parser end
+10:36:06,372 parso.python.diff DEBUG diff parser start
+10:36:06,425 parso.python.diff DEBUG line_lengths old: 1469; new: 1469
+10:36:06,427 parso.python.diff DEBUG -> code[equal] old[1:161] new[1:161]
+10:36:06,432 parso.python.diff DEBUG copy old[1:289] new[1:160]
+10:36:06,436 parso.python.diff DEBUG parse_part from 161 to 162 (to 163 in part parser)
+10:36:06,438 parso.python.diff DEBUG -> code[replace] old[162:162] new[162:162]
+10:36:06,439 parso.python.diff DEBUG -> code[equal] old[163:1469] new[163:1469]
+10:36:06,444 parso.python.diff DEBUG parse_part from 163 to 167 (to 167 in part parser)
+10:36:06,447 parso.python.diff DEBUG copy old[168:278] new[168:278]
+10:36:06,451 parso.python.diff DEBUG parse_part from 279 to 278 (to 278 in part parser)
+10:36:06,460 parso.python.diff DEBUG parse_part from 279 to 290 (to 290 in part parser)
+10:36:06,478 parso.python.diff DEBUG parse_part from 291 to 313 (to 315 in part parser)
+10:36:06,481 parso.python.diff DEBUG copy old[316:1459] new[314:1444]
+10:36:06,483 parso.python.diff DEBUG parse_part from 1445 to 1445 (to 1445 in part parser)
+10:36:06,497 parso.python.diff DEBUG parse_part from 1446 to 1461 (to 1461 in part parser)
+10:36:06,503 parso.python.diff DEBUG parse_part from 1462 to 1469 (to 1468 in part parser)
+10:36:06,504 parso.python.diff DEBUG diff parser end
+10:36:07,898 parso.python.diff DEBUG diff parser start
+10:36:07,917 parso.python.diff DEBUG line_lengths old: 1469; new: 1469
+10:36:07,928 parso.python.diff DEBUG -> code[equal] old[1:161] new[1:161]
+10:36:07,933 parso.python.diff DEBUG copy old[1:289] new[1:160]
+10:36:07,938 parso.python.diff DEBUG parse_part from 161 to 162 (to 163 in part parser)
+10:36:07,939 parso.python.diff DEBUG -> code[replace] old[162:162] new[162:162]
+10:36:07,942 parso.python.diff DEBUG -> code[equal] old[163:1469] new[163:1469]
+10:36:07,952 parso.python.diff DEBUG parse_part from 163 to 167 (to 167 in part parser)
+10:36:07,956 parso.python.diff DEBUG copy old[168:278] new[168:278]
+10:36:07,960 parso.python.diff DEBUG parse_part from 279 to 278 (to 278 in part parser)
+10:36:07,978 parso.python.diff DEBUG parse_part from 279 to 290 (to 290 in part parser)
+10:36:07,997 parso.python.diff DEBUG parse_part from 291 to 313 (to 315 in part parser)
+10:36:08,0 parso.python.diff DEBUG copy old[316:1459] new[314:1444]
+10:36:08,3 parso.python.diff DEBUG parse_part from 1445 to 1445 (to 1445 in part parser)
+10:36:08,18 parso.python.diff DEBUG parse_part from 1446 to 1461 (to 1461 in part parser)
+10:36:08,24 parso.python.diff DEBUG parse_part from 1462 to 1469 (to 1468 in part parser)
+10:36:08,26 parso.python.diff DEBUG diff parser end
+10:36:09,244 parso.python.diff DEBUG diff parser start
+10:36:09,268 parso.python.diff DEBUG line_lengths old: 1469; new: 1469
+10:36:09,269 parso.python.diff DEBUG -> code[equal] old[1:161] new[1:161]
+10:36:09,274 parso.python.diff DEBUG copy old[1:289] new[1:160]
+10:36:09,279 parso.python.diff DEBUG parse_part from 161 to 162 (to 163 in part parser)
+10:36:09,282 parso.python.diff DEBUG -> code[replace] old[162:162] new[162:162]
+10:36:09,283 parso.python.diff DEBUG -> code[equal] old[163:1469] new[163:1469]
+10:36:09,290 parso.python.diff DEBUG parse_part from 163 to 167 (to 167 in part parser)
+10:36:09,294 parso.python.diff DEBUG copy old[168:278] new[168:278]
+10:36:09,298 parso.python.diff DEBUG parse_part from 279 to 278 (to 278 in part parser)
+10:36:09,310 parso.python.diff DEBUG parse_part from 279 to 290 (to 290 in part parser)
+10:36:09,344 parso.python.diff DEBUG parse_part from 291 to 313 (to 315 in part parser)
+10:36:09,347 parso.python.diff DEBUG copy old[316:1459] new[314:1444]
+10:36:09,351 parso.python.diff DEBUG parse_part from 1445 to 1445 (to 1445 in part parser)
+10:36:09,389 parso.python.diff DEBUG parse_part from 1446 to 1461 (to 1461 in part parser)
+10:36:09,395 parso.python.diff DEBUG parse_part from 1462 to 1469 (to 1468 in part parser)
+10:36:09,398 parso.python.diff DEBUG diff parser end
+10:36:09,936 parso.python.diff DEBUG diff parser start
+10:36:09,961 parso.python.diff DEBUG line_lengths old: 1469; new: 1469
+10:36:09,965 parso.python.diff DEBUG -> code[equal] old[1:161] new[1:161]
+10:36:09,969 parso.python.diff DEBUG copy old[1:289] new[1:160]
+10:36:09,974 parso.python.diff DEBUG parse_part from 161 to 162 (to 163 in part parser)
+10:36:09,976 parso.python.diff DEBUG -> code[replace] old[162:162] new[162:162]
+10:36:09,978 parso.python.diff DEBUG -> code[equal] old[163:1469] new[163:1469]
+10:36:09,985 parso.python.diff DEBUG parse_part from 163 to 167 (to 167 in part parser)
+10:36:09,987 parso.python.diff DEBUG copy old[168:278] new[168:278]
+10:36:09,992 parso.python.diff DEBUG parse_part from 279 to 278 (to 278 in part parser)
+10:36:10,6 parso.python.diff DEBUG parse_part from 279 to 290 (to 290 in part parser)
+10:36:10,31 parso.python.diff DEBUG parse_part from 291 to 313 (to 315 in part parser)
+10:36:10,34 parso.python.diff DEBUG copy old[316:1459] new[314:1444]
+10:36:10,36 parso.python.diff DEBUG parse_part from 1445 to 1445 (to 1445 in part parser)
+10:36:10,53 parso.python.diff DEBUG parse_part from 1446 to 1461 (to 1461 in part parser)
+10:36:10,59 parso.python.diff DEBUG parse_part from 1462 to 1469 (to 1468 in part parser)
+10:36:10,61 parso.python.diff DEBUG diff parser end
+10:36:30,340 parso.python.diff DEBUG diff parser start
+10:36:30,383 parso.python.diff DEBUG line_lengths old: 1469; new: 1469
+10:36:30,385 parso.python.diff DEBUG -> code[equal] old[1:161] new[1:161]
+10:36:30,389 parso.python.diff DEBUG copy old[1:289] new[1:160]
+10:36:30,396 parso.python.diff DEBUG parse_part from 161 to 167 (to 167 in part parser)
+10:36:30,398 parso.python.diff DEBUG -> code[replace] old[162:162] new[162:162]
+10:36:30,399 parso.python.diff DEBUG -> code[equal] old[163:1469] new[163:1469]
+10:36:30,402 parso.python.diff DEBUG copy old[168:278] new[168:278]
+10:36:30,406 parso.python.diff DEBUG parse_part from 279 to 278 (to 278 in part parser)
+10:36:30,433 parso.python.diff DEBUG parse_part from 279 to 290 (to 290 in part parser)
+10:36:30,454 parso.python.diff DEBUG parse_part from 291 to 313 (to 315 in part parser)
+10:36:30,457 parso.python.diff DEBUG copy old[316:1459] new[314:1444]
+10:36:30,460 parso.python.diff DEBUG parse_part from 1445 to 1445 (to 1445 in part parser)
+10:36:30,476 parso.python.diff DEBUG parse_part from 1446 to 1461 (to 1461 in part parser)
+10:36:30,483 parso.python.diff DEBUG parse_part from 1462 to 1469 (to 1468 in part parser)
+10:36:30,485 parso.python.diff DEBUG diff parser end
+10:36:31,235 parso.python.diff DEBUG diff parser start
+10:36:31,255 parso.python.diff DEBUG line_lengths old: 1469; new: 1468
+10:36:31,258 parso.python.diff DEBUG -> code[equal] old[1:160] new[1:160]
+10:36:31,262 parso.python.diff DEBUG copy old[1:289] new[1:160]
+10:36:31,265 parso.python.diff DEBUG -> code[delete] old[161:161] new[161:160]
+10:36:31,267 parso.python.diff DEBUG -> code[equal] old[162:1469] new[161:1468]
+10:36:31,278 parso.python.diff DEBUG parse_part from 161 to 166 (to 166 in part parser)
+10:36:31,283 parso.python.diff DEBUG copy old[168:278] new[167:277]
+10:36:31,288 parso.python.diff DEBUG parse_part from 278 to 277 (to 277 in part parser)
+10:36:31,305 parso.python.diff DEBUG parse_part from 278 to 289 (to 289 in part parser)
+10:36:31,329 parso.python.diff DEBUG parse_part from 290 to 312 (to 314 in part parser)
+10:36:31,334 parso.python.diff DEBUG copy old[316:1459] new[313:1443]
+10:36:31,339 parso.python.diff DEBUG parse_part from 1444 to 1444 (to 1444 in part parser)
+10:36:31,361 parso.python.diff DEBUG parse_part from 1445 to 1460 (to 1460 in part parser)
+10:36:31,368 parso.python.diff DEBUG parse_part from 1461 to 1468 (to 1467 in part parser)
+10:36:31,443 parso.python.diff DEBUG diff parser end
+10:36:31,605 parso.python.diff DEBUG diff parser start
+10:36:31,626 parso.python.diff DEBUG line_lengths old: 1468; new: 1468
+10:36:31,631 parso.python.diff DEBUG -> code[equal] old[1:160] new[1:160]
+10:36:31,636 parso.python.diff DEBUG copy old[1:288] new[1:160]
+10:36:31,638 parso.python.diff DEBUG -> code[replace] old[161:161] new[161:161]
+10:36:31,643 parso.python.diff DEBUG parse_part from 161 to 166 (to 166 in part parser)
+10:36:31,645 parso.python.diff DEBUG -> code[equal] old[162:1468] new[162:1468]
+10:36:31,648 parso.python.diff DEBUG copy old[167:277] new[167:277]
+10:36:31,652 parso.python.diff DEBUG parse_part from 278 to 277 (to 277 in part parser)
+10:36:31,667 parso.python.diff DEBUG parse_part from 278 to 289 (to 289 in part parser)
+10:36:31,687 parso.python.diff DEBUG parse_part from 290 to 312 (to 314 in part parser)
+10:36:31,690 parso.python.diff DEBUG copy old[315:1458] new[313:1443]
+10:36:31,693 parso.python.diff DEBUG parse_part from 1444 to 1444 (to 1444 in part parser)
+10:36:31,708 parso.python.diff DEBUG parse_part from 1445 to 1460 (to 1460 in part parser)
+10:36:31,714 parso.python.diff DEBUG parse_part from 1461 to 1468 (to 1467 in part parser)
+10:36:31,716 parso.python.diff DEBUG diff parser end
+10:36:32,751 parso.python.diff DEBUG diff parser start
+10:36:32,771 parso.python.diff DEBUG line_lengths old: 1468; new: 1468
+10:36:32,773 parso.python.diff DEBUG -> code[equal] old[1:160] new[1:160]
+10:36:32,776 parso.python.diff DEBUG copy old[1:288] new[1:160]
+10:36:32,779 parso.python.diff DEBUG -> code[replace] old[161:161] new[161:161]
+10:36:32,784 parso.python.diff DEBUG parse_part from 161 to 166 (to 166 in part parser)
+10:36:32,786 parso.python.diff DEBUG -> code[equal] old[162:1468] new[162:1468]
+10:36:32,789 parso.python.diff DEBUG copy old[167:277] new[167:277]
+10:36:32,793 parso.python.diff DEBUG parse_part from 278 to 277 (to 277 in part parser)
+10:36:32,806 parso.python.diff DEBUG parse_part from 278 to 289 (to 289 in part parser)
+10:36:32,830 parso.python.diff DEBUG parse_part from 290 to 312 (to 314 in part parser)
+10:36:32,834 parso.python.diff DEBUG copy old[315:1458] new[313:1443]
+10:36:32,837 parso.python.diff DEBUG parse_part from 1444 to 1444 (to 1444 in part parser)
+10:36:32,855 parso.python.diff DEBUG parse_part from 1445 to 1460 (to 1460 in part parser)
+10:36:32,862 parso.python.diff DEBUG parse_part from 1461 to 1468 (to 1467 in part parser)
+10:36:32,864 parso.python.diff DEBUG diff parser end
+10:36:33,283 parso.python.diff DEBUG diff parser start
+10:36:33,302 parso.python.diff DEBUG line_lengths old: 1468; new: 1467
+10:36:33,303 parso.python.diff DEBUG -> code[equal] old[1:160] new[1:160]
+10:36:33,307 parso.python.diff DEBUG copy old[1:288] new[1:160]
+10:36:33,309 parso.python.diff DEBUG -> code[delete] old[161:161] new[161:160]
+10:36:33,311 parso.python.diff DEBUG -> code[equal] old[162:1468] new[161:1467]
+10:36:33,318 parso.python.diff DEBUG parse_part from 161 to 165 (to 165 in part parser)
+10:36:33,322 parso.python.diff DEBUG copy old[167:277] new[166:276]
+10:36:33,326 parso.python.diff DEBUG parse_part from 277 to 276 (to 276 in part parser)
+10:36:33,349 parso.python.diff DEBUG parse_part from 277 to 288 (to 288 in part parser)
+10:36:33,369 parso.python.diff DEBUG parse_part from 289 to 311 (to 313 in part parser)
+10:36:33,373 parso.python.diff DEBUG copy old[315:1458] new[312:1442]
+10:36:33,376 parso.python.diff DEBUG parse_part from 1443 to 1443 (to 1443 in part parser)
+10:36:33,394 parso.python.diff DEBUG parse_part from 1444 to 1459 (to 1459 in part parser)
+10:36:33,400 parso.python.diff DEBUG parse_part from 1460 to 1467 (to 1466 in part parser)
+10:36:33,475 parso.python.diff DEBUG diff parser end
+10:36:47,253 parso.python.diff DEBUG diff parser start
+10:36:47,284 parso.python.diff DEBUG line_lengths old: 1467; new: 1467
+10:36:47,287 parso.python.diff DEBUG -> code[equal] old[1:175] new[1:175]
+10:36:47,291 parso.python.diff DEBUG copy old[1:287] new[1:174]
+10:36:47,313 parso.python.diff DEBUG parse_part from 175 to 194 (to 195 in part parser)
+10:36:47,315 parso.python.diff DEBUG -> code[replace] old[176:176] new[176:176]
+10:36:47,317 parso.python.diff DEBUG -> code[equal] old[177:1467] new[177:1467]
+10:36:47,319 parso.python.diff DEBUG copy old[196:196] new[195:196]
+10:36:47,322 parso.python.diff DEBUG copy old[200:276] new[197:276]
+10:36:47,327 parso.python.diff DEBUG parse_part from 277 to 276 (to 276 in part parser)
+10:36:47,339 parso.python.diff DEBUG parse_part from 277 to 288 (to 288 in part parser)
+10:36:47,361 parso.python.diff DEBUG parse_part from 289 to 311 (to 313 in part parser)
+10:36:47,364 parso.python.diff DEBUG copy old[314:1457] new[312:1442]
+10:36:47,367 parso.python.diff DEBUG parse_part from 1443 to 1443 (to 1443 in part parser)
+10:36:47,386 parso.python.diff DEBUG parse_part from 1444 to 1459 (to 1459 in part parser)
+10:36:47,393 parso.python.diff DEBUG parse_part from 1460 to 1467 (to 1466 in part parser)
+10:36:47,396 parso.python.diff DEBUG diff parser end
+10:36:48,491 parso.python.diff DEBUG diff parser start
+10:36:48,515 parso.python.diff DEBUG line_lengths old: 1467; new: 1467
+10:36:48,517 parso.python.diff DEBUG -> code[equal] old[1:175] new[1:175]
+10:36:48,520 parso.python.diff DEBUG copy old[1:287] new[1:174]
+10:36:48,538 parso.python.diff DEBUG parse_part from 175 to 194 (to 195 in part parser)
+10:36:48,540 parso.python.diff DEBUG -> code[replace] old[176:176] new[176:176]
+10:36:48,541 parso.python.diff DEBUG -> code[equal] old[177:1467] new[177:1467]
+10:36:48,544 parso.python.diff DEBUG copy old[196:196] new[195:196]
+10:36:48,547 parso.python.diff DEBUG copy old[200:276] new[197:276]
+10:36:48,552 parso.python.diff DEBUG parse_part from 277 to 276 (to 276 in part parser)
+10:36:48,564 parso.python.diff DEBUG parse_part from 277 to 288 (to 288 in part parser)
+10:36:48,584 parso.python.diff DEBUG parse_part from 289 to 311 (to 313 in part parser)
+10:36:48,588 parso.python.diff DEBUG copy old[314:1457] new[312:1442]
+10:36:48,591 parso.python.diff DEBUG parse_part from 1443 to 1443 (to 1443 in part parser)
+10:36:48,606 parso.python.diff DEBUG parse_part from 1444 to 1459 (to 1459 in part parser)
+10:36:48,613 parso.python.diff DEBUG parse_part from 1460 to 1467 (to 1466 in part parser)
+10:36:48,615 parso.python.diff DEBUG diff parser end
+10:36:56,954 root INFO starting...
+10:36:58,452 eyed3 DEBUG eyeD3 version 0.9.7
+10:36:58,880 pylast INFO auth.getToken
+10:36:58,896 httpx DEBUG load_ssl_context verify=<ssl.SSLContext object at 0x71e9407380> cert=None trust_env=True http2=False
+10:36:58,906 httpcore DEBUG connection.connect_tcp.started host='ws.audioscrobbler.com' port=443 local_address=None timeout=5.0
+10:36:59,254 httpcore DEBUG connection.connect_tcp.complete return_value=<httpcore.backends.sync.SyncStream object at 0x71e9858210>
+10:36:59,255 httpcore DEBUG connection.start_tls.started ssl_context=<ssl.SSLContext object at 0x71e9407380> server_hostname='ws.audioscrobbler.com' timeout=5.0
+10:36:59,367 httpcore DEBUG connection.start_tls.complete return_value=<httpcore.backends.sync.SyncStream object at 0x71e7b07b50>
+10:36:59,369 httpcore DEBUG http11.send_request_headers.started request=<Request [b'POST']>
+10:36:59,372 httpcore DEBUG http11.send_request_headers.complete
+10:36:59,373 httpcore DEBUG http11.send_request_body.started request=<Request [b'POST']>
+10:36:59,375 httpcore DEBUG http11.send_request_body.complete
+10:36:59,376 httpcore DEBUG http11.receive_response_headers.started request=<Request [b'POST']>
+10:36:59,612 httpcore DEBUG http11.receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'openresty/1.13.6.2'), (b'Date', b'Wed, 19 Apr 2023 07:36:59 GMT'), (b'Content-Type', b'text/xml; charset=UTF-8'), (b'content-length', b'114'), (b'Access-Control-Allow-Methods', b'POST, GET, OPTIONS'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Max-Age', b'86400'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000')])
+10:36:59,620 httpx INFO HTTP Request: POST https://ws.audioscrobbler.com/2.0/ "HTTP/1.1 200 OK"
+10:36:59,623 httpcore DEBUG http11.receive_response_body.started request=<Request [b'POST']>
+10:36:59,626 httpcore DEBUG http11.receive_response_body.complete
+10:36:59,631 httpcore DEBUG http11.response_closed.started
+10:36:59,634 httpcore DEBUG http11.response_closed.complete
+10:36:59,676 pylast DEBUG <?xml version="1.0" ?>
+<lfm status="ok">
+	
+  
+	<token>ExODvjFixALa464EATpYyaJeoz8y1PIY</token>
+	
+
+</lfm>
+
+10:36:59,681 httpcore DEBUG connection.close.started
+10:36:59,685 httpcore DEBUG connection.close.complete
+10:36:59,726 pylast INFO auth.getSession
+10:36:59,729 httpx DEBUG load_ssl_context verify=<ssl.SSLContext object at 0x71e9407380> cert=None trust_env=True http2=False
+10:36:59,732 httpcore DEBUG connection.connect_tcp.started host='ws.audioscrobbler.com' port=443 local_address=None timeout=5.0
+10:36:59,784 httpcore DEBUG connection.connect_tcp.complete return_value=<httpcore.backends.sync.SyncStream object at 0x71e470fc50>
+10:36:59,785 httpcore DEBUG connection.start_tls.started ssl_context=<ssl.SSLContext object at 0x71e9407380> server_hostname='ws.audioscrobbler.com' timeout=5.0
+10:36:59,854 httpcore DEBUG connection.start_tls.complete return_value=<httpcore.backends.sync.SyncStream object at 0x71e470fc10>
+10:36:59,855 httpcore DEBUG http11.send_request_headers.started request=<Request [b'POST']>
+10:36:59,861 httpcore DEBUG http11.send_request_headers.complete
+10:36:59,863 httpcore DEBUG http11.send_request_body.started request=<Request [b'POST']>
+10:36:59,864 httpcore DEBUG http11.send_request_body.complete
+10:36:59,866 httpcore DEBUG http11.receive_response_headers.started request=<Request [b'POST']>
+10:37:00,86 httpcore DEBUG http11.receive_response_headers.complete return_value=(b'HTTP/1.1', 403, b'Forbidden', [(b'Server', b'openresty/1.13.6.2'), (b'Date', b'Wed, 19 Apr 2023 07:37:00 GMT'), (b'Content-Type', b'text/xml; charset=UTF-8'), (b'content-length', b'151'), (b'Access-Control-Allow-Methods', b'POST, GET, OPTIONS'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Max-Age', b'86400'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000')])
+10:37:00,91 httpx INFO HTTP Request: POST https://ws.audioscrobbler.com/2.0/ "HTTP/1.1 403 Forbidden"
+10:37:00,94 httpcore DEBUG http11.receive_response_body.started request=<Request [b'POST']>
+10:37:00,101 httpcore DEBUG http11.receive_response_body.complete
+10:37:00,104 httpcore DEBUG http11.response_closed.started
+10:37:00,106 httpcore DEBUG http11.response_closed.complete
+10:37:00,111 pylast DEBUG <?xml version="1.0" ?>
+<lfm status="failed">
+	
+  
+	<error code="14">Unauthorized Token - This token has not been authorized</error>
+	
+
+</lfm>
+
+10:37:00,114 httpcore DEBUG connection.close.started
+10:37:00,117 httpcore DEBUG connection.close.complete
+10:37:01,121 pylast INFO auth.getSession
+10:37:01,126 httpx DEBUG load_ssl_context verify=<ssl.SSLContext object at 0x71e9407380> cert=None trust_env=True http2=False
+10:37:01,131 httpcore DEBUG connection.connect_tcp.started host='ws.audioscrobbler.com' port=443 local_address=None timeout=5.0
+10:37:01,212 httpcore DEBUG connection.connect_tcp.complete return_value=<httpcore.backends.sync.SyncStream object at 0x71e4719c10>
+10:37:01,213 httpcore DEBUG connection.start_tls.started ssl_context=<ssl.SSLContext object at 0x71e9407380> server_hostname='ws.audioscrobbler.com' timeout=5.0
+10:37:01,292 httpcore DEBUG connection.start_tls.complete return_value=<httpcore.backends.sync.SyncStream object at 0x71e4719dd0>
+10:37:01,295 httpcore DEBUG http11.send_request_headers.started request=<Request [b'POST']>
+10:37:01,297 httpcore DEBUG http11.send_request_headers.complete
+10:37:01,300 httpcore DEBUG http11.send_request_body.started request=<Request [b'POST']>
+10:37:01,306 httpcore DEBUG http11.send_request_body.complete
+10:37:01,307 httpcore DEBUG http11.receive_response_headers.started request=<Request [b'POST']>
+10:37:01,535 httpcore DEBUG http11.receive_response_headers.complete return_value=(b'HTTP/1.1', 403, b'Forbidden', [(b'Server', b'openresty/1.13.6.2'), (b'Date', b'Wed, 19 Apr 2023 07:37:01 GMT'), (b'Content-Type', b'text/xml; charset=UTF-8'), (b'content-length', b'151'), (b'Access-Control-Allow-Methods', b'POST, GET, OPTIONS'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Max-Age', b'86400'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000')])
+10:37:01,538 httpx INFO HTTP Request: POST https://ws.audioscrobbler.com/2.0/ "HTTP/1.1 403 Forbidden"
+10:37:01,539 httpcore DEBUG http11.receive_response_body.started request=<Request [b'POST']>
+10:37:01,541 httpcore DEBUG http11.receive_response_body.complete
+10:37:01,544 httpcore DEBUG http11.response_closed.started
+10:37:01,548 httpcore DEBUG http11.response_closed.complete
+10:37:01,553 pylast DEBUG <?xml version="1.0" ?>
+<lfm status="failed">
+	
+  
+	<error code="14">Unauthorized Token - This token has not been authorized</error>
+	
+
+</lfm>
+
+10:37:01,556 httpcore DEBUG connection.close.started
+10:37:01,560 httpcore DEBUG connection.close.complete
+10:37:02,563 pylast INFO auth.getSession
+10:37:02,570 httpx DEBUG load_ssl_context verify=<ssl.SSLContext object at 0x71e9407380> cert=None trust_env=True http2=False
+10:37:02,578 httpcore DEBUG connection.connect_tcp.started host='ws.audioscrobbler.com' port=443 local_address=None timeout=5.0
+10:37:02,697 httpcore DEBUG connection.connect_tcp.complete return_value=<httpcore.backends.sync.SyncStream object at 0x71e471bad0>
+10:37:02,700 httpcore DEBUG connection.start_tls.started ssl_context=<ssl.SSLContext object at 0x71e9407380> server_hostname='ws.audioscrobbler.com' timeout=5.0
+10:37:02,769 httpcore DEBUG connection.start_tls.complete return_value=<httpcore.backends.sync.SyncStream object at 0x71e471bc90>
+10:37:02,771 httpcore DEBUG http11.send_request_headers.started request=<Request [b'POST']>
+10:37:02,773 httpcore DEBUG http11.send_request_headers.complete
+10:37:02,774 httpcore DEBUG http11.send_request_body.started request=<Request [b'POST']>
+10:37:02,776 httpcore DEBUG http11.send_request_body.complete
+10:37:02,777 httpcore DEBUG http11.receive_response_headers.started request=<Request [b'POST']>
+10:37:02,992 httpcore DEBUG http11.receive_response_headers.complete return_value=(b'HTTP/1.1', 403, b'Forbidden', [(b'Server', b'openresty/1.13.6.2'), (b'Date', b'Wed, 19 Apr 2023 07:37:03 GMT'), (b'Content-Type', b'text/xml; charset=UTF-8'), (b'content-length', b'151'), (b'Access-Control-Allow-Methods', b'POST, GET, OPTIONS'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Max-Age', b'86400'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000')])
+10:37:02,996 httpx INFO HTTP Request: POST https://ws.audioscrobbler.com/2.0/ "HTTP/1.1 403 Forbidden"
+10:37:02,998 httpcore DEBUG http11.receive_response_body.started request=<Request [b'POST']>
+10:37:03,2 httpcore DEBUG http11.receive_response_body.complete
+10:37:03,4 httpcore DEBUG http11.response_closed.started
+10:37:03,5 httpcore DEBUG http11.response_closed.complete
+10:37:03,9 pylast DEBUG <?xml version="1.0" ?>
+<lfm status="failed">
+	
+  
+	<error code="14">Unauthorized Token - This token has not been authorized</error>
+	
+
+</lfm>
+
+10:37:03,12 httpcore DEBUG connection.close.started
+10:37:03,15 httpcore DEBUG connection.close.complete
+10:37:04,18 pylast INFO auth.getSession
+10:37:04,25 httpx DEBUG load_ssl_context verify=<ssl.SSLContext object at 0x71e9407380> cert=None trust_env=True http2=False
+10:37:04,31 httpcore DEBUG connection.connect_tcp.started host='ws.audioscrobbler.com' port=443 local_address=None timeout=5.0
+10:37:04,99 httpcore DEBUG connection.connect_tcp.complete return_value=<httpcore.backends.sync.SyncStream object at 0x71e4718fd0>
+10:37:04,101 httpcore DEBUG connection.start_tls.started ssl_context=<ssl.SSLContext object at 0x71e9407380> server_hostname='ws.audioscrobbler.com' timeout=5.0
+10:37:04,184 httpcore DEBUG connection.start_tls.complete return_value=<httpcore.backends.sync.SyncStream object at 0x71e4718e10>
+10:37:04,187 httpcore DEBUG http11.send_request_headers.started request=<Request [b'POST']>
+10:37:04,190 httpcore DEBUG http11.send_request_headers.complete
+10:37:04,192 httpcore DEBUG http11.send_request_body.started request=<Request [b'POST']>
+10:37:04,196 httpcore DEBUG http11.send_request_body.complete
+10:37:04,197 httpcore DEBUG http11.receive_response_headers.started request=<Request [b'POST']>
+10:37:04,425 httpcore DEBUG http11.receive_response_headers.complete return_value=(b'HTTP/1.1', 403, b'Forbidden', [(b'Server', b'openresty/1.13.6.2'), (b'Date', b'Wed, 19 Apr 2023 07:37:04 GMT'), (b'Content-Type', b'text/xml; charset=UTF-8'), (b'content-length', b'151'), (b'Access-Control-Allow-Methods', b'POST, GET, OPTIONS'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Max-Age', b'86400'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000')])
+10:37:04,430 httpx INFO HTTP Request: POST https://ws.audioscrobbler.com/2.0/ "HTTP/1.1 403 Forbidden"
+10:37:04,432 httpcore DEBUG http11.receive_response_body.started request=<Request [b'POST']>
+10:37:04,435 httpcore DEBUG http11.receive_response_body.complete
+10:37:04,438 httpcore DEBUG http11.response_closed.started
+10:37:04,440 httpcore DEBUG http11.response_closed.complete
+10:37:04,445 pylast DEBUG <?xml version="1.0" ?>
+<lfm status="failed">
+	
+  
+	<error code="14">Unauthorized Token - This token has not been authorized</error>
+	
+
+</lfm>
+
+10:37:04,448 httpcore DEBUG connection.close.started
+10:37:04,451 httpcore DEBUG connection.close.complete
+10:37:05,454 pylast INFO auth.getSession
+10:37:05,462 httpx DEBUG load_ssl_context verify=<ssl.SSLContext object at 0x71e9407380> cert=None trust_env=True http2=False
+10:37:05,470 httpcore DEBUG connection.connect_tcp.started host='ws.audioscrobbler.com' port=443 local_address=None timeout=5.0
+10:37:05,578 httpcore DEBUG connection.connect_tcp.complete return_value=<httpcore.backends.sync.SyncStream object at 0x71e7b0fb50>
+10:37:05,581 httpcore DEBUG connection.start_tls.started ssl_context=<ssl.SSLContext object at 0x71e9407380> server_hostname='ws.audioscrobbler.com' timeout=5.0
+10:37:05,657 httpcore DEBUG connection.start_tls.complete return_value=<httpcore.backends.sync.SyncStream object at 0x71e7b0fa90>
+10:37:05,659 httpcore DEBUG http11.send_request_headers.started request=<Request [b'POST']>
+10:37:05,662 httpcore DEBUG http11.send_request_headers.complete
+10:37:05,665 httpcore DEBUG http11.send_request_body.started request=<Request [b'POST']>
+10:37:05,668 httpcore DEBUG http11.send_request_body.complete
+10:37:05,670 httpcore DEBUG http11.receive_response_headers.started request=<Request [b'POST']>
+10:37:05,887 httpcore DEBUG http11.receive_response_headers.complete return_value=(b'HTTP/1.1', 403, b'Forbidden', [(b'Server', b'openresty/1.13.6.2'), (b'Date', b'Wed, 19 Apr 2023 07:37:06 GMT'), (b'Content-Type', b'text/xml; charset=UTF-8'), (b'content-length', b'151'), (b'Access-Control-Allow-Methods', b'POST, GET, OPTIONS'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Max-Age', b'86400'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000')])
+10:37:05,896 httpx INFO HTTP Request: POST https://ws.audioscrobbler.com/2.0/ "HTTP/1.1 403 Forbidden"
+10:37:05,900 httpcore DEBUG http11.receive_response_body.started request=<Request [b'POST']>
+10:37:05,903 httpcore DEBUG http11.receive_response_body.complete
+10:37:05,905 httpcore DEBUG http11.response_closed.started
+10:37:05,914 httpcore DEBUG http11.response_closed.complete
+10:37:05,917 pylast DEBUG <?xml version="1.0" ?>
+<lfm status="failed">
+	
+  
+	<error code="14">Unauthorized Token - This token has not been authorized</error>
+	
+
+</lfm>
+
+10:37:05,920 httpcore DEBUG connection.close.started
+10:37:05,921 httpcore DEBUG connection.close.complete
+10:37:06,923 pylast INFO auth.getSession
+10:37:06,926 httpx DEBUG load_ssl_context verify=<ssl.SSLContext object at 0x71e9407380> cert=None trust_env=True http2=False
+10:37:06,929 httpcore DEBUG connection.connect_tcp.started host='ws.audioscrobbler.com' port=443 local_address=None timeout=5.0
+10:37:07,13 httpcore DEBUG connection.connect_tcp.complete return_value=<httpcore.backends.sync.SyncStream object at 0x71e4725b50>
+10:37:07,14 httpcore DEBUG connection.start_tls.started ssl_context=<ssl.SSLContext object at 0x71e9407380> server_hostname='ws.audioscrobbler.com' timeout=5.0
+10:37:07,97 httpcore DEBUG connection.start_tls.complete return_value=<httpcore.backends.sync.SyncStream object at 0x71e4725d10>
+10:37:07,99 httpcore DEBUG http11.send_request_headers.started request=<Request [b'POST']>
+10:37:07,101 httpcore DEBUG http11.send_request_headers.complete
+10:37:07,102 httpcore DEBUG http11.send_request_body.started request=<Request [b'POST']>
+10:37:07,103 httpcore DEBUG http11.send_request_body.complete
+10:37:07,104 httpcore DEBUG http11.receive_response_headers.started request=<Request [b'POST']>
+10:37:07,341 httpcore DEBUG http11.receive_response_headers.complete return_value=(b'HTTP/1.1', 403, b'Forbidden', [(b'Server', b'openresty/1.13.6.2'), (b'Date', b'Wed, 19 Apr 2023 07:37:07 GMT'), (b'Content-Type', b'text/xml; charset=UTF-8'), (b'content-length', b'151'), (b'Access-Control-Allow-Methods', b'POST, GET, OPTIONS'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Max-Age', b'86400'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000')])
+10:37:07,343 httpx INFO HTTP Request: POST https://ws.audioscrobbler.com/2.0/ "HTTP/1.1 403 Forbidden"
+10:37:07,345 httpcore DEBUG http11.receive_response_body.started request=<Request [b'POST']>
+10:37:07,346 httpcore DEBUG http11.receive_response_body.complete
+10:37:07,347 httpcore DEBUG http11.response_closed.started
+10:37:07,348 httpcore DEBUG http11.response_closed.complete
+10:37:07,350 pylast DEBUG <?xml version="1.0" ?>
+<lfm status="failed">
+	
+  
+	<error code="14">Unauthorized Token - This token has not been authorized</error>
+	
+
+</lfm>
+
+10:37:07,351 httpcore DEBUG connection.close.started
+10:37:07,353 httpcore DEBUG connection.close.complete
+10:37:08,355 pylast INFO auth.getSession
+10:37:08,357 httpx DEBUG load_ssl_context verify=<ssl.SSLContext object at 0x71e9407380> cert=None trust_env=True http2=False
+10:37:08,360 httpcore DEBUG connection.connect_tcp.started host='ws.audioscrobbler.com' port=443 local_address=None timeout=5.0
+10:37:08,442 httpcore DEBUG connection.connect_tcp.complete return_value=<httpcore.backends.sync.SyncStream object at 0x71e4727690>
+10:37:08,444 httpcore DEBUG connection.start_tls.started ssl_context=<ssl.SSLContext object at 0x71e9407380> server_hostname='ws.audioscrobbler.com' timeout=5.0
+10:37:08,540 httpcore DEBUG connection.start_tls.complete return_value=<httpcore.backends.sync.SyncStream object at 0x71e4727850>
+10:37:08,541 httpcore DEBUG http11.send_request_headers.started request=<Request [b'POST']>
+10:37:08,543 httpcore DEBUG http11.send_request_headers.complete
+10:37:08,544 httpcore DEBUG http11.send_request_body.started request=<Request [b'POST']>
+10:37:08,546 httpcore DEBUG http11.send_request_body.complete
+10:37:08,548 httpcore DEBUG http11.receive_response_headers.started request=<Request [b'POST']>
+10:37:08,776 httpcore DEBUG http11.receive_response_headers.complete return_value=(b'HTTP/1.1', 403, b'Forbidden', [(b'Server', b'openresty/1.13.6.2'), (b'Date', b'Wed, 19 Apr 2023 07:37:09 GMT'), (b'Content-Type', b'text/xml; charset=UTF-8'), (b'content-length', b'151'), (b'Access-Control-Allow-Methods', b'POST, GET, OPTIONS'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Max-Age', b'86400'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000')])
+10:37:08,779 httpx INFO HTTP Request: POST https://ws.audioscrobbler.com/2.0/ "HTTP/1.1 403 Forbidden"
+10:37:08,780 httpcore DEBUG http11.receive_response_body.started request=<Request [b'POST']>
+10:37:08,781 httpcore DEBUG http11.receive_response_body.complete
+10:37:08,782 httpcore DEBUG http11.response_closed.started
+10:37:08,783 httpcore DEBUG http11.response_closed.complete
+10:37:08,785 pylast DEBUG <?xml version="1.0" ?>
+<lfm status="failed">
+	
+  
+	<error code="14">Unauthorized Token - This token has not been authorized</error>
+	
+
+</lfm>
+
+10:37:08,786 httpcore DEBUG connection.close.started
+10:37:08,787 httpcore DEBUG connection.close.complete
+10:37:09,789 pylast INFO auth.getSession
+10:37:09,792 httpx DEBUG load_ssl_context verify=<ssl.SSLContext object at 0x71e9407380> cert=None trust_env=True http2=False
+10:37:09,795 httpcore DEBUG connection.connect_tcp.started host='ws.audioscrobbler.com' port=443 local_address=None timeout=5.0
+10:37:09,859 httpcore DEBUG connection.connect_tcp.complete return_value=<httpcore.backends.sync.SyncStream object at 0x71e47152d0>
+10:37:09,860 httpcore DEBUG connection.start_tls.started ssl_context=<ssl.SSLContext object at 0x71e9407380> server_hostname='ws.audioscrobbler.com' timeout=5.0
+10:37:09,935 httpcore DEBUG connection.start_tls.complete return_value=<httpcore.backends.sync.SyncStream object at 0x71e4715490>
+10:37:09,937 httpcore DEBUG http11.send_request_headers.started request=<Request [b'POST']>
+10:37:09,939 httpcore DEBUG http11.send_request_headers.complete
+10:37:09,940 httpcore DEBUG http11.send_request_body.started request=<Request [b'POST']>
+10:37:09,942 httpcore DEBUG http11.send_request_body.complete
+10:37:09,943 httpcore DEBUG http11.receive_response_headers.started request=<Request [b'POST']>
+10:37:10,178 httpcore DEBUG http11.receive_response_headers.complete return_value=(b'HTTP/1.1', 403, b'Forbidden', [(b'Server', b'openresty/1.13.6.2'), (b'Date', b'Wed, 19 Apr 2023 07:37:10 GMT'), (b'Content-Type', b'text/xml; charset=UTF-8'), (b'content-length', b'151'), (b'Access-Control-Allow-Methods', b'POST, GET, OPTIONS'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Max-Age', b'86400'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000')])
+10:37:10,179 httpx INFO HTTP Request: POST https://ws.audioscrobbler.com/2.0/ "HTTP/1.1 403 Forbidden"
+10:37:10,180 httpcore DEBUG http11.receive_response_body.started request=<Request [b'POST']>
+10:37:10,181 httpcore DEBUG http11.receive_response_body.complete
+10:37:10,182 httpcore DEBUG http11.response_closed.started
+10:37:10,182 httpcore DEBUG http11.response_closed.complete
+10:37:10,184 pylast DEBUG <?xml version="1.0" ?>
+<lfm status="failed">
+	
+  
+	<error code="14">Unauthorized Token - This token has not been authorized</error>
+	
+
+</lfm>
+
+10:37:10,186 httpcore DEBUG connection.close.started
+10:37:10,187 httpcore DEBUG connection.close.complete
+10:37:11,189 pylast INFO auth.getSession
+10:37:11,191 httpx DEBUG load_ssl_context verify=<ssl.SSLContext object at 0x71e9407380> cert=None trust_env=True http2=False
+10:37:11,193 httpcore DEBUG connection.connect_tcp.started host='ws.audioscrobbler.com' port=443 local_address=None timeout=5.0
+10:37:11,286 httpcore DEBUG connection.connect_tcp.complete return_value=<httpcore.backends.sync.SyncStream object at 0x71e4716e90>
+10:37:11,287 httpcore DEBUG connection.start_tls.started ssl_context=<ssl.SSLContext object at 0x71e9407380> server_hostname='ws.audioscrobbler.com' timeout=5.0
+10:37:11,373 httpcore DEBUG connection.start_tls.complete return_value=<httpcore.backends.sync.SyncStream object at 0x71e4717050>
+10:37:11,378 httpcore DEBUG http11.send_request_headers.started request=<Request [b'POST']>
+10:37:11,381 httpcore DEBUG http11.send_request_headers.complete
+10:37:11,386 httpcore DEBUG http11.send_request_body.started request=<Request [b'POST']>
+10:37:11,388 httpcore DEBUG http11.send_request_body.complete
+10:37:11,390 httpcore DEBUG http11.receive_response_headers.started request=<Request [b'POST']>
+10:37:11,617 httpcore DEBUG http11.receive_response_headers.complete return_value=(b'HTTP/1.1', 403, b'Forbidden', [(b'Server', b'openresty/1.13.6.2'), (b'Date', b'Wed, 19 Apr 2023 07:37:11 GMT'), (b'Content-Type', b'text/xml; charset=UTF-8'), (b'content-length', b'151'), (b'Access-Control-Allow-Methods', b'POST, GET, OPTIONS'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Max-Age', b'86400'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000')])
+10:37:11,619 httpx INFO HTTP Request: POST https://ws.audioscrobbler.com/2.0/ "HTTP/1.1 403 Forbidden"
+10:37:11,620 httpcore DEBUG http11.receive_response_body.started request=<Request [b'POST']>
+10:37:11,621 httpcore DEBUG http11.receive_response_body.complete
+10:37:11,622 httpcore DEBUG http11.response_closed.started
+10:37:11,623 httpcore DEBUG http11.response_closed.complete
+10:37:11,626 pylast DEBUG <?xml version="1.0" ?>
+<lfm status="failed">
+	
+  
+	<error code="14">Unauthorized Token - This token has not been authorized</error>
+	
+
+</lfm>
+
+10:37:11,628 httpcore DEBUG connection.close.started
+10:37:11,631 httpcore DEBUG connection.close.complete
+10:37:12,633 pylast INFO auth.getSession
+10:37:12,637 httpx DEBUG load_ssl_context verify=<ssl.SSLContext object at 0x71e9407380> cert=None trust_env=True http2=False
+10:37:12,639 httpcore DEBUG connection.connect_tcp.started host='ws.audioscrobbler.com' port=443 local_address=None timeout=5.0
+10:37:12,732 httpcore DEBUG connection.connect_tcp.complete return_value=<httpcore.backends.sync.SyncStream object at 0x71e4728a90>
+10:37:12,736 httpcore DEBUG connection.start_tls.started ssl_context=<ssl.SSLContext object at 0x71e9407380> server_hostname='ws.audioscrobbler.com' timeout=5.0
+10:37:12,821 httpcore DEBUG connection.start_tls.complete return_value=<httpcore.backends.sync.SyncStream object at 0x71e4728c50>
+10:37:12,823 httpcore DEBUG http11.send_request_headers.started request=<Request [b'POST']>
+10:37:12,826 httpcore DEBUG http11.send_request_headers.complete
+10:37:12,827 httpcore DEBUG http11.send_request_body.started request=<Request [b'POST']>
+10:37:12,829 httpcore DEBUG http11.send_request_body.complete
+10:37:12,830 httpcore DEBUG http11.receive_response_headers.started request=<Request [b'POST']>
+10:37:13,60 httpcore DEBUG http11.receive_response_headers.complete return_value=(b'HTTP/1.1', 403, b'Forbidden', [(b'Server', b'openresty/1.13.6.2'), (b'Date', b'Wed, 19 Apr 2023 07:37:13 GMT'), (b'Content-Type', b'text/xml; charset=UTF-8'), (b'content-length', b'151'), (b'Access-Control-Allow-Methods', b'POST, GET, OPTIONS'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Max-Age', b'86400'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000')])
+10:37:13,64 httpx INFO HTTP Request: POST https://ws.audioscrobbler.com/2.0/ "HTTP/1.1 403 Forbidden"
+10:37:13,65 httpcore DEBUG http11.receive_response_body.started request=<Request [b'POST']>
+10:37:13,67 httpcore DEBUG http11.receive_response_body.complete
+10:37:13,71 httpcore DEBUG http11.response_closed.started
+10:37:13,73 httpcore DEBUG http11.response_closed.complete
+10:37:13,75 pylast DEBUG <?xml version="1.0" ?>
+<lfm status="failed">
+	
+  
+	<error code="14">Unauthorized Token - This token has not been authorized</error>
+	
+
+</lfm>
+
+10:37:13,82 httpcore DEBUG connection.close.started
+10:37:13,85 httpcore DEBUG connection.close.complete
+10:37:14,92 pylast INFO auth.getSession
+10:37:14,94 httpx DEBUG load_ssl_context verify=<ssl.SSLContext object at 0x71e9407380> cert=None trust_env=True http2=False
+10:37:14,96 httpcore DEBUG connection.connect_tcp.started host='ws.audioscrobbler.com' port=443 local_address=None timeout=5.0
+10:37:14,185 httpcore DEBUG connection.connect_tcp.complete return_value=<httpcore.backends.sync.SyncStream object at 0x71e4715f50>
+10:37:14,186 httpcore DEBUG connection.start_tls.started ssl_context=<ssl.SSLContext object at 0x71e9407380> server_hostname='ws.audioscrobbler.com' timeout=5.0
+10:37:14,274 httpcore DEBUG connection.start_tls.complete return_value=<httpcore.backends.sync.SyncStream object at 0x71e4717a50>
+10:37:14,275 httpcore DEBUG http11.send_request_headers.started request=<Request [b'POST']>
+10:37:14,277 httpcore DEBUG http11.send_request_headers.complete
+10:37:14,279 httpcore DEBUG http11.send_request_body.started request=<Request [b'POST']>
+10:37:14,281 httpcore DEBUG http11.send_request_body.complete
+10:37:14,282 httpcore DEBUG http11.receive_response_headers.started request=<Request [b'POST']>
+10:37:14,516 httpcore DEBUG http11.receive_response_headers.complete return_value=(b'HTTP/1.1', 403, b'Forbidden', [(b'Server', b'openresty/1.13.6.2'), (b'Date', b'Wed, 19 Apr 2023 07:37:14 GMT'), (b'Content-Type', b'text/xml; charset=UTF-8'), (b'content-length', b'151'), (b'Access-Control-Allow-Methods', b'POST, GET, OPTIONS'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Max-Age', b'86400'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000')])
+10:37:14,519 httpx INFO HTTP Request: POST https://ws.audioscrobbler.com/2.0/ "HTTP/1.1 403 Forbidden"
+10:37:14,528 httpcore DEBUG http11.receive_response_body.started request=<Request [b'POST']>
+10:37:14,534 httpcore DEBUG http11.receive_response_body.complete
+10:37:14,536 httpcore DEBUG http11.response_closed.started
+10:37:14,543 httpcore DEBUG http11.response_closed.complete
+10:37:14,545 pylast DEBUG <?xml version="1.0" ?>
+<lfm status="failed">
+	
+  
+	<error code="14">Unauthorized Token - This token has not been authorized</error>
+	
+
+</lfm>
+
+10:37:14,546 httpcore DEBUG connection.close.started
+10:37:14,550 httpcore DEBUG connection.close.complete
+10:37:15,553 pylast INFO auth.getSession
+10:37:15,559 httpx DEBUG load_ssl_context verify=<ssl.SSLContext object at 0x71e9407380> cert=None trust_env=True http2=False
+10:37:15,564 httpcore DEBUG connection.connect_tcp.started host='ws.audioscrobbler.com' port=443 local_address=None timeout=5.0
+10:37:15,643 httpcore DEBUG connection.connect_tcp.complete return_value=<httpcore.backends.sync.SyncStream object at 0x71e4715d10>
+10:37:15,644 httpcore DEBUG connection.start_tls.started ssl_context=<ssl.SSLContext object at 0x71e9407380> server_hostname='ws.audioscrobbler.com' timeout=5.0
+10:37:15,728 httpcore DEBUG connection.start_tls.complete return_value=<httpcore.backends.sync.SyncStream object at 0x71e4715d90>
+10:37:15,730 httpcore DEBUG http11.send_request_headers.started request=<Request [b'POST']>
+10:37:15,732 httpcore DEBUG http11.send_request_headers.complete
+10:37:15,733 httpcore DEBUG http11.send_request_body.started request=<Request [b'POST']>
+10:37:15,734 httpcore DEBUG http11.send_request_body.complete
+10:37:15,735 httpcore DEBUG http11.receive_response_headers.started request=<Request [b'POST']>
+10:37:15,975 httpcore DEBUG http11.receive_response_headers.complete return_value=(b'HTTP/1.1', 403, b'Forbidden', [(b'Server', b'openresty/1.13.6.2'), (b'Date', b'Wed, 19 Apr 2023 07:37:16 GMT'), (b'Content-Type', b'text/xml; charset=UTF-8'), (b'content-length', b'151'), (b'Access-Control-Allow-Methods', b'POST, GET, OPTIONS'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Max-Age', b'86400'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000')])
+10:37:15,978 httpx INFO HTTP Request: POST https://ws.audioscrobbler.com/2.0/ "HTTP/1.1 403 Forbidden"
+10:37:15,979 httpcore DEBUG http11.receive_response_body.started request=<Request [b'POST']>
+10:37:15,981 httpcore DEBUG http11.receive_response_body.complete
+10:37:15,981 httpcore DEBUG http11.response_closed.started
+10:37:15,982 httpcore DEBUG http11.response_closed.complete
+10:37:15,983 pylast DEBUG <?xml version="1.0" ?>
+<lfm status="failed">
+	
+  
+	<error code="14">Unauthorized Token - This token has not been authorized</error>
+	
+
+</lfm>
+
+10:37:15,984 httpcore DEBUG connection.close.started
+10:37:15,986 httpcore DEBUG connection.close.complete
+10:37:16,987 pylast INFO auth.getSession
+10:37:16,990 httpx DEBUG load_ssl_context verify=<ssl.SSLContext object at 0x71e9407380> cert=None trust_env=True http2=False
+10:37:16,995 httpcore DEBUG connection.connect_tcp.started host='ws.audioscrobbler.com' port=443 local_address=None timeout=5.0
+10:37:17,83 httpcore DEBUG connection.connect_tcp.complete return_value=<httpcore.backends.sync.SyncStream object at 0x71e4727810>
+10:37:17,85 httpcore DEBUG connection.start_tls.started ssl_context=<ssl.SSLContext object at 0x71e9407380> server_hostname='ws.audioscrobbler.com' timeout=5.0
+10:37:17,174 httpcore DEBUG connection.start_tls.complete return_value=<httpcore.backends.sync.SyncStream object at 0x71e4726110>
+10:37:17,176 httpcore DEBUG http11.send_request_headers.started request=<Request [b'POST']>
+10:37:17,178 httpcore DEBUG http11.send_request_headers.complete
+10:37:17,180 httpcore DEBUG http11.send_request_body.started request=<Request [b'POST']>
+10:37:17,181 httpcore DEBUG http11.send_request_body.complete
+10:37:17,181 httpcore DEBUG http11.receive_response_headers.started request=<Request [b'POST']>
+10:37:17,415 httpcore DEBUG http11.receive_response_headers.complete return_value=(b'HTTP/1.1', 403, b'Forbidden', [(b'Server', b'openresty/1.13.6.2'), (b'Date', b'Wed, 19 Apr 2023 07:37:17 GMT'), (b'Content-Type', b'text/xml; charset=UTF-8'), (b'content-length', b'151'), (b'Access-Control-Allow-Methods', b'POST, GET, OPTIONS'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Max-Age', b'86400'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000')])
+10:37:17,417 httpx INFO HTTP Request: POST https://ws.audioscrobbler.com/2.0/ "HTTP/1.1 403 Forbidden"
+10:37:17,418 httpcore DEBUG http11.receive_response_body.started request=<Request [b'POST']>
+10:37:17,419 httpcore DEBUG http11.receive_response_body.complete
+10:37:17,420 httpcore DEBUG http11.response_closed.started
+10:37:17,420 httpcore DEBUG http11.response_closed.complete
+10:37:17,422 pylast DEBUG <?xml version="1.0" ?>
+<lfm status="failed">
+	
+  
+	<error code="14">Unauthorized Token - This token has not been authorized</error>
+	
+
+</lfm>
+
+10:37:17,422 httpcore DEBUG connection.close.started
+10:37:17,424 httpcore DEBUG connection.close.complete
+10:37:18,425 pylast INFO auth.getSession
+10:37:18,432 httpx DEBUG load_ssl_context verify=<ssl.SSLContext object at 0x71e9407380> cert=None trust_env=True http2=False
+10:37:18,438 httpcore DEBUG connection.connect_tcp.started host='ws.audioscrobbler.com' port=443 local_address=None timeout=5.0
+10:37:18,502 httpcore DEBUG connection.connect_tcp.complete return_value=<httpcore.backends.sync.SyncStream object at 0x71e47264d0>
+10:37:18,504 httpcore DEBUG connection.start_tls.started ssl_context=<ssl.SSLContext object at 0x71e9407380> server_hostname='ws.audioscrobbler.com' timeout=5.0
+10:37:18,600 httpcore DEBUG connection.start_tls.complete return_value=<httpcore.backends.sync.SyncStream object at 0x71e4725dd0>
+10:37:18,603 httpcore DEBUG http11.send_request_headers.started request=<Request [b'POST']>
+10:37:18,605 httpcore DEBUG http11.send_request_headers.complete
+10:37:18,607 httpcore DEBUG http11.send_request_body.started request=<Request [b'POST']>
+10:37:18,610 httpcore DEBUG http11.send_request_body.complete
+10:37:18,612 httpcore DEBUG http11.receive_response_headers.started request=<Request [b'POST']>
+10:37:18,831 httpcore DEBUG http11.receive_response_headers.complete return_value=(b'HTTP/1.1', 403, b'Forbidden', [(b'Server', b'openresty/1.13.6.2'), (b'Date', b'Wed, 19 Apr 2023 07:37:19 GMT'), (b'Content-Type', b'text/xml; charset=UTF-8'), (b'content-length', b'151'), (b'Access-Control-Allow-Methods', b'POST, GET, OPTIONS'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Max-Age', b'86400'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000')])
+10:37:18,835 httpx INFO HTTP Request: POST https://ws.audioscrobbler.com/2.0/ "HTTP/1.1 403 Forbidden"
+10:37:18,837 httpcore DEBUG http11.receive_response_body.started request=<Request [b'POST']>
+10:37:18,840 httpcore DEBUG http11.receive_response_body.complete
+10:37:18,841 httpcore DEBUG http11.response_closed.started
+10:37:18,842 httpcore DEBUG http11.response_closed.complete
+10:37:18,844 pylast DEBUG <?xml version="1.0" ?>
+<lfm status="failed">
+	
+  
+	<error code="14">Unauthorized Token - This token has not been authorized</error>
+	
+
+</lfm>
+
+10:37:18,845 httpcore DEBUG connection.close.started
+10:37:18,847 httpcore DEBUG connection.close.complete
+10:37:19,848 pylast INFO auth.getSession
+10:37:19,852 httpx DEBUG load_ssl_context verify=<ssl.SSLContext object at 0x71e9407380> cert=None trust_env=True http2=False
+10:37:19,855 httpcore DEBUG connection.connect_tcp.started host='ws.audioscrobbler.com' port=443 local_address=None timeout=5.0
+10:37:19,945 httpcore DEBUG connection.connect_tcp.complete return_value=<httpcore.backends.sync.SyncStream object at 0x71e7b0f750>
+10:37:19,947 httpcore DEBUG connection.start_tls.started ssl_context=<ssl.SSLContext object at 0x71e9407380> server_hostname='ws.audioscrobbler.com' timeout=5.0
+10:37:20,35 httpcore DEBUG connection.start_tls.complete return_value=<httpcore.backends.sync.SyncStream object at 0x71e7b0fd50>
+10:37:20,36 httpcore DEBUG http11.send_request_headers.started request=<Request [b'POST']>
+10:37:20,38 httpcore DEBUG http11.send_request_headers.complete
+10:37:20,39 httpcore DEBUG http11.send_request_body.started request=<Request [b'POST']>
+10:37:20,40 httpcore DEBUG http11.send_request_body.complete
+10:37:20,41 httpcore DEBUG http11.receive_response_headers.started request=<Request [b'POST']>
+10:37:20,289 httpcore DEBUG http11.receive_response_headers.complete return_value=(b'HTTP/1.1', 403, b'Forbidden', [(b'Server', b'openresty/1.13.6.2'), (b'Date', b'Wed, 19 Apr 2023 07:37:20 GMT'), (b'Content-Type', b'text/xml; charset=UTF-8'), (b'content-length', b'151'), (b'Access-Control-Allow-Methods', b'POST, GET, OPTIONS'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Max-Age', b'86400'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000')])
+10:37:20,292 httpx INFO HTTP Request: POST https://ws.audioscrobbler.com/2.0/ "HTTP/1.1 403 Forbidden"
+10:37:20,293 httpcore DEBUG http11.receive_response_body.started request=<Request [b'POST']>
+10:37:20,295 httpcore DEBUG http11.receive_response_body.complete
+10:37:20,296 httpcore DEBUG http11.response_closed.started
+10:37:20,297 httpcore DEBUG http11.response_closed.complete
+10:37:20,298 pylast DEBUG <?xml version="1.0" ?>
+<lfm status="failed">
+	
+  
+	<error code="14">Unauthorized Token - This token has not been authorized</error>
+	
+
+</lfm>
+
+10:37:20,300 httpcore DEBUG connection.close.started
+10:37:20,301 httpcore DEBUG connection.close.complete
+10:37:21,303 pylast INFO auth.getSession
+10:37:21,310 httpx DEBUG load_ssl_context verify=<ssl.SSLContext object at 0x71e9407380> cert=None trust_env=True http2=False
+10:37:21,316 httpcore DEBUG connection.connect_tcp.started host='ws.audioscrobbler.com' port=443 local_address=None timeout=5.0
+10:37:21,385 httpcore DEBUG connection.connect_tcp.complete return_value=<httpcore.backends.sync.SyncStream object at 0x71e4718650>
+10:37:21,400 httpcore DEBUG connection.start_tls.started ssl_context=<ssl.SSLContext object at 0x71e9407380> server_hostname='ws.audioscrobbler.com' timeout=5.0
+10:37:21,492 httpcore DEBUG connection.start_tls.complete return_value=<httpcore.backends.sync.SyncStream object at 0x71e4719f50>
+10:37:21,494 httpcore DEBUG http11.send_request_headers.started request=<Request [b'POST']>
+10:37:21,495 httpcore DEBUG http11.send_request_headers.complete
+10:37:21,496 httpcore DEBUG http11.send_request_body.started request=<Request [b'POST']>
+10:37:21,497 httpcore DEBUG http11.send_request_body.complete
+10:37:21,498 httpcore DEBUG http11.receive_response_headers.started request=<Request [b'POST']>
+10:37:21,837 httpcore DEBUG http11.receive_response_headers.complete return_value=(b'HTTP/1.1', 403, b'Forbidden', [(b'Server', b'openresty/1.13.6.2'), (b'Date', b'Wed, 19 Apr 2023 07:37:22 GMT'), (b'Content-Type', b'text/xml; charset=UTF-8'), (b'content-length', b'151'), (b'Access-Control-Allow-Methods', b'POST, GET, OPTIONS'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Max-Age', b'86400'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000')])
+10:37:21,839 httpx INFO HTTP Request: POST https://ws.audioscrobbler.com/2.0/ "HTTP/1.1 403 Forbidden"
+10:37:21,841 httpcore DEBUG http11.receive_response_body.started request=<Request [b'POST']>
+10:37:21,842 httpcore DEBUG http11.receive_response_body.complete
+10:37:21,843 httpcore DEBUG http11.response_closed.started
+10:37:21,844 httpcore DEBUG http11.response_closed.complete
+10:37:21,846 pylast DEBUG <?xml version="1.0" ?>
+<lfm status="failed">
+	
+  
+	<error code="14">Unauthorized Token - This token has not been authorized</error>
+	
+
+</lfm>
+
+10:37:21,847 httpcore DEBUG connection.close.started
+10:37:21,849 httpcore DEBUG connection.close.complete
+10:37:44,501 root INFO starting...
+10:37:51,538 eyed3 DEBUG eyeD3 version 0.9.7
+10:38:11,205 pylast INFO auth.getToken
+10:38:11,218 httpx DEBUG load_ssl_context verify=<ssl.SSLContext object at 0x702b644a70> cert=None trust_env=True http2=False
+10:38:11,228 httpcore DEBUG connection.connect_tcp.started host='ws.audioscrobbler.com' port=443 local_address=None timeout=5.0
+10:38:11,304 httpcore DEBUG connection.connect_tcp.complete return_value=<httpcore.backends.sync.SyncStream object at 0x702a8114d0>
+10:38:11,309 httpcore DEBUG connection.start_tls.started ssl_context=<ssl.SSLContext object at 0x702b644a70> server_hostname='ws.audioscrobbler.com' timeout=5.0
+10:38:11,386 httpcore DEBUG connection.start_tls.complete return_value=<httpcore.backends.sync.SyncStream object at 0x702a103b90>
+10:38:11,390 httpcore DEBUG http11.send_request_headers.started request=<Request [b'POST']>
+10:38:11,396 httpcore DEBUG http11.send_request_headers.complete
+10:38:11,399 httpcore DEBUG http11.send_request_body.started request=<Request [b'POST']>
+10:38:11,403 httpcore DEBUG http11.send_request_body.complete
+10:38:11,406 httpcore DEBUG http11.receive_response_headers.started request=<Request [b'POST']>
+10:38:11,619 httpcore DEBUG http11.receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'openresty/1.13.6.2'), (b'Date', b'Wed, 19 Apr 2023 07:38:11 GMT'), (b'Content-Type', b'text/xml; charset=UTF-8'), (b'content-length', b'114'), (b'Access-Control-Allow-Methods', b'POST, GET, OPTIONS'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Max-Age', b'86400'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000')])
+10:38:11,634 httpx INFO HTTP Request: POST https://ws.audioscrobbler.com/2.0/ "HTTP/1.1 200 OK"
+10:38:11,638 httpcore DEBUG http11.receive_response_body.started request=<Request [b'POST']>
+10:38:11,643 httpcore DEBUG http11.receive_response_body.complete
+10:38:11,652 httpcore DEBUG http11.response_closed.started
+10:38:11,656 httpcore DEBUG http11.response_closed.complete
+10:38:11,682 pylast DEBUG <?xml version="1.0" ?>
+<lfm status="ok">
+	
+  
+	<token>3VnpLCc-ApA2UPLQWbthdUjRNHzdP_Fr</token>
+	
+
+</lfm>
+
+10:38:11,690 httpcore DEBUG connection.close.started
+10:38:11,694 httpcore DEBUG connection.close.complete
+10:38:11,726 pylast INFO auth.getSession
+10:38:11,740 httpx DEBUG load_ssl_context verify=<ssl.SSLContext object at 0x702b644a70> cert=None trust_env=True http2=False
+10:38:11,750 httpcore DEBUG connection.connect_tcp.started host='ws.audioscrobbler.com' port=443 local_address=None timeout=5.0
+10:38:11,800 httpcore DEBUG connection.connect_tcp.complete return_value=<httpcore.backends.sync.SyncStream object at 0x702b686010>
+10:38:11,804 httpcore DEBUG connection.start_tls.started ssl_context=<ssl.SSLContext object at 0x702b644a70> server_hostname='ws.audioscrobbler.com' timeout=5.0
+10:38:11,869 httpcore DEBUG connection.start_tls.complete return_value=<httpcore.backends.sync.SyncStream object at 0x702a11c8d0>
+10:38:11,872 httpcore DEBUG http11.send_request_headers.started request=<Request [b'POST']>
+10:38:11,877 httpcore DEBUG http11.send_request_headers.complete
+10:38:11,879 httpcore DEBUG http11.send_request_body.started request=<Request [b'POST']>
+10:38:11,882 httpcore DEBUG http11.send_request_body.complete
+10:38:11,885 httpcore DEBUG http11.receive_response_headers.started request=<Request [b'POST']>
+10:38:12,89 httpcore DEBUG http11.receive_response_headers.complete return_value=(b'HTTP/1.1', 403, b'Forbidden', [(b'Server', b'openresty/1.13.6.2'), (b'Date', b'Wed, 19 Apr 2023 07:38:12 GMT'), (b'Content-Type', b'text/xml; charset=UTF-8'), (b'content-length', b'151'), (b'Access-Control-Allow-Methods', b'POST, GET, OPTIONS'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Max-Age', b'86400'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000')])
+10:38:12,95 httpx INFO HTTP Request: POST https://ws.audioscrobbler.com/2.0/ "HTTP/1.1 403 Forbidden"
+10:38:12,99 httpcore DEBUG http11.receive_response_body.started request=<Request [b'POST']>
+10:38:12,102 httpcore DEBUG http11.receive_response_body.complete
+10:38:12,104 httpcore DEBUG http11.response_closed.started
+10:38:12,106 httpcore DEBUG http11.response_closed.complete
+10:38:12,110 pylast DEBUG <?xml version="1.0" ?>
+<lfm status="failed">
+	
+  
+	<error code="14">Unauthorized Token - This token has not been authorized</error>
+	
+
+</lfm>
+
+10:38:12,112 httpcore DEBUG connection.close.started
+10:38:12,115 httpcore DEBUG connection.close.complete
+10:38:13,118 pylast INFO auth.getSession
+10:38:13,131 httpx DEBUG load_ssl_context verify=<ssl.SSLContext object at 0x702b644a70> cert=None trust_env=True http2=False
+10:38:13,140 httpcore DEBUG connection.connect_tcp.started host='ws.audioscrobbler.com' port=443 local_address=None timeout=5.0
+10:38:13,225 httpcore DEBUG connection.connect_tcp.complete return_value=<httpcore.backends.sync.SyncStream object at 0x7026e63210>
+10:38:13,229 httpcore DEBUG connection.start_tls.started ssl_context=<ssl.SSLContext object at 0x702b644a70> server_hostname='ws.audioscrobbler.com' timeout=5.0
+10:38:13,304 httpcore DEBUG connection.start_tls.complete return_value=<httpcore.backends.sync.SyncStream object at 0x7026e633d0>
+10:38:13,307 httpcore DEBUG http11.send_request_headers.started request=<Request [b'POST']>
+10:38:13,312 httpcore DEBUG http11.send_request_headers.complete
+10:38:13,314 httpcore DEBUG http11.send_request_body.started request=<Request [b'POST']>
+10:38:13,319 httpcore DEBUG http11.send_request_body.complete
+10:38:13,322 httpcore DEBUG http11.receive_response_headers.started request=<Request [b'POST']>
+10:38:13,535 httpcore DEBUG http11.receive_response_headers.complete return_value=(b'HTTP/1.1', 403, b'Forbidden', [(b'Server', b'openresty/1.13.6.2'), (b'Date', b'Wed, 19 Apr 2023 07:38:13 GMT'), (b'Content-Type', b'text/xml; charset=UTF-8'), (b'content-length', b'151'), (b'Access-Control-Allow-Methods', b'POST, GET, OPTIONS'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Max-Age', b'86400'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000')])
+10:38:13,543 httpx INFO HTTP Request: POST https://ws.audioscrobbler.com/2.0/ "HTTP/1.1 403 Forbidden"
+10:38:13,547 httpcore DEBUG http11.receive_response_body.started request=<Request [b'POST']>
+10:38:13,552 httpcore DEBUG http11.receive_response_body.complete
+10:38:13,555 httpcore DEBUG http11.response_closed.started
+10:38:13,558 httpcore DEBUG http11.response_closed.complete
+10:38:13,564 pylast DEBUG <?xml version="1.0" ?>
+<lfm status="failed">
+	
+  
+	<error code="14">Unauthorized Token - This token has not been authorized</error>
+	
+
+</lfm>
+
+10:38:13,571 httpcore DEBUG connection.close.started
+10:38:13,575 httpcore DEBUG connection.close.complete
+10:38:14,580 pylast INFO auth.getSession
+10:38:14,597 httpx DEBUG load_ssl_context verify=<ssl.SSLContext object at 0x702b644a70> cert=None trust_env=True http2=False
+10:38:14,611 httpcore DEBUG connection.connect_tcp.started host='ws.audioscrobbler.com' port=443 local_address=None timeout=5.0
+10:38:14,704 httpcore DEBUG connection.connect_tcp.complete return_value=<httpcore.backends.sync.SyncStream object at 0x7026e69110>
+10:38:14,709 httpcore DEBUG connection.start_tls.started ssl_context=<ssl.SSLContext object at 0x702b644a70> server_hostname='ws.audioscrobbler.com' timeout=5.0
+10:38:14,790 httpcore DEBUG connection.start_tls.complete return_value=<httpcore.backends.sync.SyncStream object at 0x7026e692d0>
+10:38:14,795 httpcore DEBUG http11.send_request_headers.started request=<Request [b'POST']>
+10:38:14,801 httpcore DEBUG http11.send_request_headers.complete
+10:38:14,805 httpcore DEBUG http11.send_request_body.started request=<Request [b'POST']>
+10:38:14,809 httpcore DEBUG http11.send_request_body.complete
+10:38:14,812 httpcore DEBUG http11.receive_response_headers.started request=<Request [b'POST']>
+10:38:15,92 httpcore DEBUG http11.receive_response_headers.complete return_value=(b'HTTP/1.1', 403, b'Forbidden', [(b'Server', b'openresty/1.13.6.2'), (b'Date', b'Wed, 19 Apr 2023 07:38:15 GMT'), (b'Content-Type', b'text/xml; charset=UTF-8'), (b'content-length', b'151'), (b'Access-Control-Allow-Methods', b'POST, GET, OPTIONS'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Max-Age', b'86400'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000')])
+10:38:15,104 httpx INFO HTTP Request: POST https://ws.audioscrobbler.com/2.0/ "HTTP/1.1 403 Forbidden"
+10:38:15,110 httpcore DEBUG http11.receive_response_body.started request=<Request [b'POST']>
+10:38:15,117 httpcore DEBUG http11.receive_response_body.complete
+10:38:15,122 httpcore DEBUG http11.response_closed.started
+10:38:15,127 httpcore DEBUG http11.response_closed.complete
+10:38:15,135 pylast DEBUG <?xml version="1.0" ?>
+<lfm status="failed">
+	
+  
+	<error code="14">Unauthorized Token - This token has not been authorized</error>
+	
+
+</lfm>
+
+10:38:15,140 httpcore DEBUG connection.close.started
+10:38:15,145 httpcore DEBUG connection.close.complete
+10:38:16,151 pylast INFO auth.getSession
+10:38:16,169 httpx DEBUG load_ssl_context verify=<ssl.SSLContext object at 0x702b644a70> cert=None trust_env=True http2=False
+10:38:16,182 httpcore DEBUG connection.connect_tcp.started host='ws.audioscrobbler.com' port=443 local_address=None timeout=5.0
+10:38:16,272 httpcore DEBUG connection.connect_tcp.complete return_value=<httpcore.backends.sync.SyncStream object at 0x7026e6ae50>
+10:38:16,278 httpcore DEBUG connection.start_tls.started ssl_context=<ssl.SSLContext object at 0x702b644a70> server_hostname='ws.audioscrobbler.com' timeout=5.0
+10:38:16,358 httpcore DEBUG connection.start_tls.complete return_value=<httpcore.backends.sync.SyncStream object at 0x7026e6b010>
+10:38:16,365 httpcore DEBUG http11.send_request_headers.started request=<Request [b'POST']>
+10:38:16,372 httpcore DEBUG http11.send_request_headers.complete
+10:38:16,376 httpcore DEBUG http11.send_request_body.started request=<Request [b'POST']>
+10:38:16,382 httpcore DEBUG http11.send_request_body.complete
+10:38:16,385 httpcore DEBUG http11.receive_response_headers.started request=<Request [b'POST']>
+10:38:16,595 httpcore DEBUG http11.receive_response_headers.complete return_value=(b'HTTP/1.1', 403, b'Forbidden', [(b'Server', b'openresty/1.13.6.2'), (b'Date', b'Wed, 19 Apr 2023 07:38:16 GMT'), (b'Content-Type', b'text/xml; charset=UTF-8'), (b'content-length', b'151'), (b'Access-Control-Allow-Methods', b'POST, GET, OPTIONS'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Max-Age', b'86400'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000')])
+10:38:16,606 httpx INFO HTTP Request: POST https://ws.audioscrobbler.com/2.0/ "HTTP/1.1 403 Forbidden"
+10:38:16,612 httpcore DEBUG http11.receive_response_body.started request=<Request [b'POST']>
+10:38:16,619 httpcore DEBUG http11.receive_response_body.complete
+10:38:16,624 httpcore DEBUG http11.response_closed.started
+10:38:16,630 httpcore DEBUG http11.response_closed.complete
+10:38:16,639 pylast DEBUG <?xml version="1.0" ?>
+<lfm status="failed">
+	
+  
+	<error code="14">Unauthorized Token - This token has not been authorized</error>
+	
+
+</lfm>
+
+10:38:16,644 httpcore DEBUG connection.close.started
+10:38:16,650 httpcore DEBUG connection.close.complete
+10:38:17,655 pylast INFO auth.getSession
+10:38:17,673 httpx DEBUG load_ssl_context verify=<ssl.SSLContext object at 0x702b644a70> cert=None trust_env=True http2=False
+10:38:17,686 httpcore DEBUG connection.connect_tcp.started host='ws.audioscrobbler.com' port=443 local_address=None timeout=5.0
+10:38:17,770 httpcore DEBUG connection.connect_tcp.complete return_value=<httpcore.backends.sync.SyncStream object at 0x7026e78c50>
+10:38:17,776 httpcore DEBUG connection.start_tls.started ssl_context=<ssl.SSLContext object at 0x702b644a70> server_hostname='ws.audioscrobbler.com' timeout=5.0
+10:38:17,850 httpcore DEBUG connection.start_tls.complete return_value=<httpcore.backends.sync.SyncStream object at 0x7026e78e10>
+10:38:17,855 httpcore DEBUG http11.send_request_headers.started request=<Request [b'POST']>
+10:38:17,861 httpcore DEBUG http11.send_request_headers.complete
+10:38:17,864 httpcore DEBUG http11.send_request_body.started request=<Request [b'POST']>
+10:38:17,869 httpcore DEBUG http11.send_request_body.complete
+10:38:17,872 httpcore DEBUG http11.receive_response_headers.started request=<Request [b'POST']>
+10:38:18,75 httpcore DEBUG http11.receive_response_headers.complete return_value=(b'HTTP/1.1', 403, b'Forbidden', [(b'Server', b'openresty/1.13.6.2'), (b'Date', b'Wed, 19 Apr 2023 07:38:18 GMT'), (b'Content-Type', b'text/xml; charset=UTF-8'), (b'content-length', b'151'), (b'Access-Control-Allow-Methods', b'POST, GET, OPTIONS'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Max-Age', b'86400'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000')])
+10:38:18,87 httpx INFO HTTP Request: POST https://ws.audioscrobbler.com/2.0/ "HTTP/1.1 403 Forbidden"
+10:38:18,93 httpcore DEBUG http11.receive_response_body.started request=<Request [b'POST']>
+10:38:18,99 httpcore DEBUG http11.receive_response_body.complete
+10:38:18,105 httpcore DEBUG http11.response_closed.started
+10:38:18,110 httpcore DEBUG http11.response_closed.complete
+10:38:18,117 pylast DEBUG <?xml version="1.0" ?>
+<lfm status="failed">
+	
+  
+	<error code="14">Unauthorized Token - This token has not been authorized</error>
+	
+
+</lfm>
+
+10:38:18,123 httpcore DEBUG connection.close.started
+10:38:18,128 httpcore DEBUG connection.close.complete
+10:38:34,805 root INFO starting...
+10:38:44,73 eyed3 DEBUG eyeD3 version 0.9.7
+10:39:46,159 pylast INFO auth.getToken
+10:39:46,174 httpx DEBUG load_ssl_context verify=<ssl.SSLContext object at 0x7caf72dac0> cert=None trust_env=True http2=False
+10:39:46,185 httpcore DEBUG connection.connect_tcp.started host='ws.audioscrobbler.com' port=443 local_address=None timeout=5.0
+10:39:46,453 httpcore DEBUG connection.connect_tcp.complete return_value=<httpcore.backends.sync.SyncStream object at 0x7cab36ac10>
+10:39:46,457 httpcore DEBUG connection.start_tls.started ssl_context=<ssl.SSLContext object at 0x7caf72dac0> server_hostname='ws.audioscrobbler.com' timeout=5.0
+10:39:46,536 httpcore DEBUG connection.start_tls.complete return_value=<httpcore.backends.sync.SyncStream object at 0x7cab368190>
+10:39:46,541 httpcore DEBUG http11.send_request_headers.started request=<Request [b'POST']>
+10:39:46,548 httpcore DEBUG http11.send_request_headers.complete
+10:39:46,553 httpcore DEBUG http11.send_request_body.started request=<Request [b'POST']>
+10:39:46,557 httpcore DEBUG http11.send_request_body.complete
+10:39:46,560 httpcore DEBUG http11.receive_response_headers.started request=<Request [b'POST']>
+10:39:46,795 httpcore DEBUG http11.receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'openresty/1.13.6.2'), (b'Date', b'Wed, 19 Apr 2023 07:39:47 GMT'), (b'Content-Type', b'text/xml; charset=UTF-8'), (b'content-length', b'114'), (b'Access-Control-Allow-Methods', b'POST, GET, OPTIONS'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Max-Age', b'86400'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000')])
+10:39:46,809 httpx INFO HTTP Request: POST https://ws.audioscrobbler.com/2.0/ "HTTP/1.1 200 OK"
+10:39:46,813 httpcore DEBUG http11.receive_response_body.started request=<Request [b'POST']>
+10:39:46,820 httpcore DEBUG http11.receive_response_body.complete
+10:39:46,824 httpcore DEBUG http11.response_closed.started
+10:39:46,827 httpcore DEBUG http11.response_closed.complete
+10:39:46,853 pylast DEBUG <?xml version="1.0" ?>
+<lfm status="ok">
+	
+  
+	<token>X7lnurUvH2NgWE62ON_L9mSFac0VXP4w</token>
+	
+
+</lfm>
+
+10:39:46,858 httpcore DEBUG connection.close.started
+10:39:46,862 httpcore DEBUG connection.close.complete
+10:46:28,141 root INFO starting...
+10:46:54,110 eyed3 DEBUG eyeD3 version 0.9.7
+10:47:54,751 pylast INFO auth.getToken
+10:47:54,800 httpx DEBUG load_ssl_context verify=<ssl.SSLContext object at 0x6fd630f4a0> cert=None trust_env=True http2=False
+10:47:54,812 httpcore DEBUG connection.connect_tcp.started host='ws.audioscrobbler.com' port=443 local_address=None timeout=5.0
+10:47:54,904 httpcore DEBUG connection.connect_tcp.complete return_value=<httpcore.backends.sync.SyncStream object at 0x6fd49d9450>
+10:47:54,912 httpcore DEBUG connection.start_tls.started ssl_context=<ssl.SSLContext object at 0x6fd630f4a0> server_hostname='ws.audioscrobbler.com' timeout=5.0
+10:47:55,14 httpcore DEBUG connection.start_tls.complete return_value=<httpcore.backends.sync.SyncStream object at 0x6fd4edead0>
+10:47:55,18 httpcore DEBUG http11.send_request_headers.started request=<Request [b'POST']>
+10:47:55,22 httpcore DEBUG http11.send_request_headers.complete
+10:47:55,25 httpcore DEBUG http11.send_request_body.started request=<Request [b'POST']>
+10:47:55,30 httpcore DEBUG http11.send_request_body.complete
+10:47:55,33 httpcore DEBUG http11.receive_response_headers.started request=<Request [b'POST']>
+10:47:55,255 httpcore DEBUG http11.receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'openresty/1.13.6.2'), (b'Date', b'Wed, 19 Apr 2023 07:47:55 GMT'), (b'Content-Type', b'text/xml; charset=UTF-8'), (b'content-length', b'114'), (b'Access-Control-Allow-Methods', b'POST, GET, OPTIONS'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Max-Age', b'86400'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000')])
+10:47:55,276 httpx INFO HTTP Request: POST https://ws.audioscrobbler.com/2.0/ "HTTP/1.1 200 OK"
+10:47:55,280 httpcore DEBUG http11.receive_response_body.started request=<Request [b'POST']>
+10:47:55,284 httpcore DEBUG http11.receive_response_body.complete
+10:47:55,293 httpcore DEBUG http11.response_closed.started
+10:47:55,296 httpcore DEBUG http11.response_closed.complete
+10:47:55,337 pylast DEBUG <?xml version="1.0" ?>
+<lfm status="ok">
+	
+  
+	<token>l9xA4LJ_R541T4BJgVUsAULQvjltSmSO</token>
+	
+
+</lfm>
+
+10:47:55,344 httpcore DEBUG connection.close.started
+10:47:55,349 httpcore DEBUG connection.close.complete
+10:49:24,913 pylast INFO auth.getSession
+10:49:24,952 httpx DEBUG load_ssl_context verify=<ssl.SSLContext object at 0x6fd630f4a0> cert=None trust_env=True http2=False
+10:49:24,989 httpcore DEBUG connection.connect_tcp.started host='ws.audioscrobbler.com' port=443 local_address=None timeout=5.0
+10:49:25,95 httpcore DEBUG connection.connect_tcp.complete return_value=<httpcore.backends.sync.SyncStream object at 0x6fd49e9b10>
+10:49:25,108 httpcore DEBUG connection.start_tls.started ssl_context=<ssl.SSLContext object at 0x6fd630f4a0> server_hostname='ws.audioscrobbler.com' timeout=5.0
+10:49:25,196 httpcore DEBUG connection.start_tls.complete return_value=<httpcore.backends.sync.SyncStream object at 0x6fd49d98d0>
+10:49:25,200 httpcore DEBUG http11.send_request_headers.started request=<Request [b'POST']>
+10:49:25,208 httpcore DEBUG http11.send_request_headers.complete
+10:49:25,211 httpcore DEBUG http11.send_request_body.started request=<Request [b'POST']>
+10:49:25,214 httpcore DEBUG http11.send_request_body.complete
+10:49:25,216 httpcore DEBUG http11.receive_response_headers.started request=<Request [b'POST']>
+10:49:25,508 httpcore DEBUG http11.receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'openresty/1.13.6.2'), (b'Date', b'Wed, 19 Apr 2023 07:49:25 GMT'), (b'Content-Type', b'text/xml; charset=UTF-8'), (b'content-length', b'197'), (b'Access-Control-Allow-Methods', b'POST, GET, OPTIONS'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Max-Age', b'86400'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000')])
+10:49:25,516 httpx INFO HTTP Request: POST https://ws.audioscrobbler.com/2.0/ "HTTP/1.1 200 OK"
+10:49:25,519 httpcore DEBUG http11.receive_response_body.started request=<Request [b'POST']>
+10:49:25,523 httpcore DEBUG http11.receive_response_body.complete
+10:49:25,526 httpcore DEBUG http11.response_closed.started
+10:49:25,528 httpcore DEBUG http11.response_closed.complete
+10:49:25,541 pylast DEBUG <?xml version="1.0" ?>
+<lfm status="ok">
+	
+  
+	<session>
+		
+    
+		<name>maxsspeaker</name>
+		
+    
+		<key>BfYICxQCxx0JGcRDqrkmKslGSHvPb0fS</key>
+		
+    
+		<subscriber>0</subscriber>
+		
+  
+	</session>
+	
+
+</lfm>
+
+10:49:25,543 httpcore DEBUG connection.close.started
+10:49:25,549 httpcore DEBUG connection.close.complete
+10:49:49,559 root DEBUG [youtube] Extracting URL: IxXVgJdn-XU
+10:49:49,570 root DEBUG [youtube] IxXVgJdn-XU: Downloading webpage
+10:49:50,402 root DEBUG [youtube] IxXVgJdn-XU: Downloading android player API JSON
+10:49:52,592 pylast INFO track.scrobble
+10:49:52,610 httpx DEBUG load_ssl_context verify=<ssl.SSLContext object at 0x6fd630f4a0> cert=None trust_env=True http2=False
+10:49:52,619 httpcore DEBUG connection.connect_tcp.started host='ws.audioscrobbler.com' port=443 local_address=None timeout=5.0
+10:49:52,787 httpcore DEBUG connection.connect_tcp.complete return_value=<httpcore.backends.sync.SyncStream object at 0x6fb228aa50>
+10:49:52,792 httpcore DEBUG connection.start_tls.started ssl_context=<ssl.SSLContext object at 0x6fd630f4a0> server_hostname='ws.audioscrobbler.com' timeout=5.0
+10:49:52,863 httpcore DEBUG connection.start_tls.complete return_value=<httpcore.backends.sync.SyncStream object at 0x6fb24ee850>
+10:49:52,869 httpcore DEBUG http11.send_request_headers.started request=<Request [b'POST']>
+10:49:52,877 httpcore DEBUG http11.send_request_headers.complete
+10:49:52,881 httpcore DEBUG http11.send_request_body.started request=<Request [b'POST']>
+10:49:52,886 httpcore DEBUG http11.send_request_body.complete
+10:49:52,890 httpcore DEBUG http11.receive_response_headers.started request=<Request [b'POST']>
+10:49:53,250 httpcore DEBUG http11.receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'openresty/1.13.6.2'), (b'Date', b'Wed, 19 Apr 2023 07:49:53 GMT'), (b'Content-Type', b'text/xml; charset=UTF-8'), (b'content-length', b'408'), (b'Access-Control-Allow-Methods', b'POST, GET, OPTIONS'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Max-Age', b'86400'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000')])
+10:49:53,303 httpx INFO HTTP Request: POST https://ws.audioscrobbler.com/2.0/ "HTTP/1.1 200 OK"
+10:49:53,320 httpcore DEBUG http11.receive_response_body.started request=<Request [b'POST']>
+10:49:53,327 httpcore DEBUG http11.receive_response_body.complete
+10:49:53,334 httpcore DEBUG http11.response_closed.started
+10:49:53,341 httpcore DEBUG http11.response_closed.complete
+10:49:53,354 pylast DEBUG <?xml version="1.0" ?>
+<lfm status="ok">
+	
+  
+	<scrobbles ignored="0" accepted="1">
+		
+    
+		<scrobble>
+			
+      
+			<track corrected="0">Nosebleed</track>
+			
+      
+			<artist corrected="0">Home</artist>
+			
+      
+			<album corrected="0"/>
+			
+      
+			<albumArtist corrected="0"/>
+			
+      
+			<timestamp>1681890592.5925</timestamp>
+			
+      
+			<ignoredMessage code="0"/>
+			
+    
+		</scrobble>
+		
+  
+	</scrobbles>
+	
+
+</lfm>
+
+10:49:53,359 httpcore DEBUG connection.close.started
+10:49:53,364 httpcore DEBUG connection.close.complete
+10:49:53,509 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+10:49:53,520 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 33038
+10:50:02,937 root DEBUG [youtube] Extracting URL: 1H1ciGA2XZ0
+10:50:02,942 root DEBUG [youtube] 1H1ciGA2XZ0: Downloading webpage
+10:50:03,876 root DEBUG [youtube] 1H1ciGA2XZ0: Downloading android player API JSON
+10:50:04,993 pylast INFO track.scrobble
+10:50:05,2 httpx DEBUG load_ssl_context verify=<ssl.SSLContext object at 0x6fd630f4a0> cert=None trust_env=True http2=False
+10:50:05,10 httpcore DEBUG connection.connect_tcp.started host='ws.audioscrobbler.com' port=443 local_address=None timeout=5.0
+10:50:05,96 httpcore DEBUG connection.connect_tcp.complete return_value=<httpcore.backends.sync.SyncStream object at 0x6fb24d6390>
+10:50:05,100 httpcore DEBUG connection.start_tls.started ssl_context=<ssl.SSLContext object at 0x6fd630f4a0> server_hostname='ws.audioscrobbler.com' timeout=5.0
+10:50:05,189 httpcore DEBUG connection.start_tls.complete return_value=<httpcore.backends.sync.SyncStream object at 0x6fb24d5f90>
+10:50:05,192 httpcore DEBUG http11.send_request_headers.started request=<Request [b'POST']>
+10:50:05,197 httpcore DEBUG http11.send_request_headers.complete
+10:50:05,200 httpcore DEBUG http11.send_request_body.started request=<Request [b'POST']>
+10:50:05,204 httpcore DEBUG http11.send_request_body.complete
+10:50:05,206 httpcore DEBUG http11.receive_response_headers.started request=<Request [b'POST']>
+10:50:05,509 httpcore DEBUG http11.receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'openresty/1.13.6.2'), (b'Date', b'Wed, 19 Apr 2023 07:50:05 GMT'), (b'Content-Type', b'text/xml; charset=UTF-8'), (b'content-length', b'414'), (b'Access-Control-Allow-Methods', b'POST, GET, OPTIONS'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Max-Age', b'86400'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000')])
+10:50:05,523 httpx INFO HTTP Request: POST https://ws.audioscrobbler.com/2.0/ "HTTP/1.1 200 OK"
+10:50:05,529 httpcore DEBUG http11.receive_response_body.started request=<Request [b'POST']>
+10:50:05,536 httpcore DEBUG http11.receive_response_body.complete
+10:50:05,541 httpcore DEBUG http11.response_closed.started
+10:50:05,545 httpcore DEBUG http11.response_closed.complete
+10:50:05,554 pylast DEBUG <?xml version="1.0" ?>
+<lfm status="ok">
+	
+  
+	<scrobbles ignored="0" accepted="1">
+		
+    
+		<scrobble>
+			
+      
+			<track corrected="0">Destinations</track>
+			
+      
+			<artist corrected="0">Forhill</artist>
+			
+      
+			<album corrected="0"/>
+			
+      
+			<albumArtist corrected="0"/>
+			
+      
+			<timestamp>1681890604.9928</timestamp>
+			
+      
+			<ignoredMessage code="0"/>
+			
+    
+		</scrobble>
+		
+  
+	</scrobbles>
+	
+
+</lfm>
+
+10:50:05,557 httpcore DEBUG connection.close.started
+10:50:05,559 httpcore DEBUG connection.close.complete
+10:50:05,572 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+10:50:05,576 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 41 18042
