@@ -1097,7 +1097,7 @@ class MainWindow(QtWidgets.QMainWindow): #, mainUI.Ui_MainWindow
         else:
              LastFm=False
 
-        self.notifiBox=notifiBox(Disabled=self.config['MSMP Stream']["notifi"])
+        self.notifiBox=notifiBox(Disabled=self.config['MSMP Stream']["notifiDisabled"])
              
         if(OtherApiAlow):
              self.RPC=MSMP_RPC(RPC=Presence,DirConfig=self.ConfigDir,LastFm=LastFm,version="QT0.2a")
