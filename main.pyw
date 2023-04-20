@@ -1073,8 +1073,8 @@ class MainWindow(QtWidgets.QMainWindow): #, mainUI.Ui_MainWindow
 
         print(self.ConfigDir)
 
-        if(self.config['MSMP Stream'].get("notifi")==None):
-             self.config['MSMP Stream']["notifi"]=True
+        if(self.config['MSMP Stream'].get("notifiDisabled")==None):
+             self.config['MSMP Stream']["notifiDisabled"]=False
 
         if(self.config['MSMP Stream'].get("mobileMode")==None):
              self.config['MSMP Stream']["mobileMode"]=False
