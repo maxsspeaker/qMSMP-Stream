@@ -153,7 +153,7 @@ class MSMP_RPC():
           self.RPC=RPC
           if not(RPC==None):
                try:
-                    Presence=pypresence.Presence("811577404279619634")
+                    self.RPC=pypresence.Presence("811577404279619634")
                     self.RPC.connect()
                except pypresence.exceptions.DiscordNotFound:
                   self.RPC=None
