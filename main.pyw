@@ -156,6 +156,8 @@ class MSMP_RPC():
                except pypresence.exceptions.DiscordNotFound:
                   print("discord Not Found")
                   self.RPC=None
+               except AttributeError:
+                   self.RPC = None
 
           self.msmp_streamIcon=msmp_streamIcon
           if(msmp_streamIconMain==None):
@@ -190,7 +192,11 @@ class MSMP_RPC():
           SESSION_KEY_FILE = os.path.join(self.DirConfig, ".session_key")
           self.LastFM = pylast.LastFMNetwork(APIlastFm_KEY, APIlastFm_SECRET)
           if not os.path.exists(SESSION_KEY_FILE):
+<<<<<<< HEAD
                skg = pylast.SessionKeyGenerator(self.LastFM )
+=======
+               skg = pylast.SessionKeyGenerator(self.LastFM)
+>>>>>>> f8121516376452ef9d560cf5a6443090a6d00126
                url = skg.get_web_auth_url()
 
                print(f"Please authorize this script to access your account: {url}\n")
