@@ -102,14 +102,18 @@ def loadConfig():
                yaml.dump(config,f)
           return config,configDir,MyPlaylistsPath
 
+
 class notifiBox():
-     def __init__(self):
+     def __init__(self,Disabled=False):
+        if not(Disabled):
           if(sys.platform=="linux"):
                notify2.init("MSMP Stream")
                self.Notifiok=True
           else:
                print("Приложение не поддерживает уведомления на этой системе...")
                self.Notifiok=False
+        else:
+             self.Notifiok=False
      def ShowNotifi(self,summary,message):
           if(self.Notifiok):
                n = notify2.Notification(summary,message)
@@ -1069,7 +1073,8 @@ class MainWindow(QtWidgets.QMainWindow): #, mainUI.Ui_MainWindow
 
         print(self.ConfigDir)
 
-        self.notifiBox=notifiBox()
+        if(self.config['MSMP Stream'].get("notifi")==None):
+             self.config['MSMP Stream']["notifi"]=True
 
         if(self.config['MSMP Stream'].get("mobileMode")==None):
              self.config['MSMP Stream']["mobileMode"]=False
@@ -1091,6 +1096,8 @@ class MainWindow(QtWidgets.QMainWindow): #, mainUI.Ui_MainWindow
              OtherApiAlow=True
         else:
              LastFm=False
+
+        self.notifiBox=notifiBox(Disabled=self.config['MSMP Stream']["notifi"])
              
         if(OtherApiAlow):
              self.RPC=MSMP_RPC(RPC=Presence,DirConfig=self.ConfigDir,LastFm=LastFm,version="QT0.2a")
