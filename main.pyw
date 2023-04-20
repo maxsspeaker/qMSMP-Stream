@@ -152,12 +152,11 @@ class MSMP_RPC():
           
           self.RPC=RPC
           if not(RPC==None):
-               try:self.RPC.connect();print("Discord RPC started")
+               try:
+                    Presence=pypresence.Presence("811577404279619634")
+                    self.RPC.connect()
                except pypresence.exceptions.DiscordNotFound:
-                  print("discord Not Found")
                   self.RPC=None
-               except AttributeError:
-                   self.RPC = None
 
           self.msmp_streamIcon=msmp_streamIcon
           if(msmp_streamIconMain==None):
@@ -192,11 +191,7 @@ class MSMP_RPC():
           SESSION_KEY_FILE = os.path.join(self.DirConfig, ".session_key")
           self.LastFM = pylast.LastFMNetwork(APIlastFm_KEY, APIlastFm_SECRET)
           if not os.path.exists(SESSION_KEY_FILE):
-<<<<<<< HEAD
                skg = pylast.SessionKeyGenerator(self.LastFM )
-=======
-               skg = pylast.SessionKeyGenerator(self.LastFM)
->>>>>>> f8121516376452ef9d560cf5a6443090a6d00126
                url = skg.get_web_auth_url()
 
                print(f"Please authorize this script to access your account: {url}\n")
@@ -1086,7 +1081,7 @@ class MainWindow(QtWidgets.QMainWindow): #, mainUI.Ui_MainWindow
         
         OtherApiAlow=False
         if(self.config['MSMP Stream']['Discord_rpc']):
-             Presence=pypresence.Presence("811577404279619634")
+             Presence=True
              OtherApiAlow=True
         else:
              Presence=None
@@ -1236,7 +1231,7 @@ class MainWindow(QtWidgets.QMainWindow): #, mainUI.Ui_MainWindow
 
         MSMPmenuData=["Свойства"+"#obu","Настройки"+"#Set","Закрыть"+"#Cls"]
 
-        if(self.mobileMode):
+        if not(self.mobileMode):
              MSMPmenuData.append("SKIN TOP#st")
              MSMPmenuData.append("SKIN BOTTOM#sb")
              MSMPmenuData.append("SKIN AIMPqt#AIMPskin")
