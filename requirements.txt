@@ -6,3 +6,4 @@ python-vlc
 pypresence
 appdirs
 pylast
+notify2

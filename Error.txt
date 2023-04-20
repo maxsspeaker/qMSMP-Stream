@@ -1,6 +1,10 @@
 Traceback (most recent call last):
-  File "/media/maxsspeaker/HDD игры/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/main.pyw", line 718, in play
+  File "/media/maxsspeaker/HDD игры/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/main.pyw", line 869, in play
     self.discord_rpc.updatePlayerNow(PlayNowMusicDataBox=self.PlayNowMusicDataBox,
-  File "/media/maxsspeaker/HDD игры/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/main.pyw", line 271, in updatePlayerNow
-    album=self.PlayNowMusicDataBox["albumTrekPlayNow"],
-AttributeError: 'MSMP_RPC' object has no attribute 'PlayNowMusicDataBox'
+  File "/media/maxsspeaker/HDD игры/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/main.pyw", line 276, in updatePlayerNow
+    if not(self.RPC==None):self.RPC.update(
+  File "/home/maxsspeaker/.local/lib/python3.10/site-packages/pypresence/presence.py", line 35, in update
+    self.send_data(1, payload)
+  File "/home/maxsspeaker/.local/lib/python3.10/site-packages/pypresence/baseclient.py", line 96, in send_data
+    assert self.sock_writer is not None, "You must connect your client before sending events!"
+AssertionError: You must connect your client before sending events!
