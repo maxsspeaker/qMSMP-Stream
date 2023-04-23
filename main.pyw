@@ -1,4 +1,4 @@
-import sys, time, os, traceback
+import sys, time, os, traceback,random
 from PyQt5 import QtWidgets, QtCore, QtGui
 from PyQt5.QtWidgets import QMessageBox 
 from PyQt5.QtGui import QIcon,QFont 
@@ -41,6 +41,7 @@ logger.info("starting...")
 #logger.addHandler(logging.StreamHandler())
 
 import mainUI
+import TrekBox as TrekBoxUi
 
 import requests
 import urllib
@@ -232,7 +233,21 @@ class MSMP_RPC():
         print(PlayerState)       
         if not(PlayerState=="State.Playing"):
           
-           if not(self.RPC==None):self.RPC.update(
+           if not(self.RPC==None):
+             if not(PlayNowMusicDataBox["albumTrekPlayNow"]==""):
+                self.RPC.update(
+              **{
+                  'details': PlayNowMusicDataBox["titleTrekPlayNow"],
+                  'state': PlayNowMusicDataBox["artistTrekPlayNow"]+self.lenPlayListStatus,
+                  'large_text':PlayNowMusicDataBox["albumTrekPlayNow"],
+                  'large_image':msmp_streamIcon,
+                  'small_image':"pause",
+                  #'large_text':self.PlayNowMusicDataBox["albumTrekPlayNow"],
+                  'small_text':self.version
+                  }
+              )
+             else:
+                  self.RPC.update(
               **{
                   'details': PlayNowMusicDataBox["titleTrekPlayNow"],
                   'state': PlayNowMusicDataBox["artistTrekPlayNow"]+self.lenPlayListStatus,
@@ -241,7 +256,7 @@ class MSMP_RPC():
                   #'large_text':self.PlayNowMusicDataBox["albumTrekPlayNow"],
                   'small_text':self.version
                   }
-              )  
+              )
 ##           updatePlayerNow(self,
 ##                           PlayNowMusicDataBox,
 ##                           Audiolength,
@@ -252,15 +267,27 @@ class MSMP_RPC():
                            durationTreak=self.durationTreak)     
            
           else:
-            if not(self.RPC==None):self.RPC.update(
+            if not(self.RPC==None):
+               if not(PlayNowMusicDataBox["albumTrekPlayNow"]==""):
+                 self.RPC.update(
+              **{
+                  'details': PlayNowMusicDataBox["titleTrekPlayNow"],
+                  'state': PlayNowMusicDataBox["artistTrekPlayNow"],
+                  'large_text':PlayNowMusicDataBox["albumTrekPlayNow"],
+                  'large_image':msmp_streamIcon,
+                  'small_image':"play",
+                  'small_text':self.version,
+                }
+              )
+               else:
+                 self.RPC.update(
               **{
                   'details': PlayNowMusicDataBox["titleTrekPlayNow"],
                   'state': PlayNowMusicDataBox["artistTrekPlayNow"],
                   'large_image':msmp_streamIcon,
                   'small_image':"play",
                   'small_text':self.version,
-                }
-              )
+                }  )
       except:printError(traceback.format_exc())
       
      def updatePlayerNow(self,PlayNowMusicDataBox,durationTreak,PlLen=None,Num=None,NowPlayIconRPC=None,ImgUrl="",firstPlay=False):
@@ -280,7 +307,22 @@ class MSMP_RPC():
           else:
                msmp_streamIcon=self.msmp_streamIcon
                
-          if not(self.RPC==None):self.RPC.update(
+          if not(self.RPC==None):
+            if not(PlayNowMusicDataBox["albumTrekPlayNow"]==""):
+               self.RPC.update(
+                   **{
+                      'details': PlayNowMusicDataBox["titleTrekPlayNow"],
+                      'state': PlayNowMusicDataBox["artistTrekPlayNow"]+self.lenPlayListStatus,
+                      'large_text':PlayNowMusicDataBox["albumTrekPlayNow"],
+                      'large_image':msmp_streamIcon,
+                      'small_image':"play",
+                      #'large_text':self.PlayNowMusicDataBox["albumTrekPlayNow"],
+                      'small_text':self.version,
+                      'end': time.time()+self.durationTreak#((AudioTime-Audiolength)/1000)-((AudioTime-Audiolength)/1000)-((AudioTime-Audiolength)/1000)
+                    }
+                   )
+            else:
+                self.RPC.update(
                    **{
                       'details': PlayNowMusicDataBox["titleTrekPlayNow"],
                       'state': PlayNowMusicDataBox["artistTrekPlayNow"]+self.lenPlayListStatus,
@@ -290,7 +332,8 @@ class MSMP_RPC():
                       'small_text':self.version,
                       'end': time.time()+self.durationTreak#((AudioTime-Audiolength)/1000)-((AudioTime-Audiolength)/1000)-((AudioTime-Audiolength)/1000)
                     }
-                   )
+                   ) 
+                 
           if not(self.LastFM==None) and (firstPlay):
                     try:self.LastFM.scrobble(artist=PlayNowMusicDataBox["artistTrekPlayNow"],
                                          title=PlayNowMusicDataBox["titleTrekPlayNow"],
@@ -650,13 +693,6 @@ class MSMPboxPlayer(GibridPlayer):
                                 self.PlayNowMusicDataBox["albumTrekPlayNow"]=""
                         except:self.PlayNowMusicDataBox["albumTrekPlayNow"]=""
                         
-                        if(AutoSplitAuthorName):
-                             try:
-                                  temp=self.PlayNowMusicDataBox["titleTrekPlayNow"]
-                                  self.PlayNowMusicDataBox["titleTrekPlayNow"]=temp.split(" - ")[1]
-                                  self.PlayNowMusicDataBox["artistTrekPlayNow"]=temp.split(" - ")[0]
-                             except:
-                                  pass
                               
                         if(self.PlayNowMusicDataBox["titleTrekPlayNow"]==""):
                            try:self.PlayNowMusicDataBox["titleTrekPlayNow"] = (str(str(self.playlist[Num]["url"])+"YouTubeAudio.m4a"))
@@ -746,6 +782,18 @@ class MSMPboxPlayer(GibridPlayer):
                             #if(os.path.isfile(downloadMusicFolder+(str(self.playlist[Num]["url"])+"YouTubeAudio.m4a"))):
                             #    pass
                             self.LoadImg(IDasset=self.playlist[Num]["url"]+"AlbumImg",IDtype=self.playlist[Num]["ID"],rID=self.playlist[Num]["url"])
+                            if(self.AutoSplitAuthorName):
+                             try:
+                                  temp=self.PlayNowMusicDataBox["titleTrekPlayNow"]
+                                  self.PlayNowMusicDataBox["titleTrekPlayNow"]=temp.split(" - ")[1] 
+                                  self.PlayNowMusicDataBox["artistTrekPlayNow"]=temp.split(" - ")[0] 
+                             except:
+                                  try:
+                                       temp=self.PlayNowMusicDataBox["titleTrekPlayNow"]
+                                       self.PlayNowMusicDataBox["titleTrekPlayNow"]=temp.split(" — ")[1]
+                                       self.PlayNowMusicDataBox["artistTrekPlayNow"]=temp.split(" — ")[0]
+                                  except:pass
+                              
                             super().play(castUrl)
                             
                             if(self.PlayNowMusicDataBox["artistTrekPlayNow"]==None):
@@ -957,6 +1005,14 @@ class MSMPboxPlayer(GibridPlayer):
                    #if not(self.discord_rpc==None):self.msmp_streamIcon=self.msmp_streamIconMain
                    if(self.PlayNowMusicDataBox["artistTrekPlayNow"]==None):
                        self.PlayNowMusicDataBox["artistTrekPlayNow"]=""
+                   self.NowPlayIconRPC="GlobalServerUpload"
+                   if not(self.discord_rpc==None):
+                                  self.discord_rpc.updatePlayerNow(PlayNowMusicDataBox=self.PlayNowMusicDataBox,
+                                             durationTreak=self.durationTreak,
+                                             PlLen=len(self.playlist),
+                                             Num=self.Num,
+                                             NowPlayIconRPC="GlobalServerUpload",
+                                             ImgUrl='https://pybms.tk/Server/DiscordRPC/imgRPC?img='+self.CoverUrlPlayNow,firstPlay=True)
 #                   if not(self.discord_rpc==None):
 ##                    self.NowPlayIconRPC=self.msmp_streamIcon   
 ##                    self.discord_rpc.update(
@@ -1058,7 +1114,94 @@ def hhmmss(second):
     h, m = divmod(m, 60)
     return ("%d:%02d:%02d" % (h, m, s)) if h else ("%d:%02d" % (m, s))
 
-class MainWindow(QtWidgets.QMainWindow): #, mainUI.Ui_MainWindow
+
+class TrekBoxUi(QtWidgets.QDialog,TrekBoxUi.Ui_Dialog):
+     def __init__(self,MainWindow):
+          super().__init__()
+          self.setupUi(self)
+          self.MainWindow=MainWindow
+     def add_functions(self):
+          self.buttonBox.accepted.connect(self.AddTrek)
+          self.buttonBox.rejected.connect(lambda: self.hide())
+          self.LoadTrek.clicked.connect(lambda: self.FindTrek(self.UrlText.text()))
+     def LoadImgTrek(self,rYT):
+          if(rYT['extractor']=="youtube"):
+                     urlSoundID=self.IdTreak+"SoundCloudAlbumImg.png"
+          elif(rYT['extractor']=="soundcloud"):
+                     urlSoundID=self.IdTreak+"AlbumImg.png"
+          #elif("GlobalServerUpload"==self.MSMPboxPlayer.playlist[self.MSMPboxPlayer.Num]["ID"]):
+                     #urlSoundID=str(self.MSMPboxPlayer.playlist[self.MSMPboxPlayer.Num]["IDSound"])+"AlbumImg.png"
+          else:
+               pass
+                
+          if not(os.path.isfile(self.MainWindow.PathImgsCache+urlSoundID)):
+                     r = requests.get(self.Urlimg, stream=True)
+                     r.raw.decode_content = True # Content-Encoding
+                     ImgAlbum = Image.open(r.raw).convert("RGBA")
+                     ImgAlbum=crop_center(ImgAlbum,270,270)
+                     if(rYT['id']=="YouTube"):
+                          ImgAlbum=crop_center(ImgAlbum,270,270)
+                     else:
+                          ImgAlbum=crop_center(ImgAlbum,ImgAlbum.size[1],ImgAlbum.size[1])
+                     ImgAlbum.thumbnail((140,140)) #SoundCloudAlbumImg.png #270
+          else:
+                     ImgAlbum = Image.open(self.MainWindow.PathImgsCache+urlSoundID).convert("RGBA")
+          ImgAlbum =ImageQt(ImgAlbum)
+
+          print("Update icon")
+          
+          pixmap=QtGui.QPixmap.fromImage(ImgAlbum)
+          self.AlbumImg.setPixmap(pixmap)
+          
+                     
+     def FindTrek(self,url):
+          ydl_opts = {
+                         'forceurl':True,
+                         'ignoreerrors': True,
+                         'logger':MyYTLogger(False,logger=self.MainWindow.MSMPboxPlayer.logger),
+                         'ignore-config':True,
+                         'extract_flat':True,
+                         'no-playlist':True
+                         }
+          with youtube_dl.YoutubeDL(ydl_opts) as ydl: #
+               r = ydl.extract_info(url, download=False)
+               if(r['extractor']=="youtube"):
+                    self.durationTreak=r['duration']
+                    self.Treaktitle=r['title']
+                    self.TreakUploader=r['uploader']
+                    self.IdTreak=r['id']
+                    self.TypeTreak="YouTube"
+                    
+                    self.NameTrek.setText(self.Treaktitle)
+                    self.NameUploader.setText(self.TreakUploader)
+                    
+                    self.Urlimg='https://img.youtube.com/vi/'+r['id']+'/hqdefault.jpg'
+                    self.LoadImgTrek(r)
+               elif(r['extractor']=="soundcloud"):
+                    pass
+     def AddTrek(self):
+          self.MainWindow.MSMPboxPlayer.playlist.append({
+                    "ID": self.TypeTreak,
+                    "url": self.IdTreak,
+                    "name": self.Treaktitle,
+                    "uploader": self.TreakUploader,
+                    "duration": self.durationTreak,
+                    "Publis": False
+                    })
+          self.MainWindow.PlayButton.setEnabled(True)
+          self.MainWindow.NextTreakButton.setEnabled(True)
+          self.MainWindow.PauseButton.setEnabled(True)
+          self.MainWindow.StopButton.setEnabled(True)
+          self.MainWindow.PreviousTreakButton.setEnabled(True)
+          try:self.MainWindow.ReloadInformation(False)
+          except:pass
+          self.hide()
+          
+               
+
+
+               
+class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow): #
 
     def __init__(self): 
         super().__init__()
@@ -1068,6 +1211,10 @@ class MainWindow(QtWidgets.QMainWindow): #, mainUI.Ui_MainWindow
 ##            InstanceSettings.append("--effect-list=spectrum")
 ##            InstanceSettings.append("--effect-fft-window=none")
         self.CloseApp=False
+
+        self.TrekBoxUi=TrekBoxUi(self)
+        self.TrekBoxUi.add_functions()
+        
         
         self.config,self.ConfigDir,self.PlaylistsFolder=loadConfig()
 
@@ -1104,6 +1251,7 @@ class MainWindow(QtWidgets.QMainWindow): #, mainUI.Ui_MainWindow
         else:
             self.RPC=None 
         self.MSMPboxPlayer=MSMPboxPlayer(ServerPlaer=True,InstanceSettings=InstanceSettings,MSMP_RPC=self.RPC,logger=logger,AutoSplitAuthorName=True)
+        self.MSMPboxPlayer.playlist=[]
         
         #self.initUI()
         #self.MSMPboxPlayer.playlist=[{"ID": "YouTube", "url": "Q52GzsGmRuk", "name": "Hold", "uploader": "Home", "duration": 210, "Publis": False},
@@ -1113,11 +1261,11 @@ class MainWindow(QtWidgets.QMainWindow): #, mainUI.Ui_MainWindow
 
         #mainUI.QtWidgets.QSpinBox=MySpinBox
         
-        #self.setupUi(self)
         if(self.mobileMode):
              LoadStyleUI("untitledMobile.ui",self)
         else:
-             LoadStyleUI("untitled.ui",self)
+             self.setupUi(self)
+             #LoadStyleUI("untitled.ui",self)
 
         #self.PlaylistsFolder=r"../../bmCastMusic/myPlaylists"
         
@@ -1189,6 +1337,10 @@ class MainWindow(QtWidgets.QMainWindow): #, mainUI.Ui_MainWindow
         self.ProgressUpdate=False
         self.LestNum=-1
 
+        self.PlayModeMSMP="nexttreak"
+        self.PlayModeMSMPNum=0
+        self.PlayModeMSMPModes=["nexttreak","looptreak","randomtreak"]
+
 
         self.show()
         if(self.mobileMode):
@@ -1223,7 +1375,7 @@ class MainWindow(QtWidgets.QMainWindow): #, mainUI.Ui_MainWindow
         self.PlaylistsView.doubleClicked.connect(self.handle_double_click)
         
         self.PlayListAddMenu = QtWidgets.QMenu()
-        self.PlayListAddMenu.triggered.connect(lambda x: print(x.data))
+        self.PlayListAddMenu.triggered.connect(lambda x: self.AddTrekOptions(x.data))
         self.AddTreakPlaylist.setMenu(self.PlayListAddMenu)
 
         self.RemoveTreakMenu = QtWidgets.QMenu()
@@ -1262,6 +1414,8 @@ class MainWindow(QtWidgets.QMainWindow): #, mainUI.Ui_MainWindow
         self.StopButton.clicked.connect(lambda: self.UpdateInfoTreakPL(self.MSMPboxPlayer.stop()))
         self.PauseButton.clicked.connect(lambda: self.MSMPboxPlayer.pause())
 
+        self.PlayModeTreak.clicked.connect(self.PlayModeTreakChange)
+
         #self.AddTreakPlaylist.connect(self.contextMenuPlayList)
         
         self.PreviousTreakButton.clicked.connect(lambda: self.UpdateInfoTreakPL(self.MSMPboxPlayer.previousTreak()))   
@@ -1286,7 +1440,20 @@ class MainWindow(QtWidgets.QMainWindow): #, mainUI.Ui_MainWindow
 
         if not(self.mobileMode):self.VolumeSlider.setValue(self.MSMPboxPlayer.NewPlaerVLC.audio_get_volume())
 
-        
+    def PlayModeTreakChange(self):
+         self.PlayModeMSMPNum=self.PlayModeMSMPNum+1
+         if(len(self.PlayModeMSMPModes)==self.PlayModeMSMPNum):
+              self.PlayModeMSMPNum=0
+              #self.PlayModeMSMPModes=["nexttreak","looptreak","randomtreak"]
+              #self.PlayModeMSMPNum=0
+         self.PlayModeMSMP=self.PlayModeMSMPModes[self.PlayModeMSMPNum]
+         
+         icon6 = QtGui.QIcon()
+         icon6.addPixmap(QtGui.QPixmap("img/"+self.PlayModeMSMP+".png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+         self.PlayModeTreak.setIcon(icon6)
+         
+         
+         
     def ShowPlSelector(self):
          if(self.PlSelector):
               self.PlSelector=False
@@ -1299,7 +1466,7 @@ class MainWindow(QtWidgets.QMainWindow): #, mainUI.Ui_MainWindow
 
 
               
-    def ReloadInformation(self):
+    def ReloadInformation(self,ReloadInfoPlayer=True):
          
         
         self.PlayListBox = QtGui.QStandardItemModel()
@@ -1335,7 +1502,8 @@ class MainWindow(QtWidgets.QMainWindow): #, mainUI.Ui_MainWindow
         self.StopButton.setEnabled(True)
         self.PreviousTreakButton.setEnabled(True)
 
-        self.UpdateInfoTreakPL(None) 
+        if(ReloadInfoPlayer):
+             self.UpdateInfoTreakPL(None) 
         
     def get_file_tree_model(self, root_path):
         model = QtWidgets.QFileSystemModel()
@@ -1355,7 +1523,8 @@ class MainWindow(QtWidgets.QMainWindow): #, mainUI.Ui_MainWindow
                    self.ReloadInformation()
          elif(Option=="st"):
               self.DataPath=None
-              LoadStyleUI("untitled.ui",self)
+              self.setupUi(self)
+              #LoadStyleUI("untitled.ui",self)
               self.add_functions()
               self.show()
               self.showNormal()
@@ -1380,6 +1549,10 @@ class MainWindow(QtWidgets.QMainWindow): #, mainUI.Ui_MainWindow
               if not(self.MSMPboxPlayer.playlist==None):
                    self.ReloadInformation()
                    
+    def AddTrekOptions(self,Option):
+         if(Option=="addAS-YV"):
+              self.TrekBoxUi.show()
+              
     def handle_double_click(self, index): 
         path = self.model.filePath(index)
         if self.model.isDir(index):
@@ -1455,7 +1628,12 @@ class MainWindow(QtWidgets.QMainWindow): #, mainUI.Ui_MainWindow
               else:
                    time.sleep(0.1)
                    if(str(self.MSMPboxPlayer.get_state())=="State.Ended"):
-                       self.UpdateInfoTreakPL(self.MSMPboxPlayer.nextTreak())
+                       if(self.PlayModeMSMP=="nexttreak"):
+                            self.UpdateInfoTreakPL(self.MSMPboxPlayer.nextTreak())
+                       elif(self.PlayModeMSMP=="looptreak"):
+                            self.UpdateInfoTreakPL(self.MSMPboxPlayer.play())
+                       elif(self.PlayModeMSMP=="randomtreak"):
+                            self.UpdateInfoTreakPL(self.MSMPboxPlayer.play(random.randint(0,len(self.MSMPboxPlayer.playlist)-1)))
                    
             #except AttributeError:
             #    pass
