@@ -12,6 +12,7 @@ ydl_opts = {
 
 if(sys.argv[3]=="--cookies"):
      ydl_opts['cookiefile']=sys.argv[4]
+     print("firk")
 
 #if(cookies):
 ##     #ydl_opts['cookiefile']=

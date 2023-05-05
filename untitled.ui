@@ -1348,6 +1348,7 @@ QPushButton:pressed{
     </item>
    </layout>
   </widget>
+  <widget class="QStatusBar" name="statusBar"/>
   <action name="actionSettings">
    <property name="text">
     <string>Settings</string>

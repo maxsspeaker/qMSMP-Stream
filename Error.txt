@@ -1,12 +1,4 @@
 Traceback (most recent call last):
-  File "/media/maxsspeaker/HDD игры/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/main.pyw", line 807, in play
-    self.discord_rpc.updatePlayerNow(PlayNowMusicDataBox=self.PlayNowMusicDataBox,
-  File "/media/maxsspeaker/HDD игры/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/main.pyw", line 312, in updatePlayerNow
-    self.RPC.update(
-  File "/home/maxsspeaker/.local/lib/python3.10/site-packages/pypresence/presence.py", line 36, in update
-    return self.loop.run_until_complete(self.read_output())
-  File "/usr/lib/python3.10/asyncio/base_events.py", line 646, in run_until_complete
-    return future.result()
-  File "/home/maxsspeaker/.local/lib/python3.10/site-packages/pypresence/baseclient.py", line 88, in read_output
-    raise ServerError(payload["data"]["message"])
-pypresence.exceptions.ServerError: Child "activity" fails because child "assets" fails because child "large_text" fails because "large_text" is not allowed to be empty
+  File "/media/maxsspeaker/HDD игры/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/main.pyw", line 646, in play
+    msmp_streamIcon=msmp_streamIconMain
+NameError: name 'msmp_streamIconMain' is not defined
