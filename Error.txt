@@ -1,4 +1,0 @@
-Traceback (most recent call last):
-  File "/media/maxsspeaker/HDD игры/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/main.pyw", line 646, in play
-    msmp_streamIcon=msmp_streamIconMain
-NameError: name 'msmp_streamIconMain' is not defined
