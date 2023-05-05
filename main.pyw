@@ -235,7 +235,8 @@ class MSMP_RPC():
                               f.write(session_key)
                               break
                     except pylast.WSError:
-                         time.sleep(1)
+                         print(f"Please authorize this script to access your account: {url}\n")
+                         time.sleep(10)
           else:
                session_key = open(SESSION_KEY_FILE).read()
           self.LastFM.session_key = session_key
