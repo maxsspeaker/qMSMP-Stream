@@ -90,6 +90,28 @@ QMainWindow &gt; QWidget {
      <number>0</number>
     </property>
     <item>
+     <widget class="QLabel" name="LoadingLabel">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+  color:white;
+  background-color:black;
+}</string>
+      </property>
+      <property name="text">
+       <string>Loading...</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
      <widget class="QGroupBox" name="PlayerBox">
       <property name="minimumSize">
        <size>
@@ -423,6 +445,12 @@ color:rgba(255, 0, 0)
               </property>
               <item>
                <widget class="QLabel" name="DataPath">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Ignored" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
                 <property name="font">
                  <font>
                   <family>Chicago</family>
@@ -438,25 +466,18 @@ color:rgba(255, 0, 0)
 }</string>
                 </property>
                 <property name="text">
-                 <string>YouTube/zr0kiRdU0M8</string>
+                 <string/>
                 </property>
                </widget>
               </item>
               <item>
-               <spacer name="horizontalSpacer_4">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>40</width>
-                  <height>20</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-              <item>
                <widget class="QLabel" name="TimePlayCounter">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
                 <property name="font">
                  <font>
                   <family>Chicago</family>
@@ -780,20 +801,41 @@ QPushButton:pressed{
              </widget>
             </item>
             <item>
-             <spacer name="horizontalSpacer_2">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
+             <widget class="QLabel" name="InfoLabel">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Ignored" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
               </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>0</width>
-                <height>0</height>
-               </size>
+              <property name="font">
+               <font>
+                <family>Chicago</family>
+                <pointsize>12</pointsize>
+               </font>
               </property>
-             </spacer>
+              <property name="styleSheet">
+               <string notr="true">QLabel{
+background-color: rgba(0,0,0,0);
+color:rgba(255, 0, 0)
+}</string>
+              </property>
+              <property name="text">
+               <string>Likes: 0 View: 0</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+              </property>
+             </widget>
             </item>
             <item>
              <widget class="QSlider" name="VolumeSlider">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                <horstretch>1</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
               <property name="minimumSize">
                <size>
                 <width>50</width>
