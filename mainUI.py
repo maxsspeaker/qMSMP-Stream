@@ -275,7 +275,7 @@ class Ui_MainWindow(object):
 "QSlider::handle:horizontal {\n"
 "    background-color: white;\n"
 "    height: 40px;\n"
-"    width: 5px;\n"
+"    width: 1px;\n"
 "    margin: -15px 0px;\n"
 "   \n"
 "    }\n"
@@ -290,8 +290,10 @@ class Ui_MainWindow(object):
 "                background: rgba(0,0,0,0);\n"
 "            }\n"
 "            QSlider::handle:horizontal {\n"
-"                background: #b00;\n"
-"                width: 8px;\n"
+"                /*background: #b00;\n"
+"                width: 8px;*/\n"
+"                background-color: white;\n"
+"                width: 0px;\n"
 "                border-radius: 0px;\n"
 "            }\n"
 "            QSlider::sub-page:qlineargradient {\n"
@@ -300,7 +302,11 @@ class Ui_MainWindow(object):
 "            }")
         self.ProgressBarTreakSlider.setMaximum(1000)
         self.ProgressBarTreakSlider.setSingleStep(300)
+        self.ProgressBarTreakSlider.setTracking(False)
         self.ProgressBarTreakSlider.setOrientation(QtCore.Qt.Horizontal)
+        self.ProgressBarTreakSlider.setInvertedAppearance(False)
+        self.ProgressBarTreakSlider.setInvertedControls(False)
+        self.ProgressBarTreakSlider.setTickPosition(QtWidgets.QSlider.NoTicks)
         self.ProgressBarTreakSlider.setObjectName("ProgressBarTreakSlider")
         self.verticalLayout_6.addWidget(self.ProgressBarTreakSlider)
         self.ControlPanelFirk.addLayout(self.verticalLayout_6)
@@ -469,7 +475,7 @@ class Ui_MainWindow(object):
 "QSlider::handle:horizontal {\n"
 "    background-color: white;\n"
 "    height: 40px;\n"
-"    width: 5px;\n"
+"    width: 1px;\n"
 "    margin: -15px 0px;\n"
 "   \n"
 "    }\n"
@@ -484,8 +490,10 @@ class Ui_MainWindow(object):
 "                background: rgba(0,0,0,0);\n"
 "            }\n"
 "            QSlider::handle:horizontal {\n"
-"                background: #b00;\n"
-"                width: 8px;\n"
+"                /*background: #b00;\n"
+"                width: 8px;*/\n"
+"                background-color: white;\n"
+"                width: 0px;\n"
 "                border-radius: 0px;\n"
 "            }\n"
 "            QSlider::sub-page:qlineargradient {\n"

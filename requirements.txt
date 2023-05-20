@@ -7,3 +7,6 @@ pypresence
 appdirs
 pylast
 notify-py
+yandex_music
+stagger
+

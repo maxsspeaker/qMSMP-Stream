@@ -524,7 +524,7 @@ QSlider::groove:horizontal {
 QSlider::handle:horizontal {
     background-color: white;
     height: 40px;
-    width: 5px;
+    width: 1px;
     margin: -15px 0px;
    
     }
@@ -539,8 +539,10 @@ QSlider{
                 background: rgba(0,0,0,0);
             }
             QSlider::handle:horizontal {
-                background: #b00;
-                width: 8px;
+                /*background: #b00;
+                width: 8px;*/
+                background-color: white;
+                width: 0px;
                 border-radius: 0px;
             }
             QSlider::sub-page:qlineargradient {
@@ -554,8 +556,20 @@ QSlider{
               <property name="singleStep">
                <number>300</number>
               </property>
+              <property name="tracking">
+               <bool>false</bool>
+              </property>
               <property name="orientation">
                <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="invertedAppearance">
+               <bool>false</bool>
+              </property>
+              <property name="invertedControls">
+               <bool>false</bool>
+              </property>
+              <property name="tickPosition">
+               <enum>QSlider::NoTicks</enum>
               </property>
              </widget>
             </item>
@@ -865,7 +879,7 @@ QSlider::groove:horizontal {
 QSlider::handle:horizontal {
     background-color: white;
     height: 40px;
-    width: 5px;
+    width: 1px;
     margin: -15px 0px;
    
     }
@@ -880,8 +894,10 @@ QSlider{
                 background: rgba(0,0,0,0);
             }
             QSlider::handle:horizontal {
-                background: #b00;
-                width: 8px;
+                /*background: #b00;
+                width: 8px;*/
+                background-color: white;
+                width: 0px;
                 border-radius: 0px;
             }
             QSlider::sub-page:qlineargradient {
