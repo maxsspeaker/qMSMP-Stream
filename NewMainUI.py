@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'untitled.ui'
+# Form implementation generated from reading ui file 'untitledNewBox.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.8
 #
@@ -15,7 +15,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.setWindowModality(QtCore.Qt.NonModal)
-        MainWindow.resize(800, 600)
+        MainWindow.resize(800, 601)
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
@@ -41,7 +41,7 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QMainWindow > QWidget {\n"
-"    border-image : url(img/bg.png);\n"
+"    /*border-image : url(img/bg.png);*/\n"
 "    background-color: rgb(0, 0, 0,255);\n"
 "\n"
 "   /* background-image: url(img/Missing_Texture2.png); 0 0 0 0 stretch stretch;;*/\n"
@@ -133,7 +133,7 @@ class Ui_MainWindow(object):
         self.ContorlPanel.setMinimumSize(QtCore.QSize(0, 142))
         self.ContorlPanel.setMaximumSize(QtCore.QSize(16777215, 142))
         self.ContorlPanel.setStyleSheet("QGroupBox{\n"
-"   background-color:qlineargradient(spread:pad, x1:0.278, y1:1, x2:0, y2:1, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"   background-color:rgb(16,16,16);/*qlineargradient(spread:pad, x1:0.278, y1:1, x2:0, y2:1, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(255, 255, 255, 255));*/\n"
 "   color:rgb(0,0,0);\n"
 "   border:none;\n"
 "   border-bottom: 1px solid;\n"
@@ -144,11 +144,11 @@ class Ui_MainWindow(object):
         self.ControlPanelFirk.setSpacing(0)
         self.ControlPanelFirk.setObjectName("ControlPanelFirk")
         self.horizontalLayout_3 = QtWidgets.QHBoxLayout()
-        self.horizontalLayout_3.setContentsMargins(5, -1, -1, -1)
+        self.horizontalLayout_3.setContentsMargins(0, -1, 0, -1)
         self.horizontalLayout_3.setSpacing(0)
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
         self.verticalLayout_3 = QtWidgets.QVBoxLayout()
-        self.verticalLayout_3.setSpacing(0)
+        self.verticalLayout_3.setSpacing(5)
         self.verticalLayout_3.setObjectName("verticalLayout_3")
         self.TreakName = QtWidgets.QLabel(self.ContorlPanel)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Ignored, QtWidgets.QSizePolicy.Preferred)
@@ -159,13 +159,13 @@ class Ui_MainWindow(object):
         self.TreakName.setMinimumSize(QtCore.QSize(0, 0))
         self.TreakName.setMaximumSize(QtCore.QSize(16777215, 16777215))
         font = QtGui.QFont()
-        font.setPointSize(14)
+        font.setPointSize(12)
         font.setBold(True)
         font.setWeight(75)
         self.TreakName.setFont(font)
         self.TreakName.setStyleSheet("QLabel{\n"
 "background-color: rgba(0,0,0,0);\n"
-"color:rgba(255, 0, 0)\n"
+"color:white;\n"
 "}")
         self.TreakName.setObjectName("TreakName")
         self.verticalLayout_3.addWidget(self.TreakName)
@@ -178,17 +178,18 @@ class Ui_MainWindow(object):
         self.AuthorName.setMaximumSize(QtCore.QSize(16777215, 18))
         font = QtGui.QFont()
         font.setFamily("Chicago")
-        font.setPointSize(12)
+        font.setPointSize(11)
         font.setBold(True)
         font.setWeight(75)
         self.AuthorName.setFont(font)
         self.AuthorName.setStyleSheet("QLabel{\n"
 "background-color: rgba(0,0,0,0);\n"
-"color:rgba(255, 0, 0)\n"
+"color:white;\n"
 "}")
         self.AuthorName.setObjectName("AuthorName")
         self.verticalLayout_3.addWidget(self.AuthorName)
         self.AlbumName = QtWidgets.QLabel(self.ContorlPanel)
+        self.AlbumName.setEnabled(True)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Ignored, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(1)
         sizePolicy.setVerticalStretch(0)
@@ -197,27 +198,19 @@ class Ui_MainWindow(object):
         self.AlbumName.setMaximumSize(QtCore.QSize(16777215, 15))
         font = QtGui.QFont()
         font.setFamily("Chicago")
-        font.setPointSize(12)
+        font.setPointSize(11)
         font.setBold(True)
         font.setWeight(75)
         self.AlbumName.setFont(font)
         self.AlbumName.setMouseTracking(False)
         self.AlbumName.setStyleSheet("QLabel{\n"
 "background-color: rgba(0,0,0,0);\n"
-"color:rgba(255, 0, 0)\n"
+"color:white;\n"
 "}")
         self.AlbumName.setObjectName("AlbumName")
         self.verticalLayout_3.addWidget(self.AlbumName)
-        self.horizontalLayout_3.addLayout(self.verticalLayout_3)
-        self.ControlPanelFirk.addLayout(self.horizontalLayout_3)
-        self.verticalLayout_6 = QtWidgets.QVBoxLayout()
-        self.verticalLayout_6.setContentsMargins(5, -1, -1, 0)
-        self.verticalLayout_6.setSpacing(0)
-        self.verticalLayout_6.setObjectName("verticalLayout_6")
-        self.horizontalLayout_4 = QtWidgets.QHBoxLayout()
-        self.horizontalLayout_4.setContentsMargins(-1, 5, -1, -1)
-        self.horizontalLayout_4.setSpacing(0)
-        self.horizontalLayout_4.setObjectName("horizontalLayout_4")
+        spacerItem = QtWidgets.QSpacerItem(40, 0, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.verticalLayout_3.addItem(spacerItem)
         self.DataPath = QtWidgets.QLabel(self.ContorlPanel)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Ignored, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
@@ -232,14 +225,38 @@ class Ui_MainWindow(object):
         self.DataPath.setFont(font)
         self.DataPath.setStyleSheet("QLabel{\n"
 "background-color: rgba(0,0,0,0);\n"
-"color:rgba(255, 0, 0)\n"
+"color:white;\n"
 "}")
         self.DataPath.setText("")
         self.DataPath.setObjectName("DataPath")
-        self.horizontalLayout_4.addWidget(self.DataPath)
+        self.verticalLayout_3.addWidget(self.DataPath)
+        self.horizontalLayout_3.addLayout(self.verticalLayout_3)
+        self.verticalLayout_6 = QtWidgets.QVBoxLayout()
+        self.verticalLayout_6.setContentsMargins(0, -1, 0, 0)
+        self.verticalLayout_6.setSpacing(5)
+        self.verticalLayout_6.setObjectName("verticalLayout_6")
+        spacerItem1 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_6.addItem(spacerItem1)
+        self.InfoLabel = QtWidgets.QLabel(self.ContorlPanel)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(1)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.InfoLabel.sizePolicy().hasHeightForWidth())
+        self.InfoLabel.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setFamily("Chicago")
+        font.setPointSize(12)
+        self.InfoLabel.setFont(font)
+        self.InfoLabel.setStyleSheet("QLabel{\n"
+"background-color: rgba(0,0,0,0);\n"
+"color:rgba(255, 0, 0)\n"
+"}")
+        self.InfoLabel.setAlignment(QtCore.Qt.AlignBottom|QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing)
+        self.InfoLabel.setObjectName("InfoLabel")
+        self.verticalLayout_6.addWidget(self.InfoLabel)
         self.TimePlayCounter = QtWidgets.QLabel(self.ContorlPanel)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(1)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.TimePlayCounter.sizePolicy().hasHeightForWidth())
         self.TimePlayCounter.setSizePolicy(sizePolicy)
@@ -255,61 +272,9 @@ class Ui_MainWindow(object):
 "}")
         self.TimePlayCounter.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.TimePlayCounter.setObjectName("TimePlayCounter")
-        self.horizontalLayout_4.addWidget(self.TimePlayCounter)
-        self.verticalLayout_6.addLayout(self.horizontalLayout_4)
-        self.ProgressBarTreakSlider = QtWidgets.QSlider(self.ContorlPanel)
-        self.ProgressBarTreakSlider.setAutoFillBackground(False)
-        self.ProgressBarTreakSlider.setStyleSheet("\n"
-"QSlider{\n"
-"background-color: rgba(0,0,0,0);\n"
-"border: 1px solid;\n"
-" border-color:rgb(128, 128, 128);\n"
-"}\n"
-"/*\n"
-"QSlider::groove:horizontal {\n"
-"    border: 1px solid;\n"
-"    height: 22px;\n"
-"    margin: 0px;\n"
-"    border-color:rgb(128, 128, 128);\n"
-"    }\n"
-"QSlider::handle:horizontal {\n"
-"    background-color: white;\n"
-"    height: 40px;\n"
-"    width: 1px;\n"
-"    margin: -15px 0px;\n"
-"   \n"
-"    }\n"
-"*/\n"
-"\n"
-"QSlider{\n"
-"            }\n"
-"            QSlider::groove:horizontal {  \n"
-"                 height: 22px;\n"
-"                margin: 0px;\n"
-"                border-radius: 0px;\n"
-"                background: rgba(0,0,0,0);\n"
-"            }\n"
-"            QSlider::handle:horizontal {\n"
-"                /*background: #b00;\n"
-"                width: 8px;*/\n"
-"                background-color: white;\n"
-"                width: 0px;\n"
-"                border-radius: 0px;\n"
-"            }\n"
-"            QSlider::sub-page:qlineargradient {\n"
-"                background: #fff;\n"
-"                border-radius: 0px;\n"
-"            }")
-        self.ProgressBarTreakSlider.setMaximum(1000)
-        self.ProgressBarTreakSlider.setSingleStep(300)
-        self.ProgressBarTreakSlider.setTracking(False)
-        self.ProgressBarTreakSlider.setOrientation(QtCore.Qt.Horizontal)
-        self.ProgressBarTreakSlider.setInvertedAppearance(False)
-        self.ProgressBarTreakSlider.setInvertedControls(False)
-        self.ProgressBarTreakSlider.setTickPosition(QtWidgets.QSlider.NoTicks)
-        self.ProgressBarTreakSlider.setObjectName("ProgressBarTreakSlider")
-        self.verticalLayout_6.addWidget(self.ProgressBarTreakSlider)
-        self.ControlPanelFirk.addLayout(self.verticalLayout_6)
+        self.verticalLayout_6.addWidget(self.TimePlayCounter)
+        self.horizontalLayout_3.addLayout(self.verticalLayout_6)
+        self.ControlPanelFirk.addLayout(self.horizontalLayout_3)
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_2.setContentsMargins(5, 5, -1, 5)
         self.horizontalLayout_2.setSpacing(5)
@@ -318,139 +283,130 @@ class Ui_MainWindow(object):
         self.PreviousTreakButton.setMinimumSize(QtCore.QSize(35, 35))
         self.PreviousTreakButton.setMaximumSize(QtCore.QSize(35, 35))
         self.PreviousTreakButton.setStyleSheet("QPushButton{\n"
-"  background-color: rgb(50, 50, 50,0.6);\n"
+"  background-color: rgb(50, 50, 50,0);\n"
 "  border: none;\n"
+"  border-image: url(img/previousNew.png);\n"
 "}\n"
 "QPushButton:hover{\n"
-"  background-color: rgb(100,100, 100);\n"
+"  background-color: rgb(50, 50, 50,0);\n"
 "  border: none;\n"
+"  border-image: url(img/previousNewA.png);\n"
 "}\n"
 "\n"
 "QPushButton:pressed{\n"
-"  background-color: rgb(200,200, 200);\n"
+"  background-color: rgb(50, 50, 50,255);\n"
 "  border: none;\n"
+"  border-image: url(img/previousNewA.png);\n"
 "\n"
 "}")
         self.PreviousTreakButton.setText("")
-        icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("img/previous.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.PreviousTreakButton.setIcon(icon1)
-        self.PreviousTreakButton.setIconSize(QtCore.QSize(30, 30))
+        self.PreviousTreakButton.setIconSize(QtCore.QSize(33, 33))
+        self.PreviousTreakButton.setCheckable(False)
+        self.PreviousTreakButton.setFlat(False)
         self.PreviousTreakButton.setObjectName("PreviousTreakButton")
         self.horizontalLayout_2.addWidget(self.PreviousTreakButton)
-        self.PlayButton = QtWidgets.QPushButton(self.ContorlPanel)
-        self.PlayButton.setMinimumSize(QtCore.QSize(35, 35))
-        self.PlayButton.setMaximumSize(QtCore.QSize(35, 35))
-        self.PlayButton.setStyleSheet("QPushButton{\n"
-"  background-color: rgb(50, 50, 50,0.6);\n"
-"  border: none;\n"
-"}\n"
-"QPushButton:hover{\n"
-"  background-color: rgb(100,100, 100);\n"
-"  border: none;\n"
-"}\n"
-"\n"
-"QPushButton:pressed{\n"
-"  background-color: rgb(200,200, 200);\n"
-"  border: none;\n"
-"\n"
-"}")
-        self.PlayButton.setText("")
-        icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("img/play.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.PlayButton.setIcon(icon2)
-        self.PlayButton.setIconSize(QtCore.QSize(30, 30))
-        self.PlayButton.setObjectName("PlayButton")
-        self.horizontalLayout_2.addWidget(self.PlayButton)
-        self.NextTreakButton = QtWidgets.QPushButton(self.ContorlPanel)
-        self.NextTreakButton.setMinimumSize(QtCore.QSize(35, 35))
-        self.NextTreakButton.setMaximumSize(QtCore.QSize(35, 35))
-        self.NextTreakButton.setStyleSheet("QPushButton{\n"
-"  background-color: rgb(50, 50, 50,0.6);\n"
-"  border: none;\n"
-"}\n"
-"QPushButton:hover{\n"
-"  background-color: rgb(100,100, 100);\n"
-"  border: none;\n"
-"}\n"
-"\n"
-"QPushButton:pressed{\n"
-"  background-color: rgb(200,200, 200);\n"
-"  border: none;\n"
-"\n"
-"}")
-        self.NextTreakButton.setText("")
-        icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap("img/next.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.NextTreakButton.setIcon(icon3)
-        self.NextTreakButton.setIconSize(QtCore.QSize(30, 30))
-        self.NextTreakButton.setObjectName("NextTreakButton")
-        self.horizontalLayout_2.addWidget(self.NextTreakButton)
-        self.PauseButton = QtWidgets.QPushButton(self.ContorlPanel)
-        self.PauseButton.setMinimumSize(QtCore.QSize(35, 35))
-        self.PauseButton.setMaximumSize(QtCore.QSize(35, 35))
-        self.PauseButton.setStyleSheet("QPushButton{\n"
-"  background-color: rgb(50, 50, 50,0.6);\n"
-"  border: none;\n"
-"}\n"
-"QPushButton:hover{\n"
-"  background-color: rgb(100,100, 100);\n"
-"  border: none;\n"
-"}\n"
-"\n"
-"QPushButton:pressed{\n"
-"  background-color: rgb(200,200, 200);\n"
-"  border: none;\n"
-"\n"
-"}")
-        self.PauseButton.setText("")
-        icon4 = QtGui.QIcon()
-        icon4.addPixmap(QtGui.QPixmap("img/pause.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.PauseButton.setIcon(icon4)
-        self.PauseButton.setIconSize(QtCore.QSize(30, 30))
-        self.PauseButton.setObjectName("PauseButton")
-        self.horizontalLayout_2.addWidget(self.PauseButton)
         self.StopButton = QtWidgets.QPushButton(self.ContorlPanel)
         self.StopButton.setMinimumSize(QtCore.QSize(35, 35))
         self.StopButton.setMaximumSize(QtCore.QSize(35, 35))
         self.StopButton.setStyleSheet("QPushButton{\n"
-"  background-color: rgb(50, 50, 50,0.6);\n"
+"  background-color: rgb(50, 50, 50,0);\n"
 "  border: none;\n"
+"  border-image: url(img/stopNew.png);\n"
 "}\n"
 "QPushButton:hover{\n"
-"  background-color: rgb(100,100, 100);\n"
+"  background-color: rgb(100,100, 100,0);\n"
 "  border: none;\n"
+"  border-image: url(img/stopNewA.png);\n"
 "}\n"
 "\n"
 "QPushButton:pressed{\n"
-"  background-color: rgb(200,200, 200);\n"
+"  background-color: rgb(50, 50, 50,255);\n"
 "  border: none;\n"
+"  border-image: url(img/stopNewA.png);\n"
 "\n"
 "}")
         self.StopButton.setText("")
-        icon5 = QtGui.QIcon()
-        icon5.addPixmap(QtGui.QPixmap("img/stop.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.StopButton.setIcon(icon5)
         self.StopButton.setIconSize(QtCore.QSize(30, 30))
+        self.StopButton.setCheckable(False)
         self.StopButton.setObjectName("StopButton")
         self.horizontalLayout_2.addWidget(self.StopButton)
-        self.InfoLabel = QtWidgets.QLabel(self.ContorlPanel)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Ignored, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.InfoLabel.sizePolicy().hasHeightForWidth())
-        self.InfoLabel.setSizePolicy(sizePolicy)
-        font = QtGui.QFont()
-        font.setFamily("Chicago")
-        font.setPointSize(12)
-        self.InfoLabel.setFont(font)
-        self.InfoLabel.setStyleSheet("QLabel{\n"
-"background-color: rgba(0,0,0,0);\n"
-"color:rgba(255, 0, 0)\n"
+        self.PlayButton = QtWidgets.QPushButton(self.ContorlPanel)
+        self.PlayButton.setMinimumSize(QtCore.QSize(35, 35))
+        self.PlayButton.setMaximumSize(QtCore.QSize(35, 35))
+        self.PlayButton.setStyleSheet("QPushButton{\n"
+"  background-color: rgb(50, 50, 50,0);\n"
+"  border: none;\n"
+"  border-image: url(img/playNewA.png);\n"
+"  \n"
+"}\n"
+"QPushButton:hover{\n"
+"  background-color: rgb(100,100, 100,0);\n"
+"  border: none;\n"
+" \n"
+"  border-image: url(img/playNew.png);\n"
+"}\n"
+"\n"
+"QPushButton:pressed{\n"
+"  background-color: rgb(50, 50, 50,255);\n"
+"  border: none;\n"
+"  border-image: url(img/playNew.png);\n"
+"\n"
 "}")
-        self.InfoLabel.setAlignment(QtCore.Qt.AlignBottom|QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft)
-        self.InfoLabel.setObjectName("InfoLabel")
-        self.horizontalLayout_2.addWidget(self.InfoLabel)
+        self.PlayButton.setText("")
+        self.PlayButton.setIconSize(QtCore.QSize(30, 30))
+        self.PlayButton.setObjectName("PlayButton")
+        self.horizontalLayout_2.addWidget(self.PlayButton)
+        self.PauseButton = QtWidgets.QPushButton(self.ContorlPanel)
+        self.PauseButton.setMinimumSize(QtCore.QSize(35, 35))
+        self.PauseButton.setMaximumSize(QtCore.QSize(35, 35))
+        self.PauseButton.setStyleSheet("QPushButton{\n"
+"  background-color: rgb(50, 50, 50,0);\n"
+"  border: none;\n"
+"  border-image: url(img/pauseNew.png);\n"
+"  \n"
+"}\n"
+"QPushButton:hover{\n"
+"  background-color: rgb(100,100, 100,0);\n"
+"  border: none;\n"
+" \n"
+"  border-image: url(img/pauseNewA.png);\n"
+"}\n"
+"\n"
+"QPushButton:pressed{\n"
+"  background-color: rgb(50, 50, 50,255);\n"
+"  border: none;\n"
+"  border-image: url(img/pauseNewA.png);\n"
+"\n"
+"}")
+        self.PauseButton.setText("")
+        self.PauseButton.setObjectName("PauseButton")
+        self.horizontalLayout_2.addWidget(self.PauseButton)
+        self.NextTreakButton = QtWidgets.QPushButton(self.ContorlPanel)
+        self.NextTreakButton.setMinimumSize(QtCore.QSize(35, 35))
+        self.NextTreakButton.setMaximumSize(QtCore.QSize(35, 35))
+        self.NextTreakButton.setStyleSheet("QPushButton{\n"
+"  background-color: rgb(50, 50, 50,0);\n"
+"  border: none;\n"
+"  border-image: url(img/nextNew.png);\n"
+"}\n"
+"QPushButton:hover{\n"
+"  background-color: rgb(100,100, 100,0);\n"
+"  border: none;\n"
+"  border-image: url(img/nextNewA.png);\n"
+"}\n"
+"\n"
+"QPushButton:pressed{\n"
+"  background-color: rgb(50, 50, 50,255);\n"
+"  border: none;\n"
+"  border-image: url(img/nextNewA.png);\n"
+"\n"
+"}")
+        self.NextTreakButton.setText("")
+        self.NextTreakButton.setIconSize(QtCore.QSize(30, 30))
+        self.NextTreakButton.setObjectName("NextTreakButton")
+        self.horizontalLayout_2.addWidget(self.NextTreakButton)
+        spacerItem2 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_2.addItem(spacerItem2)
         self.VolumeSlider = QtWidgets.QSlider(self.ContorlPanel)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(1)
@@ -462,7 +418,81 @@ class Ui_MainWindow(object):
         self.VolumeSlider.setStyleSheet("\n"
 "QSlider{\n"
 "background-color: rgba(0,0,0,0);\n"
-"border: 1px solid;\n"
+"border: 0px solid;\n"
+" border-color:rgb(128, 128, 128);\n"
+" height: 15px;\n"
+"}\n"
+"/*\n"
+"QSlider::groove:horizontal {\n"
+"    border: 1px solid;\n"
+"    height: 22px;\n"
+"    margin: 0px;\n"
+"    border-color:rgb(128, 128, 128);\n"
+"    }\n"
+"QSlider::handle:horizontal {\n"
+"    background-color: white;\n"
+"    height: 40px;\n"
+"    width: 1px;\n"
+"    margin: -15px 0px;\n"
+"   \n"
+"    }\n"
+"*/\n"
+"\n"
+"QSlider{\n"
+"            }\n"
+"            QSlider::groove:horizontal {  \n"
+"                 height: 1px;\n"
+"                margin: 0px;\n"
+"                border-radius: 0px;\n"
+"                background: rgb(0,0,0);\n"
+"            }\n"
+"            QSlider::handle:horizontal {\n"
+"                /*background: #b00;\n"
+"                width: 8px;*/\n"
+"                background-color: white;\n"
+"                width: 0px;\n"
+"                border-radius: 0px;\n"
+"            }\n"
+"            QSlider::sub-page:qlineargradient {\n"
+"                background: rgb(183,46,43);\n"
+"                border-radius: 0px;\n"
+"            }")
+        self.VolumeSlider.setProperty("value", 50)
+        self.VolumeSlider.setOrientation(QtCore.Qt.Horizontal)
+        self.VolumeSlider.setTickPosition(QtWidgets.QSlider.NoTicks)
+        self.VolumeSlider.setObjectName("VolumeSlider")
+        self.horizontalLayout_2.addWidget(self.VolumeSlider)
+        self.PlayModeTreak = QtWidgets.QPushButton(self.ContorlPanel)
+        self.PlayModeTreak.setMinimumSize(QtCore.QSize(35, 35))
+        self.PlayModeTreak.setMaximumSize(QtCore.QSize(35, 35))
+        self.PlayModeTreak.setStyleSheet("QPushButton{\n"
+"  background-color: rgb(50, 50, 50,0);\n"
+"  border: none;\n"
+"  border-image: url(img/nexttreakNew.png);\n"
+"}\n"
+"QPushButton:hover{\n"
+"  background-color: rgb(100,100, 100,0);\n"
+"  border: none;\n"
+"  border-image: url(img/nexttreakNewA.png);\n"
+"}\n"
+"\n"
+"QPushButton:pressed{\n"
+"  background-color: rgb(50, 50, 50,255);\n"
+"  border: none;\n"
+"  border-image: url(img/nexttreakNewA.png);\n"
+"\n"
+"}")
+        self.PlayModeTreak.setText("")
+        self.PlayModeTreak.setIconSize(QtCore.QSize(30, 30))
+        self.PlayModeTreak.setObjectName("PlayModeTreak")
+        self.horizontalLayout_2.addWidget(self.PlayModeTreak)
+        self.ControlPanelFirk.addLayout(self.horizontalLayout_2)
+        self.ProgressBarTreakSlider = QtWidgets.QSlider(self.ContorlPanel)
+        self.ProgressBarTreakSlider.setAutoFillBackground(False)
+        self.ProgressBarTreakSlider.setStyleSheet("\n"
+"QSlider{\n"
+"background-color: rgba(0,0,0,0);\n"
+"border: 0px solid;\n"
 " border-color:rgb(128, 128, 128);\n"
 "}\n"
 "/*\n"
@@ -487,7 +517,7 @@ class Ui_MainWindow(object):
 "                 height: 22px;\n"
 "                margin: 0px;\n"
 "                border-radius: 0px;\n"
-"                background: rgba(0,0,0,0);\n"
+"                background: rgba(21,21,21,1);\n"
 "            }\n"
 "            QSlider::handle:horizontal {\n"
 "                /*background: #b00;\n"
@@ -497,62 +527,19 @@ class Ui_MainWindow(object):
 "                border-radius: 0px;\n"
 "            }\n"
 "            QSlider::sub-page:qlineargradient {\n"
-"                background: #fff;\n"
+"                background: rgb(183,46,43);\n"
 "                border-radius: 0px;\n"
 "            }")
-        self.VolumeSlider.setOrientation(QtCore.Qt.Horizontal)
-        self.VolumeSlider.setTickPosition(QtWidgets.QSlider.NoTicks)
-        self.VolumeSlider.setObjectName("VolumeSlider")
-        self.horizontalLayout_2.addWidget(self.VolumeSlider)
-        self.PlayModeTreak = QtWidgets.QPushButton(self.ContorlPanel)
-        self.PlayModeTreak.setMinimumSize(QtCore.QSize(35, 35))
-        self.PlayModeTreak.setMaximumSize(QtCore.QSize(35, 35))
-        self.PlayModeTreak.setStyleSheet("QPushButton{\n"
-"  background-color: rgb(50, 50, 50,0.6);\n"
-"  border: none;\n"
-"}\n"
-"QPushButton:hover{\n"
-"  background-color: rgb(100,100, 100);\n"
-"  border: none;\n"
-"}\n"
-"\n"
-"QPushButton:pressed{\n"
-"  background-color: rgb(200,200, 200);\n"
-"  border: none;\n"
-"\n"
-"}")
-        self.PlayModeTreak.setText("")
-        icon6 = QtGui.QIcon()
-        icon6.addPixmap(QtGui.QPixmap("img/nexttreak.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.PlayModeTreak.setIcon(icon6)
-        self.PlayModeTreak.setIconSize(QtCore.QSize(30, 30))
-        self.PlayModeTreak.setObjectName("PlayModeTreak")
-        self.horizontalLayout_2.addWidget(self.PlayModeTreak)
-        self.VisualMode = QtWidgets.QPushButton(self.ContorlPanel)
-        self.VisualMode.setMinimumSize(QtCore.QSize(35, 35))
-        self.VisualMode.setMaximumSize(QtCore.QSize(35, 35))
-        self.VisualMode.setStyleSheet("QPushButton{\n"
-"  background-color: rgb(50, 50, 50,0.6);\n"
-"  border: none;\n"
-"}\n"
-"QPushButton:hover{\n"
-"  background-color: rgb(100,100, 100);\n"
-"  border: none;\n"
-"}\n"
-"\n"
-"QPushButton:pressed{\n"
-"  background-color: rgb(200,200, 200);\n"
-"  border: none;\n"
-"\n"
-"}")
-        self.VisualMode.setText("")
-        icon7 = QtGui.QIcon()
-        icon7.addPixmap(QtGui.QPixmap("img/Vizual.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.VisualMode.setIcon(icon7)
-        self.VisualMode.setIconSize(QtCore.QSize(30, 30))
-        self.VisualMode.setObjectName("VisualMode")
-        self.horizontalLayout_2.addWidget(self.VisualMode)
-        self.ControlPanelFirk.addLayout(self.horizontalLayout_2)
+        self.ProgressBarTreakSlider.setMaximum(1000)
+        self.ProgressBarTreakSlider.setSingleStep(300)
+        self.ProgressBarTreakSlider.setProperty("value", 50)
+        self.ProgressBarTreakSlider.setTracking(False)
+        self.ProgressBarTreakSlider.setOrientation(QtCore.Qt.Horizontal)
+        self.ProgressBarTreakSlider.setInvertedAppearance(False)
+        self.ProgressBarTreakSlider.setInvertedControls(False)
+        self.ProgressBarTreakSlider.setTickPosition(QtWidgets.QSlider.NoTicks)
+        self.ProgressBarTreakSlider.setObjectName("ProgressBarTreakSlider")
+        self.ControlPanelFirk.addWidget(self.ProgressBarTreakSlider)
         self.PlayerBoxFirk.addWidget(self.ContorlPanel)
         self.verticalLayout.addWidget(self.PlayerBox)
         self.PlaylistBox = QtWidgets.QFrame(self.centralwidget)
@@ -581,6 +568,7 @@ class Ui_MainWindow(object):
         self.PlaylistsView.setAcceptDrops(False)
         self.PlaylistsView.setStyleSheet("QTreeView{\n"
 "color:rgb(255, 255, 255);\n"
+"background-color:rgb(16,16,16,0.8);\n"
 "\n"
 "}\n"
 "\n"
@@ -624,16 +612,41 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.PlaylistView.setFont(font)
+        self.PlaylistView.setFocusPolicy(QtCore.Qt.NoFocus)
         self.PlaylistView.setAcceptDrops(False)
         self.PlaylistView.setStyleSheet("QListView{\n"
-"  background-color: rgb(50, 50, 50,0.2);\n"
+"  background-color: rgb(0, 0, 0,0.2);\n"
 "  color:rgb(255, 255, 255);\n"
 "  border: 1px solid;\n"
+"   outline: 0;\n"
 "}\n"
 "\n"
 "QListView {\n"
 "    show-decoration-selected: 1; /* make the selection span the entire width of the view */\n"
 "}\n"
+"\n"
+"QListView::item {\n"
+"   outline: 0;\n"
+"}\n"
+"QListView::item {\n"
+"\n"
+"}\n"
+"\n"
+"QListView  QAbstractItemView\n"
+"{\n"
+"     border: none;\n"
+"}\n"
+"\n"
+"\n"
+"QListView::item:selected {\n"
+"    background: rgb(20,20,20,0.5);\n"
+"    color:white;\n"
+"}\n"
+"QListView::item:selected:!active {\n"
+"   background: rgb(20,20,20,0.5);\n"
+"   color:white;\n"
+"}\n"
+"\n"
 "/*\n"
 "QListView::item:alternate {\n"
 "    background: #EEEEEE;\n"
@@ -660,7 +673,28 @@ class Ui_MainWindow(object):
 "\n"
 "*/\n"
 "QListWidget {padding: 0px;}\n"
-"QListWidget::item { margin: 0px; }")
+"QListWidget::item { margin: 0px; }\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"/*\n"
+"QListView{\n"
+"  background-color: rgb(0,0, 0,0.2);\n"
+"  color:rgb(255, 255, 255);\n"
+"  border: 1px solid;\n"
+"  outline: none;\n"
+"}\n"
+"\n"
+"QListView {\n"
+"    show-decoration-selected:1;\n"
+"}\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"*/")
         self.PlaylistView.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOn)
         self.PlaylistView.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.PlaylistView.setAutoScrollMargin(0)
@@ -673,39 +707,41 @@ class Ui_MainWindow(object):
         self.verticalLayout_5.addWidget(self.PlaylistView)
         self.PlaylistCommandBar = QtWidgets.QGroupBox(self.PlaylistBox)
         self.PlaylistCommandBar.setStyleSheet("QGroupBox{\n"
-"   background-color:rgb(50, 50, 50);\n"
-"\n"
+"   background-color:black;\n"
+"   border: none;\n"
+"   border-top: 1px solid;\n"
+"   border-color: rgb(16,16,16)\n"
 "}")
+        self.PlaylistCommandBar.setFlat(False)
+        self.PlaylistCommandBar.setCheckable(False)
         self.PlaylistCommandBar.setObjectName("PlaylistCommandBar")
         self.PlaylistCommandBarFirk = QtWidgets.QHBoxLayout(self.PlaylistCommandBar)
         self.PlaylistCommandBarFirk.setSizeConstraint(QtWidgets.QLayout.SetDefaultConstraint)
-        self.PlaylistCommandBarFirk.setContentsMargins(0, 0, 0, 2)
-        self.PlaylistCommandBarFirk.setSpacing(2)
+        self.PlaylistCommandBarFirk.setContentsMargins(0, 0, 0, 0)
+        self.PlaylistCommandBarFirk.setSpacing(0)
         self.PlaylistCommandBarFirk.setObjectName("PlaylistCommandBarFirk")
         self.AddTreakPlaylist = QtWidgets.QPushButton(self.PlaylistCommandBar)
         self.AddTreakPlaylist.setMinimumSize(QtCore.QSize(30, 30))
         self.AddTreakPlaylist.setMaximumSize(QtCore.QSize(30, 30))
         self.AddTreakPlaylist.setAutoFillBackground(False)
         self.AddTreakPlaylist.setStyleSheet("QPushButton{\n"
-"  background-color: rgba(18, 18, 18);\n"
-"  color: rgba(18, 18, 18,0);\n"
+"  background-color: rgb(50, 50, 50,0);\n"
 "  border: none;\n"
+"  border-image: url(img/add-openNew.png);\n"
 "}\n"
 "QPushButton:hover{\n"
-"  background-color: rgb(100,100, 100);\n"
-"  color: rgb(100,100, 100);\n"
+"  background-color: rgb(50, 50, 50,0);\n"
 "  border: none;\n"
+"  border-image: url(img/add-openNewA.png);\n"
 "}\n"
 "\n"
 "QPushButton:pressed{\n"
-"  background-color: rgb(200,200, 200);\n"
-"  color:  rgb(200,200, 200);\n"
+"  background-color: rgb(50, 50, 50,255);\n"
 "  border: none;\n"
+"  border-image: url(img/add-openNewA.png);\n"
+"\n"
 "}")
         self.AddTreakPlaylist.setText("")
-        icon8 = QtGui.QIcon()
-        icon8.addPixmap(QtGui.QPixmap("img/add-open.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.AddTreakPlaylist.setIcon(icon8)
         self.AddTreakPlaylist.setIconSize(QtCore.QSize(30, 30))
         self.AddTreakPlaylist.setShortcut("")
         self.AddTreakPlaylist.setObjectName("AddTreakPlaylist")
@@ -714,23 +750,22 @@ class Ui_MainWindow(object):
         self.RemoveTreakPlaylist.setMinimumSize(QtCore.QSize(30, 30))
         self.RemoveTreakPlaylist.setMaximumSize(QtCore.QSize(30, 30))
         self.RemoveTreakPlaylist.setStyleSheet("QPushButton{\n"
-"  background-color: rgb(18, 18, 18);\n"
-"  color: rgba(18, 18, 18,0);\n"
+"  background-color: rgb(50, 50, 50,0);\n"
 "  border: none;\n"
+"  border-image: url(img/removeNew.png);\n"
 "}\n"
 "QPushButton:hover{\n"
-"  background-color: rgb(100,100, 100);\n"
+"  background-color: rgb(50, 50, 50,0);\n"
 "  border: none;\n"
+"  border-image: url(img/removeNewA.png);\n"
 "}\n"
 "\n"
 "QPushButton:pressed{\n"
-"  background-color: rgb(200,200, 200);\n"
+"  background-color: rgb(50, 50, 50,255);\n"
 "  border: none;\n"
+"  border-image: url(img/removeNewA.png);\n"
 "\n"
 "}")
-        icon9 = QtGui.QIcon()
-        icon9.addPixmap(QtGui.QPixmap("img/remove.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.RemoveTreakPlaylist.setIcon(icon9)
         self.RemoveTreakPlaylist.setIconSize(QtCore.QSize(30, 30))
         self.RemoveTreakPlaylist.setShortcut("")
         self.RemoveTreakPlaylist.setObjectName("RemoveTreakPlaylist")
@@ -739,34 +774,36 @@ class Ui_MainWindow(object):
         self.MenuPlaylist.setMinimumSize(QtCore.QSize(30, 30))
         self.MenuPlaylist.setMaximumSize(QtCore.QSize(30, 30))
         self.MenuPlaylist.setStyleSheet("QPushButton{\n"
-"  background-color: rgb(18, 18, 18);\n"
-"  color: rgba(18, 18, 18,0);\n"
+"  background-color: rgb(50, 50, 50,0);\n"
 "  border: none;\n"
+"  border-image: url(img/menuplaylistNew.png);\n"
 "}\n"
 "QPushButton:hover{\n"
-"  background-color: rgb(100,100, 100);\n"
+"  background-color: rgb(50, 50, 50,0);\n"
 "  border: none;\n"
+"  border-image: url(img/menuplaylistNewA.png);\n"
 "}\n"
 "\n"
 "QPushButton:pressed{\n"
-"  background-color: rgb(200,200, 200);\n"
+"  background-color: rgb(50, 50, 50,255);\n"
 "  border: none;\n"
+"  border-image: url(img/menuplaylistNewA.png);\n"
 "\n"
 "}")
         self.MenuPlaylist.setText("")
-        icon10 = QtGui.QIcon()
-        icon10.addPixmap(QtGui.QPixmap("img/menuplaylist.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.MenuPlaylist.setIcon(icon10)
         self.MenuPlaylist.setIconSize(QtCore.QSize(30, 30))
         self.MenuPlaylist.setShortcut("")
         self.MenuPlaylist.setObjectName("MenuPlaylist")
         self.PlaylistCommandBarFirk.addWidget(self.MenuPlaylist)
-        spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.PlaylistCommandBarFirk.addItem(spacerItem)
+        spacerItem3 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.PlaylistCommandBarFirk.addItem(spacerItem3)
         self.verticalLayout_5.addWidget(self.PlaylistCommandBar)
         self.PlaylistBoxFirk.addLayout(self.verticalLayout_5)
         self.verticalLayout.addWidget(self.PlaylistBox)
         MainWindow.setCentralWidget(self.centralwidget)
+        self.statusBar = QtWidgets.QStatusBar(MainWindow)
+        self.statusBar.setObjectName("statusBar")
+        MainWindow.setStatusBar(self.statusBar)
         self.actionSettings = QtWidgets.QAction(MainWindow)
         self.actionSettings.setObjectName("actionSettings")
 
@@ -779,7 +816,8 @@ class Ui_MainWindow(object):
         self.LoadingLabel.setText(_translate("MainWindow", "Loading..."))
         self.TreakName.setText(_translate("MainWindow", "TestNameTreak"))
         self.AuthorName.setText(_translate("MainWindow", "NameAuthor"))
-        self.AlbumName.setText(_translate("MainWindow", "NameAlbum"))
+        self.AlbumName.setText(_translate("MainWindow", "AlbumName"))
+        self.InfoLabel.setText(_translate("MainWindow", "0 :Likes\n"
+"0 :View"))
         self.TimePlayCounter.setText(_translate("MainWindow", "2:52/5:21"))
-        self.InfoLabel.setText(_translate("MainWindow", "Likes: 0 View: 0"))
         self.actionSettings.setText(_translate("MainWindow", "Settings"))

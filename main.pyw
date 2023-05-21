@@ -38,7 +38,10 @@ logger.info("starting...")
 ##)
 #logger.addHandler(logging.StreamHandler())
 
-import mainUI
+#import mainUI
+import NewMainUI as mainUI
+
+
 import TrekBox as TrekBoxUi
 import MSMPTrekBox as MSMPTrekBoxUi
 
@@ -1693,6 +1696,9 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow): #
 
         self.LocalImgCache={}
 
+        self.NewMainUI=True
+        self.NewMainUIb=self.NewMainUI
+
         if(self.mobileMode):
              LoadStyleUI("untitledMobile.ui",self)
         else:
@@ -1957,9 +1963,14 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow): #
             
         self.PlaylistView.setIconSize(QtCore.QSize(25,25))
         
-        self.PlayButton.clicked.connect(lambda: self.UpdateInfoTreakPL(self.MSMPboxPlayer.play()))
         self.StopButton.clicked.connect(lambda: self.UpdateInfoTreakPL(self.MSMPboxPlayer.stop()))
-        self.PauseButton.clicked.connect(lambda: self.MSMPboxPlayer.pause())
+
+        self.PlayButton.clicked.connect(lambda: self.UpdateInfoTreakPL(self.MSMPboxPlayer.play()))
+        if not(self.NewMainUI):
+             self.PauseButton.clicked.connect(lambda: self.MSMPboxPlayer.pause())
+        else:
+             self.ChangePlayIcon("play",self.PlayButton,Invert=False)
+             self.PauseButton.clicked.connect(lambda: self.CustomPauseButton())
 
         self.PlayModeTreak.clicked.connect(self.PlayModeTreakChange)
 
@@ -2003,7 +2014,14 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow): #
         #    self.MSMPboxPlayer.NewPlaerVLC.set_nsobject(self.Visualframe.winId())
 
         if not(self.mobileMode):self.VolumeSlider.setValue(self.MSMPboxPlayer.NewPlaerVLC.audio_get_volume())
-
+    def CustomPauseButton(self):
+         self.MSMPboxPlayer.pause()
+         
+         if(str(self.MSMPboxPlayer.get_state())=="State.Playing"): 
+              self.ChangePlayIcon("play",self.PlayButton,Invert=True)
+         else:
+              self.ChangePlayIcon("play",self.PlayButton,Invert=False)
+              
     def PlayModeTreakChange(self):
          self.PlayModeMSMPNum=self.PlayModeMSMPNum+1
          if(len(self.PlayModeMSMPModes)==self.PlayModeMSMPNum):
@@ -2011,10 +2029,12 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow): #
               #self.PlayModeMSMPModes=["nexttreak","looptreak","randomtreak"]
               #self.PlayModeMSMPNum=0
          self.PlayModeMSMP=self.PlayModeMSMPModes[self.PlayModeMSMPNum]
-         
-         icon6 = QtGui.QIcon()
-         icon6.addPixmap(QtGui.QPixmap("img/"+self.PlayModeMSMP+".png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-         self.PlayModeTreak.setIcon(icon6)
+         if(self.NewMainUI):
+              self.ChangePlayIcon(self.PlayModeMSMP,self.PlayModeTreak)
+         else:
+              icon6 = QtGui.QIcon()
+              icon6.addPixmap(QtGui.QPixmap("img/"+self.PlayModeMSMP+".png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+              self.PlayModeTreak.setIcon(icon6)
          
     def setEqualizer(self,EqualizerSettings=None,Custom=False):
          #self.EqualizerSettings=[7.2,7.2,0,0,0,0,0,0,0,7.2,7.2] #[-9.6,-9.6,-9.6,-4,2.4,11.2,16.0,16.0,16.0,16.7,0]
@@ -2047,9 +2067,15 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow): #
     def UpdateInfoBoxLabel(self):
         InfoTextBox=""
         if not(self.MSMPboxPlayer.PlayNowMusicDataBox['like_count']==-1):
-             InfoTextBox=InfoTextBox+"Likes: "+str(self.MSMPboxPlayer.PlayNowMusicDataBox['like_count'])+"\n"
+             if(self.NewMainUI):
+                  InfoTextBox=InfoTextBox+str(self.MSMPboxPlayer.PlayNowMusicDataBox['like_count'])+" :Likes"+"\n"
+             else:
+                  InfoTextBox=InfoTextBox+"Likes: "+str(self.MSMPboxPlayer.PlayNowMusicDataBox['like_count'])+"\n"
         if not(self.MSMPboxPlayer.PlayNowMusicDataBox["view_count"]==-1):
-             InfoTextBox=InfoTextBox+"Views: "+str(self.MSMPboxPlayer.PlayNowMusicDataBox["view_count"])
+             if(self.NewMainUI):
+                  InfoTextBox=InfoTextBox+str(self.MSMPboxPlayer.PlayNowMusicDataBox["view_count"])+" :Views"
+             else:
+                  InfoTextBox=InfoTextBox+"Views: "+str(self.MSMPboxPlayer.PlayNowMusicDataBox["view_count"])
         self.InfoLabel.setText(InfoTextBox)
 
         #self.PlayNowMusicDataBox["like_count"]=r[]
@@ -2141,6 +2167,7 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow): #
               self.add_functions()
               self.show()
               self.showNormal()
+              self.NewMainUI=False
               if not(self.MSMPboxPlayer.playlist==None):
                    self.ReloadInformation()
          elif(Option=="st"):
@@ -2150,6 +2177,7 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow): #
               self.add_functions()
               self.show()
               self.showNormal()
+              self.NewMainUI=self.NewMainUIb
               if not(self.MSMPboxPlayer.playlist==None):
                    self.ReloadInformation()
          elif(Option=="AIMPskin"):
@@ -2158,6 +2186,7 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow): #
               self.add_functions()
               self.show()
               self.showNormal()
+              self.NewMainUI=False
               if not(self.MSMPboxPlayer.playlist==None):
                    self.ReloadInformation()
          elif(Option=="sEq"):
@@ -2181,8 +2210,9 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow): #
               self.TrekBoxUi.show()
          if(Option=="SvPL"):
               self.SavePLmsmp(self.MSMPboxPlayer.OpenedplaylistPath)
-              
 
+    def GibridPausePlay(self):
+         pass
                    
     def AddTrekOptions(self,Option):
          if(Option=="addAS-YV"):
@@ -2356,6 +2386,48 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow): #
     def changeVolumeSlider(self, value):
         self.MSMPboxPlayer.NewPlaerVLC.audio_set_volume(value)
 
+    def ChangePlayIcon(self,IconName,PlayModeTreak,Invert=False):
+         if not(Invert):
+              PlayModeTreak.setStyleSheet("""
+QPushButton{
+  background-color: rgb(50, 50, 50,0);
+  border: none;
+  border-image: url(img/"""+IconName+"""New.png);
+}
+QPushButton:hover{
+  background-color: rgb(100,100, 100,0);
+  border: none;
+  border-image: url(img/"""+IconName+"""NewA.png);
+}
+
+QPushButton:pressed{
+  background-color: rgb(50, 50, 50,255);
+  border: none;
+  border-image: url(img/"""+IconName+"""NewA.png);
+
+}
+""")
+         else:
+              PlayModeTreak.setStyleSheet("""
+QPushButton{
+  background-color: rgb(50, 50, 50,0);
+  border: none;
+  border-image: url(img/"""+IconName+"""NewA.png);
+}
+QPushButton:hover{
+  background-color: rgb(100,100, 100,0);
+  border: none;
+  border-image: url(img/"""+IconName+"""New.png);
+}
+
+QPushButton:pressed{
+  background-color: rgb(50, 50, 50,255);
+  border: none;
+  border-image: url(img/"""+IconName+"""New.png);
+
+}
+""")
+
     def UpdateBg(self,RGBdata):
          self.ContorlPanel.setStyleSheet("QGroupBox{\n"
 "   background-color:qlineargradient(spread:pad, x1:0.278, y1:1, x2:0, y2:1, stop:0 rgba(0, 0, 0, 255), stop:1 rgba("+RGBdata+", 255));\n"
@@ -2369,7 +2441,7 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow): #
         self.AuthorName.setText(self.MSMPboxPlayer.PlayNowMusicDataBox["artistTrekPlayNow"])
         self.AlbumName.setText(self.MSMPboxPlayer.PlayNowMusicDataBox["albumTrekPlayNow"])
         if not(self.LestNum==-1):
-             self.PlayListBox.itemFromIndex(self.PlayListBox.index(self.LestNum,0)).setBackground(QtGui.QColor('#1A1A1A'))
+             self.PlayListBox.itemFromIndex(self.PlayListBox.index(self.LestNum,0)).setBackground(QtGui.QColor('rgb(0,0,0,0)'))
         self.LestNum=self.MSMPboxPlayer.Num
         try:self.PlayListBox.itemFromIndex(self.PlayListBox.index(self.LestNum,0)).setBackground(QtGui.QColor('red'))
         except:
@@ -2493,7 +2565,9 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow): #
                 print("self.UpdateBg")
                 try:self.UpdateInfoBoxLabel()
                 except:pass
-                self.UpdateBg(str(int(RGBbg[0]))+", "+str(int(RGBbg[1]))+", "+str(int(RGBbg[2])))
+                if not(self.NewMainUI):self.UpdateBg(str(int(RGBbg[0]))+", "+str(int(RGBbg[1]))+", "+str(int(RGBbg[2])))
+                else:
+                     self.ChangePlayIcon("play",self.PlayButton,Invert=True)
                 
                 #print(self.MSMPboxPlayer.CoverUrlPlayNow)
                 print("self.notifiBox.ShowNotifi")
