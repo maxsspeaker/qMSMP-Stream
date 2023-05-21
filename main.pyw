@@ -1552,7 +1552,6 @@ class TrekBoxUi(QtWidgets.QDialog,TrekBoxUi.Ui_Dialog):
           pixmap=QtGui.QPixmap.fromImage(ImgAlbum)
           self.AlbumImg.setPixmap(pixmap)
           
-                     
      def FindTrek(self,url):
           ydl_opts = {
                          'forceurl':True,
@@ -1902,7 +1901,68 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow): #
         self.EqualizerPlaerVLC=vlc.AudioEqualizer()
         self.setEqualizer()
         
+    def FixScrollBlat(self):
+          self.setStyleSheet("""
+QScrollBar:vertical{
+        background-color: #2A2929;
+        width: 17px;
+        margin: 14px 3px 14px 3px;
+        border: 0px transparent;
+        border-radius: 0px;
+}
 
+QScrollBar::handle:vertical{
+        background-color: #181818;         /* #605F5F; */
+        min-height: 5px;
+}
+QScrollBar::handle:vertical:hover{
+        background-color: #B72E2B;         
+        min-height: 5px;
+}
+
+QScrollBar::sub-line:vertical{
+        margin: 3px 0px 3px 0px;
+        border-image: url(img/SliderUp.png);
+        height: 11px;
+        width: 11px;
+        subcontrol-position: top;
+        subcontrol-origin: margin;
+}
+
+QScrollBar::add-line:vertical{
+        margin: 3px 0px 3px 0px;
+        border-image: url(img/SliderDown.png);
+        height: 11px;
+        width: 11px;
+        subcontrol-position: bottom;
+        subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:vertical:hover,QScrollBar::sub-line:vertical:on{
+        border-image: url(img/SliderUpA.png);
+        height: 11px;
+        width: 11px;
+        subcontrol-position: top;
+        subcontrol-origin: margin;
+}
+
+QScrollBar::add-line:vertical:hover, QScrollBar::add-line:vertical:on{
+        border-image: url(img/SliderDownA.png);
+        height: 11px;
+        width: 11px;
+        subcontrol-position: bottom;
+        subcontrol-origin: margin;
+}
+
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical{
+        background: none;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical{
+        background: none;
+}
+""")
+          
     def add_functions(self):
 
         self.model = self.get_file_tree_model(self.PlaylistsFolder)
@@ -1972,6 +2032,7 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow): #
         if not(self.NewMainUI):
              self.PauseButton.clicked.connect(lambda: self.MSMPboxPlayer.pause())
         else:
+             self.FixScrollBlat()
              self.ChangePlayIcon("play",self.PlayButton,Invert=False)
              self.PauseButton.clicked.connect(lambda: self.CustomPauseButton())
 
@@ -2181,6 +2242,7 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow): #
               self.show()
               self.showNormal()
               self.NewMainUI=self.NewMainUIb
+              self.FixScrollBlat()
               if not(self.MSMPboxPlayer.playlist==None):
                    self.ReloadInformation()
          elif(Option=="AIMPskin"):
