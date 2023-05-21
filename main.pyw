@@ -1696,9 +1696,6 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow): #
 
         self.LocalImgCache={}
 
-        self.NewMainUI=True
-        self.NewMainUIb=self.NewMainUI
-
         if(self.mobileMode):
              LoadStyleUI("untitledMobile.ui",self)
         else:
@@ -1711,7 +1708,13 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow): #
         
         self.PlayerBox.hide()
         self.PlaylistBox.hide()
-        if not(self.mobileMode):self.LoadingLabel.show()
+        if not(self.mobileMode):
+             self.NewMainUI=True
+             self.NewMainUIb=self.NewMainUI
+             self.LoadingLabel.show()
+        else:
+             self.NewMainUI=False
+             self.NewMainUIb=self.NewMainUI
 
         self.update()
 
