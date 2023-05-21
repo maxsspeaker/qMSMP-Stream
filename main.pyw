@@ -2067,7 +2067,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical{
         if not(self.mobileMode):self.InfoLabel.setText("")
 
         self.OpeingVaribleBuffer=False
-        self.statusBar.hide()
+        if not(self.mobileMode):self.statusBar.hide()
 
         if sys.platform.startswith("linux"):
             pass# for Linux using the X Server
@@ -2201,7 +2201,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical{
         self.StopButton.setEnabled(True)
         self.PreviousTreakButton.setEnabled(True)
 
-        self.UpdateInfoBoxLabel()
+        if not(self.mobileMode):self.UpdateInfoBoxLabel()
 
         if(ReloadInfoPlayer):
              self.UpdateInfoTreakPL(None) 
