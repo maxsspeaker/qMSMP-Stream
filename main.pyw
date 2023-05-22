@@ -1722,7 +1722,7 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow): #
         self.LocalImgCache={}
 
         if(self.mobileMode):
-             LoadStyleUI("untitledMobile.ui",self)
+             LoadStyleUI("ui/untitledMobile.ui",self)
         else:
              self.setupUi(self)
 
@@ -1829,7 +1829,7 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow): #
              self.notifiBox=notifiBox(Disabled=self.config['MSMP Stream']["notifiDisabled"])
         except:
              self.notifiBox=notifiBox(Disabled=True)
-             #LoadStyleUI("untitled.ui",self)
+             #LoadStyleUI("ui/untitled.ui",self)
 
         #self.PlaylistsFolder=r"../../bmCastMusic/myPlaylists"
         
@@ -2261,7 +2261,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical{
               self.close()
          elif(Option=="sb"):
               self.DataPath=None
-              LoadStyleUI("untitledStyleSpew3.ui",self)
+              LoadStyleUI("ui/untitledStyleSpew3.ui",self)
               self.add_functions()
               self.show()
               self.showNormal()
@@ -2270,7 +2270,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical{
                    self.ReloadInformation()
          elif(Option=="OLDskin"):
               self.DataPath=None
-              LoadStyleUI("untitled.ui",self)
+              LoadStyleUI("ui/untitled.ui",self)
               self.add_functions()
               self.show()
               self.showNormal()
@@ -2281,7 +2281,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical{
          elif(Option=="st"):
               self.DataPath=None
               self.setupUi(self)
-              #LoadStyleUI("untitled.ui",self)
+              #LoadStyleUI("ui/untitled.ui",self)
               self.add_functions()
               self.show()
               self.showNormal()
@@ -2291,7 +2291,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical{
                    self.ReloadInformation()
          elif(Option=="AIMPskin"):
               self.DataPath=None
-              LoadStyleUI("untitledStyleSpew.ui",self)
+              LoadStyleUI("ui/untitledStyleSpew.ui",self)
               self.add_functions()
               self.show()
               self.showNormal()
@@ -2304,7 +2304,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical{
 
          elif(Option=="mbMode"):
               self.DataPath=None
-              LoadStyleUI("untitledMobile.ui",self)
+              LoadStyleUI("ui/untitledMobile.ui",self)
               self.add_functions()
               self.show()
               self.showFullScreen()
