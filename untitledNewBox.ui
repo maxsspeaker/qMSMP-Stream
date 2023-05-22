@@ -1077,9 +1077,15 @@ QSlider{
          </property>
          <property name="styleSheet">
           <string notr="true">QTreeView{
-color:rgb(255, 255, 255);
-background-color:rgb(16,16,16,0.8);
+  background-color: rgb(26,26, 26,0.5);
+  color:rgb(255, 255, 255);
+  border: 1px solid;
+  outline: 0;
+  show-decoration-selected: 1; /* make the selection span the entire width of the view */
+}
 
+QTreeView{
+    selection-background-color: transparent;
 }
 
 QTreeView::branch:has-siblings:!adjoins-item {
@@ -1104,6 +1110,104 @@ QTreeView::branch:open:has-children:!has-siblings,
 QTreeView::branch:open:has-children:has-siblings  {
         border-image: none;
         image: url(img/stylesheet-branch-open.png);
+}
+
+
+
+QTreeView::item {
+   outline: 0;
+   color:rgb(80,80,80)
+}
+
+
+QTreeView  QAbstractItemView
+{
+     border: none;
+}
+
+
+QTreeView::item:selected {
+    background: rgb(18,18,18,0.3);
+    color:white;
+}
+QTreeView::item:selected:!active {
+   background: rgb(18,18,18,0.3);
+   color:white;
+}
+
+QTreeView::item:selected {
+    color:white;
+}
+QTreeView::item:selected:!active {
+   color:white;
+}
+
+QTreeView::item:hover {
+    background: rgb(20,20,20,0.5);
+    color:#B72E2B;
+}
+
+
+
+
+
+QScrollBar:vertical{
+        background-color: #2A2929;
+        width: 17px;
+        margin: 14px 3px 14px 3px;
+        border: 0px transparent;
+        border-radius: 0px;
+}
+
+QScrollBar::handle:vertical{
+        background-color: #181818;         /* #605F5F; */
+        min-height: 5px;
+}
+QScrollBar::handle:vertical:hover{
+        background-color: #B72E2B;         
+        min-height: 5px;
+}
+
+QScrollBar::sub-line:vertical{
+        margin: 3px 0px 3px 0px;
+        border-image: url(img/SliderUp.png);
+        height: 11px;
+        width: 11px;
+        subcontrol-position: top;
+        subcontrol-origin: margin;
+}
+
+QScrollBar::add-line:vertical{
+        margin: 3px 0px 3px 0px;
+        border-image: url(img/SliderDown.png);
+        height: 11px;
+        width: 11px;
+        subcontrol-position: bottom;
+        subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:vertical:hover,QScrollBar::sub-line:vertical:on{
+        border-image: url(img/SliderUpA.png);
+        height: 11px;
+        width: 11px;
+        subcontrol-position: top;
+        subcontrol-origin: margin;
+}
+
+QScrollBar::add-line:vertical:hover, QScrollBar::add-line:vertical:on{
+        border-image: url(img/SliderDownA.png);
+        height: 11px;
+        width: 11px;
+        subcontrol-position: bottom;
+        subcontrol-origin: margin;
+}
+
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical{
+        background: none;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical{
+        background: none;
 }</string>
          </property>
          <property name="verticalScrollBarPolicy">

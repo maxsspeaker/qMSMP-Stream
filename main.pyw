@@ -1679,6 +1679,32 @@ def excepthook(exc_type, exc_value, exc_tb):
     retval = msg.exec_()
     ex.close()
 
+
+class NameDelegate(QtWidgets.QStyledItemDelegate):
+    def initStyleOption(self, option, index):
+        super().initStyleOption(option, index)
+        if isinstance(index.model(), QtWidgets.QFileSystemModel):
+            if not index.model().isDir(index):
+                option.text = index.model().fileInfo(index).baseName()
+
+    def setEditorData(self, editor, index):
+        if isinstance(index.model(), QtWidgets.QFileSystemModel):
+            if not index.model().isDir(index):
+                editor.setText(index.model().fileInfo(index).baseName())
+            else:
+                super().setEditorData(editor, index)
+
+    def setModelData(self, editor, model, index):
+        if isinstance(model, QtWidgets.QFileSystemModel):
+            fi = model.fileInfo(index)
+            if not model.isDir(index):
+                model.setData(index, editor.text() + "." + fi.suffix())
+            else:
+                super().setModelData(editor, model.index)
+
+
+
+
                
 class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow): #
 
@@ -1970,11 +1996,15 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical{
         self.PlaylistsView.setModel(self.model)
         self.PlaylistsView.setRootIndex(self.model.index(self.PlaylistsFolder))
 
+        
+
         self.PlaylistsViewShowed=True
         self.PlaylistsView.hideColumn(3)
         self.PlaylistsView.hideColumn(2)
         self.PlaylistsView.hideColumn(1)
         self.PlaylistsView.doubleClicked.connect(self.handle_double_click)
+        delegate = NameDelegate(self.PlaylistsView)
+        self.PlaylistsView.setItemDelegate(delegate)
         
         self.PlayListAddMenu = QtWidgets.QMenu()
         self.PlayListAddMenu.triggered.connect(lambda x: self.AddTrekOptions(x.data))
@@ -2000,6 +2030,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical{
              MSMPmenuData.append(self.lengbox["MSMP Stream"].get("PLshHd")+"#PLshHd")
              MSMPmenuData.append("SKIN TOP#st")
              MSMPmenuData.append("SKIN BOTTOM#sb")
+             MSMPmenuData.append("SKIN OLD#OLDskin")
              MSMPmenuData.append("SKIN AIMPqt#AIMPskin")
              MSMPmenuData.append("mbMode#mbMode")
 
@@ -2064,7 +2095,9 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical{
         self.TreakName.setText(self.MSMPboxPlayer.PlayNowMusicDataBox["titleTrekPlayNow"])
         self.AuthorName.setText(self.MSMPboxPlayer.PlayNowMusicDataBox["artistTrekPlayNow"])
         self.AlbumName.setText(self.MSMPboxPlayer.PlayNowMusicDataBox["albumTrekPlayNow"])
-        if not(self.mobileMode):self.InfoLabel.setText("")
+        if not(self.mobileMode):
+             try:self.InfoLabel.setText("")
+             except:pass
 
         self.OpeingVaribleBuffer=False
         if not(self.mobileMode):self.statusBar.hide()
@@ -2201,7 +2234,8 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical{
         self.StopButton.setEnabled(True)
         self.PreviousTreakButton.setEnabled(True)
 
-        if not(self.mobileMode):self.UpdateInfoBoxLabel()
+        try:self.UpdateInfoBoxLabel()
+        except:pass
 
         if(ReloadInfoPlayer):
              self.UpdateInfoTreakPL(None) 
@@ -2234,6 +2268,16 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical{
               self.NewMainUI=False
               if not(self.MSMPboxPlayer.playlist==None):
                    self.ReloadInformation()
+         elif(Option=="OLDskin"):
+              self.DataPath=None
+              LoadStyleUI("untitled.ui",self)
+              self.add_functions()
+              self.show()
+              self.showNormal()
+              self.NewMainUI=False
+              if not(self.MSMPboxPlayer.playlist==None):
+                   self.ReloadInformation()
+                   
          elif(Option=="st"):
               self.DataPath=None
               self.setupUi(self)
