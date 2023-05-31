@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'untitledNewBox.ui'
+# Form implementation generated from reading ui file 'ui/untitledNewBox.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.8
 #
@@ -17,7 +17,7 @@ class Ui_MainWindow(object):
         MainWindow.setWindowModality(QtCore.Qt.NonModal)
         MainWindow.resize(800, 601)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("ui\\img/icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
         MainWindow.setLayoutDirection(QtCore.Qt.LeftToRight)
         MainWindow.setStyleSheet("QMainWindown{\n"
@@ -42,12 +42,13 @@ class Ui_MainWindow(object):
 "\n"
 "QMainWindow > QWidget {\n"
 "    /*border-image : url(img/bg.png);*/\n"
+" /*  background-image: url(img/Missing_Texture2.png);*/\n"
 "    background-color: rgb(0, 0, 0,255);\n"
 "\n"
-"   /* background-image: url(img/Missing_Texture2.png); 0 0 0 0 stretch stretch;;*/\n"
-"    background-size: 10px auto;\n"
+"    /*background-image: url(img/Missing_Texture.png); 0 0 0 0 stretch stretch;\n"
+"        background-size: 10px auto;\n"
 "    background-attachment: fixed;\n"
-"    /*background-repeat: no-repeat;*/\n"
+"    background-repeat: no-repeat;*/\n"
 "}\n"
 "")
         self.centralwidget.setObjectName("centralwidget")
@@ -95,7 +96,7 @@ class Ui_MainWindow(object):
         self.AlbumImg.setMinimumSize(QtCore.QSize(140, 140))
         self.AlbumImg.setMaximumSize(QtCore.QSize(140, 140))
         self.AlbumImg.setText("")
-        self.AlbumImg.setPixmap(QtGui.QPixmap("img/Missing_Texture2.png"))
+        self.AlbumImg.setPixmap(QtGui.QPixmap("ui\\img/Missing_Texture2.png"))
         self.AlbumImg.setScaledContents(False)
         self.AlbumImg.setAlignment(QtCore.Qt.AlignCenter)
         self.AlbumImg.setObjectName("AlbumImg")

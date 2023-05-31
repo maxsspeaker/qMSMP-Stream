@@ -136,7 +136,8 @@ def loadConfig():
                      'NowPlayningPlayBoxActive': False,
                      'VideoMode': False,
                      "last-fmAllowed":False,
-                     'latest_playlist':""
+                     'latest_playlist':"",
+                     'CDcaseImgRPC': False
                      },
                'MSMP Stream Equalizer':
                     {'EqualizerOnOff': False,
@@ -250,6 +251,10 @@ class MSMP_RPC():
 
           self.ImgApiHostTOKEN=ImgApiHostTOKEN
           self.ImgApiHost=ImgApiHost
+
+          if(self.ImgApiHostTOKEN):
+               self.AlbumCaseImg = Image.open(r"img/LocalAlbumTreakBg.png").convert("RGB")
+               self.AlbumCaseImgLi = Image.open(r"img/LocalAlbumTreakLi.png").convert("RGBA")
           
           self.msmp_streamIcon=msmp_streamIcon
           if(msmp_streamIconMain==None):
@@ -456,8 +461,14 @@ class MSMP_RPC():
                     })
      def UploadNewImg(self,PillowImg,ImgNameTreak):
         if not(self.ImgApiHost==None):
+          MainImg=self.AlbumCaseImg.copy()
+
+          MainImg.paste(PillowImg.resize((287,287)), (157, 109))
+
+          MainImg.paste(self.AlbumCaseImgLi, (0, 0),self.AlbumCaseImgLi)
+          
           byte_io = io.BytesIO()
-          PillowImg.save(byte_io, 'png')
+          MainImg.save(byte_io, 'png')
           byte_io.seek(0)
           cookies = {"TOKEN":self.ImgApiHostTOKEN}
 
@@ -508,7 +519,7 @@ class MSMPboxPlayer(GibridPlayer):
                   versionCs=None,
                   FullInfo=False,
                   VideoMode=False,AutoSplitAuthorName=False,
-                  logger=None,PlayInThread=False,TOKENYandexMusicClient=""):
+                  logger=None,PlayInThread=False,TOKENYandexMusicClient="",CDcase=True):
           global version
           print("Starting Core MSMP")
           self.logger=logger
@@ -541,6 +552,7 @@ class MSMPboxPlayer(GibridPlayer):
           self.msmp_streamIconDf="qmsmpstream"
           self.msmp_streamIcon=self.msmp_streamIconDf
           self.discord_rpc=MSMP_RPC
+          self.CDcase=CDcase
 
           if not(TOKENYandexMusicClient==None):
                self.YandexMusicClient = YandexMusicClient(TOKENYandexMusicClient).init()
@@ -781,7 +793,10 @@ class MSMPboxPlayer(GibridPlayer):
                         self.PlayNowMusicDataBox["albumImgTrekPlayNowID"]=str(self.playlist[Num]["url"])+"AlbumImg"
                         #/NowPlayningPlayBox/ImgAlbom/
                         self.CoverUrlPlayNow=''#'http://127.0.0.1:34679/NowPlayningPlayBox/ImgAlbom/'+self.PlayNowMusicDataBox["albumImgTrekPlayNowID"]+".png"
-                        self.msmp_streamIconYouTube='https://pybms.tk/Server/DiscordRPC/imgRPC?img=https://img.youtube.com/vi/'+self.playlist[Num]["url"]+'/hqdefault.jpg'
+                        if(self.CDcase):
+                             self.msmp_streamIconYouTube='https://pybms.tk/Server/DiscordRPC/imgRPC/cdCase?type=Yt&img=https://img.youtube.com/vi/'+self.playlist[Num]["url"]+'/hqdefault.jpg'
+                        else:
+                             self.msmp_streamIconYouTube='https://pybms.tk/Server/DiscordRPC/imgRPC?type=Yt&img=https://img.youtube.com/vi/'+self.playlist[Num]["url"]+'/hqdefault.jpg'
                         castUrl=MyFilePl
                                   
                         try: 
@@ -836,10 +851,17 @@ class MSMPboxPlayer(GibridPlayer):
                             self.PlayNowMusicDataBox["upload_date"]=r['upload_date']
                             try:
                                  self.CoverUrlPlayNow=self.playlist[Num]["cover"]
-                                 self.msmp_streamIconYouTube='https://pybms.tk/Server/DiscordRPC/imgRPC?img='+self.playlist[Num]["cover"]
+                                 if(self.CDcase):
+                                      self.msmp_streamIconYouTube='https://pybms.tk/Server/DiscordRPC/imgRPC/cdCase?img='+self.playlist[Num]["cover"]
+                                 else:
+                                      self.msmp_streamIconYouTube='https://pybms.tk/Server/DiscordRPC/imgRPC?img='+self.playlist[Num]["cover"]
                             except:
                                 self.CoverUrlPlayNow='https://img.youtube.com/vi/'+self.playlist[Num]["url"]+'/hqdefault.jpg'
-                                self.msmp_streamIconYouTube='https://pybms.tk/Server/DiscordRPC/imgRPC?img=https://img.youtube.com/vi/'+self.playlist[Num]["url"]+'/hqdefault.jpg'#https://i.ytimg.com/vi/'+self.playlist[Num]["url"]+'/maxresdefault.jpg'
+                                if(self.CDcase):
+                                     self.msmp_streamIconYouTube='https://pybms.tk/Server/DiscordRPC/imgRPC/cdCase?type=Yt&img=https://img.youtube.com/vi/'+self.playlist[Num]["url"]+'/hqdefault.jpg'#https://i.ytimg.com/vi/'+self.playlist[Num]["url"]+'/maxresdefault.jpg'
+                                else:
+                                     self.msmp_streamIconYouTube='https://pybms.tk/Server/DiscordRPC/imgRPC?type=Yt&img=https://img.youtube.com/vi/'+self.playlist[Num]["url"]+'/hqdefault.jpg'#https://i.ytimg.com/vi/'+self.playlist[Num]["url"]+'/maxresdefault.jpg'
+                                
                             #https://img.youtube.com/vi/N-V3zqvtbCM/hqdefault.jpg
                             
                             try: 
@@ -1022,7 +1044,10 @@ class MSMPboxPlayer(GibridPlayer):
                                      img=self.playlist[Num]["cover"]
                                 except:pass
                                 self.CoverUrlPlayNow=img
-                                self.msmp_streamIconSoundCloud='https://pybms.tk/Server/DiscordRPC/imgRPC?img='+img
+                                if(self.CDcase):
+                                      self.msmp_streamIconSoundCloud='https://pybms.tk/Server/DiscordRPC/imgRPC/cdCase?img='+img
+                                else:
+                                      self.msmp_streamIconSoundCloud='https://pybms.tk/Server/DiscordRPC/imgRPC?img='+img
                                 
                                 if(self.FullInfo):
                                     print(img)
@@ -1148,7 +1173,10 @@ class MSMPboxPlayer(GibridPlayer):
                                      img=self.playlist[Num]["cover"]
                                 except:pass
                                 self.CoverUrlPlayNow=img
-                                self.msmp_streamIconSoundCloud='https://pybms.tk/Server/DiscordRPC/imgRPC?img='+img
+                                if(self.CDcase):
+                                      self.msmp_streamIconSoundCloud='https://pybms.tk/Server/DiscordRPC/imgRPC/cdCase?img='+img
+                                else:
+                                      self.msmp_streamIconSoundCloud='https://pybms.tk/Server/DiscordRPC/imgRPC?img='+img
                                 
                                 #viseon="  ["+r['formats'][castViseon]['format_note']+"]"
                                 i=0
@@ -1759,6 +1787,11 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow): #
         if(self.config['MSMP Stream'].get("notifiDisabled")==None):
              self.config['MSMP Stream']["notifiDisabled"]=False
 
+        if(self.config['MSMP Stream'].get('CDcaseImgRPC')==None):
+             self.config['MSMP Stream']['CDcaseImgRPC']=False
+
+             
+
           
         
         if(self.config['MSMP Stream'].get("last-fmAllowed")==None):
@@ -1797,7 +1830,7 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow): #
                                          logger=logger,
                                          AutoSplitAuthorName=True,
                                          downloadMusicFolder=self.config['MSMP Stream']['downloadMusicFolder'],
-                                         TOKENYandexMusicClient=self.config['MSMP Stream']["YandexMusicTOKEN"])
+                                         TOKENYandexMusicClient=self.config['MSMP Stream']["YandexMusicTOKEN"],CDcase=self.config['MSMP Stream']['CDcaseImgRPC'])
         self.MSMPboxPlayer.playlist=[] #
 
         #self.cookiesSoundCloud=""
@@ -1823,6 +1856,8 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow): #
         
 
         #self.statusBar = self.statusBar()
+
+        #PlAnalizequeue={}
 
 
         try:
@@ -2249,8 +2284,20 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical{
         return model
     def SkinChanger(self,Option):
 
-         
-         if(Option=="PLshHd"):
+         if(Option=="obu"):
+              msg = QtWidgets.QMessageBox()
+              msg.setIcon(QtWidgets.QMessageBox.Information)
+              msg.setText("""
+Maxs-Speaker Media-Player Stream
+свободный стриминговый медиа плеер с поддержкой: YouTube, SoundCloud, YandexMusic и MSMP-AUDIO Server
+
+автор дс: maxsspeaker
+автор мобильной версии: Kelk
+github: https://github.com/maxsspeaker/qMSMP-Stream
+""")
+              msg.setWindowTitle("info")
+              retval = msg.exec_()
+         elif(Option=="PLshHd"):
               if(self.PlaylistsViewShowed):
                    self.PlaylistsViewShowed=False
                    self.PlaylistsView.hide()
@@ -2550,7 +2597,7 @@ QPushButton:pressed{
         self.AuthorName.setText(self.MSMPboxPlayer.PlayNowMusicDataBox["artistTrekPlayNow"])
         self.AlbumName.setText(self.MSMPboxPlayer.PlayNowMusicDataBox["albumTrekPlayNow"])
         if not(self.LestNum==-1):
-             self.PlayListBox.itemFromIndex(self.PlayListBox.index(self.LestNum,0)).setBackground(QtGui.QColor('rgb(0,0,0,0)'))
+             self.PlayListBox.itemFromIndex(self.PlayListBox.index(self.LestNum,0)).setBackground(QtGui.QColor('rgba(0,0,0,0)'))
         self.LestNum=self.MSMPboxPlayer.Num
         try:self.PlayListBox.itemFromIndex(self.PlayListBox.index(self.LestNum,0)).setBackground(QtGui.QColor('red'))
         except:

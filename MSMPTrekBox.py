@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'untitledMSMPtrek.ui'
+# Form implementation generated from reading ui file 'ui/untitledMSMPtrek.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.8
 #
@@ -19,7 +19,7 @@ class Ui_Dialog(object):
         Dialog.setMaximumSize(QtCore.QSize(1000, 194))
         Dialog.setSizeIncrement(QtCore.QSize(0, 0))
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("ui\\icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         Dialog.setWindowIcon(icon)
         Dialog.setLocale(QtCore.QLocale(QtCore.QLocale.Russian, QtCore.QLocale.Belarus))
         Dialog.setSizeGripEnabled(True)
@@ -49,7 +49,7 @@ class Ui_Dialog(object):
         self.AlbumImg.setMinimumSize(QtCore.QSize(140, 140))
         self.AlbumImg.setMaximumSize(QtCore.QSize(140, 140))
         self.AlbumImg.setText("")
-        self.AlbumImg.setPixmap(QtGui.QPixmap("img/Missing_Texture2.png"))
+        self.AlbumImg.setPixmap(QtGui.QPixmap("ui\\img/Missing_Texture2.png"))
         self.AlbumImg.setAlignment(QtCore.Qt.AlignCenter)
         self.AlbumImg.setObjectName("AlbumImg")
         self.verticalLayout_2.addWidget(self.AlbumImg)
