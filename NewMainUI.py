@@ -844,6 +844,22 @@ class Ui_MainWindow(object):
 "QListWidget {padding: 0px;}\n"
 "QListWidget::item { margin: 0px; }\n"
 "\n"
+"QMenu {\n"
+"    background-color: rgb(50,50,50); /* sets background of the menu */\n"
+"    border: 1px solid black;\n"
+"}\n"
+"\n"
+"QMenu::item {\n"
+"    /* sets background of menu item. set this to something non-transparent\n"
+"        if you want menu color and menu item color to be different */\n"
+"    background-color: transparent;\n"
+"    color:white;\n"
+"}\n"
+"\n"
+"QMenu::item:selected { /* when user selects item using mouse or keyboard */\n"
+"    background-color: #B72E2B;\n"
+"}\n"
+"\n"
 "/*\n"
 "\n"
 "\n"
@@ -972,15 +988,30 @@ class Ui_MainWindow(object):
         self.MenuPlaylist.setShortcut("")
         self.MenuPlaylist.setObjectName("MenuPlaylist")
         self.PlaylistCommandBarFirk.addWidget(self.MenuPlaylist)
-        spacerItem3 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.PlaylistCommandBarFirk.addItem(spacerItem3)
+        self.FoxStatusBar = QtWidgets.QLabel(self.PlaylistCommandBar)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Ignored, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.FoxStatusBar.sizePolicy().hasHeightForWidth())
+        self.FoxStatusBar.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setFamily("Chicago")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.FoxStatusBar.setFont(font)
+        self.FoxStatusBar.setStyleSheet("QLabel{\n"
+"background-color: rgba(0,0,0,0);\n"
+"color:white;\n"
+"}")
+        self.FoxStatusBar.setTextFormat(QtCore.Qt.AutoText)
+        self.FoxStatusBar.setAlignment(QtCore.Qt.AlignBottom|QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing)
+        self.FoxStatusBar.setObjectName("FoxStatusBar")
+        self.PlaylistCommandBarFirk.addWidget(self.FoxStatusBar)
         self.verticalLayout_5.addWidget(self.PlaylistCommandBar)
         self.PlaylistBoxFirk.addLayout(self.verticalLayout_5)
         self.verticalLayout.addWidget(self.PlaylistBox)
         MainWindow.setCentralWidget(self.centralwidget)
-        self.statusBar = QtWidgets.QStatusBar(MainWindow)
-        self.statusBar.setObjectName("statusBar")
-        MainWindow.setStatusBar(self.statusBar)
         self.actionSettings = QtWidgets.QAction(MainWindow)
         self.actionSettings.setObjectName("actionSettings")
 
@@ -997,4 +1028,5 @@ class Ui_MainWindow(object):
         self.InfoLabel.setText(_translate("MainWindow", "0 :Likes\n"
 "0 :View"))
         self.TimePlayCounter.setText(_translate("MainWindow", "2:52/5:21"))
+        self.FoxStatusBar.setText(_translate("MainWindow", "FoxStatusBar"))
         self.actionSettings.setText(_translate("MainWindow", "Settings"))

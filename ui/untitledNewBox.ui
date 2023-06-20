@@ -1378,6 +1378,22 @@ QListView::item:hover {
 QListWidget {padding: 0px;}
 QListWidget::item { margin: 0px; }
 
+QMenu {
+    background-color: rgb(50,50,50); /* sets background of the menu */
+    border: 1px solid black;
+}
+
+QMenu::item {
+    /* sets background of menu item. set this to something non-transparent
+        if you want menu color and menu item color to be different */
+    background-color: transparent;
+    color:white;
+}
+
+QMenu::item:selected { /* when user selects item using mouse or keyboard */
+    background-color: #B72E2B;
+}
+
 /*
 
 
@@ -1610,20 +1626,37 @@ QPushButton:pressed{
              </widget>
             </item>
             <item>
-             <spacer name="horizontalSpacer_3">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
+             <widget class="QLabel" name="FoxStatusBar">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Ignored" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
               </property>
-              <property name="sizeType">
-               <enum>QSizePolicy::Expanding</enum>
+              <property name="font">
+               <font>
+                <family>Chicago</family>
+                <pointsize>12</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
               </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>40</width>
-                <height>20</height>
-               </size>
+              <property name="styleSheet">
+               <string notr="true">QLabel{
+background-color: rgba(0,0,0,0);
+color:white;
+}</string>
               </property>
-             </spacer>
+              <property name="text">
+               <string>FoxStatusBar</string>
+              </property>
+              <property name="textFormat">
+               <enum>Qt::AutoText</enum>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
+              </property>
+             </widget>
             </item>
            </layout>
           </widget>
@@ -1635,7 +1668,6 @@ QPushButton:pressed{
     </item>
    </layout>
   </widget>
-  <widget class="QStatusBar" name="statusBar"/>
   <action name="actionSettings">
    <property name="text">
     <string>Settings</string>

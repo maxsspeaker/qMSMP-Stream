@@ -1,4 +1,91 @@
-import sys, time, os, traceback,random
+import sys,socket, time, os, traceback,random
+import json, yaml
+
+class RunAPPEventHandler():
+     #FoxMSMPstreamProtocol
+     def __init__(self,CustomPort=59715,RunCommands=[]):
+          self.HOST = "127.0.0.1"  
+          self.PORT = 59715  
+          self.FirstApp=self.RunCommandBox(RunCommands)
+          self.ServerStarted=True
+
+     def RunCommandBox(self,RunCommands=[]):
+          with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+               try:
+                    s.connect((self.HOST, self.PORT))
+                    s.sendall(json.dumps(RunCommands).encode()) 
+                    data = s.recv(1024)
+                    print(f"Received {data!r}")
+                    return False
+               except ConnectionRefusedError:
+                    return True
+               
+
+     def RunEventServer(self):
+          print("Fox Firk")
+          with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+               s.bind((self.HOST, self.PORT))
+               s.listen()
+               while self.ServerStarted:
+                    print("Fox Firk2")
+                    conn, addr = s.accept()
+                    while True:
+                         data = conn.recv(1024)
+                         #
+                         if not data:
+                              break
+                         try:
+                              print(json.loads(data.decode())[1])
+                              Sirdata=json.loads(data.decode())[1]
+                              dataFix=urllib.parse.unquote(json.loads(data.decode())[1])
+                              dataFix2=dataFix.replace("fox-msmp-stream:///?foxdata=","")
+                              
+                              print(dataFix2)
+                              print("Fox1")
+                              try:
+                                   ProtocolData=json.loads(dataFix2.replace("'",'"'))
+                                   print(ProtocolData)
+                              except json.decoder.JSONDecodeError:
+                                   ProtocolData=None
+                              print("Fox2")
+                              if(ProtocolData):
+                                   print("firk")
+                                   conn.sendall(data)
+                                   print("firk22")
+                                   if(ProtocolData.get("ytvideo")):
+                                        print("firk222")
+                                        self.MainWindow.TrekBoxUi.NoPlayListMode=True
+                                        print("firk1")
+                                        self.MainWindow.TrekBoxUi.UrlText.setText(ProtocolData.get("ytvideo"))
+                                        print("firk2")
+                                        self.MainWindow.TrekBoxUi.FindTrek(ProtocolData.get("ytvideo"))
+                                        print("firk3")
+                                        #self.MainWindow.TrekBoxUi.show()
+                                        if(self.MainWindow.TrekBoxUi.TypeTreak):
+                                             self.MainWindow.TrekBoxUi.AddTrek()
+
+                              else:
+                                   if (str(os.path.splitext(Sirdata)[1]).endswith(".plmsmpsbox")):
+                                        conn.sendall(data)
+                                        self.MainWindow.OpenPLmsmp(Sirdata)
+                                        
+                                   
+                              
+                              
+##                              fixJson={}
+##                              for key, value  in json.loads(data.decode()):
+##                                   fixJson[urllib.parse.unquote(key)]=urllib.parse.unquote(value)
+##                              print(fixJson)
+                              print(f"Received {dataFix}")
+                         except:
+                              print(traceback.format_exc())
+                              conn.sendall(data)
+                    conn.close()
+                    
+RunAPPEventHandler=RunAPPEventHandler(RunCommands=sys.argv)
+if not(RunAPPEventHandler.FirstApp):
+     sys.exit()
+
 from PyQt5 import QtWidgets, QtCore, QtGui
 from PyQt5.QtWidgets import QMessageBox 
 from PyQt5.QtGui import QIcon,QFont 
@@ -11,7 +98,7 @@ import logging
 from logging.handlers import QueueHandler
 import pypresence
 from datetime import date
-import yaml
+
 
 logging.basicConfig(filename="all.log",
                             filemode='a',
@@ -51,7 +138,6 @@ import re
 import stagger
 import requests
 import urllib
-import json
 import pylast
 import yt_dlp as youtube_dl
 from eyed3 import id3
@@ -65,8 +151,7 @@ if(sys.platform=="linux"):
      except:
           pass
 
-
-
+               
 
 
 class Slider(QtWidgets.QSlider):
@@ -127,22 +212,26 @@ def loadConfig():
           download_MusicFolderPath = os.path.join(configDir,download_MusicFolder)
           config={
                'MSMP Stream': 
-                    {'Discord_rpc':True,
-                     'audioVisual': 'visual',
+                    {'audioVisual': 'visual',
                      'cache': True,
                      'cacheimgpachfolder': cacheFolderPath+"/",
                      'downloadMusicFolder': download_MusicFolderPath+"/",
                      'localizationBox': 'lengboxs/ru.loclb',
                      'NowPlayningPlayBoxActive': False,
                      'VideoMode': False,
-                     "last-fmAllowed":False,
                      'latest_playlist':"",
-                     'CDcaseImgRPC': False
+                     'CDcaseImgRPC': False,
+                     'force-ipv4':False
                      },
                'MSMP Stream Equalizer':
                     {'EqualizerOnOff': False,
                      'EqualizerSettings': [7.5, 7.5, 3.9, 0.1, 0, 0, 0, 0, 1.6, 1.6, 7.0]
-                     }
+                     },
+               'MSMP Stream RPC':{
+                    'Discord_rpc':True,
+                    'Discord_Buttons':True,
+                    "last-fmAllowed":False,
+                    },
                }
           os.makedirs(os.path.dirname(configFile), exist_ok=True)
           os.makedirs(MyPlaylistsPath, exist_ok=True)
@@ -181,11 +270,12 @@ class notifiBox():
           
 
 class MyYTLogger:
-    def __init__(self,FullInfo,logger,QPlainTextEdit=None):
+    def __init__(self,FullInfo,logger,QPlainTextEdit=None,RenderWindow=None):
         self.FullInfo=FullInfo
         self.logger=logger
         self.QPlainTextEdit=QPlainTextEdit
-        print(QPlainTextEdit)
+        self.RenderWindow=RenderWindow
+        #print(QPlainTextEdit) 
         
     def debug(self, msg):
         # For compatibility with youtube-dl, both debug and info are passed into debug
@@ -196,13 +286,15 @@ class MyYTLogger:
             self.logger.debug(msg)
         if not(self.QPlainTextEdit==None):
              self.QPlainTextEdit.appendPlainText(msg)
-             self.QPlainTextEdit.repaint()    
+             self.QPlainTextEdit.repaint()
+             self.RenderWindow.update()
 
     def info(self, msg):  
         if(self.FullInfo):self.logger.info(msg)
         if not(self.QPlainTextEdit==None):
              self.QPlainTextEdit.appendPlainText(msg)
              self.QPlainTextEdit.repaint()
+             self.RenderWindow.update()
         pass
 
     def warning(self, msg):
@@ -210,12 +302,14 @@ class MyYTLogger:
         if not(self.QPlainTextEdit==None):
              self.QPlainTextEdit.appendPlainText(msg)
              self.QPlainTextEdit.repaint()
+             self.RenderWindow.update()
 
     def error(self, msg):
         self.logger.error(msg)
         if not(self.QPlainTextEdit==None):
              self.QPlainTextEdit.appendPlainText(msg)
              self.QPlainTextEdit.repaint()
+             self.RenderWindow.update()
 
 
 def GetImgFile(PachFile):
@@ -236,9 +330,10 @@ class MSMP_RPC():
                   msmp_streamIconSoundCloud=None,
                   msmp_streamIcon="qmsmpstream",
                   version="None",LastFm=False,
-                  logger=None,DirConfig=None,lengbox=None,ImgApiHostTOKEN=None,ImgApiHost=None):
+                  logger=None,DirConfig=None,lengbox=None,ImgApiHostTOKEN=None,ImgApiHost=None,RPCbuttons=False):
           
           self.RPC=RPC
+          self.buttons=None
           if (lengbox==None):
                lengbox={"MSMP Stream":{"RPCmsmpOf":"of"}}
           self.lengbox=lengbox
@@ -337,6 +432,7 @@ class MSMP_RPC():
                   'large_text':PlayNowMusicDataBox["albumTrekPlayNow"],
                   'large_image':msmp_streamIcon,
                   'small_image':"pause",
+                  'buttons':self.buttons,
                   #'large_text':self.PlayNowMusicDataBox["albumTrekPlayNow"],
                   'small_text':self.version
                   }
@@ -348,6 +444,7 @@ class MSMP_RPC():
                   'state': PlayNowMusicDataBox["artistTrekPlayNow"]+self.lenPlayListStatus,
                   'large_image':msmp_streamIcon,
                   'small_image':"pause",
+                  'buttons':self.buttons,
                   #'large_text':self.PlayNowMusicDataBox["albumTrekPlayNow"],
                   'small_text':self.version
                   }
@@ -371,6 +468,7 @@ class MSMP_RPC():
                   'large_text':PlayNowMusicDataBox["albumTrekPlayNow"],
                   'large_image':msmp_streamIcon,
                   'small_image':"play",
+                  'buttons':self.buttons,
                   'small_text':self.version,
                 }
               )
@@ -381,14 +479,16 @@ class MSMP_RPC():
                   'state': PlayNowMusicDataBox["artistTrekPlayNow"],
                   'large_image':msmp_streamIcon,
                   'small_image':"play",
+                  'buttons':self.buttons,
                   'small_text':self.version,
                 }  )
       except:printError(traceback.format_exc())
       
-     def updatePlayerNow(self,PlayNowMusicDataBox,durationTreak=None,PlLen=None,Num=None,NowPlayIconRPC=None,ImgUrl="",timebox=None,firstPlay=False):
+     def updatePlayerNow(self,PlayNowMusicDataBox,durationTreak=None,PlLen=None,Num=None,NowPlayIconRPC=None,ImgUrl="",buttons=None,timebox=None,firstPlay=False):
 
           if not(durationTreak==None):
                self.durationTreak=durationTreak
+          self.buttons=buttons
           if(firstPlay):
                self.timebox=0
           elif not(timebox==None):
@@ -418,6 +518,7 @@ class MSMP_RPC():
                       'small_image':"play",
                       #'large_text':self.PlayNowMusicDataBox["albumTrekPlayNow"],
                       'small_text':self.version,
+                      'buttons':self.buttons,
                       'end': time.time()+(self.durationTreak-self.timebox)#((AudioTime-Audiolength)/1000)-((AudioTime-Audiolength)/1000)-((AudioTime-Audiolength)/1000)
                     }
                    )
@@ -430,6 +531,7 @@ class MSMP_RPC():
                       'small_image':"play",
                       #'large_text':self.PlayNowMusicDataBox["albumTrekPlayNow"],
                       'small_text':self.version,
+                      'buttons':self.buttons,
                       'end': time.time()+(self.durationTreak-self.timebox)#((AudioTime-Audiolength)/1000)-((AudioTime-Audiolength)/1000)-((AudioTime-Audiolength)/1000)
                     }
                    ) 
@@ -519,7 +621,7 @@ class MSMPboxPlayer(GibridPlayer):
                   versionCs=None,
                   FullInfo=False,
                   VideoMode=False,AutoSplitAuthorName=False,
-                  logger=None,PlayInThread=False,TOKENYandexMusicClient="",CDcase=True):
+                  logger=None,PlayInThread=False,TOKENYandexMusicClient="",CDcase=True,forceIpv4=False):
           global version
           print("Starting Core MSMP")
           self.logger=logger
@@ -530,6 +632,8 @@ class MSMPboxPlayer(GibridPlayer):
                          'ignore-config':True,
                          'extract_flat':True
                          }
+          if(forceIpv4):
+               self.ydl_opts["force-ipv4"]=True
           self.PlayNowMusicDataBox={"LoadingMusicMeta":False,
                                     "titleTrekPlayNow":"",
                                     "artistTrekPlayNow":"",
@@ -845,10 +949,12 @@ class MSMPboxPlayer(GibridPlayer):
                             self.PlayNowMusicDataBox["albumTrekPlayNow"]=""
                             self.PlayNowMusicDataBox["TrekPlayNowID"]=r['id']
                             
-                            self.PlayNowMusicDataBox["like_count"]=r['like_count']
-                            self.PlayNowMusicDataBox["view_count"]=r["view_count"]
-                            self.PlayNowMusicDataBox["availability"]=r['availability']
-                            self.PlayNowMusicDataBox["upload_date"]=r['upload_date']
+                            self.PlayNowMusicDataBox["like_count"]=r.get('like_count')
+                            if(r.get('like_count')==None):
+                                 self.PlayNowMusicDataBox["like_count"]=-1
+                            self.PlayNowMusicDataBox["view_count"]=r.get("view_count")
+                            self.PlayNowMusicDataBox["availability"]=r.get('availability')
+                            self.PlayNowMusicDataBox["upload_date"]=r.get('upload_date')
                             try:
                                  self.CoverUrlPlayNow=self.playlist[Num]["cover"]
                                  if(self.CDcase):
@@ -955,6 +1061,7 @@ class MSMPboxPlayer(GibridPlayer):
                                              PlLen=len(self.playlist),
                                              Num=self.Num,
                                              NowPlayIconRPC="YouTube",
+                                             #buttons=[{"label":"Открыть в MSMP Stream","url":r'fox-msmp-stream://?foxdata={"ytvideo":"'+self.PlayNowMusicDataBox["TrekPlayNowID"]+'"}'}],
                                              ImgUrl=self.msmp_streamIconYouTube,firstPlay=True)
                              
                elif("soundcloud"==self.playlist[Num]["ID"]): 
@@ -1244,13 +1351,17 @@ class MSMPboxPlayer(GibridPlayer):
                        self.PlayNowMusicDataBox["artistTrekPlayNow"]=""
                    self.NowPlayIconRPC="msmp_serverplay"
                    if not(self.discord_rpc==None):
+                                  if(self.CDcase):
+                                       MSMPNetServerImg='https://pybms.tk/Server/DiscordRPC/imgRPC/cdCase?img='+self.CoverUrlPlayNow
+                                  else:
+                                       MSMPNetServerImg='https://pybms.tk/Server/DiscordRPC/imgRPC?img='+self.CoverUrlPlayNow
                                   self.discord_rpc.updatePlayerNow(PlayNowMusicDataBox=self.PlayNowMusicDataBox,
                                              durationTreak=self.durationTreak,
                                              PlLen=len(self.playlist),
                                              Num=self.Num,
                                              NowPlayIconRPC="msmp_serverplay",
-                                             ImgUrl='https://pybms.tk/Server/DiscordRPC/imgRPC?img='+self.CoverUrlPlayNow,firstPlay=True)
-                   print(self.CoverUrlPlayNow)
+                                             ImgUrl=MSMPNetServerImg,firstPlay=True)
+                   #print(self.CoverUrlPlayNow)
 ##                    
                    #print(datajson_server)
                   elif(datajson_server["status"]=="Error"):
@@ -1584,10 +1695,11 @@ class TrekBoxUi(QtWidgets.QDialog,TrekBoxUi.Ui_Dialog):
           ydl_opts = {
                          'forceurl':True,
                          'ignoreerrors': True,
-                         'logger':MyYTLogger(False,logger=self.MainWindow.MSMPboxPlayer.logger,QPlainTextEdit=self.LogBoxYT_dlp),
+                         'logger':MyYTLogger(False,logger=self.MainWindow.MSMPboxPlayer.logger,QPlainTextEdit=self.LogBoxYT_dlp,RenderWindow=self),
                          'ignore-config':True,
                          'extract_flat':True,
                          }
+          self.TypeTreak=None
           if(self.NoPlayListMode):
                ydl_opts['no-playlist']=self.NoPlayListMode
           else:
@@ -1597,7 +1709,8 @@ class TrekBoxUi(QtWidgets.QDialog,TrekBoxUi.Ui_Dialog):
           if not(self.cookiesFile==None):
                ydl_opts['cookiefile']=self.cookiesFile
           with youtube_dl.YoutubeDL(ydl_opts) as ydl: #
-               r = ydl.extract_info(url, download=False)
+              r = ydl.extract_info(url, download=False)
+              if(r):
                print(r['extractor'])
                if(r['extractor']=="yandexmusic:track"):
                     self.durationTreak=r['duration']
@@ -1736,22 +1849,35 @@ class NameDelegate(QtWidgets.QStyledItemDelegate):
                
 class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow): #
 
-    def __init__(self): 
+    def __init__(self,RunAPPEventHandler): 
         super().__init__()
+
+        self.RunAPPEventHandler=RunAPPEventHandler
+        self.RunAPPEventHandler.MainWindow = self
+        
+
         InstanceSettings=[]
+
+        
+        QtGui.QFontDatabase.addApplicationFont('img/Chicago Regular.ttf')
 
         self.config,self.ConfigDir,self.PlaylistsFolder=loadConfig()
 
         if(self.config['MSMP Stream'].get("mobileMode")==None):
              self.config['MSMP Stream']["mobileMode"]=False
+
+        if(self.config['MSMP Stream'].get('force-ipv4')==None):
+             self.config['MSMP Stream']['force-ipv4']=False
              
         self.mobileMode=self.config['MSMP Stream']["mobileMode"]
 
         self.LocalImgCache={}
 
         if(self.mobileMode):
+             self.NewMainUI=False
              LoadStyleUI("ui/untitledMobile.ui",self)
         else:
+             self.NewMainUI=True
              self.setupUi(self)
 
         if(self.config['MSMP Stream']["localizationBox"]=="assets/localizationBoxes/ru.localizationBox"):
@@ -1770,6 +1896,24 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow): #
              self.NewMainUIb=self.NewMainUI
 
         self.update()
+
+        self.qMenuStylesheetFix="""
+QMenu {
+    background-color: rgb(50,50,50); /* sets background of the menu */
+    border: 1px solid black;
+}
+
+QMenu::item {
+    /* sets background of menu item. set this to something non-transparent
+        if you want menu color and menu item color to be different */
+    background-color: transparent;
+    color:white;
+}
+
+QMenu::item:selected { /* when user selects item using mouse or keyboard */
+    background-color: #B72E2B;
+}
+"""
 
         print(self.config['MSMP Stream']['localizationBox'])
         self.lengbox=loadLocal(self.config['MSMP Stream']['localizationBox'])
@@ -1794,17 +1938,17 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow): #
 
           
         
-        if(self.config['MSMP Stream'].get("last-fmAllowed")==None):
-             self.config['MSMP Stream']["last-fmAllowed"]=False
+        if(self.config['MSMP Stream RPC'].get("last-fmAllowed")==None):
+             self.config['MSMP Stream RPC']["last-fmAllowed"]=False
         
         OtherApiAlow=False
-        if(self.config['MSMP Stream']['Discord_rpc']):
+        if(self.config['MSMP Stream RPC']['Discord_rpc']):
              Presence=True
              OtherApiAlow=True
         else:
              Presence=None
              
-        if(self.config['MSMP Stream']["last-fmAllowed"]):
+        if(self.config['MSMP Stream RPC']["last-fmAllowed"]):
              LastFm=True
              OtherApiAlow=True
         else:
@@ -1821,7 +1965,7 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow): #
              self.config['MSMP Stream']["YandexMusicTOKEN"]=""
              
         if(OtherApiAlow):
-             self.RPC=MSMP_RPC(RPC=Presence,DirConfig=self.ConfigDir,LastFm=LastFm,version="QT0.6a",lengbox=self.lengbox,ImgApiHost=ImgApiHost,ImgApiHostTOKEN=ImgApiHostTOKEN)
+             self.RPC=MSMP_RPC(RPC=Presence,DirConfig=self.ConfigDir,LastFm=LastFm,version="QT0.6a",lengbox=self.lengbox,ImgApiHost=ImgApiHost,ImgApiHostTOKEN=ImgApiHostTOKEN,RPCbuttons=self.config['MSMP Stream RPC']['Discord_Buttons'])
         else:
             self.RPC=None 
         self.MSMPboxPlayer=MSMPboxPlayer(ServerPlaer=True,
@@ -1830,7 +1974,7 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow): #
                                          logger=logger,
                                          AutoSplitAuthorName=True,
                                          downloadMusicFolder=self.config['MSMP Stream']['downloadMusicFolder'],
-                                         TOKENYandexMusicClient=self.config['MSMP Stream']["YandexMusicTOKEN"],CDcase=self.config['MSMP Stream']['CDcaseImgRPC'])
+                                         TOKENYandexMusicClient=self.config['MSMP Stream']["YandexMusicTOKEN"],CDcase=self.config['MSMP Stream']['CDcaseImgRPC'],forceIpv4=self.config['MSMP Stream']['force-ipv4'])
         self.MSMPboxPlayer.playlist=[] #
 
         #self.cookiesSoundCloud=""
@@ -1926,6 +2070,9 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow): #
 
         
         self.add_functions()
+
+        if(self.NewMainUI):
+             self.FoxStatusBar.setText("")
         
 
         self.ProgressUpdate=False
@@ -1958,6 +2105,10 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow): #
         self.bufferNewPlaerVLCposition=0
         self.p = ProcessRunnable(target=self.updateBgGui, args=())
         self.p.start()
+
+
+        self.pEvent = ProcessRunnable(target=self.RunAPPEventHandler.RunEventServer, args=())
+        self.pEvent.start()
         
         self.EqualizerPlaerVLC=vlc.AudioEqualizer()
         self.setEqualizer()
@@ -2022,6 +2173,25 @@ QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical{
 QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical{
         background: none;
 }
+
+
+
+
+QMenu {
+    background-color: rgb(50,50,50); /* sets background of the menu */
+    border: 1px solid black;
+}
+
+QMenu::item {
+    /* sets background of menu item. set this to something non-transparent
+        if you want menu color and menu item color to be different */
+    background-color: transparent;
+    color:white;
+}
+
+QMenu::item:selected { /* when user selects item using mouse or keyboard */
+    background-color: #B72E2B);
+}
 """)
           
     def add_functions(self):
@@ -2042,18 +2212,22 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical{
         self.PlaylistsView.setItemDelegate(delegate)
         
         self.PlayListAddMenu = QtWidgets.QMenu()
+        self.PlayListAddMenu.setStyleSheet(self.qMenuStylesheetFix)
         self.PlayListAddMenu.triggered.connect(lambda x: self.AddTrekOptions(x.data))
         self.AddTreakPlaylist.setMenu(self.PlayListAddMenu)
 
         self.RemoveTreakMenu = QtWidgets.QMenu()
+        self.RemoveTreakMenu.setStyleSheet(self.qMenuStylesheetFix)
         self.RemoveTreakMenu.triggered.connect(lambda x: print(x.data))
         self.RemoveTreakPlaylist.setMenu(self.RemoveTreakMenu)
 
         self.MenuPlaylistMenu = QtWidgets.QMenu()
+        self.MenuPlaylistMenu.setStyleSheet(self.qMenuStylesheetFix)
         self.MenuPlaylistMenu.triggered.connect(lambda x: self.PlTrekOptions(x.data))
         self.MenuPlaylist.setMenu(self.MenuPlaylistMenu)
 
         self.MSMPqmenu = QtWidgets.QMenu()
+        self.MSMPqmenu.setStyleSheet(self.qMenuStylesheetFix)
         self.MSMPqmenu.triggered.connect(lambda x: self.SkinChanger(x.data))
         self.MSMPmenu.setMenu(self.MSMPqmenu)
         
@@ -2135,7 +2309,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical{
              except:pass
 
         self.OpeingVaribleBuffer=False
-        if not(self.mobileMode):self.statusBar.hide()
+        #if not(self.mobileMode):self.statusBar.hide()
 
         if sys.platform.startswith("linux"):
             pass# for Linux using the X Server
@@ -2334,6 +2508,8 @@ github: https://github.com/maxsspeaker/qMSMP-Stream
               self.showNormal()
               self.NewMainUI=self.NewMainUIb
               self.FixScrollBlat()
+              self.NewMainUI=True
+              self.FoxStatusBar.setText("")
               if not(self.MSMPboxPlayer.playlist==None):
                    self.ReloadInformation()
          elif(Option=="AIMPskin"):
@@ -2394,6 +2570,24 @@ github: https://github.com/maxsspeaker/qMSMP-Stream
               json.dump(plToSave, f, indent=2)
               
     def OpenPLmsmp(self,path,AutoPlay=True):
+         self.StopParsePL=True
+         time.sleep(0.5)
+         self.PathToPlMSMPbox=path
+         self.StopParsePL=False
+         self.OpenPLThread = ProcessRunnable(target=self.OpenPlmsmpThread, args=())
+         self.OpenPLThread.start()
+         
+         time.sleep(0.5)
+         if not(len(self.MSMPboxPlayer.playlist)==0):
+             self.PlayButton.setEnabled(True)
+             self.NextTreakButton.setEnabled(True)
+             self.PauseButton.setEnabled(True)
+             self.StopButton.setEnabled(True)
+             self.PreviousTreakButton.setEnabled(True)
+             if(AutoPlay):self.UpdateInfoTreakPL(self.MSMPboxPlayer.play(0))
+             
+    def OpenPlmsmpThread(self):
+      path=self.PathToPlMSMPbox   
       try:
         with open(path, 'r') as fr:
                     playlistFile = json.load(fr)
@@ -2410,6 +2604,7 @@ github: https://github.com/maxsspeaker/qMSMP-Stream
         
         for i, ItemP in enumerate(self.MSMPboxPlayer.playlist):
             uploader=ItemP.get("uploader")
+            if(self.NewMainUI):self.FoxStatusBar.setText("Loading PL: "+str(i)+"/"+str(len(self.MSMPboxPlayer.playlist)))
             if(uploader==None):
                 uploader=ItemP.get("artist")
                 if(uploader==None):uploader=" "
@@ -2452,14 +2647,10 @@ github: https://github.com/maxsspeaker/qMSMP-Stream
                  it.setData(QtGui.QIcon(self.PathImgsCache+urlSoundID),QtCore.Qt.DecorationRole)
             else:
                  it.setData(QtGui.QIcon("img/AlbumImgMini.png"),QtCore.Qt.DecorationRole)
-        if not(len(self.MSMPboxPlayer.playlist)==0):
-             self.PlayButton.setEnabled(True)
-             self.NextTreakButton.setEnabled(True)
-             self.PauseButton.setEnabled(True)
-             self.StopButton.setEnabled(True)
-             self.PreviousTreakButton.setEnabled(True)
-             if(AutoPlay):self.UpdateInfoTreakPL(self.MSMPboxPlayer.play(0))
-             
+            if(self.StopParsePL):
+                 if(self.NewMainUI):self.FoxStatusBar.setText("")
+                 return
+        if(self.NewMainUI):self.FoxStatusBar.setText("")     
       except:print(traceback.format_exc())
 
     def expand_all(self):
@@ -2473,15 +2664,15 @@ github: https://github.com/maxsspeaker/qMSMP-Stream
             #print("fox")
             try:
               MediaBoxStatus=self.MSMPboxPlayer.get_state()
-##              if("State.Opening"==str(MediaBoxStatus)):
-##                        if not (self.OpeingVaribleBuffer):
-##                                  self.OpeingVaribleBuffer=True
-##                                  self.statusBar.show()
-##                                  self.statusBar.showMessage("Loading Treak",0)
-##              else:
-##                        if (self.OpeingVaribleBuffer):
-##                                  self.statusBar.hide()
-##                                  self.OpeingVaribleBuffer=False   
+              if not(self.mobileMode):
+                   if("State.Opening"==str(MediaBoxStatus)):
+                        if not (self.OpeingVaribleBuffer):
+                                  self.OpeingVaribleBuffer=True
+                                  if(self.NewMainUI):self.FoxStatusBar.setText("Loading Treak")
+                   else:
+                        if (self.OpeingVaribleBuffer):
+                                  if(self.NewMainUI):self.FoxStatusBar.setText("")
+                                  self.OpeingVaribleBuffer=False   
               #print(self.PlaylistView.indexAt())
               if not(self.bufferNewPlaerVLCposition==self.MSMPboxPlayer.NewPlaerVLC.get_position()*1000):
                 self.bufferNewPlaerVLCposition=self.MSMPboxPlayer.NewPlaerVLC.get_position()*1000
@@ -2780,7 +2971,9 @@ QPushButton:pressed{
         if reply == QMessageBox.Yes:
             self.CloseApp=True
             if not(self.RPC==None):self.RPC.RPC.close()
-            self.MSMPboxPlayer.stop() 
+            self.MSMPboxPlayer.stop()
+            self.RunAPPEventHandler.ServerStarted=False
+            self.RunAPPEventHandler.RunCommandBox()
             event.accept()
             #self.close()
             
@@ -2808,8 +3001,9 @@ QPushButton:pressed{
 if __name__ == '__main__':
      
     app = QtWidgets.QApplication(sys.argv)
+    
     sys.excepthook = excepthook
-    ex = MainWindow()
+    ex = MainWindow(RunAPPEventHandler)
     
     sys.exit(app.exec_())
     firkbbb
