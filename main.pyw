@@ -1877,7 +1877,7 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow): #
 
         self.LocalImgCache={}
 
-        if(self.mobileNewMode):
+        if(self.mobileMode):
              self.NewMainUI=False
              LoadStyleUI("ui/untitledNewBoxMb.ui",self)
         else:
@@ -2104,7 +2104,7 @@ QMenu::item:selected { /* when user selects item using mouse or keyboard */
         self.isPlayListSelectionChanged=False
         
         
-        if(self.mobileMode):
+        if(self.mobileNewMode):
              self.MSMPboxPlayer.NewPlaerVLC.audio_set_volume(100)
         else:
              self.VolumeSlider.setValue(self.MSMPboxPlayer.NewPlaerVLC.audio_get_volume())
