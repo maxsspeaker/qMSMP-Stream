@@ -1797,6 +1797,7 @@ class TrekBoxUi(QtWidgets.QDialog,TrekBoxUi.Ui_Dialog):
         else:
           self.MainWindow.MSMPboxPlayer.playlist=self.PltoAdd
           self.MainWindow.MSMPboxPlayer.play(0)
+          self.MainWindow.MSMPboxPlayer.OpenedplaylistPath=self.MainWindow.PlaylistsFolder+"/"+self.Treaktitle+".plmsmpsbox" 
           self.MainWindow.PlayButton.setEnabled(True)
           self.MainWindow.NextTreakButton.setEnabled(True)
           self.MainWindow.PauseButton.setEnabled(True)
@@ -1858,6 +1859,9 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow): #
 
         InstanceSettings=[]
 
+        self.mobileNewMode=False
+        self.mobileMode=False
+
         
         QtGui.QFontDatabase.addApplicationFont('img/Chicago Regular.ttf')
 
@@ -1869,13 +1873,13 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow): #
         if(self.config['MSMP Stream'].get('force-ipv4')==None):
              self.config['MSMP Stream']['force-ipv4']=False
              
-        self.mobileMode=self.config['MSMP Stream']["mobileMode"]
+        self.mobileNewMode=self.config['MSMP Stream']["mobileMode"]
 
         self.LocalImgCache={}
 
         if(self.mobileMode):
              self.NewMainUI=False
-             LoadStyleUI("ui/untitledMobile.ui",self)
+             LoadStyleUI("ui/untitledNewBoxMb.ui",self)
         else:
              self.NewMainUI=True
              self.setupUi(self)
@@ -1887,12 +1891,14 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow): #
         
         self.PlayerBox.hide()
         self.PlaylistBox.hide()
-        if not(self.mobileMode):
-             self.NewMainUI=True
+        self.NewMainUI=True
+        if not(self.mobileNewMode):
+             #self.NewMainUI=True
              self.NewMainUIb=self.NewMainUI
              self.LoadingLabel.show()
         else:
-             self.NewMainUI=False
+             #self.NewMainUI=False
+             self.LoadingLabel.hide()
              self.NewMainUIb=self.NewMainUI
 
         self.update()
@@ -1933,8 +1939,6 @@ QMenu::item:selected { /* when user selects item using mouse or keyboard */
 
         if(self.config['MSMP Stream'].get('CDcaseImgRPC')==None):
              self.config['MSMP Stream']['CDcaseImgRPC']=False
-
-             
 
           
         
@@ -2246,7 +2250,7 @@ QMenu::item:selected { /* when user selects item using mouse or keyboard */
         MSMPmenuData.append("setEqualizer#sEq")
         MSMPmenuData.append(self.lengbox["MSMP Stream"].get("Cls")+"#Cls")
         
-        if(self.mobileMode):
+        if(self.mobileNewMode):
              self.PlSelector=False
              self.ButtonShowPlSelector.clicked.connect(lambda: self.ShowPlSelector())
         
@@ -2286,7 +2290,7 @@ QMenu::item:selected { /* when user selects item using mouse or keyboard */
         self.ProgressBarTreakSlider.valueChanged[int].connect(self.changeProgressBarTreakSlider)
         self.ProgressBarTreakSlider.IsMoveToPointEnabled=True
 
-        if not(self.mobileMode):self.VolumeSlider.valueChanged[int].connect(self.changeVolumeSlider)
+        if not(self.mobileNewMode):self.VolumeSlider.valueChanged[int].connect(self.changeVolumeSlider)
 
         self.PlaylistView.selectionModel().selectionChanged.connect(
             self.PlayListSelectionChanged
@@ -2363,11 +2367,16 @@ QMenu::item:selected { /* when user selects item using mouse or keyboard */
     def ShowPlSelector(self):
          if(self.PlSelector):
               self.PlSelector=False
-              self.ViewPlaylistBox.show()
+              self.PlaylistView.show()
               self.PlaylistsView.hide()
+              self.LoadingLabel.hide()
+              self.PlaylistCommandBar.show()
+              self.LoadingLabel.show()
          else:
               self.PlSelector=True
-              self.ViewPlaylistBox.hide()
+              self.PlaylistCommandBar.hide()
+              self.LoadingLabel.hide()
+              self.PlaylistView.hide()
               self.PlaylistsView.show()
 
     def UpdateInfoBoxLabel(self):
@@ -2487,6 +2496,7 @@ github: https://github.com/maxsspeaker/qMSMP-Stream
               self.show()
               self.showNormal()
               self.NewMainUI=False
+              self.mobileMode=False
               if not(self.MSMPboxPlayer.playlist==None):
                    self.ReloadInformation()
          elif(Option=="OLDskin"):
@@ -2527,11 +2537,14 @@ github: https://github.com/maxsspeaker/qMSMP-Stream
 
          elif(Option=="mbMode"):
               self.DataPath=None
-              LoadStyleUI("ui/untitledMobile.ui",self)
+              LoadStyleUI("ui/untitledNewBoxMb.ui",self)
+              self.mobileNewMode=True
+              self.NewMainUI=True
               self.add_functions()
               self.show()
-              self.showFullScreen()
-              if(self.mobileMode):
+              #self.mobileMode=True
+              #self.showFullScreen()
+              if(self.mobileNewMode):
                    self.PlaylistsView.hide()
               if not(self.MSMPboxPlayer.playlist==None):
                    self.ReloadInformation()
@@ -2564,10 +2577,12 @@ github: https://github.com/maxsspeaker/qMSMP-Stream
         else:
             self.OpenPLmsmp(path)
     def SavePLmsmp(self,path):
+       print("saving "+self.MSMPboxPlayer.OpenedplaylistPath)
        if not (self.MSMPboxPlayer.OpenedplaylistPath==None):  
          plToSave={"playlist":self.MSMPboxPlayer.playlist,"iconPlayList": None, "ContinuePlayData": None,"VerisonCore":2}
          with open(path, 'w') as f:
               json.dump(plToSave, f, indent=2)
+         print("saving ok")
               
     def OpenPLmsmp(self,path,AutoPlay=True):
          self.StopParsePL=True
