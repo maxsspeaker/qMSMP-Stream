@@ -1877,7 +1877,7 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow): #
 
         self.LocalImgCache={}
 
-        if(self.mobileMode):
+        if(self.mobileNewMode):
              self.NewMainUI=False
              LoadStyleUI("ui/untitledNewBoxMb.ui",self)
         else:
@@ -2326,7 +2326,7 @@ QMenu::item:selected { /* when user selects item using mouse or keyboard */
         #elif sys.platform == "darwin":  # for MacOS
         #    self.MSMPboxPlayer.NewPlaerVLC.set_nsobject(self.Visualframe.winId())
 
-        if not(self.mobileMode):self.VolumeSlider.setValue(self.MSMPboxPlayer.NewPlaerVLC.audio_get_volume())
+        if not(self.mobileNewMode):self.VolumeSlider.setValue(self.MSMPboxPlayer.NewPlaerVLC.audio_get_volume())
     def CustomPauseButton(self):
          self.MSMPboxPlayer.pause()
          
