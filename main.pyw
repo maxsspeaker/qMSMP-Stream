@@ -1877,7 +1877,7 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow): #
 
         self.LocalImgCache={}
 
-        if(self.mobileMode):
+        if(self.mobileNewMode):
              self.NewMainUI=False
              LoadStyleUI("ui/untitledNewBoxMb.ui",self)
         else:
@@ -2094,7 +2094,10 @@ QMenu::item:selected { /* when user selects item using mouse or keyboard */
         if(self.mobileMode):
                    self.PlaylistsView.hide()
                    self.showFullScreen()
-        
+                   
+        if(self.mobileNewMode):
+             self.PlaylistsView.hide()
+             self.showFullScreen()
         
         #it.setBackground(QtGui.QColor('red'))
         
@@ -2513,6 +2516,7 @@ github: https://github.com/maxsspeaker/qMSMP-Stream
               self.DataPath=None
               self.setupUi(self)
               #LoadStyleUI("ui/untitled.ui",self)
+              self.NewMainUI=False
               self.add_functions()
               self.show()
               self.showNormal()
@@ -2540,6 +2544,7 @@ github: https://github.com/maxsspeaker/qMSMP-Stream
               LoadStyleUI("ui/untitledNewBoxMb.ui",self)
               self.mobileNewMode=True
               self.NewMainUI=True
+              self.FoxStatusBar.setText("")
               self.add_functions()
               self.show()
               #self.mobileMode=True
