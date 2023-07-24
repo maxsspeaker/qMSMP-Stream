@@ -133,6 +133,7 @@ import TrekBox as TrekBoxUi
 import MSMPTrekBox as MSMPTrekBoxUi
 
 from yandex_music import Client as YandexMusicClient
+from vkaudiotoken import supported_clients
 
 import re
 import stagger
@@ -621,7 +622,7 @@ class MSMPboxPlayer(GibridPlayer):
                   versionCs=None,
                   FullInfo=False,
                   VideoMode=False,AutoSplitAuthorName=False,
-                  logger=None,PlayInThread=False,TOKENYandexMusicClient="",CDcase=True,forceIpv4=False):
+                  logger=None,PlayInThread=False,TOKENvkMusic=None,TOKENYandexMusicClient="",CDcase=True,forceIpv4=False):
           global version
           print("Starting Core MSMP")
           self.logger=logger
@@ -644,7 +645,9 @@ class MSMPboxPlayer(GibridPlayer):
           super().__init__(InstanceSettings)
           self.Error=False
           self.PlayInThread=PlayInThread
-          if(versionCs==None):self.version=version
+          if(versionCs==None):self.version="0.7"
+          else:
+               self.version=versionCs
           self.Num=0
           self.FullInfo=FullInfo
           self.iconPlayList=None
@@ -663,6 +666,14 @@ class MSMPboxPlayer(GibridPlayer):
           else:
                self.YandexMusicClient=None
 
+          if not(TOKENvkMusic==None):
+               self.vkMusicSess = requests.session()
+               self.TOKENvkMusic=TOKENvkMusic
+               Vkuser_agent = supported_clients.KATE.user_agent
+               self.vkMusicSess.headers.update({'User-Agent': Vkuser_agent})
+          else:
+               self.vkMusicSess=None
+
           self.AutoSplitAuthorName=AutoSplitAuthorName
                
           self.ImgAssets=ImgAssets
@@ -674,7 +685,7 @@ class MSMPboxPlayer(GibridPlayer):
           self.ErrorLoadSound=[]
           self.ServerPlaer=ServerPlaer
           self.HostNamePybms=HostNamePybms
-          self.VersionContinuePlay="v0.1.2-beta"
+          self.VersionContinuePlay="v0.1.3-beta"
           self.PlayLocalFile=False
           
           if not(ServerPlaer):
@@ -1319,7 +1330,123 @@ class MSMPboxPlayer(GibridPlayer):
                                              Num=self.Num,
                                              NowPlayIconRPC="YandexMusic",
                                              ImgUrl=self.msmp_streamIconSoundCloud,firstPlay=True)
-                                  
+               elif("VkMusic"==self.playlist[Num]["ID"]):
+                        if(False):
+                             pass
+                        #if(os.path.isfile(self.downloadMusicFolder+(str(self.playlist[Num]["IDSoundcloud"])+"SoundCloudAudio.mp3"))) and(DownloadingAudio):
+##                            MyFilePl=str(self.downloadMusicFolder+(str(self.playlist[Num]["IDSoundcloud"])+"SoundCloudAudio.mp3"))
+##                            self.PlayLocalFile=True
+##                            try:self.tagid3.parse(MyFilePl)
+##                            except:pass
+##                            
+##                            self.PlayNowMusicDataBox["like_count"]=-1
+##                            self.PlayNowMusicDataBox["view_count"]=-1
+##                            self.PlayNowMusicDataBox["availability"]=None
+##                            self.PlayNowMusicDataBox["upload_date"]=-1
+##                            
+##                            CoverUrlPlayNow=None
+##                            castUrl=MyFilePl
+##                            self.PlayNowMusicDataBox["albumImgTrekPlayNowID"]=str(self.playlist[Num]["IDSoundcloud"])+"SoundCloudAlbumImg"
+##                            self.CoverUrlPlayNow='http://127.0.0.1:34679/NowPlayningPlayBox/ImgAlbom/'+self.PlayNowMusicDataBox["albumImgTrekPlayNowID"]+".png"
+##                            castUrl=MyFilePl
+##                            self.PlayNowMusicDataBox["titleTrekPlayNow"] = self.tagid3.title
+##                            if(self.PlayNowMusicDataBox["titleTrekPlayNow"]==None):
+##                               try:self.PlayNowMusicDataBox["titleTrekPlayNow"] = (str(str(self.playlist[Num]["IDSoundcloud"])+"SoundCloudAudio.mp3"))
+##                               except:pass
+##                            try:
+##                               self.PlayNowMusicDataBox["artistTrekPlayNow"] = self.tagid3.artist
+##                               self.PlayNowMusicDataBox["albumTrekPlayNow"] = self.tagid3.album
+##                            except:pass
+##                            self.Error=0
+##                            self.msmp_streamIconSoundCloud=self.msmp_streamIcon
+##                            print("[NowPlayningPlayBox]: "+(str(str(self.playlist[Num]["IDSoundcloud"])+"SoundCloudAudio.mp3")))
+##                            #while ("0.0"==str((NewPlaerVLC.get_time()-NewPlaerVLC.get_length())/1000)):
+##                                            #pass
+##            
+                        else:
+                          if not(self.vkMusicSess==None):  
+                                r = json.loads((self.vkMusicSess.get("https://api.vk.com/method/audio.getById",params=[('access_token', self.TOKENvkMusic),('audios', self.playlist[Num]["vkIDaudio"]),('v', '5.95')])).content.decode('utf-8'))
+                                if(r.get('error')):
+                                     print("VK MUSIC Error:")
+                                     print(r['error']['error_msg'])
+                                else:
+                                     r = r['response'][0]
+
+                                print("firk")
+                                if(self.FullInfo):print(r['duration'])
+                                self.PlayNowMusicDataBox["titleTrekPlayNow"]=r['title']
+                                self.PlayNowMusicDataBox["artistTrekPlayNow"]=r['artist']
+                                self.PlayNowMusicDataBox["albumTrekPlayNow"]=""
+
+                                self.PlayNowMusicDataBox["like_count"]=-1
+                                self.PlayNowMusicDataBox["view_count"]=-1
+                                self.PlayNowMusicDataBox["availability"]=None
+                                self.PlayNowMusicDataBox["upload_date"]=-1
+
+                                
+                                castUrl=r['url']
+                                #print(castUrl)
+            
+                                try:
+                                    if not (self.playlist[Num]["title"]==None):
+                                        self.PlayNowMusicDataBox["titleTrekPlayNow"]=self.playlist[Num]["title"]
+                                except:pass
+                                try:
+                                    if not (playlist[Num]["artist"]==None):
+                                        self.PlayNowMusicDataBox["artistTrekPlayNow"]=self.playlist[Num]['artist']
+                                except:pass
+                                try:
+                                    if not (playlist[Num]["album"]==None):
+                                        self.PlayNowMusicDataBox["albumTrekPlayNow"]=self.playlist[Num]['album']
+                                except:pass
+                                self.durationTreak=r['duration']
+                                
+                                img="https://msmp.maxsspeaker.tk/static/img/Missing.png"
+
+                                try:
+                                     img=self.playlist[Num]["cover"]
+                                except:pass
+                                self.CoverUrlPlayNow=img
+                                if(self.CDcase):
+                                      self.msmp_streamIconSoundCloud='https://pybms.tk/Server/DiscordRPC/imgRPC/cdCase?img='+img
+                                else:
+                                      self.msmp_streamIconSoundCloud='https://pybms.tk/Server/DiscordRPC/imgRPC?img='+img
+                                
+                                #viseon="  ["+r['formats'][castViseon]['format_note']+"]"
+                                i=0
+                                self.PlayNowMusicDataBox["albumImgTrekPlayNowID"]=str(self.playlist[Num]["vkIDaudio"])+"VkMusicAlbumImg"
+##                                except:
+##                                    printError(traceback.format_exc())
+##                                    
+##                                    #ImgAssets[str(IDSound)+"AlbumImg"] = pygame.transform.scale(MSMP_Img, (140, 140))
+##                                    
+##                                    
+##                                    #loaderUrlImg(CoverUrlPlayNow,str(r['id'])+"SoundCloudAlbumImg")
+##                                    time.sleep(0.2)
+                          else:
+                               self.Error=1
+                               self.ErrorLoadSoundStatus={"ErrorType":"ErrorYandexMusicToken","ErrorLog":["Нету YandexMusic токена","Для загрузки трека из YandexMusic требуеться авторизация! \nhttps://github.com/MarshalX/yandex-music-api/discussions/513#discussioncomment-2729781"]}
+                        self.Num=Num
+                        #LoadImg(r['id'])
+                        if(self.Error==0):
+                            self.LoadImg(IDasset=str(self.playlist[Num]["vkIDaudio"])+"VkMusicAlbumImg",IDtype=self.playlist[Num]["ID"],rID=str(self.playlist[Num]["vkIDaudio"]),CoverUrlPlayNow=self.CoverUrlPlayNow)
+                            super().play(castUrl)
+                            if(self.PlayNowMusicDataBox["artistTrekPlayNow"]==None):
+                                  self.PlayNowMusicDataBox["artistTrekPlayNow"]=""
+                            if not(self.discord_rpc==None):
+                             if(os.path.isfile(self.downloadMusicFolder+(str(self.playlist[Num]["vkIDaudio"])+"vkAudio.mp3"))): 
+                                 time.sleep(0.1)
+                                 self.durationTreak=((self.NewPlaerVLC.get_time()-self.NewPlaerVLC.get_length())/1000)-((self.NewPlaerVLC.get_time()-self.NewPlaerVLC.get_length())/1000)-((self.NewPlaerVLC.get_time()-self.NewPlaerVLC.get_length())/1000)
+                             self.NowPlayIconRPC="YandexMusic"
+                             print(self.msmp_streamIconSoundCloud)
+                             if not(self.discord_rpc==None):
+                                  self.discord_rpc.updatePlayerNow(PlayNowMusicDataBox=self.PlayNowMusicDataBox,
+                                             durationTreak=self.durationTreak,
+                                             PlLen=len(self.playlist),
+                                             Num=self.Num,
+                                             NowPlayIconRPC="YandexMusic",
+                                             ImgUrl=self.msmp_streamIconSoundCloud,firstPlay=True)
+                     
                elif("MSMPNetServer"==self.playlist[Num]["ID"]): 
                   data = {"version":self.version,"appName":"qMSMP Stream"}
                   IDSound=str(self.playlist[Num]["idSoundName"])
@@ -1875,6 +2002,11 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow): #
              
         self.mobileNewMode=self.config['MSMP Stream']["mobileMode"]
 
+        self.Forceipv4=True
+
+        if(self.Forceipv4):
+             InstanceSettings.append("--ipv4")
+
         self.LocalImgCache={}
 
         if(self.mobileNewMode):
@@ -1940,7 +2072,9 @@ QMenu::item:selected { /* when user selects item using mouse or keyboard */
         if(self.config['MSMP Stream'].get('CDcaseImgRPC')==None):
              self.config['MSMP Stream']['CDcaseImgRPC']=False
 
-          
+        if(self.config['MSMP Stream'].get('TOKENvkMusic')==None):
+             self.config['MSMP Stream']['TOKENvkMusic']=None
+         
         
         if(self.config['MSMP Stream RPC'].get("last-fmAllowed")==None):
              self.config['MSMP Stream RPC']["last-fmAllowed"]=False
@@ -1977,7 +2111,7 @@ QMenu::item:selected { /* when user selects item using mouse or keyboard */
                                          MSMP_RPC=self.RPC,
                                          logger=logger,
                                          AutoSplitAuthorName=True,
-                                         downloadMusicFolder=self.config['MSMP Stream']['downloadMusicFolder'],
+                                         downloadMusicFolder=self.config['MSMP Stream']['downloadMusicFolder'],TOKENvkMusic=self.config['MSMP Stream']['TOKENvkMusic'],
                                          TOKENYandexMusicClient=self.config['MSMP Stream']["YandexMusicTOKEN"],CDcase=self.config['MSMP Stream']['CDcaseImgRPC'],forceIpv4=self.config['MSMP Stream']['force-ipv4'])
         self.MSMPboxPlayer.playlist=[] #
 
@@ -2427,6 +2561,8 @@ QMenu::item:selected { /* when user selects item using mouse or keyboard */
                  urlSoundID=str(ItemP["IDSound"])+"AlbumImg.png"
             elif("YandexMusic"==ItemP["ID"]):
                      urlSoundID=str(ItemP["YandexMusicID"])+"YandexMusicAlbumImg.png"
+            elif("VkMusic"==ItemP["ID"]):
+                     urlSoundID=str(ItemP["vkIDaudio"])+"VkMusicAlbumImg.png"
             elif("MSMPNetServer"==ItemP["ID"]):
                  urlSoundID=ItemP["hostUrlName"].replace("https://","").replace("http://","")+ItemP["idSoundName"]+"AlbumImg.png"  
             elif ("MyFiles"==ItemP["ID"]) and(os.path.isfile(ItemP["url"])):
@@ -2640,6 +2776,8 @@ github: https://github.com/maxsspeaker/qMSMP-Stream
                  urlSoundID=str(ItemP["IDSound"])+"AlbumImg.png"
             elif("YandexMusic"==ItemP["ID"]):
                      urlSoundID=str(ItemP["YandexMusicID"])+"YandexMusicAlbumImg.png"
+            elif("VkMusic"==ItemP["ID"]):
+                     urlSoundID=str(ItemP["vkIDaudio"])+"VkMusicAlbumImg.png"
             elif ("MyFiles"==ItemP["ID"]) and(os.path.isfile(ItemP["url"])):
                  pass
             elif("MSMPNetServer"==ItemP["ID"]):
@@ -2827,6 +2965,8 @@ QPushButton:pressed{
                      urlSoundID=self.MSMPboxPlayer.playlist[self.MSMPboxPlayer.Num]["url"]+"AlbumImg.png"
                 elif("YandexMusic"==self.MSMPboxPlayer.playlist[self.MSMPboxPlayer.Num]["ID"]):
                      urlSoundID=str(self.MSMPboxPlayer.playlist[self.MSMPboxPlayer.Num]["YandexMusicID"])+"YandexMusicAlbumImg.png"
+                elif("VkMusic"==self.MSMPboxPlayer.playlist[self.MSMPboxPlayer.Num]["ID"]):
+                     urlSoundID=str(self.MSMPboxPlayer.playlist[self.MSMPboxPlayer.Num]["vkIDaudio"])+"VkMusicAlbumImg.png"
                 elif("GlobalServerUpload"==self.MSMPboxPlayer.playlist[self.MSMPboxPlayer.Num]["ID"]):
                      urlSoundID=str(self.MSMPboxPlayer.playlist[self.MSMPboxPlayer.Num]["IDSound"])+"AlbumImg.png"
                 else:
@@ -2959,6 +3099,8 @@ QPushButton:pressed{
                      self.DataPath.setText(r"YouTube/"+str(self.MSMPboxPlayer.playlist[self.MSMPboxPlayer.Num]["url"]))
              elif("YandexMusic"==self.MSMPboxPlayer.playlist[self.MSMPboxPlayer.Num]["ID"]):
                    self.DataPath.setText(self.MSMPboxPlayer.playlist[self.MSMPboxPlayer.Num]["url"]) #self.MSMPboxPlayer.self.AlbumIDYandexMusic
+             elif("VkMusic"==self.MSMPboxPlayer.playlist[self.MSMPboxPlayer.Num]["ID"]):
+                   self.DataPath.setText("vkAudio"+"/"+str(self.MSMPboxPlayer.playlist[self.MSMPboxPlayer.Num]["vkIDaudio"]))
              elif("GlobalServerUpload"==self.MSMPboxPlayer.playlist[self.MSMPboxPlayer.Num]["ID"]):
                   self.DataPath.setText("MSMPnet"+"/"+str(self.MSMPboxPlayer.playlist[self.MSMPboxPlayer.Num]["IDSound"]))
              elif("MSMPNetServer"==self.MSMPboxPlayer.playlist[self.MSMPboxPlayer.Num]["ID"]):
