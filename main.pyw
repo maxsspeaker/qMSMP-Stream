@@ -141,6 +141,7 @@ import requests
 import urllib
 import pylast
 import yt_dlp as youtube_dl
+
 from eyed3 import id3
 from eyed3 import load
 #from threading import Thread
@@ -187,7 +188,7 @@ TrekBoxUi.QtWidgets.QSlider=Slider
 
 
 def loadLocal(NameLocal):
-     with open(NameLocal,"r") as f:
+     with open(NameLocal,"r", encoding='utf-8') as f:
                localbox = yaml.safe_load(f)
      return localbox
 
@@ -203,7 +204,7 @@ def loadConfig():
      #print(configFile)
      
      if(os.path.isfile(configFile)):
-          with open(configFile,"r") as f:
+          with open(configFile,"r", encoding='utf-8') as f:
                config = yaml.safe_load(f)
           return config,configDir,MyPlaylistsPath
      else:
@@ -240,7 +241,7 @@ def loadConfig():
           os.makedirs(cacheFolderPath, exist_ok=True)
           
           print("firk")
-          with open(configFile,"w") as f:
+          with open(configFile,"w", encoding='utf-8') as f:
                yaml.dump(config,f)
           return config,configDir,MyPlaylistsPath
 
@@ -2378,11 +2379,11 @@ QMenu::item:selected { /* when user selects item using mouse or keyboard */
 
         if not(self.mobileMode):
              MSMPmenuData.append(self.lengbox["MSMP Stream"].get("PLshHd")+"#PLshHd")
-             MSMPmenuData.append("SKIN TOP#st")
-             MSMPmenuData.append("SKIN BOTTOM#sb")
-             MSMPmenuData.append("SKIN OLD#OLDskin")
-             MSMPmenuData.append("SKIN AIMPqt#AIMPskin")
-             MSMPmenuData.append("mbMode#mbMode")
+##             MSMPmenuData.append("SKIN TOP#st")
+##             MSMPmenuData.append("SKIN BOTTOM#sb")
+##             MSMPmenuData.append("SKIN OLD#OLDskin")
+##             MSMPmenuData.append("SKIN AIMPqt#AIMPskin")
+##             MSMPmenuData.append("mbMode#mbMode")
 
         MSMPmenuData.append("setEqualizer#sEq")
         MSMPmenuData.append(self.lengbox["MSMP Stream"].get("Cls")+"#Cls")

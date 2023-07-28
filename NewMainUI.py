@@ -17,7 +17,7 @@ class Ui_MainWindow(object):
         MainWindow.setWindowModality(QtCore.Qt.NonModal)
         MainWindow.resize(800, 601)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("ui\\img/icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("img/icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
         MainWindow.setLayoutDirection(QtCore.Qt.LeftToRight)
         MainWindow.setStyleSheet("QMainWindown{\n"
@@ -96,7 +96,7 @@ class Ui_MainWindow(object):
         self.AlbumImg.setMinimumSize(QtCore.QSize(140, 140))
         self.AlbumImg.setMaximumSize(QtCore.QSize(140, 140))
         self.AlbumImg.setText("")
-        self.AlbumImg.setPixmap(QtGui.QPixmap("ui\\img/Missing_Texture2.png"))
+        self.AlbumImg.setPixmap(QtGui.QPixmap("img/Missing_Texture.png"))
         self.AlbumImg.setScaledContents(False)
         self.AlbumImg.setAlignment(QtCore.Qt.AlignCenter)
         self.AlbumImg.setObjectName("AlbumImg")
@@ -112,14 +112,14 @@ class Ui_MainWindow(object):
 "  background-color: rgb(100,100, 100);\n"
 "  color: rgb(100,100, 100);\n"
 "  border: none;\n"
-"  border-image : url(icon.png);\n"
+"  border-image : url(img/icon.png);\n"
 "}\n"
 "\n"
 "QPushButton:pressed{\n"
 "  background-color: rgb(200,200, 200);\n"
 "  color:  rgb(200,200, 200);\n"
 "  border: none;\n"
-"  border-image : url(icon.png);\n"
+"  border-image : url(img/icon.png);\n"
 "}\n"
 "")
         self.MSMPmenu.setText("")
