@@ -1938,10 +1938,10 @@ class TrekBoxUi(QtWidgets.QDialog,TrekBoxUi.Ui_Dialog):
 def excepthook(exc_type, exc_value, exc_tb):
     tb = "".join(traceback.format_exception(exc_type, exc_value, exc_tb))
     ex.TrekBoxUi.hide()
-    print("error catched!:")
+    print("error catched!")
     print("error message:\n", tb)
-    msg = QtWidgets.QMessageBox()
-    msg.setIcon(QtWidgets.QMessageBox.Information)
+    msg = QtWidgets.QMessageBox(self)
+    msg.setIcon(QtWidgets.QMessageBox.Icon.Critical)
     msg.setText("MSMP CRASH:")
     msg.setInformativeText(str(tb))
     msg.setWindowTitle("Error")
@@ -2624,8 +2624,8 @@ QMenu::item:selected { /* when user selects item using mouse or keyboard */
     def SkinChanger(self,Option):
 
          if(Option=="obu"):
-              msg = QtWidgets.QMessageBox()
-              msg.setIcon(QtWidgets.QMessageBox.Information)
+              msg = QMessageBox(self)
+              msg.setIcon(QMessageBox.Icon.Information)
               msg.setText("""
 Maxs-Speaker Media-Player Stream
 свободный стриминговый медиа плеер с поддержкой: YouTube, SoundCloud, YandexMusic и MSMP-AUDIO Server
@@ -2635,7 +2635,7 @@ Maxs-Speaker Media-Player Stream
 github: https://github.com/maxsspeaker/qMSMP-Stream
 """)
               msg.setWindowTitle("info")
-              retval = msg.exec_()
+              button = msg.exec()
          elif(Option=="PLshHd"):
               if(self.PlaylistsViewShowed):
                    self.PlaylistsViewShowed=False
