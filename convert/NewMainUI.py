@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'untitledNewBoxpyqt6.ui'
+# Form implementation generated from reading ui file 'untitledNewBox.ui'
 #
 # Created by: PyQt6 UI code generator 6.4.2
 #
@@ -10,16 +10,16 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 
 
 class Ui_MainWindow(object):
-    def setupUi(self, MainWindow,workingDir,AccentColor=(183,46,43)):
+    def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.setWindowModality(QtCore.Qt.WindowModality.NonModal)
-        MainWindow.resize(800, 591)
+        MainWindow.resize(800, 601)
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("img/icon.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         MainWindow.setWindowIcon(icon)
         MainWindow.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
         MainWindow.setStyleSheet("QMainWindown{\n"
-"  background-color: rgb(0, 0, 0);\n"
+"  background-color: rgb(0, 0, 0,255);\n"
 " color: rgb(0, 0, 0);\n"
 "}\n"
 "")
@@ -33,17 +33,17 @@ class Ui_MainWindow(object):
         self.centralwidget.setTabletTracking(False)
         self.centralwidget.setAutoFillBackground(False)
         self.centralwidget.setStyleSheet("QWidget{\n"
-"  background-color: rgba(0, 0, 0,0.1);\n"
+"  background-color: rgb(0, 0, 0,0.1);\n"
 "\n"
 "\n"
 "}\n"
 "\n"
 "QMainWindow > QWidget {\n"
-"   /* border-image : url("+workingDir+"img/bg.png);*/\n"
-"    /*background-image: url("+workingDir+"img/Missing_Texture2.png);*/\n"
-"    background-color: rgb(0, 0, 0);\n"
+"    /*border-image : url(img/bg.png);*/\n"
+" /*  background-image: url(img/Missing_Texture2.png);*/\n"
+"    background-color: rgb(0, 0, 0,255);\n"
 "\n"
-"    /*background-image: url("+workingDir+"img/Missing_Texture.png); 0 0 0 0 stretch stretch;\n"
+"    /*background-image: url(img/Missing_Texture.png); 0 0 0 0 stretch stretch;\n"
 "        background-size: 10px auto;\n"
 "    background-attachment: fixed;\n"
 "    background-repeat: no-repeat;*/\n"
@@ -75,7 +75,7 @@ class Ui_MainWindow(object):
 "   border-color:rgb(0,0,0);\n"
 "   border-top:0; \n"
 "   border-bottom:0;\n"
-"   backgorund-color:rgba(100, 100, 100,1);\n"
+"   backgorund-color:rgb(100, 100, 100,1);\n"
 "}")
         self.PlayerBox.setObjectName("PlayerBox")
         self.PlayerBoxFirk = QtWidgets.QHBoxLayout(self.PlayerBox)
@@ -107,17 +107,17 @@ class Ui_MainWindow(object):
 "  border: none;\n"
 "}\n"
 "QPushButton:hover{\n"
-"  background-color: rgba(100,100, 100);\n"
+"  background-color: rgb(100,100, 100);\n"
 "  color: rgb(100,100, 100);\n"
 "  border: none;\n"
-"  border-image : url("+workingDir+"img/icon.png);\n"
+"  border-image : url(img/icon.png);\n"
 "}\n"
 "\n"
 "QPushButton:pressed{\n"
-"  background-color: rgba(200,200, 200);\n"
+"  background-color: rgb(200,200, 200);\n"
 "  color:  rgb(200,200, 200);\n"
 "  border: none;\n"
-"  border-image : url("+workingDir+"img/icon.png);\n"
+"  border-image : url(img/icon.png);\n"
 "}\n"
 "")
         self.MSMPmenu.setText("")
@@ -158,9 +158,9 @@ class Ui_MainWindow(object):
         self.TreakName.setMinimumSize(QtCore.QSize(0, 0))
         self.TreakName.setMaximumSize(QtCore.QSize(16777215, 16777215))
         font = QtGui.QFont()
-        font.setFamily("Chicago")
-        font.setPointSize(16)
+        font.setPointSize(12)
         font.setBold(True)
+        font.setWeight(75)
         self.TreakName.setFont(font)
         self.TreakName.setStyleSheet("QLabel{\n"
 "background-color: rgba(0,0,0,0);\n"
@@ -179,6 +179,7 @@ class Ui_MainWindow(object):
         font.setFamily("Chicago")
         font.setPointSize(11)
         font.setBold(True)
+        font.setWeight(75)
         self.AuthorName.setFont(font)
         self.AuthorName.setStyleSheet("QLabel{\n"
 "background-color: rgba(0,0,0,0);\n"
@@ -198,6 +199,7 @@ class Ui_MainWindow(object):
         font.setFamily("Chicago")
         font.setPointSize(11)
         font.setBold(True)
+        font.setWeight(75)
         self.AlbumName.setFont(font)
         self.AlbumName.setMouseTracking(False)
         self.AlbumName.setStyleSheet("QLabel{\n"
@@ -218,6 +220,7 @@ class Ui_MainWindow(object):
         font.setFamily("Chicago")
         font.setPointSize(10)
         font.setBold(True)
+        font.setWeight(75)
         self.DataPath.setFont(font)
         self.DataPath.setStyleSheet("QLabel{\n"
 "background-color: rgba(0,0,0,0);\n"
@@ -245,7 +248,7 @@ class Ui_MainWindow(object):
         self.InfoLabel.setFont(font)
         self.InfoLabel.setStyleSheet("QLabel{\n"
 "background-color: rgba(0,0,0,0);\n"
-"color: rgb("+str(AccentColor[0])+","+str(AccentColor[1])+","+str(AccentColor[2])+");\n"
+"color:rgba(255, 0, 0)\n"
 "}")
         self.InfoLabel.setAlignment(QtCore.Qt.AlignmentFlag.AlignBottom|QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTrailing)
         self.InfoLabel.setObjectName("InfoLabel")
@@ -260,10 +263,11 @@ class Ui_MainWindow(object):
         font.setFamily("Chicago")
         font.setPointSize(16)
         font.setBold(True)
+        font.setWeight(75)
         self.TimePlayCounter.setFont(font)
         self.TimePlayCounter.setStyleSheet("QLabel{\n"
 "background-color: rgba(0,0,0,0);\n"
-"color:rgb("+str(AccentColor[0])+","+str(AccentColor[1])+","+str(AccentColor[2])+");\n"
+"color:rgba(255, 0, 0)\n"
 "}")
         self.TimePlayCounter.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTrailing|QtCore.Qt.AlignmentFlag.AlignVCenter)
         self.TimePlayCounter.setObjectName("TimePlayCounter")
@@ -278,20 +282,20 @@ class Ui_MainWindow(object):
         self.PreviousTreakButton.setMinimumSize(QtCore.QSize(35, 35))
         self.PreviousTreakButton.setMaximumSize(QtCore.QSize(35, 35))
         self.PreviousTreakButton.setStyleSheet("QPushButton{\n"
-"  background-color:  rgb(80, 80, 80);\n"
+"  background-color: rgb(50, 50, 50,0);\n"
 "  border: none;\n"
-"  border-image: url("+workingDir+"img/previousNew.png);\n"
+"  border-image: url(img/previousNew.png);\n"
 "}\n"
 "QPushButton:hover{\n"
-"  background-color: rgb("+str(AccentColor[0])+","+str(AccentColor[1])+","+str(AccentColor[2])+");\n"
+"  background-color: rgb(50, 50, 50,0);\n"
 "  border: none;\n"
-"  border-image: url("+workingDir+"img/previousNew.png);\n"
+"  border-image: url(img/previousNewA.png);\n"
 "}\n"
 "\n"
 "QPushButton:pressed{\n"
-"  background-color: rgb("+str(AccentColor[0])+","+str(AccentColor[1])+","+str(AccentColor[2])+");\n"
+"  background-color: rgb(50, 50, 50,255);\n"
 "  border: none;\n"
-"  border-image: url("+workingDir+"img/previousNewA.png);\n"
+"  border-image: url(img/previousNewA.png);\n"
 "\n"
 "}")
         self.PreviousTreakButton.setText("")
@@ -304,22 +308,20 @@ class Ui_MainWindow(object):
         self.StopButton.setMinimumSize(QtCore.QSize(35, 35))
         self.StopButton.setMaximumSize(QtCore.QSize(35, 35))
         self.StopButton.setStyleSheet("QPushButton{\n"
-"  background-color:  rgb(80, 80, 80);\n"
+"  background-color: rgb(50, 50, 50,0);\n"
 "  border: none;\n"
-"  border-image: url("+workingDir+"img/stopNew.png);\n"
-"  \n"
+"  border-image: url(img/stopNew.png);\n"
 "}\n"
 "QPushButton:hover{\n"
-"  background-color: rgb("+str(AccentColor[0])+","+str(AccentColor[1])+","+str(AccentColor[2])+");\n"
+"  background-color: rgb(100,100, 100,0);\n"
 "  border: none;\n"
-" \n"
-"  border-image: url("+workingDir+"img/stopNew.png);\n"
+"  border-image: url(img/stopNewA.png);\n"
 "}\n"
 "\n"
 "QPushButton:pressed{\n"
-"  background-color:  rgb(80, 80, 80);\n"
+"  background-color: rgb(50, 50, 50,255);\n"
 "  border: none;\n"
-"  border-image: url("+workingDir+"img/stopNewA.png);\n"
+"  border-image: url(img/stopNewA.png);\n"
 "\n"
 "}")
         self.StopButton.setText("")
@@ -331,22 +333,22 @@ class Ui_MainWindow(object):
         self.PlayButton.setMinimumSize(QtCore.QSize(35, 35))
         self.PlayButton.setMaximumSize(QtCore.QSize(35, 35))
         self.PlayButton.setStyleSheet("QPushButton{\n"
-"  background-color: rgb("+str(AccentColor[0])+","+str(AccentColor[1])+","+str(AccentColor[2])+");\n"
+"  background-color: rgb(50, 50, 50,0);\n"
 "  border: none;\n"
-"  border-image: url("+workingDir+"img/playNew.png);\n"
+"  border-image: url(img/playNewA.png);\n"
 "  \n"
 "}\n"
 "QPushButton:hover{\n"
-"  background-color: rgb(100,100, 100);\n"
+"  background-color: rgb(100,100, 100,0);\n"
 "  border: none;\n"
 " \n"
-"  border-image: url("+workingDir+"img/playNew.png);\n"
+"  border-image: url(img/playNew.png);\n"
 "}\n"
 "\n"
 "QPushButton:pressed{\n"
-"  background-color: rgb("+str(AccentColor[0])+","+str(AccentColor[1])+","+str(AccentColor[2])+");\n"
+"  background-color: rgb(50, 50, 50,255);\n"
 "  border: none;\n"
-"  border-image: url("+workingDir+"img/playNewA.png);\n"
+"  border-image: url(img/playNew.png);\n"
 "\n"
 "}")
         self.PlayButton.setText("")
@@ -357,22 +359,22 @@ class Ui_MainWindow(object):
         self.PauseButton.setMinimumSize(QtCore.QSize(35, 35))
         self.PauseButton.setMaximumSize(QtCore.QSize(35, 35))
         self.PauseButton.setStyleSheet("QPushButton{\n"
-"  background-color: rgb(80, 80, 80);\n"
+"  background-color: rgb(50, 50, 50,0);\n"
 "  border: none;\n"
-"  border-image: url("+workingDir+"img/pauseNew.png);\n"
+"  border-image: url(img/pauseNew.png);\n"
 "  \n"
 "}\n"
 "QPushButton:hover{\n"
-"  background-color: rgb("+str(AccentColor[0])+","+str(AccentColor[1])+","+str(AccentColor[2])+");\n"
+"  background-color: rgb(100,100, 100,0);\n"
 "  border: none;\n"
 " \n"
-"  border-image: url("+workingDir+"img/pauseNew.png);\n"
+"  border-image: url(img/pauseNewA.png);\n"
 "}\n"
 "\n"
 "QPushButton:pressed{\n"
-"  background-color: rgb("+str(AccentColor[0])+","+str(AccentColor[1])+","+str(AccentColor[2])+");\n"
+"  background-color: rgb(50, 50, 50,255);\n"
 "  border: none;\n"
-"  border-image: url("+workingDir+"img/pauseNewA.png);\n"
+"  border-image: url(img/pauseNewA.png);\n"
 "\n"
 "}")
         self.PauseButton.setText("")
@@ -382,20 +384,20 @@ class Ui_MainWindow(object):
         self.NextTreakButton.setMinimumSize(QtCore.QSize(35, 35))
         self.NextTreakButton.setMaximumSize(QtCore.QSize(35, 35))
         self.NextTreakButton.setStyleSheet("QPushButton{\n"
-"  background-color: rgb(80, 80, 80);\n"
+"  background-color: rgb(50, 50, 50,0);\n"
 "  border: none;\n"
-"  border-image: url("+workingDir+"img/nextNew.png);\n"
+"  border-image: url(img/nextNew.png);\n"
 "}\n"
 "QPushButton:hover{\n"
-"  background-color: rgb("+str(AccentColor[0])+","+str(AccentColor[1])+","+str(AccentColor[2])+");\n"
+"  background-color: rgb(100,100, 100,0);\n"
 "  border: none;\n"
-"  border-image: url("+workingDir+"img/nextNew.png);\n"
+"  border-image: url(img/nextNewA.png);\n"
 "}\n"
 "\n"
 "QPushButton:pressed{\n"
-"  background-color: rgb("+str(AccentColor[0])+","+str(AccentColor[1])+","+str(AccentColor[2])+");\n"
+"  background-color: rgb(50, 50, 50,255);\n"
 "  border: none;\n"
-"  border-image: url("+workingDir+"img/nextNewA.png);\n"
+"  border-image: url(img/nextNewA.png);\n"
 "\n"
 "}")
         self.NextTreakButton.setText("")
@@ -451,7 +453,7 @@ class Ui_MainWindow(object):
 "                border-radius: 0px;\n"
 "            }\n"
 "            QSlider::sub-page:qlineargradient {\n"
-"                background: rgb("+str(AccentColor[0])+","+str(AccentColor[1])+","+str(AccentColor[2])+");\n"
+"                background: rgb(183,46,43);\n"
 "                border-radius: 0px;\n"
 "            }")
         self.VolumeSlider.setProperty("value", 50)
@@ -463,20 +465,20 @@ class Ui_MainWindow(object):
         self.PlayModeTreak.setMinimumSize(QtCore.QSize(35, 35))
         self.PlayModeTreak.setMaximumSize(QtCore.QSize(35, 35))
         self.PlayModeTreak.setStyleSheet("QPushButton{\n"
-"  background-color: rgb(80, 80, 80);\n"
+"  background-color: rgb(50, 50, 50,0);\n"
 "  border: none;\n"
-"  border-image: url("+workingDir+"img/nexttreakNew.png);\n"
+"  border-image: url(img/nexttreakNew.png);\n"
 "}\n"
 "QPushButton:hover{\n"
-"  background-color: rgb("+str(AccentColor[0])+","+str(AccentColor[1])+","+str(AccentColor[2])+");\n"
+"  background-color: rgb(100,100, 100,0);\n"
 "  border: none;\n"
-"  border-image: url("+workingDir+"img/nexttreakNew.png);\n"
+"  border-image: url(img/nexttreakNewA.png);\n"
 "}\n"
 "\n"
 "QPushButton:pressed{\n"
-"  background-color: rgb("+str(AccentColor[0])+","+str(AccentColor[1])+","+str(AccentColor[2])+");\n"
+"  background-color: rgb(50, 50, 50,255);\n"
 "  border: none;\n"
-"  border-image: url("+workingDir+"img/nexttreakNewA.png);\n"
+"  border-image: url(img/nexttreakNewA.png);\n"
 "\n"
 "}")
         self.PlayModeTreak.setText("")
@@ -524,7 +526,7 @@ class Ui_MainWindow(object):
 "                border-radius: 0px;\n"
 "            }\n"
 "            QSlider::sub-page:qlineargradient {\n"
-"                background: rgb("+str(AccentColor[0])+","+str(AccentColor[1])+","+str(AccentColor[2])+");\n"
+"                background: rgb(183,46,43);\n"
 "                border-radius: 0px;\n"
 "            }")
         self.ProgressBarTreakSlider.setMaximum(1000)
@@ -564,7 +566,7 @@ class Ui_MainWindow(object):
         self.PlaylistsView.setMouseTracking(False)
         self.PlaylistsView.setAcceptDrops(False)
         self.PlaylistsView.setStyleSheet("QTreeView{\n"
-"  background-color: rgba(26,26, 26,0.5);\n"
+"  background-color: rgb(26,26, 26,0.5);\n"
 "  color:rgb(255, 255, 255);\n"
 "  border: 1px solid;\n"
 "  outline: 0;\n"
@@ -576,26 +578,27 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QTreeView::branch:has-siblings:!adjoins-item {\n"
-"    border-image: url("+workingDir+"img/stylesheet-vline.png) 0;\n"
+"    border-image: url(img/stylesheet-vline.png) 0;\n"
 "}\n"
 "\n"
 "QTreeView::branch:has-siblings:adjoins-item {\n"
-"    border-image: url("+workingDir+"img/stylesheet-branch-more.png) 0;\n"
+"    border-image: url(img/stylesheet-branch-more.png) 0;\n"
 "}\n"
 "\n"
 "QTreeView::branch:!has-children:!has-siblings:adjoins-item {\n"
-"    border-image: url("+workingDir+"img/stylesheet-branch-end.png) 0;\n"
+"    border-image: url(img/stylesheet-branch-end.png) 0;\n"
 "}\n"
+"\n"
 "QTreeView::branch:has-children:!has-siblings:closed,\n"
 "QTreeView::branch:closed:has-children:has-siblings {\n"
 "        border-image: none;\n"
-"        image: url("+workingDir+"img/stylesheet-branch-closed.png);\n"
+"        image: url(img/stylesheet-branch-closed.png);\n"
 "}\n"
 "\n"
 "QTreeView::branch:open:has-children:!has-siblings,\n"
 "QTreeView::branch:open:has-children:has-siblings  {\n"
 "        border-image: none;\n"
-"        image: url("+workingDir+"img/stylesheet-branch-open.png);\n"
+"        image: url(img/stylesheet-branch-open.png);\n"
 "}\n"
 "\n"
 "\n"
@@ -613,11 +616,11 @@ class Ui_MainWindow(object):
 "\n"
 "\n"
 "QTreeView::item:selected {\n"
-"    background: rgba(18,18,18,0.3);\n"
+"    background: rgb(18,18,18,0.3);\n"
 "    color:white;\n"
 "}\n"
 "QTreeView::item:selected:!active {\n"
-"   background: rgba(18,18,18,0.3);\n"
+"   background: rgb(18,18,18,0.3);\n"
 "   color:white;\n"
 "}\n"
 "\n"
@@ -629,29 +632,9 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QTreeView::item:hover {\n"
-"    background: rgba(20,20,20,0.5);\n"
-"    color:rgb("+str(AccentColor[0])+","+str(AccentColor[1])+","+str(AccentColor[2])+");\n"
+"    background: rgb(20,20,20,0.5);\n"
+"    color:#B72E2B;\n"
 "}\n"
-"\n"
-"\n"
-"\n"
-"\n"
-"QMenu {\n"
-"    background-color: rgb(50,50,50); /* sets background of the menu */\n"
-"    border: 1px solid black;\n"
-"}\n"
-"\n"
-"QMenu::item {\n"
-"    /* sets background of menu item. set this to something non-transparent\n"
-"        if you want menu color and menu item color to be different */\n"
-"    background-color: transparent;\n"
-"    color:white;\n"
-"}\n"
-"\n"
-"QMenu::item:selected { /* when user selects item using mouse or keyboard */\n"
-"    background-color: rgb("+str(AccentColor[0])+","+str(AccentColor[1])+","+str(AccentColor[2])+");\n"
-"}\n"
-"\n"
 "\n"
 "\n"
 "\n"
@@ -666,19 +649,17 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QScrollBar::handle:vertical{\n"
-"        background-color: #181818;         /* #605F5F; */  \n"
+"        background-color: #181818;         /* #605F5F; */\n"
 "        min-height: 5px;\n"
 "}\n"
 "QScrollBar::handle:vertical:hover{\n"
-"        background-color: rgb("+str(AccentColor[0])+","+str(AccentColor[1])+","+str(AccentColor[2])+");         \n"
+"        background-color: #B72E2B;         \n"
 "        min-height: 5px;\n"
 "}\n"
 "\n"
-"\n"
 "QScrollBar::sub-line:vertical{\n"
 "        margin: 3px 0px 3px 0px;\n"
-"        border-image: url("+workingDir+"img/SliderUp.png);\n"
-"        background-color: rgb(80, 80, 80);\n"
+"        border-image: url(img/SliderUp.png);\n"
 "        height: 11px;\n"
 "        width: 11px;\n"
 "        subcontrol-position: top;\n"
@@ -687,8 +668,7 @@ class Ui_MainWindow(object):
 "\n"
 "QScrollBar::add-line:vertical{\n"
 "        margin: 3px 0px 3px 0px;\n"
-"        border-image: url("+workingDir+"img/SliderDown.png);\n"
-"        background-color: rgb(80, 80, 80);\n"
+"        border-image: url(img/SliderDown.png);\n"
 "        height: 11px;\n"
 "        width: 11px;\n"
 "        subcontrol-position: bottom;\n"
@@ -696,8 +676,7 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QScrollBar::sub-line:vertical:hover,QScrollBar::sub-line:vertical:on{\n"
-"        border-image: url("+workingDir+"img/SliderUp.png);\n"
-"        background-color: rgb("+str(AccentColor[0])+","+str(AccentColor[1])+","+str(AccentColor[2])+");\n"
+"        border-image: url(img/SliderUpA.png);\n"
 "        height: 11px;\n"
 "        width: 11px;\n"
 "        subcontrol-position: top;\n"
@@ -705,8 +684,7 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QScrollBar::add-line:vertical:hover, QScrollBar::add-line:vertical:on{\n"
-"        border-image: url("+workingDir+"img/SliderDown.png);\n"
-"        background-color: rgb("+str(AccentColor[0])+","+str(AccentColor[1])+","+str(AccentColor[2])+");\n"
+"        border-image: url(img/SliderDownA.png);\n"
 "        height: 11px;\n"
 "        width: 11px;\n"
 "        subcontrol-position: bottom;\n"
@@ -719,13 +697,7 @@ class Ui_MainWindow(object):
 "\n"
 "QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical{\n"
 "        background: none;\n"
-"}\n"
-"\n"
-"\n"
-"\n"
-"\n"
-"\n"
-"")
+"}")
         self.PlaylistsView.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOn)
         self.PlaylistsView.setAnimated(True)
         self.PlaylistsView.setHeaderHidden(True)
@@ -741,10 +713,12 @@ class Ui_MainWindow(object):
         font.setFamily("Chicago")
         font.setPointSize(10)
         font.setBold(True)
+        font.setWeight(75)
         self.PlaylistView.setFont(font)
         self.PlaylistView.setFocusPolicy(QtCore.Qt.FocusPolicy.NoFocus)
         self.PlaylistView.setAcceptDrops(False)
-        self.PlaylistView.setStyleSheet("/* ================================= */\n"
+        self.PlaylistView.setStyleSheet("\n"
+"\n"
 "QScrollBar:vertical{\n"
 "        background-color: #2A2929;\n"
 "        width: 17px;\n"
@@ -754,19 +728,17 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QScrollBar::handle:vertical{\n"
-"        background-color: #181818;         /* #605F5F; */  \n"
+"        background-color: #181818;         /* #605F5F; */\n"
 "        min-height: 5px;\n"
 "}\n"
 "QScrollBar::handle:vertical:hover{\n"
-"        background-color: rgb("+str(AccentColor[0])+","+str(AccentColor[1])+","+str(AccentColor[2])+");         \n"
+"        background-color: #B72E2B;         \n"
 "        min-height: 5px;\n"
 "}\n"
 "\n"
-"\n"
 "QScrollBar::sub-line:vertical{\n"
 "        margin: 3px 0px 3px 0px;\n"
-"        border-image: url("+workingDir+"img/SliderUp.png);\n"
-"        background-color: rgb(80, 80, 80);\n"
+"        border-image: url(img/SliderUp.png);\n"
 "        height: 11px;\n"
 "        width: 11px;\n"
 "        subcontrol-position: top;\n"
@@ -775,8 +747,7 @@ class Ui_MainWindow(object):
 "\n"
 "QScrollBar::add-line:vertical{\n"
 "        margin: 3px 0px 3px 0px;\n"
-"        border-image: url("+workingDir+"img/SliderDown.png);\n"
-"        background-color: rgb(80, 80, 80);\n"
+"        border-image: url(img/SliderDown.png);\n"
 "        height: 11px;\n"
 "        width: 11px;\n"
 "        subcontrol-position: bottom;\n"
@@ -784,8 +755,7 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QScrollBar::sub-line:vertical:hover,QScrollBar::sub-line:vertical:on{\n"
-"        border-image: url("+workingDir+"img/SliderUp.png);\n"
-"        background-color: rgb("+str(AccentColor[0])+","+str(AccentColor[1])+","+str(AccentColor[2])+");\n"
+"        border-image: url(img/SliderUpA.png);\n"
 "        height: 11px;\n"
 "        width: 11px;\n"
 "        subcontrol-position: top;\n"
@@ -793,8 +763,7 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QScrollBar::add-line:vertical:hover, QScrollBar::add-line:vertical:on{\n"
-"        border-image: url("+workingDir+"img/SliderDown.png);\n"
-"        background-color: rgb("+str(AccentColor[0])+","+str(AccentColor[1])+","+str(AccentColor[2])+");\n"
+"        border-image: url(img/SliderDownA.png);\n"
 "        height: 11px;\n"
 "        width: 11px;\n"
 "        subcontrol-position: bottom;\n"
@@ -808,16 +777,16 @@ class Ui_MainWindow(object):
 "QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical{\n"
 "        background: none;\n"
 "}\n"
-"/* ================================= */\n"
+"\n"
+"\n"
 "\n"
 "\n"
 "QListView{\n"
-"  background-color: rgba(0, 0, 0,0.2);\n"
+"  background-color: rgb(0, 0, 0,0.2);\n"
 "  color:rgb(255, 255, 255);\n"
 "  border: 1px solid;\n"
 "   outline: 0;\n"
 "}\n"
-"\n"
 "\n"
 "QListView {\n"
 "    show-decoration-selected: 1; /* make the selection span the entire width of the view */\n"
@@ -837,11 +806,11 @@ class Ui_MainWindow(object):
 "\n"
 "\n"
 "QListView::item:selected {\n"
-"    background: rgba(20,20,20,0.5);\n"
+"    background: rgb(20,20,20,0.5);\n"
 "    color:white;\n"
 "}\n"
 "QListView::item:selected:!active {\n"
-"   background: rgba(20,20,20,0.5);\n"
+"   background: rgb(20,20,20,0.5);\n"
 "   color:white;\n"
 "}\n"
 "\n"
@@ -886,7 +855,7 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QMenu::item:selected { /* when user selects item using mouse or keyboard */\n"
-"    background-color: rgb("+str(AccentColor[0])+","+str(AccentColor[1])+","+str(AccentColor[2])+");\n"
+"    background-color: #B72E2B;\n"
 "}\n"
 "\n"
 "/*\n"
@@ -895,7 +864,7 @@ class Ui_MainWindow(object):
 "\n"
 "\n"
 "QListView{\n"
-"  background-color: rgba(0,0, 0,0.2);\n"
+"  background-color: rgb(0,0, 0,0.2);\n"
 "  color:rgb(255, 255, 255);\n"
 "  border: 1px solid;\n"
 "  outline: none;\n"
@@ -947,23 +916,22 @@ class Ui_MainWindow(object):
         self.AddTreakPlaylist.setMaximumSize(QtCore.QSize(30, 30))
         self.AddTreakPlaylist.setAutoFillBackground(False)
         self.AddTreakPlaylist.setStyleSheet("QPushButton{\n"
-"  background-color: rgb(48, 48, 48);\n"
+"  background-color: rgb(50, 50, 50,0);\n"
 "  border: none;\n"
-"  border-image: url("+workingDir+"img/add-openNew.png);\n"
+"  border-image: url(img/add-openNew.png);\n"
 "}\n"
 "QPushButton:hover{\n"
-"  background-color: rgb("+str(AccentColor[0])+","+str(AccentColor[1])+","+str(AccentColor[2])+");\n"
+"  background-color: rgb(50, 50, 50,0);\n"
 "  border: none;\n"
-"  border-image: url("+workingDir+"img/add-openNew.png);\n"
+"  border-image: url(img/add-openNewA.png);\n"
 "}\n"
 "\n"
 "QPushButton:pressed{\n"
-"  background-color: rgb("+str(AccentColor[0])+","+str(AccentColor[1])+","+str(AccentColor[2])+");\n"
+"  background-color: rgb(50, 50, 50,255);\n"
 "  border: none;\n"
-"  border-image: url("+workingDir+"img/add-openNewA.png);\n"
+"  border-image: url(img/add-openNewA.png);\n"
 "\n"
-"} \n"
-" ")
+"}")
         self.AddTreakPlaylist.setText("")
         self.AddTreakPlaylist.setIconSize(QtCore.QSize(30, 30))
         self.AddTreakPlaylist.setShortcut("")
@@ -973,23 +941,22 @@ class Ui_MainWindow(object):
         self.RemoveTreakPlaylist.setMinimumSize(QtCore.QSize(30, 30))
         self.RemoveTreakPlaylist.setMaximumSize(QtCore.QSize(30, 30))
         self.RemoveTreakPlaylist.setStyleSheet("QPushButton{\n"
-"  background-color: rgb(48, 48, 48);\n"
+"  background-color: rgb(50, 50, 50,0);\n"
 "  border: none;\n"
-"  border-image: url("+workingDir+"img/removeNew.png);\n"
+"  border-image: url(img/removeNew.png);\n"
 "}\n"
 "QPushButton:hover{\n"
-"  background-color: rgb("+str(AccentColor[0])+","+str(AccentColor[1])+","+str(AccentColor[2])+");\n"
+"  background-color: rgb(50, 50, 50,0);\n"
 "  border: none;\n"
-"  border-image: url("+workingDir+"img/removeNew.png);\n"
+"  border-image: url(img/removeNewA.png);\n"
 "}\n"
 "\n"
 "QPushButton:pressed{\n"
-"  background-color: rgb("+str(AccentColor[0])+","+str(AccentColor[1])+","+str(AccentColor[2])+");\n"
+"  background-color: rgb(50, 50, 50,255);\n"
 "  border: none;\n"
-"  border-image: url("+workingDir+"img/removeNewA.png);\n"
+"  border-image: url(img/removeNewA.png);\n"
 "\n"
-"}\n"
-"")
+"}")
         self.RemoveTreakPlaylist.setIconSize(QtCore.QSize(30, 30))
         self.RemoveTreakPlaylist.setShortcut("")
         self.RemoveTreakPlaylist.setObjectName("RemoveTreakPlaylist")
@@ -998,23 +965,22 @@ class Ui_MainWindow(object):
         self.MenuPlaylist.setMinimumSize(QtCore.QSize(30, 30))
         self.MenuPlaylist.setMaximumSize(QtCore.QSize(30, 30))
         self.MenuPlaylist.setStyleSheet("QPushButton{\n"
-"  background-color: rgb(48, 48, 48);\n"
+"  background-color: rgb(50, 50, 50,0);\n"
 "  border: none;\n"
-"  border-image: url("+workingDir+"img/menuplaylistNew.png);\n"
+"  border-image: url(img/menuplaylistNew.png);\n"
 "}\n"
 "QPushButton:hover{\n"
-"  background-color: rgb("+str(AccentColor[0])+","+str(AccentColor[1])+","+str(AccentColor[2])+");\n"
+"  background-color: rgb(50, 50, 50,0);\n"
 "  border: none;\n"
-"  border-image: url("+workingDir+"img/menuplaylistNew.png);\n"
+"  border-image: url(img/menuplaylistNewA.png);\n"
 "}\n"
 "\n"
 "QPushButton:pressed{\n"
-"  background-color: rgb("+str(AccentColor[0])+","+str(AccentColor[1])+","+str(AccentColor[2])+");\n"
+"  background-color: rgb(50, 50, 50,255);\n"
 "  border: none;\n"
-"  border-image: url("+workingDir+"img/menuplaylistNewA.png);\n"
+"  border-image: url(img/menuplaylistNewA.png);\n"
 "\n"
-"}\n"
-"")
+"}")
         self.MenuPlaylist.setText("")
         self.MenuPlaylist.setIconSize(QtCore.QSize(30, 30))
         self.MenuPlaylist.setShortcut("")
@@ -1030,6 +996,7 @@ class Ui_MainWindow(object):
         font.setFamily("Chicago")
         font.setPointSize(12)
         font.setBold(True)
+        font.setWeight(75)
         self.FoxStatusBar.setFont(font)
         self.FoxStatusBar.setStyleSheet("QLabel{\n"
 "background-color: rgba(0,0,0,0);\n"
@@ -1058,6 +1025,16 @@ class Ui_MainWindow(object):
         self.AlbumName.setText(_translate("MainWindow", "AlbumName"))
         self.InfoLabel.setText(_translate("MainWindow", "0 :Likes\n"
 "0 :View"))
-        self.TimePlayCounter.setText(_translate("MainWindow", "0:00"))
+        self.TimePlayCounter.setText(_translate("MainWindow", "2:52/5:21"))
         self.FoxStatusBar.setText(_translate("MainWindow", "FoxStatusBar"))
         self.actionSettings.setText(_translate("MainWindow", "Settings"))
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec())

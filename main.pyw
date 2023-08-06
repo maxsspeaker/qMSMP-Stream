@@ -85,12 +85,11 @@ class RunAPPEventHandler():
 RunAPPEventHandler=RunAPPEventHandler(RunCommands=sys.argv)
 if not(RunAPPEventHandler.FirstApp):
      sys.exit()
-
-from PyQt5 import QtWidgets, QtCore, QtGui
-from PyQt5.QtWidgets import QMessageBox 
-from PyQt5.QtGui import QIcon,QFont 
+from PyQt6 import QtWidgets, QtCore, QtGui
+from PyQt6.QtWidgets import QMessageBox 
+from PyQt6.QtGui import QIcon,QFont,QFileSystemModel
 from os.path import exists
-from PyQt5.uic import loadUi as LoadStyleUI
+from PyQt6.uic import loadUi as LoadStyleUI
 from PIL import Image,ImageStat
 from PIL.ImageQt import ImageQt
 import io
@@ -156,31 +155,15 @@ if(sys.platform=="linux"):
                
 
 
-class Slider(QtWidgets.QSlider):
-    def mousePressEvent(self, event):
-        super(Slider, self).mousePressEvent(event)
-        if event.button() == QtCore.Qt.LeftButton:
-            val = self.pixelPosToRangeValue(event.pos())
-            self.setValue(val)
+from PyQt6.QtWidgets import QSlider, QStyle
 
-    def pixelPosToRangeValue(self, pos):
-        opt = QtWidgets.QStyleOptionSlider()
-        self.initStyleOption(opt)
-        gr = self.style().subControlRect(QtWidgets.QStyle.CC_Slider, opt, QtWidgets.QStyle.SC_SliderGroove, self)
-        sr = self.style().subControlRect(QtWidgets.QStyle.CC_Slider, opt, QtWidgets.QStyle.SC_SliderHandle, self)
+class Slider(QSlider):
+     def mousePressEvent(self, event):
+        if event.button() == QtCore.Qt.MouseButton.LeftButton:
+            new_value = self.minimum() + ((self.maximum() - self.minimum()) * (event.pos().x()-6)) / self.width()
+            self.setValue(new_value)
+        super().mousePressEvent(event)
 
-        if self.orientation() == QtCore.Qt.Horizontal:
-            sliderLength = sr.width()
-            sliderMin = gr.x()
-            sliderMax = gr.right() - sliderLength + 1
-        else:
-            sliderLength = sr.height()
-            sliderMin = gr.y()
-            sliderMax = gr.bottom() - sliderLength + 1;
-        pr = pos - sr.center() + sr.topLeft()
-        p = pr.x() if self.orientation() == QtCore.Qt.Horizontal else pr.y()
-        return QtWidgets.QStyle.sliderValueFromPosition(self.minimum(), self.maximum(), p - sliderMin,
-                                               sliderMax - sliderMin, opt.upsideDown)
 
 TrekBoxUi.QtWidgets.QSlider=Slider
 
@@ -1840,7 +1823,20 @@ class TrekBoxUi(QtWidgets.QDialog,TrekBoxUi.Ui_Dialog):
               r = ydl.extract_info(url, download=False)
               if(r):
                print(r['extractor'])
-               if(r['extractor']=="yandexmusic:track"):
+               if(r['extractor']=="soundcloud"):
+                    self.durationTreak=r['duration']
+                    self.Treaktitle=r['title']
+                    self.TreakUploader=r['uploader']
+                    self.IdTreak=r['id']
+                    self.TypeTreak="soundcloud"
+                    self.UrlSc=r["original_url"]
+                    
+                    self.NameTrek.setText(self.Treaktitle)
+                    self.NameUploader.setText(self.TreakUploader)
+                    
+                    self.Urlimg='https://img.youtube.com/vi/'+r['id']+'/hqdefault.jpg'
+                    self.LoadImgTrek(r)
+               elif(r['extractor']=="yandexmusic:track"):
                     self.durationTreak=r['duration']
                     self.Treaktitle=r['track']
                     self.TreakUploader=r['album_artist']
@@ -1913,6 +1909,9 @@ class TrekBoxUi(QtWidgets.QDialog,TrekBoxUi.Ui_Dialog):
           if(self.TypeTreak=="YandexMusic"):
                MusicInfoPars["YandexMusicIDalbum"]=self.AlbumIDYandexMusic 
                MusicInfoPars["YandexMusicID"]=self.IdTreakYandexMusic
+          elif(self.TypeTreak=="soundcloud"):
+               MusicInfoPars["IDSoundcloud"]=self.IdTreak
+               MusicInfoPars["url"]=self.UrlSc
           self.MainWindow.MSMPboxPlayer.playlist.append(MusicInfoPars)
           self.MainWindow.PlayButton.setEnabled(True)
           self.MainWindow.NextTreakButton.setEnabled(True)
@@ -1942,7 +1941,7 @@ def excepthook(exc_type, exc_value, exc_tb):
     print("error catched!:")
     print("error message:\n", tb)
     msg = QtWidgets.QMessageBox()
-    msg.setIcon(QtWidgets.QMessageBox.Critical)
+    msg.setIcon(QtWidgets.QMessageBox.Information)
     msg.setText("MSMP CRASH:")
     msg.setInformativeText(str(tb))
     msg.setWindowTitle("Error")
@@ -1953,19 +1952,19 @@ def excepthook(exc_type, exc_value, exc_tb):
 class NameDelegate(QtWidgets.QStyledItemDelegate):
     def initStyleOption(self, option, index):
         super().initStyleOption(option, index)
-        if isinstance(index.model(), QtWidgets.QFileSystemModel):
+        if isinstance(index.model(), QFileSystemModel):
             if not index.model().isDir(index):
                 option.text = index.model().fileInfo(index).baseName()
 
     def setEditorData(self, editor, index):
-        if isinstance(index.model(), QtWidgets.QFileSystemModel):
+        if isinstance(index.model(), QFileSystemModel):
             if not index.model().isDir(index):
                 editor.setText(index.model().fileInfo(index).baseName())
             else:
                 super().setEditorData(editor, index)
 
     def setModelData(self, editor, model, index):
-        if isinstance(model, QtWidgets.QFileSystemModel):
+        if isinstance(model, QFileSystemModel):
             fi = model.fileInfo(index)
             if not model.isDir(index):
                 model.setData(index, editor.text() + "." + fi.suffix())
@@ -2003,6 +2002,14 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow): #
              
         self.mobileNewMode=self.config['MSMP Stream']["mobileMode"]
 
+        self.AccentColor=(166, 40, 153)
+        self.QAccentColor=QtGui.QColor('rgba(166, 40, 153,255)')
+        self.QAccentColor.setRed(self.AccentColor[0])
+        self.QAccentColor.setGreen(self.AccentColor[1])
+        self.QAccentColor.setBlue(self.AccentColor[2])
+        #print(self.QAccentColor.getRgb())
+        
+
         self.Forceipv4=True
 
         if(self.Forceipv4):
@@ -2015,8 +2022,9 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow): #
              LoadStyleUI("ui/untitledNewBoxMb.ui",self)
         else:
              self.NewMainUI=True
-             self.setupUi(self)
+             self.setupUi(self,workingDir=os.path.dirname(sys.argv[0]).replace("\\","/")+"/",AccentColor=self.AccentColor)
 
+        #self.FixScrollBlat()
         if(self.config['MSMP Stream']["localizationBox"]=="assets/localizationBoxes/ru.localizationBox"):
              self.config['MSMP Stream']['localizationBox']='lengboxs/ru.loclb'
 
@@ -2064,6 +2072,8 @@ QMenu::item:selected { /* when user selects item using mouse or keyboard */
 
         self.CloseApp=False
 
+        self.UpdateBgAllowed=False
+
 
         print(self.ConfigDir)
 
@@ -2104,7 +2114,7 @@ QMenu::item:selected { /* when user selects item using mouse or keyboard */
              self.config['MSMP Stream']["YandexMusicTOKEN"]=""
              
         if(OtherApiAlow):
-             self.RPC=MSMP_RPC(RPC=Presence,DirConfig=self.ConfigDir,LastFm=LastFm,version="QT0.6a",lengbox=self.lengbox,ImgApiHost=ImgApiHost,ImgApiHostTOKEN=ImgApiHostTOKEN,RPCbuttons=self.config['MSMP Stream RPC']['Discord_Buttons'])
+             self.RPC=MSMP_RPC(RPC=Presence,DirConfig=self.ConfigDir,LastFm=LastFm,version="QT0.7.6a",lengbox=self.lengbox,ImgApiHost=ImgApiHost,ImgApiHostTOKEN=ImgApiHostTOKEN,RPCbuttons=self.config['MSMP Stream RPC']['Discord_Buttons'])
         else:
             self.RPC=None 
         self.MSMPboxPlayer=MSMPboxPlayer(ServerPlaer=True,
@@ -2201,9 +2211,9 @@ QMenu::item:selected { /* when user selects item using mouse or keyboard */
 ##                print('cached, loaded')
 ##                
 ##
-##            #it.setData(QtGui.QIcon(iconroot +'/images/flags'), QtCore.Qt.DecorationRole)
+##            #it.setData(QtGui.QIcon(iconroot +'/images/flags'), QtCore.Qt.ItemDataRole.DecorationRole)
 ##            it.setData(cov,        # +++
-##                                   QtCore.Qt.DecorationRole)
+##                                   QtCore.Qt.ItemDataRole.DecorationRole)
         
         self.PathImgsCache=self.config['MSMP Stream']['cacheimgpachfolder']
 
@@ -2256,6 +2266,7 @@ QMenu::item:selected { /* when user selects item using mouse or keyboard */
         self.setEqualizer()
         
     def FixScrollBlat(self):
+          styleColorFox=str(self.AccentColor[0])+","+str(self.AccentColor[1])+","+str(self.AccentColor[2])
           self.setStyleSheet("""
 QScrollBar:vertical{
         background-color: #2A2929;
@@ -2266,17 +2277,19 @@ QScrollBar:vertical{
 }
 
 QScrollBar::handle:vertical{
-        background-color: #181818;         /* #605F5F; */
+        background-color: #181818;         /* #605F5F; */  
         min-height: 5px;
 }
 QScrollBar::handle:vertical:hover{
-        background-color: #B72E2B;         
+        background-color: rgb("""+styleColorFox+""");         
         min-height: 5px;
 }
 
+
 QScrollBar::sub-line:vertical{
         margin: 3px 0px 3px 0px;
-        border-image: url(img/SliderUp.png);
+        border-image: url(A:/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/SliderUp.png);
+        background-color: rgb(80, 80, 80);
         height: 11px;
         width: 11px;
         subcontrol-position: top;
@@ -2285,7 +2298,8 @@ QScrollBar::sub-line:vertical{
 
 QScrollBar::add-line:vertical{
         margin: 3px 0px 3px 0px;
-        border-image: url(img/SliderDown.png);
+        border-image: url(A:/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/SliderDown.png);
+        background-color: rgb(80, 80, 80);
         height: 11px;
         width: 11px;
         subcontrol-position: bottom;
@@ -2293,7 +2307,8 @@ QScrollBar::add-line:vertical{
 }
 
 QScrollBar::sub-line:vertical:hover,QScrollBar::sub-line:vertical:on{
-        border-image: url(img/SliderUpA.png);
+        border-image: url(A:/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/SliderUp.png);
+        background-color: rgb("""+styleColorFox+""");  
         height: 11px;
         width: 11px;
         subcontrol-position: top;
@@ -2301,7 +2316,8 @@ QScrollBar::sub-line:vertical:hover,QScrollBar::sub-line:vertical:on{
 }
 
 QScrollBar::add-line:vertical:hover, QScrollBar::add-line:vertical:on{
-        border-image: url(img/SliderDownA.png);
+        border-image: url(A:/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/SliderDown.png);
+        background-color: rgb("""+styleColorFox+""");  
         height: 11px;
         width: 11px;
         subcontrol-position: bottom;
@@ -2332,10 +2348,9 @@ QMenu::item {
 }
 
 QMenu::item:selected { /* when user selects item using mouse or keyboard */
-    background-color: #B72E2B);
+    background-color:  rgb("""+styleColorFox+""");  
 }
 """)
-          
     def add_functions(self):
 
         self.model = self.get_file_tree_model(self.PlaylistsFolder)
@@ -2380,7 +2395,8 @@ QMenu::item:selected { /* when user selects item using mouse or keyboard */
         if not(self.mobileMode):
              MSMPmenuData.append(self.lengbox["MSMP Stream"].get("PLshHd")+"#PLshHd")
 ##             MSMPmenuData.append("SKIN TOP#st")
-##             MSMPmenuData.append("SKIN BOTTOM#sb")
+             MSMPmenuData.append("SKIN BOTTOM#sb")
+             MSMPmenuData.append("changeColor#ColorFox")
 ##             MSMPmenuData.append("SKIN OLD#OLDskin")
 ##             MSMPmenuData.append("SKIN AIMPqt#AIMPskin")
 ##             MSMPmenuData.append("mbMode#mbMode")
@@ -2397,7 +2413,7 @@ QMenu::item:selected { /* when user selects item using mouse or keyboard */
         
         self.add_menu([self.lengbox["MSMP Stream"].get("addLF")+"#addLF",{self.lengbox["MSMP Stream"].get("addAS")+"#addAS": ["MSMP audio"+"#addAS-Ma",self.lengbox["MSMP Stream"].get("addAS-YV")+"#addAS-YV",self.lengbox["MSMP Stream"].get("addAS-ST")+"#addAS-ST"]}], self.PlayListAddMenu)
 
-        self.add_menu([self.lengbox["MSMP Stream"].get("DwTr")+"#DwTr",self.lengbox["MSMP Stream"].get("SvPL")+"#SvPL",self.lengbox["MSMP Stream"].get("SvPLas")+"#SvPLas",self.lengbox["MSMP Stream"].get("PYtPl")+"#PYtPl"], self.MenuPlaylistMenu)
+        self.add_menu([self.lengbox["MSMP Stream"].get("DwTr")+"#DwTr",self.lengbox["MSMP Stream"].get("SvPL")+"#SvPL",self.lengbox["MSMP Stream"].get("SvPLas")+"#SvPLas",self.lengbox["MSMP Stream"].get("OpPL")+"#OpPL",self.lengbox["MSMP Stream"].get("PYtPl")+"#PYtPl"], self.MenuPlaylistMenu)
 #https://msmp-audio.maxsspeaker.tk/msmp-audio/audio/Space%20Queen-Nglr2WV8mw0
         
 
@@ -2577,14 +2593,14 @@ QMenu::item:selected { /* when user selects item using mouse or keyboard */
                        ImgAlbum =ImageQt(ImgAlbum)
                        
                        pixmap=QtGui.QPixmap.fromImage(ImgAlbum)
-                       it.setData(QtGui.QIcon(pixmap),QtCore.Qt.DecorationRole)
+                       it.setData(QtGui.QIcon(pixmap),QtCore.Qt.ItemDataRole.DecorationRole)
                  else:
                        pixmap=QtGui.QPixmap("img/Missing_Texture.png")
-                       it.setData(QtGui.QIcon(pixmap),QtCore.Qt.DecorationRole)
+                       it.setData(QtGui.QIcon(pixmap),QtCore.Qt.ItemDataRole.DecorationRole)
             elif (os.path.isfile(self.PathImgsCache+urlSoundID)): 
-                 it.setData(QtGui.QIcon(self.PathImgsCache+urlSoundID),QtCore.Qt.DecorationRole)
+                 it.setData(QtGui.QIcon(self.PathImgsCache+urlSoundID),QtCore.Qt.ItemDataRole.DecorationRole)
             else:
-                 it.setData(QtGui.QIcon("img/AlbumImgMini.png"),QtCore.Qt.DecorationRole)
+                 it.setData(QtGui.QIcon("img/AlbumImgMini.png"),QtCore.Qt.ItemDataRole.DecorationRole)
                  
         self.PlayButton.setEnabled(True)
         self.NextTreakButton.setEnabled(True)
@@ -2599,9 +2615,9 @@ QMenu::item:selected { /* when user selects item using mouse or keyboard */
              self.UpdateInfoTreakPL(None) 
         
     def get_file_tree_model(self, root_path):
-        model = QtWidgets.QFileSystemModel()
+        model = QFileSystemModel()
         model.setRootPath(root_path)
-        model.setFilter(QtCore.QDir.NoDotAndDotDot | QtCore.QDir.AllDirs | QtCore.QDir.Files)
+        model.setFilter(QtCore.QDir.Filter.NoDotAndDotDot | QtCore.QDir.Filter.AllDirs | QtCore.QDir.Filter.Files)
         model.setNameFilters(['*'])
         model.setNameFilterDisables(False)
         return model
@@ -2631,7 +2647,7 @@ github: https://github.com/maxsspeaker/qMSMP-Stream
               self.close()
          elif(Option=="sb"):
               self.DataPath=None
-              LoadStyleUI("ui/untitledStyleSpew3.ui",self)
+              LoadStyleUI("untitledNewBoxpyqt6.ui",self)
               self.add_functions()
               self.show()
               self.showNormal()
@@ -2663,6 +2679,21 @@ github: https://github.com/maxsspeaker/qMSMP-Stream
               self.FoxStatusBar.setText("")
               if not(self.MSMPboxPlayer.playlist==None):
                    self.ReloadInformation()
+         elif(Option=="ColorFox"):
+              color = QtWidgets.QColorDialog.getColor()
+              if color.isValid():
+                   self.QAccentColor=color
+                   self.AccentColor=self.QAccentColor.getRgb()
+                   self.DataPath=None
+                   self.setupUi(self,workingDir=os.path.dirname(sys.argv[0]).replace("\\","/")+"/",AccentColor=self.AccentColor)
+                   self.add_functions()
+                   self.FoxStatusBar.setText("")
+                   self.show()
+                   self.showNormal()
+                   self.NewMainUI=True
+                   self.mobileMode=False
+                   if not(self.MSMPboxPlayer.playlist==None):
+                        self.ReloadInformation()
          elif(Option=="AIMPskin"):
               self.DataPath=None
               LoadStyleUI("ui/untitledStyleSpew.ui",self)
@@ -2695,8 +2726,12 @@ github: https://github.com/maxsspeaker/qMSMP-Stream
          if(Option=="PYtPl"):
               self.TrekBoxUi.NoPlayListMode=False
               self.TrekBoxUi.show()
-         if(Option=="SvPL"):
+         elif(Option=="OpPL"):
+              self.OpenPLmsmp(path=None,AutoPlay=False)
+         elif(Option=="SvPL"):
               self.SavePLmsmp(self.MSMPboxPlayer.OpenedplaylistPath)
+         elif(Option=="SvPLas"):
+              self.SavePLmsmp(path=None)
 
     def GibridPausePlay(self):
          pass
@@ -2718,15 +2753,28 @@ github: https://github.com/maxsspeaker/qMSMP-Stream
                 self.tree.setExpanded(index, True)
         else:
             self.OpenPLmsmp(path)
-    def SavePLmsmp(self,path):
-       print("saving "+self.MSMPboxPlayer.OpenedplaylistPath)
-       if not (self.MSMPboxPlayer.OpenedplaylistPath==None):  
-         plToSave={"playlist":self.MSMPboxPlayer.playlist,"iconPlayList": None, "ContinuePlayData": None,"VerisonCore":2}
-         with open(path, 'w') as f:
-              json.dump(plToSave, f, indent=2)
-         print("saving ok")
+    def SavePLmsmp(self,path=None):
+       if(path==None):
+            path , check = QtWidgets.QFileDialog.getSaveFileName(None, "QFileDialog.getOpenFileName()",
+                                               "", "PlayList File files (*.plmsmpsbox);;All Files (*)")
+       else:
+            check=True
+            
+       if check:
+            print("saving "+path)
+            plToSave={"playlist":self.MSMPboxPlayer.playlist,"iconPlayList": None, "ContinuePlayData": None,"VerisonCore":2}
+            with open(path, 'w') as f:
+                 json.dump(plToSave, f, indent=2)
+            print("saving ok")
               
-    def OpenPLmsmp(self,path,AutoPlay=True):
+    def OpenPLmsmp(self,path=None,AutoPlay=False):
+        if(path==None):
+              path , check = QtWidgets.QFileDialog.getOpenFileName(None, "QFileDialog.getOpenFileName()",
+                                               "", "PlayList File files (*.plmsmpsbox);;All Files (*)")
+        else:
+              check=True
+
+        if check:     
          self.StopParsePL=True
          time.sleep(0.5)
          self.PathToPlMSMPbox=path
@@ -2742,6 +2790,8 @@ github: https://github.com/maxsspeaker/qMSMP-Stream
              self.StopButton.setEnabled(True)
              self.PreviousTreakButton.setEnabled(True)
              if(AutoPlay):self.UpdateInfoTreakPL(self.MSMPboxPlayer.play(0))
+
+     
              
     def OpenPlmsmpThread(self):
       path=self.PathToPlMSMPbox   
@@ -2798,14 +2848,14 @@ github: https://github.com/maxsspeaker/qMSMP-Stream
                      ImgAlbum =ImageQt(ImgAlbum)
                      pixmap=QtGui.QPixmap.fromImage(ImgAlbum)
                      
-                     it.setData(QtGui.QIcon(pixmap),QtCore.Qt.DecorationRole)
+                     it.setData(QtGui.QIcon(pixmap),QtCore.Qt.ItemDataRole.DecorationRole)
                     else:
                        pixmap=QtGui.QPixmap("img/Missing_Texture.png")
-                       it.setData(QtGui.QIcon(pixmap),QtCore.Qt.DecorationRole)
+                       it.setData(QtGui.QIcon(pixmap),QtCore.Qt.ItemDataRole.DecorationRole)
             elif (os.path.isfile(self.PathImgsCache+urlSoundID)): 
-                 it.setData(QtGui.QIcon(self.PathImgsCache+urlSoundID),QtCore.Qt.DecorationRole)
+                 it.setData(QtGui.QIcon(self.PathImgsCache+urlSoundID),QtCore.Qt.ItemDataRole.DecorationRole)
             else:
-                 it.setData(QtGui.QIcon("img/AlbumImgMini.png"),QtCore.Qt.DecorationRole)
+                 it.setData(QtGui.QIcon("img/AlbumImgMini.png"),QtCore.Qt.ItemDataRole.DecorationRole)
             if(self.StopParsePL):
                  if(self.NewMainUI):self.FoxStatusBar.setText("")
                  return
@@ -2893,21 +2943,22 @@ github: https://github.com/maxsspeaker/qMSMP-Stream
         self.MSMPboxPlayer.NewPlaerVLC.audio_set_volume(value)
 
     def ChangePlayIcon(self,IconName,PlayModeTreak,Invert=False):
+         styleColorFox=str(self.AccentColor[0])+","+str(self.AccentColor[1])+","+str(self.AccentColor[2])
          if not(Invert):
               PlayModeTreak.setStyleSheet("""
 QPushButton{
-  background-color: rgb(50, 50, 50,0);
+  background-color: rgb(80,80, 80);
   border: none;
   border-image: url(img/"""+IconName+"""New.png);
 }
 QPushButton:hover{
-  background-color: rgb(100,100, 100,0);
+  background-color: rgb("""+styleColorFox+""");
   border: none;
-  border-image: url(img/"""+IconName+"""NewA.png);
+  border-image: url(img/"""+IconName+"""New.png);
 }
 
 QPushButton:pressed{
-  background-color: rgb(50, 50, 50,255);
+  background-color: rgb("""+styleColorFox+""");
   border: none;
   border-image: url(img/"""+IconName+"""NewA.png);
 
@@ -2916,27 +2967,27 @@ QPushButton:pressed{
          else:
               PlayModeTreak.setStyleSheet("""
 QPushButton{
-  background-color: rgb(50, 50, 50,0);
+  background-color: rgb("""+styleColorFox+""");
   border: none;
-  border-image: url(img/"""+IconName+"""NewA.png);
+  border-image: url(img/"""+IconName+"""New.png);
 }
 QPushButton:hover{
-  background-color: rgb(100,100, 100,0);
+  background-color: rgb(100,100, 100);
   border: none;
   border-image: url(img/"""+IconName+"""New.png);
 }
 
 QPushButton:pressed{
-  background-color: rgb(50, 50, 50,255);
+  background-color: rgb("""+styleColorFox+""");
   border: none;
-  border-image: url(img/"""+IconName+"""New.png);
+  border-image: url(img/"""+IconName+"""NewA.png);
 
 }
 """)
 
     def UpdateBg(self,RGBdata):
          self.ContorlPanel.setStyleSheet("QGroupBox{\n"
-"   background-color:qlineargradient(spread:pad, x1:0.278, y1:1, x2:0, y2:1, stop:0 rgba(0, 0, 0, 255), stop:1 rgba("+RGBdata+", 255));\n"
+"   background-color:qlineargradient(spread:pad, x1:0.278, y1:1, x2:0, y2:1, stop:0 rgba(16,16,16, 255), stop:1 rgba("+RGBdata+", 255));\n"
 "   color:rgb(0,0,0);\n"
 "   border:none;\n"
 "   border-bottom: 1px solid;\n"
@@ -2947,10 +2998,14 @@ QPushButton:pressed{
         self.AuthorName.setText(self.MSMPboxPlayer.PlayNowMusicDataBox["artistTrekPlayNow"])
         self.AlbumName.setText(self.MSMPboxPlayer.PlayNowMusicDataBox["albumTrekPlayNow"])
         if not(self.LestNum==-1):
-             self.PlayListBox.itemFromIndex(self.PlayListBox.index(self.LestNum,0)).setBackground(QtGui.QColor('rgba(0,0,0,0)'))
+             ColorFix=QtGui.QColor('rgba(0,0,0,0)')
+             ColorFix.setAlpha(0)
+             self.PlayListBox.itemFromIndex(self.PlayListBox.index(self.LestNum,0)).setBackground(ColorFix)
         self.LestNum=self.MSMPboxPlayer.Num
-        try:self.PlayListBox.itemFromIndex(self.PlayListBox.index(self.LestNum,0)).setBackground(QtGui.QColor('red'))
+        
+        try:self.PlayListBox.itemFromIndex(self.PlayListBox.index(self.LestNum,0)).setBackground(self.QAccentColor)
         except:
+             print('\n',traceback.format_exc())
              self.LestNum=-1
              return
         print("Firk1")  
@@ -2991,7 +3046,7 @@ QPushButton:pressed{
                      ImgAlbumQt =ImageQt(ImgAlbum)
                      pixmap=QtGui.QPixmap.fromImage(ImgAlbum)
                      print("self.PlayListBox.itemFromIndex")
-                     try:self.PlayListBox.itemFromIndex(self.PlayListBox.index(self.LestNum,0)).setData(QtGui.QIcon(pixmap),QtCore.Qt.DecorationRole)
+                     try:self.PlayListBox.itemFromIndex(self.PlayListBox.index(self.LestNum,0)).setData(QtGui.QIcon(pixmap),QtCore.Qt.ItemDataRole.DecorationRole)
                      except:pass
                      Mising=False
                     else:
@@ -3003,7 +3058,7 @@ QPushButton:pressed{
                        ImgAlbumQt =ImageQt(ImgAlbum)
                        
                        pixmap=QtGui.QPixmap.fromImage(ImgAlbumQt)
-                       try:self.PlayListBox.itemFromIndex(self.PlayListBox.index(self.LestNum,0)).setData(QtGui.QIcon(pixmap),QtCore.Qt.DecorationRole)
+                       try:self.PlayListBox.itemFromIndex(self.PlayListBox.index(self.LestNum,0)).setData(QtGui.QIcon(pixmap),QtCore.Qt.ItemDataRole.DecorationRole)
                        except:pass
                        Mising=False
                   if not(self.RPC==None):
@@ -3043,7 +3098,7 @@ QPushButton:pressed{
                      ImgAlbum =ImageQt(ImgAlbum)
                      pixmap=QtGui.QPixmap.fromImage(ImgAlbum)
                      print("self.PlayListBox.itemFromIndex")
-                     try:self.PlayListBox.itemFromIndex(self.PlayListBox.index(self.LestNum,0)).setData(QtGui.QIcon(pixmap),QtCore.Qt.DecorationRole)
+                     try:self.PlayListBox.itemFromIndex(self.PlayListBox.index(self.LestNum,0)).setData(QtGui.QIcon(pixmap),QtCore.Qt.ItemDataRole.DecorationRole)
                      except:pass
                 else:
                      ImgAlbum = Image.open(self.PathImgsCache+urlSoundID).convert("RGBA")
@@ -3072,9 +3127,10 @@ QPushButton:pressed{
                 self.AlbumImg.setPixmap(pixmap)
                 print("self.UpdateBg")
                 try:self.UpdateInfoBoxLabel()
-                except:pass
-                if not(self.NewMainUI):self.UpdateBg(str(int(RGBbg[0]))+", "+str(int(RGBbg[1]))+", "+str(int(RGBbg[2])))
-                else:
+                except:pass #if not(self.NewMainUI):
+                if(self.UpdateBgAllowed):
+                     self.UpdateBg(str(int(RGBbg[0]))+", "+str(int(RGBbg[1]))+", "+str(int(RGBbg[2])))
+                if(self.NewMainUI):
                      self.ChangePlayIcon("play",self.PlayButton,Invert=True)
                 
                 #print(self.MSMPboxPlayer.CoverUrlPlayNow)
@@ -3127,11 +3183,11 @@ QPushButton:pressed{
 
     def closeEvent(self, event):
        try:
-        reply = QMessageBox.question(self, 'Message',
-            "Are you sure to quit?", QMessageBox.Yes |
-            QMessageBox.No, QMessageBox.No)
+##        reply = QMessageBox.question(self, 'Message',
+##            "Are you sure to quit?", QMessageBox.Yes |
+##            QMessageBox.No, QMessageBox.No)
 
-        if reply == QMessageBox.Yes:
+        if True:#reply == QMessageBox.Yes:
             self.CloseApp=True
             if not(self.RPC==None):self.RPC.RPC.close()
             self.MSMPboxPlayer.stop()
@@ -3144,6 +3200,7 @@ QPushButton:pressed{
             event.ignore()
        except:
                 print('\n',traceback.format_exc())
+                event.ignore()
 
     def add_menu(self, data, menu_obj):
         if isinstance(data, dict):
@@ -3168,5 +3225,5 @@ if __name__ == '__main__':
     sys.excepthook = excepthook
     ex = MainWindow(RunAPPEventHandler)
     
-    sys.exit(app.exec_())
+    sys.exit(app.exec())
     firkbbb
