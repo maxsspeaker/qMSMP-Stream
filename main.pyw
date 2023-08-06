@@ -3183,11 +3183,9 @@ QPushButton:pressed{
 
     def closeEvent(self, event):
        try:
-##        reply = QMessageBox.question(self, 'Message',
-##            "Are you sure to quit?", QMessageBox.Yes |
-##            QMessageBox.No, QMessageBox.No)
-
-        if True:#reply == QMessageBox.Yes:
+        reply = QtWidgets.QMessageBox.question(self, "Exit?", "Are you sure to quit?")
+        
+        if reply == QtWidgets.QMessageBox.StandardButton.Yes:
             self.CloseApp=True
             if not(self.RPC==None):self.RPC.RPC.close()
             self.MSMPboxPlayer.stop()
