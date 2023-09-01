@@ -1,0 +1,1643 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>540</width>
+    <height>650</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MSMP Stream</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>img/icon.png</normaloff>img/icon.png</iconset>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::LeftToRight</enum>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindown{
+  background-color: rgba(0, 0, 0,255);
+ color: rgb(0, 0, 0);
+}
+</string>
+  </property>
+  <property name="locale">
+   <locale language="Russian" country="Belarus"/>
+  </property>
+  <property name="animated">
+   <bool>true</bool>
+  </property>
+  <property name="documentMode">
+   <bool>false</bool>
+  </property>
+  <property name="unifiedTitleAndToolBarOnMac">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="mouseTracking">
+    <bool>true</bool>
+   </property>
+   <property name="tabletTracking">
+    <bool>false</bool>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QWidget{
+  background-color: rgba(0, 0, 0,0.1);
+
+
+}
+
+QMainWindow &gt; QWidget {
+    /*border-image : url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/bg.png);*/
+ /*  background-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/Missing_Texture2.png);*/
+    background-color: rgba(0, 0, 0,255);
+
+    /*background-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/Missing_Texture.png); 0 0 0 0 stretch stretch;
+        background-size: 10px auto;
+    background-attachment: fixed;
+    background-repeat: no-repeat;*/
+}
+</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QLabel" name="LoadingLabel">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+  color:white;
+  background-color:black;
+}</string>
+      </property>
+      <property name="text">
+       <string>Loading...</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="PlaylistBox">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Ignored">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <layout class="QHBoxLayout" name="PlaylistBoxFirk">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QTreeView" name="PlaylistsView">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+           <horstretch>1</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>1</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="sizeIncrement">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="mouseTracking">
+          <bool>false</bool>
+         </property>
+         <property name="acceptDrops">
+          <bool>false</bool>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QTreeView{
+  background-color: rgb(26,26, 26,0.5);
+  color:rgb(255, 255, 255);
+  border: 1px solid;
+  outline: 0;
+  show-decoration-selected: 1; /* make the selection span the entire width of the view */
+}
+
+QTreeView{
+    selection-background-color: transparent;
+}
+
+QTreeView::branch:has-siblings:!adjoins-item {
+    border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/stylesheet-vline.png) 0;
+}
+
+QTreeView::branch:has-siblings:adjoins-item {
+    border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/stylesheet-branch-more.png) 0;
+}
+
+QTreeView::branch:!has-children:!has-siblings:adjoins-item {
+    border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/stylesheet-branch-end.png) 0;
+}
+
+QTreeView::branch:has-children:!has-siblings:closed,
+QTreeView::branch:closed:has-children:has-siblings {
+        border-image: none;
+        image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/stylesheet-branch-closed.png);
+}
+
+QTreeView::branch:open:has-children:!has-siblings,
+QTreeView::branch:open:has-children:has-siblings  {
+        border-image: none;
+        image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/stylesheet-branch-open.png);
+}
+
+
+
+QTreeView::item {
+   outline: 0;
+   color:rgb(80,80,80)
+}
+
+
+QTreeView  QAbstractItemView
+{
+     border: none;
+}
+
+
+QTreeView::item:selected {
+    background: rgb(18,18,18,0.3);
+    color:white;
+}
+QTreeView::item:selected:!active {
+   background: rgb(18,18,18,0.3);
+   color:white;
+}
+
+QTreeView::item:selected {
+    color:white;
+}
+QTreeView::item:selected:!active {
+   color:white;
+}
+
+QTreeView::item:hover {
+    background: rgb(20,20,20,0.5);
+    color:#B72E2B;
+}
+
+
+
+
+
+QScrollBar:vertical{
+        background-color: #2A2929;
+        width: 17px;
+        margin: 14px 3px 14px 3px;
+        border: 0px transparent;
+        border-radius: 0px;
+}
+
+QScrollBar::handle:vertical{
+        background-color: #181818;         /* #605F5F; */
+        min-height: 5px;
+}
+QScrollBar::handle:vertical:hover{
+        background-color: #B72E2B;         
+        min-height: 5px;
+}
+
+QScrollBar::sub-line:vertical{
+        margin: 3px 0px 3px 0px;
+        border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/SliderUp.png);
+        height: 11px;
+        width: 11px;
+        subcontrol-position: top;
+        subcontrol-origin: margin;
+}
+
+QScrollBar::add-line:vertical{
+        margin: 3px 0px 3px 0px;
+        border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/SliderDown.png);
+        height: 11px;
+        width: 11px;
+        subcontrol-position: bottom;
+        subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:vertical:hover,QScrollBar::sub-line:vertical:on{
+        border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/SliderUpA.png);
+        height: 11px;
+        width: 11px;
+        subcontrol-position: top;
+        subcontrol-origin: margin;
+}
+
+QScrollBar::add-line:vertical:hover, QScrollBar::add-line:vertical:on{
+        border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/SliderDownA.png);
+        height: 11px;
+        width: 11px;
+        subcontrol-position: bottom;
+        subcontrol-origin: margin;
+}
+
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical{
+        background: none;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical{
+        background: none;
+}</string>
+         </property>
+         <property name="verticalScrollBarPolicy">
+          <enum>Qt::ScrollBarAlwaysOn</enum>
+         </property>
+         <property name="animated">
+          <bool>true</bool>
+         </property>
+         <property name="headerHidden">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_5">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QListView" name="PlaylistView">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Chicago</family>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="acceptDrops">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">
+
+QScrollBar:vertical{
+        background-color: #2A2929;
+        width: 17px;
+        margin: 14px 3px 14px 3px;
+        border: 0px transparent;
+        border-radius: 0px;
+}
+
+QScrollBar::handle:vertical{
+        background-color: #181818;         /* #605F5F; */
+        min-height: 5px;
+}
+QScrollBar::handle:vertical:hover{
+        background-color: #B72E2B;         
+        min-height: 5px;
+}
+
+QScrollBar::sub-line:vertical{
+        margin: 3px 0px 3px 0px;
+        border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/SliderUp.png);
+        height: 11px;
+        width: 11px;
+        subcontrol-position: top;
+        subcontrol-origin: margin;
+}
+
+QScrollBar::add-line:vertical{
+        margin: 3px 0px 3px 0px;
+        border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/SliderDown.png);
+        height: 11px;
+        width: 11px;
+        subcontrol-position: bottom;
+        subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:vertical:hover,QScrollBar::sub-line:vertical:on{
+        border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/SliderUpA.png);
+        height: 11px;
+        width: 11px;
+        subcontrol-position: top;
+        subcontrol-origin: margin;
+}
+
+QScrollBar::add-line:vertical:hover, QScrollBar::add-line:vertical:on{
+        border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/SliderDownA.png);
+        height: 11px;
+        width: 11px;
+        subcontrol-position: bottom;
+        subcontrol-origin: margin;
+}
+
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical{
+        background: none;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical{
+        background: none;
+}
+
+
+
+
+QListView{
+  background-color: rgb(0, 0, 0,0.2);
+  color:rgb(255, 255, 255);
+  border: 1px solid;
+   outline: 0;
+}
+
+QListView {
+    show-decoration-selected: 1; /* make the selection span the entire width of the view */
+}
+
+QListView::item {
+   outline: 0;
+}
+QListView::item {
+
+}
+
+QListView  QAbstractItemView
+{
+     border: none;
+}
+
+
+QListView::item:selected {
+    background: rgb(20,20,20,0.5);
+    color:white;
+}
+QListView::item:selected:!active {
+   background: rgb(20,20,20,0.5);
+   color:white;
+}
+
+/*
+QListView::item:alternate {
+    background: #EEEEEE;
+}
+
+QListView::item:selected {
+    border: 1px solid #6a6ea9;
+}
+
+QListView::item:selected:!active {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #ABAFE5, stop: 1 #8588B2);
+}
+
+QListView::item:selected:active {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #6a6ea9, stop: 1 #888dd9);
+}
+
+QListView::item:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #FAFBFE, stop: 1 #DCDEF1);
+}
+
+*/
+QListWidget {padding: 0px;}
+QListWidget::item { margin: 0px; }
+
+QMenu {
+    background-color: rgb(50,50,50); /* sets background of the menu */
+    border: 1px solid black;
+}
+
+QMenu::item {
+    /* sets background of menu item. set this to something non-transparent
+        if you want menu color and menu item color to be different */
+    background-color: transparent;
+    color:white;
+}
+
+QMenu::item:selected { /* when user selects item using mouse or keyboard */
+    background-color: #B72E2B;
+}
+
+/*
+
+
+
+
+QListView{
+  background-color: rgb(0,0, 0,0.2);
+  color:rgb(255, 255, 255);
+  border: 1px solid;
+  outline: none;
+}
+
+QListView {
+    show-decoration-selected:1;
+}
+
+
+
+
+*/
+
+
+
+
+
+
+
+</string>
+           </property>
+           <property name="verticalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOn</enum>
+           </property>
+           <property name="horizontalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+           <property name="autoScrollMargin">
+            <number>0</number>
+           </property>
+           <property name="editTriggers">
+            <set>QAbstractItemView::NoEditTriggers</set>
+           </property>
+           <property name="dragEnabled">
+            <bool>true</bool>
+           </property>
+           <property name="dragDropMode">
+            <enum>QAbstractItemView::NoDragDrop</enum>
+           </property>
+           <property name="selectionMode">
+            <enum>QAbstractItemView::ExtendedSelection</enum>
+           </property>
+           <property name="selectionBehavior">
+            <enum>QAbstractItemView::SelectItems</enum>
+           </property>
+           <property name="spacing">
+            <number>10</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="PlaylistCommandBar">
+           <property name="styleSheet">
+            <string notr="true">QGroupBox{
+   background-color:black;
+   border: none;
+   border-top: 1px solid;
+   border-color: rgb(16,16,16)
+}</string>
+           </property>
+           <property name="flat">
+            <bool>false</bool>
+           </property>
+           <property name="checkable">
+            <bool>false</bool>
+           </property>
+           <layout class="QHBoxLayout" name="PlaylistCommandBarFirk">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="sizeConstraint">
+             <enum>QLayout::SetDefaultConstraint</enum>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QPushButton" name="AddTreakPlaylist">
+              <property name="minimumSize">
+               <size>
+                <width>30</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>30</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="autoFillBackground">
+               <bool>false</bool>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton{
+  background-color: rgb(48, 48, 48);
+  border: none;
+  border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/add-openNew.png);
+}
+QPushButton:hover{
+  background-color: rgb(183,46,43);
+  border: none;
+  border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/add-openNew.png);
+}
+
+QPushButton:pressed{
+  background-color: rgb(183,46,43);
+  border: none;
+  border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/add-openNewA.png);
+
+} 
+ </string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>30</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="shortcut">
+               <string notr="true"/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="RemoveTreakPlaylist">
+              <property name="minimumSize">
+               <size>
+                <width>30</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>30</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton{
+  background-color: rgb(48, 48, 48);
+  border: none;
+  border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/removeNew.png);
+}
+QPushButton:hover{
+  background-color: rgb(183,46,43);
+  border: none;
+  border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/removeNew.png);
+}
+
+QPushButton:pressed{
+  background-color: rgb(183,46,43);
+  border: none;
+  border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/removeNewA.png);
+
+}
+</string>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>30</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="shortcut">
+               <string notr="true"/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="MenuPlaylist">
+              <property name="minimumSize">
+               <size>
+                <width>30</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>30</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton{
+  background-color: rgb(48, 48, 48);
+  border: none;
+  border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/menuplaylistNew.png);
+}
+QPushButton:hover{
+  background-color: rgb(183,46,43);
+  border: none;
+  border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/menuplaylistNew.png);
+}
+
+QPushButton:pressed{
+  background-color: rgb(183,46,43);
+  border: none;
+  border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/menuplaylistNewA.png);
+
+}
+</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>30</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="shortcut">
+               <string notr="true"/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="FoxStatusBar">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Ignored" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="font">
+               <font>
+                <family>Chicago</family>
+                <pointsize>12</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QLabel{
+background-color: rgba(0,0,0,0);
+color:white;
+}</string>
+              </property>
+              <property name="text">
+               <string>FoxStatusBar</string>
+              </property>
+              <property name="textFormat">
+               <enum>Qt::AutoText</enum>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QSlider" name="ProgressBarTreakSlider">
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+QSlider{
+background-color: rgba(0,0,0,0);
+border: 0px solid;
+ border-color:rgb(128, 128, 128);
+}
+/*
+QSlider::groove:horizontal {
+    border: 1px solid;
+    height: 22px;
+    margin: 0px;
+    border-color:rgb(128, 128, 128);
+    }
+QSlider::handle:horizontal {
+    background-color: white;
+    height: 40px;
+    width: 1px;
+    margin: -15px 0px;
+   
+    }
+*/
+
+QSlider{
+            }
+            QSlider::groove:horizontal {  
+                 height: 22px;
+                margin: 0px;
+                border-radius: 0px;
+                background: rgba(21,21,21,1);
+            }
+            QSlider::handle:horizontal {
+                /*background: #b00;
+                width: 8px;*/
+                background-color: white;
+                width: 0px;
+                border-radius: 0px;
+            }
+            QSlider::sub-page:qlineargradient {
+                background: rgb(183,46,43);
+                border-radius: 0px;
+            }</string>
+      </property>
+      <property name="maximum">
+       <number>1000</number>
+      </property>
+      <property name="singleStep">
+       <number>300</number>
+      </property>
+      <property name="value">
+       <number>50</number>
+      </property>
+      <property name="tracking">
+       <bool>false</bool>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="invertedAppearance">
+       <bool>false</bool>
+      </property>
+      <property name="invertedControls">
+       <bool>false</bool>
+      </property>
+      <property name="tickPosition">
+       <enum>QSlider::NoTicks</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="PlayerBox">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>115</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>115</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QGroupBox{
+   border:1px solid;
+   border-color:rgb(0,0,0);
+   border-top:0; 
+   border-bottom:0;
+   backgorund-color:rgb(100, 100, 100,1);
+}</string>
+      </property>
+      <layout class="QHBoxLayout" name="PlayerBoxFirk">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QFrame" name="Visualframe">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>115</width>
+           <height>115</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>115</width>
+           <height>115</height>
+          </size>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Plain</enum>
+         </property>
+         <widget class="QLabel" name="AlbumImg">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>115</width>
+            <height>115</height>
+           </rect>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>115</width>
+            <height>115</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>115</width>
+            <height>115</height>
+           </size>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap>img/Missing_Texture2.png</pixmap>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="MSMPmenu">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>30</width>
+            <height>30</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"> 
+QPushButton{
+  background-color: rgba(18, 18, 18,0);
+  color: rgba(18, 18, 18,0);
+  border: none;
+}
+QPushButton:hover{
+  background-color: rgb(100,100, 100);
+  color: rgb(100,100, 100);
+  border: none;
+  border-image : url(icon.png);
+}
+
+QPushButton:pressed{
+  background-color: rgb(200,200, 200);
+  color:  rgb(200,200, 200);
+  border: none;
+  border-image : url(icon.png);
+}
+</string>
+          </property>
+          <property name="text">
+           <string notr="true"/>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>30</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="shortcut">
+           <string notr="true"/>
+          </property>
+          <property name="autoRepeat">
+           <bool>false</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>false</bool>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="ContorlPanel">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>115</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>115</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QGroupBox{
+   background-color:rgb(16,16,16);/*qlineargradient(spread:pad, x1:0.278, y1:1, x2:0, y2:1, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(255, 255, 255, 255));*/
+   color:rgb(0,0,0);
+   border:none;
+   border-bottom: 1px solid;
+}</string>
+         </property>
+         <layout class="QVBoxLayout" name="ControlPanelFirk">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <property name="spacing">
+             <number>10</number>
+            </property>
+            <property name="leftMargin">
+             <number>5</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QPushButton" name="PreviousTreakButton">
+              <property name="minimumSize">
+               <size>
+                <width>35</width>
+                <height>35</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>35</width>
+                <height>35</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton{
+  background-color:  rgb(80, 80, 80);
+  border: none;
+  border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/previousNew.png);
+}
+QPushButton:hover{
+  background-color: rgb(183,46,43);
+  border: none;
+  border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/previousNew.png);
+}
+
+QPushButton:pressed{
+  background-color: rgb(183,46,43);
+  border: none;
+  border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/previousNewA.png);
+
+}</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>33</width>
+                <height>33</height>
+               </size>
+              </property>
+              <property name="checkable">
+               <bool>false</bool>
+              </property>
+              <property name="flat">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="StopButton">
+              <property name="minimumSize">
+               <size>
+                <width>35</width>
+                <height>35</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>35</width>
+                <height>35</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton{
+  background-color:  rgb(80, 80, 80);
+  border: none;
+  border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/stopNew.png);
+  
+}
+QPushButton:hover{
+  background-color: rgb(183,46,43);
+  border: none;
+ 
+  border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/stopNew.png);
+}
+
+QPushButton:pressed{
+  background-color:  rgb(80, 80, 80);
+  border: none;
+  border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/stopNewA.png);
+
+}</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>30</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="checkable">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="PlayButton">
+              <property name="minimumSize">
+               <size>
+                <width>35</width>
+                <height>35</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>35</width>
+                <height>35</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton{
+  background-color: rgb(183,46,43);
+  border: none;
+  border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/playNew.png);
+  
+}
+QPushButton:hover{
+  background-color: rgb(100,100, 100);
+  border: none;
+ 
+  border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/playNew.png);
+}
+
+QPushButton:pressed{
+  background-color: rgb(183,46,43);
+  border: none;
+  border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/playNewA.png);
+
+}</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>30</width>
+                <height>30</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="PauseButton">
+              <property name="minimumSize">
+               <size>
+                <width>35</width>
+                <height>35</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>35</width>
+                <height>35</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton{
+  background-color: rgb(80, 80, 80);
+  border: none;
+  border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/pauseNew.png);
+  
+}
+QPushButton:hover{
+  background-color: rgb(183,46,43);
+  border: none;
+ 
+  border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/pauseNew.png);
+}
+
+QPushButton:pressed{
+  background-color: rgb(183,46,43);
+  border: none;
+  border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/pauseNewA.png);
+
+}</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="NextTreakButton">
+              <property name="minimumSize">
+               <size>
+                <width>35</width>
+                <height>35</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>35</width>
+                <height>35</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton{
+  background-color: rgb(80, 80, 80);
+  border: none;
+  border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/nextNew.png);
+}
+QPushButton:hover{
+  background-color: rgb(183,46,43);
+  border: none;
+  border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/nextNew.png);
+}
+
+QPushButton:pressed{
+  background-color: rgb(183,46,43);
+  border: none;
+  border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/nextNewA.png);
+
+}</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>30</width>
+                <height>30</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="ButtonShowPlSelector">
+              <property name="minimumSize">
+               <size>
+                <width>35</width>
+                <height>35</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>35</width>
+                <height>35</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton{
+  background-color: rgb(50, 50, 50,0);
+  border: none;
+  border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/playlistSelectorNew.png);
+}
+QPushButton:hover{
+  background-color: rgb(100,100, 100,0);
+  border: none;
+  border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/playlistSelectorNewA.png);
+}
+
+QPushButton:pressed{
+  background-color: rgb(50, 50, 50,255);
+  border: none;
+  border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/playlistSelectorNewA.png);
+
+}</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>30</width>
+                <height>30</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="PlayModeTreak">
+              <property name="minimumSize">
+               <size>
+                <width>35</width>
+                <height>35</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>35</width>
+                <height>35</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton{
+  background-color: rgb(80, 80, 80);
+  border: none;
+  border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/nexttreakNew.png);
+}
+QPushButton:hover{
+  background-color: rgb(183,46,43);
+  border: none;
+  border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/nexttreakNew.png);
+}
+
+QPushButton:pressed{
+  background-color: rgb(183,46,43);
+  border: none;
+  border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/nexttreakNewA.png);
+
+}</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>30</width>
+                <height>30</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_3">
+              <property name="spacing">
+               <number>5</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="TreakName">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Ignored" vsizetype="Preferred">
+                  <horstretch>1</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>12</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QLabel{
+background-color: rgba(0,0,0,0);
+color:white;
+}</string>
+                </property>
+                <property name="text">
+                 <string>TestNameTreak</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="AuthorName">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Ignored" vsizetype="Preferred">
+                  <horstretch>1</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>18</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Chicago</family>
+                  <pointsize>11</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QLabel{
+background-color: rgba(0,0,0,0);
+color:white;
+}</string>
+                </property>
+                <property name="text">
+                 <string>NameAuthor</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="AlbumName">
+                <property name="enabled">
+                 <bool>true</bool>
+                </property>
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Ignored" vsizetype="Preferred">
+                  <horstretch>1</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>15</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Chicago</family>
+                  <pointsize>11</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="mouseTracking">
+                 <bool>false</bool>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QLabel{
+background-color: rgba(0,0,0,0);
+color:white;
+}</string>
+                </property>
+                <property name="text">
+                 <string>AlbumName</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_2">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>0</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QLabel" name="DataPath">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Ignored" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Chicago</family>
+                  <pointsize>10</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QLabel{
+background-color: rgba(0,0,0,0);
+color:white;
+}</string>
+                </property>
+                <property name="text">
+                 <string>395720398572359827359087230852089357039284</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_6">
+              <property name="spacing">
+               <number>5</number>
+              </property>
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="InfoLabel">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>1</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Chicago</family>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QLabel{
+background-color: rgba(0,0,0,0);
+color:rgba(255, 0, 0)
+}</string>
+                </property>
+                <property name="text">
+                 <string>0 :Likes
+0 :View</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="TimePlayCounter">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>1</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Chicago</family>
+                  <pointsize>16</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QLabel{
+background-color: rgba(0,0,0,0);
+color:rgba(255, 0, 0)
+}</string>
+                </property>
+                <property name="text">
+                 <string>2:52/5:21</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <action name="actionSettings">
+   <property name="text">
+    <string>Settings</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

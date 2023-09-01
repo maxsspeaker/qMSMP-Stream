@@ -63,11 +63,11 @@
 }
 
 QMainWindow &gt; QWidget {
-   /* border-image : url(A:/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/bg.png);*/
-    /*background-image: url(A:/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/Missing_Texture2.png);*/
+   /* border-image : url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/bg.png);*/
+    /*background-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/Missing_Texture2.png);*/
     background-color: rgb(0, 0, 0);
 
-    /*background-image: url(A:/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/Missing_Texture.png); 0 0 0 0 stretch stretch;
+    /*background-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/Missing_Texture.png); 0 0 0 0 stretch stretch;
         background-size: 10px auto;
     background-attachment: fixed;
     background-repeat: no-repeat;*/
@@ -228,14 +228,14 @@ QPushButton:hover{
   background-color: rgba(100,100, 100);
   color: rgb(100,100, 100);
   border: none;
-  border-image : url(A:/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/icon.png);
+  border-image : url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/icon.png);
 }
 
 QPushButton:pressed{
   background-color: rgba(200,200, 200);
   color:  rgb(200,200, 200);
   border: none;
-  border-image : url(A:/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/icon.png);
+  border-image : url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/icon.png);
 }
 </string>
           </property>
@@ -279,7 +279,7 @@ QPushButton:pressed{
          </property>
          <property name="styleSheet">
           <string notr="true">QGroupBox{
-   background-color:rgb(16,16,16);/*qlineargradient(spread:pad, x1:0.278, y1:1, x2:0, y2:1, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(255, 255, 255, 255));*/
+   background-color:qlineargradient(spread:pad, x1:0, y1:0.0454545, x2:0, y2:0.608, stop:0.048105 rgb(25, 255,25), stop:0.534985 rgba(16, 16, 16, 255), stop:1 rgb(16, 16, 16));/*qlineargradient(spread:pad, x1:0.278, y1:1, x2:0, y2:1, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(255, 255, 255, 255));*/
    color:rgb(0,0,0);
    border:none;
    border-bottom: 1px solid;
@@ -341,6 +341,7 @@ QPushButton:pressed{
                  <font>
                   <family>Chicago</family>
                   <pointsize>16</pointsize>
+                  <weight>75</weight>
                   <bold>true</bold>
                  </font>
                 </property>
@@ -373,6 +374,7 @@ color:white;
                  <font>
                   <family>Chicago</family>
                   <pointsize>11</pointsize>
+                  <weight>75</weight>
                   <bold>true</bold>
                  </font>
                 </property>
@@ -408,6 +410,7 @@ color:white;
                  <font>
                   <family>Chicago</family>
                   <pointsize>11</pointsize>
+                  <weight>75</weight>
                   <bold>true</bold>
                  </font>
                 </property>
@@ -450,6 +453,7 @@ color:white;
                  <font>
                   <family>Chicago</family>
                   <pointsize>10</pointsize>
+                  <weight>75</weight>
                   <bold>true</bold>
                  </font>
                 </property>
@@ -534,6 +538,7 @@ color: rgb(183,46,43);
                  <font>
                   <family>Chicago</family>
                   <pointsize>16</pointsize>
+                  <weight>75</weight>
                   <bold>true</bold>
                  </font>
                 </property>
@@ -587,18 +592,18 @@ color:rgb(183,46,43);
                <string notr="true">QPushButton{
   background-color:  rgb(80, 80, 80);
   border: none;
-  border-image: url(A:/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/previousNew.png);
+  border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/previousNew.png);
 }
 QPushButton:hover{
   background-color: rgb(183,46,43);
   border: none;
-  border-image: url(A:/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/previousNew.png);
+  border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/previousNew.png);
 }
 
 QPushButton:pressed{
   background-color: rgb(183,46,43);
   border: none;
-  border-image: url(A:/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/previousNewA.png);
+  border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/previousNewA.png);
 
 }</string>
               </property>
@@ -637,20 +642,20 @@ QPushButton:pressed{
                <string notr="true">QPushButton{
   background-color:  rgb(80, 80, 80);
   border: none;
-  border-image: url(A:/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/stopNew.png);
+  border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/stopNew.png);
   
 }
 QPushButton:hover{
   background-color: rgb(183,46,43);
   border: none;
  
-  border-image: url(A:/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/stopNew.png);
+  border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/stopNew.png);
 }
 
 QPushButton:pressed{
   background-color:  rgb(80, 80, 80);
   border: none;
-  border-image: url(A:/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/stopNewA.png);
+  border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/stopNewA.png);
 
 }</string>
               </property>
@@ -686,20 +691,20 @@ QPushButton:pressed{
                <string notr="true">QPushButton{
   background-color: rgb(183,46,43);
   border: none;
-  border-image: url(A:/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/playNew.png);
+  border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/playNew.png);
   
 }
 QPushButton:hover{
   background-color: rgb(100,100, 100);
   border: none;
  
-  border-image: url(A:/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/playNew.png);
+  border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/playNew.png);
 }
 
 QPushButton:pressed{
   background-color: rgb(183,46,43);
   border: none;
-  border-image: url(A:/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/playNewA.png);
+  border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/playNewA.png);
 
 }</string>
               </property>
@@ -732,20 +737,20 @@ QPushButton:pressed{
                <string notr="true">QPushButton{
   background-color: rgb(80, 80, 80);
   border: none;
-  border-image: url(A:/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/pauseNew.png);
+  border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/pauseNew.png);
   
 }
 QPushButton:hover{
   background-color: rgb(183,46,43);
   border: none;
  
-  border-image: url(A:/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/pauseNew.png);
+  border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/pauseNew.png);
 }
 
 QPushButton:pressed{
   background-color: rgb(183,46,43);
   border: none;
-  border-image: url(A:/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/pauseNewA.png);
+  border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/pauseNewA.png);
 
 }</string>
               </property>
@@ -772,18 +777,18 @@ QPushButton:pressed{
                <string notr="true">QPushButton{
   background-color: rgb(80, 80, 80);
   border: none;
-  border-image: url(A:/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/nextNew.png);
+  border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/nextNew.png);
 }
 QPushButton:hover{
   background-color: rgb(183,46,43);
   border: none;
-  border-image: url(A:/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/nextNew.png);
+  border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/nextNew.png);
 }
 
 QPushButton:pressed{
   background-color: rgb(183,46,43);
   border: none;
-  border-image: url(A:/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/nextNewA.png);
+  border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/nextNewA.png);
 
 }</string>
               </property>
@@ -904,18 +909,18 @@ QSlider{
                <string notr="true">QPushButton{
   background-color: rgb(80, 80, 80);
   border: none;
-  border-image: url(A:/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/nexttreakNew.png);
+  border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/nexttreakNew.png);
 }
 QPushButton:hover{
   background-color: rgb(183,46,43);
   border: none;
-  border-image: url(A:/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/nexttreakNew.png);
+  border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/nexttreakNew.png);
 }
 
 QPushButton:pressed{
   background-color: rgb(183,46,43);
   border: none;
-  border-image: url(A:/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/nexttreakNewA.png);
+  border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/nexttreakNewA.png);
 
 }</string>
               </property>
@@ -1088,26 +1093,26 @@ QTreeView{
 }
 
 QTreeView::branch:has-siblings:!adjoins-item {
-    border-image: url(A:/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/stylesheet-vline.png) 0;
+    border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/stylesheet-vline.png) 0;
 }
 
 QTreeView::branch:has-siblings:adjoins-item {
-    border-image: url(A:/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/stylesheet-branch-more.png) 0;
+    border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/stylesheet-branch-more.png) 0;
 }
 
 QTreeView::branch:!has-children:!has-siblings:adjoins-item {
-    border-image: url(A:/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/stylesheet-branch-end.png) 0;
+    border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/stylesheet-branch-end.png) 0;
 }
 QTreeView::branch:has-children:!has-siblings:closed,
 QTreeView::branch:closed:has-children:has-siblings {
         border-image: none;
-        image: url(A:/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/stylesheet-branch-closed.png);
+        image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/stylesheet-branch-closed.png);
 }
 
 QTreeView::branch:open:has-children:!has-siblings,
 QTreeView::branch:open:has-children:has-siblings  {
         border-image: none;
-        image: url(A:/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/stylesheet-branch-open.png);
+        image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/stylesheet-branch-open.png);
 }
 
 
@@ -1189,7 +1194,7 @@ QScrollBar::handle:vertical:hover{
 
 QScrollBar::sub-line:vertical{
         margin: 3px 0px 3px 0px;
-        border-image: url(A:/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/SliderUp.png);
+        border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/SliderUp.png);
         background-color: rgb(80, 80, 80);
         height: 11px;
         width: 11px;
@@ -1199,7 +1204,7 @@ QScrollBar::sub-line:vertical{
 
 QScrollBar::add-line:vertical{
         margin: 3px 0px 3px 0px;
-        border-image: url(A:/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/SliderDown.png);
+        border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/SliderDown.png);
         background-color: rgb(80, 80, 80);
         height: 11px;
         width: 11px;
@@ -1208,7 +1213,7 @@ QScrollBar::add-line:vertical{
 }
 
 QScrollBar::sub-line:vertical:hover,QScrollBar::sub-line:vertical:on{
-        border-image: url(A:/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/SliderUp.png);
+        border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/SliderUp.png);
         background-color: rgb(183,46,43);
         height: 11px;
         width: 11px;
@@ -1217,7 +1222,7 @@ QScrollBar::sub-line:vertical:hover,QScrollBar::sub-line:vertical:on{
 }
 
 QScrollBar::add-line:vertical:hover, QScrollBar::add-line:vertical:on{
-        border-image: url(A:/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/SliderDown.png);
+        border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/SliderDown.png);
         background-color: rgb(183,46,43);
         height: 11px;
         width: 11px;
@@ -1270,6 +1275,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical{
             <font>
              <family>Chicago</family>
              <pointsize>10</pointsize>
+             <weight>75</weight>
              <bold>true</bold>
             </font>
            </property>
@@ -1301,7 +1307,7 @@ QScrollBar::handle:vertical:hover{
 
 QScrollBar::sub-line:vertical{
         margin: 3px 0px 3px 0px;
-        border-image: url(A:/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/SliderUp.png);
+        border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/SliderUp.png);
         background-color: rgb(80, 80, 80);
         height: 11px;
         width: 11px;
@@ -1311,7 +1317,7 @@ QScrollBar::sub-line:vertical{
 
 QScrollBar::add-line:vertical{
         margin: 3px 0px 3px 0px;
-        border-image: url(A:/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/SliderDown.png);
+        border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/SliderDown.png);
         background-color: rgb(80, 80, 80);
         height: 11px;
         width: 11px;
@@ -1320,7 +1326,7 @@ QScrollBar::add-line:vertical{
 }
 
 QScrollBar::sub-line:vertical:hover,QScrollBar::sub-line:vertical:on{
-        border-image: url(A:/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/SliderUp.png);
+        border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/SliderUp.png);
         background-color: rgb(183,46,43);
         height: 11px;
         width: 11px;
@@ -1329,7 +1335,7 @@ QScrollBar::sub-line:vertical:hover,QScrollBar::sub-line:vertical:on{
 }
 
 QScrollBar::add-line:vertical:hover, QScrollBar::add-line:vertical:on{
-        border-image: url(A:/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/SliderDown.png);
+        border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/SliderDown.png);
         background-color: rgb(183,46,43);
         height: 11px;
         width: 11px;
@@ -1536,18 +1542,18 @@ QListView {
                <string notr="true">QPushButton{
   background-color: rgb(48, 48, 48);
   border: none;
-  border-image: url(A:/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/add-openNew.png);
+  border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/add-openNew.png);
 }
 QPushButton:hover{
   background-color: rgb(183,46,43);
   border: none;
-  border-image: url(A:/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/add-openNew.png);
+  border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/add-openNew.png);
 }
 
 QPushButton:pressed{
   background-color: rgb(183,46,43);
   border: none;
-  border-image: url(A:/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/add-openNewA.png);
+  border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/add-openNewA.png);
 
 } 
  </string>
@@ -1584,18 +1590,18 @@ QPushButton:pressed{
                <string notr="true">QPushButton{
   background-color: rgb(48, 48, 48);
   border: none;
-  border-image: url(A:/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/removeNew.png);
+  border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/removeNew.png);
 }
 QPushButton:hover{
   background-color: rgb(183,46,43);
   border: none;
-  border-image: url(A:/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/removeNew.png);
+  border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/removeNew.png);
 }
 
 QPushButton:pressed{
   background-color: rgb(183,46,43);
   border: none;
-  border-image: url(A:/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/removeNewA.png);
+  border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/removeNewA.png);
 
 }
 </string>
@@ -1629,18 +1635,18 @@ QPushButton:pressed{
                <string notr="true">QPushButton{
   background-color: rgb(48, 48, 48);
   border: none;
-  border-image: url(A:/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/menuplaylistNew.png);
+  border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/menuplaylistNew.png);
 }
 QPushButton:hover{
   background-color: rgb(183,46,43);
   border: none;
-  border-image: url(A:/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/menuplaylistNew.png);
+  border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/menuplaylistNew.png);
 }
 
 QPushButton:pressed{
   background-color: rgb(183,46,43);
   border: none;
-  border-image: url(A:/YandexDisk/python-projects/MSMPstream/MSMPstreamGit/img/menuplaylistNewA.png);
+  border-image: url(/media/maxsspeaker/HDD_gamesWin/YandexDisk/python-projects/MSMPstream/MSMPstreamGit//img/menuplaylistNewA.png);
 
 }
 </string>
@@ -1671,6 +1677,7 @@ QPushButton:pressed{
                <font>
                 <family>Chicago</family>
                 <pointsize>12</pointsize>
+                <weight>75</weight>
                 <bold>true</bold>
                </font>
               </property>

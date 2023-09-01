@@ -4,10 +4,25 @@ import json, yaml
 class RunAPPEventHandler():
      #FoxMSMPstreamProtocol
      def __init__(self,CustomPort=59715,RunCommands=[]):
-          self.HOST = "127.0.0.1"  
-          self.PORT = 59715  
+          self.HOST = "127.0.0.1"
+          try:
+               if(RunCommands[1]=="--downloader") or (RunCommands[1]=="-d"):
+                    downloaderNode=True
+               else:
+                    downloaderNode=False
+          except IndexError:
+               downloaderNode=False
+               
+          #downloaderNode=True
+          if(downloaderNode):
+               print("downloaderNode")
+               self.PORT = 59716
+          else:
+               self.PORT = 59715
+          self.downloaderNode=downloaderNode
           self.FirstApp=self.RunCommandBox(RunCommands)
           self.ServerStarted=True
+          #return downloaderNode
 
      def RunCommandBox(self,RunCommands=[]):
           with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
@@ -35,9 +50,20 @@ class RunAPPEventHandler():
                          if not data:
                               break
                          try:
-                              print(json.loads(data.decode())[1])
-                              Sirdata=json.loads(data.decode())[1]
-                              dataFix=urllib.parse.unquote(json.loads(data.decode())[1])
+                            #if not(self.downloaderNode):
+                            if(json.loads(data.decode())[1]=="--downloader") or (json.loads(data.decode())[1]=="-d"):
+                                   downloaderNode=True
+                            if not(downloaderNode==self.downloaderNode):
+                                 conn.sendall(data)
+                            else:
+                              print(json.loads(data.decode()))
+                              if(downloaderNode):
+                                   Sirdata=json.loads(data.decode())[2]
+                                   dataFix=urllib.parse.unquote(json.loads(data.decode())[2])
+                              else:
+                                   Sirdata=json.loads(data.decode())[1]
+                                   dataFix=urllib.parse.unquote(json.loads(data.decode())[1])
+                              
                               dataFix2=dataFix.replace("fox-msmp-stream:///?foxdata=","")
                               
                               print(dataFix2)
@@ -52,7 +78,8 @@ class RunAPPEventHandler():
                                    print("firk")
                                    conn.sendall(data)
                                    print("firk22")
-                                   if(ProtocolData.get("ytvideo")):
+                                   if not(self.downloaderNode):
+                                     if(ProtocolData.get("ytvideo")):
                                         print("firk222")
                                         self.MainWindow.TrekBoxUi.NoPlayListMode=True
                                         print("firk1")
@@ -63,31 +90,47 @@ class RunAPPEventHandler():
                                         #self.MainWindow.TrekBoxUi.show()
                                         if(self.MainWindow.TrekBoxUi.TypeTreak):
                                              self.MainWindow.TrekBoxUi.AddTrek()
+                                   else:
+                                        try:
+                                             #Params=json.loads(ProtocolData)
+                                             print(ProtocolData)
+                                             if(ProtocolData.get("YtUrl")):
+                                                  print(ProtocolData["filePatch"])
+                                                  ex.DownloadYtFox(ProtocolData["YtUrl"],ProtocolData["filePatch"])
+                                        except:
+                                             print(traceback.format_exc())
+                                        #if(ProtocolData.get("dataFox")):
+                                        #     print(ProtocolData.get("dataFox"))
 
                               else:
                                    if (str(os.path.splitext(Sirdata)[1]).endswith(".plmsmpsbox")):
                                         conn.sendall(data)
                                         self.MainWindow.OpenPLmsmp(Sirdata)
-                                        
-                                   
+                                   else:
+                                        conn.sendall(data)
+                              print(f"Received {dataFix}")          
+                            #else:
+                            #     pass
                               
                               
 ##                              fixJson={}
 ##                              for key, value  in json.loads(data.decode()):
 ##                                   fixJson[urllib.parse.unquote(key)]=urllib.parse.unquote(value)
 ##                              print(fixJson)
-                              print(f"Received {dataFix}")
+                              
                          except:
                               print(traceback.format_exc())
                               conn.sendall(data)
                     conn.close()
                     
 RunAPPEventHandler=RunAPPEventHandler(RunCommands=sys.argv)
+IsdownloaderNode=RunAPPEventHandler.downloaderNode
 if not(RunAPPEventHandler.FirstApp):
      sys.exit()
+
 from PyQt6 import QtWidgets, QtCore, QtGui
 from PyQt6.QtWidgets import QMessageBox 
-from PyQt6.QtGui import QIcon,QFont,QFileSystemModel
+from PyQt6.QtGui import QIcon,QFont,QFileSystemModel,QPalette
 from os.path import exists
 from PyQt6.uic import loadUi as LoadStyleUI
 from PIL import Image,ImageStat
@@ -97,6 +140,7 @@ import logging
 from logging.handlers import QueueHandler
 import pypresence
 from datetime import date
+
 
 
 logging.basicConfig(filename="all.log",
@@ -126,6 +170,8 @@ logger.info("starting...")
 
 #import mainUI
 import NewMainUI as mainUI
+import NewMainUIDownloader as mainUIDownloader
+import NewMainUImb as mainUimb
 
 
 import TrekBox as TrekBoxUi
@@ -161,7 +207,7 @@ class Slider(QSlider):
      def mousePressEvent(self, event):
         if event.button() == QtCore.Qt.MouseButton.LeftButton:
             new_value = self.minimum() + ((self.maximum() - self.minimum()) * (event.pos().x()-6)) / self.width()
-            self.setValue(new_value)
+            self.setValue(int(new_value))
         super().mousePressEvent(event)
 
 
@@ -410,7 +456,7 @@ class MSMP_RPC():
           
            if not(self.RPC==None):
              if not(PlayNowMusicDataBox["albumTrekPlayNow"]==""):
-                self.RPC.update(
+                self.RPCupdate(
               **{
                   'details': PlayNowMusicDataBox["titleTrekPlayNow"],
                   'state': PlayNowMusicDataBox["artistTrekPlayNow"]+self.lenPlayListStatus,
@@ -423,7 +469,7 @@ class MSMP_RPC():
                   }
               )
              else:
-                  self.RPC.update(
+                  self.RPCupdate(
               **{
                   'details': PlayNowMusicDataBox["titleTrekPlayNow"],
                   'state': PlayNowMusicDataBox["artistTrekPlayNow"]+self.lenPlayListStatus,
@@ -446,7 +492,7 @@ class MSMP_RPC():
           else:
             if not(self.RPC==None):
                if not(PlayNowMusicDataBox["albumTrekPlayNow"]==""):
-                 self.RPC.update(
+                 self.RPCupdate(
               **{
                   'details': PlayNowMusicDataBox["titleTrekPlayNow"],
                   'state': PlayNowMusicDataBox["artistTrekPlayNow"],
@@ -458,7 +504,7 @@ class MSMP_RPC():
                 }
               )
                else:
-                 self.RPC.update(
+                 self.RPCupdate(
               **{
                   'details': PlayNowMusicDataBox["titleTrekPlayNow"],
                   'state': PlayNowMusicDataBox["artistTrekPlayNow"],
@@ -469,6 +515,41 @@ class MSMP_RPC():
                 }  )
       except:printError(traceback.format_exc())
       
+     def RPCupdate(self,details=None,state=None,large_text=None,large_image=None,small_image=None,small_text=None,buttons=None,end=None):
+          try:
+               self.RPC.update(
+                   **{
+                      'details': details,
+                      'state': state,
+                      'large_text':large_text,
+                      'large_image':large_image,
+                      'small_image':small_image,
+                      'small_text':small_text,
+                      'buttons':buttons,
+                      'end': end#((AudioTime-Audiolength)/1000)-((AudioTime-Audiolength)/1000)-((AudioTime-Audiolength)/1000)
+                    }
+                   )
+          except pypresence.exceptions.InvalidID:
+               printError(traceback.format_exc())
+               try:
+                    self.RPC=pypresence.Presence("811577404279619634")
+                    self.RPC.connect()
+                    self.RPC.update(
+                         **{
+                      'details': details,
+                      'state': state,
+                      'large_text':large_text,
+                      'large_image':large_image,
+                      'small_image':small_image,
+                      'small_text':small_text,
+                      'buttons':buttons,
+                      'end': end#((AudioTime-Audiolength)/1000)-((AudioTime-Audiolength)/1000)-((AudioTime-Audiolength)/1000)
+                    }
+                   )
+               except pypresence.exceptions.DiscordNotFound:
+                    self.RPC=None
+               
+               
      def updatePlayerNow(self,PlayNowMusicDataBox,durationTreak=None,PlLen=None,Num=None,NowPlayIconRPC=None,ImgUrl="",buttons=None,timebox=None,firstPlay=False):
 
           if not(durationTreak==None):
@@ -494,7 +575,7 @@ class MSMP_RPC():
                
           if not(self.RPC==None):
             if not(PlayNowMusicDataBox["albumTrekPlayNow"]==""):
-               self.RPC.update(
+               self.RPCupdate(
                    **{
                       'details': PlayNowMusicDataBox["titleTrekPlayNow"],
                       'state': PlayNowMusicDataBox["artistTrekPlayNow"]+self.lenPlayListStatus,
@@ -508,7 +589,7 @@ class MSMP_RPC():
                     }
                    )
             else:
-                self.RPC.update(
+                self.RPCupdate(
                    **{
                       'details': PlayNowMusicDataBox["titleTrekPlayNow"],
                       'state': PlayNowMusicDataBox["artistTrekPlayNow"]+self.lenPlayListStatus,
@@ -537,12 +618,12 @@ class MSMP_RPC():
           
      def updatePlayerStop(self,LoadingMusicMeta):
           if(LoadingMusicMeta): #self.PlayNowMusicDataBox["LoadingMusicMeta"]
-                 if not(self.RPC==None):self.RPC.update(
+                 if not(self.RPC==None):self.RPCupdate(
                      **{
                          'large_image':"missing_texture",
                     })
           else:
-                 if not(self.RPC==None):self.RPC.update(
+                 if not(self.RPC==None):self.RPCupdate(
                      **{
                          'large_image':self.msmp_streamIcon,
                     })
@@ -833,6 +914,7 @@ class MSMPboxPlayer(GibridPlayer):
           self.PlayNowMusicDataBox["view_count"]=-1
           self.PlayNowMusicDataBox["availability"]=None
           self.PlayNowMusicDataBox["upload_date"]=-1
+          self.PlayLocalFile=False
           if not(self.ServerPlaer):
               try:self.lenPlayListStatus=" ("+str(Num+1)+self.localizationBox["iz"]+str(len(self.playlist))+")"
               except:printError(traceback.format_exc())
@@ -1668,6 +1750,7 @@ class MSMPTrekBoxUi(QtWidgets.QDialog,MSMPTrekBoxUi.Ui_Dialog):
           super().__init__()
           self.setupUi(self)
           self.MainWindow=MainWindow
+          self.ContinePlay=False
      def add_functions(self):
           self.buttonBox.accepted.connect(self.AddTrek)
           self.buttonBox.rejected.connect(lambda: self.hide())
@@ -1766,6 +1849,7 @@ class TrekBoxUi(QtWidgets.QDialog,TrekBoxUi.Ui_Dialog):
           self.MainWindow=MainWindow
           self.cookiesFile=cookiesFile
           self.NoPlayListMode=True
+          self.BufferUrlFox=""
      def add_functions(self):
           self.buttonBox.accepted.connect(self.AddTrek)
           self.buttonBox.rejected.connect(lambda: self.hide())
@@ -1923,7 +2007,11 @@ class TrekBoxUi(QtWidgets.QDialog,TrekBoxUi.Ui_Dialog):
           self.hide()
         else:
           self.MainWindow.MSMPboxPlayer.playlist=self.PltoAdd
-          self.MainWindow.MSMPboxPlayer.play(0)
+          if not(self.BufferUrlFox==self.UrlText.text()):
+               self.MainWindow.MSMPboxPlayer.play(0)
+          else:
+               self.MainWindow.MSMPboxPlayer.Num=0
+               self.MainWindow.LestNum=0
           self.MainWindow.MSMPboxPlayer.OpenedplaylistPath=self.MainWindow.PlaylistsFolder+"/"+self.Treaktitle+".plmsmpsbox" 
           self.MainWindow.PlayButton.setEnabled(True)
           self.MainWindow.NextTreakButton.setEnabled(True)
@@ -1936,17 +2024,20 @@ class TrekBoxUi(QtWidgets.QDialog,TrekBoxUi.Ui_Dialog):
           
                
 def excepthook(exc_type, exc_value, exc_tb):
+  if not(exc_type==KeyboardInterrupt):
     tb = "".join(traceback.format_exception(exc_type, exc_value, exc_tb))
     ex.TrekBoxUi.hide()
     print("error catched!")
     print("error message:\n", tb)
-    msg = QtWidgets.QMessageBox(self)
+    msg = QtWidgets.QMessageBox()
     msg.setIcon(QtWidgets.QMessageBox.Icon.Critical)
     msg.setText("MSMP CRASH:")
     msg.setInformativeText(str(tb))
     msg.setWindowTitle("Error")
-    retval = msg.exec_()
+    retval = msg.exec()
     ex.close()
+  else:
+       ex.close()
 
 
 class NameDelegate(QtWidgets.QStyledItemDelegate):
@@ -1974,8 +2065,9 @@ class NameDelegate(QtWidgets.QStyledItemDelegate):
 
 
 
+
                
-class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow): #
+class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow,mainUimb.Ui_MainWindow): #
 
     def __init__(self,RunAPPEventHandler): 
         super().__init__()
@@ -1988,6 +2080,10 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow): #
 
         self.mobileNewMode=False
         self.mobileMode=False
+
+
+
+        #print(color)
 
         
         QtGui.QFontDatabase.addApplicationFont('img/Chicago Regular.ttf')
@@ -2002,11 +2098,31 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow): #
              
         self.mobileNewMode=self.config['MSMP Stream']["mobileMode"]
 
+        self.mobileNewMode=True
+        showFullScreen=False
+
         self.AccentColor=(166, 40, 153)
         self.QAccentColor=QtGui.QColor('rgba(166, 40, 153,255)')
         self.QAccentColor.setRed(self.AccentColor[0])
         self.QAccentColor.setGreen(self.AccentColor[1])
         self.QAccentColor.setBlue(self.AccentColor[2])
+
+        self.NormalColor=(16,16,16)
+        self.QNormalColor=QtGui.QColor('rgba(16,16,16,255)')
+        self.QNormalColor.setRed(self.AccentColor[0])
+        self.QNormalColor.setGreen(self.AccentColor[1])
+        self.QNormalColor.setBlue(self.AccentColor[2])
+        
+        if sys.platform.startswith("linux"):
+             palette = app.palette()
+             
+             self.QAccentColor = palette.color(QPalette.ColorGroup.Normal, QPalette.ColorRole.Highlight)
+             self.AccentColor=self.QAccentColor.getRgb()
+
+             self.QNormalColor = palette.color(QPalette.ColorGroup.Normal, QPalette.ColorRole.Window)
+             self.NormalColor =self.QNormalColor.getRgb()
+             print(self.NormalColor)
+
         #print(self.QAccentColor.getRgb())
         
 
@@ -2019,10 +2135,10 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow): #
 
         if(self.mobileNewMode):
              self.NewMainUI=False
-             LoadStyleUI("ui/untitledNewBoxMb.ui",self)
+             self.setupUimb(self,workingDir=os.path.dirname(sys.argv[0]).replace("\\","/")+"/",AccentColor=self.AccentColor,NormalColor=self.NormalColor)
         else:
              self.NewMainUI=True
-             self.setupUi(self,workingDir=os.path.dirname(sys.argv[0]).replace("\\","/")+"/",AccentColor=self.AccentColor)
+             self.setupUi(self,workingDir=os.path.dirname(sys.argv[0]).replace("\\","/")+"/",AccentColor=self.AccentColor,NormalColor=self.NormalColor)
 
         #self.FixScrollBlat()
         if(self.config['MSMP Stream']["localizationBox"]=="assets/localizationBoxes/ru.localizationBox"):
@@ -2044,23 +2160,7 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow): #
 
         self.update()
 
-        self.qMenuStylesheetFix="""
-QMenu {
-    background-color: rgb(50,50,50); /* sets background of the menu */
-    border: 1px solid black;
-}
-
-QMenu::item {
-    /* sets background of menu item. set this to something non-transparent
-        if you want menu color and menu item color to be different */
-    background-color: transparent;
-    color:white;
-}
-
-QMenu::item:selected { /* when user selects item using mouse or keyboard */
-    background-color: #B72E2B;
-}
-"""
+        
 
         print(self.config['MSMP Stream']['localizationBox'])
         self.lengbox=loadLocal(self.config['MSMP Stream']['localizationBox'])
@@ -2071,6 +2171,7 @@ QMenu::item:selected { /* when user selects item using mouse or keyboard */
 ##            InstanceSettings.append("--effect-fft-window=none")
 
         self.CloseApp=False
+        self.CloseAppFox=0
 
         self.UpdateBgAllowed=False
 
@@ -2217,7 +2318,7 @@ QMenu::item:selected { /* when user selects item using mouse or keyboard */
         
         self.PathImgsCache=self.config['MSMP Stream']['cacheimgpachfolder']
 
-        
+        self.DownloaderProcess=None
         self.add_functions()
 
         if(self.NewMainUI):
@@ -2242,7 +2343,8 @@ QMenu::item:selected { /* when user selects item using mouse or keyboard */
                    
         if(self.mobileNewMode):
              self.PlaylistsView.hide()
-             self.showFullScreen()
+             if(showFullScreen):
+                  self.showFullScreen()
         
         #it.setBackground(QtGui.QColor('red'))
         
@@ -2264,7 +2366,93 @@ QMenu::item:selected { /* when user selects item using mouse or keyboard */
         
         self.EqualizerPlaerVLC=vlc.AudioEqualizer()
         self.setEqualizer()
+
         
+        self.ContinePlay=False
+        self.NoAlbumImgs=False
+
+        if(self.ContinePlay):
+             pass
+             #self.PathToPlMSMPbox=""
+             #self.OpenPlmsmpThread()
+    def ContextMenuRemoveTreak(self):
+         selections=self.PlaylistView.selectedIndexes()
+         if(len(selections)==1):
+                self.PlayListContextMenuItem=self.PlaylistView.model().itemFromIndex(selections[0])
+                
+                del self.MSMPboxPlayer.playlist[self.PlayListContextMenuItem.row()]
+                self.PlaylistView.model().removeRow(self.PlayListContextMenuItem.row())
+         else:
+              FirkItems=len(selections)
+              i=0
+              self.PlayListContextMenuItem=self.PlaylistView.model().itemFromIndex(selections[0]).row()
+
+              while not (i==FirkItems):
+                   del self.MSMPboxPlayer.playlist[self.PlayListContextMenuItem]
+                   self.PlaylistView.model().removeRow(self.PlayListContextMenuItem)
+                   
+                   i=i+1
+    def ContextMenuLoadMix(self):
+         selections=self.PlaylistView.selectedIndexes()
+         
+         self.PlayListContextMenuItem=self.PlaylistView.model().itemFromIndex(selections[0]).row()
+
+         VideoId=self.MSMPboxPlayer.playlist[self.PlayListContextMenuItem]["url"]
+              
+         self.TrekBoxUi.NoPlayListMode=False
+         self.TrekBoxUi.ContinePlay=True
+         self.TrekBoxUi.UrlText.setText(f"https://www.youtube.com/watch?v={VideoId}&list=RD{VideoId}&start_radio=1")
+         self.TrekBoxUi.BufferUrlFox=f"https://www.youtube.com/watch?v={VideoId}&list=RD{VideoId}&start_radio=1"
+         self.TrekBoxUi.show()
+
+              
+    def PlayListContextMenu(self, position):
+        styleColorFox=str(self.AccentColor[0])+","+str(self.AccentColor[1])+","+str(self.AccentColor[2])
+        menu = QtWidgets.QMenu(self)
+
+        selections=self.PlaylistView.selectedIndexes()
+        #print(position)
+
+        # Создание действий для меню
+        self.PlayListContextMenuItem=self.PlaylistView.model().itemFromIndex(selections[0]).row()
+        
+                                        
+        if(len(selections)==1):
+             if(self.MSMPboxPlayer.playlist[self.PlayListContextMenuItem]["ID"]=="YouTube"):
+                  action1 = QtGui.QAction("Загрузить Микс", self)
+                  action1.triggered.connect(self.ContextMenuLoadMix)
+                  menu.addAction(action1)
+             action2 = QtGui.QAction("Удалить трек", self)
+        else:
+             action2 = QtGui.QAction("Удалить треки", self)
+             
+        action2.triggered.connect(self.ContextMenuRemoveTreak)
+        menu.addAction(action2)
+        
+
+        # Добавление действий в меню
+        
+
+        # Показ контекстного меню в указанной позиции
+        
+        
+        menu.setStyleSheet("""QMenu {
+    background-color: rgb(50,50,50); /* sets background of the menu */
+    border: 1px solid black;
+}
+
+QMenu::item {
+    /* sets background of menu item. set this to something non-transparent
+        if you want menu color and menu item color to be different */
+    background-color: transparent;
+    color:white;
+}
+
+QMenu::item:selected { /* when user selects item using mouse or keyboard */
+    background-color: rgb("""+styleColorFox+""");
+}""")
+        menu.exec(self.PlaylistView.viewport().mapToGlobal(position))
+         
     def FixScrollBlat(self):
           styleColorFox=str(self.AccentColor[0])+","+str(self.AccentColor[1])+","+str(self.AccentColor[2])
           self.setStyleSheet("""
@@ -2351,6 +2539,23 @@ QMenu::item:selected { /* when user selects item using mouse or keyboard */
     background-color:  rgb("""+styleColorFox+""");  
 }
 """)
+          self.qMenuStylesheetFix="""
+QMenu {
+    background-color: rgb(50,50,50); /* sets background of the menu */
+    border: 1px solid black;
+}
+
+QMenu::item {
+    /* sets background of menu item. set this to something non-transparent
+        if you want menu color and menu item color to be different */
+    background-color: transparent;
+    color:white;
+}
+
+QMenu::item:selected { /* when user selects item using mouse or keyboard */
+    background-color: rgb("""+styleColorFox+"""); 
+}
+"""
     def add_functions(self):
 
         self.model = self.get_file_tree_model(self.PlaylistsFolder)
@@ -2358,7 +2563,7 @@ QMenu::item:selected { /* when user selects item using mouse or keyboard */
         self.PlaylistsView.setModel(self.model)
         self.PlaylistsView.setRootIndex(self.model.index(self.PlaylistsFolder))
 
-        
+        self.FixScrollBlat()
 
         self.PlaylistsViewShowed=True
         self.PlaylistsView.hideColumn(3)
@@ -2397,6 +2602,7 @@ QMenu::item:selected { /* when user selects item using mouse or keyboard */
 ##             MSMPmenuData.append("SKIN TOP#st")
              MSMPmenuData.append("SKIN BOTTOM#sb")
              MSMPmenuData.append("changeColor#ColorFox")
+             #MSMPmenuData.append("RunDownloader#RuDown") 
 ##             MSMPmenuData.append("SKIN OLD#OLDskin")
 ##             MSMPmenuData.append("SKIN AIMPqt#AIMPskin")
 ##             MSMPmenuData.append("mbMode#mbMode")
@@ -2421,6 +2627,9 @@ QMenu::item:selected { /* when user selects item using mouse or keyboard */
         self.PlayListBox = QtGui.QStandardItemModel()
         self.PlaylistView.setModel(self.PlayListBox)
         self.PlaylistView.setSpacing(0)
+
+        self.PlaylistView.setContextMenuPolicy(QtCore.Qt.ContextMenuPolicy.CustomContextMenu)
+        self.PlaylistView.customContextMenuRequested.connect(self.PlayListContextMenu)
             
         self.PlaylistView.setIconSize(QtCore.QSize(25,25))
         
@@ -2621,6 +2830,45 @@ QMenu::item:selected { /* when user selects item using mouse or keyboard */
         model.setNameFilters(['*'])
         model.setNameFilterDisables(False)
         return model
+
+    def RunDownloaderBox(self):
+            if not(self.MSMPboxPlayer.PlayLocalFile):
+              if (self.DownloaderProcess==None):
+                   print("Run Downloader")
+                   self.DownloaderProcess = QtCore.QProcess()
+                   self.DownloaderProcess.finished.connect(self.DownloaderClosedProcess)
+                   downloadParam=json.dumps({'YtUrl':self.MSMPboxPlayer.playlist[self.MSMPboxPlayer.Num]["url"],'filePatch':self.config['MSMP Stream']["downloadMusicFolder"]+self.MSMPboxPlayer.playlist[self.MSMPboxPlayer.Num]["url"]+'YouTubeAudio.m4a'})
+                        
+                   if(self.MSMPboxPlayer.playlist[self.MSMPboxPlayer.Num]["ID"]=="YouTube"):
+                        if(os.path.basename(sys.argv[0]).split(".")[1]=="exe"):
+                             self.DownloaderProcess.start(sys.argv[0], ["--downloader",downloadParam.replace('"',"'")])
+                        else:
+                             self.DownloaderProcess.start("python", [sys.argv[0],"--downloader",downloadParam.replace('"',"'")])
+                             
+                        self.DownloaderProcess.start(sys.argv[0], ["--downloader",downloadParam.replace('"',"'")])
+                        self.MSMPboxPlayer.PlayLocalFile=True
+                        
+                        print(sys.argv[0], "--downloader",downloadParam.replace('"',"'")) #"{'YtUrl':'jIgD_xSY0YA','filePatch':'jIgD_xSY0YA.m4a'}"  
+              else:
+                   pass
+    
+    def DownloaderClosedProcess(self):
+         print(self.DownloaderProcess.exitCode())
+         if(str(self.DownloaderProcess.exitCode())=="-52"):
+              self.DownloaderAppProcess = QtCore.QProcess()
+              if(os.path.basename(sys.argv[0]).split(".")[1]=="exe"):
+                   self.DownloaderAppProcess.start(sys.argv[0], ["--downloader"])
+              else:
+                   self.DownloaderAppProcess.start("python", [sys.argv[0],"--downloader"])
+              print("running Downloader")
+              time.sleep(5)
+              self.DownloaderProcess=None
+              self.RunDownloaderBox()
+         else:
+              print("DownloaderClosedProcess")
+              self.DownloaderProcess=None
+         
+         
     def SkinChanger(self,Option):
 
          if(Option=="obu"):
@@ -2664,7 +2912,9 @@ github: https://github.com/maxsspeaker/qMSMP-Stream
               self.NewMainUI=False
               if not(self.MSMPboxPlayer.playlist==None):
                    self.ReloadInformation()
-                   
+         elif(Option=="RuDown"):
+              self.RunDownloaderBox()
+                   #self.DownloaderProcessFox = QtCore.QProcess()
          elif(Option=="st"):
               self.DataPath=None
               self.setupUi(self)
@@ -2685,7 +2935,7 @@ github: https://github.com/maxsspeaker/qMSMP-Stream
                    self.QAccentColor=color
                    self.AccentColor=self.QAccentColor.getRgb()
                    self.DataPath=None
-                   self.setupUi(self,workingDir=os.path.dirname(sys.argv[0]).replace("\\","/")+"/",AccentColor=self.AccentColor)
+                   self.setupUi(self,workingDir=os.path.dirname(sys.argv[0]).replace("\\","/")+"/",AccentColor=self.AccentColor,NormalColor=self.NormalColor)
                    self.add_functions()
                    self.FoxStatusBar.setText("")
                    self.show()
@@ -2723,7 +2973,10 @@ github: https://github.com/maxsspeaker/qMSMP-Stream
                    self.ReloadInformation()
                    
     def PlTrekOptions(self,Option):
-         if(Option=="PYtPl"):
+         if(Option=="DwTr"):
+              self.RunDownloaderBox()
+         elif(Option=="PYtPl"):
+              self.TrekBoxUi.ContinePlay=True
               self.TrekBoxUi.NoPlayListMode=False
               self.TrekBoxUi.show()
          elif(Option=="OpPL"):
@@ -2818,25 +3071,25 @@ github: https://github.com/maxsspeaker/qMSMP-Stream
             try:it = QtGui.QStandardItem(ItemP["name"]+"\n"+uploader)
             except KeyError:it = QtGui.QStandardItem(ItemP["Name"]+"\n"+uploader)
             self.PlayListBox.appendRow(it)
-
-            if("soundcloud"==ItemP["ID"]):
+            if not(self.NoAlbumImgs):
+             if("soundcloud"==ItemP["ID"]):
                      urlSoundID=ItemP["IDSoundcloud"]+"SoundCloudAlbumImg.png"
-            elif("YouTube"==ItemP["ID"]):
+             elif("YouTube"==ItemP["ID"]):
                      urlSoundID=ItemP["url"]+"AlbumImg.png"
-            elif("GlobalServerUpload"==ItemP["ID"]):
+             elif("GlobalServerUpload"==ItemP["ID"]):
                  urlSoundID=str(ItemP["IDSound"])+"AlbumImg.png"
-            elif("YandexMusic"==ItemP["ID"]):
+             elif("YandexMusic"==ItemP["ID"]):
                      urlSoundID=str(ItemP["YandexMusicID"])+"YandexMusicAlbumImg.png"
-            elif("VkMusic"==ItemP["ID"]):
+             elif("VkMusic"==ItemP["ID"]):
                      urlSoundID=str(ItemP["vkIDaudio"])+"VkMusicAlbumImg.png"
-            elif ("MyFiles"==ItemP["ID"]) and(os.path.isfile(ItemP["url"])):
+             elif ("MyFiles"==ItemP["ID"]) and(os.path.isfile(ItemP["url"])):
                  pass
-            elif("MSMPNetServer"==ItemP["ID"]):
+             elif("MSMPNetServer"==ItemP["ID"]):
                  urlSoundID=ItemP["hostUrlName"].replace("https://","").replace("http://","")+ItemP["idSoundName"]+"AlbumImg.png"  
-            else:
+             else:
                  continue
                  #urlSoundID=str(ItemP["IDSound"])+"AlbumImg.png"
-            if ("MyFiles"==ItemP["ID"]) and(os.path.isfile(ItemP["url"])):
+             if ("MyFiles"==ItemP["ID"]) and(os.path.isfile(ItemP["url"])):
                     DataImg=GetImgFile(ItemP["url"])
                     if not(DataImg==None): 
                      ImgAlbum = Image.open(DataImg).convert("RGBA")
@@ -2852,9 +3105,9 @@ github: https://github.com/maxsspeaker/qMSMP-Stream
                     else:
                        pixmap=QtGui.QPixmap("img/Missing_Texture.png")
                        it.setData(QtGui.QIcon(pixmap),QtCore.Qt.ItemDataRole.DecorationRole)
-            elif (os.path.isfile(self.PathImgsCache+urlSoundID)): 
+             elif (os.path.isfile(self.PathImgsCache+urlSoundID)): 
                  it.setData(QtGui.QIcon(self.PathImgsCache+urlSoundID),QtCore.Qt.ItemDataRole.DecorationRole)
-            else:
+             else:
                  it.setData(QtGui.QIcon("img/AlbumImgMini.png"),QtCore.Qt.ItemDataRole.DecorationRole)
             if(self.StopParsePL):
                  if(self.NewMainUI):self.FoxStatusBar.setText("")
@@ -2872,6 +3125,7 @@ github: https://github.com/maxsspeaker/qMSMP-Stream
         while not self.CloseApp:
             #print("fox")
             try:
+                      
               MediaBoxStatus=self.MSMPboxPlayer.get_state()
               if not(self.mobileMode):
                    if("State.Opening"==str(MediaBoxStatus)):
@@ -3008,7 +3262,10 @@ QPushButton:pressed{
              print('\n',traceback.format_exc())
              self.LestNum=-1
              return
-        print("Firk1")  
+        print("Firk1")
+        if (self.NoAlbumImgs):
+             self.MSMPboxPlayer.CoverUrlPlayNow=None
+             
         if self.MSMPboxPlayer.CoverUrlPlayNow:
             print("Loading Icon")
             try:
@@ -3146,9 +3403,13 @@ QPushButton:pressed{
                 self.AlbumImg.setPixmap(QtGui.QPixmap("img/Missing_Texture.png"))
             print("Update icon ok")
         else:
-            self.AlbumImg.setPixmap(QtGui.QPixmap("img/X9at37tsrY8AlbumImg.png"))
-            self.notifiBox.ShowNotifi(self.MSMPboxPlayer.PlayNowMusicDataBox["titleTrekPlayNow"],
-                        self.MSMPboxPlayer.PlayNowMusicDataBox["artistTrekPlayNow"])
+             try:self.UpdateInfoBoxLabel()
+             except:pass #if not(self.NewMainUI):
+             if(self.NewMainUI):
+                     self.ChangePlayIcon("play",self.PlayButton,Invert=True)
+            #self.AlbumImg.setPixmap(QtGui.QPixmap("img/X9at37tsrY8AlbumImg.png"))
+            #self.notifiBox.ShowNotifi(self.MSMPboxPlayer.PlayNowMusicDataBox["titleTrekPlayNow"],
+            #            self.MSMPboxPlayer.PlayNowMusicDataBox["artistTrekPlayNow"])
         if not(self.DataPath==None):
              if("soundcloud"==self.MSMPboxPlayer.playlist[self.MSMPboxPlayer.Num]["ID"]):
                      self.DataPath.setText(r"SoundCloud/"+str(self.MSMPboxPlayer.playlist[self.MSMPboxPlayer.Num]["IDSoundcloud"]))
@@ -3183,9 +3444,12 @@ QPushButton:pressed{
 
     def closeEvent(self, event):
        try:
-        reply = QtWidgets.QMessageBox.question(self, "Exit?", "Are you sure to quit?")
+        if not(self.ContinePlay):
+             reply = QtWidgets.QMessageBox.question(self, "Exit?", "Are you sure to quit?")
+        else:
+          reply=None
         
-        if reply == QtWidgets.QMessageBox.StandardButton.Yes:
+        if (reply == QtWidgets.QMessageBox.StandardButton.Yes) or (self.ContinePlay):
             self.CloseApp=True
             if not(self.RPC==None):self.RPC.RPC.close()
             self.MSMPboxPlayer.stop()
@@ -3214,14 +3478,254 @@ QPushButton:pressed{
             action = menu_obj.addAction(data.split("#")[0])
             action.setIconVisibleInMenu(False)
             action.data=data.split("#")[1]
+
+
+class ProgressDelegate(QtWidgets.QStyledItemDelegate):
+    def paint(self, painter, option, index):
+        progress = index.data(QtCore.Qt.ItemDataRole.UserRole + 1000)
+        opt = QtWidgets.QStyleOptionProgressBar()
+        opt.rect = option.rect
+        opt.minimum = 0
+        opt.maximum = 100
+        opt.progress = progress
+        opt.text = "{}%".format(progress)
+        opt.textVisible = True
+        style = ex.style()
+        #print(style)
+        if style:
+            style.drawControl(QtWidgets.QStyle.ControlElement.CE_ProgressBar, opt, painter)
+
+
+class MyYTLoggerNoOut:
+    def __init__(self):
+         self.firk=True
+         pass
+
+        
+    def debug(self, msg):
+         pass
+
+    def info(self, msg):  
+        pass
+
+    def warning(self, msg):
+         print(msg)
+
+    def error(self, msg):
+         print(msg)
+
+
+
+class MainWindowDownloader(QtWidgets.QMainWindow, mainUIDownloader.Ui_MainWindow): #
+
+    def __init__(self,RunAPPEventHandler,AppHidden):
+        data = []
+        super().__init__()
+        self.RunAPPEventHandler=RunAPPEventHandler
+        self.setupUi(self)
+        
+        self.trayIcon = QtWidgets.QSystemTrayIcon(self)
+        icon = QtGui.QIcon("icon.png")
+        self.trayIcon.setIcon(icon)
+        self.trayIcon.setVisible(True)
+
+        self.firstClose=True
+
+        
+        self.trayMenu = QtWidgets.QMenu()
+        
+        if(sys.platform=="linux"):
+             action = QtGui.QAction("Open Downloader", self)
+             action.triggered.connect(self.OpenDownloader)
+             self.trayMenu.addAction(action)
+        
+        action = QtGui.QAction("ShowMsg", self)
+        action.triggered.connect(self.ShowMsg)
+        self.trayMenu.addAction(action)
+        
+        quitAction = QtGui.QAction("Quit", self)
+        quitAction.triggered.connect(self.CloseAction)
+        
+        self.trayMenu.addAction(quitAction)
+        self.trayIcon.setContextMenu(self.trayMenu)#
+        self.trayIcon.activated.connect(self.handleTrayIconActivated)
+
+        self.trayIcon.setToolTip("MSMP Downloader")
+
+
+        #self.pushButton.clicked.connect(self.testDownload)
+
+        
+        
+        #self.trayIcon.activated.connect(self.eventClickTray)
+        #self.trayIcon.setContextMenu(self.TrayMenu)
+
+
+        #app.setQuitOnLastWindowClosed(False)
+        
+        self.CloseApp=False
+
+        self.pEvent = ProcessRunnable(target=self.RunAPPEventHandler.RunEventServer, args=())
+        self.pEvent.start()
+        #
+        self.delegate = ProgressDelegate(self.TreakDownloadList)
+        self.TreakDownloadList.horizontalHeader().setStretchLastSection(True)
+        self.TreakDownloadList.setItemDelegateForColumn(5, self.delegate)
+        self.model = QtGui.QStandardItemModel(0, 4)
+        self.model.setHorizontalHeaderLabels(["#", "Name","Type","Size","Speed", "Progress"])
+        for r, (_id, _name,_type,_size,_speed, _progress) in enumerate(data):
+             it_id = QtGui.QStandardItem(_id)
+             it_name = QtGui.QStandardItem(_name)
+             it_type = QtGui.QStandardItem(_type)
+             it_size = QtGui.QStandardItem(_size)
+             it_speed = QtGui.QStandardItem(_speed)
+             it_progress = QtGui.QStandardItem()
+             it_progress.setData( _progress,QtCore.Qt.ItemDataRole.UserRole+1000)
+             
+             self.model.appendRow([it_id, it_name,it_type,it_size,it_speed, it_progress])
+        self.TreakDownloadList.setModel(self.model)
+        self.TreakDownloadList.horizontalHeader().setSectionResizeMode(1, QtWidgets.QHeaderView.ResizeMode.ResizeToContents)
+        self.p = ProcessRunnable(target=self.updateBgGui, args=())
+        self.p.start()
+        if not(AppHidden):
+             self.show()
+        else:
+             self.firstClose=False
+        self.setStyleSheet('''
+QProgressBar {
+    border: 2px solid rgb(16, 16, 16);
+}
+
+QProgressBar::chunk {
+    background-color: rgb(242, 128, 133); 
+    width: 20px;
+}
+
+''')
+
+        self.DownloadIndexList={}
+
+        #showMessage(title, msg[, icon=QSystemTrayIcon.Information[, msecs=10000]])¶
+    def OpenDownloader(self):
+         self.show()
+         
+    def testDownload(self):
+         self.DownloadYtFox("4rTMvyRJgLQ",r"A:\YandexDisk\python-projects\MSMPstream\MSMPstreamGit\files\Geming.m4a")
+    def ShowMsg(self):
+         self.trayIcon.showMessage("MSMP Downloader", "фыр!",icon=QtWidgets.QSystemTrayIcon.MessageIcon.Information)
+
+    def my_hookDownload(self,d):
+       try:
+        if d['status'] == 'finished':
+            file_tuple = os.path.split(os.path.abspath(d['filename']))
+            print("Done downloading {}".format(file_tuple[1]))
+        if d['status'] == 'downloading':
+            p = d['_percent_str'] #_total_bytes_str #_speed_str #_total_bytes_str
+            p = p.replace('%','')
+            #self.progress.setValue(float(p))
+            #print(int(d["_speed_str"]))
+            self.model.item(self.DownloadIndexList.get(d['info_dict']["id"])[0]-1, 3).setText(str(d["_total_bytes_str"]))
+            self.model.item(self.DownloadIndexList.get(d['info_dict']["id"])[0]-1, 4).setText(str(d["_speed_str"].replace("\x1b[0;32m","").replace("\x1b[0m","")))
+            self.model.item(self.DownloadIndexList.get(d['info_dict']["id"])[0]-1, 5).setData(int(float(p.replace("\x1b[0;94m","").replace("\x1b[0m",""))),QtCore.Qt.ItemDataRole.UserRole+1000)
+            if(self.CloseApp):
+                 sys.exit()
+            #print("firk"+p)
+            #print("firk"+p)
+            #print("firk"+p)
+            #print(d['filename'], d['_percent_str'], d['_eta_str'])
+       except:
+            print(traceback.format_exc())
+            if(self.CloseApp):
+                 sys.exit()
             
+    def DownloadYtFox(self,url,filename):
+         ydl_opts = {
+              'forceurl':True,
+              'ignoreerrors': True,
+              'progress_hooks': [self.my_hookDownload],
+              'logger':MyYTLoggerNoOut(),
+              'ignore-config':True,
+              'extract_flat':True,
+              #'extractaudio': True,
+              'format':"bestaudio[ext=m4a]/best[ext=m4a]",
+              'outtmpl':str(filename)
+              }
+         #self.DownloadIndexList=
+         with youtube_dl.YoutubeDL(ydl_opts) as ydl: #
+              r = ydl.extract_info(url, download=False)
+              
+              it_id = QtGui.QStandardItem(str(len(self.DownloadIndexList)+1))
+              it_name = QtGui.QStandardItem(str(r['title'])+" - "+str(r['uploader'].replace(" - Topic","")))
+              it_type = QtGui.QStandardItem("YouTube")
+              it_size = QtGui.QStandardItem("0")
+              it_speed = QtGui.QStandardItem("0")
+              it_progress = QtGui.QStandardItem()
+              it_progress.setData(0,QtCore.Qt.ItemDataRole.UserRole+1000)
+
+              self.model.appendRow([it_id, it_name,it_type,it_size,it_speed, it_progress])
+              self.DownloadIndexList[url]=[len(self.DownloadIndexList)+1,False]
+              
+              self.DownloadP = ProcessRunnable(target=ydl.download, args=([url]))
+              self.DownloadP.start()
+              
+         
+              
+    def updateBgGui(self):
+        while not self.CloseApp:
+             self.TreakDownloadList.update()
+             #self.model.item(1, 5).setData(0,QtCore.Qt.ItemDataRole.UserRole+1000)#.text()
+             time.sleep(0.1)
+             
+    def handleTrayIconActivated(self,reason):
+         if(str(reason)=="ActivationReason.DoubleClick"):
+              self.show()
+          
+    def CloseAction(self):
+         if (True):
+             reply = QtWidgets.QMessageBox.question(self, "Exit?", "Загрузка не завершина, выйти?")
+         else:
+              reply=None
+
+         if (reply == QtWidgets.QMessageBox.StandardButton.Yes) or (False):
+              self.CloseApp=True
+              self.show()
+              self.RunAPPEventHandler.ServerStarted=False
+              self.RunAPPEventHandler.RunCommandBox()
+              self.close()
+         
+    def closeEvent(self, event):
+         if(self.CloseApp):
+              event.accept()
+         else:
+              if(self.firstClose):
+                   self.trayIcon.showMessage('MSMP Downloader', 'Программа свернута в системный лоток.')
+                   self.firstClose=False
+              self.hide()
+              event.ignore()
+         #self.CloseApp=True
+         #event.accept() #event.ignore()
+
+                
+        
+        
 
 if __name__ == '__main__':
-     
+    if (IsdownloaderNode):
+         try:
+              if(sys.argv[2]=="--hidden") or (sys.argv[2]=="-h"):
+                   AppHidden=True
+              else:
+                   sys.exit(-52)
+         except IndexError:
+              AppHidden=False
+              pass
     app = QtWidgets.QApplication(sys.argv)
     
     sys.excepthook = excepthook
-    ex = MainWindow(RunAPPEventHandler)
+    if (IsdownloaderNode):
+         ex = MainWindowDownloader(RunAPPEventHandler,AppHidden)
+    else:
+         ex = MainWindow(RunAPPEventHandler)
     
     sys.exit(app.exec())
     firkbbb

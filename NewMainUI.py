@@ -10,7 +10,7 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 
 
 class Ui_MainWindow(object):
-    def setupUi(self, MainWindow,workingDir,AccentColor=(183,46,43)):
+    def setupUi(self, MainWindow,workingDir,AccentColor=(183,46,43),NormalColor=(16,16,16)):
         MainWindow.setObjectName("MainWindow")
         MainWindow.setWindowModality(QtCore.Qt.WindowModality.NonModal)
         MainWindow.resize(800, 591)
@@ -39,11 +39,11 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QMainWindow > QWidget {\n"
-"   /* border-image : url("+workingDir+"img/bg.png);*/\n"
-"    /*background-image: url("+workingDir+"img/Missing_Texture2.png);*/\n"
+"   /* border-image : url("+workingDir+"/img/bg.png);*/\n"
+"    /*background-image: url("+workingDir+"/img/Missing_Texture2.png);*/\n"
 "    background-color: rgb(0, 0, 0);\n"
 "\n"
-"    /*background-image: url("+workingDir+"img/Missing_Texture.png); 0 0 0 0 stretch stretch;\n"
+"    /*background-image: url("+workingDir+"/img/Missing_Texture.png); 0 0 0 0 stretch stretch;\n"
 "        background-size: 10px auto;\n"
 "    background-attachment: fixed;\n"
 "    background-repeat: no-repeat;*/\n"
@@ -110,14 +110,14 @@ class Ui_MainWindow(object):
 "  background-color: rgba(100,100, 100);\n"
 "  color: rgb(100,100, 100);\n"
 "  border: none;\n"
-"  border-image : url("+workingDir+"img/icon.png);\n"
+"  border-image : url("+workingDir+"/img/icon.png);\n"
 "}\n"
 "\n"
 "QPushButton:pressed{\n"
 "  background-color: rgba(200,200, 200);\n"
 "  color:  rgb(200,200, 200);\n"
 "  border: none;\n"
-"  border-image : url("+workingDir+"img/icon.png);\n"
+"  border-image : url("+workingDir+"/img/icon.png);\n"
 "}\n"
 "")
         self.MSMPmenu.setText("")
@@ -132,7 +132,7 @@ class Ui_MainWindow(object):
         self.ContorlPanel.setMinimumSize(QtCore.QSize(0, 142))
         self.ContorlPanel.setMaximumSize(QtCore.QSize(16777215, 142))
         self.ContorlPanel.setStyleSheet("QGroupBox{\n"
-"   background-color:rgb(16,16,16);/*qlineargradient(spread:pad, x1:0.278, y1:1, x2:0, y2:1, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(255, 255, 255, 255));*/\n"
+"   background-color:qlineargradient(spread:pad, x1:0, y1:0.0454545, x2:0, y2:0.608, stop:0.048105 rgb("+str(NormalColor[0])+","+str(NormalColor[1])+","+str(NormalColor[2])+"), stop:0.534985 rgba(16, 16, 16, 255), stop:1 rgb(16, 16, 16));/*qlineargradient(spread:pad, x1:0.278, y1:1, x2:0, y2:1, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(255, 255, 255, 255));*/\n"
 "   color:rgb(0,0,0);\n"
 "   border:none;\n"
 "   border-bottom: 1px solid;\n"
@@ -161,6 +161,7 @@ class Ui_MainWindow(object):
         font.setFamily("Chicago")
         font.setPointSize(16)
         font.setBold(True)
+        font.setWeight(75)
         self.TreakName.setFont(font)
         self.TreakName.setStyleSheet("QLabel{\n"
 "background-color: rgba(0,0,0,0);\n"
@@ -179,6 +180,7 @@ class Ui_MainWindow(object):
         font.setFamily("Chicago")
         font.setPointSize(11)
         font.setBold(True)
+        font.setWeight(75)
         self.AuthorName.setFont(font)
         self.AuthorName.setStyleSheet("QLabel{\n"
 "background-color: rgba(0,0,0,0);\n"
@@ -198,6 +200,7 @@ class Ui_MainWindow(object):
         font.setFamily("Chicago")
         font.setPointSize(11)
         font.setBold(True)
+        font.setWeight(75)
         self.AlbumName.setFont(font)
         self.AlbumName.setMouseTracking(False)
         self.AlbumName.setStyleSheet("QLabel{\n"
@@ -218,6 +221,7 @@ class Ui_MainWindow(object):
         font.setFamily("Chicago")
         font.setPointSize(10)
         font.setBold(True)
+        font.setWeight(75)
         self.DataPath.setFont(font)
         self.DataPath.setStyleSheet("QLabel{\n"
 "background-color: rgba(0,0,0,0);\n"
@@ -260,6 +264,7 @@ class Ui_MainWindow(object):
         font.setFamily("Chicago")
         font.setPointSize(16)
         font.setBold(True)
+        font.setWeight(75)
         self.TimePlayCounter.setFont(font)
         self.TimePlayCounter.setStyleSheet("QLabel{\n"
 "background-color: rgba(0,0,0,0);\n"
@@ -280,18 +285,18 @@ class Ui_MainWindow(object):
         self.PreviousTreakButton.setStyleSheet("QPushButton{\n"
 "  background-color:  rgb(80, 80, 80);\n"
 "  border: none;\n"
-"  border-image: url("+workingDir+"img/previousNew.png);\n"
+"  border-image: url("+workingDir+"/img/previousNew.png);\n"
 "}\n"
 "QPushButton:hover{\n"
 "  background-color: rgb("+str(AccentColor[0])+","+str(AccentColor[1])+","+str(AccentColor[2])+");\n"
 "  border: none;\n"
-"  border-image: url("+workingDir+"img/previousNew.png);\n"
+"  border-image: url("+workingDir+"/img/previousNew.png);\n"
 "}\n"
 "\n"
 "QPushButton:pressed{\n"
 "  background-color: rgb("+str(AccentColor[0])+","+str(AccentColor[1])+","+str(AccentColor[2])+");\n"
 "  border: none;\n"
-"  border-image: url("+workingDir+"img/previousNewA.png);\n"
+"  border-image: url("+workingDir+"/img/previousNewA.png);\n"
 "\n"
 "}")
         self.PreviousTreakButton.setText("")
@@ -306,20 +311,20 @@ class Ui_MainWindow(object):
         self.StopButton.setStyleSheet("QPushButton{\n"
 "  background-color:  rgb(80, 80, 80);\n"
 "  border: none;\n"
-"  border-image: url("+workingDir+"img/stopNew.png);\n"
+"  border-image: url("+workingDir+"/img/stopNew.png);\n"
 "  \n"
 "}\n"
 "QPushButton:hover{\n"
 "  background-color: rgb("+str(AccentColor[0])+","+str(AccentColor[1])+","+str(AccentColor[2])+");\n"
 "  border: none;\n"
 " \n"
-"  border-image: url("+workingDir+"img/stopNew.png);\n"
+"  border-image: url("+workingDir+"/img/stopNew.png);\n"
 "}\n"
 "\n"
 "QPushButton:pressed{\n"
 "  background-color:  rgb(80, 80, 80);\n"
 "  border: none;\n"
-"  border-image: url("+workingDir+"img/stopNewA.png);\n"
+"  border-image: url("+workingDir+"/img/stopNewA.png);\n"
 "\n"
 "}")
         self.StopButton.setText("")
@@ -333,20 +338,20 @@ class Ui_MainWindow(object):
         self.PlayButton.setStyleSheet("QPushButton{\n"
 "  background-color: rgb("+str(AccentColor[0])+","+str(AccentColor[1])+","+str(AccentColor[2])+");\n"
 "  border: none;\n"
-"  border-image: url("+workingDir+"img/playNew.png);\n"
+"  border-image: url("+workingDir+"/img/playNew.png);\n"
 "  \n"
 "}\n"
 "QPushButton:hover{\n"
 "  background-color: rgb(100,100, 100);\n"
 "  border: none;\n"
 " \n"
-"  border-image: url("+workingDir+"img/playNew.png);\n"
+"  border-image: url("+workingDir+"/img/playNew.png);\n"
 "}\n"
 "\n"
 "QPushButton:pressed{\n"
 "  background-color: rgb("+str(AccentColor[0])+","+str(AccentColor[1])+","+str(AccentColor[2])+");\n"
 "  border: none;\n"
-"  border-image: url("+workingDir+"img/playNewA.png);\n"
+"  border-image: url("+workingDir+"/img/playNewA.png);\n"
 "\n"
 "}")
         self.PlayButton.setText("")
@@ -359,20 +364,20 @@ class Ui_MainWindow(object):
         self.PauseButton.setStyleSheet("QPushButton{\n"
 "  background-color: rgb(80, 80, 80);\n"
 "  border: none;\n"
-"  border-image: url("+workingDir+"img/pauseNew.png);\n"
+"  border-image: url("+workingDir+"/img/pauseNew.png);\n"
 "  \n"
 "}\n"
 "QPushButton:hover{\n"
 "  background-color: rgb("+str(AccentColor[0])+","+str(AccentColor[1])+","+str(AccentColor[2])+");\n"
 "  border: none;\n"
 " \n"
-"  border-image: url("+workingDir+"img/pauseNew.png);\n"
+"  border-image: url("+workingDir+"/img/pauseNew.png);\n"
 "}\n"
 "\n"
 "QPushButton:pressed{\n"
 "  background-color: rgb("+str(AccentColor[0])+","+str(AccentColor[1])+","+str(AccentColor[2])+");\n"
 "  border: none;\n"
-"  border-image: url("+workingDir+"img/pauseNewA.png);\n"
+"  border-image: url("+workingDir+"/img/pauseNewA.png);\n"
 "\n"
 "}")
         self.PauseButton.setText("")
@@ -384,18 +389,18 @@ class Ui_MainWindow(object):
         self.NextTreakButton.setStyleSheet("QPushButton{\n"
 "  background-color: rgb(80, 80, 80);\n"
 "  border: none;\n"
-"  border-image: url("+workingDir+"img/nextNew.png);\n"
+"  border-image: url("+workingDir+"/img/nextNew.png);\n"
 "}\n"
 "QPushButton:hover{\n"
 "  background-color: rgb("+str(AccentColor[0])+","+str(AccentColor[1])+","+str(AccentColor[2])+");\n"
 "  border: none;\n"
-"  border-image: url("+workingDir+"img/nextNew.png);\n"
+"  border-image: url("+workingDir+"/img/nextNew.png);\n"
 "}\n"
 "\n"
 "QPushButton:pressed{\n"
 "  background-color: rgb("+str(AccentColor[0])+","+str(AccentColor[1])+","+str(AccentColor[2])+");\n"
 "  border: none;\n"
-"  border-image: url("+workingDir+"img/nextNewA.png);\n"
+"  border-image: url("+workingDir+"/img/nextNewA.png);\n"
 "\n"
 "}")
         self.NextTreakButton.setText("")
@@ -465,18 +470,18 @@ class Ui_MainWindow(object):
         self.PlayModeTreak.setStyleSheet("QPushButton{\n"
 "  background-color: rgb(80, 80, 80);\n"
 "  border: none;\n"
-"  border-image: url("+workingDir+"img/nexttreakNew.png);\n"
+"  border-image: url("+workingDir+"/img/nexttreakNew.png);\n"
 "}\n"
 "QPushButton:hover{\n"
 "  background-color: rgb("+str(AccentColor[0])+","+str(AccentColor[1])+","+str(AccentColor[2])+");\n"
 "  border: none;\n"
-"  border-image: url("+workingDir+"img/nexttreakNew.png);\n"
+"  border-image: url("+workingDir+"/img/nexttreakNew.png);\n"
 "}\n"
 "\n"
 "QPushButton:pressed{\n"
 "  background-color: rgb("+str(AccentColor[0])+","+str(AccentColor[1])+","+str(AccentColor[2])+");\n"
 "  border: none;\n"
-"  border-image: url("+workingDir+"img/nexttreakNewA.png);\n"
+"  border-image: url("+workingDir+"/img/nexttreakNewA.png);\n"
 "\n"
 "}")
         self.PlayModeTreak.setText("")
@@ -576,26 +581,26 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QTreeView::branch:has-siblings:!adjoins-item {\n"
-"    border-image: url("+workingDir+"img/stylesheet-vline.png) 0;\n"
+"    border-image: url("+workingDir+"/img/stylesheet-vline.png) 0;\n"
 "}\n"
 "\n"
 "QTreeView::branch:has-siblings:adjoins-item {\n"
-"    border-image: url("+workingDir+"img/stylesheet-branch-more.png) 0;\n"
+"    border-image: url("+workingDir+"/img/stylesheet-branch-more.png) 0;\n"
 "}\n"
 "\n"
 "QTreeView::branch:!has-children:!has-siblings:adjoins-item {\n"
-"    border-image: url("+workingDir+"img/stylesheet-branch-end.png) 0;\n"
+"    border-image: url("+workingDir+"/img/stylesheet-branch-end.png) 0;\n"
 "}\n"
 "QTreeView::branch:has-children:!has-siblings:closed,\n"
 "QTreeView::branch:closed:has-children:has-siblings {\n"
 "        border-image: none;\n"
-"        image: url("+workingDir+"img/stylesheet-branch-closed.png);\n"
+"        image: url("+workingDir+"/img/stylesheet-branch-closed.png);\n"
 "}\n"
 "\n"
 "QTreeView::branch:open:has-children:!has-siblings,\n"
 "QTreeView::branch:open:has-children:has-siblings  {\n"
 "        border-image: none;\n"
-"        image: url("+workingDir+"img/stylesheet-branch-open.png);\n"
+"        image: url("+workingDir+"/img/stylesheet-branch-open.png);\n"
 "}\n"
 "\n"
 "\n"
@@ -677,7 +682,7 @@ class Ui_MainWindow(object):
 "\n"
 "QScrollBar::sub-line:vertical{\n"
 "        margin: 3px 0px 3px 0px;\n"
-"        border-image: url("+workingDir+"img/SliderUp.png);\n"
+"        border-image: url("+workingDir+"/img/SliderUp.png);\n"
 "        background-color: rgb(80, 80, 80);\n"
 "        height: 11px;\n"
 "        width: 11px;\n"
@@ -687,7 +692,7 @@ class Ui_MainWindow(object):
 "\n"
 "QScrollBar::add-line:vertical{\n"
 "        margin: 3px 0px 3px 0px;\n"
-"        border-image: url("+workingDir+"img/SliderDown.png);\n"
+"        border-image: url("+workingDir+"/img/SliderDown.png);\n"
 "        background-color: rgb(80, 80, 80);\n"
 "        height: 11px;\n"
 "        width: 11px;\n"
@@ -696,7 +701,7 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QScrollBar::sub-line:vertical:hover,QScrollBar::sub-line:vertical:on{\n"
-"        border-image: url("+workingDir+"img/SliderUp.png);\n"
+"        border-image: url("+workingDir+"/img/SliderUp.png);\n"
 "        background-color: rgb("+str(AccentColor[0])+","+str(AccentColor[1])+","+str(AccentColor[2])+");\n"
 "        height: 11px;\n"
 "        width: 11px;\n"
@@ -705,7 +710,7 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QScrollBar::add-line:vertical:hover, QScrollBar::add-line:vertical:on{\n"
-"        border-image: url("+workingDir+"img/SliderDown.png);\n"
+"        border-image: url("+workingDir+"/img/SliderDown.png);\n"
 "        background-color: rgb("+str(AccentColor[0])+","+str(AccentColor[1])+","+str(AccentColor[2])+");\n"
 "        height: 11px;\n"
 "        width: 11px;\n"
@@ -741,6 +746,7 @@ class Ui_MainWindow(object):
         font.setFamily("Chicago")
         font.setPointSize(10)
         font.setBold(True)
+        font.setWeight(75)
         self.PlaylistView.setFont(font)
         self.PlaylistView.setFocusPolicy(QtCore.Qt.FocusPolicy.NoFocus)
         self.PlaylistView.setAcceptDrops(False)
@@ -765,7 +771,7 @@ class Ui_MainWindow(object):
 "\n"
 "QScrollBar::sub-line:vertical{\n"
 "        margin: 3px 0px 3px 0px;\n"
-"        border-image: url("+workingDir+"img/SliderUp.png);\n"
+"        border-image: url("+workingDir+"/img/SliderUp.png);\n"
 "        background-color: rgb(80, 80, 80);\n"
 "        height: 11px;\n"
 "        width: 11px;\n"
@@ -775,7 +781,7 @@ class Ui_MainWindow(object):
 "\n"
 "QScrollBar::add-line:vertical{\n"
 "        margin: 3px 0px 3px 0px;\n"
-"        border-image: url("+workingDir+"img/SliderDown.png);\n"
+"        border-image: url("+workingDir+"/img/SliderDown.png);\n"
 "        background-color: rgb(80, 80, 80);\n"
 "        height: 11px;\n"
 "        width: 11px;\n"
@@ -784,7 +790,7 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QScrollBar::sub-line:vertical:hover,QScrollBar::sub-line:vertical:on{\n"
-"        border-image: url("+workingDir+"img/SliderUp.png);\n"
+"        border-image: url("+workingDir+"/img/SliderUp.png);\n"
 "        background-color: rgb("+str(AccentColor[0])+","+str(AccentColor[1])+","+str(AccentColor[2])+");\n"
 "        height: 11px;\n"
 "        width: 11px;\n"
@@ -793,7 +799,7 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QScrollBar::add-line:vertical:hover, QScrollBar::add-line:vertical:on{\n"
-"        border-image: url("+workingDir+"img/SliderDown.png);\n"
+"        border-image: url("+workingDir+"/img/SliderDown.png);\n"
 "        background-color: rgb("+str(AccentColor[0])+","+str(AccentColor[1])+","+str(AccentColor[2])+");\n"
 "        height: 11px;\n"
 "        width: 11px;\n"
@@ -949,18 +955,18 @@ class Ui_MainWindow(object):
         self.AddTreakPlaylist.setStyleSheet("QPushButton{\n"
 "  background-color: rgb(48, 48, 48);\n"
 "  border: none;\n"
-"  border-image: url("+workingDir+"img/add-openNew.png);\n"
+"  border-image: url("+workingDir+"/img/add-openNew.png);\n"
 "}\n"
 "QPushButton:hover{\n"
 "  background-color: rgb("+str(AccentColor[0])+","+str(AccentColor[1])+","+str(AccentColor[2])+");\n"
 "  border: none;\n"
-"  border-image: url("+workingDir+"img/add-openNew.png);\n"
+"  border-image: url("+workingDir+"/img/add-openNew.png);\n"
 "}\n"
 "\n"
 "QPushButton:pressed{\n"
 "  background-color: rgb("+str(AccentColor[0])+","+str(AccentColor[1])+","+str(AccentColor[2])+");\n"
 "  border: none;\n"
-"  border-image: url("+workingDir+"img/add-openNewA.png);\n"
+"  border-image: url("+workingDir+"/img/add-openNewA.png);\n"
 "\n"
 "} \n"
 " ")
@@ -975,18 +981,18 @@ class Ui_MainWindow(object):
         self.RemoveTreakPlaylist.setStyleSheet("QPushButton{\n"
 "  background-color: rgb(48, 48, 48);\n"
 "  border: none;\n"
-"  border-image: url("+workingDir+"img/removeNew.png);\n"
+"  border-image: url("+workingDir+"/img/removeNew.png);\n"
 "}\n"
 "QPushButton:hover{\n"
 "  background-color: rgb("+str(AccentColor[0])+","+str(AccentColor[1])+","+str(AccentColor[2])+");\n"
 "  border: none;\n"
-"  border-image: url("+workingDir+"img/removeNew.png);\n"
+"  border-image: url("+workingDir+"/img/removeNew.png);\n"
 "}\n"
 "\n"
 "QPushButton:pressed{\n"
 "  background-color: rgb("+str(AccentColor[0])+","+str(AccentColor[1])+","+str(AccentColor[2])+");\n"
 "  border: none;\n"
-"  border-image: url("+workingDir+"img/removeNewA.png);\n"
+"  border-image: url("+workingDir+"/img/removeNewA.png);\n"
 "\n"
 "}\n"
 "")
@@ -1000,18 +1006,18 @@ class Ui_MainWindow(object):
         self.MenuPlaylist.setStyleSheet("QPushButton{\n"
 "  background-color: rgb(48, 48, 48);\n"
 "  border: none;\n"
-"  border-image: url("+workingDir+"img/menuplaylistNew.png);\n"
+"  border-image: url("+workingDir+"/img/menuplaylistNew.png);\n"
 "}\n"
 "QPushButton:hover{\n"
 "  background-color: rgb("+str(AccentColor[0])+","+str(AccentColor[1])+","+str(AccentColor[2])+");\n"
 "  border: none;\n"
-"  border-image: url("+workingDir+"img/menuplaylistNew.png);\n"
+"  border-image: url("+workingDir+"/img/menuplaylistNew.png);\n"
 "}\n"
 "\n"
 "QPushButton:pressed{\n"
 "  background-color: rgb("+str(AccentColor[0])+","+str(AccentColor[1])+","+str(AccentColor[2])+");\n"
 "  border: none;\n"
-"  border-image: url("+workingDir+"img/menuplaylistNewA.png);\n"
+"  border-image: url("+workingDir+"/img/menuplaylistNewA.png);\n"
 "\n"
 "}\n"
 "")
@@ -1030,6 +1036,7 @@ class Ui_MainWindow(object):
         font.setFamily("Chicago")
         font.setPointSize(12)
         font.setBold(True)
+        font.setWeight(75)
         self.FoxStatusBar.setFont(font)
         self.FoxStatusBar.setStyleSheet("QLabel{\n"
 "background-color: rgba(0,0,0,0);\n"
