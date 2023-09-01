@@ -2098,8 +2098,8 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow,mainUimb.Ui_MainWin
              
         self.mobileNewMode=self.config['MSMP Stream']["mobileMode"]
 
-        self.mobileNewMode=True
-        showFullScreen=False
+        #self.mobileNewMode=True
+        #showFullScreen=False
 
         self.AccentColor=(166, 40, 153)
         self.QAccentColor=QtGui.QColor('rgba(166, 40, 153,255)')
@@ -2343,8 +2343,8 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow,mainUimb.Ui_MainWin
                    
         if(self.mobileNewMode):
              self.PlaylistsView.hide()
-             if(showFullScreen):
-                  self.showFullScreen()
+             #if(showFullScreen):
+                  #self.showFullScreen()
         
         #it.setBackground(QtGui.QColor('red'))
         
@@ -2370,6 +2370,18 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow,mainUimb.Ui_MainWin
         
         self.ContinePlay=False
         self.NoAlbumImgs=False
+
+        qr=self.frameGeometry()           
+        cp=app.primaryScreen().availableGeometry().center()
+        qr.moveCenter(cp)
+        self.move(qr.topLeft())
+        print(app.primaryScreen().availableGeometry())
+
+        size=app.primaryScreen().availableGeometry()
+
+        if(self.mobileNewMode):
+             self.resize(size.width(), size.height() )
+
 
         if(self.ContinePlay):
              pass
