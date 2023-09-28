@@ -1,1 +1,0 @@
-playlistParser.py "https://www.youtube.com/watch?v=IxXVgJdn-XU&list=RDIxXVgJdn-XU&start_radio=1" "Джем – Nosebleed.plmsmpsbox"

@@ -1,5 +1,0 @@
-ffmpeg -i ../deathmetal.mp3 -af "equalizer=f=50:width_type=h:width=50:g=-20, equalizer=f=100:width_type=h:width=100:g=-15, equalizer=f=200:width_type=h:width=100:g=-10, equalizer=f=400:width_type=h:width=100:g=-5" output_audio.mp3
-
-
-
-ffmpeg -i ../deathmetal.mp3 -af "equalizer=f=50:width_type=h:width=50:g=10, equalizer=f=100:width_type=h:width=100:g=5, equalizer=f=200:width_type=h:width=100:g=3, equalizer=f=400:width_type=h:width=100:g=2" output_audio.mp3
