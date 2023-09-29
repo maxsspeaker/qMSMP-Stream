@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=MSMP Stream
+GenericName=Media player
+Exec=MSMPstream %u
+Terminal=false
+Categories=Audio;Player;
+Icon=msmp-downloader

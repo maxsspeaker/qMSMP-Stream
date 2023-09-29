@@ -1,13 +1,8 @@
 import sys,socket, time, os, traceback,random
 import json, yaml
-from lib.EventHandler import EventHandler as RunAPPEventHandler
 
-if __name__ == '__main__':
-     RunAPPEventHandler=RunAPPEventHandler(RunCommands=sys.argv)
-     IsdownloaderNode=RunAPPEventHandler.downloaderNode
-
-     if not(RunAPPEventHandler.FirstApp):
-          sys.exit()
+import MSMPstream
+os.chdir(MSMPstream.__file__.replace(os.path.basename(MSMPstream.__file__),"")) 
 
 from PyQt5 import QtWidgets, QtCore, QtGui
 from PyQt5.QtWidgets import QMessageBox , QFileSystemModel
@@ -50,13 +45,13 @@ logger.info("starting...")
 #logger.addHandler(logging.StreamHandler())
 
 #import mainUI
-from AppUi import NewMainUI as mainUI
-from AppUi import NewMainUIDownloader as mainUIDownloader
-from AppUi import NewMainUImb as mainUimb
+from MSMPstream.AppUi import NewMainUI as mainUI
+from MSMPstream.AppUi import NewMainUIDownloader as mainUIDownloader
+from MSMPstream.AppUi import NewMainUImb as mainUimb
 
 
-from AppUi import TrekBox as TrekBoxUi
-from AppUi import MSMPTrekBox as MSMPTrekBoxUi
+from MSMPstream.AppUi import TrekBox as TrekBoxUi
+from MSMPstream.AppUi import MSMPTrekBox as MSMPTrekBoxUi
 
 from yandex_music import Client as YandexMusicClient
 from vkaudiotoken import supported_clients
@@ -74,13 +69,12 @@ from eyed3 import load
 import vlc
 
 
-from lib.MSMPcore import MSMPboxPlayer
-from lib.qtHelpers import *
-from lib.configLoader import *
-from lib.MSMP_RPC import MSMP_RPC
-from lib.ProcessRunnable import ProcessRunnable
-from lib.notifiBox import notifiBox
-
+from MSMPstream.lib.MSMPcore import MSMPboxPlayer
+from MSMPstream.lib.qtHelpers import *
+from MSMPstream.lib.configLoader import *
+from MSMPstream.lib.MSMP_RPC import MSMP_RPC
+from MSMPstream.lib.ProcessRunnable import ProcessRunnable
+from MSMPstream.lib.notifiBox import notifiBox
 
 
 TrekBoxUi.QtWidgets.QSlider=Slider
@@ -548,8 +542,8 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow,mainUimb.Ui_MainWin
              self.setupUimb(self,workingDir=os.path.dirname(sys.argv[0]).replace("\\","/")+"/",AccentColor=self.AccentColor,NormalColor=self.NormalColor)
         else:
              self.NewMainUI=True
-             self.setupUi(self,workingDir=os.path.dirname(sys.argv[0]).replace("\\","/")+"/",AccentColor=self.AccentColor,NormalColor=self.NormalColor)
-
+             self.setupUi(self,workingDir=MSMPstream.__file__.replace(os.path.basename(MSMPstream.__file__),""),AccentColor=self.AccentColor,NormalColor=self.NormalColor)
+#  #os.path.dirname(sys.argv[0]).replace("\\","/")+"/"
         #self.FixScrollBlat()
         if(self.config['MSMP Stream']["localizationBox"]=="assets/localizationBoxes/ru.localizationBox"):
              self.config['MSMP Stream']['localizationBox']='lengboxs/ru.loclb'
@@ -830,6 +824,7 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow,mainUimb.Ui_MainWin
 
               
     def PlayListContextMenu(self, position):
+      try:
         styleColorFox=str(self.AccentColor[0])+","+str(self.AccentColor[1])+","+str(self.AccentColor[2])
         menu = QtWidgets.QMenu(self)
 
@@ -842,12 +837,12 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow,mainUimb.Ui_MainWin
                                         
         if(len(selections)==1):
              if(self.MSMPboxPlayer.playlist[self.PlayListContextMenuItem]["ID"]=="YouTube"):
-                  action1 = QtGui.QAction("Загрузить Микс", self)
+                  action1 = QtWidgets.QAction("Загрузить Микс", self)
                   action1.triggered.connect(self.ContextMenuLoadMix)
                   menu.addAction(action1)
-             action2 = QtGui.QAction("Удалить трек", self)
+             action2 = QtWidgets.QAction("Удалить трек", self)
         else:
-             action2 = QtGui.QAction("Удалить треки", self)
+             action2 = QtWidgets.QAction("Удалить треки", self)
              
         action2.triggered.connect(self.ContextMenuRemoveTreak)
         menu.addAction(action2)
@@ -875,7 +870,8 @@ QMenu::item:selected { /* when user selects item using mouse or keyboard */
     background-color: rgb("""+styleColorFox+""");
 }""")
         menu.exec(self.PlaylistView.viewport().mapToGlobal(position))
-         
+      except IndexError:
+          pass
     def FixScrollBlat(self):
           styleColorFox=str(self.AccentColor[0])+","+str(self.AccentColor[1])+","+str(self.AccentColor[2])
           self.setStyleSheet("""
@@ -1957,15 +1953,15 @@ class MainWindowDownloader(QtWidgets.QMainWindow, mainUIDownloader.Ui_MainWindow
         self.trayMenu = QtWidgets.QMenu()
         
         if(sys.platform=="linux"):
-             action = QtGui.QAction("Open Downloader", self)
+             action = QtWidgets.QAction("Open Downloader", self)
              action.triggered.connect(self.OpenDownloader)
              self.trayMenu.addAction(action)
         
-        action = QtGui.QAction("ShowMsg", self)
+        action = QtWidgets.QAction("ShowMsg", self)
         action.triggered.connect(self.ShowMsg)
         self.trayMenu.addAction(action)
         
-        quitAction = QtGui.QAction("Quit", self)
+        quitAction = QtWidgets.QAction("Quit", self)
         quitAction.triggered.connect(self.CloseAction)
         
         self.trayMenu.addAction(quitAction)
@@ -2128,19 +2124,20 @@ QProgressBar::chunk {
          #event.accept() #event.ignore()
 
                 
-        
-        
+def main():
+    from MSMPstream.lib.EventHandler import EventHandler as RunAPPEventHandler
 
-if __name__ == '__main__':
-    if (IsdownloaderNode):
-         try:
-              if(sys.argv[2]=="--hidden") or (sys.argv[2]=="-h"):
-                   AppHidden=True
-              else:
-                   sys.exit(-52)
-         except IndexError:
-              AppHidden=False
-              pass
+    global RunAPPEventHandler
+    global IsdownloaderNode
+    global app
+    global ex
+    
+    RunAPPEventHandler=RunAPPEventHandler(RunCommands=sys.argv)
+    IsdownloaderNode=RunAPPEventHandler.downloaderNode
+
+    if not(RunAPPEventHandler.FirstApp):
+          sys.exit()
+          
     app = QtWidgets.QApplication(sys.argv)
     
     sys.excepthook = excepthook
@@ -2148,6 +2145,33 @@ if __name__ == '__main__':
          ex = MainWindowDownloader(RunAPPEventHandler,AppHidden)
     else:
          ex = MainWindow(RunAPPEventHandler)
-    
+
     sys.exit(app.exec())
-    firkbbb
+    
+def mainDownloader():
+    from MSMPstream.lib.EventHandler import EventHandler as RunAPPEventHandler
+    
+    global RunAPPEventHandler
+    global IsdownloaderNode
+    global app
+    global ex
+    
+    RunAPPEventHandler=RunAPPEventHandler(RunCommands=sys.argv)
+    RunAPPEventHandler.downloaderNode=True
+    RunAPPEventHandler.PORT = 59716
+    IsdownloaderNode=RunAPPEventHandler.downloaderNode
+
+    if not(RunAPPEventHandler.FirstApp):
+          sys.exit()
+          
+    app = QtWidgets.QApplication(sys.argv)
+    
+    sys.excepthook = excepthook
+    
+    ex = MainWindowDownloader(RunAPPEventHandler,AppHidden=True)
+    
+    sys.exit(app.exec())        
+
+if __name__ == '__main__':
+     #main()
+    main()

@@ -1,0 +1,7 @@
+include MSMPstream/lengboxs/*
+include MSMPstream/img/*
+include MSMPstream/lib/*
+include MSMPstream/lib/Native/*
+include MSMPstream/AppUi/*
+include MSMPstream/resources/icon.png
+include requirements.txt

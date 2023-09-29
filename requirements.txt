@@ -10,5 +10,5 @@ notify-py
 stagger
 yandex_music
 vkaudiotoken
-pyqt6
+pyqt5
 
