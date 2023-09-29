@@ -9,11 +9,11 @@ if __name__ == '__main__':
      if not(RunAPPEventHandler.FirstApp):
           sys.exit()
 
-from PyQt6 import QtWidgets, QtCore, QtGui
-from PyQt6.QtWidgets import QMessageBox 
-from PyQt6.QtGui import QIcon,QFont,QFileSystemModel,QPalette
+from PyQt5 import QtWidgets, QtCore, QtGui
+from PyQt5.QtWidgets import QMessageBox , QFileSystemModel
+from PyQt5.QtGui import QIcon,QFont,QPalette
 from os.path import exists
-from PyQt6.uic import loadUi as LoadStyleUI
+from PyQt5.uic import loadUi as LoadStyleUI
 from PIL import Image,ImageStat
 from PIL.ImageQt import ImageQt
 import io
@@ -1585,7 +1585,8 @@ github: https://github.com/maxsspeaker/qMSMP-Stream
             #self.MSMPboxPlayer.setpos(int(value))
             self.MSMPboxPlayer.NewPlaerVLC.set_position(int(value)/1000)
             if(str(self.MSMPboxPlayer.get_state())=="State.Playing"):
-                 self.RPC.updatePlayerNow(self.MSMPboxPlayer.PlayNowMusicDataBox,timebox=self.MSMPboxPlayer.NewPlaerVLC.get_time()/1000)
+                 if not (self.RPC==None):
+                      self.RPC.updatePlayerNow(self.MSMPboxPlayer.PlayNowMusicDataBox,timebox=self.MSMPboxPlayer.NewPlaerVLC.get_time()/1000)
             else:
                  self.RPC.timebox=self.MSMPboxPlayer.NewPlaerVLC.get_time()/1000
             #print(int(self.MSMPboxPlayer.NewPlaerVLC.get_position()*100))
@@ -1872,7 +1873,7 @@ QPushButton:pressed{
         
         if (reply == QtWidgets.QMessageBox.StandardButton.Yes) or (self.ContinePlay):
             self.CloseApp=True
-            if not(self.RPC==None):self.RPC.RPC.close()
+            if not(self.RPC.RPC==None):self.RPC.RPC.close()
             self.MSMPboxPlayer.stop()
             self.RunAPPEventHandler.ServerStarted=False
             self.RunAPPEventHandler.RunCommandBox()

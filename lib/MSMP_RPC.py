@@ -22,6 +22,10 @@ class MSMP_RPC():
                     self.RPC.connect()
                except pypresence.exceptions.DiscordNotFound:
                   self.RPC=None
+               except ConnectionRefusedError:
+                  self.RPC=None
+               except pypresence.exceptions.DiscordError:
+                  self.RPC=None
           self.RpcDiscordQueue=None
           self.RPCupdateThread_stop=None
           
