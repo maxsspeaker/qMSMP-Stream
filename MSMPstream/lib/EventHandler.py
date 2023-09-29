@@ -1,11 +1,11 @@
 import sys,socket, time, os, traceback,random,json
-
+import urllib
 
 class EventHandler():
      #FoxMSMPstreamProtocol
      def __init__(self,CustomPort=59715,RunCommands=[],downloaderNodeF=None):
-          self.HOST = "127.0.0.1"
-          if not(downloaderNodeF==None):
+          self.HOST="127.0.0.1"
+          if(downloaderNodeF==None):
            try:
                if(RunCommands[1]=="--downloader") or (RunCommands[1]=="-d"):
                     downloaderNode=True
@@ -98,7 +98,7 @@ class EventHandler():
                                              print(ProtocolData)
                                              if(ProtocolData.get("YtUrl")):
                                                   print(ProtocolData["filePatch"])
-                                                  ex.DownloadYtFox(ProtocolData["YtUrl"],ProtocolData["filePatch"])
+                                                  self.MainWindow.DownloadYtFox(ProtocolData["YtUrl"],ProtocolData["filePatch"])
                                         except:
                                              print(traceback.format_exc())
                                         #if(ProtocolData.get("dataFox")):

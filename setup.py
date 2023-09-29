@@ -15,7 +15,7 @@ long_description = read_file("README.md")
 
 setuptools.setup(
     name="MSMPstream",
-    version="0.7.7",
+    version="0.7.8a",
     author="Maxsspeaker",
     description="A bootstrapper for Roblox and Roblox Studio",
     long_description=long_description,

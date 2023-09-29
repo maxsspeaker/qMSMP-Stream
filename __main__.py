@@ -2,6 +2,7 @@ import sys,socket, time, os, traceback,random
 import json, yaml
 
 import MSMPstream
+print(sys.argv)
 os.chdir(MSMPstream.__file__.replace(os.path.basename(MSMPstream.__file__),"")) 
 
 from PyQt5 import QtWidgets, QtCore, QtGui
@@ -75,6 +76,7 @@ from MSMPstream.lib.configLoader import *
 from MSMPstream.lib.MSMP_RPC import MSMP_RPC
 from MSMPstream.lib.ProcessRunnable import ProcessRunnable
 from MSMPstream.lib.notifiBox import notifiBox
+import MSMPstream.lib.TermuxHelpers
 
 
 TrekBoxUi.QtWidgets.QSlider=Slider
@@ -500,7 +502,7 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow,mainUimb.Ui_MainWin
         if(self.config['MSMP Stream'].get('force-ipv4')==None):
              self.config['MSMP Stream']['force-ipv4']=False
              
-        self.mobileNewMode=self.config['MSMP Stream']["mobileMode"]
+        self.mobileNewMode=self.config['MSMP Stream']['TermuxMbMode']
 
         #self.mobileNewMode=True
         #showFullScreen=False
@@ -539,7 +541,7 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow,mainUimb.Ui_MainWin
 
         if(self.mobileNewMode):
              self.NewMainUI=False
-             self.setupUimb(self,workingDir=os.path.dirname(sys.argv[0]).replace("\\","/")+"/",AccentColor=self.AccentColor,NormalColor=self.NormalColor)
+             self.setupUimb(self,workingDir=MSMPstream.__file__.replace(os.path.basename(MSMPstream.__file__),""),AccentColor=self.AccentColor,NormalColor=self.NormalColor)
         else:
              self.NewMainUI=True
              self.setupUi(self,workingDir=MSMPstream.__file__.replace(os.path.basename(MSMPstream.__file__),""),AccentColor=self.AccentColor,NormalColor=self.NormalColor)
@@ -583,7 +585,7 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow,mainUimb.Ui_MainWin
         print(self.ConfigDir)
 
         if(self.config['MSMP Stream'].get("notifiDisabled")==None):
-             self.config['MSMP Stream']["notifiDisabled"]=False
+             self.config['MSMP Stream']["notifiDisabled"]=False 
 
         if(self.config['MSMP Stream'].get('CDcaseImgRPC')==None):
              self.config['MSMP Stream']['CDcaseImgRPC']=False
@@ -619,7 +621,7 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow,mainUimb.Ui_MainWin
              self.config['MSMP Stream']["YandexMusicTOKEN"]=""
              
         if(OtherApiAlow):
-             self.RPC=MSMP_RPC(RPC=Presence,DirConfig=self.ConfigDir,LastFm=LastFm,version="QT0.7.6a",lengbox=self.lengbox,ImgApiHost=ImgApiHost,ImgApiHostTOKEN=ImgApiHostTOKEN,RPCbuttons=self.config['MSMP Stream RPC']['Discord_Buttons'])
+             self.RPC=MSMP_RPC(RPC=Presence,DirConfig=self.ConfigDir,LastFm=LastFm,version="QT0.7.8a",lengbox=self.lengbox,ImgApiHost=ImgApiHost,ImgApiHostTOKEN=ImgApiHostTOKEN,RPCbuttons=self.config['MSMP Stream RPC']['Discord_Buttons'])
         else:
             self.RPC=None 
         self.MSMPboxPlayer=MSMPboxPlayer(ServerPlaer=True,
@@ -744,7 +746,8 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow,mainUimb.Ui_MainWin
         
         if(self.mobileMode):
                    self.PlaylistsView.hide()
-                   self.showFullScreen()
+                   #self.showFullScreen()
+                   TermuxHelpers.setWindowFullScreen(self,app)
                    
         if(self.mobileNewMode):
              self.PlaylistsView.hide()
@@ -1940,6 +1943,7 @@ class MainWindowDownloader(QtWidgets.QMainWindow, mainUIDownloader.Ui_MainWindow
         data = []
         super().__init__()
         self.RunAPPEventHandler=RunAPPEventHandler
+        self.RunAPPEventHandler.MainWindow = self
         self.setupUi(self)
         
         self.trayIcon = QtWidgets.QSystemTrayIcon(self)
@@ -2105,15 +2109,22 @@ QProgressBar::chunk {
               reply=None
 
          if (reply == QtWidgets.QMessageBox.StandardButton.Yes) or (False):
+              print("close1")
               self.CloseApp=True
               self.show()
+              print("close2")
               self.RunAPPEventHandler.ServerStarted=False
               self.RunAPPEventHandler.RunCommandBox()
+              print("close3")
+              time.sleep(0.5)
               self.close()
+              print("close5")
          
     def closeEvent(self, event):
+         print(self.CloseApp)
          if(self.CloseApp):
               event.accept()
+              sys.exit()
          else:
               if(self.firstClose):
                    self.trayIcon.showMessage('MSMP Downloader', 'Программа свернута в системный лоток.')
@@ -2142,7 +2153,7 @@ def main():
     
     sys.excepthook = excepthook
     if (IsdownloaderNode):
-         ex = MainWindowDownloader(RunAPPEventHandler,AppHidden)
+         ex = MainWindowDownloader(RunAPPEventHandler,AppHidden=False)
     else:
          ex = MainWindow(RunAPPEventHandler)
 
@@ -2156,7 +2167,7 @@ def mainDownloader():
     global app
     global ex
     
-    RunAPPEventHandler=RunAPPEventHandler(RunCommands=sys.argv)
+    RunAPPEventHandler=RunAPPEventHandler(RunCommands=["","-d"],downloaderNodeF=True)
     RunAPPEventHandler.downloaderNode=True
     RunAPPEventHandler.PORT = 59716
     IsdownloaderNode=RunAPPEventHandler.downloaderNode

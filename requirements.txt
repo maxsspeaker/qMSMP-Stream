@@ -1,4 +1,5 @@
-Pillow
+pyqt5
+Pillow==9.0.1
 requests
 yt-dlp
 eyed3
@@ -10,5 +11,5 @@ notify-py
 stagger
 yandex_music
 vkaudiotoken
-pyqt5
+pyyaml
 

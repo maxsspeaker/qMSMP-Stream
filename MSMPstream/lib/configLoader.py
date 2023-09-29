@@ -35,6 +35,7 @@ def loadConfig():
                      'localizationBox': 'lengboxs/ru.loclb',
                      'NowPlayningPlayBoxActive': False,
                      'VideoMode': False,
+                     'TermuxMbMode': False,
                      'latest_playlist':"",
                      'CDcaseImgRPC': False,
                      'force-ipv4':False

@@ -1,5 +1,5 @@
 import os,time
-import pylast,pypresence
+import pylast,pypresence,requests,io
 from PIL import Image
 from MSMPstream.lib.ProcessRunnable import ProcessRunnable
  
