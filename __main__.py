@@ -11,7 +11,7 @@ from PyQt5.QtGui import QIcon,QFont,QPalette
 from os.path import exists
 from PyQt5.uic import loadUi as LoadStyleUI
 from PIL import Image,ImageStat
-from PIL.ImageQt import ImageQt
+#from PIL.ImageQt import ImageQt
 import io
 import logging
 from logging.handlers import QueueHandler
@@ -53,6 +53,7 @@ from MSMPstream.AppUi import NewMainUImb as mainUimb
 
 from MSMPstream.AppUi import TrekBox as TrekBoxUi
 from MSMPstream.AppUi import MSMPTrekBox as MSMPTrekBoxUi
+from MSMPstream.AppUi import SettingsUI
 
 from yandex_music import Client as YandexMusicClient
 from vkaudiotoken import supported_clients
@@ -157,6 +158,7 @@ class MSMPTrekBoxUi(QtWidgets.QDialog,MSMPTrekBoxUi.Ui_Dialog):
           self.setupUi(self)
           self.MainWindow=MainWindow
           self.ContinePlay=False
+          self.TypeTreak=None
      def add_functions(self):
           self.buttonBox.accepted.connect(self.AddTrek)
           self.buttonBox.rejected.connect(lambda: self.hide())
@@ -172,11 +174,11 @@ class MSMPTrekBoxUi(QtWidgets.QDialog,MSMPTrekBoxUi.Ui_Dialog):
                      ImgAlbum.thumbnail((140,140)) #SoundCloudAlbumImg.png #270
           else:
                      ImgAlbum = Image.open(self.MainWindow.PathImgsCache+urlSoundID).convert("RGBA")
-          ImgAlbum =ImageQt(ImgAlbum)
-
+          #ImgAlbum =ImageQt(ImgAlbum)
+          pixmap=ImageQt(ImgAlbum)
           print("Update icon")
           
-          pixmap=QtGui.QPixmap.fromImage(ImgAlbum)
+          #pixmap=QtGui.QPixmap.fromImage(ImgAlbum)
           self.AlbumImg.setPixmap(pixmap)
           
                      
@@ -216,13 +218,22 @@ class MSMPTrekBoxUi(QtWidgets.QDialog,MSMPTrekBoxUi.Ui_Dialog):
                    self.NameAlbum.setText(self.AlbumTrek)
                     
                    self.Urlimg=self.hostUrlName+"/"+dataBox["AlbumImg"]
+                   self.TypeTreak=True
                    self.LoadImgTrek()
              else:
                   if(dataBox["status"]=="OK"):
                        if(dataBox["code"]==404):
                             self.NameTrek.setText("Ошибка: файл не найден")
+                            self.TypeTreak=None
                     
      def AddTrek(self):
+          if(self.TypeTreak==None):
+            msg = QMessageBox(self)
+            msg.setIcon(QMessageBox.Icon.Information)
+            msg.setText("Загрузите поток чтобы вы его могли добавить!")
+            msg.setWindowTitle("Stream not loaded")
+            button = msg.exec()
+            return
           self.MainWindow.MSMPboxPlayer.playlist.append({
                     "ID": "MSMPNetServer",
                     "HostUrlPatch": self.HostUrlPatch,
@@ -256,6 +267,7 @@ class TrekBoxUi(QtWidgets.QDialog,TrekBoxUi.Ui_Dialog):
           self.cookiesFile=cookiesFile
           self.NoPlayListMode=True
           self.BufferUrlFox=""
+          self.TypeTreak=None
      def add_functions(self):
           self.buttonBox.accepted.connect(self.AddTrek)
           self.buttonBox.rejected.connect(lambda: self.hide())
@@ -285,11 +297,11 @@ class TrekBoxUi(QtWidgets.QDialog,TrekBoxUi.Ui_Dialog):
                      ImgAlbum.thumbnail((140,140)) #SoundCloudAlbumImg.png #270
           else:
                      ImgAlbum = Image.open(self.MainWindow.PathImgsCache+urlSoundID).convert("RGBA")
-          ImgAlbum =ImageQt(ImgAlbum)
-
+          #ImgAlbum =ImageQt(ImgAlbum)
+          pixmap=ImageQt(ImgAlbum)           
           print("Update icon")
           
-          pixmap=QtGui.QPixmap.fromImage(ImgAlbum)
+          #pixmap=QtGui.QPixmap.fromImage(ImgAlbum)
           self.AlbumImg.setPixmap(pixmap)
           
      def FindTrek(self,url):
@@ -384,10 +396,14 @@ class TrekBoxUi(QtWidgets.QDialog,TrekBoxUi.Ui_Dialog):
                          except KeyError:
                               playlist.append({"ID":"YouTube","url":r["id"],"name":r['title'],"uploader":'???',"duration":int(r['duration']),"Publis":False})
                   self.PltoAdd=playlist
-               elif(r['extractor']=="soundcloud"):
-                    pass
      def AddTrek(self):
-        if not("YouTube:pl"==self.TypeTreak):
+        if(self.TypeTreak==None):
+            msg = QMessageBox(self)
+            msg.setIcon(QMessageBox.Icon.Information)
+            msg.setText("Загрузите поток чтобы вы его могли добавить!")
+            msg.setWindowTitle("Stream not loaded")
+            button = msg.exec()
+        elif not("YouTube:pl"==self.TypeTreak):
           MusicInfoPars={
                     "ID": self.TypeTreak,
                     "url": self.IdTreak,
@@ -424,6 +440,7 @@ class TrekBoxUi(QtWidgets.QDialog,TrekBoxUi.Ui_Dialog):
           self.MainWindow.PauseButton.setEnabled(True)
           self.MainWindow.StopButton.setEnabled(True)
           self.MainWindow.PreviousTreakButton.setEnabled(True)
+          self.MainWindow.PlaylistsView.itemDelegate().SelectedPatch=""
           try:self.MainWindow.ReloadInformation()
           except:pass
           self.hide()
@@ -451,8 +468,38 @@ class NameDelegate(QtWidgets.QStyledItemDelegate):
         super().initStyleOption(option, index)
         if isinstance(index.model(), QFileSystemModel):
             if not index.model().isDir(index):
-                option.text = index.model().fileInfo(index).baseName()
+               if index.model().filePath(index) == self.SelectedPatch:  
+                   option.text = ""
+               else:
+                   option.text = index.model().fileInfo(index).baseName()
+ 
+                
+    def paint(self, painter, option, index):
+        
+        super().paint(painter, option, index)
 
+        if isinstance(index.model(), QtWidgets.QFileSystemModel):
+            if not index.model().isDir(index): 
+              if index.model().filePath(index) == self.SelectedPatch:  
+                painter.save()
+                
+                if option.state & QtWidgets.QStyle.State_MouseOver:
+                    self.hovered_index = index
+                else:
+                    self.hovered_index = None
+
+                file_name = index.model().fileInfo(index).baseName()
+                if self.hovered_index == index:
+                    painter.setPen(QtGui.QColor(255, 255, 255))  
+                    painter.drawText(option.rect, QtCore.Qt.AlignLeft | QtCore.Qt.AlignVCenter, " "+file_name)
+                else:
+                    painter.setPen(QtGui.QColor(self.AccentColor[0],self.AccentColor[1],self.AccentColor[2]))  
+                    #painter.setBrush(QtGui.QColor(self.AccentColor[0],self.AccentColor[1],self.AccentColor[2])) 
+                    #painter.drawRect(option.rect)
+                    painter.drawText(option.rect, QtCore.Qt.AlignLeft | QtCore.Qt.AlignVCenter, " "+file_name)
+                
+                painter.restore()
+                
     def setEditorData(self, editor, index):
         if isinstance(index.model(), QFileSystemModel):
             if not index.model().isDir(index):
@@ -469,6 +516,256 @@ class NameDelegate(QtWidgets.QStyledItemDelegate):
                 super().setModelData(editor, model.index)
 
 
+
+    
+
+
+
+
+class SettingsUI(QtWidgets.QDialog,SettingsUI.Ui_MSMPsettings): 
+     def __init__(self,MainWindow):
+          super().__init__()
+          self.setupUi(self)
+          self.MainWindow=MainWindow
+          self.groupBox.hide()
+          self.groupBox_2.hide()
+          self.groupbox_4.hide()
+          
+     def checkBox_Equalizer_onClicked(self):
+         self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerOnOff"]=self.checkBox_Equalizer.isChecked()
+
+     def checkBox_DisablePlaylists_onClicked(self):
+         if not(self.checkBox_DisablePlaylists.isChecked()):
+              self.label_3.hide()
+              self.SelectFolderPlaylistLineEdit.hide()
+              self.SelectFolderPlaylistButton.hide()
+         else:
+             self.label_3.show()
+             self.SelectFolderPlaylistLineEdit.show()
+             self.SelectFolderPlaylistButton.show()
+             
+     def checkBox_Discord_onClicked(self):
+         self.SettingsMenuMain.hide()
+         self.ButtonBox.hide()
+         if not(self.checkBox_Discord.isChecked()):
+             self.label.setText("Отключение discord_RPC...")
+             self.update()
+             self.MainWindow.RPC.StopRpc()
+         else:
+             self.label.setText("Включение discord_RPC...")
+             self.update()
+             self.MainWindow.RPC.StartRpc()
+
+         self.SettingsMenuMain.show()
+         self.ButtonBox.show()
+         self.label.setText("qMSMP Stream")    
+         
+     def setEqualizer(self,EqualizerSettings=None,Custom=False):
+         #self.EqualizerSettings=[7.2,7.2,0,0,0,0,0,0,0,7.2,7.2] #[-9.6,-9.6,-9.6,-4,2.4,11.2,16.0,16.0,16.0,16.7,0]
+         if not(Custom):
+              print("equalizer firk")
+              if(self.MainWindow.config['MSMP Stream Equalizer']["EqualizerOnOff"]):
+                   self.MainWindow.setEqualizer(self.MainWindow.config['MSMP Stream Equalizer']["EqualizerSettings"],Custom=True)
+                   print("equalizer set")
+              else:
+                  self.MainWindow.MSMPboxPlayer.NewPlaerVLC.set_equalizer(None)
+                  print("equalizer disabled")
+              return
+         SetSettings=0
+         i=0
+         while not -1==SetSettings:
+              SetSettings=self.MainWindow.EqualizerPlaerVLC.set_amp_at_index(EqualizerSettings[i],i)
+              i=i+1
+         self.MainWindow.MSMPboxPlayer.NewPlaerVLC.set_equalizer(self.EqualizerPlaerVLC)
+     def SelectColor(self):
+          color = QtWidgets.QColorDialog.getColor()
+          if color.isValid():
+                   self.QAccentColor=color
+                   self.AccentColor=self.QAccentColor.getRgb()
+              
+          styleColorFox=str(self.AccentColor[0])+","+str(self.AccentColor[1])+","+str(self.AccentColor[2])
+          
+          self.ExampleImg.setStyleSheet("""QFrame{
+  border: none;
+  border-image: url(img/MSMPimgExample.png);
+  background: rgb("""+styleColorFox+"""); 
+}""")
+     def changeValueEqualizerSlider(self, value):
+          self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][0]=self.EqualizerSlider_1.value()/10
+          self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][1]=self.EqualizerSlider_2.value()/10
+          self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][2]=self.EqualizerSlider_3.value()/10
+          self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][3]=self.EqualizerSlider_4.value()/10
+          self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][4]=self.EqualizerSlider_5.value()/10
+          self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][5]=self.EqualizerSlider_6.value()/10
+          self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][6]=self.EqualizerSlider_7.value()/10
+          self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][7]=self.EqualizerSlider_8.value()/10
+          self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][8]=self.EqualizerSlider_9.value()/10
+          self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][9]=self.EqualizerSlider_10.value()/10
+          self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][10]=self.EqualizerSlider_11.value()/10
+
+          self.EqualizerIndicator_1.setText(str(self.EqualizerSlider_1.value()/10)+"дб")
+          self.EqualizerIndicator_2.setText(str(self.EqualizerSlider_2.value()/10)+"дб")
+          self.EqualizerIndicator_3.setText(str(self.EqualizerSlider_3.value()/10)+"дб")
+          self.EqualizerIndicator_4.setText(str(self.EqualizerSlider_4.value()/10)+"дб")
+          self.EqualizerIndicator_5.setText(str(self.EqualizerSlider_5.value()/10)+"дб")
+          self.EqualizerIndicator_6.setText(str(self.EqualizerSlider_6.value()/10)+"дб")
+          self.EqualizerIndicator_7.setText(str(self.EqualizerSlider_7.value()/10)+"дб")
+          self.EqualizerIndicator_8.setText(str(self.EqualizerSlider_8.value()/10)+"дб")
+          self.EqualizerIndicator_9.setText(str(self.EqualizerSlider_9.value()/10)+"дб")
+          self.EqualizerIndicator_10.setText(str(self.EqualizerSlider_10.value()/10)+"дб")
+          self.EqualizerIndicator_11.setText(str(self.EqualizerSlider_11.value()/10)+"дб")
+          
+          if(self.checkBox_Equalizer.isChecked()):
+             self.MainWindow.setEqualizer()
+
+     def add_functions(self):
+          self.EqualizerSlider_1.setValue(int(self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][0]*10))
+          self.EqualizerSlider_2.setValue(int(self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][1]*10))
+          self.EqualizerSlider_3.setValue(int(self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][2]*10))
+          self.EqualizerSlider_4.setValue(int(self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][3]*10))
+          self.EqualizerSlider_5.setValue(int(self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][4]*10))
+          self.EqualizerSlider_6.setValue(int(self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][5]*10))
+          self.EqualizerSlider_7.setValue(int(self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][6]*10))
+          self.EqualizerSlider_8.setValue(int(self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][7]*10))
+          self.EqualizerSlider_9.setValue(int(self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][8]*10))
+          self.EqualizerSlider_10.setValue(int(self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][9]*10))
+          self.EqualizerSlider_11.setValue(int(self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][10]*10))
+
+          self.EqualizerSlider_1.valueChanged.connect(self.changeValueEqualizerSlider)
+          self.EqualizerSlider_2.valueChanged.connect(self.changeValueEqualizerSlider)
+          self.EqualizerSlider_3.valueChanged.connect(self.changeValueEqualizerSlider)
+          self.EqualizerSlider_4.valueChanged.connect(self.changeValueEqualizerSlider)
+          self.EqualizerSlider_5.valueChanged.connect(self.changeValueEqualizerSlider)
+          self.EqualizerSlider_6.valueChanged.connect(self.changeValueEqualizerSlider)
+          self.EqualizerSlider_7.valueChanged.connect(self.changeValueEqualizerSlider)
+          self.EqualizerSlider_8.valueChanged.connect(self.changeValueEqualizerSlider)
+          self.EqualizerSlider_9.valueChanged.connect(self.changeValueEqualizerSlider)
+          self.EqualizerSlider_10.valueChanged.connect(self.changeValueEqualizerSlider)
+          self.EqualizerSlider_11.valueChanged.connect(self.changeValueEqualizerSlider)
+
+          self.EqualizerIndicator_1.setText(str(self.EqualizerSlider_1.value()/10)+"дб")
+          self.EqualizerIndicator_2.setText(str(self.EqualizerSlider_2.value()/10)+"дб")
+          self.EqualizerIndicator_3.setText(str(self.EqualizerSlider_3.value()/10)+"дб")
+          self.EqualizerIndicator_4.setText(str(self.EqualizerSlider_4.value()/10)+"дб")
+          self.EqualizerIndicator_5.setText(str(self.EqualizerSlider_5.value()/10)+"дб")
+          self.EqualizerIndicator_6.setText(str(self.EqualizerSlider_6.value()/10)+"дб")
+          self.EqualizerIndicator_7.setText(str(self.EqualizerSlider_7.value()/10)+"дб")
+          self.EqualizerIndicator_8.setText(str(self.EqualizerSlider_8.value()/10)+"дб")
+          self.EqualizerIndicator_9.setText(str(self.EqualizerSlider_9.value()/10)+"дб")
+          self.EqualizerIndicator_10.setText(str(self.EqualizerSlider_10.value()/10)+"дб")
+          self.EqualizerIndicator_11.setText(str(self.EqualizerSlider_11.value()/10)+"дб")
+
+          #EqualizerIndicator_1
+          
+          if(self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerOnOff"]):
+             self.checkBox_Equalizer.setChecked(True)
+
+          if(self.MainWindow.config['MSMP Stream RPC']['Discord_rpc']): 
+             self.checkBox_Discord.setChecked(True)
+
+          if(self.MainWindow.config['MSMP Stream RPC']['last-fmAllowed']): 
+             self.checkBox_lastfm.setChecked(True)
+
+          if not(self.MainWindow.config['MSMP Stream']["PlayListsDisabledView"]):
+              self.checkBox_DisablePlaylists.setChecked(True)
+          else:
+              self.label_3.hide()
+              self.SelectFolderPlaylistLineEdit.hide()
+              self.SelectFolderPlaylistButton.hide()
+
+##          color = QtWidgets.QColorDialog.getColor()
+##          if color.isValid():
+##                   self.QAccentColor=color
+##                   self.AccentColor=self.QAccentColor.getRgb()
+              
+          styleColorFox=str(self.MainWindow.AccentColor[0])+","+str(self.MainWindow.AccentColor[1])+","+str(self.MainWindow.AccentColor[2])
+
+          self.QAccentColor=self.MainWindow.QAccentColor
+          
+          self.ExampleImg.setStyleSheet("""QFrame{
+  border: none;
+  border-image: url(img/MSMPimgExample.png);
+  background: rgb("""+styleColorFox+"""); 
+}""")
+   
+          self.ButtonBox.accepted.connect(lambda:self.applySettings(True))
+          self.ButtonBox.rejected.connect(lambda: self.hide())
+          
+          self.pushButton_2.clicked.connect(lambda: self.SelectColor())
+          
+          self.ButtonBox.button(QtWidgets.QDialogButtonBox.Apply).clicked.connect(lambda: self.applySettings())
+
+          self.checkBox_DisablePlaylists.toggled.connect(self.checkBox_DisablePlaylists_onClicked)
+          
+          #self.LoadTrek.clicked.connect(lambda: self.FindTrek(self.UrlText.text()))
+          
+          self.checkBox_Equalizer.toggled.connect(self.checkBox_Equalizer_onClicked)
+
+          self.checkBox_Discord.toggled.connect(self.checkBox_Discord_onClicked)
+
+          self.listViewBox = QtGui.QStandardItemModel()
+          self.listView.setModel(self.listViewBox)
+          self.listView.setSpacing(0)
+          
+          self.listViewBox.appendRow(QtGui.QStandardItem("Интеграции")) 
+          self.listViewBox.appendRow(QtGui.QStandardItem("Другое"))
+          self.listViewBox.appendRow(QtGui.QStandardItem("Экволайзер"))
+          self.listViewBox.appendRow(QtGui.QStandardItem("Персонализация"))
+
+          self.listView.selectionModel().selectionChanged.connect(self.ListSettingsSelectionChanged)
+
+         
+     def ListSettingsSelectionChanged(self):
+        Selected=self.listView.selectedIndexes()[0].row()
+        self.groupBox.hide()
+        self.groupBox_2.hide()
+        self.groupBox_3.hide()
+        self.groupbox_4.hide()
+        
+        if(Selected==0):
+            self.groupBox.show()
+        if(Selected==1):
+            self.groupBox_2.show()
+        if(Selected==2):
+            self.groupBox_3.show()
+        if(Selected==3):
+            self.groupbox_4.show()
+        
+        
+          
+     def applySettings(self,andExit=False):
+          self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][0]=self.EqualizerSlider_1.value()/10
+          self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][1]=self.EqualizerSlider_2.value()/10
+          self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][2]=self.EqualizerSlider_3.value()/10
+          self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][3]=self.EqualizerSlider_4.value()/10
+          self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][4]=self.EqualizerSlider_5.value()/10
+          self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][5]=self.EqualizerSlider_6.value()/10
+          self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][6]=self.EqualizerSlider_7.value()/10
+          self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][7]=self.EqualizerSlider_8.value()/10
+          self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][8]=self.EqualizerSlider_9.value()/10
+          self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][9]=self.EqualizerSlider_10.value()/10
+          self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][10]=self.EqualizerSlider_11.value()/10
+         
+          if(self.checkBox_Equalizer.isChecked()):
+             self.MainWindow.setEqualizer()
+             self.MainWindow.MSMPboxPlayer.NewPlaerVLC.set_equalizer(self.MainWindow.EqualizerPlaerVLC)
+             
+          else:
+             self.MainWindow.MSMPboxPlayer.NewPlaerVLC.set_equalizer(None)
+
+          if not(self.checkBox_DisablePlaylists.isChecked()):
+              self.MainWindow.config['MSMP Stream']["PlayListsDisabledView"]=True
+          else:
+              self.MainWindow.config['MSMP Stream']["PlayListsDisabledView"]=False
+         
+          with open(self.MainWindow.ConfigDir+"/config.yml","w", encoding='utf-8') as f:
+               yaml.dump(self.MainWindow.config,f)
+         
+          if(andExit):
+             self.hide()
+             
+          if not(self.QAccentColor==self.MainWindow.QAccentColor):
+              self.MainWindow.ChangeColorWindow(self.QAccentColor)
 
 
 
@@ -541,10 +838,11 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow,mainUimb.Ui_MainWin
 
         if(self.mobileNewMode):
              self.NewMainUI=False
-             self.setupUimb(self,workingDir=MSMPstream.__file__.replace(os.path.basename(MSMPstream.__file__),""),AccentColor=self.AccentColor,NormalColor=self.NormalColor)
+             self.setupUimb(self,workingDir="",AccentColor=self.AccentColor,NormalColor=self.NormalColor)
         else:
              self.NewMainUI=True
-             self.setupUi(self,workingDir=MSMPstream.__file__.replace(os.path.basename(MSMPstream.__file__),""),AccentColor=self.AccentColor,NormalColor=self.NormalColor)
+             self.setupUi(self,workingDir="",AccentColor=self.AccentColor,NormalColor=self.NormalColor)
+             #MSMPstream.__file__.replace(os.path.basename(MSMPstream.__file__),"")
 #  #os.path.dirname(sys.argv[0]).replace("\\","/")+"/"
         #self.FixScrollBlat()
         if(self.config['MSMP Stream']["localizationBox"]=="assets/localizationBoxes/ru.localizationBox"):
@@ -584,6 +882,9 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow,mainUimb.Ui_MainWin
 
         print(self.ConfigDir)
 
+        if(self.config['MSMP Stream'].get("PlayListsDisabledView")==None):
+             self.config['MSMP Stream']["PlayListsDisabledView"]=False 
+
         if(self.config['MSMP Stream'].get("notifiDisabled")==None):
              self.config['MSMP Stream']["notifiDisabled"]=False 
 
@@ -617,11 +918,16 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow,mainUimb.Ui_MainWin
              ImgApiHostTOKEN=None
              ImgApiHost=None
 
+        if (self.config['MSMP Stream'].get('ContinePlay')):
+            self.ContinePlay=self.config['MSMP Stream']["ContinePlay"]
+        else:
+            self.ContinePlay=False
+
         if(self.config['MSMP Stream'].get("YandexMusicTOKEN")==None):
              self.config['MSMP Stream']["YandexMusicTOKEN"]=""
              
         if(OtherApiAlow):
-             self.RPC=MSMP_RPC(RPC=Presence,DirConfig=self.ConfigDir,LastFm=LastFm,version="QT0.7.8a",lengbox=self.lengbox,ImgApiHost=ImgApiHost,ImgApiHostTOKEN=ImgApiHostTOKEN,RPCbuttons=self.config['MSMP Stream RPC']['Discord_Buttons'])
+             self.RPC=MSMP_RPC(RPC=Presence,DirConfig=self.ConfigDir,LastFm=LastFm,version="QT"+MSMPstream.__version__,lengbox=self.lengbox,ImgApiHost=ImgApiHost,ImgApiHostTOKEN=ImgApiHostTOKEN,RPCbuttons=self.config['MSMP Stream RPC']['Discord_Buttons'])
         else:
             self.RPC=None 
         self.MSMPboxPlayer=MSMPboxPlayer(ServerPlaer=True,
@@ -650,6 +956,10 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow,mainUimb.Ui_MainWin
 
         self.TrekBoxUi=TrekBoxUi(self,cookiesFile=self.config['MSMP Stream'].get("cookiesFile"))
         self.TrekBoxUi.add_functions()
+        
+        self.SettingsUI=SettingsUI(self)
+        self.SettingsUI.add_functions()
+        
         self.MSMPTrekBoxUi=MSMPTrekBoxUi(self)
         self.MSMPTrekBoxUi.add_functions()
 
@@ -725,6 +1035,8 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow,mainUimb.Ui_MainWin
         
         self.PathImgsCache=self.config['MSMP Stream']['cacheimgpachfolder']
 
+        self.PathToPlMSMPbox =""
+        
         self.DownloaderProcess=None
         self.add_functions()
 
@@ -775,8 +1087,8 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow,mainUimb.Ui_MainWin
         self.EqualizerPlaerVLC=vlc.AudioEqualizer()
         self.setEqualizer()
 
+
         
-        self.ContinePlay=False
         self.NoAlbumImgs=False
 
         qr=self.frameGeometry()           
@@ -792,9 +1104,42 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow,mainUimb.Ui_MainWin
 
 
         if(self.ContinePlay):
-             pass
-             #self.PathToPlMSMPbox=""
-             #self.OpenPlmsmpThread()
+             self.StopParsePL=False
+             self.ContinePlayData=None
+             self.update()
+             self.PathToPlMSMPbox=self.ConfigDir+"/ContinuePlayPlayList.plmsmpsbox"
+             self.OpenPlmsmpThread()
+             if (self.ContinePlayData):
+                if(self.ContinePlayData.get("VersionContinuePlay")=="v0.1.3-beta"):
+                 self.MSMPboxPlayer.Num=self.ContinePlayData["PlayNumber"]
+                 self.LestNum=self.MSMPboxPlayer.Num
+                 self.PlayModeMSMPNum=self.ContinePlayData["TreakModeNum"]
+                 self.PlayModeTreakChange(Update=True)
+                 
+
+                 self.PlayButton.setEnabled(True)
+                 self.NextTreakButton.setEnabled(True)
+                 self.PauseButton.setEnabled(True)
+                 self.StopButton.setEnabled(True)
+                 self.PreviousTreakButton.setEnabled(True)
+                 self.update()
+                 self.UpdateInfoTreakPL(self.MSMPboxPlayer.play(self.MSMPboxPlayer.Num))
+
+                 time.sleep(0.5)
+                 self.update()
+                 self.PlaylistView.update()
+                 self.PlaylistView.verticalScrollBar().setValue(self.ContinePlayData["Procrutca"])
+                 self.MSMPboxPlayer.setpos(self.ContinePlayData["PlayPos"])
+                 self.PathToPlMSMPbox=self.ContinePlayData["PathToPl"]
+                 
+                 self.PlaylistsView.itemDelegate().SelectedPatch=self.PathToPlMSMPbox
+##                     
+##                 self.ContinePlayData{"VersionContinuePlay": "v0.1.3-beta",
+##                                               "PlayNumber": self.MSMPboxPlayer.Num,
+##                                               "PlayPos": self.MSMPboxPlayer.NewPlaerVLC.get_time()/1000,
+##                                               "Procrutca": self.PlaylistsView.verticalScrollBar().value(),
+##                                               "TreakModeNum": PlayModeMSMPNum,
+##                                               "PlayPuase": False},
     def ContextMenuRemoveTreak(self):
          selections=self.PlaylistView.selectedIndexes()
          if(len(selections)==1):
@@ -992,7 +1337,11 @@ QMenu::item:selected { /* when user selects item using mouse or keyboard */
         self.PlaylistsView.hideColumn(2)
         self.PlaylistsView.hideColumn(1)
         self.PlaylistsView.doubleClicked.connect(self.handle_double_click)
+
         delegate = NameDelegate(self.PlaylistsView)
+        delegate.AccentColor=self.AccentColor
+        delegate.SelectedPatch=self.PathToPlMSMPbox 
+        
         self.PlaylistsView.setItemDelegate(delegate)
         
         self.PlayListAddMenu = QtWidgets.QMenu()
@@ -1020,16 +1369,17 @@ QMenu::item:selected { /* when user selects item using mouse or keyboard */
         
 
         if not(self.mobileMode):
-             MSMPmenuData.append(self.lengbox["MSMP Stream"].get("PLshHd")+"#PLshHd")
+            if not(self.config['MSMP Stream']["PlayListsDisabledView"]):
+                MSMPmenuData.append(self.lengbox["MSMP Stream"].get("PLshHd")+"#PLshHd")
+            else:
+                self.PlaylistsView.hide()
 ##             MSMPmenuData.append("SKIN TOP#st")
-             MSMPmenuData.append("SKIN BOTTOM#sb")
-             MSMPmenuData.append("changeColor#ColorFox")
+           # MSMPmenuData.append("SKIN BOTTOM#sb")
              #MSMPmenuData.append("RunDownloader#RuDown") 
 ##             MSMPmenuData.append("SKIN OLD#OLDskin")
 ##             MSMPmenuData.append("SKIN AIMPqt#AIMPskin")
 ##             MSMPmenuData.append("mbMode#mbMode")
 
-        MSMPmenuData.append("setEqualizer#sEq")
         MSMPmenuData.append(self.lengbox["MSMP Stream"].get("Cls")+"#Cls")
         
         if(self.mobileNewMode):
@@ -1041,7 +1391,7 @@ QMenu::item:selected { /* when user selects item using mouse or keyboard */
         
         self.add_menu([self.lengbox["MSMP Stream"].get("addLF")+"#addLF",{self.lengbox["MSMP Stream"].get("addAS")+"#addAS": ["MSMP audio"+"#addAS-Ma",self.lengbox["MSMP Stream"].get("addAS-YV")+"#addAS-YV",self.lengbox["MSMP Stream"].get("addAS-ST")+"#addAS-ST"]}], self.PlayListAddMenu)
 
-        self.add_menu([self.lengbox["MSMP Stream"].get("DwTr")+"#DwTr",self.lengbox["MSMP Stream"].get("SvPL")+"#SvPL",self.lengbox["MSMP Stream"].get("SvPLas")+"#SvPLas",self.lengbox["MSMP Stream"].get("OpPL")+"#OpPL",self.lengbox["MSMP Stream"].get("PYtPl")+"#PYtPl"], self.MenuPlaylistMenu)
+        self.add_menu([self.lengbox["MSMP Stream"].get("DwTr")+"#DwTr",self.lengbox["MSMP Stream"].get("SvPL")+"#SvPL",self.lengbox["MSMP Stream"].get("SvPLas")+"#SvPLas",self.lengbox["MSMP Stream"].get("OpPL")+"#OpPL",self.lengbox["MSMP Stream"].get("FavAdi")+"#FavAdi" ,self.lengbox["MSMP Stream"].get("PYtPl")+"#PYtPl"], self.MenuPlaylistMenu)
 #https://msmp-audio.maxsspeaker.tk/msmp-audio/audio/Space%20Queen-Nglr2WV8mw0
         
 
@@ -1117,8 +1467,9 @@ QMenu::item:selected { /* when user selects item using mouse or keyboard */
          else:
               self.ChangePlayIcon("play",self.PlayButton,Invert=False)
               
-    def PlayModeTreakChange(self):
-         self.PlayModeMSMPNum=self.PlayModeMSMPNum+1
+    def PlayModeTreakChange(self,Update=False):
+         if not(Update):
+             self.PlayModeMSMPNum=self.PlayModeMSMPNum+1
          if(len(self.PlayModeMSMPModes)==self.PlayModeMSMPNum):
               self.PlayModeMSMPNum=0
               #self.PlayModeMSMPModes=["nexttreak","looptreak","randomtreak"]
@@ -1130,17 +1481,19 @@ QMenu::item:selected { /* when user selects item using mouse or keyboard */
               icon6 = QtGui.QIcon()
               icon6.addPixmap(QtGui.QPixmap("img/"+self.PlayModeMSMP+".png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
               self.PlayModeTreak.setIcon(icon6)
-         
+    
     def setEqualizer(self,EqualizerSettings=None,Custom=False):
          #self.EqualizerSettings=[7.2,7.2,0,0,0,0,0,0,0,7.2,7.2] #[-9.6,-9.6,-9.6,-4,2.4,11.2,16.0,16.0,16.0,16.7,0]
          if not(Custom):
-              print("equalizer firk")
+              #print("equalizer firk")
               if(self.config['MSMP Stream Equalizer']["EqualizerOnOff"]):
                    self.setEqualizer(self.config['MSMP Stream Equalizer']["EqualizerSettings"],Custom=True)
-                   print("equalizer set")
+                   self.EqualizerPlaerVLC.set_preamp(self.config["MSMP Stream Equalizer"]["EqualizerSettings"][10])
+                   #print("equalizer set")
+                   return
               else:
                   self.MSMPboxPlayer.NewPlaerVLC.set_equalizer(None)
-                  print("equalizer disabled")
+                  #print("equalizer disabled")
               return
          SetSettings=0
          i=0
@@ -1219,9 +1572,9 @@ QMenu::item:selected { /* when user selects item using mouse or keyboard */
             if ("MyFiles"==ItemP["ID"]) and(os.path.isfile(ItemP["url"])):
                  if not(self.LocalImgCache.get(ItemP["url"])==None):
                        ImgAlbum=self.LocalImgCache.get(ItemP["url"])
-                       ImgAlbum =ImageQt(ImgAlbum)
-                       
-                       pixmap=QtGui.QPixmap.fromImage(ImgAlbum)
+                       #ImgAlbum =ImageQt(ImgAlbum)
+                       #pixmap=QtGui.QPixmap.fromImage(ImgAlbum)
+                       pixmap =ImageQt(ImgAlbum)
                        it.setData(QtGui.QIcon(pixmap),QtCore.Qt.ItemDataRole.DecorationRole)
                  else:
                        pixmap=QtGui.QPixmap("img/Missing_Texture.png")
@@ -1260,15 +1613,17 @@ QMenu::item:selected { /* when user selects item using mouse or keyboard */
                    downloadParam=json.dumps({'YtUrl':self.MSMPboxPlayer.playlist[self.MSMPboxPlayer.Num]["url"],'filePatch':self.config['MSMP Stream']["downloadMusicFolder"]+self.MSMPboxPlayer.playlist[self.MSMPboxPlayer.Num]["url"]+'YouTubeAudio.m4a'})
                         
                    if(self.MSMPboxPlayer.playlist[self.MSMPboxPlayer.Num]["ID"]=="YouTube"):
+                       try:
                         if(os.path.basename(sys.argv[0]).split(".")[1]=="exe"):
                              self.DownloaderProcess.start(sys.argv[0], ["--downloader",downloadParam.replace('"',"'")])
                         else:
                              self.DownloaderProcess.start("python", [sys.argv[0],"--downloader",downloadParam.replace('"',"'")])
-                             
-                        self.DownloaderProcess.start(sys.argv[0], ["--downloader",downloadParam.replace('"',"'")])
-                        self.MSMPboxPlayer.PlayLocalFile=True
+                       except IndexError:
+                           self.DownloaderProcess.start("MSMPdownloader",["-d",downloadParam.replace('"',"'")])
+                       #self.DownloaderProcess.start(sys.argv[0], ["--downloader",downloadParam.replace('"',"'")])
+                       self.MSMPboxPlayer.PlayLocalFile=True
                         
-                        print(sys.argv[0], "--downloader",downloadParam.replace('"',"'")) #"{'YtUrl':'jIgD_xSY0YA','filePatch':'jIgD_xSY0YA.m4a'}"  
+                       print(sys.argv[0], "--downloader",downloadParam.replace('"',"'")) #"{'YtUrl':'jIgD_xSY0YA','filePatch':'jIgD_xSY0YA.m4a'}"  
               else:
                    pass
     
@@ -1276,10 +1631,13 @@ QMenu::item:selected { /* when user selects item using mouse or keyboard */
          print(self.DownloaderProcess.exitCode())
          if(str(self.DownloaderProcess.exitCode())=="-52"):
               self.DownloaderAppProcess = QtCore.QProcess()
-              if(os.path.basename(sys.argv[0]).split(".")[1]=="exe"):
+              try:
+                 if(os.path.basename(sys.argv[0]).split(".")[1]=="exe"):
                    self.DownloaderAppProcess.start(sys.argv[0], ["--downloader"])
-              else:
+                 else:
                    self.DownloaderAppProcess.start("python", [sys.argv[0],"--downloader"])
+              except:
+                  self.DownloaderAppProcess.start("MSMPdownloader")
               print("running Downloader")
               time.sleep(5)
               self.DownloaderProcess=None
@@ -1288,7 +1646,22 @@ QMenu::item:selected { /* when user selects item using mouse or keyboard */
               print("DownloaderClosedProcess")
               self.DownloaderProcess=None
          
-         
+    def ChangeColorWindow(self,color=None):
+              if (color==None):
+                  color = QtWidgets.QColorDialog.getColor()
+              if color.isValid():
+                   self.QAccentColor=color
+                   self.AccentColor=self.QAccentColor.getRgb()
+                   self.DataPath=None
+                   self.setupUi(self,workingDir="",AccentColor=self.AccentColor,NormalColor=self.NormalColor)
+                   self.add_functions() #os.path.dirname(sys.argv[0]).replace("\\","/")+"/"
+                   self.FoxStatusBar.setText("")
+                   self.show()
+                   self.showNormal()
+                   self.NewMainUI=True
+                   self.mobileMode=False
+                   if not(self.MSMPboxPlayer.playlist==None):
+                        self.ReloadInformation()      
     def SkinChanger(self,Option):
 
          if(Option=="obu"):
@@ -1299,7 +1672,6 @@ Maxs-Speaker Media-Player Stream
 свободный стриминговый медиа плеер с поддержкой: YouTube, SoundCloud, YandexMusic и MSMP-AUDIO Server
 
 автор дс: maxsspeaker
-автор мобильной версии: Kelk
 github: https://github.com/maxsspeaker/qMSMP-Stream
 """)
               msg.setWindowTitle("info")
@@ -1349,21 +1721,6 @@ github: https://github.com/maxsspeaker/qMSMP-Stream
               self.FoxStatusBar.setText("")
               if not(self.MSMPboxPlayer.playlist==None):
                    self.ReloadInformation()
-         elif(Option=="ColorFox"):
-              color = QtWidgets.QColorDialog.getColor()
-              if color.isValid():
-                   self.QAccentColor=color
-                   self.AccentColor=self.QAccentColor.getRgb()
-                   self.DataPath=None
-                   self.setupUi(self,workingDir=os.path.dirname(sys.argv[0]).replace("\\","/")+"/",AccentColor=self.AccentColor,NormalColor=self.NormalColor)
-                   self.add_functions()
-                   self.FoxStatusBar.setText("")
-                   self.show()
-                   self.showNormal()
-                   self.NewMainUI=True
-                   self.mobileMode=False
-                   if not(self.MSMPboxPlayer.playlist==None):
-                        self.ReloadInformation()
          elif(Option=="AIMPskin"):
               self.DataPath=None
               LoadStyleUI("ui/untitledStyleSpew.ui",self)
@@ -1373,9 +1730,6 @@ github: https://github.com/maxsspeaker/qMSMP-Stream
               self.NewMainUI=False
               if not(self.MSMPboxPlayer.playlist==None):
                    self.ReloadInformation()
-         elif(Option=="sEq"):
-              self.config,self.ConfigDir,self.PlaylistsFolder=loadConfig()
-              self.setEqualizer()
 
          elif(Option=="mbMode"):
               self.DataPath=None
@@ -1391,7 +1745,9 @@ github: https://github.com/maxsspeaker/qMSMP-Stream
                    self.PlaylistsView.hide()
               if not(self.MSMPboxPlayer.playlist==None):
                    self.ReloadInformation()
-                   
+         elif(Option=="Set"):
+             self.SettingsUI.show()
+        
     def PlTrekOptions(self,Option):
          if(Option=="DwTr"):
               self.RunDownloaderBox()
@@ -1417,7 +1773,7 @@ github: https://github.com/maxsspeaker/qMSMP-Stream
               self.MSMPTrekBoxUi.show() 
               
               
-    def handle_double_click(self, index): 
+    def handle_double_click(self, index):
         path = self.model.filePath(index)
         if self.model.isDir(index):
             if not self.model.canFetchMore(index):
@@ -1426,24 +1782,37 @@ github: https://github.com/maxsspeaker/qMSMP-Stream
                 self.tree.setExpanded(index, True)
         else:
             self.OpenPLmsmp(path)
-    def SavePLmsmp(self,path=None):
+    def SavePLmsmp(self,path=None,ContinePlay=False):
        if(path==None):
-            path , check = QtWidgets.QFileDialog.getSaveFileName(None, "QFileDialog.getOpenFileName()",
-                                               "", "PlayList File files (*.plmsmpsbox);;All Files (*)")
+            path , check = QtWidgets.QFileDialog.getSaveFileName(self, "QFileDialog.getOpenFileName()",
+                                               self.MSMPboxPlayer.OpenedplaylistPath, "PlayList File files (*.plmsmpsbox);;All Files (*)") 
        else:
             check=True
             
        if check:
             print("saving "+path)
-            plToSave={"playlist":self.MSMPboxPlayer.playlist,"iconPlayList": None, "ContinuePlayData": None,"VerisonCore":2}
+            if(ContinePlay):
+                plToSave={"playlist":self.MSMPboxPlayer.playlist,"iconPlayList": None,
+                          "ContinuePlayData": {"VersionContinuePlay": "v0.1.3-beta",
+                                               "PlayNumber": self.MSMPboxPlayer.Num,
+                                               "PlayPos": self.MSMPboxPlayer.NewPlaerVLC.get_time()/1000,
+                                               "Procrutca": self.PlaylistView.verticalScrollBar().value(),
+                                               "TreakModeNum": self.PlayModeMSMPNum,
+                                               "PathToPl":self.PathToPlMSMPbox,
+                                               "PlayPuase": False},
+                          "VerisonCore":2}
+            else:
+                plToSave={"playlist":self.MSMPboxPlayer.playlist,"iconPlayList": None, "ContinuePlayData": None,"VerisonCore":2}
             with open(path, 'w') as f:
                  json.dump(plToSave, f, indent=2)
             print("saving ok")
+            self.PlaylistsView.itemDelegate().SelectedPatch=path
+            self.PathToPlMSMPbox=path
               
     def OpenPLmsmp(self,path=None,AutoPlay=False):
         if(path==None):
               path , check = QtWidgets.QFileDialog.getOpenFileName(None, "QFileDialog.getOpenFileName()",
-                                               "", "PlayList File files (*.plmsmpsbox);;All Files (*)")
+                                               self.PlaylistsFolder, "PlayList File files (*.plmsmpsbox);;All Files (*)")
         else:
               check=True
 
@@ -1451,6 +1820,7 @@ github: https://github.com/maxsspeaker/qMSMP-Stream
          self.StopParsePL=True
          time.sleep(0.5)
          self.PathToPlMSMPbox=path
+         self.PlaylistsView.itemDelegate().SelectedPatch=path
          self.StopParsePL=False
          self.OpenPLThread = ProcessRunnable(target=self.OpenPlmsmpThread, args=())
          self.OpenPLThread.start()
@@ -1472,6 +1842,7 @@ github: https://github.com/maxsspeaker/qMSMP-Stream
         with open(path, 'r') as fr:
                     playlistFile = json.load(fr)
                     self.MSMPboxPlayer.playlist=playlistFile["playlist"]
+                    self.ContinePlayData=playlistFile.get("ContinuePlayData")
 
         self.MSMPboxPlayer.OpenedplaylistPath=path 
         self.LestNum=-1            
@@ -1547,6 +1918,8 @@ github: https://github.com/maxsspeaker/qMSMP-Stream
             try:
                       
               MediaBoxStatus=self.MSMPboxPlayer.get_state()
+              #print(self.PlaylistView.verticalScrollBar().value())
+              
               if not(self.mobileMode):
                    if("State.Opening"==str(MediaBoxStatus)):
                         if not (self.OpeingVaribleBuffer):
@@ -1773,8 +2146,10 @@ QPushButton:pressed{
                      try:ImgAlbum.save(self.PathImgsCache+urlSoundID)
                      except:print("ошибка сохронения изоброжения трека")
                      RGBbg=ImageStat.Stat(ImgAlbum).mean
-                     ImgAlbum =ImageQt(ImgAlbum)
-                     pixmap=QtGui.QPixmap.fromImage(ImgAlbum)
+                     #ImgAlbum =ImageQt(ImgAlbum)
+                     #pixmap=QtGui.QPixmap.fromImage(ImgAlbum)
+                     pixmap=ImageQt(ImgAlbum)
+                     
                      print("self.PlayListBox.itemFromIndex")
                      try:self.PlayListBox.itemFromIndex(self.PlayListBox.index(self.LestNum,0)).setData(QtGui.QIcon(pixmap),QtCore.Qt.ItemDataRole.DecorationRole)
                      except:pass
@@ -1862,13 +2237,15 @@ QPushButton:pressed{
          elif key == QtCore.Qt.Key_MediaNext:
               self.UpdateInfoTreakPL(self.MSMPboxPlayer.nextTreak())
         except:print('\n',traceback.format_exc())
-
+        
+        
     def closeEvent(self, event):
        try:
         if not(self.ContinePlay):
              reply = QtWidgets.QMessageBox.question(self, "Exit?", "Are you sure to quit?")
         else:
           reply=None
+          self.SavePLmsmp(path=self.ConfigDir+"/ContinuePlayPlayList.plmsmpsbox",ContinePlay=True)
         
         if (reply == QtWidgets.QMessageBox.StandardButton.Yes) or (self.ContinePlay):
             self.CloseApp=True
@@ -2167,7 +2544,7 @@ def mainDownloader():
     global app
     global ex
     
-    RunAPPEventHandler=RunAPPEventHandler(RunCommands=["","-d"],downloaderNodeF=True)
+    RunAPPEventHandler=RunAPPEventHandler(RunCommands=sys.argv,downloaderNodeF=True)
     RunAPPEventHandler.downloaderNode=True
     RunAPPEventHandler.PORT = 59716
     IsdownloaderNode=RunAPPEventHandler.downloaderNode

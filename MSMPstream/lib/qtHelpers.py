@@ -1,6 +1,8 @@
 from PyQt5.QtWidgets import QSlider, QStyle
 from PyQt5 import QtWidgets, QtCore, QtGui
 
+import io
+
 import stagger
 import io
 from PIL import Image
@@ -60,5 +62,17 @@ def crop_center(pil_img, crop_width: int, crop_height: int) -> Image:
                          (img_width + crop_width) // 2,
                          (img_height + crop_height) // 2))
 
+def ImageQt(pil_img):
+    
+    b = io.BytesIO()
+    
+    pil_img.save(b, 'png')
+    
+    data = b.getvalue()
+
+    pixmap = QtGui.QPixmap()
+    pixmap.loadFromData(data)
+
+    return pixmap
 
 

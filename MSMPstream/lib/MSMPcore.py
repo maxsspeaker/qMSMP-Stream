@@ -497,7 +497,7 @@ class MSMPboxPlayer(GibridPlayer):
                                   self.PlayNowMusicDataBox["artistTrekPlayNow"]=""
                             if not(self.discord_rpc==None):
                              if(os.path.isfile(self.downloadMusicFolder+(str(self.playlist[Num]["url"])+"YouTubeAudio.m4a"))):
-                                 time.sleep(0.1)
+                                 time.sleep(0.3)
                                  self.durationTreak=((self.NewPlaerVLC.get_time()-self.NewPlaerVLC.get_length())/1000)-((self.NewPlaerVLC.get_time()-self.NewPlaerVLC.get_length())/1000)-((self.NewPlaerVLC.get_time()-self.NewPlaerVLC.get_length())/1000)
 
                             if not(self.discord_rpc==None):

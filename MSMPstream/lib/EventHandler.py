@@ -53,13 +53,13 @@ class EventHandler():
                               break
                          try:
                             #if not(self.downloaderNode):
-                            if(json.loads(data.decode())[1]=="--downloader") or (json.loads(data.decode())[1]=="-d"):
-                                   downloaderNode=True
-                            if not(downloaderNode==self.downloaderNode):
-                                 conn.sendall(data)
-                            else:
+                            #if(json.loads(data.decode())[1]=="--downloader") or (json.loads(data.decode())[1]=="-d"):
+                            #       downloaderNode=True
+                            #if not(downloaderNode==self.downloaderNode):
+                            #     conn.sendall(data)
+                            if True:
                               print(json.loads(data.decode()))
-                              if(downloaderNode):
+                              if(self.downloaderNode):
                                    Sirdata=json.loads(data.decode())[2]
                                    dataFix=urllib.parse.unquote(json.loads(data.decode())[2])
                               else:

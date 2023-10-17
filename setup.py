@@ -15,7 +15,7 @@ long_description = read_file("README.md")
 
 setuptools.setup(
     name="MSMPstream",
-    version="0.7.8a",
+    version="0.7.9a",
     author="Maxsspeaker",
     description="A bootstrapper for Roblox and Roblox Studio",
     long_description=long_description,
@@ -34,5 +34,5 @@ setuptools.setup(
 ##        ('share/icons/hicolor/scalable/apps', ['resources/roblox-studio.svg'])
     ],
     install_requires=install_requires(),
-    python_requires='>=3.10',
+    python_requires='>=3.9',
 )

@@ -1,8 +1,18 @@
 [Desktop Entry]
-Type=Application
-Name=MSMP Stream
-GenericName=Media player
-Exec=MSMPstream %u
-Terminal=false
 Categories=Audio;Player;
+Comment[ru_RU]=
+Comment=
+Exec=MSMPstream %u
+GenericName[ru_RU]=Media player
+GenericName=Media player
 Icon=msmp-stream
+MimeType=audio/plmsmpsbox;
+Name[ru_RU]=MSMP Stream
+Name=MSMP Stream
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-KDE-SubstituteUID=false
+X-KDE-Username=

@@ -1,7 +1,13 @@
 import os,time
-import pylast,pypresence,requests,io
+import pypresence,requests,io
+from importlib.metadata import PackageNotFoundError
+try:
+     import pylast
+except PackageNotFoundError:
+     pass
 from PIL import Image
 from MSMPstream.lib.ProcessRunnable import ProcessRunnable
+import MSMPstream 
  
 class MSMP_RPC():
      def __init__(self,RPC,msmp_streamIconYouTube=None,
@@ -17,15 +23,7 @@ class MSMP_RPC():
                lengbox={"MSMP Stream":{"RPCmsmpOf":"of"}}
           self.lengbox=lengbox
           if not(RPC==None):
-               try:
-                    self.RPC=pypresence.Presence("811577404279619634")
-                    self.RPC.connect()
-               except pypresence.exceptions.DiscordNotFound:
-                  self.RPC=None
-               except ConnectionRefusedError:
-                  self.RPC=None
-               except pypresence.exceptions.DiscordError:
-                  self.RPC=None
+               self.StartRpc()
           self.RpcDiscordQueue=None
           self.RPCupdateThread_stop=None
           
@@ -51,7 +49,10 @@ class MSMP_RPC():
 
           self.lenPlayListStatus=""
           
-          self.version=version
+          if not(version=="None"):
+               self.version=version
+          else:
+               self.version=MSMPstream.__verison__
 
           self.DirConfig=DirConfig
           self.timebox=0
@@ -60,6 +61,24 @@ class MSMP_RPC():
                self.runLastFMapi()
           else:
                self.LastFM=None
+     def StartRpc(self):
+          try:
+               self.RPC=pypresence.Presence("811577404279619634")
+               self.RPC.connect()
+          except pypresence.exceptions.DiscordNotFound:
+                  self.RPC=None
+          except ConnectionRefusedError:
+                  self.RPC=None
+          except pypresence.exceptions.DiscordError:
+                  self.RPC=None
+          if(self.RPC==None):
+               return "Error"
+          else:
+               return "ok"
+     def StopRpc(self):
+          if not(self.RPC==None):
+               self.RPC.close()
+          
      def runLastFMapi(self):
           APIlastFm_KEY = "4e0f10f934869a276690fcce533e4aa4"  # this is a sample key
           APIlastFm_SECRET = "10f3da1934b00eb62a9424f79a599350"
@@ -167,7 +186,7 @@ class MSMP_RPC():
                   'buttons':self.buttons,
                   'small_text':self.version,
                 }  )
-      except:printError(traceback.format_exc())
+      except:print(traceback.format_exc())
       
      def RPCupdate(self,details=None,state=None,large_text=None,large_image=None,small_image=None,small_text=None,buttons=None,end=None,ThreadQueue=True):
 ##       if (ThreadQueue):
@@ -275,7 +294,7 @@ class MSMP_RPC():
                                          album=PlayNowMusicDataBox["albumTrekPlayNow"],
                                          duration=self.durationTreak)
           except:
-               printError(traceback.format_exc())
+               print(traceback.format_exc())
           
      def updatePlayerStop(self,LoadingMusicMeta):
           if(LoadingMusicMeta): #self.PlayNowMusicDataBox["LoadingMusicMeta"]

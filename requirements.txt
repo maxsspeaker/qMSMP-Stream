@@ -1,5 +1,5 @@
 pyqt5
-Pillow==9.0.1
+Pillow
 requests
 yt-dlp
 eyed3

@@ -1,0 +1,101 @@
+{
+ "version": "auto-py-to-exe-configuration_v1",
+ "pyinstallerOptions": [
+  {
+   "optionDest": "noconfirm",
+   "value": true
+  },
+  {
+   "optionDest": "filenames",
+   "value": "A:/YandexDisk/python-projects/MSMPstream/MSMPstream/__main__.py"
+  },
+  {
+   "optionDest": "onefile",
+   "value": false
+  },
+  {
+   "optionDest": "console",
+   "value": false
+  },
+  {
+   "optionDest": "icon_file",
+   "value": "A:/YandexDisk/python-projects/MSMPstream/MSMPstream/MSMPstream/resources/app.ico"
+  },
+  {
+   "optionDest": "ascii",
+   "value": false
+  },
+  {
+   "optionDest": "clean_build",
+   "value": false
+  },
+  {
+   "optionDest": "strip",
+   "value": false
+  },
+  {
+   "optionDest": "noupx",
+   "value": false
+  },
+  {
+   "optionDest": "disable_windowed_traceback",
+   "value": false
+  },
+  {
+   "optionDest": "embed_manifest",
+   "value": true
+  },
+  {
+   "optionDest": "uac_admin",
+   "value": false
+  },
+  {
+   "optionDest": "uac_uiaccess",
+   "value": false
+  },
+  {
+   "optionDest": "win_private_assemblies",
+   "value": false
+  },
+  {
+   "optionDest": "win_no_prefer_redirects",
+   "value": false
+  },
+  {
+   "optionDest": "bootloader_ignore_signals",
+   "value": false
+  },
+  {
+   "optionDest": "argv_emulation",
+   "value": false
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Program Files/VideoLAN/VLC/libvlc.dll;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Program Files/VideoLAN/VLC/libvlccore.dll;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Program Files/VideoLAN/VLC/plugins;MSMPstream/plugins/"
+  },
+  {
+   "optionDest": "datas",
+   "value": "A:/YandexDisk/python-projects/MSMPstream/MSMPstream/MSMPstream/lengboxs;MSMPstream/lengboxs/"
+  },
+  {
+   "optionDest": "datas",
+   "value": "A:/YandexDisk/python-projects/MSMPstream/MSMPstream/MSMPstream/img;MSMPstream/img/"
+  },
+  {
+   "optionDest": "hiddenimports",
+   "value": "pylast"
+  }
+ ],
+ "nonPyinstallerOptions": {
+  "increaseRecursionLimit": true,
+  "manualArguments": "-n \"qMSMP Stream\""
+ }
+}
