@@ -38,7 +38,8 @@ def loadConfig():
                      'TermuxMbMode': False,
                      'latest_playlist':"",
                      'CDcaseImgRPC': False,
-                     'force-ipv4':False
+                     'force-ipv4':False,
+                     'ContinePlay':False
                      },
                'MSMP Stream Equalizer':
                     {'EqualizerOnOff': False,
