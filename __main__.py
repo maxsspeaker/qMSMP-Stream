@@ -17,6 +17,7 @@ import logging
 from logging.handlers import QueueHandler
 import pypresence
 from datetime import date
+import signal
 
 
 
@@ -591,17 +592,17 @@ class SettingsUI(QtWidgets.QDialog,SettingsUI.Ui_MSMPsettings):
   background: rgb("""+styleColorFox+"""); 
 }""")
      def changeValueEqualizerSlider(self, value):
-          self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][0]=self.EqualizerSlider_1.value()/10
-          self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][1]=self.EqualizerSlider_2.value()/10
-          self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][2]=self.EqualizerSlider_3.value()/10
-          self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][3]=self.EqualizerSlider_4.value()/10
-          self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][4]=self.EqualizerSlider_5.value()/10
-          self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][5]=self.EqualizerSlider_6.value()/10
-          self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][6]=self.EqualizerSlider_7.value()/10
-          self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][7]=self.EqualizerSlider_8.value()/10
-          self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][8]=self.EqualizerSlider_9.value()/10
-          self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][9]=self.EqualizerSlider_10.value()/10
-          self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][10]=self.EqualizerSlider_11.value()/10
+##          self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][0]=self.EqualizerSlider_1.value()/10
+##          self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][1]=self.EqualizerSlider_2.value()/10
+##          self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][2]=self.EqualizerSlider_3.value()/10
+##          self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][3]=self.EqualizerSlider_4.value()/10
+##          self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][4]=self.EqualizerSlider_5.value()/10
+##          self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][5]=self.EqualizerSlider_6.value()/10
+##          self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][6]=self.EqualizerSlider_7.value()/10
+##          self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][7]=self.EqualizerSlider_8.value()/10
+##          self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][8]=self.EqualizerSlider_9.value()/10
+##          self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][9]=self.EqualizerSlider_10.value()/10
+##          self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][10]=self.EqualizerSlider_11.value()/10
 
           self.EqualizerIndicator_1.setText(str(self.EqualizerSlider_1.value()/10)+"дб")
           self.EqualizerIndicator_2.setText(str(self.EqualizerSlider_2.value()/10)+"дб")
@@ -615,14 +616,14 @@ class SettingsUI(QtWidgets.QDialog,SettingsUI.Ui_MSMPsettings):
           self.EqualizerIndicator_10.setText(str(self.EqualizerSlider_10.value()/10)+"дб")
           self.EqualizerIndicator_11.setText(str(self.EqualizerSlider_11.value()/10)+"дб")
           
-          if(self.checkBox_Equalizer.isChecked()):
-             self.MainWindow.setEqualizer()
+##          if(self.checkBox_Equalizer.isChecked()):
+##             self.MainWindow.setEqualizer()
 
      def add_functions(self):
           self.EqualizerSlider_1.setValue(int(self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][0]*10))
           self.EqualizerSlider_2.setValue(int(self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][1]*10))
           self.EqualizerSlider_3.setValue(int(self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][2]*10))
-          self.EqualizerSlider_4.setValue(int(self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][3]*10))
+          self.EqualizerSlider_4.setValue(int(self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][3]*0.1))
           self.EqualizerSlider_5.setValue(int(self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][4]*10))
           self.EqualizerSlider_6.setValue(int(self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][5]*10))
           self.EqualizerSlider_7.setValue(int(self.MainWindow.config["MSMP Stream Equalizer"]["EqualizerSettings"][6]*10))
@@ -870,9 +871,9 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow,mainUimb.Ui_MainWin
         self.lengbox=loadLocal(self.config['MSMP Stream']['localizationBox'])
         
 ##        if sys.platform == "win32":
-##            InstanceSettings.append("--audio-visual="+"visual")
-##            InstanceSettings.append("--effect-list=spectrum")
-##            InstanceSettings.append("--effect-fft-window=none")
+##        InstanceSettings.append("--audio-visual="+"visual")
+##        InstanceSettings.append("--effect-list=spectrum")
+##        InstanceSettings.append("--effect-fft-window=none")
 
         self.CloseApp=False
         self.CloseAppFox=0
@@ -1102,13 +1103,14 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow,mainUimb.Ui_MainWin
         if(self.mobileNewMode):
              self.resize(size.width(), size.height() )
 
-
+        
         if(self.ContinePlay):
              self.StopParsePL=False
              self.ContinePlayData=None
              self.update()
              self.PathToPlMSMPbox=self.ConfigDir+"/ContinuePlayPlayList.plmsmpsbox"
              self.OpenPlmsmpThread()
+             self.AlbumImg.setPixmap(QtGui.QPixmap("img/Missing_Texture.png"))
              if (self.ContinePlayData):
                 if(self.ContinePlayData.get("VersionContinuePlay")=="v0.1.3-beta"):
                  self.MSMPboxPlayer.Num=self.ContinePlayData["PlayNumber"]
@@ -1131,6 +1133,8 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow,mainUimb.Ui_MainWin
                  self.PlaylistView.verticalScrollBar().setValue(self.ContinePlayData["Procrutca"])
                  self.MSMPboxPlayer.setpos(self.ContinePlayData["PlayPos"])
                  self.PathToPlMSMPbox=self.ContinePlayData["PathToPl"]
+                 if(self.ContinePlayData["PlayPuase"]):
+                     self.CustomPauseButton()
                  
                  self.PlaylistsView.itemDelegate().SelectedPatch=self.PathToPlMSMPbox
 ##                     
@@ -1405,7 +1409,7 @@ QMenu::item:selected { /* when user selects item using mouse or keyboard */
             
         self.PlaylistView.setIconSize(QtCore.QSize(25,25))
         
-        self.StopButton.clicked.connect(lambda: self.UpdateInfoTreakPL(self.MSMPboxPlayer.stop()))
+        self.StopButton.clicked.connect(lambda: self.FunStopButton())
 
         self.PlayButton.clicked.connect(lambda: self.UpdateInfoTreakPL(self.MSMPboxPlayer.play()))
         if not(self.NewMainUI):
@@ -1450,13 +1454,15 @@ QMenu::item:selected { /* when user selects item using mouse or keyboard */
         self.OpeingVaribleBuffer=False
         #if not(self.mobileMode):self.statusBar.hide()
 
-        if sys.platform.startswith("linux"):
-            pass# for Linux using the X Server
-            #self.MSMPboxPlayer.NewPlaerVLC.set_xwindow(self.Visualframe.winId())
+        if sys.platform.startswith("linux"): #for Linux using the X Server
+            try:
+                self.MSMPboxPlayer.NewPlaerVLC.set_xwindow(int(self.AudioVisualframe.winId()))
+            except:
+                pass
         elif sys.platform == "win32":  # for Windows
-            self.MSMPboxPlayer.NewPlaerVLC.set_hwnd(self.Visualframe.winId())
-        #elif sys.platform == "darwin":  # for MacOS
-        #    self.MSMPboxPlayer.NewPlaerVLC.set_nsobject(self.Visualframe.winId())
+            self.MSMPboxPlayer.NewPlaerVLC.set_hwnd(self.AudioVisualframe.winId())
+        elif sys.platform == "darwin":  # for MacOS
+            self.MSMPboxPlayer.NewPlaerVLC.set_nsobject(int(self.Visualframe.winId()))
 
         if not(self.mobileNewMode):self.VolumeSlider.setValue(self.MSMPboxPlayer.NewPlaerVLC.audio_get_volume())
     def CustomPauseButton(self):
@@ -1466,6 +1472,30 @@ QMenu::item:selected { /* when user selects item using mouse or keyboard */
               self.ChangePlayIcon("play",self.PlayButton,Invert=True)
          else:
               self.ChangePlayIcon("play",self.PlayButton,Invert=False)
+
+    def FunStopButton(self):
+        self.MSMPboxPlayer.stop()
+
+        self.MSMPboxPlayer.Num=0
+
+        self.ChangePlayIcon("play",self.PlayButton,Invert=False)
+
+        if not(self.LestNum==-1):
+             ColorFix=QtGui.QColor('rgba(0,0,0,0)')
+             ColorFix.setAlpha(0)
+             self.PlayListBox.itemFromIndex(self.PlayListBox.index(self.LestNum,0)).setBackground(ColorFix)
+        self.LestNum=self.MSMPboxPlayer.Num
+
+        self.TreakName.setText(self.MSMPboxPlayer.PlayNowMusicDataBox["titleTrekPlayNow"])
+        self.AuthorName.setText(self.MSMPboxPlayer.PlayNowMusicDataBox["artistTrekPlayNow"])
+        self.AlbumName.setText(self.MSMPboxPlayer.PlayNowMusicDataBox["albumTrekPlayNow"])
+
+        self.DataPath.setText("")
+        self.UpdateInfoBoxLabel()
+        self.TimePlayCounter.setText("0:00")
+
+        self.AlbumImg.setPixmap(QtGui.QPixmap("img/Missing_Texture.png"))
+
               
     def PlayModeTreakChange(self,Update=False):
          if not(Update):
@@ -1488,19 +1518,27 @@ QMenu::item:selected { /* when user selects item using mouse or keyboard */
               #print("equalizer firk")
               if(self.config['MSMP Stream Equalizer']["EqualizerOnOff"]):
                    self.setEqualizer(self.config['MSMP Stream Equalizer']["EqualizerSettings"],Custom=True)
-                   self.EqualizerPlaerVLC.set_preamp(self.config["MSMP Stream Equalizer"]["EqualizerSettings"][10])
                    #print("equalizer set")
                    return
               else:
                   self.MSMPboxPlayer.NewPlaerVLC.set_equalizer(None)
                   #print("equalizer disabled")
               return
-         SetSettings=0
-         i=0
-         while not -1==SetSettings:
-              SetSettings=self.EqualizerPlaerVLC.set_amp_at_index(EqualizerSettings[i],i)
-              i=i+1
-         self.MSMPboxPlayer.NewPlaerVLC.set_equalizer(self.EqualizerPlaerVLC)     
+         equalizer = vlc.AudioEqualizer()
+         print(EqualizerSettings[0])
+         equalizer.set_amp_at_index(EqualizerSettings[0],0)  # 60 Hz
+         equalizer.set_amp_at_index(EqualizerSettings[1],1)  # 170 Hz
+         equalizer.set_amp_at_index(EqualizerSettings[2],2)  # 310 Hz
+         equalizer.set_amp_at_index(EqualizerSettings[3],3)  # 600 Hz
+         equalizer.set_amp_at_index(EqualizerSettings[4],4)  # 1 kHz
+         equalizer.set_amp_at_index(EqualizerSettings[5],5)  # 3 kHz
+         equalizer.set_amp_at_index(EqualizerSettings[6],6)  # 6 kHz
+         equalizer.set_amp_at_index(EqualizerSettings[7],7)  # 12 kHz
+         equalizer.set_amp_at_index(EqualizerSettings[8],8)  # 14 kHz
+         equalizer.set_amp_at_index(EqualizerSettings[9],9)  # 16 kHz
+         equalizer.set_preamp(EqualizerSettings[10])
+         self.MSMPboxPlayer.NewPlaerVLC.set_equalizer(equalizer)
+         self.EqualizerPlaerVLC=equalizer
          
     def ShowPlSelector(self):
          if(self.PlSelector):
@@ -1517,14 +1555,15 @@ QMenu::item:selected { /* when user selects item using mouse or keyboard */
               self.PlaylistView.hide()
               self.PlaylistsView.show()
 
-    def UpdateInfoBoxLabel(self):
+    def UpdateInfoBoxLabel(self,EmptyPlay=False): 
         InfoTextBox=""
-        if not(self.MSMPboxPlayer.PlayNowMusicDataBox['like_count']==-1):
+        if not(EmptyPlay):
+         if not(self.MSMPboxPlayer.PlayNowMusicDataBox['like_count']==-1):
              if(self.NewMainUI):
                   InfoTextBox=InfoTextBox+str(self.MSMPboxPlayer.PlayNowMusicDataBox['like_count'])+" :Likes"+"\n"
              else:
                   InfoTextBox=InfoTextBox+"Likes: "+str(self.MSMPboxPlayer.PlayNowMusicDataBox['like_count'])+"\n"
-        if not(self.MSMPboxPlayer.PlayNowMusicDataBox["view_count"]==-1):
+         if not(self.MSMPboxPlayer.PlayNowMusicDataBox["view_count"]==-1):
              if(self.NewMainUI):
                   InfoTextBox=InfoTextBox+str(self.MSMPboxPlayer.PlayNowMusicDataBox["view_count"])+" :Views"
              else:
@@ -1792,15 +1831,21 @@ github: https://github.com/maxsspeaker/qMSMP-Stream
        if check:
             print("saving "+path)
             if(ContinePlay):
-                plToSave={"playlist":self.MSMPboxPlayer.playlist,"iconPlayList": None,
+                if(str(self.MSMPboxPlayer.get_state())=="State.Playing"):
+                    PlayPuase=False
+                elif(str(self.MSMPboxPlayer.get_state())=="State.Paused"):
+                    PlayPuase=True
+                if not("State.Stopped"==str(self.MSMPboxPlayer.get_state())):
+                    plToSave={"playlist":self.MSMPboxPlayer.playlist,"iconPlayList": None,
                           "ContinuePlayData": {"VersionContinuePlay": "v0.1.3-beta",
                                                "PlayNumber": self.MSMPboxPlayer.Num,
                                                "PlayPos": self.MSMPboxPlayer.NewPlaerVLC.get_time()/1000,
                                                "Procrutca": self.PlaylistView.verticalScrollBar().value(),
                                                "TreakModeNum": self.PlayModeMSMPNum,
                                                "PathToPl":self.PathToPlMSMPbox,
-                                               "PlayPuase": False},
+                                               "PlayPuase": PlayPuase},
                           "VerisonCore":2}
+                else:plToSave=plToSave={"playlist":self.MSMPboxPlayer.playlist,"iconPlayList": None,"ContinuePlayData":None}
             else:
                 plToSave={"playlist":self.MSMPboxPlayer.playlist,"iconPlayList": None, "ContinuePlayData": None,"VerisonCore":2}
             with open(path, 'w') as f:
@@ -1937,7 +1982,8 @@ github: https://github.com/maxsspeaker/qMSMP-Stream
                 self.ProgressBarTreakSlider.valueChanged[int].disconnect(self.changeProgressBarTreakSlider)
                 self.ProgressBarTreakSlider.setValue(int(self.MSMPboxPlayer.NewPlaerVLC.get_position()*1000))
                 self.ProgressBarTreakSlider.valueChanged[int].connect(self.changeProgressBarTreakSlider)
-                self.TimePlayCounter.setText(hhmmss(self.MSMPboxPlayer.NewPlaerVLC.get_time()/1000)+"/"+hhmmss(self.MSMPboxPlayer.durationTreak))
+                if not("State.Stopped"==str(MediaBoxStatus)):
+                    self.TimePlayCounter.setText(hhmmss(self.MSMPboxPlayer.NewPlaerVLC.get_time()/1000)+"/"+hhmmss(self.MSMPboxPlayer.durationTreak))
                 time.sleep(1)
               else:
                    time.sleep(0.1)
@@ -2041,7 +2087,7 @@ QPushButton:pressed{
 "   border-bottom: 1px solid;\n"
 "}")
     def UpdateInfoTreakPL(self,fun):
-         
+      if not("State.Stopped"==str(self.MSMPboxPlayer.get_state())):  
         self.TreakName.setText(self.MSMPboxPlayer.PlayNowMusicDataBox["titleTrekPlayNow"])
         self.AuthorName.setText(self.MSMPboxPlayer.PlayNowMusicDataBox["artistTrekPlayNow"])
         self.AlbumName.setText(self.MSMPboxPlayer.PlayNowMusicDataBox["albumTrekPlayNow"])
@@ -2486,20 +2532,18 @@ QProgressBar::chunk {
               reply=None
 
          if (reply == QtWidgets.QMessageBox.StandardButton.Yes) or (False):
-              print("close1")
               self.CloseApp=True
-              self.show()
-              print("close2")
-              self.RunAPPEventHandler.ServerStarted=False
-              self.RunAPPEventHandler.RunCommandBox()
-              print("close3")
               time.sleep(0.5)
               self.close()
-              print("close5")
          
     def closeEvent(self, event):
          print(self.CloseApp)
          if(self.CloseApp):
+              self.CloseApp=True
+              self.show()
+              self.RunAPPEventHandler.ServerStarted=False
+              self.RunAPPEventHandler.RunCommandBox()
+              time.sleep(0.5)
               event.accept()
               sys.exit()
          else:
@@ -2510,7 +2554,15 @@ QProgressBar::chunk {
               event.ignore()
          #self.CloseApp=True
          #event.accept() #event.ignore()
+    
 
+class Application(QtWidgets.QApplication):
+    def event(self, e):
+        return QtWidgets.QApplication.event(self, e)
+
+def FocreClose():
+    ex.CloseApp=True
+    ex.close()
                 
 def main():
     from MSMPstream.lib.EventHandler import EventHandler as RunAPPEventHandler
@@ -2526,12 +2578,16 @@ def main():
     if not(RunAPPEventHandler.FirstApp):
           sys.exit()
           
-    app = QtWidgets.QApplication(sys.argv)
+    app = Application(sys.argv)
+
+    app.startTimer(200)
     
     sys.excepthook = excepthook
     if (IsdownloaderNode):
+         signal.signal(signal.SIGINT, lambda *a:FocreClose()) 
          ex = MainWindowDownloader(RunAPPEventHandler,AppHidden=False)
     else:
+         signal.signal(signal.SIGINT, lambda *a:FocreClose()) 
          ex = MainWindow(RunAPPEventHandler)
 
     sys.exit(app.exec())
@@ -2552,7 +2608,10 @@ def mainDownloader():
     if not(RunAPPEventHandler.FirstApp):
           sys.exit()
           
-    app = QtWidgets.QApplication(sys.argv)
+    app = Application(sys.argv)
+
+    signal.signal(signal.SIGINT, lambda *a:FocreClose())
+    app.startTimer(200)
     
     sys.excepthook = excepthook
     

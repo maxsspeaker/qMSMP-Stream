@@ -163,7 +163,7 @@ class MSMPboxPlayer(GibridPlayer):
               # time.sleep(0.2)
              # 
      def pause(self):
-      try:
+      if not (str(super().get_state())=="State.Stopped"): 
           super().pause()
           time.sleep(0.2)
           if not(self.discord_rpc==None):
@@ -171,7 +171,6 @@ class MSMPboxPlayer(GibridPlayer):
                                            self.NewPlaerVLC.get_time(),
                                            PlayNowMusicDataBox=self.PlayNowMusicDataBox,
                                            PlayerState=str(self.get_state()))
-      except:printError(traceback.format_exc())
      ######
      def LoadPlaylist(self,PlObj,autoPlay=False,ContinuePlay=False): 
          if not(PlObj.get("playlist")==None):
@@ -244,10 +243,21 @@ class MSMPboxPlayer(GibridPlayer):
      ######
      def setpos(self,PosTime):
          return super().setpos(PosTime) 
-     def stop(self): 
+     def stop(self):
          super().stop()
          
+         self.Num=0
+         
+         self.PlayNowMusicDataBox["titleTrekPlayNow"]=""
+         self.PlayNowMusicDataBox["artistTrekPlayNow"]=""
+         self.PlayNowMusicDataBox["albumTrekPlayNow"]=""
+         self.PlayNowMusicDataBox["like_count"]=-1
+         self.PlayNowMusicDataBox["view_count"]=-1
+         self.PlayNowMusicDataBox["availability"]=None
+         self.PlayNowMusicDataBox["upload_date"]=-1
+         
      def nextTreak(self):
+       if not (str(super().get_state())=="State.Stopped"): 
         if not (self.PlayNowMusicDataBox["LoadingMusicMeta"]): 
           self.Num=self.Num+1
           if(len(self.playlist)==self.Num):
@@ -259,6 +269,7 @@ class MSMPboxPlayer(GibridPlayer):
           else:
               self.play(self.Num)
      def previousTreak(self):
+       if not (str(super().get_state())=="State.Stopped"): 
         if not (self.PlayNowMusicDataBox["LoadingMusicMeta"]): 
           self.Num=self.Num-1
           if(-1==self.Num):
